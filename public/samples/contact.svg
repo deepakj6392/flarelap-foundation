@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Contact sample image</title>
+  <desc id="desc">Abstract illustration of messages and connection.</desc>
+  <rect width="1200" height="800" fill="#f0fdf4"/>
+  <rect x="190" y="185" width="450" height="280" rx="32" fill="#ffffff" stroke="#86efac" stroke-width="12"/>
+  <rect x="560" y="330" width="450" height="280" rx="32" fill="#ffffff" stroke="#93c5fd" stroke-width="12"/>
+  <path d="M270 285h270M270 365h190M640 430h270M640 510h210" stroke="#0f172a" stroke-width="26" stroke-linecap="round" opacity=".55"/>
+  <path d="M430 465 355 560l178-94M760 330l82-88-190 88" fill="#ffffff" stroke="#0f172a" stroke-width="12" stroke-linejoin="round" opacity=".25"/>
+</svg>

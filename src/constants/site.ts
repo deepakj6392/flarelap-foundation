@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Flarelap Global Foundation",
   description: "Empower people and change lives",
   url: "https://flarelap.org",
-  ogImage: "https://flarelap.org/og-image.png",
-  email: "hello@flarelap.org",
+  ogImage: "/samples/community.svg",
+  email: "support@flarelap.org",
   phone: "+91 98765 43210",
   location: "India",
   navItems: [
@@ -15,7 +15,10 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   links: {
-    twitter: "https://twitter.com/flarelap",
+  email: "mailto:support@flarelap.org",
+    x: "https://x.com/Flarelap_Org",
+    facebook: "https://www.facebook.com/flarelap.org",
+    youtube: "https://www.youtube.com/@flarelap_org",
     github: "https://github.com/flarelap",
   },
 };

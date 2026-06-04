@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Relief work sample image</title>
+  <desc id="desc">Abstract illustration of a relief box and rapid support.</desc>
+  <rect width="1200" height="800" fill="#fff7ed"/>
+  <path d="M600 120 990 345v260L600 740 210 605V345z" fill="#fed7aa"/>
+  <path d="M210 345 600 480l390-135M600 480v260" fill="none" stroke="#c2410c" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M430 260 810 395" stroke="#fb923c" stroke-width="70" stroke-linecap="round"/>
+  <path d="M600 255v170M515 340h170" stroke="#fff7ed" stroke-width="34" stroke-linecap="round"/>
+</svg>

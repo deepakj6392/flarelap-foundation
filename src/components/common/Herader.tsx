@@ -20,7 +20,7 @@ export default function Herader() {
               {siteConfig.name}
             </p>
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700">
-              Empowering communities
+              Empower people & change lives
             </p>
           </div>
         </Link>

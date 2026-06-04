@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Health outreach sample image</title>
+  <desc id="desc">Abstract illustration of a health camp and care symbol.</desc>
+  <rect width="1200" height="800" fill="#ecfeff"/>
+  <rect x="210" y="165" width="780" height="470" rx="36" fill="#ffffff" stroke="#bae6fd" stroke-width="10"/>
+  <circle cx="430" cy="400" r="135" fill="#dcfce7"/>
+  <path d="M430 310v180M340 400h180" stroke="#059669" stroke-width="48" stroke-linecap="round"/>
+  <path d="M650 310h210M650 385h155M650 460h230" stroke="#0f766e" stroke-width="30" stroke-linecap="round"/>
+  <path d="M245 660h710" stroke="#0891b2" stroke-width="18" stroke-linecap="round" opacity=".22"/>
+</svg>

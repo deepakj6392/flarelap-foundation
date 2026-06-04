@@ -1,28 +1,29 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { sampleImages } from "@/constants/images";
 
 const programs = [
 	{
 		title: "Learning & Scholarships",
 		excerpt:
 			"After-school learning, scholarships, and mentorship that help children stay in school.",
-		image: "https://images.unsplash.com/photo-1528211833043-7f9b2a9f5a2b?q=80&w=1600&auto=format&fit=crop",
+		image: sampleImages.education,
 	},
 	{
 		title: "Health Camps",
 		excerpt: "Local health camps offering screenings, hygiene supplies, and education.",
-		image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1600&auto=format&fit=crop",
+		image: sampleImages.health,
 	},
 	{
 		title: "Skills & Livelihood",
 		excerpt: "Short trainings and micro-grants that jumpstart small businesses.",
-		image: "https://images.unsplash.com/photo-1559028012-481c6b7b7f6e?q=80&w=1600&auto=format&fit=crop",
+		image: sampleImages.livelihood,
 	},
 	{
 		title: "Emergency Relief",
 		excerpt: "Rapid response and community relief during urgent seasons and crises.",
-		image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop",
+		image: sampleImages.relief,
 	},
 ];
 
@@ -64,7 +65,7 @@ export default function ProgramsPage() {
 												<h3 className="font-semibold text-slate-900">Village learning center — uplift in attendance</h3>
 												<p className="mt-2 text-sm text-slate-700">After setting up a community learning center with local tutors, school attendance rose by 27% in six months.</p>
 												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md">
-													<Image src="https://images.unsplash.com/photo-1523473827532-8e7f4a2f0bdf?q=80&w=1200&auto=format&fit=crop" alt="case study" fill className="object-cover" />
+													<Image src={sampleImages.education} alt="case study" fill className="object-cover" />
 												</div>
 											</article>
 
@@ -72,7 +73,7 @@ export default function ProgramsPage() {
 												<h3 className="font-semibold text-slate-900">Health camp outcomes</h3>
 												<p className="mt-2 text-sm text-slate-700">Local health camps led to early detection of chronic conditions and distribution of hygiene kits to 420 families.</p>
 												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md">
-													<Image src="https://images.unsplash.com/photo-1582719478250-9f3b2d9f3b58?q=80&w=1200&auto=format&fit=crop" alt="health camp" fill className="object-cover" />
+													<Image src={sampleImages.health} alt="health camp" fill className="object-cover" />
 												</div>
 											</article>
 										</div>
@@ -84,4 +85,3 @@ export default function ProgramsPage() {
 		</div>
 	);
 }
-

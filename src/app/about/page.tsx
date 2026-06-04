@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { sampleImages } from "@/constants/images";
 import { siteConfig } from "@/constants/site";
 
 export default function AboutPage() {
@@ -40,15 +41,15 @@ export default function AboutPage() {
 							</div>
 
 							<div className="relative">
-								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
-									<Image
-										src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1600&auto=format&fit=crop"
-										alt="Community working together"
-										fill
-										className="object-cover"
-										sizes="(max-width: 768px) 100vw, 50vw"
-									/>
-								</div>
+												<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
+																		<Image
+																			src={sampleImages.community}
+																			alt="Community working together"
+																			fill
+																			className="object-cover"
+																			sizes="(max-width: 768px) 100vw, 50vw"
+																		/>
+												</div>
 							</div>
 						</div>
 					</div>
@@ -91,7 +92,7 @@ export default function AboutPage() {
 									<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 										<div className="rounded-lg bg-slate-50 p-4 text-center">
 											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src="https://images.unsplash.com/photo-1528211833043-7f9b2a9f5a2b?q=80&w=1200&auto=format&fit=crop" alt="education" fill className="object-cover" />
+												<Image src={sampleImages.education} alt="education" fill className="object-cover" />
 											</div>
 											<h3 className="font-semibold">Education Access</h3>
 											<p className="mt-2 text-sm text-slate-700">After-school support, digital literacy and scholarships.</p>
@@ -99,7 +100,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-slate-50 p-4 text-center">
 											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1200&auto=format&fit=crop" alt="health" fill className="object-cover" />
+												<Image src={sampleImages.health} alt="health" fill className="object-cover" />
 											</div>
 											<h3 className="font-semibold">Health & Wellness</h3>
 											<p className="mt-2 text-sm text-slate-700">Health camps, preventive care and hygiene awareness.</p>
@@ -107,7 +108,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-slate-50 p-4 text-center">
 											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src="https://images.unsplash.com/photo-1559028012-481c6b7b7f6e?q=80&w=1200&auto=format&fit=crop" alt="livelihood" fill className="object-cover" />
+												<Image src={sampleImages.livelihood} alt="livelihood" fill className="object-cover" />
 											</div>
 											<h3 className="font-semibold">Livelihood Support</h3>
 											<p className="mt-2 text-sm text-slate-700">Skills training, micro-grants and small business guidance.</p>
@@ -115,7 +116,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-slate-50 p-4 text-center">
 											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="relief" fill className="object-cover" />
+												<Image src={sampleImages.relief} alt="relief" fill className="object-cover" />
 											</div>
 											<h3 className="font-semibold">Community Relief</h3>
 											<p className="mt-2 text-sm text-slate-700">Rapid response and seasonal relief for vulnerable families.</p>
@@ -132,7 +133,7 @@ export default function AboutPage() {
 									<div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 										<div className="rounded-lg bg-white p-6 text-center shadow-sm">
 											<div className="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-												<Image src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="leader" width={96} height={96} className="object-cover" />
+												<Image src={sampleImages.community} alt="leader" width={96} height={96} className="object-cover" />
 											</div>
 											<p className="font-semibold">Dr. Meera Rao</p>
 											<p className="mt-1 text-xs text-slate-600">Programs Director</p>
@@ -140,7 +141,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-white p-6 text-center shadow-sm">
 											<div className="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-												<Image src="https://images.unsplash.com/photo-1545996124-1f3fa3b4b1b2?q=80&w=400&auto=format&fit=crop" alt="leader" width={96} height={96} className="object-cover" />
+												<Image src={sampleImages.livelihood} alt="leader" width={96} height={96} className="object-cover" />
 											</div>
 											<p className="font-semibold">Arjun Patel</p>
 											<p className="mt-1 text-xs text-slate-600">Operations Lead</p>
@@ -148,7 +149,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-white p-6 text-center shadow-sm">
 											<div className="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-												<Image src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop" alt="leader" width={96} height={96} className="object-cover" />
+												<Image src={sampleImages.health} alt="leader" width={96} height={96} className="object-cover" />
 											</div>
 											<p className="font-semibold">Sara Fernando</p>
 											<p className="mt-1 text-xs text-slate-600">Community Outreach</p>
@@ -156,7 +157,7 @@ export default function AboutPage() {
 
 										<div className="rounded-lg bg-white p-6 text-center shadow-sm">
 											<div className="mx-auto mb-3 h-24 w-24 overflow-hidden rounded-full">
-												<Image src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop" alt="leader" width={96} height={96} className="object-cover" />
+												<Image src={sampleImages.education} alt="leader" width={96} height={96} className="object-cover" />
 											</div>
 											<p className="font-semibold">Volunteer Team</p>
 											<p className="mt-1 text-xs text-slate-600">Network of volunteers</p>
@@ -169,4 +170,3 @@ export default function AboutPage() {
 		</div>
 	);
 }
-

@@ -1,15 +1,7 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
-
-const galleryImages = [
-  "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1533075371738-7a6c6c8b9e6b?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1559028012-481c6b7b7f6e?q=80&w=1600&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=1600&auto=format&fit=crop",
-];
+import { galleryImages, sampleImages } from "@/constants/images";
 
 const focusAreas = [
   {
@@ -239,7 +231,7 @@ export default function Home() {
               <blockquote className="rounded-lg border border-slate-100 bg-slate-50 p-6">
                 <div className="flex items-start gap-4">
                   <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
-                    <Image src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Volunteer" fill className="object-cover" />
+                    <Image src={sampleImages.community} alt="Volunteer" fill className="object-cover" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Asha Kumari</p>
@@ -252,7 +244,7 @@ export default function Home() {
               <blockquote className="rounded-lg border border-slate-100 bg-slate-50 p-6">
                 <div className="flex items-start gap-4">
                   <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
-                    <Image src="https://images.unsplash.com/photo-1545996124-1f3fa3b4b1b2?q=80&w=400&auto=format&fit=crop" alt="Volunteer" fill className="object-cover" />
+                    <Image src={sampleImages.livelihood} alt="Volunteer" fill className="object-cover" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Rahul Sharma</p>
@@ -265,7 +257,7 @@ export default function Home() {
               <blockquote className="rounded-lg border border-slate-100 bg-slate-50 p-6">
                 <div className="flex items-start gap-4">
                   <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
-                    <Image src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=400&auto=format&fit=crop" alt="Volunteer" fill className="object-cover" />
+                    <Image src={sampleImages.health} alt="Volunteer" fill className="object-cover" />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900">Lina Costa</p>

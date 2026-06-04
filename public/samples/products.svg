@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Support kit sample image</title>
+  <desc id="desc">Abstract illustration of practical program kits.</desc>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="250" y="260" width="300" height="280" rx="28" fill="#dcfce7" stroke="#059669" stroke-width="12"/>
+  <rect x="470" y="180" width="300" height="360" rx="28" fill="#dbeafe" stroke="#2563eb" stroke-width="12"/>
+  <rect x="650" y="310" width="300" height="230" rx="28" fill="#ffedd5" stroke="#f97316" stroke-width="12"/>
+  <path d="M530 335h180M530 405h130" stroke="#1e40af" stroke-width="22" stroke-linecap="round"/>
+  <path d="M360 400h80M400 360v80" stroke="#047857" stroke-width="20" stroke-linecap="round"/>
+  <path d="M730 425h140" stroke="#c2410c" stroke-width="22" stroke-linecap="round"/>
+</svg>

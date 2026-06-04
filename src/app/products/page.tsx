@@ -1,27 +1,28 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { sampleImages } from "@/constants/images";
 
 const products = [
 	{
 		id: "kit-edu",
 		title: "Community Learning Kit",
 		price: "₹499",
-		img: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.education,
 		desc: "Low-cost kit with learning materials and guidance for local tutors.",
 	},
 	{
 		id: "kit-health",
 		title: "Health Outreach Pack",
 		price: "₹699",
-		img: "https://images.unsplash.com/photo-1588774060649-95b4e4b0d6b9?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.health,
 		desc: "Basic supplies and awareness materials for village health camps.",
 	},
 	{
 		id: "kit-skills",
 		title: "Skills Starter Kit",
 		price: "₹599",
-		img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.products,
 		desc: "Tools and curriculum for short vocational trainings.",
 	},
 ];

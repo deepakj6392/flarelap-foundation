@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Community support sample image</title>
+  <desc id="desc">Abstract illustration of people gathered for a community program.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dcfce7"/>
+      <stop offset="0.52" stop-color="#eff6ff"/>
+      <stop offset="1" stop-color="#fff7ed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="280" cy="275" r="86" fill="#059669"/>
+  <circle cx="600" cy="220" r="102" fill="#2563eb"/>
+  <circle cx="920" cy="275" r="86" fill="#f97316"/>
+  <path d="M140 670c30-152 112-228 246-228s216 76 246 228z" fill="#34d399"/>
+  <path d="M374 670c35-188 110-282 226-282s191 94 226 282z" fill="#60a5fa"/>
+  <path d="M568 670c30-152 112-228 246-228s216 76 246 228z" fill="#fb923c"/>
+  <path d="M180 675h840" stroke="#0f172a" stroke-width="18" stroke-linecap="round" opacity=".12"/>
+</svg>

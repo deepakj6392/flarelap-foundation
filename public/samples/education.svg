@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Education sample image</title>
+  <desc id="desc">Abstract illustration of learning materials and study support.</desc>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect x="190" y="150" width="820" height="500" rx="28" fill="#ffffff" stroke="#cbd5e1" stroke-width="10"/>
+  <path d="M260 250h350M260 330h280M260 410h400" stroke="#2563eb" stroke-width="28" stroke-linecap="round"/>
+  <rect x="700" y="240" width="190" height="250" rx="16" fill="#dcfce7" stroke="#059669" stroke-width="10"/>
+  <path d="M735 300h120M735 355h90M735 410h130" stroke="#059669" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="880" cy="595" r="78" fill="#f97316"/>
+  <path d="M820 594h120M880 534v120" stroke="#fff7ed" stroke-width="20" stroke-linecap="round"/>
+</svg>

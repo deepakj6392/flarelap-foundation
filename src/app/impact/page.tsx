@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { sampleImages } from "@/constants/images";
 
 const impactStats = [
 	{ value: "12k+", label: "People reached" },
@@ -37,9 +38,9 @@ export default function ImpactPage() {
 							</div>
 
 							<div className="relative">
-								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
-									<Image src="https://images.unsplash.com/photo-1484981184820-2e84ea0d4291?q=80&w=1600&auto=format&fit=crop" alt="Impact work" fill className="object-cover" />
-								</div>
+												<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
+													  <Image src={sampleImages.community} alt="Impact work" fill className="object-cover" />
+												</div>
 							</div>
 						</div>
 					</div>
@@ -78,9 +79,9 @@ export default function ImpactPage() {
 										</div>
 									</div>
 
-									<div className="mt-8 relative h-56 w-full overflow-hidden rounded-md">
-										<Image src="https://images.unsplash.com/photo-1528150177501-1b0a0a3b29f6?q=80&w=1600&auto=format&fit=crop" alt="timeline" fill className="object-cover" />
-									</div>
+												<div className="mt-8 relative h-56 w-full overflow-hidden rounded-md">
+													<Image src={sampleImages.blog} alt="timeline" fill className="object-cover" />
+												</div>
 								</div>
 							</section>
 			</main>

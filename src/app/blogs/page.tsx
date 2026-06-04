@@ -1,22 +1,23 @@
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { sampleImages } from "@/constants/images";
 
 const posts = [
 	{
 		title: "How local mentors change trajectories",
 	excerpt: "Stories from the field about mentorship, small wins, and how consistent guidance helps children stay in school and find purpose.",
-		img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.education,
 	},
 	{
 		title: "Simple metrics that matter",
 	excerpt: "How we designed a short set of indicators that track program health without burdening local partners — and what we learned.",
-		img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.blog,
 	},
 	{
 		title: "Volunteer day — building a community library",
 	excerpt: "A recap of a recent community day: building a small library, engaging youth volunteers, and practical lessons for scaling.",
-		img: "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop",
+		img: sampleImages.community,
 	},
 ];
 
@@ -49,7 +50,7 @@ export default function BlogsPage() {
 										<h2 className="text-xl font-bold">Featured story</h2>
 										<p className="mt-3 text-sm text-slate-700">How a small reading corner became a catalyst for local youth engagement — our detailed writeup.</p>
 										<div className="mt-4 relative h-56 w-full overflow-hidden rounded-md">
-											<Image src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop" alt="featured" fill className="object-cover" />
+											<Image src={sampleImages.blog} alt="featured" fill className="object-cover" />
 										</div>
 									</div>
 					</div>
@@ -59,4 +60,3 @@ export default function BlogsPage() {
 		</div>
 	);
 }
-
