@@ -1,9 +1,51 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { sampleImages } from "@/constants/images";
 
 export default function ContactPage() {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [message, setMessage] = useState("");
+	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+	const [statusMessage, setStatusMessage] = useState("");
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		if (!name || !email || !message) {
+			setStatus("error");
+			setStatusMessage("Please fill in all required fields.");
+			return;
+		}
+
+		setStatus("loading");
+		setStatusMessage("");
+
+		try {
+			const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+			const res = await fetch(`${apiUrl}/api/foundation/contacts`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ name, email, message, post: "Foundation Inquiry" }),
+			});
+
+			const data = await res.json();
+			if (!res.ok) throw new Error(data.message || "Failed to send message.");
+
+			setStatus("success");
+			setName("");
+			setEmail("");
+			setMessage("");
+			setStatusMessage("Your message has been sent successfully. We will get back to you soon!");
+		} catch (err: any) {
+			setStatus("error");
+			setStatusMessage(err.message || "Failed to send message. Please try again later.");
+		}
+	};
+
 	return (
 		<div className="min-h-screen bg-white text-slate-950">
 			<Herader />
@@ -17,11 +59,49 @@ export default function ContactPage() {
 								<p className="mt-6 text-lg leading-8 text-slate-700">Whether you want to volunteer, partner, or learn more — send a note and we will reply.</p>
 
 								<div className="mt-8 max-w-xl">
-									<form className="grid gap-3">
-										<input aria-label="Name" placeholder="Full name" className="rounded-md border border-slate-200 px-4 py-3" />
-										<input aria-label="Email" placeholder="Email address" className="rounded-md border border-slate-200 px-4 py-3" />
-										<textarea aria-label="Message" placeholder="How can we help?" rows={5} className="rounded-md border border-slate-200 px-4 py-3" />
-										<button className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-800">Send message</button>
+									<form onSubmit={handleSubmit} className="grid gap-3">
+										<input
+											required
+											value={name}
+											onChange={(e) => setName(e.target.value)}
+											aria-label="Name"
+											placeholder="Full name"
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											disabled={status === "loading"}
+										/>
+										<input
+											required
+											type="email"
+											value={email}
+											onChange={(e) => setEmail(e.target.value)}
+											aria-label="Email"
+											placeholder="Email address"
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											disabled={status === "loading"}
+										/>
+										<textarea
+											required
+											value={message}
+											onChange={(e) => setMessage(e.target.value)}
+											aria-label="Message"
+											placeholder="How can we help?"
+											rows={5}
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											disabled={status === "loading"}
+										/>
+										<button
+											type="submit"
+											disabled={status === "loading"}
+											className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-800 transition disabled:opacity-50"
+										>
+											{status === "loading" ? "Sending..." : "Send message"}
+										</button>
+
+										{statusMessage && (
+											<p className={`mt-2 text-sm font-semibold ${status === "success" ? "text-emerald-700" : "text-red-600"}`}>
+												{statusMessage}
+											</p>
+										)}
 									</form>
 								</div>
 							</div>

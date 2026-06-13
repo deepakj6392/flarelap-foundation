@@ -55,8 +55,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-slate-400">
-        (c) {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+      <div className="border-t border-white/10 px-5 py-5 text-slate-400 text-xs">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
+          <p>(c) {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+          <Link href="/admin/login" className="font-semibold text-slate-400 transition hover:text-emerald-400">
+            Admin Portal
+          </Link>
+        </div>
       </div>
     </footer>
   );

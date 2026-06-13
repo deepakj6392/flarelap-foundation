@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
@@ -33,6 +36,35 @@ const metrics = [
 ];
 
 export default function Home() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [newsletterMessage, setNewsletterMessage] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail) return;
+
+    setNewsletterStatus("loading");
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/foundation/newsletter`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Something went wrong.");
+
+      setNewsletterStatus("success");
+      setNewsletterEmail("");
+      setNewsletterMessage("Thank you for subscribing!");
+    } catch (err: any) {
+      setNewsletterStatus("error");
+      setNewsletterMessage(err.message || "Failed to subscribe. Please try again.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-slate-950">
       <Herader />
@@ -303,12 +335,33 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-slate-950">Stay connected</h3>
               <p className="mt-3 text-sm text-slate-700">Subscribe for short updates and practical ways to help.</p>
 
-              <form className="mt-6 mx-auto max-w-xl">
-                <div className="flex items-center gap-2">
-                  <input aria-label="Email" type="email" placeholder="Your email address" className="flex-1 rounded-md border border-slate-200 px-4 py-3" />
-                  <button className="rounded-full bg-emerald-700 px-5 py-3 text-sm font-bold text-white hover:bg-emerald-800">Subscribe</button>
+              <form onSubmit={handleNewsletterSubmit} className="mt-6 mx-auto max-w-xl">
+                <div className="flex flex-col sm:flex-row items-center gap-2">
+                  <input
+                    aria-label="Email"
+                    type="email"
+                    required
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    placeholder="Your email address"
+                    className="w-full sm:flex-1 rounded-md border border-slate-205 bg-white px-4 py-3 text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+                    disabled={newsletterStatus === "loading"}
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterStatus === "loading"}
+                    className="w-full sm:w-auto shrink-0 rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white hover:bg-emerald-800 transition disabled:opacity-50"
+                  >
+                    {newsletterStatus === "loading" ? "Subscribing..." : "Subscribe"}
+                  </button>
                 </div>
               </form>
+
+              {newsletterMessage && (
+                <p className={`mt-3 text-sm font-semibold ${newsletterStatus === "success" ? "text-emerald-700" : "text-red-600"}`}>
+                  {newsletterMessage}
+                </p>
+              )}
             </div>
           </div>
         </section>
