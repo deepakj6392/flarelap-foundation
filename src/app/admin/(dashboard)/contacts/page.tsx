@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import { 
   MessageSquare, 
   Trash2, 
@@ -51,7 +52,7 @@ export default function ContactsPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const res = await fetch(`${apiUrl}/api/foundation/admin/contacts`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -62,7 +63,7 @@ export default function ContactsPage() {
         throw new Error(data.message || "Failed to load contacts.");
       }
     } catch (err: any) {
-      setError("Failed to fetch contact submissions. Verify the backend port 5000 is listening.");
+      setError("Failed to fetch contact submissions. Verify the database and Next.js server are active.");
     } finally {
       setLoading(false);
     }
@@ -74,14 +75,30 @@ export default function ContactsPage() {
 
   const handleDeleteContact = async (id: number) => {
     const storedToken = localStorage.getItem("admin_token");
-    if (!storedToken || !confirm("Are you sure you want to delete this inquiry?")) return;
+    if (!storedToken) return;
+
+    const isDark = document.querySelector(".dark") !== null;
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "Do you really want to delete this inquiry?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete it!",
+      cancelButtonText: "No, cancel",
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      background: isDark ? "#0f172a" : "#ffffff",
+      color: isDark ? "#ffffff" : "#1e293b",
+    });
+
+    if (!result.isConfirmed) return;
     
     setActionLoading(`contact-${id}`);
     setError(null);
     setSuccessMsg(null);
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const res = await fetch(`${apiUrl}/api/foundation/admin/contacts/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },
@@ -202,7 +219,7 @@ export default function ContactsPage() {
               <select
                 value={entriesPerPage}
                 onChange={(e) => setEntriesPerPage(Number(e.target.value))}
-                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-1.5 font-bold text-slate-850 dark:text-white outline-none cursor-pointer"
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-1.5 font-bold text-slate-800 dark:text-white outline-none cursor-pointer"
               >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
@@ -242,12 +259,12 @@ export default function ContactsPage() {
           {loading ? (
             <div className="flex h-72 flex-col items-center justify-center gap-3">
               <RefreshCw className="h-8 w-8 animate-spin text-emerald-500" />
-              <p className="text-xs font-semibold text-slate-550">Loading inquiry records...</p>
+              <p className="text-xs font-semibold text-slate-500">Loading inquiry records...</p>
             </div>
           ) : filteredContacts.length === 0 ? (
             <div className="flex h-72 flex-col items-center justify-center">
               <MessageSquare className="h-12 w-12 text-slate-700 mb-3" />
-              <p className="text-sm font-bold text-slate-850 dark:text-white">No inquiry records found</p>
+              <p className="text-sm font-bold text-slate-800 dark:text-white">No inquiry records found</p>
             </div>
           ) : (
             <table className="w-full text-left border-collapse">
@@ -271,7 +288,7 @@ export default function ContactsPage() {
               <tbody className="divide-y divide-slate-200 dark:divide-slate-800/40 text-xs text-slate-700 dark:text-slate-300">
                 {paginatedContacts.map((contact, index) => (
                   <tr key={contact.id} className="hover:bg-slate-100/50 dark:hover:bg-slate-800/60 transition">
-                    <td className="px-6 py-4.5 text-slate-550 font-bold">
+                    <td className="px-6 py-4.5 text-slate-500 font-bold">
                       {(currentPage - 1) * entriesPerPage + index + 1}
                     </td>
                     <td className="px-6 py-4.5 font-bold text-slate-900 dark:text-white">{contact.name}</td>
@@ -315,7 +332,7 @@ export default function ContactsPage() {
 
         {/* Pagination Footer */}
         {totalEntries > 0 && (
-          <div className="flex flex-col gap-4 items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 px-6 py-4 sm:flex-row text-xs text-slate-550 dark:text-slate-400">
+          <div className="flex flex-col gap-4 items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 px-6 py-4 sm:flex-row text-xs text-slate-500 dark:text-slate-400">
             <div>
               Showing <span className="font-bold text-emerald-500">{Math.min(totalEntries, (currentPage - 1) * entriesPerPage + 1)}</span> to{" "}
               <span className="font-bold text-emerald-500">{Math.min(totalEntries, currentPage * entriesPerPage)}</span> of{" "}
@@ -326,14 +343,14 @@ export default function ContactsPage() {
               <button
                 onClick={() => setCurrentPage(1)}
                 disabled={currentPage === 1}
-                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30"
+                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30"
               >
                 <ChevronsLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                 disabled={currentPage === 1}
-                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-855 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30 font-bold"
+                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30 font-bold"
               >
                 Previous
               </button>
@@ -347,7 +364,7 @@ export default function ContactsPage() {
                     key={targetPage}
                     onClick={() => setCurrentPage(targetPage)}
                     className={`rounded-lg px-3 py-1.5 border font-extrabold ${
-                      isActive ? "bg-emerald-600 border-emerald-600 text-white" : "border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-100 text-slate-700 dark:text-slate-300"
+                      isActive ? "bg-emerald-600 border-emerald-600 text-white" : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 text-slate-700 dark:text-slate-300"
                     }`}
                   >
                     {targetPage}
@@ -358,14 +375,14 @@ export default function ContactsPage() {
               <button
                 onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-855 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30 font-bold"
+                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30 font-bold"
               >
                 Next
               </button>
               <button
                 onClick={() => setCurrentPage(totalPages)}
                 disabled={currentPage === totalPages}
-                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30"
+                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30"
               >
                 <ChevronsRight className="h-4 w-4" />
               </button>
@@ -417,7 +434,7 @@ export default function ContactsPage() {
 
               <div>
                 <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Full Message Contents</label>
-                <p className="text-sm leading-relaxed p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 mt-1 select-text bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-350">
+                <p className="text-sm leading-relaxed p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 mt-1 select-text bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300">
                   {selectedInquiry.message}
                 </p>
               </div>
@@ -441,7 +458,7 @@ export default function ContactsPage() {
               </button>
               <button
                 onClick={() => setSelectedInquiry(null)}
-                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-850 px-4 py-2.5 text-xs font-bold text-slate-700 dark:text-white"
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 px-4 py-2.5 text-xs font-bold text-slate-700 dark:text-white"
               >
                 Close details
               </button>

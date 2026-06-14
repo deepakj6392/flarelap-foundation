@@ -14,7 +14,14 @@ import {
   Sun,
   Moon,
   User,
-  ShieldCheck
+  ShieldCheck,
+  GraduationCap,
+  ChevronDown,
+  ChevronUp,
+  BookOpen,
+  FileText,
+  Settings,
+  Heart
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -27,6 +34,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [educationOpen, setEducationOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   useEffect(() => {
     const storedToken = localStorage.getItem("admin_token");
@@ -59,6 +68,15 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     }
   }, [router]);
 
+  useEffect(() => {
+    if (pathname.startsWith("/admin/education")) {
+      setEducationOpen(true);
+    }
+    if (pathname.startsWith("/admin/profile")) {
+      setMoreOpen(true);
+    }
+  }, [pathname]);
+
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
@@ -83,9 +101,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   const isDark = theme === "dark";
   const bgMain = isDark ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800";
-  const bgSidebar = isDark ? "bg-slate-900 border-slate-850" : "bg-white border-slate-200 shadow-lg";
+  const bgSidebar = isDark ? "bg-slate-900 border-slate-800" : "bg-white border-slate-200 shadow-lg";
   const textHeading = isDark ? "text-white" : "text-slate-900";
-  const bgHeader = isDark ? "bg-slate-900/40 border-slate-850" : "bg-white/80 border-slate-205 shadow-sm";
+  const bgHeader = isDark ? "bg-slate-900/40" : "bg-white/80 shadow-xs";
   const bgHover = isDark ? "hover:bg-slate-800/60 hover:text-white" : "hover:bg-slate-100 hover:text-slate-900";
 
   // Sidebar Menu button colors
@@ -96,7 +114,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         ? `${base} bg-gradient-to-r from-emerald-950/40 to-emerald-900/20 text-emerald-400 border border-emerald-800/40 shadow-sm shadow-emerald-950/20`
         : `${base} bg-emerald-50 text-emerald-700 border border-emerald-100/70 shadow-sm shadow-emerald-100/20`;
     }
-    return `${base} text-slate-405 hover:translate-x-1 ${bgHover}`;
+    return `${base} text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 ${bgHover}`;
   };
 
   const getPageTitle = () => {
@@ -107,13 +125,23 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Contact Inquiries";
       case "/admin/newsletter":
         return "Newsletter Subscribers";
+      case "/admin/education/mcqs":
+        return "MCQ Questions";
+      case "/admin/education/study-material":
+        return "Study Materials";
+      case "/admin/donations":
+        return "Donation Records";
+      case "/admin/students":
+        return "Student Directory";
+      case "/admin/profile":
+        return "Update Profile";
       default:
         return "Admin Panel";
     }
   };
 
   return (
-    <div className={`flex min-h-screen font-sans transition-colors duration-300 ${bgMain}`}>
+    <div className={`flex min-h-screen font-sans transition-colors duration-300 ${isDark ? "dark" : ""} ${bgMain}`}>
       
       {/* 1. LEFT COLLAPSIBLE SIDEBAR */}
       <aside 
@@ -156,17 +184,104 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {/* Nav Links */}
           <nav className="space-y-2.5" aria-label="Sidebar navigation">
             <Link href="/admin/dashboard" className={getMenuBtnClass("/admin/dashboard")}>
-              <LayoutDashboard className={`h-5 w-5 ${pathname === '/admin/dashboard' ? 'text-emerald-500' : 'text-slate-400'}`} />
+              <LayoutDashboard className={`h-5 w-5 ${pathname === '/admin/dashboard' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Overview
             </Link>
             <Link href="/admin/contacts" className={getMenuBtnClass("/admin/contacts")}>
-              <MessageSquare className={`h-5 w-5 ${pathname === '/admin/contacts' ? 'text-emerald-500' : 'text-slate-400'}`} />
+              <MessageSquare className={`h-5 w-5 ${pathname === '/admin/contacts' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Contacts
             </Link>
             <Link href="/admin/newsletter" className={getMenuBtnClass("/admin/newsletter")}>
-              <Mail className={`h-5 w-5 ${pathname === '/admin/newsletter' ? 'text-emerald-500' : 'text-slate-400'}`} />
+              <Mail className={`h-5 w-5 ${pathname === '/admin/newsletter' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Newsletter
             </Link>
+            <Link href="/admin/donations" className={getMenuBtnClass("/admin/donations")}>
+              <Heart className={`h-5 w-5 ${pathname === '/admin/donations' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Donations
+            </Link>
+            <Link href="/admin/students" className={getMenuBtnClass("/admin/students")}>
+              <GraduationCap className={`h-5 w-5 ${pathname === '/admin/students' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Students
+            </Link>
+
+            {/* Education Collapsible Menu */}
+            <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <button
+                onClick={() => setEducationOpen(prev => !prev)}
+                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-all duration-200 outline-none text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
+              >
+                <div className="flex items-center gap-3.5">
+                  <GraduationCap className={`h-5 w-5 ${pathname.startsWith('/admin/education') ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+                  <span>Education</span>
+                </div>
+                {educationOpen ? (
+                  <ChevronUp className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                ) : (
+                  <ChevronDown className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                )}
+              </button>
+              
+              {educationOpen && (
+                <div className="mt-1.5 ml-9 space-y-1 border-l border-slate-200 dark:border-slate-800 pl-3">
+                  <Link
+                    href="/admin/education/mcqs"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/education/mcqs"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <FileText className="h-3.5 w-3.5" />
+                    MCQ Question
+                  </Link>
+                  <Link
+                    href="/admin/education/study-material"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/education/study-material"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <BookOpen className="h-3.5 w-3.5" />
+                    Study Material
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* More Collapsible Menu */}
+            <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80">
+              <button
+                onClick={() => setMoreOpen(prev => !prev)}
+                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-all duration-200 outline-none text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
+              >
+                <div className="flex items-center gap-3.5">
+                  <Settings className={`h-5 w-5 ${pathname.startsWith('/admin/profile') ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+                  <span>More</span>
+                </div>
+                {moreOpen ? (
+                  <ChevronUp className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                ) : (
+                  <ChevronDown className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                )}
+              </button>
+              
+              {moreOpen && (
+                <div className="mt-1.5 ml-9 space-y-1 border-l border-slate-200 dark:border-slate-800 pl-3">
+                  <Link
+                    href="/admin/profile"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/profile"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <User className="h-3.5 w-3.5" />
+                    Update Profile
+                  </Link>
+                </div>
+              )}
+            </div>
           </nav>
         </div>
 
@@ -198,7 +313,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className="flex flex-1 flex-col min-w-0">
         
         {/* Top Header Bar */}
-        <header className={`sticky top-0 z-30 flex h-20 items-center justify-between border-b px-6 py-4 backdrop-blur-md ${bgHeader}`}>
+        <header className={`sticky top-0 z-30 flex h-14 items-center justify-between px-6 py-2 backdrop-blur-md ${bgHeader}`}>
           <div className="flex items-center gap-4">
             <button 
               onClick={() => {
@@ -208,7 +323,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   setSidebarCollapsed(prev => !prev);
                 }
               }}
-              className={`rounded-xl p-2 border transition ${isDark ? 'border-slate-800 text-slate-400 hover:bg-slate-800/60' : 'border-slate-200 text-slate-650 hover:bg-slate-100 shadow-xs'}`}
+              className={`rounded-xl p-2 border transition ${isDark ? 'border-slate-800 text-slate-400 hover:bg-slate-800/60' : 'border-slate-200 text-slate-600 hover:bg-slate-100 shadow-xs'}`}
             >
               <Menu className="h-5 w-5" />
             </button>
@@ -222,7 +337,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className={`rounded-xl border p-2 transition duration-200 ${isDark ? 'border-slate-800 bg-slate-900 text-yellow-400 hover:bg-slate-850' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50 shadow-xs'}`}
+              className={`rounded-xl border p-2 transition duration-200 ${isDark ? 'border-slate-800 bg-slate-900 text-yellow-400 hover:bg-slate-800' : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50 shadow-xs'}`}
             >
               {isDark ? <Sun className="h-4.5 w-4.5" /> : <Moon className="h-4.5 w-4.5" />}
             </button>
@@ -240,7 +355,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <div className="min-w-0 text-left">
                 <div className="flex items-center gap-1.5">
                   <p className={`text-xs font-black leading-none truncate ${textHeading}`}>
-                    {user?.fullName || user?.username || "Admin"}
+                    {user?.name || user?.fullName || user?.username || "Admin"}
                   </p>
                   <ShieldCheck className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
                 </div>

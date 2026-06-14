@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import { 
   Mail, 
   Trash2, 
@@ -44,7 +45,7 @@ export default function NewsletterPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const res = await fetch(`${apiUrl}/api/foundation/admin/newsletter`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -55,7 +56,7 @@ export default function NewsletterPage() {
         throw new Error(data.message || "Failed to load subscribers.");
       }
     } catch (err: any) {
-      setError("Failed to fetch newsletter subscribers. Verify the backend port 5000 is listening.");
+      setError("Failed to fetch newsletter subscribers. Verify the database and Next.js server are active.");
     } finally {
       setLoading(false);
     }
@@ -67,14 +68,30 @@ export default function NewsletterPage() {
 
   const handleDeleteSubscriber = async (id: number) => {
     const storedToken = localStorage.getItem("admin_token");
-    if (!storedToken || !confirm("Are you sure you want to remove this subscriber?")) return;
+    if (!storedToken) return;
+
+    const isDark = document.querySelector(".dark") !== null;
+    const result = await Swal.fire({
+      title: "Are you sure?",
+      text: "Do you really want to remove this subscriber?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, remove it!",
+      cancelButtonText: "No, cancel",
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      background: isDark ? "#0f172a" : "#ffffff",
+      color: isDark ? "#ffffff" : "#1e293b",
+    });
+
+    if (!result.isConfirmed) return;
     
     setActionLoading(`sub-${id}`);
     setError(null);
     setSuccessMsg(null);
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
       const res = await fetch(`${apiUrl}/api/foundation/admin/newsletter/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },
@@ -190,7 +207,7 @@ export default function NewsletterPage() {
               <select
                 value={entriesPerPage}
                 onChange={(e) => setEntriesPerPage(Number(e.target.value))}
-                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-1.5 font-bold text-slate-850 dark:text-white outline-none cursor-pointer"
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-1.5 font-bold text-slate-800 dark:text-white outline-none cursor-pointer"
               >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
@@ -230,12 +247,12 @@ export default function NewsletterPage() {
           {loading ? (
             <div className="flex h-72 flex-col items-center justify-center gap-3">
               <RefreshCw className="h-8 w-8 animate-spin text-emerald-500" />
-              <p className="text-xs font-semibold text-slate-550">Loading subscribers...</p>
+              <p className="text-xs font-semibold text-slate-500">Loading subscribers...</p>
             </div>
           ) : filteredSubscribers.length === 0 ? (
             <div className="flex h-72 flex-col items-center justify-center">
               <Mail className="h-12 w-12 text-slate-700 mb-3" />
-              <p className="text-sm font-bold text-slate-850 dark:text-white">No subscriber records found</p>
+              <p className="text-sm font-bold text-slate-800 dark:text-white">No subscriber records found</p>
             </div>
           ) : (
             <table className="w-full text-left border-collapse">
@@ -254,7 +271,7 @@ export default function NewsletterPage() {
               <tbody className="divide-y divide-slate-200 dark:divide-slate-800/40 text-xs text-slate-700 dark:text-slate-300">
                 {paginatedSubscribers.map((sub, index) => (
                   <tr key={sub.id} className="hover:bg-slate-100/50 dark:hover:bg-slate-800/60 transition">
-                    <td className="px-6 py-4.5 text-slate-550 font-bold">
+                    <td className="px-6 py-4.5 text-slate-500 font-bold">
                       {(currentPage - 1) * entriesPerPage + index + 1}
                     </td>
                     <td className="px-6 py-4.5 font-bold text-slate-900 dark:text-white">{sub.email}</td>
@@ -268,7 +285,7 @@ export default function NewsletterPage() {
                       <button 
                         onClick={() => handleDeleteSubscriber(sub.id)} 
                         disabled={actionLoading === `sub-${sub.id}`} 
-                        className="p-1.5 rounded-lg text-slate-550 hover:text-red-505 transition"
+                        className="p-1.5 rounded-lg text-slate-500 hover:text-red-600 transition"
                         title="Remove Subscriber"
                       >
                         <Trash2 className="h-4.5 w-4.5" />
@@ -283,7 +300,7 @@ export default function NewsletterPage() {
 
         {/* Pagination Footer */}
         {totalEntries > 0 && (
-          <div className="flex flex-col gap-4 items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 px-6 py-4 sm:flex-row text-xs text-slate-550 dark:text-slate-400">
+          <div className="flex flex-col gap-4 items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 px-6 py-4 sm:flex-row text-xs text-slate-500 dark:text-slate-400">
             <div>
               Showing <span className="font-bold text-emerald-500">{Math.min(totalEntries, (currentPage - 1) * entriesPerPage + 1)}</span> to{" "}
               <span className="font-bold text-emerald-500">{Math.min(totalEntries, currentPage * entriesPerPage)}</span> of{" "}
@@ -294,14 +311,14 @@ export default function NewsletterPage() {
               <button
                 onClick={() => setCurrentPage(1)}
                 disabled={currentPage === 1}
-                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30"
+                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30"
               >
                 <ChevronsLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                 disabled={currentPage === 1}
-                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-855 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30 font-bold"
+                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30 font-bold"
               >
                 Previous
               </button>
@@ -315,7 +332,7 @@ export default function NewsletterPage() {
                     key={targetPage}
                     onClick={() => setCurrentPage(targetPage)}
                     className={`rounded-lg px-3 py-1.5 border font-extrabold ${
-                      isActive ? "bg-emerald-600 border-emerald-600 text-white" : "border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-100 text-slate-700 dark:text-slate-305"
+                      isActive ? "bg-emerald-600 border-emerald-600 text-white" : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 text-slate-700 dark:text-slate-300"
                     }`}
                   >
                     {targetPage}
@@ -326,14 +343,14 @@ export default function NewsletterPage() {
               <button
                 onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-855 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30 font-bold"
+                className="rounded-lg px-2.5 py-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30 font-bold"
               >
                 Next
               </button>
               <button
                 onClick={() => setCurrentPage(totalPages)}
                 disabled={currentPage === totalPages}
-                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 hover:bg-slate-105 disabled:opacity-30"
+                className="rounded-lg p-1.5 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-slate-100 disabled:opacity-30"
               >
                 <ChevronsRight className="h-4 w-4" />
               </button>
