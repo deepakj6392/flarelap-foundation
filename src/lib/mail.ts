@@ -10,6 +10,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://flarelap.org";
+
 export async function sendOtpEmail(to: string, otp: string): Promise<boolean> {
   const htmlContent = `
     <!DOCTYPE html>
@@ -362,7 +364,7 @@ export async function sendStudentWelcomeEmail(
             </div>
             
             <div class="button-container">
-              <a href="http://localhost:3000/student/login" class="login-btn" style="color: #ffffff;">Log In to Learning Portal</a>
+              <a href="${appUrl}/student/login" class="login-btn" style="color: #ffffff;">Log In to Learning Portal</a>
             </div>
             
             <p>For security reasons, we strongly recommend changing your password immediately after logging in for the first time.</p>
