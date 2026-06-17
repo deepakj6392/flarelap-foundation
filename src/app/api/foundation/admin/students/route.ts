@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { prisma } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
 export async function GET(request: Request) {
@@ -9,13 +9,39 @@ export async function GET(request: Request) {
   }
 
   try {
-    const result = await query(
-      `SELECT id, name, email, phone, student_id, temp_password, created_at 
-       FROM users 
-       WHERE role = 'student' 
-       ORDER BY created_at DESC`
-    );
-    return NextResponse.json({ students: result.rows });
+    const students = await prisma.user.findMany({
+      where: { role: "student" },
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+        studentId: true,
+        tempPassword: true,
+        createdAt: true,
+        course: {
+          select: {
+            name: true
+          }
+        }
+      },
+      orderBy: { createdAt: "desc" }
+    });
+
+    // Map keys to match the frontend expectations:
+    // student_id -> studentId, temp_password -> tempPassword, created_at -> createdAt
+    const mappedStudents = students.map(s => ({
+      id: s.id,
+      name: s.name,
+      email: s.email,
+      phone: s.phone,
+      student_id: s.studentId,
+      temp_password: s.tempPassword,
+      created_at: s.createdAt,
+      course_name: s.course?.name || "None"
+    }));
+
+    return NextResponse.json({ students: mappedStudents });
   } catch (error: any) {
     console.error("Admin student fetching error:", error);
     return NextResponse.json(

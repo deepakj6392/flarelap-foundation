@@ -166,10 +166,18 @@ export default function StudentLoginPage() {
         </form>
 
         {/* Footer links */}
-        <div className="text-center pt-2 border-t text-[11px] font-semibold text-slate-500">
-          New student?{" "}
-          <Link href="/student/register" className="text-emerald-700 hover:text-emerald-650 hover:underline">
-            Register & Get ID
+        <div className="text-center pt-2 border-t text-[11px] font-semibold text-slate-500 flex flex-col items-center gap-3">
+          <div>
+            New student?{" "}
+            <Link href="/student/register" className="text-emerald-700 hover:text-emerald-650 hover:underline">
+              Register & Get ID
+            </Link>
+          </div>
+          <Link 
+            href="/" 
+            className="text-slate-500 hover:text-emerald-700 hover:underline text-[10.5px] font-bold"
+          >
+            &#8592; Back to Home
           </Link>
         </div>
 

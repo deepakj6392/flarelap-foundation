@@ -13,11 +13,18 @@ import {
   Loader2, 
   CheckCircle2, 
   AlertCircle,
-  X,
-  LockKeyhole
+  LockKeyhole,
+  Phone,
+  MapPin,
+  Globe,
+  Link as LinkIcon,
+  X
 } from "lucide-react";
 
 export default function ProfilePage() {
+  // Tab state
+  const [activeTab, setActiveTab] = useState("security");
+
   // Profile state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,25 +36,41 @@ export default function ProfilePage() {
   const [otpModalOpen, setOtpModalOpen] = useState(false);
   const [otp, setOtp] = useState("");
   
+  // Site settings state
+  const [sitePhone, setSitePhone] = useState("");
+  const [siteEmail, setSiteEmail] = useState("");
+  const [siteLocation, setSiteLocation] = useState("");
+  const [siteAddress, setSiteAddress] = useState("");
+  const [facebook, setFacebook] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [xLink, setXLink] = useState("");
+  const [youtube, setYoutube] = useState("");
+
   // UI states
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   
   const [loading, setLoading] = useState(true);
   const [profileSaving, setProfileSaving] = useState(false);
+  const [settingsSaving, setSettingsSaving] = useState(false);
   const [tfaLoading, setTfaLoading] = useState(false);
   
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [modalError, setModalError] = useState<string | null>(null);
 
-  // Fetch current user status on load
+  // Fetch current user status and site configurations on load
   useEffect(() => {
-    fetchProfileStatus();
+    const initData = async () => {
+      setLoading(true);
+      await fetchProfileStatus();
+      await fetchSiteSettings();
+      setLoading(false);
+    };
+    initData();
   }, []);
 
   const fetchProfileStatus = async () => {
-    setLoading(true);
     setError(null);
     try {
       const token = localStorage.getItem("admin_token");
@@ -66,8 +89,26 @@ export default function ProfilePage() {
       setTfaEnabled(data.user.tfa_enabled);
     } catch (err: any) {
       setError(err.message || "Failed to retrieve profile data.");
-    } finally {
-      setLoading(false);
+    }
+  };
+
+  const fetchSiteSettings = async () => {
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/site-settings`);
+      const data = await res.json();
+      if (res.ok && data.setting) {
+        setSitePhone(data.setting.phone);
+        setSiteEmail(data.setting.email);
+        setSiteLocation(data.setting.location);
+        setSiteAddress(data.setting.address);
+        setFacebook(data.setting.facebook);
+        setInstagram(data.setting.instagram);
+        setXLink(data.setting.xLink);
+        setYoutube(data.setting.youtube);
+      }
+    } catch (err: any) {
+      console.error("Error loading site settings:", err);
     }
   };
 
@@ -126,6 +167,48 @@ export default function ProfilePage() {
       setError(err.message || "An error occurred while saving profile changes.");
     } finally {
       setProfileSaving(false);
+    }
+  };
+
+  // Handle Site Settings update
+  const handleUpdateSiteSettings = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setSuccess(null);
+    setSettingsSaving(true);
+
+    try {
+      const token = localStorage.getItem("admin_token");
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/site-settings`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          phone: sitePhone,
+          email: siteEmail,
+          location: siteLocation,
+          address: siteAddress,
+          facebook,
+          instagram,
+          xLink,
+          youtube
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to save site configurations.");
+      }
+
+      setSuccess("Site settings updated successfully.");
+    } catch (err: any) {
+      setError(err.message || "An error occurred while saving site configurations.");
+    } finally {
+      setSettingsSaving(false);
     }
   };
 
@@ -255,8 +338,48 @@ export default function ProfilePage() {
   return (
     <div className="space-y-6 animate-in fade-in duration-500 max-w-4xl">
       <div>
-        <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">Update Profile</h2>
-        <p className="text-xs text-slate-550 dark:text-slate-400 mt-1">Configure profile details and manage login security options.</p>
+        <h2 className="text-xl font-black text-slate-900 dark:text-white tracking-tight">Update Profile & Settings</h2>
+        <p className="text-xs text-slate-550 dark:text-slate-400 mt-1">Configure profile details and manage live site configurations.</p>
+      </div>
+
+      {/* Tab Selectors */}
+      <div className="flex border-b border-slate-200 dark:border-slate-800 gap-1.5 overflow-x-auto">
+        <button
+          type="button"
+          onClick={() => { setActiveTab("security"); setError(null); setSuccess(null); }}
+          className={`flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold transition border-b-2 outline-none whitespace-nowrap ${
+            activeTab === "security"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+              : "border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+          }`}
+        >
+          <LockKeyhole className="h-4 w-4" />
+          Account Security
+        </button>
+        <button
+          type="button"
+          onClick={() => { setActiveTab("contact"); setError(null); setSuccess(null); }}
+          className={`flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold transition border-b-2 outline-none whitespace-nowrap ${
+            activeTab === "contact"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+              : "border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+          }`}
+        >
+          <MapPin className="h-4 w-4" />
+          Contact & Location Info
+        </button>
+        <button
+          type="button"
+          onClick={() => { setActiveTab("social"); setError(null); setSuccess(null); }}
+          className={`flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold transition border-b-2 outline-none whitespace-nowrap ${
+            activeTab === "social"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+              : "border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+          }`}
+        >
+          <Globe className="h-4 w-4" />
+          Social Networks Info
+        </button>
       </div>
 
       {error && (
@@ -273,40 +396,210 @@ export default function ProfilePage() {
         </div>
       )}
 
-      <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
-        
-        {/* Left Column: Profile Update Form */}
-        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
-          <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
-            <User className="h-4.5 w-4.5 text-emerald-500" />
-            Account Information
-          </h3>
+      {/* Tab Contents */}
+      {activeTab === "security" && (
+        <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+          {/* Account Form */}
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
+            <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
+              <User className="h-4.5 w-4.5 text-emerald-500" />
+              Account Information
+            </h3>
 
-          <form onSubmit={handleUpdateProfile} className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {/* Name field */}
-              <div>
-                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                  Full Name
-                </label>
-                <div className="relative mt-2">
-                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                    <User className="h-4 w-4" />
+            <form onSubmit={handleUpdateProfile} className="space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                    Full Name
+                  </label>
+                  <div className="relative mt-2">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                      <User className="h-4 w-4" />
+                    </div>
+                    <input
+                      type="text"
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                    />
                   </div>
-                  <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
-                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                    Email Address
+                  </label>
+                  <div className="relative mt-2">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                      <Mail className="h-4 w-4" />
+                    </div>
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Email field */}
+              <hr className="border-slate-100 dark:border-slate-800/80 my-4" />
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300">Change Password (Optional)</h4>
+                  <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-1">Leave these fields blank if you do not wish to update your password.</p>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                      New Password
+                    </label>
+                    <div className="relative mt-2">
+                      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <Lock className="h-4 w-4" />
+                      </div>
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Enter new password"
+                        className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 pr-9 py-2.5 transition text-slate-900 dark:text-white"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(p => !p)}
+                        className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600 dark:hover:text-white"
+                      >
+                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                      Confirm Password
+                    </label>
+                    <div className="relative mt-2">
+                      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <Lock className="h-4 w-4" />
+                      </div>
+                      <input
+                        type={showConfirmPassword ? "text" : "password"}
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        placeholder="Confirm new password"
+                        className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 pr-9 py-2.5 transition text-slate-900 dark:text-white"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowConfirmPassword(p => !p)}
+                        className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600 dark:hover:text-white"
+                      >
+                        {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4 flex justify-end">
+                <button
+                  type="submit"
+                  disabled={profileSaving}
+                  className="flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-5 py-2.5 text-xs font-bold text-white shadow-md disabled:opacity-50"
+                >
+                  {profileSaving ? (
+                    <>
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      Saving...
+                    </>
+                  ) : (
+                    "Save Changes"
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* TFA Status Manager */}
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs flex flex-col justify-between">
+            <div>
+              <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
+                <LockKeyhole className="h-4.5 w-4.5 text-emerald-500" />
+                Two-Factor Authentication
+              </h3>
+
+              <div className="mt-5 space-y-4">
+                <p className="text-xs text-slate-550 dark:text-slate-450 leading-relaxed font-medium">
+                  TFA introduces an additional layer of security by requiring a unique 6-digit email validation code during login attempts.
+                </p>
+
+                <div className="flex items-center gap-2.5 mt-3">
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-355">Status:</span>
+                  {tfaEnabled ? (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
+                      <ShieldCheck className="h-3.5 w-3.5" />
+                      Enabled (Highly Secure)
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/25 bg-yellow-500/10 px-3 py-1 text-[10px] font-bold text-yellow-600 dark:text-yellow-400">
+                      <ShieldAlert className="h-3.5 w-3.5" />
+                      Disabled (Vulnerable)
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8">
+              {tfaEnabled ? (
+                <button
+                  type="button"
+                  onClick={handleDisableTfa}
+                  disabled={tfaLoading}
+                  className="w-full flex items-center justify-center gap-2 rounded-xl border border-red-200 dark:border-red-800/80 bg-red-50/50 dark:bg-red-500/5 hover:bg-red-100 dark:hover:bg-red-500/10 transition px-4 py-3 text-xs font-bold text-red-600 dark:text-red-500"
+                >
+                  {tfaLoading ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    "Disable TFA Security"
+                  )}
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleRequestTfa}
+                  disabled={tfaLoading}
+                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-4 py-3 text-xs font-bold text-white shadow-md"
+                >
+                  {tfaLoading ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    "Enable Two-Factor Security"
+                  )}
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "contact" && (
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
+          <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
+            <MapPin className="h-4.5 w-4.5 text-emerald-500" />
+            Contact & Head Office Location Details
+          </h3>
+
+          <form onSubmit={handleUpdateSiteSettings} className="space-y-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                  Email Address
+                  Support Email Address
                 </label>
                 <div className="relative mt-2">
                   <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
@@ -315,88 +608,78 @@ export default function ProfilePage() {
                   <input
                     type="email"
                     required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={siteEmail}
+                    onChange={(e) => setSiteEmail(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Support Phone Number
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <Phone className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    value={sitePhone}
+                    onChange={(e) => setSitePhone(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Head Office Location (e.g. Country/State)
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <Globe className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="text"
+                    required
+                    value={siteLocation}
+                    onChange={(e) => setSiteLocation(e.target.value)}
                     className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
                   />
                 </div>
               </div>
             </div>
 
-            <hr className="border-slate-100 dark:border-slate-800/80 my-4" />
-
-            {/* Change Password Block */}
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300">Change Password (Optional)</h4>
-                <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-1">Leave these fields blank if you do not wish to update your password.</p>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {/* New Password */}
-                <div>
-                  <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    New Password
-                  </label>
-                  <div className="relative mt-2">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                      <Lock className="h-4 w-4" />
-                    </div>
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="Enter new password"
-                      className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 pr-9 py-2.5 transition text-slate-900 dark:text-white"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(p => !p)}
-                      className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600 dark:hover:text-white"
-                    >
-                      {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                    </button>
-                  </div>
+            <div>
+              <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                Physical Head Office Address
+              </label>
+              <div className="relative mt-2">
+                <div className="pointer-events-none absolute top-3 left-3 text-slate-400">
+                  <MapPin className="h-4 w-4" />
                 </div>
-
-                {/* Confirm Password */}
-                <div>
-                  <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    Confirm Password
-                  </label>
-                  <div className="relative mt-2">
-                    <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                      <Lock className="h-4 w-4" />
-                    </div>
-                    <input
-                      type={showConfirmPassword ? "text" : "password"}
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      placeholder="Confirm new password"
-                      className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 pr-9 py-2.5 transition text-slate-900 dark:text-white"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowConfirmPassword(p => !p)}
-                      className="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-slate-600 dark:hover:text-white"
-                    >
-                      {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                    </button>
-                  </div>
-                </div>
+                <textarea
+                  required
+                  rows={3}
+                  value={siteAddress}
+                  onChange={(e) => setSiteAddress(e.target.value)}
+                  className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                />
               </div>
             </div>
 
             <div className="pt-4 flex justify-end">
               <button
                 type="submit"
-                disabled={profileSaving}
+                disabled={settingsSaving}
                 className="flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-5 py-2.5 text-xs font-bold text-white shadow-md disabled:opacity-50"
               >
-                {profileSaving ? (
+                {settingsSaving ? (
                   <>
                     <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                    Saving changes...
+                    Saving...
                   </>
                 ) : (
                   "Save Changes"
@@ -405,69 +688,105 @@ export default function ProfilePage() {
             </div>
           </form>
         </div>
+      )}
 
-        {/* Right Column: TFA Status Manager */}
-        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs flex flex-col justify-between">
-          <div>
-            <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
-              <LockKeyhole className="h-4.5 w-4.5 text-emerald-500" />
-              Two-Factor Authentication
-            </h3>
+      {activeTab === "social" && (
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
+          <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
+            <Globe className="h-4.5 w-4.5 text-emerald-500" />
+            Social Media Networks URLs
+          </h3>
 
-            <div className="mt-5 space-y-4">
-              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
-                TFA introduces an additional layer of security by requiring a unique 6-digit email validation code during login attempts.
-              </p>
+          <form onSubmit={handleUpdateSiteSettings} className="space-y-4">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Facebook Link
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <LinkIcon className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="url"
+                    value={facebook}
+                    onChange={(e) => setFacebook(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
+              </div>
 
-              {/* TFA Status Badge */}
-              <div className="flex items-center gap-2.5 mt-3">
-                <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Status:</span>
-                {tfaEnabled ? (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
-                    <ShieldCheck className="h-3.5 w-3.5" />
-                    Enabled (Highly Secure)
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/25 bg-yellow-500/10 px-3 py-1 text-[10px] font-bold text-yellow-600 dark:text-yellow-400">
-                    <ShieldAlert className="h-3.5 w-3.5" />
-                    Disabled (Vulnerable)
-                  </span>
-                )}
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Instagram Link
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <LinkIcon className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="url"
+                    value={instagram}
+                    onChange={(e) => setInstagram(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  Twitter / X Link
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <LinkIcon className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="url"
+                    value={xLink}
+                    onChange={(e) => setXLink(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                  YouTube Link
+                </label>
+                <div className="relative mt-2">
+                  <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                    <LinkIcon className="h-4 w-4" />
+                  </div>
+                  <input
+                    type="url"
+                    value={youtube}
+                    onChange={(e) => setYoutube(e.target.value)}
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs px-9 py-2.5 transition text-slate-900 dark:text-white"
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="pt-8">
-            {tfaEnabled ? (
+            <div className="pt-4 flex justify-end">
               <button
-                type="button"
-                onClick={handleDisableTfa}
-                disabled={tfaLoading}
-                className="w-full flex items-center justify-center gap-2 rounded-xl border border-red-200 dark:border-red-800/80 bg-red-50/50 dark:bg-red-500/5 hover:bg-red-100 dark:hover:bg-red-500/10 transition px-4 py-3 text-xs font-bold text-red-600 dark:text-red-500"
+                type="submit"
+                disabled={settingsSaving}
+                className="flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-5 py-2.5 text-xs font-bold text-white shadow-md disabled:opacity-50"
               >
-                {tfaLoading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
+                {settingsSaving ? (
+                  <>
+                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                    Saving...
+                  </>
                 ) : (
-                  "Disable TFA Security"
+                  "Save Changes"
                 )}
               </button>
-            ) : (
-              <button
-                type="button"
-                onClick={handleRequestTfa}
-                disabled={tfaLoading}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-4 py-3 text-xs font-bold text-white shadow-md"
-              >
-                {tfaLoading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  "Enable Two-Factor Security"
-                )}
-              </button>
-            )}
-          </div>
+            </div>
+          </form>
         </div>
-      </div>
+      )}
 
       {/* TFA Setup OTP Code Verification Modal */}
       {otpModalOpen && (

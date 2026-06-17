@@ -21,7 +21,8 @@ import {
   BookOpen,
   FileText,
   Settings,
-  Heart
+  Heart,
+  Images
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -129,12 +130,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "MCQ Questions";
       case "/admin/education/study-material":
         return "Study Materials";
+      case "/admin/education/courses":
+        return "Manage Courses";
       case "/admin/donations":
         return "Donation Records";
       case "/admin/students":
         return "Student Directory";
       case "/admin/profile":
         return "Update Profile";
+      case "/admin/gallery":
+        return "Gallery Manager";
       default:
         return "Admin Panel";
     }
@@ -203,6 +208,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <GraduationCap className={`h-5 w-5 ${pathname === '/admin/students' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Students
             </Link>
+            <Link href="/admin/gallery" className={getMenuBtnClass("/admin/gallery")}>
+              <Images className={`h-5 w-5 ${pathname === '/admin/gallery' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Gallery
+            </Link>
 
             {/* Education Collapsible Menu */}
             <div className="pt-2 border-t border-slate-100 dark:border-slate-800/80">
@@ -239,11 +248,22 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
                       pathname === "/admin/education/study-material"
                         ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
-                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
                     }`}
                   >
                     <BookOpen className="h-3.5 w-3.5" />
                     Study Material
+                  </Link>
+                  <Link
+                    href="/admin/education/courses"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/education/courses"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <GraduationCap className="h-3.5 w-3.5" />
+                    Manage Courses
                   </Link>
                 </div>
               )}

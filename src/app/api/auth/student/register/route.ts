@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { sendStudentWelcomeEmail } from "@/lib/mail";
 
@@ -25,20 +25,41 @@ function getStudentIdPrefix(name: string): string {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone } = await request.json();
+    const { name, email, phone, course } = await request.json();
 
-    if (!name || !email || !phone) {
+    if (!name || !email || !phone || !course) {
       return NextResponse.json(
-        { message: "Please fill in all required fields (Name, Email, Phone)." },
+        { message: "Please fill in all required fields (Name, Email, Phone, Course)." },
         { status: 400 }
       );
     }
 
     // Check duplicate email
-    const emailCheck = await query("SELECT id FROM users WHERE email = $1", [email.trim().toLowerCase()]);
-    if (emailCheck.rowCount !== null && emailCheck.rowCount > 0) {
+    const emailCheck = await prisma.user.findUnique({
+      where: { email: email.trim().toLowerCase() }
+    });
+    if (emailCheck) {
       return NextResponse.json(
         { message: "Email is already registered. Please login or use a different email." },
+        { status: 400 }
+      );
+    }
+
+    // Verify course exists
+    const courseId = parseInt(course, 10);
+    if (isNaN(courseId)) {
+      return NextResponse.json(
+        { message: "Invalid course selection." },
+        { status: 400 }
+      );
+    }
+
+    const courseCheck = await prisma.course.findUnique({
+      where: { id: courseId }
+    });
+    if (!courseCheck) {
+      return NextResponse.json(
+        { message: "Selected course does not exist." },
         { status: 400 }
       );
     }
@@ -53,8 +74,10 @@ export async function POST(request: Request) {
       const randomNum = Math.floor(1000 + Math.random() * 9000);
       studentId = `${prefix}${randomNum}`;
 
-      const checkId = await query("SELECT id FROM users WHERE student_id = $1", [studentId]);
-      if (checkId.rowCount === 0) {
+      const checkId = await prisma.user.findUnique({
+        where: { studentId }
+      });
+      if (!checkId) {
         isUnique = true;
       }
       attempts++;
@@ -69,11 +92,18 @@ export async function POST(request: Request) {
     const hashedPassword = bcrypt.hashSync(tempPassword, 10);
 
     // Save student to database
-    await query(
-      `INSERT INTO users (name, email, password, role, student_id, phone, temp_password) 
-       VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-      [name, email.trim().toLowerCase(), hashedPassword, "student", studentId, phone, tempPassword]
-    );
+    await prisma.user.create({
+      data: {
+        name,
+        email: email.trim().toLowerCase(),
+        password: hashedPassword,
+        role: "student",
+        studentId,
+        phone,
+        tempPassword,
+        courseId: courseId // Save course ID relation
+      }
+    });
 
     // Send credentials via email
     const emailSent = await sendStudentWelcomeEmail(
@@ -84,7 +114,6 @@ export async function POST(request: Request) {
     );
 
     if (!emailSent) {
-      // Log warning but continue, as the user is already stored
       console.warn(`Student account created but welcome email failed to dispatch to: ${email}`);
     }
 

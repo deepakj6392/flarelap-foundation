@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { User, Mail, Phone, GraduationCap, CheckCircle2, AlertCircle, Loader2, Heart } from "lucide-react";
@@ -10,11 +10,29 @@ export default function StudentRegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [course, setCourse] = useState("Web Development");
+  const [course, setCourse] = useState("");
+  const [courses, setCourses] = useState<{ id: string, name: string }[]>([]);
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const res = await fetch(`${apiUrl}/api/courses`);
+        const data = await res.json();
+        if (res.ok && data.courses && data.courses.length > 0) {
+          setCourses(data.courses);
+          setCourse(data.courses[0].id);
+        }
+      } catch (err) {
+        console.error("Failed to load courses:", err);
+      }
+    };
+    fetchCourses();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +66,7 @@ export default function StudentRegisterPage() {
         title: "Registration Successful!",
         text: `Your unique Student ID and temporary password have been dispatched to ${email}.`,
         icon: "success",
-        confirmButtonColor: "#047857",
+        confirmButtonColor: "#4f46e5",
         background: "#ffffff",
         color: "#1e293b",
       });
@@ -56,7 +74,9 @@ export default function StudentRegisterPage() {
       setName("");
       setEmail("");
       setPhone("");
-      setCourse("Web Development");
+      if (courses.length > 0) {
+        setCourse(courses[0].id);
+      }
     } catch (err: any) {
       setError(err.message || "An error occurred during registration.");
       Swal.fire({
@@ -186,12 +206,17 @@ export default function StudentRegisterPage() {
                 value={course}
                 onChange={(e) => setCourse(e.target.value)}
                 className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-bold"
-                disabled={loading}
+                disabled={loading || courses.length === 0}
               >
-                <option value="Web Development">Web Development Basics</option>
-                <option value="Computer Science">Computer Science Basics</option>
-                <option value="English Grammar">English Grammar Mastery</option>
-                <option value="Math Essentials">Math & Algebra Essentials</option>
+                {courses.length === 0 ? (
+                  <option value="">Loading courses...</option>
+                ) : (
+                  courses.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.name}
+                    </option>
+                  ))
+                )}
               </select>
             </div>
           </div>
@@ -214,10 +239,18 @@ export default function StudentRegisterPage() {
         </form>
 
         {/* Footer text link */}
-        <div className="text-center pt-2 border-t text-[11px] font-semibold text-slate-500">
-          Already registered?{" "}
-          <Link href="/student/login" className="text-emerald-700 hover:text-emerald-650 hover:underline">
-            Login As Student
+        <div className="text-center pt-2 border-t text-[11px] font-semibold text-slate-500 flex flex-col items-center gap-3">
+          <div>
+            Already registered?{" "}
+            <Link href="/student/login" className="text-emerald-700 hover:text-emerald-650 hover:underline">
+              Login As Student
+            </Link>
+          </div>
+          <Link 
+            href="/" 
+            className="text-slate-500 hover:text-emerald-700 hover:underline text-[10.5px] font-bold"
+          >
+            &#8592; Back to Home
           </Link>
         </div>
       </div>
