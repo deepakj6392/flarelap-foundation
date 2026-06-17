@@ -4,10 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/constants/site";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Herader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
+  const [desktopMoreOpen, setDesktopMoreOpen] = useState(false);
+
+  // Split navigation items
+  const mainNavItems = siteConfig.navItems.filter((item) =>
+    ["Home", "About", "Programs", "Products", "Education", "Donate"].includes(item.label)
+  );
+
+  const moreNavItems = siteConfig.navItems.filter((item) =>
+    ["Impact", "Blog", "Contact"].includes(item.label)
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur dark:bg-slate-950/90 dark:border-slate-800/80">
@@ -33,7 +44,7 @@ export default function Herader() {
 
         {/* Desktop Navigation */}
         <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex">
-          {siteConfig.navItems.map((item) => (
+          {mainNavItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -42,6 +53,33 @@ export default function Herader() {
               {item.label}
             </Link>
           ))}
+
+          {/* More Dropdown Menu */}
+          <div className="relative py-2">
+            <button 
+              onClick={() => setDesktopMoreOpen(!desktopMoreOpen)}
+              onBlur={() => setTimeout(() => setDesktopMoreOpen(false), 200)}
+              className="flex items-center gap-1 text-sm font-semibold text-slate-700 dark:text-slate-300 transition hover:text-emerald-700 dark:hover:text-emerald-400 cursor-pointer outline-none"
+            >
+              More
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${desktopMoreOpen ? "rotate-180" : ""}`} />
+            </button>
+            
+            {desktopMoreOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-44 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 p-1.5 shadow-lg backdrop-blur-md animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                {moreNavItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setDesktopMoreOpen(false)}
+                    className="block rounded-lg px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-300 transition hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-emerald-700 dark:hover:text-emerald-400"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -73,7 +111,7 @@ export default function Herader() {
       {mobileMenuOpen && (
         <div className="border-t border-slate-200 bg-white dark:bg-slate-950 py-4 px-5 lg:hidden animate-in fade-in slide-in-from-top duration-200">
           <nav className="flex flex-col gap-3">
-            {siteConfig.navItems.map((item) => (
+            {mainNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -83,6 +121,36 @@ export default function Herader() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Mobile More Accordion */}
+            <div className="flex flex-col">
+              <button
+                onClick={() => setMobileMoreOpen(!mobileMoreOpen)}
+                className="flex w-full items-center justify-between py-1 text-sm font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 transition cursor-pointer outline-none"
+              >
+                <span>More</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileMoreOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {mobileMoreOpen && (
+                <div className="mt-1 flex flex-col gap-2 pl-4 border-l border-slate-100 dark:border-slate-800 animate-in fade-in slide-in-from-top-1 duration-150">
+                  {moreNavItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileMoreOpen(false);
+                      }}
+                      className="text-sm font-bold text-slate-600 dark:text-slate-400 py-1 hover:text-emerald-700 dark:hover:text-emerald-400 transition"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/student/login"
               onClick={() => setMobileMenuOpen(false)}

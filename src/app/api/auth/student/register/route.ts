@@ -18,14 +18,14 @@ function getStudentIdPrefix(name: string): string {
   const clean = name
     .trim()
     .replace(/[^a-zA-Z]/g, "")
-    .toUpperCase();
+    .toLowerCase();
   const base = clean.substring(0, 5);
-  return base.padEnd(5, "X");
+  return base.padEnd(5, "x");
 }
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, course } = await request.json();
+    const { name, email, phone } = await request.json();
 
     if (!name || !email || !phone) {
       return NextResponse.json(
@@ -51,7 +51,7 @@ export async function POST(request: Request) {
 
     while (!isUnique && attempts < 10) {
       const randomNum = Math.floor(1000 + Math.random() * 9000);
-      studentId = `${prefix}-${randomNum}`;
+      studentId = `${prefix}${randomNum}`;
 
       const checkId = await query("SELECT id FROM users WHERE student_id = $1", [studentId]);
       if (checkId.rowCount === 0) {
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     }
 
     if (!isUnique) {
-      studentId = `${prefix}-${Date.now().toString().slice(-4)}`;
+      studentId = `${prefix}${Date.now().toString().slice(-4)}`;
     }
 
     // Generate temporary password
@@ -92,7 +92,7 @@ export async function POST(request: Request) {
       message: "Student registration successful. Your User ID and temporary password have been sent to your email address.",
       student_id: studentId
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Student registration error:", error);
     return NextResponse.json(
       { message: "An error occurred during student registration. Please try again." },
