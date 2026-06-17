@@ -1,10 +1,10 @@
 const { Pool } = require("pg");
-require("dotenv").config({ path: ".env.local" });
+require("dotenv").config({ path: ".env" });
 
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-  console.error("DATABASE_URL is not set inside .env.local!");
+  console.error("DATABASE_URL is not set inside .env!");
   process.exit(1);
 }
 

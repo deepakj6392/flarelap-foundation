@@ -2,6 +2,20 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
+interface Student {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  studentId: string;
+  tempPassword: string;
+  createdAt: Date;
+  course: {
+    id: string;
+    name: string;
+  };
+}
+
 export async function GET(request: Request) {
   const admin = verifyAdmin(request);
   if (!admin) {
@@ -30,7 +44,7 @@ export async function GET(request: Request) {
 
     // Map keys to match the frontend expectations:
     // student_id -> studentId, temp_password -> tempPassword, created_at -> createdAt
-    const mappedStudents = students.map(s => ({
+    const mappedStudents = students.map((s: any) => ({
       id: s.id,
       name: s.name,
       email: s.email,

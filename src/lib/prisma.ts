@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 // Load environment variables from .env.local at the very top
-dotenv.config({ path: ".env.local" });
+dotenv.config({ path: ".env" });
 
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
