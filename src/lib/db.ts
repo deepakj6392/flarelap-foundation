@@ -2,11 +2,12 @@ import { Pool } from "pg";
 import bcrypt from "bcryptjs";
 
 const pool = new Pool({
-  host: process.env.DB_HOST || "localhost",
-  port: parseInt(process.env.DB_PORT || "5432"),
-  database: process.env.DB_NAME || "flarelap_foundation",
-  user: process.env.DB_USER || "flarelap_foundation",
-  password: process.env.DB_PASSWORD || "Admin#Foundation@123",
+  host: process.env.PGHOST || process.env.DB_HOST || "localhost",
+  port: parseInt(process.env.PGPORT || process.env.DB_PORT || "5432"),
+  database: process.env.PGDATABASE || process.env.DB_NAME || "flarelap_foundation",
+  user: process.env.PGUSER || process.env.DB_USER || "flarelap_foundation",
+  password: process.env.PGPASSWORD || process.env.DB_PASSWORD || "Admin#Foundation@123",
+  ssl: process.env.PGSSLMODE === "require" ? { rejectUnauthorized: false } : undefined,
 });
 
 let initialized = false;
