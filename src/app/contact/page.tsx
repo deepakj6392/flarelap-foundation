@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
@@ -12,6 +12,32 @@ export default function ContactPage() {
 	const [message, setMessage] = useState("");
 	const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 	const [statusMessage, setStatusMessage] = useState("");
+
+	const [contactInfo, setContactInfo] = useState({
+		email: "support@flarelap.org",
+		phone: "+91 98765 43210",
+		address: "123 Community Lane, City, State, India",
+	});
+
+	useEffect(() => {
+		async function fetchSettings() {
+			try {
+				const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+				const res = await fetch(`${apiUrl}/api/site-settings`);
+				const data = await res.json();
+				if (res.ok && data.setting) {
+					setContactInfo({
+						email: data.setting.email || "support@flarelap.org",
+						phone: data.setting.phone || "+91 98765 43210",
+						address: data.setting.address || "123 Community Lane, City, State, India",
+					});
+				}
+			} catch (err) {
+				console.error("Error loading contact details:", err);
+			}
+		}
+		fetchSettings();
+	}, []);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -107,40 +133,51 @@ export default function ContactPage() {
 							</div>
 
 							<div className="relative">
-											<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
-												  <Image src={sampleImages.contact} alt="People talking" fill className="object-cover" />
-											</div>
+								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg relative">
+									<Image src={sampleImages.contact} alt="People talking" fill className="object-cover" />
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-							<section className="bg-slate-50 px-5 py-16 sm:px-6 lg:px-8">
-								<div className="mx-auto max-w-7xl">
-									<h2 className="text-2xl font-bold text-slate-950">Contact information</h2>
-									<div className="mt-6 grid gap-6 sm:grid-cols-2">
-										<div className="rounded-lg bg-white p-6 shadow-sm">
-											<h3 className="font-semibold">Head office</h3>
-											<p className="mt-2 text-sm text-slate-700">123 Community Lane, City, State, India</p>
-											<p className="mt-2 text-sm text-slate-700">Email: support@flarelap.org</p>
-											<p className="mt-2 text-sm text-slate-700">Phone: +91 98765 43210</p>
-										</div>
+				
+				<section className="bg-slate-50 px-5 py-16 sm:px-6 lg:px-8">
+					<div className="mx-auto max-w-7xl">
+						<h2 className="text-2xl font-bold text-slate-950">Contact information</h2>
+						<div className="mt-6 grid gap-6 sm:grid-cols-2">
+							<div className="rounded-lg bg-white p-6 shadow-sm">
+								<h3 className="font-semibold">Head office</h3>
+								<p className="mt-2 text-sm text-slate-700">{contactInfo.address}</p>
+								<p className="mt-2 text-sm text-slate-700">
+									Email:{" "}
+									<a href={`mailto:${contactInfo.email}`} className="text-emerald-700 hover:underline font-bold">
+										{contactInfo.email}
+									</a>
+								</p>
+								<p className="mt-2 text-sm text-slate-700">
+									Phone:{" "}
+									<a href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`} className="text-emerald-700 hover:underline font-bold">
+										{contactInfo.phone}
+									</a>
+								</p>
+							</div>
 
-										<div className="rounded-lg bg-white p-6 shadow-sm">
-											<h3 className="font-semibold">Field offices</h3>
-											<p className="mt-2 text-sm text-slate-700">Rural outreach hubs in three districts. We work through local partners — contact us for specifics.</p>
-											<a className="mt-4 inline-block text-sm font-bold text-emerald-700">Request field contact →</a>
-										</div>
-									</div>
+							<div className="rounded-lg bg-white p-6 shadow-sm">
+								<h3 className="font-semibold">Field offices</h3>
+								<p className="mt-2 text-sm text-slate-700">Rural outreach hubs in three districts. We work through local partners — contact us for specifics.</p>
+								<a className="mt-4 inline-block text-sm font-bold text-emerald-700 cursor-pointer">Request field contact →</a>
+							</div>
+						</div>
 
-									<div className="mt-8 rounded-lg bg-white p-6 shadow-sm">
-										<h3 className="font-semibold">FAQ</h3>
-										<div className="mt-3 space-y-3 text-sm text-slate-700">
-											<p><strong>How can I volunteer?</strong> Sign up via the contact form and let us know your skills and availability.</p>
-											<p><strong>How are funds used?</strong> Funds support local program delivery, materials, and small grants; we publish summaries in our impact reports.</p>
-										</div>
-									</div>
-								</div>
-							</section>
+						<div className="mt-8 rounded-lg bg-white p-6 shadow-sm">
+							<h3 className="font-semibold">FAQ</h3>
+							<div className="mt-3 space-y-3 text-sm text-slate-700">
+								<p><strong>How can I volunteer?</strong> Sign up via the contact form and let us know your skills and availability.</p>
+								<p><strong>How are funds used?</strong> Funds support local program delivery, materials, and small grants; we publish summaries in our impact reports.</p>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			<Footer />
 		</div>

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -17,21 +17,25 @@ export async function POST(request: Request) {
     const cleanLoginId = loginId.trim().toLowerCase();
 
     // Query database for student role matching email or student ID
-    const res = await query(
-      `SELECT * FROM users 
-       WHERE role = 'student' 
-         AND (LOWER(email) = $1 OR LOWER(student_id) = $1)`,
-      [cleanLoginId]
-    );
+    const user = await prisma.user.findFirst({
+      where: {
+        role: "student",
+        OR: [
+          { email: cleanLoginId },
+          { studentId: cleanLoginId }
+        ]
+      },
+      include: {
+        course: true
+      }
+    });
 
-    if (res.rowCount === 0) {
+    if (!user) {
       return NextResponse.json(
         { message: "Invalid credentials. Student account not found." },
         { status: 401 }
       );
     }
-
-    const user = res.rows[0];
 
     // Verify password
     const passwordMatch = bcrypt.compareSync(password, user.password);
@@ -50,14 +54,30 @@ export async function POST(request: Request) {
         name: user.name,
         email: user.email,
         role: user.role,
-        student_id: user.student_id,
+        student_id: user.studentId,
       },
       jwtSecret,
       { expiresIn: "7d" } // Token expires in 7 days
     );
 
-    // Remove password from returned object
-    const { password: _, ...userData } = user;
+    const userData = {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      student_id: user.studentId,
+      phone: user.phone,
+      created_at: user.createdAt,
+      course_id: user.courseId,
+      course_name: user.course?.name || "None"
+    };
+
+    // Record login event in database
+    await prisma.studentLog.create({
+      data: {
+        userId: user.id,
+        action: "LOGIN"
+      }
+    });
 
     return NextResponse.json({
       message: "Student logged in successfully.",

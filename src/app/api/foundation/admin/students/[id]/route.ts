@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
+import { prisma } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
 export async function DELETE(
@@ -20,7 +20,9 @@ export async function DELETE(
     }
 
     // Verify deletion targets student accounts only
-    await query("DELETE FROM users WHERE id = $1 AND role = 'student'", [studentId]);
+    await prisma.user.delete({
+      where: { id: studentId, role: "student" }
+    });
 
     return NextResponse.json({ message: "Student account deleted successfully" });
   } catch (error: any) {

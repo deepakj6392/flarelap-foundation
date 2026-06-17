@@ -18,7 +18,8 @@ import {
   TrendingUp,
   FileText,
   Cpu,
-  ChevronRight
+  ChevronRight,
+  Stethoscope
 } from "lucide-react";
 
 interface ExamItem {
@@ -127,6 +128,30 @@ const examCategories: ExamCategory[] = [
       { name: "GATE Mechanical Mock", tests: "10 Full Tests", details: "65 Qs • 180 Mins", badge: "Free" },
       { name: "RRB JE IT Technical CBT", tests: "12 Practice Sets", details: "150 Qs • 120 Mins", badge: "Premium" }
     ]
+  },
+  {
+    id: "jee-exams",
+    label: "Engineering (JEE Main/Adv)",
+    exams: [
+      { name: "JEE Physics Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Free" },
+      { name: "JEE Chemistry Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Free" },
+      { name: "JEE Mathematics Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Premium" },
+      { name: "JEE Main Integrated Mock", tests: "15 Integrated Tests", details: "90 Qs • 180 Mins", badge: "Premium" }
+    ]
+  },
+  {
+    id: "medical-exams",
+    label: "Medical (NEET)",
+    exams: [
+      { name: "NEET UG Full Mock Test", tests: "10 Full Mock Tests", details: "180 Qs • 200 Mins", badge: "Free" },
+      { name: "NEET Biology Advanced Prep", tests: "15 Full Tests", details: "90 Qs • 100 Mins", badge: "Free" },
+      { name: "NEET Physics Advanced Prep", tests: "15 Full Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
+      { name: "NEET Chemistry Advanced Prep", tests: "15 Full Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
+      { name: "NEET Biology Speed Mock", tests: "20 Practice Sets", details: "90 Qs • 95 Mins", badge: "Free" },
+      { name: "NEET Physics Chapter Test", tests: "15 Subject Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
+      { name: "NEET Chemistry Topic Test", tests: "15 Subject Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
+      { name: "NEET Previous Year Papers", tests: "8 Full Length Papers", details: "180 Qs • 200 Mins", badge: "Premium" }
+    ]
   }
 ];
 
@@ -203,6 +228,10 @@ export default function EducationPage() {
         return <GraduationCap className="h-4.5 w-4.5" />;
       case "engineering-exams":
         return <Cpu className="h-4.5 w-4.5" />;
+      case "jee-exams":
+        return <Cpu className="h-4.5 w-4.5" />;
+      case "medical-exams":
+        return <Stethoscope className="h-4.5 w-4.5" />;
       default:
         return <BookOpen className="h-4.5 w-4.5" />;
     }
@@ -214,7 +243,7 @@ export default function EducationPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#ecfdf5_45%,#fffbeb_100%)] py-20 lg:py-24">
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#eef2ff_45%,#fffbeb_100%)] py-20 lg:py-24">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.25]" />
           
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
@@ -320,26 +349,23 @@ export default function EducationPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-8 lg:grid-cols-[290px_1fr]">
-              {/* Category selector on Left */}
-              <div className="flex flex-row overflow-x-auto gap-2 pb-4 lg:pb-0 lg:flex-col lg:overflow-x-visible lg:border-r lg:border-slate-200 dark:lg:border-slate-800 lg:pr-6 whitespace-nowrap">
+            <div className="mt-12 flex flex-col gap-8">
+              {/* Category selector on Top */}
+              <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 pb-6 border-b border-slate-200 dark:border-slate-800/60 w-full">
                 {examCategories.map((cat) => {
                   const isActive = activeCategory === cat.id;
                   return (
                     <button
                       key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex items-center justify-between gap-3 rounded-xl px-4.5 py-3.5 text-xs font-black transition-all cursor-pointer outline-none ${
+                      className={`flex items-center gap-2.5 rounded-full px-5 py-3.5 text-xs font-black transition-all cursor-pointer border outline-none ${
                         isActive
-                          ? "bg-emerald-700 text-white shadow-md shadow-emerald-700/10"
-                          : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-350 border border-slate-200/80 dark:border-slate-800/80 hover:border-emerald-500/40 hover:text-emerald-700"
+                          ? "bg-emerald-700 text-white border-emerald-700 shadow-md shadow-emerald-700/10"
+                          : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 hover:text-emerald-700"
                       }`}
                     >
-                      <div className="flex items-center gap-2.5">
-                        {getCategoryIcon(cat.id)}
-                        <span>{cat.label}</span>
-                      </div>
-                      <ChevronRight className={`hidden lg:block h-3.5 w-3.5 opacity-60 transition-transform ${isActive ? "translate-x-0.5 text-white" : "group-hover:translate-x-0.5"}`} />
+                      {getCategoryIcon(cat.id)}
+                      <span>{cat.label}</span>
                     </button>
                   );
                 })}
@@ -352,23 +378,23 @@ export default function EducationPage() {
                     <Link
                       key={idx}
                       href={`/student/register?course=${encodeURIComponent(exam.name)}`}
-                      className="group rounded-2xl border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900 p-5 flex flex-col justify-between shadow-xs transition duration-350 hover:border-emerald-500/40 hover:shadow-md hover:-translate-y-0.5"
+                      className="group rounded-[1.5rem] border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg hover:shadow-slate-200/50 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1"
                     >
                       <div>
                         <div className="flex items-center justify-between">
-                          <span className={`rounded-full px-2 py-0.5 text-[8.5px] font-black uppercase tracking-wider ${
+                          <span className={`rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider border ${
                             exam.badge === "Free"
-                              ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-400"
-                              : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-400"
+                              ? "bg-emerald-50/80 text-emerald-700 border-emerald-200/50 dark:bg-emerald-950/40 dark:text-emerald-450 dark:border-emerald-800/40"
+                              : "bg-amber-50/80 text-amber-700 border-amber-200/50 dark:bg-amber-950/40 dark:text-amber-450 dark:border-amber-800/40"
                           }`}>
                             {exam.badge}
                           </span>
-                          <span className="text-[9.5px] font-bold text-slate-400 dark:text-slate-500">
+                          <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500">
                             MCQ Prep Set
                           </span>
                         </div>
 
-                        <h4 className="mt-4 text-sm font-black text-slate-900 dark:text-white leading-snug group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition">
+                        <h4 className="mt-4 text-base font-extrabold text-slate-850 dark:text-white leading-snug group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors duration-300">
                           {exam.name}
                         </h4>
                         <p className="mt-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400">
@@ -376,11 +402,11 @@ export default function EducationPage() {
                         </p>
                       </div>
 
-                      <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-bold">
-                        <span className="text-slate-450 dark:text-slate-500 font-medium">
+                      <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-xs font-bold">
+                        <span className="text-slate-700 dark:text-slate-300 font-extrabold">
                           {exam.details}
                         </span>
-                        <span className="text-emerald-750 dark:text-emerald-400 flex items-center gap-0.5 group-hover:translate-x-0.5 transition-all">
+                        <span className="text-emerald-750 dark:text-emerald-450 flex items-center gap-1 group-hover:translate-x-1 transition-transform duration-300">
                           Start Test
                           <ChevronRight className="h-3.5 w-3.5" />
                         </span>

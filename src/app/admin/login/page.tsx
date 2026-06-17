@@ -250,17 +250,15 @@ export default function AdminLoginPage() {
       <div className="relative w-full max-w-md space-y-7 rounded-2xl border border-slate-800 bg-slate-950/70 p-8 shadow-2xl backdrop-blur-xl transition duration-500 hover:border-slate-700/50 sm:p-10">
         
         {/* Go Back Link */}
-        {view === "login" && (
-          <div className="absolute top-6 left-6">
-            <Link
-              href="/"
-              className="group flex items-center gap-2 text-xs font-semibold text-slate-400 transition hover:text-emerald-400"
-            >
-              <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-1" />
-              Back to Home
-            </Link>
-          </div>
-        )}
+        <div className="absolute top-6 left-6">
+          <Link
+            href="/"
+            className="group flex items-center gap-2 text-xs font-semibold text-slate-400 transition hover:text-emerald-400"
+          >
+            <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-1" />
+            Back to Home
+          </Link>
+        </div>
 
         {/* Logo and Header */}
         <div className="flex flex-col items-center text-center pt-4">

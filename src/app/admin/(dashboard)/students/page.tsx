@@ -30,6 +30,7 @@ interface StudentRecord {
   student_id: string | null;
   temp_password: string | null;
   created_at: string;
+  course_name?: string | null;
 }
 
 export default function StudentsAdminPage() {
@@ -323,6 +324,7 @@ export default function StudentsAdminPage() {
                   <th className="py-4 px-5">Email Address</th>
                   <th className="py-4 px-5">Phone Number</th>
                   <th className="py-4 px-5">Initial Password</th>
+                  <th className="py-4 px-5">Enrolled Course</th>
                   <th className="py-4 px-5 select-none cursor-pointer hover:text-slate-600 dark:hover:text-white" onClick={() => handleSort("created_at")}>
                     <div className="flex items-center gap-1">
                       Registration Date
@@ -383,6 +385,11 @@ export default function StudentsAdminPage() {
                       ) : (
                         <span className="text-slate-400 dark:text-slate-500 italic">Hashed</span>
                       )}
+                    </td>
+
+                    {/* Enrolled Course */}
+                    <td className="py-3.5 px-5 font-bold text-slate-900 dark:text-white text-xs">
+                      {s.course_name || "None"}
                     </td>
 
                     {/* Date Time */}
@@ -532,8 +539,12 @@ export default function StudentsAdminPage() {
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-455 dark:text-slate-500 font-bold">Initial/Temp Password:</span>
                 <span className="font-extrabold text-slate-900 dark:text-white font-mono select-all">
-                  {selectedStudent.temp_password || <span className="text-slate-450 dark:text-slate-600 italic font-sans font-medium">Hashed</span>}
+                  {selectedStudent.temp_password || <span className="text-slate-450 dark:text-slate-650 italic font-sans font-medium">Hashed</span>}
                 </span>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-455 dark:text-slate-500 font-bold">Enrolled Course:</span>
+                <span className="font-extrabold text-slate-900 dark:text-white">{selectedStudent.course_name || "None"}</span>
               </div>
               <div className="flex justify-between pb-1">
                 <span className="text-slate-455 dark:text-slate-500 font-bold">Registration Date:</span>

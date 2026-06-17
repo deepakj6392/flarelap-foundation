@@ -1,0 +1,122 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String?
+  email        String    @unique
+  password     String
+  role         String    @default("user")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  otpCode      String?   @map("otp_code")
+  otpExpiresAt DateTime? @map("otp_expires_at")
+  tfaEnabled   Boolean?  @default(false) @map("tfa_enabled")
+  tfaCode      String?   @map("tfa_code")
+  tfaExpiresAt DateTime? @map("tfa_expires_at")
+  studentId    String?   @unique @map("student_id")
+  phone        String?
+  tempPassword String?   @map("temp_password")
+  courseId     Int?         @map("course_id")
+  course       Course?      @relation(fields: [courseId], references: [id])
+  logs         StudentLog[]
+
+  @@map("users")
+}
+
+model Contact {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  post      String?  @default("Foundation Inquiry")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("contacts")
+}
+
+model Newsletter {
+  id           Int      @id @default(autoincrement())
+  email        String   @unique
+  subscribedAt DateTime @default(now()) @map("subscribed_at")
+
+  @@map("newsletter")
+}
+
+model Donation {
+  id            Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone         String?
+  amount        Decimal  @db.Decimal(12, 2)
+  paymentMethod String   @map("payment_method")
+  transactionId String?  @map("transaction_id")
+  message       String?
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("donations")
+}
+
+model Course {
+  id        Int           @id @default(autoincrement())
+  name      String
+  active    Boolean       @default(true)
+  createdAt DateTime      @default(now()) @map("created_at")
+  users     User[]
+  mcqs      MCQQuestion[]
+
+  @@map("courses")
+}
+
+model StudentLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action    String   // LOGIN or LOGOUT
+  timestamp DateTime @default(now()) @map("timestamp")
+
+  @@map("student_logs")
+}
+
+model GalleryImage {
+  id        Int      @id @default(autoincrement())
+  imageUrl  String   @map("image_url")
+  caption   String?  @default("")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("gallery_images")
+}
+
+model MCQQuestion {
+  id        Int      @id @default(autoincrement())
+  courseId  Int      @map("course_id")
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  question  String
+  options   String[]
+  answer    Int      // 0-indexed correct option index
+  hint      String?  @default("")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("mcq_questions")
+}
+
+model SiteSetting {
+  id        Int      @id @default(autoincrement())
+  email     String   @default("support@flarelap.org")
+  phone     String   @default("+91 98765 43210")
+  address   String   @default("123 Community Lane, City, State, India")
+  location  String   @default("India")
+  facebook  String   @default("https://www.facebook.com/flarelap.org")
+  instagram String   @default("https://www.instagram.com/flarelap_org")
+  xLink     String   @default("https://x.com/Flarelap_Org") @map("x_link")
+  youtube   String   @default("https://www.youtube.com/@flarelap_org")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("site_settings")
+}
+
+

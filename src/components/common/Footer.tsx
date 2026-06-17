@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/constants/site";
@@ -7,8 +9,43 @@ import {
   MapPin, 
   ArrowUpRight
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [settings, setSettings] = useState({
+    email: siteConfig.email,
+    phone: siteConfig.phone,
+    location: siteConfig.location,
+    facebook: siteConfig.links.facebook,
+    instagram: "https://www.instagram.com/flarelap_org",
+    xLink: siteConfig.links.x,
+    youtube: siteConfig.links.youtube,
+  });
+
+  useEffect(() => {
+    async function loadSettings() {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const res = await fetch(`${apiUrl}/api/site-settings`);
+        const data = await res.json();
+        if (res.ok && data.setting) {
+          setSettings({
+            email: data.setting.email || siteConfig.email,
+            phone: data.setting.phone || siteConfig.phone,
+            location: data.setting.location || siteConfig.location,
+            facebook: data.setting.facebook || siteConfig.links.facebook,
+            instagram: data.setting.instagram || "https://www.instagram.com/flarelap_org",
+            xLink: data.setting.xLink || siteConfig.links.x,
+            youtube: data.setting.youtube || siteConfig.links.youtube,
+          });
+        }
+      } catch (err) {
+        console.error("Error fetching site settings in footer:", err);
+      }
+    }
+    loadSettings();
+  }, []);
+
   return (
     <footer id="contact" className="border-t border-slate-800 bg-slate-950 text-white">
       {/* Main Footer Content */}
@@ -37,9 +74,9 @@ export default function Footer() {
             
             {/* Social Media Links */}
             <div className="mt-4 flex items-center gap-4">
-              {siteConfig.links.facebook && (
+              {settings.facebook && (
                 <a 
-                  href={siteConfig.links.facebook} 
+                  href={settings.facebook} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Facebook Link"
@@ -50,9 +87,9 @@ export default function Footer() {
                   </svg>
                 </a>
               )}
-              {siteConfig.links.x && (
+              {settings.xLink && (
                 <a 
-                  href={siteConfig.links.x} 
+                  href={settings.xLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="X/Twitter Link"
@@ -63,9 +100,9 @@ export default function Footer() {
                   </svg>
                 </a>
               )}
-              {siteConfig.links.youtube && (
+              {settings.youtube && (
                 <a 
-                  href={siteConfig.links.youtube} 
+                  href={settings.youtube} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   aria-label="Youtube Link"
@@ -76,16 +113,16 @@ export default function Footer() {
                   </svg>
                 </a>
               )}
-              {siteConfig.links.github && (
+              {settings.instagram && (
                 <a 
-                  href={siteConfig.links.github} 
+                  href={settings.instagram} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  aria-label="GitHub Link"
+                  aria-label="Instagram Link"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-500 transition duration-200"
                 >
-                  <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                  <svg className="h-4.5 w-4.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
                   </svg>
                 </a>
               )}
@@ -170,25 +207,25 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4.5 w-4.5 shrink-0 text-emerald-400 mt-0.5" />
                 <span className="text-xs font-medium text-slate-400 leading-5">
-                  {siteConfig.location}, Global Head Office
+                  {settings.location}, Global Head Office
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4.5 w-4.5 shrink-0 text-emerald-400" />
                 <a 
-                  href={siteConfig.links.email || `mailto:${siteConfig.email}`} 
+                  href={`mailto:${settings.email}`} 
                   className="text-xs font-medium text-slate-400 hover:text-emerald-400 transition"
                 >
-                  {siteConfig.email}
+                  {settings.email}
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4.5 w-4.5 shrink-0 text-emerald-400" />
                 <a 
-                  href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`} 
+                  href={`tel:${settings.phone.replace(/\s+/g, '')}`} 
                   className="text-xs font-medium text-slate-400 hover:text-emerald-400 transition"
                 >
-                  {siteConfig.phone}
+                  {settings.phone}
                 </a>
               </div>
             </div>
@@ -219,13 +256,17 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
+            <Link href="/terms" className="font-semibold text-slate-500 transition hover:text-emerald-400">
+              Terms & Conditions
+            </Link>
+            <span className="text-slate-800">|</span>
+            <Link href="/privacy" className="font-semibold text-slate-500 transition hover:text-emerald-400">
+              Privacy Policy
+            </Link>
+            <span className="text-slate-800">|</span>
             <Link href="/admin/login" className="font-semibold text-slate-500 transition hover:text-emerald-400">
               Admin Console
             </Link>
-            <span className="text-slate-800">|</span>
-            <span className="text-[10px] tracking-wide text-slate-600 font-bold uppercase">
-              Empower People & Change Lives
-            </span>
           </div>
         </div>
       </div>
