@@ -73,7 +73,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     if (pathname.startsWith("/admin/education")) {
       setEducationOpen(true);
     }
-    if (pathname.startsWith("/admin/profile")) {
+    if (pathname.startsWith("/admin/profile") || pathname.startsWith("/admin/team")) {
       setMoreOpen(true);
     }
   }, [pathname]);
@@ -138,6 +138,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Student Directory";
       case "/admin/profile":
         return "Update Profile";
+      case "/admin/team":
+        return "Team Members";
       case "/admin/gallery":
         return "Gallery Manager";
       default:
@@ -276,7 +278,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-bold tracking-wide transition-all duration-200 outline-none text-slate-650 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
               >
                 <div className="flex items-center gap-3.5">
-                  <Settings className={`h-5 w-5 ${pathname.startsWith('/admin/profile') ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+                  <Settings className={`h-5 w-5 ${pathname.startsWith('/admin/profile') || pathname.startsWith('/admin/team') ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
                   <span>More</span>
                 </div>
                 {moreOpen ? (
@@ -288,6 +290,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               
               {moreOpen && (
                 <div className="mt-1.5 ml-9 space-y-1 border-l border-slate-200 dark:border-slate-800 pl-3">
+                  <Link
+                    href="/admin/team"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/team"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <User className="h-3.5 w-3.5" />
+                    Team Members
+                  </Link>
                   <Link
                     href="/admin/profile"
                     className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${

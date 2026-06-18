@@ -27,6 +27,7 @@ export default function MockExamsPage() {
   const [bundleQuestions, setBundleQuestions] = useState<MCQQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [bundleAnswers, setBundleAnswers] = useState<Record<number, number>>({});
+  const [reviewedQuestions, setReviewedQuestions] = useState<Record<number, boolean>>({});
   const [bundleSubmitted, setBundleSubmitted] = useState<boolean>(false);
   const [bundleScore, setBundleScore] = useState<number>(0);
 
@@ -64,9 +65,9 @@ export default function MockExamsPage() {
         } else {
           throw new Error(data.message || "Failed to load questions.");
         }
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Failed to load student MCQs:", err);
-        setDbError(err.message || "An error occurred while loading mock exam questions.");
+        setDbError(err instanceof Error ? err.message : "An error occurred while loading mock exam questions.");
       } finally {
         setDbLoading(false);
       }
@@ -110,10 +111,12 @@ export default function MockExamsPage() {
     setBundleQuestions(list);
     setCurrentQuestionIndex(0);
     setBundleAnswers({});
+    setReviewedQuestions({});
     setBundleSubmitted(false);
     setBundleScore(0);
 
     saveActivity({
+      // eslint-disable-next-line react-hooks/purity
       id: Date.now(),
       type: "quiz",
       title: `Started ${size} MCQ Practice Exam Bundle`
@@ -125,6 +128,13 @@ export default function MockExamsPage() {
     setBundleAnswers(prev => ({
       ...prev,
       [currentQuestionIndex]: optionIndex
+    }));
+  };
+
+  const toggleQuestionReview = () => {
+    setReviewedQuestions(prev => ({
+      ...prev,
+      [currentQuestionIndex]: !prev[currentQuestionIndex]
     }));
   };
 
@@ -195,11 +205,14 @@ export default function MockExamsPage() {
     setBundleQuestions([]);
     setCurrentQuestionIndex(0);
     setBundleAnswers({});
+    setReviewedQuestions({});
     setBundleSubmitted(false);
     setBundleScore(0);
   };
 
   const textHeading = isDark ? "text-white" : "text-slate-900";
+  const currentQuestion = bundleQuestions[currentQuestionIndex];
+  const isCurrentQuestionReviewed = !!reviewedQuestions[currentQuestionIndex];
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300 font-sans">
@@ -395,19 +408,61 @@ export default function MockExamsPage() {
                       {currentQuestionIndex + 1}
                     </span>
                     <h4 className={`text-sm font-black leading-snug pt-0.5 ${textHeading}`}>
-                      {bundleQuestions[currentQuestionIndex]?.question}
+                      {currentQuestion?.question}
                     </h4>
                   </div>
 
+                  <div className="flex justify-center pt-1">
+                    <button
+                      type="button"
+                      onClick={toggleQuestionReview}
+                      className={`inline-flex items-center justify-center rounded-xl border px-6 py-2.5 text-xs font-black transition active:scale-[0.98] cursor-pointer ${
+                        isCurrentQuestionReviewed
+                          ? isDark
+                            ? "border-emerald-500/50 bg-emerald-950/35 text-emerald-300"
+                            : "border-emerald-200 bg-emerald-50 text-emerald-700"
+                          : isDark
+                            ? "border-indigo-500/40 bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/15"
+                            : "border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100"
+                      }`}
+                    >
+                      {isCurrentQuestionReviewed ? "Hide Review" : "Review"}
+                    </button>
+                  </div>
+
+                  {isCurrentQuestionReviewed && currentQuestion && (
+                    <div className={`ml-10 rounded-2xl border p-4 text-xs leading-relaxed ${
+                      isDark
+                        ? "border-emerald-900/60 bg-emerald-950/20 text-emerald-100"
+                        : "border-emerald-100 bg-emerald-50/80 text-slate-700"
+                    }`}>
+                      <p className="font-black text-emerald-700 dark:text-emerald-300">
+                        Correct Answer: Option {currentQuestion.answer + 1} - {currentQuestion.options[currentQuestion.answer]}
+                      </p>
+                      <p className="mt-2 font-semibold">
+                        <span className="font-black">Explanation:</span> {currentQuestion.hint || "Explanation is not available for this question."}
+                      </p>
+                    </div>
+                  )}
+
                   {/* Options */}
                   <div className="grid gap-3 pl-10 pt-2">
-                    {bundleQuestions[currentQuestionIndex]?.options.map((opt, optIndex) => {
+                    {currentQuestion?.options.map((opt, optIndex) => {
                       const isSelected = bundleAnswers[currentQuestionIndex] === optIndex;
+                      const isCorrectAnswer = currentQuestion.answer === optIndex;
                       let optStyle = isDark
                         ? "border-slate-800 bg-slate-900/50 text-slate-300 hover:border-emerald-500/30"
                         : "border-slate-200 bg-white text-slate-600 hover:border-emerald-650/40 shadow-xs";
                       
-                      if (isSelected) {
+                      if (isCurrentQuestionReviewed && isCorrectAnswer) {
+                        optStyle = isDark
+                          ? "border-emerald-500 bg-emerald-950/35 text-emerald-300 font-bold ring-1 ring-emerald-500/25"
+                          : "border-emerald-600 bg-emerald-50 text-emerald-800 font-bold ring-1 ring-emerald-600/20";
+                      } else if (isCurrentQuestionReviewed && isSelected && !isCorrectAnswer) {
+                        optStyle = isDark
+                          ? "border-red-500 bg-red-950/25 text-red-300 font-bold ring-1 ring-red-500/20"
+                          : "border-red-400 bg-red-50 text-red-700 font-bold ring-1 ring-red-400/20";
+                      } else if (isSelected) {
                         optStyle = isDark
                           ? "border-emerald-500 bg-emerald-950/20 text-emerald-400 font-bold"
                           : "border-emerald-600 bg-emerald-50/50 text-emerald-700 font-bold";
@@ -421,7 +476,11 @@ export default function MockExamsPage() {
                           className={`w-full text-left rounded-xl border px-4.5 py-3.5 text-xs transition-all flex items-center justify-between outline-none cursor-pointer ${optStyle}`}
                         >
                           <span>{opt}</span>
-                          {isSelected && (
+                          {isCurrentQuestionReviewed && isCorrectAnswer ? (
+                            <CheckCircle2 className="h-4.5 w-4.5 text-emerald-600 shrink-0" />
+                          ) : isCurrentQuestionReviewed && isSelected && !isCorrectAnswer ? (
+                            <X className="h-4.5 w-4.5 text-red-600 shrink-0" />
+                          ) : isSelected && (
                             <CheckCircle2 className="h-4.5 w-4.5 text-emerald-600 shrink-0" />
                           )}
                         </button>
