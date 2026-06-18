@@ -34,34 +34,41 @@ export async function GET(request: Request) {
       where: { name: "Reasoning & Aptitude" }
     });
 
-    const whereConditions: any[] = [];
+    let courseMcqs: any[] = [];
     if (studentUser?.courseId) {
-      whereConditions.push({ courseId: studentUser.courseId });
+      courseMcqs = await prisma.mCQQuestion.findMany({
+        where: { courseId: studentUser.courseId },
+        select: {
+          id: true,
+          question: true,
+          options: true,
+          answer: true,
+          hint: true
+        },
+        orderBy: { id: "asc" }
+      });
     }
+
+    let reasoningMcqs: any[] = [];
     if (commonCourse) {
-      whereConditions.push({ courseId: commonCourse.id });
+      reasoningMcqs = await prisma.mCQQuestion.findMany({
+        where: { courseId: commonCourse.id },
+        select: {
+          id: true,
+          question: true,
+          options: true,
+          answer: true,
+          hint: true
+        },
+        orderBy: { id: "asc" }
+      });
     }
 
-    if (whereConditions.length === 0) {
-      return NextResponse.json({ success: true, mcqs: [] });
-    }
-
-    // Fetch MCQs linked to either of the course IDs
-    const mcqs = await prisma.mCQQuestion.findMany({
-      where: {
-        OR: whereConditions
-      },
-      select: {
-        id: true,
-        question: true,
-        options: true,
-        answer: true,
-        hint: true
-      },
-      orderBy: { id: "asc" }
+    return NextResponse.json({
+      success: true,
+      courseMcqs,
+      reasoningMcqs
     });
-
-    return NextResponse.json({ success: true, mcqs });
   } catch (error: any) {
     console.error("Student MCQs fetching error:", error);
     return NextResponse.json(

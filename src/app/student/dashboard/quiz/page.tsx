@@ -13,7 +13,8 @@ import {
   Trophy,
   BookOpen,
   GraduationCap,
-  Loader2
+  Loader2,
+  Brain
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
@@ -24,6 +25,7 @@ export default function MockExamsPage() {
 
   // Active exam states
   const [activeBundleSize, setActiveBundleSize] = useState<number | null>(null);
+  const [activeExamType, setActiveExamType] = useState<"course" | "reasoning">("course");
   const [bundleQuestions, setBundleQuestions] = useState<MCQQuestion[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [bundleAnswers, setBundleAnswers] = useState<Record<number, number>>({});
@@ -32,9 +34,13 @@ export default function MockExamsPage() {
   const [bundleScore, setBundleScore] = useState<number>(0);
 
   // Dynamic database questions state
-  const [dbQuestions, setDbQuestions] = useState<MCQQuestion[]>([]);
+  const [courseQuestions, setCourseQuestions] = useState<MCQQuestion[]>([]);
+  const [reasoningQuestions, setReasoningQuestions] = useState<MCQQuestion[]>([]);
   const [dbLoading, setDbLoading] = useState<boolean>(true);
   const [dbError, setDbError] = useState<string | null>(null);
+
+  // Active Tab
+  const [activeTab, setActiveTab] = useState<"course" | "reasoning">("course");
 
   useEffect(() => {
     const fetchStudentMcqs = async () => {
@@ -61,7 +67,8 @@ export default function MockExamsPage() {
 
         const data = await res.json();
         if (data.success) {
-          setDbQuestions(data.mcqs || []);
+          setCourseQuestions(data.courseMcqs || []);
+          setReasoningQuestions(data.reasoningMcqs || []);
         } else {
           throw new Error(data.message || "Failed to load questions.");
         }
@@ -78,17 +85,19 @@ export default function MockExamsPage() {
 
   if (!student) return null;
 
-  const startExam = (size: number) => {
+  const startExam = (size: number, examType: "course" | "reasoning" = "course", startIndex: number = 0) => {
     const courseId = student ? Number(student.course_id) : 1;
     // Use dynamic database questions if available, otherwise fall back to static bank
-    const baseQuestions = dbQuestions.length > 0 
-      ? dbQuestions 
-      : (MCQ_BANKS[courseId] || MCQ_BANKS[1] || []);
+    const baseQuestions = examType === "reasoning"
+      ? reasoningQuestions
+      : (courseQuestions.length > 0 
+          ? courseQuestions 
+          : (MCQ_BANKS[courseId] || MCQ_BANKS[1] || []));
     
     if (baseQuestions.length === 0) {
       Swal.fire({
         title: "No Questions",
-        text: "There are currently no mock questions available for your course.",
+        text: "There are currently no mock questions available for this exam.",
         icon: "info",
         confirmButtonColor: "#4f46e5"
       });
@@ -97,7 +106,10 @@ export default function MockExamsPage() {
 
     const list: MCQQuestion[] = [];
     for (let i = 0; i < size; i++) {
-      const baseQ = baseQuestions[i % baseQuestions.length];
+      const actualIdx = examType === "reasoning"
+        ? (startIndex + i) % baseQuestions.length
+        : i % baseQuestions.length;
+      const baseQ = baseQuestions[actualIdx];
       list.push({
         id: i + 1,
         question: baseQ.question,
@@ -107,6 +119,7 @@ export default function MockExamsPage() {
       });
     }
     
+    setActiveExamType(examType);
     setActiveBundleSize(size);
     setBundleQuestions(list);
     setCurrentQuestionIndex(0);
@@ -119,7 +132,7 @@ export default function MockExamsPage() {
       // eslint-disable-next-line react-hooks/purity
       id: Date.now(),
       type: "quiz",
-      title: `Started ${size} MCQ Practice Exam Bundle`
+      title: `Started ${size} MCQ ${examType === "reasoning" ? "Reasoning" : "Practice Exam"} Bundle`
     });
   };
 
@@ -222,8 +235,32 @@ export default function MockExamsPage() {
           <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
             <h2 className={`text-lg font-black ${textHeading}`}>Practice Mock Exams</h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
-              Select a practice bundle size below to test your knowledge. Questions are tailored specifically to your enrolled course.
+              Select a practice bundle size below to test your knowledge. Questions are dynamically generated to support peak rank preparation.
             </p>
+          </div>
+
+          {/* Premium Tab Bar */}
+          <div className="flex border-b border-slate-100 dark:border-slate-800 pb-px gap-6">
+            <button
+              onClick={() => setActiveTab("course")}
+              className={`pb-3 text-sm font-black border-b-2 transition-all cursor-pointer ${
+                activeTab === "course"
+                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-455"
+                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-650"
+              }`}
+            >
+              Course Mock Exams
+            </button>
+            <button
+              onClick={() => setActiveTab("reasoning")}
+              className={`pb-3 text-sm font-black border-b-2 transition-all cursor-pointer ${
+                activeTab === "reasoning"
+                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-455"
+                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-650"
+              }`}
+            >
+              Reasoning & Aptitude
+            </button>
           </div>
 
           {dbLoading ? (
@@ -236,7 +273,7 @@ export default function MockExamsPage() {
               <AlertCircle className="h-5 w-5 shrink-0" />
               <p>{dbError}</p>
             </div>
-          ) : (
+          ) : activeTab === "course" ? (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl">
               {[
                 { 
@@ -317,7 +354,116 @@ export default function MockExamsPage() {
                     {/* Footer Row: Attempt button and metadata badge */}
                     <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
                       <button
-                        onClick={() => startExam(bundle.size)}
+                        onClick={() => startExam(bundle.size, "course")}
+                        className="rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 text-xs font-black transition active:scale-[0.97] cursor-pointer shadow-md shadow-emerald-700/10 hover:shadow-emerald-700/20"
+                      >
+                        Attempt
+                      </button>
+                      <span className="text-[10px] text-slate-400 dark:text-slate-505 font-extrabold flex items-center gap-1.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/60 px-2.5 py-1 rounded-md">
+                        <Clock className="h-3.5 w-3.5 text-slate-350" />
+                        {bundle.time} • {bundle.size} Qs
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl">
+              {[
+                { 
+                  title: "Reasoning Test - Part 1", 
+                  subtitle: "Logical Reasoning", 
+                  size: 100, 
+                  startIndex: 0,
+                  time: "90 mins", 
+                  desc: "Attempt first part of 100 reasoning and aptitude questions.",
+                  icon: Brain
+                },
+                { 
+                  title: "Reasoning Test - Part 2", 
+                  subtitle: "Logical Reasoning", 
+                  size: 100, 
+                  startIndex: 100,
+                  time: "90 mins", 
+                  desc: "Attempt second part of 100 reasoning and aptitude questions.",
+                  icon: Brain
+                },
+                { 
+                  title: "Reasoning Test - Part 3", 
+                  subtitle: "Logical Reasoning", 
+                  size: 100, 
+                  startIndex: 200,
+                  time: "90 mins", 
+                  desc: "Attempt third part of 100 reasoning and aptitude questions.",
+                  icon: Brain
+                },
+                { 
+                  title: "Reasoning Test - Part 4", 
+                  subtitle: "Logical Reasoning", 
+                  size: 100, 
+                  startIndex: 300,
+                  time: "90 mins", 
+                  desc: "Attempt fourth part of 100 reasoning and aptitude questions.",
+                  icon: Brain
+                },
+                { 
+                  title: "Reasoning Test - Part 5", 
+                  subtitle: "Logical Reasoning", 
+                  size: 100, 
+                  startIndex: 400,
+                  time: "90 mins", 
+                  desc: "Attempt fifth part of 100 reasoning and aptitude questions.",
+                  icon: Brain
+                },
+                { 
+                  title: "Reasoning Ultimate Marathon", 
+                  subtitle: "Master Practice Session", 
+                  size: 500, 
+                  startIndex: 0,
+                  time: "6 hours", 
+                  desc: "Attempt 500 reasoning and aptitude questions master marathon.",
+                  icon: Trophy
+                }
+              ].map((bundle) => {
+                const IconComponent = bundle.icon;
+                return (
+                  <div 
+                    key={bundle.title}
+                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-350 hover:shadow-lg hover:-translate-y-1 ${
+                      isDark 
+                        ? "border-slate-800 bg-slate-900/35 hover:border-emerald-500/40 hover:bg-slate-900/60" 
+                        : "border-slate-200/80 bg-white hover:border-emerald-500/40 shadow-[0_8px_30px_rgb(0,0,0,0.02)]"
+                    }`}
+                  >
+                    <div className="space-y-4">
+                      {/* Header Row: Icon & Titles */}
+                      <div className="flex items-start gap-3.5">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+                          <IconComponent className="h-5.5 w-5.5" />
+                        </div>
+                        <div className="space-y-0.5">
+                          <h4 className={`text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-455`}>
+                            {bundle.subtitle}
+                          </h4>
+                          <h3 className={`text-sm font-black leading-snug tracking-tight ${textHeading}`}>
+                            {bundle.title}
+                          </h3>
+                        </div>
+                      </div>
+
+                      {/* Description */}
+                      <div>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-semibold">
+                          {bundle.desc}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Footer Row: Attempt button and metadata badge */}
+                    <div className="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                      <button
+                        onClick={() => startExam(bundle.size, "reasoning", bundle.startIndex)}
                         className="rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white px-5 py-2.5 text-xs font-black transition active:scale-[0.97] cursor-pointer shadow-md shadow-emerald-700/10 hover:shadow-emerald-700/20"
                       >
                         Attempt
@@ -342,7 +488,7 @@ export default function MockExamsPage() {
           }`}>
             <div>
               <h3 className={`text-sm font-black ${textHeading}`}>
-                Active Exam: {activeBundleSize} MCQs Bundle
+                Active Exam: {activeExamType === "reasoning" ? "Reasoning & Aptitude" : (student.course_name || "Course")} - {activeBundleSize} MCQs
               </h3>
               <p className="text-xs text-slate-500 font-semibold mt-0.5">
                 Select your answers and click Next/Back to navigate. Submit when you are finished.
