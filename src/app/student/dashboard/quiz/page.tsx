@@ -245,8 +245,8 @@ export default function MockExamsPage() {
               onClick={() => setActiveTab("course")}
               className={`pb-3 text-sm font-black border-b-2 transition-all cursor-pointer ${
                 activeTab === "course"
-                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-455"
-                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-650"
+                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-500"
               }`}
             >
               Course Mock Exams
@@ -255,8 +255,8 @@ export default function MockExamsPage() {
               onClick={() => setActiveTab("reasoning")}
               className={`pb-3 text-sm font-black border-b-2 transition-all cursor-pointer ${
                 activeTab === "reasoning"
-                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-455"
-                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-650"
+                  ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+                  : "border-transparent text-slate-400 dark:text-slate-500 hover:text-slate-500"
               }`}
             >
               Reasoning & Aptitude
@@ -264,7 +264,7 @@ export default function MockExamsPage() {
           </div>
 
           {dbLoading ? (
-            <div className="flex flex-col items-center justify-center py-24 text-slate-405 dark:text-slate-500">
+            <div className="flex flex-col items-center justify-center py-24 text-slate-400 dark:text-slate-500">
               <Loader2 className="h-8 w-8 animate-spin text-emerald-600 mb-3" />
               <p className="text-xs font-bold">Loading dynamic practice bundles...</p>
             </div>
@@ -334,7 +334,7 @@ export default function MockExamsPage() {
                           <IconComponent className="h-5.5 w-5.5" />
                         </div>
                         <div className="space-y-0.5">
-                          <h4 className={`text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-450`}>
+                          <h4 className={`text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-500`}>
                             {bundle.subtitle}
                           </h4>
                           <h3 className={`text-sm font-black leading-snug tracking-tight ${textHeading}`}>
@@ -359,8 +359,8 @@ export default function MockExamsPage() {
                       >
                         Attempt
                       </button>
-                      <span className="text-[10px] text-slate-400 dark:text-slate-505 font-extrabold flex items-center gap-1.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/60 px-2.5 py-1 rounded-md">
-                        <Clock className="h-3.5 w-3.5 text-slate-350" />
+                      <span className="text-[10px] text-slate-400 dark:text-slate-500 font-extrabold flex items-center gap-1.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/60 px-2.5 py-1 rounded-md">
+                        <Clock className="h-3.5 w-3.5 text-slate-400" />
                         {bundle.time} • {bundle.size} Qs
                       </span>
                     </div>
@@ -443,7 +443,7 @@ export default function MockExamsPage() {
                           <IconComponent className="h-5.5 w-5.5" />
                         </div>
                         <div className="space-y-0.5">
-                          <h4 className={`text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-455`}>
+                          <h4 className={`text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400`}>
                             {bundle.subtitle}
                           </h4>
                           <h3 className={`text-sm font-black leading-snug tracking-tight ${textHeading}`}>
@@ -468,8 +468,8 @@ export default function MockExamsPage() {
                       >
                         Attempt
                       </button>
-                      <span className="text-[10px] text-slate-400 dark:text-slate-505 font-extrabold flex items-center gap-1.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/60 px-2.5 py-1 rounded-md">
-                        <Clock className="h-3.5 w-3.5 text-slate-350" />
+                      <span className="text-[10px] text-slate-400 dark:text-slate-500 font-extrabold flex items-center gap-1.5 bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800/60 px-2.5 py-1 rounded-md">
+                        <Clock className="h-3.5 w-3.5 text-slate-400" />
                         {bundle.time} • {bundle.size} Qs
                       </span>
                     </div>
@@ -597,8 +597,8 @@ export default function MockExamsPage() {
                       const isSelected = bundleAnswers[currentQuestionIndex] === optIndex;
                       const isCorrectAnswer = currentQuestion.answer === optIndex;
                       let optStyle = isDark
-                        ? "border-slate-800 bg-slate-900/50 text-slate-300 hover:border-emerald-500/30"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-emerald-650/40 shadow-xs";
+                        ? "border-slate-800 bg-slate-900/50 text-slate-300 hover:border-indigo-500/30"
+                        : "border-slate-200 bg-white text-slate-600 hover:border-indigo-500/40 shadow-xs";
                       
                       if (isCurrentQuestionReviewed && isCorrectAnswer) {
                         optStyle = isDark
@@ -610,8 +610,8 @@ export default function MockExamsPage() {
                           : "border-red-400 bg-red-50 text-red-700 font-bold ring-1 ring-red-400/20";
                       } else if (isSelected) {
                         optStyle = isDark
-                          ? "border-emerald-500 bg-emerald-950/20 text-emerald-400 font-bold"
-                          : "border-emerald-600 bg-emerald-50/50 text-emerald-700 font-bold";
+                          ? "border-indigo-500 bg-indigo-950/30 text-indigo-300 font-bold ring-1 ring-indigo-500/20"
+                          : "border-indigo-600 bg-indigo-50/80 text-indigo-700 font-bold ring-1 ring-indigo-600/20";
                       }
 
                       return (
@@ -627,7 +627,9 @@ export default function MockExamsPage() {
                           ) : isCurrentQuestionReviewed && isSelected && !isCorrectAnswer ? (
                             <X className="h-4.5 w-4.5 text-red-600 shrink-0" />
                           ) : isSelected && (
-                            <CheckCircle2 className="h-4.5 w-4.5 text-emerald-600 shrink-0" />
+                            <div className="h-4 w-4 rounded-full border-2 border-indigo-600 dark:border-indigo-400 bg-indigo-600 dark:bg-indigo-400 flex items-center justify-center shrink-0">
+                              <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                            </div>
                           )}
                         </button>
                       );
@@ -693,7 +695,7 @@ export default function MockExamsPage() {
                     : "border-slate-200 bg-slate-50 text-slate-500 hover:border-slate-300";
 
                   if (isActive) {
-                    gridStyle = "border-emerald-500 bg-emerald-500/10 text-emerald-505 ring-1 ring-emerald-500 font-black";
+                    gridStyle = "border-emerald-500 bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500 font-black";
                   } else if (isAnswered) {
                     gridStyle = isDark
                       ? "border-emerald-800/40 bg-emerald-950/20 text-emerald-400 font-bold"
@@ -800,14 +802,14 @@ export default function MockExamsPage() {
                     <div className="grid gap-2.5 ml-10">
                       {q.options.map((opt, optIdx) => {
                         let optStyle = isDark
-                          ? "border-slate-850 bg-slate-900/20 text-slate-400"
+                          ? "border-slate-800 bg-slate-900/20 text-slate-400"
                           : "border-slate-100 bg-slate-50/50 text-slate-500";
 
                         // Highlight correct option in emerald green
                         if (optIdx === q.answer) {
                           optStyle = isDark
                             ? "border-emerald-500 bg-emerald-950/35 text-emerald-400 font-bold ring-1 ring-emerald-500/20"
-                            : "border-emerald-600 bg-emerald-50 text-emerald-805 font-bold ring-1 ring-emerald-600/20";
+                            : "border-emerald-600 bg-emerald-50 text-emerald-800 font-bold ring-1 ring-emerald-600/20";
                         } 
                         // Highlight incorrect student selection in red
                         else if (selectedOpt === optIdx && !isCorrect) {
@@ -826,7 +828,7 @@ export default function MockExamsPage() {
                               <CheckCircle2 className="h-4.5 w-4.5 text-emerald-600 shrink-0" />
                             )}
                             {selectedOpt === optIdx && !isCorrect && (
-                              <X className="h-4.5 w-4.5 text-red-650 shrink-0" />
+                              <X className="h-4.5 w-4.5 text-red-600 shrink-0" />
                             )}
                           </div>
                         );
@@ -836,7 +838,7 @@ export default function MockExamsPage() {
                     {/* Student choice feedback */}
                     <div className="ml-10 flex flex-col sm:flex-row gap-3 text-xs font-semibold">
                       <div className={`p-3.5 rounded-xl border flex items-start gap-2 flex-1 ${
-                        isDark ? "bg-slate-900/60 border-slate-800 text-slate-405" : "bg-slate-50 border-slate-150 text-slate-600"
+                        isDark ? "bg-slate-900/60 border-slate-800 text-slate-400" : "bg-slate-50 border-slate-150 text-slate-600"
                       }`}>
                         <AlertCircle className="h-4.5 w-4.5 text-emerald-600 shrink-0 mt-0.5" />
                         <div>
