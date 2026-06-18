@@ -29,13 +29,28 @@ export async function GET(request: Request) {
       select: { courseId: true }
     });
 
-    if (!studentUser || !studentUser.courseId) {
+    // Lookup the common course "Reasoning & Aptitude"
+    const commonCourse = await prisma.course.findFirst({
+      where: { name: "Reasoning & Aptitude" }
+    });
+
+    const whereConditions: any[] = [];
+    if (studentUser?.courseId) {
+      whereConditions.push({ courseId: studentUser.courseId });
+    }
+    if (commonCourse) {
+      whereConditions.push({ courseId: commonCourse.id });
+    }
+
+    if (whereConditions.length === 0) {
       return NextResponse.json({ success: true, mcqs: [] });
     }
 
-    // Fetch MCQs linked to that course ID
+    // Fetch MCQs linked to either of the course IDs
     const mcqs = await prisma.mCQQuestion.findMany({
-      where: { courseId: studentUser.courseId },
+      where: {
+        OR: whereConditions
+      },
       select: {
         id: true,
         question: true,
