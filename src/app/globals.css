@@ -2,14 +2,37 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --muted-foreground: #475569;
+  --surface-subtle: #f8fafc;
+  --surface-sidebar: #f3f6fb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-outfit);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #eef2f7;
+  --color-slate-150: #e7edf5;
+  --color-slate-200: #dbe3ee;
+  --color-slate-300: #c4cfdd;
+  --color-slate-350: #aab7c8;
+  --color-slate-400: #8a98ac;
+  --color-slate-405: #7f8da1;
+  --color-slate-500: #64748b;
+  --color-slate-505: #5f6f85;
+  --color-slate-550: #526176;
+  --color-slate-600: #435168;
+  --color-slate-650: #35435a;
+  --color-slate-700: #29384f;
+  --color-slate-800: #1f2937;
+  --color-slate-850: #172033;
+  --color-slate-900: #111827;
+  --color-slate-950: #080f1f;
+  --color-slate-955: #050b18;
 
   --color-emerald-50: #eef2ff;
   --color-emerald-100: #e0e7ff;
@@ -41,11 +64,26 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-emerald-500) 22%, transparent);
+  color: #080f1f;
 }
 
 .hexagon-clip {

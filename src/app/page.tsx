@@ -6,13 +6,13 @@ import Link from "next/link";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { galleryImages, sampleImages } from "@/constants/images";
-import { 
-  BookOpen, 
-  Heart, 
-  Award, 
-  Users, 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  BookOpen,
+  Heart,
+  Award,
+  Users,
+  ArrowRight,
+  CheckCircle2,
   Calendar,
   ShieldAlert,
   Compass,
@@ -289,7 +289,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-950 font-sans antialiased">
       <Herader />
-      
+
       <main>
         {/* 1. HERO SECTION */}
         <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#eefdf4_45%,#fffbeb_100%)] py-20 lg:py-28">
@@ -298,14 +298,14 @@ export default function Home() {
           <div className="absolute w-[350px] h-[350px] bg-teal-500/10 rounded-full blur-3xl bottom-0 right-1/4 pointer-events-none" />
 
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.25]" />
-          
+
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div className="max-w-3xl text-left">
               <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-xs font-bold text-emerald-800 shadow-xs backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-emerald-600 animate-pulse" />
                 Registered Social Impact Foundation
               </div>
-              
+
               {/* Typewriter Hero Heading */}
               <h1 className="mt-8 text-4xl font-black leading-[1.12] text-slate-900 sm:text-6xl lg:text-7xl tracking-tight min-h-[96px] sm:min-h-[140px] md:min-h-[160px]">
                 <span>{line1}</span>
@@ -315,7 +315,7 @@ export default function Home() {
                 </span>
                 <span className="inline-block w-[4px] h-[32px] sm:h-[48px] lg:h-[60px] ml-1 bg-emerald-600 animate-pulse align-middle" />
               </h1>
-              
+
               <p className="mt-6 max-w-xl text-base leading-8 text-slate-700 sm:text-lg">
                 Flarelap Global Foundation drives grassroots progress through practical, sustainable programs in education access, preventive healthcare, livelihood guidance, and relief welfare.
               </p>
@@ -372,7 +372,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Credentials / Certifications Row */}
                   <div className="mt-4 border-t border-slate-200/80 pt-4 text-center">
                     <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-3">Govt. Registered & Certified</p>
@@ -434,8 +434,8 @@ export default function Home() {
               {coreValues.map((value, idx) => {
                 const IconComponent = value.icon;
                 return (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className="rounded-2xl border border-slate-200 bg-white p-6.5 shadow-xs transition duration-300 hover:border-emerald-500/20"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600">
@@ -459,7 +459,7 @@ export default function Home() {
                 Practical solutions solving real-world challenges.
               </h2>
             </div>
-            
+
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {focusAreas.map((area) => {
                 const IconComponent = area.icon;
@@ -492,18 +492,18 @@ export default function Home() {
               </h2>
               <div className="mx-auto h-1 w-24 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-full mt-4" />
             </div>
-            
+
             <div className="pt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-5 max-w-6xl mx-auto">
               {sdgGoals.map((goal, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className={`group relative aspect-[1/1.14] transition-all duration-300 hover:scale-105 hover:-translate-y-1 ${goal.shadow}`}
                 >
                   <div className={`hexagon-clip-vertical w-full h-full bg-gradient-to-br ${goal.gradient} pt-7 pb-6 px-4 flex flex-col items-center justify-between text-center relative overflow-hidden`}>
-                    
+
                     {/* Top shine reflection effect */}
                     <div className="absolute top-0 inset-x-0 h-1/2 bg-white/10 -skew-y-12 origin-top-left pointer-events-none transition group-hover:bg-white/15" />
-                    
+
                     {/* Goal Icon Container */}
                     <div className="mt-1 flex items-center justify-center h-10 w-10 text-white z-10 transition group-hover:scale-110">
                       {goal.icon}
@@ -512,16 +512,16 @@ export default function Home() {
                     {/* Separator & Details */}
                     <div className="w-full flex-1 flex flex-col justify-end items-center z-10 space-y-3">
                       <div className="w-8/12 mx-auto border-t border-white/30" />
-                      
+
                       <h3 className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-white/95 leading-snug min-h-[36px] flex items-center justify-center px-1">
                         {goal.title}
                       </h3>
-                      
+
                       <span className="text-[11px] sm:text-xs font-black text-white/80 tracking-widest block">
                         {goal.number}
                       </span>
                     </div>
-                    
+
                   </div>
                 </div>
               ))}
@@ -547,8 +547,8 @@ export default function Home() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {activeEvents.map((event, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs flex flex-col justify-between hover:border-emerald-500/20 transition-all duration-300"
                 >
                   <div>
@@ -558,7 +558,7 @@ export default function Home() {
                     <h3 className="mt-5 text-base font-black text-slate-900 leading-snug">{event.title}</h3>
                     <p className="mt-3 text-xs leading-6 text-slate-500 font-medium">{event.desc}</p>
                   </div>
-                  
+
                   <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold">
                     <span className="flex items-center gap-1 text-slate-400">
                       <Calendar className="h-3.5 w-3.5" />
@@ -581,7 +581,7 @@ export default function Home() {
                 Commitment to transparent, trusted, and measurable care.
               </h2>
             </div>
-            
+
             <div className="grid gap-6 sm:grid-cols-3">
               {metrics.map((metric) => (
                 <div
@@ -608,7 +608,7 @@ export default function Home() {
         {/* 7. WAYS TO SUPPORT / INTERACTIVE VOLUNTEER SECTION */}
         <section className="bg-slate-900 text-white px-5 py-20 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
-          
+
           <div className="mx-auto max-w-7xl relative z-10">
             <div className="max-w-3xl text-left">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-emerald-400">Join the Movement</span>
@@ -622,8 +622,8 @@ export default function Home() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {involvementOptions.map((option, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="rounded-2xl border border-slate-800 bg-slate-950/50 p-6.5 flex flex-col justify-between"
                 >
                   <div>
@@ -632,8 +632,8 @@ export default function Home() {
                       {option.description}
                     </p>
                   </div>
-                  <Link 
-                    href={option.href} 
+                  <Link
+                    href={option.href}
                     className="mt-6 inline-flex items-center gap-1.5 self-start text-xs font-bold text-emerald-400 hover:text-emerald-300 hover:translate-x-1 transition-all"
                   >
                     {option.cta}
@@ -729,15 +729,15 @@ export default function Home() {
 
             <div className="animate-marquee-scroll gap-6">
               {getMarqueeList().map((src, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="group relative h-64 w-96 flex-shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition-all duration-350 hover:shadow-md hover:scale-[1.015]"
                 >
-                  <Image 
-                    src={src} 
-                    alt={`Gallery image ${idx + 1}`} 
-                    fill 
-                    className="object-cover transition duration-500 group-hover:scale-105" 
+                  <Image
+                    src={src}
+                    alt={`Gallery image ${idx + 1}`}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
               ))}
@@ -803,7 +803,7 @@ export default function Home() {
         </section>
 
         {/* 11. PARTNERS SECTION */}
-        <section id="partners" className="bg-slate-50/50 px-5 py-16 sm:px-6 lg:px-8 border-t border-slate-100">
+        {/* <section id="partners" className="bg-slate-50/50 px-5 py-16 sm:px-6 lg:px-8 border-t border-slate-100">
           <div className="mx-auto max-w-7xl">
             <p className="text-xs font-black uppercase tracking-[0.22em] text-slate-400 text-center">Supported and Trusted by</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-10 opacity-70 filter grayscale dark:invert">
@@ -824,7 +824,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* 12. NEWSLETTER SECTION */}
         <section id="newsletter" className="bg-white px-5 py-20 sm:px-6 lg:px-8">
@@ -869,7 +869,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
