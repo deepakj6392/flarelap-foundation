@@ -7,7 +7,11 @@ import { prisma } from "@/lib/prisma";
 export async function GET() {
   try {
     const images = await prisma.galleryImage.findMany({
-      orderBy: { createdAt: "desc" },
+      orderBy: [
+        { pageName: "asc" },
+        { sequence: "asc" },
+        { createdAt: "desc" }
+      ],
     });
     return NextResponse.json({ success: true, images });
   } catch (error: any) {
@@ -25,6 +29,9 @@ export async function POST(request: Request) {
     const formData = await request.formData();
     const file = formData.get("file") as File | null;
     const caption = formData.get("caption") as string || "";
+    const pageName = formData.get("pageName") as string || "General";
+    const sequenceStr = formData.get("sequence") as string || "0";
+    const sequence = parseInt(sequenceStr, 10) || 0;
     const externalUrl = formData.get("externalUrl") as string || "";
 
     // Case 1: Upload via External URL Link
@@ -33,6 +40,8 @@ export async function POST(request: Request) {
         data: {
           imageUrl: externalUrl,
           caption,
+          pageName,
+          sequence,
         },
       });
       return NextResponse.json({ success: true, image });
@@ -71,6 +80,8 @@ export async function POST(request: Request) {
       data: {
         imageUrl: relativeUrl,
         caption,
+        pageName,
+        sequence,
       },
     });
 

@@ -80,15 +80,15 @@ export default async function AboutPage() {
 							</div>
 
 							<div className="relative">
-												<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
-																		<Image
-																			src={sampleImages.community}
-																			alt="Community working together"
-																			fill
-																			className="object-cover"
-																			sizes="(max-width: 768px) 100vw, 50vw"
-																		/>
-												</div>
+								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
+									<Image
+										src={sampleImages.community}
+										alt="Community working together"
+										fill
+										className="object-cover"
+										sizes="(max-width: 768px) 100vw, 50vw"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -123,161 +123,161 @@ export default async function AboutPage() {
 					</div>
 				</section>
 
-							<section className="bg-white px-5 py-16 sm:px-6 lg:px-8">
-								<div className="mx-auto max-w-7xl">
-									<h2 className="text-2xl font-bold text-slate-950">Programs we run</h2>
-									<p className="mt-3 text-sm text-slate-700">Practical, local programs in education, health, livelihoods and relief.</p>
+				<section className="bg-white px-5 py-16 sm:px-6 lg:px-8">
+					<div className="mx-auto max-w-7xl">
+						<h2 className="text-2xl font-bold text-slate-950">Programs we run</h2>
+						<p className="mt-3 text-sm text-slate-700">Practical, local programs in education, health, livelihoods and relief.</p>
 
-									<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-										<div className="rounded-lg bg-slate-50 p-4 text-center">
-											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src={sampleImages.education} alt="education" fill className="object-cover" />
-											</div>
-											<h3 className="font-semibold">Education Access</h3>
-											<p className="mt-2 text-sm text-slate-700">After-school support, digital literacy and scholarships.</p>
-										</div>
-
-										<div className="rounded-lg bg-slate-50 p-4 text-center">
-											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src={sampleImages.health} alt="health" fill className="object-cover" />
-											</div>
-											<h3 className="font-semibold">Health & Wellness</h3>
-											<p className="mt-2 text-sm text-slate-700">Health camps, preventive care and hygiene awareness.</p>
-										</div>
-
-										<div className="rounded-lg bg-slate-50 p-4 text-center">
-											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src={sampleImages.livelihood} alt="livelihood" fill className="object-cover" />
-											</div>
-											<h3 className="font-semibold">Livelihood Support</h3>
-											<p className="mt-2 text-sm text-slate-700">Skills training, micro-grants and small business guidance.</p>
-										</div>
-
-										<div className="rounded-lg bg-slate-50 p-4 text-center">
-											<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-												<Image src={sampleImages.relief} alt="relief" fill className="object-cover" />
-											</div>
-											<h3 className="font-semibold">Community Relief</h3>
-											<p className="mt-2 text-sm text-slate-700">Rapid response and seasonal relief for vulnerable families.</p>
-										</div>
-									</div>
+						<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+							<div className="rounded-lg bg-slate-50 p-4 text-center">
+								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+									<Image src={sampleImages.education} alt="education" fill className="object-cover" />
 								</div>
-							</section>
+								<h3 className="font-semibold">Education Access</h3>
+								<p className="mt-2 text-sm text-slate-700">After-school support, digital literacy and scholarships.</p>
+							</div>
 
-							<section className="bg-gradient-to-b from-slate-50 to-white px-5 py-24 sm:px-6 lg:px-8 border-t border-slate-100">
-								<div className="mx-auto max-w-7xl">
-									<p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 text-center mb-3">
-										Meet Our Visionaries
-									</p>
-									<h2 className="text-3xl sm:text-4xl font-black text-slate-900 text-center tracking-tight">
-										Core Leadership
-									</h2>
-									<div className="mx-auto mt-4 h-1.5 w-12 rounded-full bg-emerald-600"></div>
-									<p className="mt-4 text-slate-600 text-center max-w-xl mx-auto text-sm sm:text-base">
-										Dedicated individuals working together to direct programs, build key partnerships, and empower local communities.
-									</p>
+							<div className="rounded-lg bg-slate-50 p-4 text-center">
+								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+									<Image src={sampleImages.health} alt="health" fill className="object-cover" />
+								</div>
+								<h3 className="font-semibold">Health & Wellness</h3>
+								<p className="mt-2 text-sm text-slate-700">Health camps, preventive care and hygiene awareness.</p>
+							</div>
 
-									<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
-										{teamMembers.map((member) => {
-											// Select dynamic fallback description based on role
-											let fallbackDesc = "Committed to fostering positive change and empowering communities through education and support.";
-											const roleLower = member.role.toLowerCase();
-											if (roleLower.includes("founder")) {
-												fallbackDesc = "Leading the vision and driving sustainable development initiatives to create lasting positive impact.";
-											} else if (roleLower.includes("m.d.") || roleLower.includes("managing")) {
-												fallbackDesc = "Directing overall operations, managing partnerships, and ensuring strategic execution of foundation goals.";
-											} else if (roleLower.includes("executive")) {
-												fallbackDesc = "Overseeing project deployment, volunteer networks, and community development programs.";
-											} else if (roleLower.includes("operational") || roleLower.includes("operations")) {
-												fallbackDesc = "Managing daily logistics, program execution, and administrative excellence across regions.";
-											}
+							<div className="rounded-lg bg-slate-50 p-4 text-center">
+								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+									<Image src={sampleImages.livelihood} alt="livelihood" fill className="object-cover" />
+								</div>
+								<h3 className="font-semibold">Livelihood Support</h3>
+								<p className="mt-2 text-sm text-slate-700">Skills training, micro-grants and small business guidance.</p>
+							</div>
 
-											return (
-												<div key={member.id} className="group bg-white rounded-2xl border border-slate-100 overflow-hidden flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-													{/* Card Decorative Banner */}
-													<div className="h-20 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 relative overflow-hidden">
-														<div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-full translate-x-8 -translate-y-8"></div>
-													</div>
+							<div className="rounded-lg bg-slate-50 p-4 text-center">
+								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
+									<Image src={sampleImages.relief} alt="relief" fill className="object-cover" />
+								</div>
+								<h3 className="font-semibold">Community Relief</h3>
+								<p className="mt-2 text-sm text-slate-700">Rapid response and seasonal relief for vulnerable families.</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-													{/* Card Body content */}
-													<div className="px-6 pb-8 flex flex-col items-center -mt-12 relative z-10 flex-grow">
-														{/* Premium Avatar Frame with Ring */}
-														<div className="relative h-24 w-24 rounded-full p-1 bg-white shadow-md group-hover:scale-105 transition-transform duration-300">
-															<div className="w-full h-full rounded-full overflow-hidden border border-slate-100 bg-white relative">
-																<Image 
-																	src={member.imageUrl} 
-																	alt={member.name} 
-																	fill 
-																	className="object-cover" 
-																	sizes="88px"
-																/>
-															</div>
-														</div>
+				<section className="bg-gradient-to-b from-slate-50 to-white px-5 py-24 sm:px-6 lg:px-8 border-t border-slate-100">
+					<div className="mx-auto max-w-7xl">
+						<p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 text-center mb-3">
+							Meet Our Visionaries
+						</p>
+						<h2 className="text-3xl sm:text-4xl font-black text-slate-900 text-center tracking-tight">
+							Core Leadership
+						</h2>
+						<div className="mx-auto mt-4 h-1.5 w-12 rounded-full bg-emerald-600"></div>
+						<p className="mt-4 text-slate-600 text-center max-w-xl mx-auto text-sm sm:text-base">
+							Dedicated individuals working together to direct programs, build key partnerships, and empower local communities.
+						</p>
 
-														{/* Member Info */}
-														<h3 className="text-base font-bold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300 mt-4">
-															{member.name}
-														</h3>
-														<p className="mt-2 text-[9px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100/40 inline-block">
-															{member.role}
-														</p>
-														
-														<p className="mt-4 text-xs leading-relaxed text-slate-500 max-w-[220px] flex-grow">
-															{member.description || fallbackDesc}
-														</p>
+						<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+							{teamMembers.map((member) => {
+								// Select dynamic fallback description based on role
+								let fallbackDesc = "Committed to fostering positive change and empowering communities through education and support.";
+								const roleLower = member.role.toLowerCase();
+								if (roleLower.includes("founder")) {
+									fallbackDesc = "Leading the vision and driving sustainable development initiatives to create lasting positive impact.";
+								} else if (roleLower.includes("m.d.") || roleLower.includes("managing")) {
+									fallbackDesc = "Directing overall operations, managing partnerships, and ensuring strategic execution of foundation goals.";
+								} else if (roleLower.includes("executive")) {
+									fallbackDesc = "Overseeing project deployment, volunteer networks, and community development programs.";
+								} else if (roleLower.includes("operational") || roleLower.includes("operations")) {
+									fallbackDesc = "Managing daily logistics, program execution, and administrative excellence across regions.";
+								}
 
-														{/* Divider & Social Links */}
-														<div className="w-full border-t border-slate-100 mt-6 pt-5 flex justify-center gap-3">
-															<a 
-																href={member.facebook || "https://facebook.com"} 
-																target="_blank" 
-																rel="noreferrer" 
-																className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-																title="Facebook"
-															>
-																<FacebookIcon className="h-3.5 w-3.5" />
-															</a>
-															<a 
-																href={member.twitter || "https://twitter.com"} 
-																target="_blank" 
-																rel="noreferrer" 
-																className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-																title="Twitter"
-															>
-																<TwitterIcon className="h-3.5 w-3.5" />
-															</a>
-															<a 
-																href={member.behance || "https://linkedin.com"} 
-																target="_blank" 
-																rel="noreferrer" 
-																className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-																title="LinkedIn"
-															>
-																<LinkedinIcon className="h-3.5 w-3.5" />
-															</a>
-															<a 
-																href={member.github || "https://github.com"} 
-																target="_blank" 
-																rel="noreferrer" 
-																className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-																title="Github"
-															>
-																<GithubIcon className="h-3.5 w-3.5" />
-															</a>
-														</div>
-													</div>
+								return (
+									<div key={member.id} className="group bg-white rounded-2xl border border-slate-100 overflow-hidden flex flex-col shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+										{/* Card Decorative Banner */}
+										<div className="h-20 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 relative overflow-hidden">
+											<div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-full translate-x-8 -translate-y-8"></div>
+										</div>
+
+										{/* Card Body content */}
+										<div className="px-6 pb-8 flex flex-col items-center -mt-12 relative z-10 flex-grow">
+											{/* Premium Avatar Frame with Ring */}
+											<div className="relative h-24 w-24 rounded-full p-1 bg-white shadow-md group-hover:scale-105 transition-transform duration-300">
+												<div className="w-full h-full rounded-full overflow-hidden border border-slate-100 bg-white relative">
+													<Image
+														src={member.imageUrl}
+														alt={member.name}
+														fill
+														className="object-cover"
+														sizes="88px"
+													/>
 												</div>
-											);
-										})}
-										
-										{teamMembers.length === 0 && (
-											<div className="col-span-full text-center py-12 text-slate-400 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
-												No leadership members added yet.
 											</div>
-										)}
+
+											{/* Member Info */}
+											<h3 className="text-base font-bold text-slate-800 group-hover:text-emerald-700 transition-colors duration-300 mt-4">
+												{member.name}
+											</h3>
+											<p className="mt-2 text-[9px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100/40 inline-block">
+												{member.role}
+											</p>
+
+											<p className="mt-4 text-xs leading-relaxed text-slate-500 max-w-[220px] flex-grow">
+												{member.description || fallbackDesc}
+											</p>
+
+											{/* Divider & Social Links */}
+											<div className="w-full border-t border-slate-100 mt-6 pt-5 flex justify-center gap-3">
+												<a
+													href={member.facebook || "https://facebook.com"}
+													target="_blank"
+													rel="noreferrer"
+													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+													title="Facebook"
+												>
+													<FacebookIcon className="h-3.5 w-3.5" />
+												</a>
+												<a
+													href={member.twitter || "https://twitter.com"}
+													target="_blank"
+													rel="noreferrer"
+													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+													title="Twitter"
+												>
+													<TwitterIcon className="h-3.5 w-3.5" />
+												</a>
+												<a
+													href={member.behance || "https://linkedin.com"}
+													target="_blank"
+													rel="noreferrer"
+													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+													title="LinkedIn"
+												>
+													<LinkedinIcon className="h-3.5 w-3.5" />
+												</a>
+												<a
+													href={member.github || "https://github.com"}
+													target="_blank"
+													rel="noreferrer"
+													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+													title="Github"
+												>
+													<GithubIcon className="h-3.5 w-3.5" />
+												</a>
+											</div>
+										</div>
 									</div>
+								);
+							})}
+
+							{teamMembers.length === 0 && (
+								<div className="col-span-full text-center py-12 text-slate-400 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+									No leadership members added yet.
 								</div>
-							</section>
+							)}
+						</div>
+					</div>
+				</section>
 			</main>
 			<Footer />
 		</div>

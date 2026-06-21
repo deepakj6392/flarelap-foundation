@@ -19,6 +19,8 @@ interface GalleryImage {
   id: number;
   imageUrl: string;
   caption: string;
+  pageName: string;
+  sequence: number;
   createdAt: string;
 }
 
@@ -31,6 +33,8 @@ export default function GalleryManagerPage() {
   // Form states
   const [uploadOption, setUploadOption] = useState<"file" | "url">("file");
   const [caption, setCaption] = useState("");
+  const [pageName, setPageName] = useState("General");
+  const [sequence, setSequence] = useState("0");
   const [externalUrl, setExternalUrl] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -129,6 +133,8 @@ export default function GalleryManagerPage() {
     try {
       const formData = new FormData();
       formData.append("caption", caption);
+      formData.append("pageName", pageName);
+      formData.append("sequence", sequence);
       
       if (uploadOption === "file" && selectedFile) {
         formData.append("file", selectedFile);
@@ -148,6 +154,8 @@ export default function GalleryManagerPage() {
 
       setSuccessMsg("Gallery image successfully added!");
       setCaption("");
+      setPageName("General");
+      setSequence("0");
       setExternalUrl("");
       setSelectedFile(null);
       setPreviewUrl(null);
@@ -337,6 +345,37 @@ export default function GalleryManagerPage() {
               />
             </div>
 
+            {/* Page and Sequence Inputs */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="block text-xs font-bold text-slate-655 dark:text-slate-450 uppercase tracking-wider">
+                  Target Page
+                </label>
+                <select
+                  value={pageName}
+                  onChange={(e) => setPageName(e.target.value)}
+                  className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-2.5 outline-none text-xs font-semibold focus:border-emerald-600 dark:focus:border-emerald-500 transition appearance-none"
+                >
+                  <option value="General">General (Any)</option>
+                  <option value="donate">Donate Page</option>
+                  <option value="home">Home Page</option>
+                  <option value="about">About Us</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <label className="block text-xs font-bold text-slate-655 dark:text-slate-450 uppercase tracking-wider">
+                  Display Sequence
+                </label>
+                <input
+                  type="number"
+                  min="0"
+                  value={sequence}
+                  onChange={(e) => setSequence(e.target.value)}
+                  className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-2.5 outline-none text-xs font-semibold focus:border-emerald-600 dark:focus:border-emerald-500 transition"
+                />
+              </div>
+            </div>
+
             {/* Submit Button */}
             <div className="flex justify-end pt-2">
               <button
@@ -447,6 +486,9 @@ export default function GalleryManagerPage() {
                 <div className="p-3.5 space-y-3">
                   <p className="text-xs font-bold text-slate-800 dark:text-white leading-normal truncate" title={img.caption || ""}>
                     {img.caption || <span className="text-slate-400 italic">No description</span>}
+                  </p>
+                  <p className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-500 uppercase tracking-wider">
+                    Page: {img.pageName} | Seq: {img.sequence}
                   </p>
                   <div className="flex items-center justify-between border-t pt-2.5 border-slate-100 dark:border-slate-800/80">
                     <span className="text-[9px] font-bold text-slate-400">
