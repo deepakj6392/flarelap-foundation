@@ -1,8 +1,9 @@
-import { prisma } from '@/lib/prisma';
+import { prisma } from './src/lib/prisma.ts';
 
 async function main() {
   const members = [
     {
+      id: 1,
       name: 'Dr. Raj Simha',
       role: 'Founder',
       description: 'Founder and visionary leader.',
@@ -14,6 +15,19 @@ async function main() {
       imageUrl: '/uploads/team/raj_simha.webp',
     },
     {
+      id: 2,
+      name: 'Bharat Bhushan',
+      role: 'M.D.',
+      description: 'Medical Director, overseeing health initiatives.',
+      facebook: null,
+      twitter: null,
+      github: null,
+      behance: null,
+      order: 4,
+      imageUrl: '/uploads/team/bharat_bhushan.webp',
+    },
+    {
+      id: 3,
       name: 'Deepak Jaiswal',
       role: 'Executive Director',
       description: 'Executive Director, driving strategic initiatives.',
@@ -25,6 +39,7 @@ async function main() {
       imageUrl: '/uploads/team/deepak_jaiswal.webp',
     },
     {
+      id: 4,
       name: 'Amit Tripathi',
       role: 'Operational Director',
       description: 'Responsible for day‑to‑day operations and execution.',
@@ -35,26 +50,17 @@ async function main() {
       order: 3,
       imageUrl: '/uploads/team/amit_tripathi.webp',
     },
-    {
-      name: 'Bharat Bhushan',
-      role: 'M.D.',
-      description: 'Medical Director, overseeing health initiatives.',
-      facebook: null,
-      twitter: null,
-      github: null,
-      behance: null,
-      order: 4,
-      imageUrl: '/uploads/team/bharat_bhushan.webp',
-    },
   ];
+
 
   for (const m of members) {
     await prisma.teamMember.upsert({
-      where: { name: m.name },
+      where: { id: m.id },
       update: m,
       create: m,
     });
   }
+
 
   console.log('Team members seeded successfully');
 }
