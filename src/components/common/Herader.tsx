@@ -13,7 +13,7 @@ export default function Herader() {
 
   // Split navigation items
   const mainNavItems = siteConfig.navItems.filter((item) =>
-    ["Home", "About", "Programs", "Products", "Education", "Donate"].includes(item.label)
+    ["Home", "About", "Programs", "Education", "Donate"].includes(item.label)
   );
 
   const moreNavItems = siteConfig.navItems.filter((item) =>

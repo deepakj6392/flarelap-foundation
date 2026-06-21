@@ -82,7 +82,7 @@ export default async function AboutPage() {
 							<div className="relative">
 								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
 									<Image
-										src={sampleImages.community}
+										src="/uploads/about/hero.png"
 										alt="Community working together"
 										fill
 										className="object-cover"
@@ -131,7 +131,7 @@ export default async function AboutPage() {
 						<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 							<div className="rounded-lg bg-slate-50 p-4 text-center">
 								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-									<Image src={sampleImages.education} alt="education" fill className="object-cover" />
+									<Image src="/uploads/about/education.png" alt="education" fill className="object-cover" />
 								</div>
 								<h3 className="font-semibold">Education Access</h3>
 								<p className="mt-2 text-sm text-slate-700">After-school support, digital literacy and scholarships.</p>
@@ -139,7 +139,7 @@ export default async function AboutPage() {
 
 							<div className="rounded-lg bg-slate-50 p-4 text-center">
 								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-									<Image src={sampleImages.health} alt="health" fill className="object-cover" />
+									<Image src="/uploads/about/health.png" alt="health" fill className="object-cover" />
 								</div>
 								<h3 className="font-semibold">Health & Wellness</h3>
 								<p className="mt-2 text-sm text-slate-700">Health camps, preventive care and hygiene awareness.</p>
@@ -147,7 +147,7 @@ export default async function AboutPage() {
 
 							<div className="rounded-lg bg-slate-50 p-4 text-center">
 								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-									<Image src={sampleImages.livelihood} alt="livelihood" fill className="object-cover" />
+									<Image src="/uploads/about/livelihood.png" alt="livelihood" fill className="object-cover" />
 								</div>
 								<h3 className="font-semibold">Livelihood Support</h3>
 								<p className="mt-2 text-sm text-slate-700">Skills training, micro-grants and small business guidance.</p>
@@ -155,7 +155,7 @@ export default async function AboutPage() {
 
 							<div className="rounded-lg bg-slate-50 p-4 text-center">
 								<div className="relative mb-3 h-40 w-full overflow-hidden rounded-md">
-									<Image src={sampleImages.relief} alt="relief" fill className="object-cover" />
+									<Image src="/uploads/about/relief.png" alt="relief" fill className="object-cover" />
 								</div>
 								<h3 className="font-semibold">Community Relief</h3>
 								<p className="mt-2 text-sm text-slate-700">Rapid response and seasonal relief for vulnerable families.</p>
@@ -164,6 +164,7 @@ export default async function AboutPage() {
 					</div>
 				</section>
 
+				{false && (
 				<section className="bg-gradient-to-b from-slate-50 to-white px-5 py-24 sm:px-6 lg:px-8 border-t border-slate-100">
 					<div className="mx-auto max-w-7xl">
 						<p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 text-center mb-3">
@@ -278,6 +279,7 @@ export default async function AboutPage() {
 						</div>
 					</div>
 				</section>
+				)}
 			</main>
 			<Footer />
 		</div>

@@ -10,7 +10,6 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Programs", href: "/programs" },
-    { label: "Products", href: "/products" },
     { label: "Education", href: "/education" },
     { label: "Impact", href: "/impact" },
     { label: "Blog", href: "/blogs" },

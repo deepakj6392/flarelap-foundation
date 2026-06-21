@@ -151,11 +151,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-xs font-semibold text-slate-400 hover:text-emerald-400 transition">
-                  Our Products
-                </Link>
-              </li>
-              <li>
                 <Link href="/education" className="text-xs font-semibold text-slate-400 hover:text-emerald-400 transition">
                   Education Hub
                 </Link>

@@ -8,22 +8,22 @@ const programs = [
 		title: "Learning & Scholarships",
 		excerpt:
 			"After-school learning, scholarships, and mentorship that help children stay in school.",
-		image: sampleImages.education,
+		image: "/uploads/about/education.png",
 	},
 	{
 		title: "Health Camps",
 		excerpt: "Local health camps offering screenings, hygiene supplies, and education.",
-		image: sampleImages.health,
+		image: "/uploads/about/health.png",
 	},
 	{
 		title: "Skills & Livelihood",
 		excerpt: "Short trainings and micro-grants that jumpstart small businesses.",
-		image: sampleImages.livelihood,
+		image: "/uploads/about/livelihood.png",
 	},
 	{
 		title: "Emergency Relief",
 		excerpt: "Rapid response and community relief during urgent seasons and crises.",
-		image: sampleImages.relief,
+		image: "/uploads/about/relief.png",
 	},
 ];
 
@@ -64,16 +64,16 @@ export default function ProgramsPage() {
 											<article className="rounded-lg bg-white p-6 shadow-sm">
 												<h3 className="font-semibold text-slate-900">Village learning center — uplift in attendance</h3>
 												<p className="mt-2 text-sm text-slate-700">After setting up a community learning center with local tutors, school attendance rose by 27% in six months.</p>
-												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md">
-													<Image src={sampleImages.education} alt="case study" fill className="object-cover" />
+												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md group">
+													<Image src="/uploads/about/education.png" alt="case study" fill className="object-cover transition duration-300 group-hover:scale-105" />
 												</div>
 											</article>
 
 											<article className="rounded-lg bg-white p-6 shadow-sm">
 												<h3 className="font-semibold text-slate-900">Health camp outcomes</h3>
 												<p className="mt-2 text-sm text-slate-700">Local health camps led to early detection of chronic conditions and distribution of hygiene kits to 420 families.</p>
-												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md">
-													<Image src={sampleImages.health} alt="health camp" fill className="object-cover" />
+												<div className="mt-4 relative h-44 w-full overflow-hidden rounded-md group">
+													<Image src="/uploads/about/health.png" alt="health camp" fill className="object-cover transition duration-300 group-hover:scale-105" />
 												</div>
 											</article>
 										</div>

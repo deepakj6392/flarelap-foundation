@@ -361,13 +361,13 @@ export default function Home() {
 
               <div className="relative mx-auto aspect-square w-full max-w-[500px] rounded-[2.5rem] border border-slate-200 bg-white/85 p-6 shadow-2xl shadow-emerald-950/5 backdrop-blur-md">
                 <div className="flex h-full flex-col justify-between rounded-[2rem] bg-slate-50/40 p-6 border border-slate-100/80">
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="relative aspect-square w-full max-w-[240px] rounded-[2rem] overflow-hidden border border-slate-200 bg-white p-4.5 shadow-md shadow-slate-100/50 hover:scale-[1.02] hover:shadow-lg transition-all duration-300">
+                  <div className="flex-1 flex items-center justify-center p-2">
+                    <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-md shadow-slate-100/50 hover:scale-[1.015] hover:shadow-xl transition-all duration-300 group">
                       <Image
-                        src="/logo.png"
-                        alt="Flarelap Global Foundation emblem"
+                        src="/uploads/home_hero.png"
+                        alt="Indian children studying in a bright modern classroom"
                         fill
-                        className="object-contain p-2"
+                        className="object-cover transition duration-500 group-hover:scale-105"
                         priority
                       />
                     </div>
