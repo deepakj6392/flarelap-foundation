@@ -618,7 +618,7 @@ export default function EducationPage() {
                               </ul>
                             </div>
                             <div className="p-4 mt-auto">
-                              <Link href={`/student/register?course=${encodeURIComponent(course.name)}`} className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-md text-sm text-center transition-colors">
+                              <Link href={`/education/test-series/${course.id}`} className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-md text-sm text-center transition-colors">
                                 View Test Series
                               </Link>
                             </div>
