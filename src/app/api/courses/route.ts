@@ -10,6 +10,12 @@ export async function GET() {
 
     if (courses.length === 0) {
       const defaultCourses = [
+        { name: "RRB Group D Mock Test Series 2025-26 (New)" },
+        { name: "RRB ALP (CBT 1 + CBT 2 + CBAT) Mock Test Series..." },
+        { name: "Current Affairs (CA) 2026 Mega Pack for..." },
+        { name: "RRB NTPC Under Graduate 2025-26 (CBT 1 &..." },
+        { name: "Mission JRF: The Elite 100 Test Series" },
+        { name: "SSC Maths PYP Mock Test Series (20k+..." },
         { name: "Web Development Basics" },
         { name: "Computer Science" },
         { name: "English Grammar Mastery" },

@@ -1,25 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { sampleImages } from "@/constants/images";
-import { 
-  BookOpen, 
-  GraduationCap, 
-  Laptop, 
-  Award, 
-  ArrowRight, 
+import {
+  BookOpen,
+  GraduationCap,
+  Laptop,
+  Award,
+  ArrowRight,
   ArrowUpRight,
   HeartHandshake,
   Building2,
   TrendingUp,
   FileText,
   Cpu,
-  ChevronRight,
-  Stethoscope
+  Stethoscope,
+  Search,
+  Zap,
+  Globe
 } from "lucide-react";
 
 interface ExamItem {
@@ -208,34 +210,188 @@ const supportOptions = [
     highlight: false,
   },
 ];
+// Helper to match courses to categories
+const getCategoryForCourse = (courseName: string): string => {
+  const name = courseName.toLowerCase();
+  if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
+  if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
+  if (name.includes("bank") || name.includes("sbi") || name.includes("ibps") || name.includes("lic") || name.includes("rbi")) return "Banking & Insurance";
+  if (name.includes("sebi") || name.includes("nabard") || name.includes("regulatory")) return "Regulatory Body Exams";
+  if (name.includes("jrf") || name.includes("net") || name.includes("gate")) return "PG Entrance Exam";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
+  if (name.includes("fitter")) return "Fitter";
+  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
+  if (name.includes("judiciary")) return "Judiciary Exams";
+  if (name.includes("paramedical")) return "Paramedical Exams";
+  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
+  if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
+  if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
+  if (name.includes("police") || name.includes("constable")) return "Police Exams";
+  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  return "State Exams"; // Default fallback
+};
+
+interface CourseMetadata {
+  users: string;
+  totalTests: number;
+  freeTests: number;
+  languages: string;
+  bullets: string[];
+  gradient: string;
+  iconName: "award" | "book" | "text" | "globe";
+}
+
+const getCourseMetadata = (courseName: string, courseId: number): CourseMetadata => {
+  const name = courseName.toLowerCase();
+  
+  // Specific mappings for the 6 known courses from the image:
+  if (name.includes("group d mock test series") || name.includes("group d")) {
+    return {
+      users: "1078.2k Users",
+      totalTests: 1723,
+      freeTests: 6,
+      languages: "English, Hindi + 8 More",
+      bullets: ["2 Live Test", "30 Full Test", "60 Sectional Test", "+1631 more tests"],
+      gradient: "from-purple-200/50 to-purple-50",
+      iconName: "award"
+    };
+  }
+  if (name.includes("rrb alp") || name.includes("alp")) {
+    return {
+      users: "198.3k Users",
+      totalTests: 990,
+      freeTests: 5,
+      languages: "English, Hindi + 8 More",
+      bullets: ["3 Live Test", "139 Chapter Test (CBT 1)", "30 Subject Test (CBT 1)", "+818 more tests"],
+      gradient: "from-pink-200/50 to-pink-50",
+      iconName: "book"
+    };
+  }
+  if (name.includes("current affairs") || name.includes("ca 2026")) {
+    return {
+      users: "1002.3k Users",
+      totalTests: 473,
+      freeTests: 46,
+      languages: "English, Hindi + 8 More",
+      bullets: ["17 Quarterly Revision: Jan-Feb-Mar", "16 2025 REVISION LIVE TEST", "14 Special Tests", "+426 more tests"],
+      gradient: "from-indigo-200/50 to-indigo-50",
+      iconName: "text"
+    };
+  }
+  if (name.includes("rrb ntpc")) {
+    return {
+      users: "1256.3k Users",
+      totalTests: 1603,
+      freeTests: 23,
+      languages: "English, Hindi + 8 More",
+      bullets: ["274 Chapter Test (CBT 2)", "29 Current Affairs (CBT 2)", "30 Sectional Test (CBT 2)", "+1270 more tests"],
+      gradient: "from-purple-200/50 to-purple-50",
+      iconName: "award"
+    };
+  }
+  if (name.includes("mission jrf")) {
+    return {
+      users: "95.0k Users",
+      totalTests: 601,
+      freeTests: 23,
+      languages: "English, Hindi",
+      bullets: ["333 Unit Test", "60 Full Test", "54 Full Mock Test", "+154 more tests"],
+      gradient: "from-pink-200/50 to-pink-50",
+      iconName: "book"
+    };
+  }
+  if (name.includes("ssc maths")) {
+    return {
+      users: "1412.1k Users",
+      totalTests: 1877,
+      freeTests: 2,
+      languages: "English, Hindi",
+      bullets: ["284 SSC CGL PYST", "74 SSC CPO PYST (New Pattern)", "120 SSC Selection Post PYST", "+1399 more tests"],
+      gradient: "from-indigo-200/50 to-indigo-50",
+      iconName: "award"
+    };
+  }
+
+  // Dynamic fallback generator based on the course ID/name:
+  const hash = courseName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) + (courseId || 0);
+  const userCount = ((hash % 800) + 50).toFixed(1) + "k";
+  const totalTests = (hash % 1500) + 100;
+  const freeTests = (hash % 30) + 2;
+  const languages = hash % 2 === 0 ? "English, Hindi + 5 More" : "English, Hindi";
+  
+  const gradients = [
+    "from-purple-200/50 to-purple-50",
+    "from-pink-200/50 to-pink-50",
+    "from-indigo-200/50 to-indigo-50"
+  ];
+  const gradient = gradients[hash % gradients.length];
+  
+  const icons: ("award" | "book" | "text" | "globe")[] = ["award", "book", "text", "globe"];
+  const iconName = icons[hash % icons.length];
+
+  return {
+    users: `${userCount} Users`,
+    totalTests,
+    freeTests,
+    languages,
+    bullets: [
+      `${Math.floor(totalTests * 0.2)} Subject Tests`,
+      `${Math.floor(totalTests * 0.4)} Chapter Tests`,
+      `${Math.floor(totalTests * 0.15)} Full Length Tests`,
+      `+${Math.floor(totalTests * 0.25)} more tests`
+    ],
+    gradient,
+    iconName
+  };
+};
 
 export default function EducationPage() {
-  const [activeCategory, setActiveCategory] = useState<string>("bank-insurance");
+  const [courses, setCourses] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const currentCategory = examCategories.find((cat) => cat.id === activeCategory);
+  useEffect(() => {
+    async function fetchCourses() {
+      try {
+        const res = await fetch("/api/courses");
+        if (res.ok) {
+          const data = await res.json();
+          setCourses(data.courses || []);
+        }
+      } catch (err) {
+        console.error("Failed to fetch courses:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchCourses();
+  }, []);
 
-  const getCategoryIcon = (id: string) => {
-    switch (id) {
-      case "bank-insurance":
-        return <Building2 className="h-4.5 w-4.5" />;
-      case "ssc-exams":
-        return <Award className="h-4.5 w-4.5" />;
-      case "railways-exams":
-        return <TrendingUp className="h-4.5 w-4.5" />;
-      case "civil-services":
-        return <FileText className="h-4.5 w-4.5" />;
-      case "teaching-exams":
-        return <GraduationCap className="h-4.5 w-4.5" />;
-      case "engineering-exams":
-        return <Cpu className="h-4.5 w-4.5" />;
-      case "jee-exams":
-        return <Cpu className="h-4.5 w-4.5" />;
-      case "medical-exams":
-        return <Stethoscope className="h-4.5 w-4.5" />;
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case "award":
+        return <Award className="h-6 w-6" />;
+      case "book":
+        return <BookOpen className="h-6 w-6" />;
+      case "text":
+        return <FileText className="h-6 w-6" />;
+      case "globe":
+        return <Globe className="h-6 w-6" />;
       default:
-        return <BookOpen className="h-4.5 w-4.5" />;
+        return <Award className="h-6 w-6" />;
     }
   };
+
+  const filteredCourses = courses.filter((course) => {
+    const matchesSearch = course.name.toLowerCase().includes(searchQuery.toLowerCase());
+    if (activeCategory === "All") {
+      return matchesSearch;
+    } else {
+      return matchesSearch && getCategoryForCourse(course.name) === activeCategory;
+    }
+  });
 
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-950 font-sans antialiased">
@@ -245,7 +401,7 @@ export default function EducationPage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#eef2ff_45%,#fffbeb_100%)] py-20 lg:py-24">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.25]" />
-          
+
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div className="max-w-3xl text-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/85 px-4 py-2 text-xs font-bold text-emerald-800 shadow-sm backdrop-blur-md">
@@ -336,83 +492,141 @@ export default function EducationPage() {
           </div>
         </section>
 
-        {/* NEW Interactive Exam Finder (Mimicking the user's reference image) */}
-        <section id="exams-hub" className="bg-slate-100/60 dark:bg-slate-900/10 border-y border-slate-200/50 px-5 py-20 sm:px-6 lg:px-8">
+        {/* Test Series by Categories Section */}
+        <section id="exams-hub" className="bg-slate-50 py-16 px-5 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <div className="max-w-3xl text-left">
-              <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700 font-bold">Mock Test & Preparation Hub</p>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-                Start Practicing Free Mock Tests Now
-              </h2>
-              <p className="mt-3 text-sm text-slate-600">
-                Choose an exam category on the left, select your course, and log in or sign up to begin practice sets, complete live MCQs, and access detail reports.
-              </p>
-            </div>
-
-            <div className="mt-12 flex flex-col gap-8">
-              {/* Category selector on Top */}
-              <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 pb-6 border-b border-slate-200 dark:border-slate-800/60 w-full">
-                {examCategories.map((cat) => {
-                  const isActive = activeCategory === cat.id;
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={() => setActiveCategory(cat.id)}
-                      className={`flex items-center gap-2.5 rounded-full px-5 py-3.5 text-xs font-black transition-all cursor-pointer border outline-none ${
-                        isActive
-                          ? "bg-emerald-700 text-white border-emerald-700 shadow-md shadow-emerald-700/10"
-                          : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 hover:text-emerald-700"
-                      }`}
-                    >
-                      {getCategoryIcon(cat.id)}
-                      <span>{cat.label}</span>
-                    </button>
-                  );
-                })}
+            <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 border-b border-slate-100 gap-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+                  Test Series by Categories
+                </h2>
+                <div className="relative w-full sm:w-72">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="h-4 w-4 text-slate-400" />
+                  </div>
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search Test Series"
+                    className="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-md leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm transition duration-150 ease-in-out"
+                  />
+                </div>
               </div>
 
-              {/* Exams card grid on Right */}
-              <div>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {currentCategory?.exams.map((exam, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/student/register?course=${encodeURIComponent(exam.name)}`}
-                      className="group rounded-[1.5rem] border border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm hover:shadow-lg hover:shadow-slate-200/50 hover:border-emerald-500/30 transition-all duration-300 hover:-translate-y-1"
-                    >
-                      <div>
-                        <div className="flex items-center justify-between">
-                          <span className={`rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider border ${
-                            exam.badge === "Free"
-                              ? "bg-emerald-50/80 text-emerald-700 border-emerald-200/50 dark:bg-emerald-950/40 dark:text-emerald-450 dark:border-emerald-800/40"
-                              : "bg-amber-50/80 text-amber-700 border-amber-200/50 dark:bg-amber-950/40 dark:text-amber-450 dark:border-amber-800/40"
-                          }`}>
-                            {exam.badge}
-                          </span>
-                          <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500">
-                            MCQ Prep Set
-                          </span>
-                        </div>
+              <div className="flex flex-col md:flex-row h-auto md:h-[800px]">
+                {/* Sidebar Categories */}
+                <div className="w-full md:w-64 border-r border-slate-100 bg-white overflow-y-auto hidden md:block">
+                  <ul className="flex flex-col py-2">
+                    {[
+                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams",
+                      "Teaching Exams", "Fitter", "Electrician", "AE/JE Exams",
+                      "Judiciary Exams", "Paramedical Exams", "Electronic Mechanic",
+                      "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
+                      "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+                    ].map((cat, idx) => (
+                      <li key={idx}>
+                        <button
+                          onClick={() => setActiveCategory(cat)}
+                          className={`w-full text-left px-6 py-3 text-sm transition-colors cursor-pointer outline-none ${activeCategory === cat
+                            ? "bg-slate-50 font-bold text-slate-900 border-l-4 border-slate-800"
+                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 border-l-4 border-transparent"
+                            }`}
+                        >
+                          {cat}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                        <h4 className="mt-4 text-base font-extrabold text-slate-850 dark:text-white leading-snug group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors duration-300">
-                          {exam.name}
-                        </h4>
-                        <p className="mt-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400">
-                          {exam.tests}
-                        </p>
-                      </div>
+                {/* Mobile categories (horizontal scroll) */}
+                <div className="w-full border-b border-slate-100 bg-white overflow-x-auto md:hidden scrollbar-hide">
+                  <ul className="flex flex-row py-2 px-4 whitespace-nowrap gap-2">
+                    {[
+                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams",
+                      "Teaching Exams", "Fitter", "Electrician", "AE/JE Exams",
+                      "Judiciary Exams", "Paramedical Exams", "Electronic Mechanic",
+                      "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
+                      "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+                    ].map((cat, idx) => (
+                      <li key={idx}>
+                        <button
+                          onClick={() => setActiveCategory(cat)}
+                          className={`px-4 py-2 rounded-full text-sm cursor-pointer transition-colors ${activeCategory === cat
+                            ? "bg-slate-800 text-white font-bold"
+                            : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                            }`}
+                        >
+                          {cat}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                      <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-xs font-bold">
-                        <span className="text-slate-700 dark:text-slate-300 font-extrabold">
-                          {exam.details}
-                        </span>
-                        <span className="text-emerald-750 dark:text-emerald-450 flex items-center gap-1 group-hover:translate-x-1 transition-transform duration-300">
-                          Start Test
-                          <ChevronRight className="h-3.5 w-3.5" />
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
+                {/* Main Content Grid */}
+                <div className="flex-1 bg-slate-50 p-6 overflow-y-auto">
+                  {loading ? (
+                    <div className="flex items-center justify-center h-full">
+                      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-500"></div>
+                    </div>
+                  ) : filteredCourses.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center h-full text-center p-8">
+                      <BookOpen className="h-12 w-12 text-slate-300 mb-4" />
+                      <h4 className="text-lg font-bold text-slate-700">No courses found</h4>
+                      <p className="text-slate-500 text-sm mt-1">Try adjusting search keywords or selecting a different category.</p>
+                    </div>
+                  ) : (
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      {filteredCourses.map((course) => {
+                        const meta = getCourseMetadata(course.name, course.id);
+                        return (
+                          <div key={course.id} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                            <div className={`bg-gradient-to-br ${meta.gradient} p-5 rounded-t-xl`}>
+                              <div className="flex items-start justify-between">
+                                <div className="h-12 w-12 bg-white rounded-full flex items-center justify-center shadow-sm p-2 text-red-500">
+                                  {getIconComponent(meta.iconName)}
+                                </div>
+                                <div className="flex items-center gap-1 bg-white/70 backdrop-blur-sm rounded-full px-2.5 py-1">
+                                  <Zap className="h-3 w-3 text-yellow-500 fill-yellow-500" />
+                                  <span className="text-[10px] font-bold text-slate-600">{meta.users}</span>
+                                </div>
+                              </div>
+                              <h3 className="mt-4 text-base font-bold text-slate-900 leading-tight min-h-[40px]">
+                                {course.name}
+                              </h3>
+                              <p className="mt-2 text-[11px] font-semibold text-slate-600">
+                                {meta.totalTests} Total Tests <span className="text-slate-300 mx-1">|</span> <span className="text-emerald-500">{meta.freeTests} Free Tests</span>
+                              </p>
+                              <div className="flex items-center gap-1.5 mt-2 pb-4 border-b border-slate-200/60">
+                                <Globe className="h-3.5 w-3.5 text-[#00c2ff]" />
+                                <span className="text-[10px] font-medium text-[#00c2ff]">{meta.languages}</span>
+                              </div>
+
+                              <ul className="mt-4 space-y-2">
+                                {meta.bullets.map((bullet, bIdx) => {
+                                  const isLast = bIdx === meta.bullets.length - 1;
+                                  return (
+                                    <li key={bIdx} className={`flex items-center text-xs font-medium ${isLast ? "text-emerald-500" : "text-slate-600"}`}>
+                                      <span className={`mr-2 ${isLast ? "text-emerald-400" : "text-slate-400"}`}>•</span>
+                                      {bullet}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                            <div className="p-4 mt-auto">
+                              <Link href={`/student/register?course=${encodeURIComponent(course.name)}`} className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-md text-sm text-center transition-colors">
+                                View Test Series
+                              </Link>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -454,7 +668,7 @@ export default function EducationPage() {
                   <span className="absolute -left-[17px] top-0 flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600 font-extrabold text-white text-xs shadow-md">
                     {step.step}
                   </span>
-                  
+
                   <div className="bg-slate-50/70 dark:bg-slate-900/10 rounded-2xl border border-slate-200/60 p-6 md:p-8 max-w-4xl hover:border-emerald-500/20 transition-all">
                     <h3 className="text-lg font-extrabold text-slate-950">{step.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-slate-600 font-medium">{step.desc}</p>
@@ -468,7 +682,7 @@ export default function EducationPage() {
         {/* Sponsor/Get Involved Section */}
         <section id="get-involved" className="bg-slate-900 text-white px-5 py-20 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
-          
+
           <div className="mx-auto max-w-7xl relative z-10">
             <div className="max-w-3xl text-left">
               <span className="text-xs font-black uppercase tracking-[0.22em] text-emerald-400">Join Our Effort</span>
@@ -482,13 +696,12 @@ export default function EducationPage() {
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {supportOptions.map((option, idx) => (
-                <div 
-                  key={idx} 
-                  className={`rounded-2xl border p-8 flex flex-col justify-between transition-all duration-300 ${
-                    option.highlight 
-                      ? "border-emerald-500 bg-emerald-950/40 shadow-xl shadow-emerald-950/20" 
-                      : "border-slate-800 bg-slate-950/50"
-                  }`}
+                <div
+                  key={idx}
+                  className={`rounded-2xl border p-8 flex flex-col justify-between transition-all duration-300 ${option.highlight
+                    ? "border-emerald-500 bg-emerald-950/40 shadow-xl shadow-emerald-950/20"
+                    : "border-slate-800 bg-slate-950/50"
+                    }`}
                 >
                   <div>
                     {option.highlight && (
@@ -501,14 +714,13 @@ export default function EducationPage() {
                       {option.desc}
                     </p>
                   </div>
-                  
-                  <Link 
-                    href={option.href} 
-                    className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-xs font-bold transition-all ${
-                      option.highlight 
-                        ? "bg-emerald-600 text-white hover:bg-emerald-700" 
-                        : "border border-slate-700 bg-transparent text-slate-300 hover:text-white hover:border-emerald-500"
-                    }`}
+
+                  <Link
+                    href={option.href}
+                    className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-xs font-bold transition-all ${option.highlight
+                      ? "bg-emerald-600 text-white hover:bg-emerald-700"
+                      : "border border-slate-700 bg-transparent text-slate-300 hover:text-white hover:border-emerald-500"
+                      }`}
                   >
                     <span>{option.cta}</span>
                     <ArrowUpRight className="h-3.5 w-3.5" />
@@ -528,8 +740,8 @@ export default function EducationPage() {
                   Corporates, foundations, and institutional partners can fund and establish local IT hubs. Reach out to coordinate feasibility audits.
                 </p>
               </div>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-emerald-700 hover:bg-emerald-800 px-6 py-3 text-xs font-bold text-white shadow-md transition"
               >
                 Inquire Partnership
