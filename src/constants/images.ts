@@ -2,7 +2,7 @@ export const sampleImages = {
   blog: "/samples/blog.svg",
   community: "/samples/community.svg",
   contact: "/samples/contact.svg",
-  education: "/samples/education.svg",
+  education: "/uploads/education_hero.png",
   health: "/samples/health.svg",
   livelihood: "/samples/livelihood.svg",
   products: "/samples/products.svg",

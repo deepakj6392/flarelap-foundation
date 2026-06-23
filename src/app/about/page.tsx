@@ -80,7 +80,7 @@ export default async function AboutPage() {
 							</div>
 
 							<div className="relative">
-								<div className="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-slate-100 shadow-lg">
+								<div className="relative mx-auto aspect-[4/3] w-full max-w-[500px] overflow-hidden rounded-[2.5rem] border-4 border-white bg-white shadow-2xl shadow-emerald-900/5">
 									<Image
 										src="/uploads/about/hero.png"
 										alt="Community working together"
