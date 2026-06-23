@@ -10,34 +10,68 @@ import Swal from "sweetalert2";
 export default function StudentLoginPage() {
   const router = useRouter();
   const [loginId, setLoginId] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
+  const [otp, setOtp] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleSendOtp = async (e: React.MouseEvent) => {
     e.preventDefault();
-    setError(null);
-
-    if (!loginId || !password) {
-      setError("Please enter your User ID or Email and Password.");
+    if (!loginId) {
+      setError("Please enter your Email or Mobile Number.");
       return;
     }
-
+    setError(null);
+    setSuccess(null);
     setLoading(true);
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-      const res = await fetch(`${apiUrl}/api/auth/student/login`, {
+      const res = await fetch(`${apiUrl}/api/auth/student/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ loginId, password }),
+        body: JSON.stringify({ loginId })
       });
-
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.message || "Login failed.");
+        throw new Error(data.message || "Failed to send OTP.");
+      }
+      setOtpSent(true);
+      setSuccess(`OTP sent successfully! For local testing, code is ${data.otp}`);
+      
+      Swal.fire({
+        title: "OTP Dispatched!",
+        text: `We have sent a verification code to your email or mobile. (Use test code: ${data.otp})`,
+        icon: "success",
+        confirmButtonColor: "#047857"
+      });
+    } catch (err: any) {
+      setError(err.message || "Failed to send OTP.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    if (!loginId || !otp) {
+      setError("Please enter both Login ID and OTP.");
+      return;
+    }
+    setLoading(true);
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/auth/student/verify-otp`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ loginId, otp })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Invalid OTP verification.");
       }
 
       // Save token and info
@@ -57,9 +91,16 @@ export default function StudentLoginPage() {
         title: "Authenticated successfully"
       });
 
-      router.push("/student/dashboard");
+      // Smart redirect
+      const params = new URLSearchParams(window.location.search);
+      const queryRedirect = params.get("redirect");
+      if (queryRedirect) {
+        router.push(queryRedirect);
+      } else {
+        router.push("/student/dashboard");
+      }
     } catch (err: any) {
-      setError(err.message || "An error occurred during sign in.");
+      setError(err.message || "An error occurred during verification.");
     } finally {
       setLoading(false);
     }
@@ -87,7 +128,7 @@ export default function StudentLoginPage() {
       <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
         <div className="text-center space-y-1">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Student Login</h2>
-          <p className="text-xs text-slate-500 font-semibold">Sign in to access courses and mcq practice tests.</p>
+          <p className="text-xs text-slate-500 font-semibold">Sign in securely using Mobile number or Email OTP.</p>
         </div>
 
         {error && (
@@ -97,72 +138,89 @@ export default function StudentLoginPage() {
           </div>
         )}
 
+        {success && (
+          <div className="flex items-center gap-2.5 rounded-xl border border-emerald-200 bg-emerald-50 p-3.5 text-xs text-emerald-805 font-bold">
+            <ShieldCheck className="h-4.5 w-4.5 shrink-0 text-emerald-600" />
+            <p>{success}</p>
+          </div>
+        )}
+
         <form onSubmit={handleLogin} className="space-y-4">
           
           {/* User ID / Email */}
           <div>
-            <label className="block text-xs font-bold text-slate-555 uppercase tracking-wider mb-2">
-              Student ID or Email
+            <label className="block text-xs font-bold text-slate-550 uppercase tracking-wider mb-2">
+              Email or Mobile Number
             </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-                <Key className="h-4 w-4" />
-              </span>
-              <input
-                type="text"
-                required
-                value={loginId}
-                onChange={(e) => setLoginId(e.target.value)}
-                placeholder="Enter Student ID (e.g., DEE-4912) or Email"
-                className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
-                disabled={loading}
-              />
+            <div className="relative flex gap-2">
+              <div className="relative flex-1">
+                <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+                  <Mail className="h-4 w-4" />
+                </span>
+                <input
+                  type="text"
+                  required
+                  value={loginId}
+                  onChange={(e) => setLoginId(e.target.value)}
+                  placeholder="Enter email or mobile number"
+                  className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
+                  disabled={loading || otpSent}
+                />
+              </div>
+              {!otpSent && (
+                <button
+                  type="button"
+                  onClick={handleSendOtp}
+                  disabled={loading}
+                  className="px-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition active:scale-[0.98] border-none shrink-0 cursor-pointer"
+                >
+                  Send OTP
+                </button>
+              )}
             </div>
           </div>
 
-          {/* Password */}
-          <div>
-            <label className="block text-xs font-bold text-slate-555 uppercase tracking-wider mb-2">
-              Password
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-                <Lock className="h-4 w-4" />
-              </span>
-              <input
-                type={showPassword ? "text" : "password"}
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter account password"
-                className="block w-full rounded-xl border border-slate-200 pl-10 pr-10 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
-                disabled={loading}
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(p => !p)}
-                className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-slate-400 hover:text-slate-650"
-              >
-                {showPassword ? <EyeOff className="h-4.5 w-4.5" /> : <Eye className="h-4.5 w-4.5" />}
-              </button>
+          {/* OTP Code Entry */}
+          {otpSent && (
+            <div className="space-y-1.5 animate-in fade-in duration-300">
+              <label className="block text-xs font-bold text-slate-550 uppercase tracking-wider mb-2">
+                Enter 6-Digit OTP Code
+              </label>
+              <div className="relative">
+                <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+                  <Key className="h-4 w-4" />
+                </span>
+                <input
+                  type="text"
+                  required
+                  maxLength={6}
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                  placeholder="Enter OTP (e.g. 000000)"
+                  className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold font-mono"
+                  disabled={loading}
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Sign In Button */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full inline-flex items-center justify-center rounded-xl bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] transition px-5 py-3 text-xs font-black text-white shadow-md shadow-emerald-700/10 disabled:opacity-50"
-          >
-            {loading ? (
-              <>
-                <Loader2 className="h-4.5 w-4.5 animate-spin mr-2" />
-                Signing In...
-              </>
-            ) : (
-              "Sign In to Learning Portal"
-            )}
-          </button>
+          {otpSent && (
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full inline-flex items-center justify-center rounded-xl bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] transition px-5 py-3 text-xs font-black text-white shadow-md shadow-emerald-700/10 disabled:opacity-50 cursor-pointer border-none"
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="h-4.5 w-4.5 animate-spin mr-2" />
+                  Verifying OTP...
+                </>
+              ) : (
+                "Verify & Sign In"
+              )}
+            </button>
+          )}
         </form>
 
         {/* Footer links */}

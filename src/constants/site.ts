@@ -4,8 +4,9 @@ export const siteConfig = {
   url: "https://flarelap.org",
   ogImage: "/samples/community.svg",
   email: "support@flarelap.org",
-  phone: "+91 98765 43210",
+  phone: "+919729817600",
   location: "India",
+  address: "Sirsal (38), Kaithal,\nHaryana, India. PIN-136026",
   navItems: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },

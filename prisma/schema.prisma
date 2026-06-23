@@ -7,23 +7,25 @@ generator client {
 }
 
 model User {
-  id           Int       @id @default(autoincrement())
+  id           Int          @id @default(autoincrement())
   name         String?
-  email        String    @unique
+  email        String       @unique
   password     String
-  role         String    @default("user")
-  createdAt    DateTime  @default(now()) @map("created_at")
-  otpCode      String?   @map("otp_code")
-  otpExpiresAt DateTime? @map("otp_expires_at")
-  tfaEnabled   Boolean?  @default(false) @map("tfa_enabled")
-  tfaCode      String?   @map("tfa_code")
-  tfaExpiresAt DateTime? @map("tfa_expires_at")
-  studentId    String?   @unique @map("student_id")
+  role         String       @default("user")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  otpCode      String?      @map("otp_code")
+  otpExpiresAt DateTime?    @map("otp_expires_at")
+  tfaEnabled   Boolean?     @default(false) @map("tfa_enabled")
+  tfaCode      String?      @map("tfa_code")
+  tfaExpiresAt DateTime?    @map("tfa_expires_at")
+  studentId    String?      @unique @map("student_id")
   phone        String?
-  tempPassword String?   @map("temp_password")
+  tempPassword String?      @map("temp_password")
   courseId     Int?         @map("course_id")
   course       Course?      @relation(fields: [courseId], references: [id])
   logs         StudentLog[]
+  purchases    Purchase[]
+  testAttempts TestAttempt[]
 
   @@map("users")
 }
@@ -62,12 +64,17 @@ model Donation {
 }
 
 model Course {
-  id        Int           @id @default(autoincrement())
-  name      String
-  active    Boolean       @default(true)
-  createdAt DateTime      @default(now()) @map("created_at")
-  users     User[]
-  mcqs      MCQQuestion[]
+  id          Int           @id @default(autoincrement())
+  name        String
+  active      Boolean       @default(true)
+  premium     Boolean       @default(false)
+  price       Decimal       @default(299.00) @db.Decimal(12, 2)
+  createdAt   DateTime      @default(now()) @map("created_at")
+  users       User[]
+  mcqs        MCQQuestion[]
+  testSeries  TestSeries[]
+  purchases   Purchase[]
+  testAttempts TestAttempt[]
 
   @@map("courses")
 }
@@ -106,11 +113,42 @@ model MCQQuestion {
   @@map("mcq_questions")
 }
 
+model TestSeries {
+  id        Int      @id @default(autoincrement())
+  name      String
+  type      String   // Full Mock, Subject Test, Chapter Test, PYP
+  qs        Int
+  marks     Int
+  duration  Int
+  isFree    Boolean  @default(false) @map("is_free")
+  courseId  Int      @map("course_id")
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  testAttempts TestAttempt[]
+
+  @@map("test_series")
+}
+
+model Purchase {
+  id            Int      @id @default(autoincrement())
+  userId        Int      @map("user_id")
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId      Int      @map("course_id")
+  course        Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  amount        Decimal  @db.Decimal(12, 2)
+  status        String   @default("COMPLETED") // PENDING, COMPLETED, FAILED
+  paymentMethod String?  @map("payment_method")
+  transactionId String?  @map("transaction_id")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("purchases")
+}
+
 model SiteSetting {
   id        Int      @id @default(autoincrement())
   email     String   @default("support@flarelap.org")
-  phone     String   @default("+91 98765 43210")
-  address   String   @default("123 Community Lane, City, State, India")
+  phone     String   @default("+919729817600")
+  address   String   @default("Sirsal (38), Kaithal, Haryana, India. PIN-136026")
   location  String   @default("India")
   facebook  String   @default("https://www.facebook.com/flarelap.org")
   instagram String   @default("https://www.instagram.com/flarelap_org")
@@ -135,4 +173,23 @@ model TeamMember {
   createdAt   DateTime @default(now()) @map("created_at")
 
   @@map("team_members")
+}
+
+model TestAttempt {
+  id          Int        @id @default(autoincrement())
+  userId      Int        @map("user_id")
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId    Int        @map("course_id")
+  course      Course     @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  testId      Int        @map("test_id")
+  test        TestSeries @relation(fields: [testId], references: [id], onDelete: Cascade)
+  score       Decimal    @db.Decimal(6, 2)
+  totalQs     Int        @map("total_qs")
+  answered    Int
+  correct     Int
+  wrong       Int
+  duration    Int        // Time taken in seconds
+  createdAt   DateTime   @default(now()) @map("created_at")
+
+  @@map("test_attempts")
 }

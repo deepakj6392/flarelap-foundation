@@ -5,6 +5,7 @@ import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { sampleImages } from "@/constants/images";
+import { siteConfig } from "@/constants/site";
 
 export default function ContactPage() {
 	const [name, setName] = useState("");
@@ -14,9 +15,9 @@ export default function ContactPage() {
 	const [statusMessage, setStatusMessage] = useState("");
 
 	const [contactInfo, setContactInfo] = useState({
-		email: "support@flarelap.org",
-		phone: "+91 98765 43210",
-		address: "123 Community Lane, City, State, India",
+		email: siteConfig.email,
+		phone: siteConfig.phone,
+		address: siteConfig.address,
 	});
 
 	useEffect(() => {
@@ -27,9 +28,9 @@ export default function ContactPage() {
 				const data = await res.json();
 				if (res.ok && data.setting) {
 					setContactInfo({
-						email: data.setting.email || "support@flarelap.org",
-						phone: data.setting.phone || "+91 98765 43210",
-						address: data.setting.address || "123 Community Lane, City, State, India",
+						email: data.setting.email || siteConfig.email,
+						phone: data.setting.phone || siteConfig.phone,
+						address: data.setting.address || siteConfig.address,
 					});
 				}
 			} catch (err) {
@@ -147,7 +148,7 @@ export default function ContactPage() {
 						<div className="mt-6 grid gap-6 sm:grid-cols-2">
 							<div className="rounded-lg bg-white p-6 shadow-sm">
 								<h3 className="font-semibold">Head office</h3>
-								<p className="mt-2 text-sm text-slate-700">{contactInfo.address}</p>
+								<p className="mt-2 text-sm text-slate-700 whitespace-pre-line">{contactInfo.address}</p>
 								<p className="mt-2 text-sm text-slate-700">
 									Email:{" "}
 									<a href={`mailto:${contactInfo.email}`} className="text-emerald-700 hover:underline font-bold">

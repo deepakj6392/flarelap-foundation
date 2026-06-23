@@ -10,24 +10,30 @@ export async function GET() {
 
     if (courses.length === 0) {
       const defaultCourses = [
-        { name: "RRB Group D Mock Test Series 2025-26 (New)" },
-        { name: "RRB ALP (CBT 1 + CBT 2 + CBAT) Mock Test Series..." },
-        { name: "Current Affairs (CA) 2026 Mega Pack for..." },
-        { name: "RRB NTPC Under Graduate 2025-26 (CBT 1 &..." },
-        { name: "Mission JRF: The Elite 100 Test Series" },
-        { name: "SSC Maths PYP Mock Test Series (20k+..." },
-        { name: "Web Development Basics" },
-        { name: "Computer Science" },
-        { name: "English Grammar Mastery" },
-        { name: "Math & Algebra Essentials" },
-        { name: "NEET Exam Preparation" },
-        { name: "JEE Physics Practice Prep" },
-        { name: "JEE Chemistry Practice Prep" },
-        { name: "JEE Mathematics Practice Prep" },
-        { name: "NEET Biology Advanced Prep" },
-        { name: "NEET Physics Advanced Prep" },
-        { name: "NEET Chemistry Advanced Prep" },
+        { name: "SSC CGL Tier 1 Mock Test 2026" },
+        { name: "GATE CS & IT Mock Exam" },
+        { name: "SEBI Grade A Officer Practice Mock" },
+        { name: "CTET Paper 1 Child Pedagogy" },
+        { name: "ITI Fitter Theory Semester 1 & 2" },
+        { name: "ITI Electrician Basic Theory 2026" },
+        { name: "RRB JE Civil Technical CBT" },
+        { name: "State Judiciary Mains Mock Law Paper" },
+        { name: "Paramedical Nursing Theory Exam" },
+        { name: "Electronic Mechanic Semester 1 Prep" },
+        { name: "RRB NTPC CBT 1 Full Mock Test" },
+        { name: "SBI PO Prelims Full Mock Test" },
+        { name: "NEET Physics Practice Prep" },
+        { name: "NDA General Ability Mock Test" },
+        { name: "UPSC Prelims GS Paper 1 Mock" },
+        { name: "UP Police Constable Practice Sets" },
+        { name: "UP B.Ed Joint Entrance Exam Mock" },
       ];
+
+      try {
+        await prisma.$executeRawUnsafe('ALTER SEQUENCE courses_id_seq RESTART WITH 1;');
+      } catch (seqError) {
+        console.error("Warning: Failed to reset courses sequence in API.", seqError);
+      }
 
       await prisma.course.createMany({
         data: defaultCourses,

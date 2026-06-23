@@ -23,11 +23,18 @@ export async function GET(request: Request) {
       return NextResponse.json({ message: "Access denied." }, { status: 403 });
     }
 
-    // Lookup student's enrolled courseId
-    const studentUser = await prisma.user.findUnique({
-      where: { id: decoded.id },
-      select: { courseId: true }
-    });
+    // Lookup target courseId (from query param or student's enrolled courseId)
+    const { searchParams } = new URL(request.url);
+    const queryCourseId = searchParams.get("courseId");
+    let targetCourseId = queryCourseId ? parseInt(queryCourseId, 10) : null;
+
+    if (!targetCourseId) {
+      const studentUser = await prisma.user.findUnique({
+        where: { id: decoded.id },
+        select: { courseId: true }
+      });
+      targetCourseId = studentUser?.courseId ?? null;
+    }
 
     // Lookup the common course "Reasoning & Aptitude"
     const commonCourse = await prisma.course.findFirst({
@@ -35,9 +42,9 @@ export async function GET(request: Request) {
     });
 
     let courseMcqs: any[] = [];
-    if (studentUser?.courseId) {
+    if (targetCourseId) {
       courseMcqs = await prisma.mCQQuestion.findMany({
-        where: { courseId: studentUser.courseId },
+        where: { courseId: targetCourseId },
         select: {
           id: true,
           question: true,

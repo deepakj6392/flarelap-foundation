@@ -164,7 +164,6 @@ export default async function AboutPage() {
 					</div>
 				</section>
 
-				{false && (
 				<section className="bg-gradient-to-b from-slate-50 to-white px-5 py-24 sm:px-6 lg:px-8 border-t border-slate-100">
 					<div className="mx-auto max-w-7xl">
 						<p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 text-center mb-3">
@@ -228,44 +227,55 @@ export default async function AboutPage() {
 											</p>
 
 											{/* Divider & Social Links */}
-											<div className="w-full border-t border-slate-100 mt-6 pt-5 flex justify-center gap-3">
-												<a
-													href={member.facebook || "https://facebook.com"}
-													target="_blank"
-													rel="noreferrer"
-													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-													title="Facebook"
-												>
-													<FacebookIcon className="h-3.5 w-3.5" />
-												</a>
-												<a
-													href={member.twitter || "https://twitter.com"}
-													target="_blank"
-													rel="noreferrer"
-													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-													title="Twitter"
-												>
-													<TwitterIcon className="h-3.5 w-3.5" />
-												</a>
-												<a
-													href={member.behance || "https://linkedin.com"}
-													target="_blank"
-													rel="noreferrer"
-													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-													title="LinkedIn"
-												>
-													<LinkedinIcon className="h-3.5 w-3.5" />
-												</a>
-												<a
-													href={member.github || "https://github.com"}
-													target="_blank"
-													rel="noreferrer"
-													className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
-													title="Github"
-												>
-													<GithubIcon className="h-3.5 w-3.5" />
-												</a>
-											</div>
+											{/* Divider & Social Links */}
+											{(member.facebook || member.twitter || member.behance || member.github) && (
+												<div className="w-full border-t border-slate-100 mt-6 pt-5 flex justify-center gap-3">
+													{member.facebook && (
+														<a
+															href={member.facebook}
+															target="_blank"
+															rel="noreferrer"
+															className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+															title="Facebook"
+														>
+															<FacebookIcon className="h-3.5 w-3.5" />
+														</a>
+													)}
+													{member.twitter && (
+														<a
+															href={member.twitter}
+															target="_blank"
+															rel="noreferrer"
+															className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+															title="Twitter"
+														>
+															<TwitterIcon className="h-3.5 w-3.5" />
+														</a>
+													)}
+													{member.behance && (
+														<a
+															href={member.behance}
+															target="_blank"
+															rel="noreferrer"
+															className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+															title="LinkedIn"
+														>
+															<LinkedinIcon className="h-3.5 w-3.5" />
+														</a>
+													)}
+													{member.github && (
+														<a
+															href={member.github}
+															target="_blank"
+															rel="noreferrer"
+															className="w-8 h-8 rounded-full bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-400 flex items-center justify-center transition-all duration-300 hover:scale-105"
+															title="Github"
+														>
+															<GithubIcon className="h-3.5 w-3.5" />
+														</a>
+													)}
+												</div>
+											)}
 										</div>
 									</div>
 								);
@@ -279,7 +289,6 @@ export default async function AboutPage() {
 						</div>
 					</div>
 				</section>
-				)}
 			</main>
 			<Footer />
 		</div>

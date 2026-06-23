@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { name } = body;
+    const { name, premium, price } = body;
 
     if (!name) {
       return NextResponse.json(
@@ -42,6 +42,8 @@ export async function POST(request: Request) {
     const newCourse = await prisma.course.create({
       data: {
         name: name.trim(),
+        premium: premium !== undefined ? premium : false,
+        price: price !== undefined && price !== "" ? parseFloat(price) : 299.00,
       },
     });
 

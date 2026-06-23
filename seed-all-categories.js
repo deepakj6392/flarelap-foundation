@@ -184,28 +184,316 @@ const categoryCourses = [
   }
 ];
 
-async function seed() {
-  console.log('Seeding courses and MCQs for all categories...');
-  for (const catCourse of categoryCourses) {
-    // 1. Upsert course
-    let course = await prisma.course.findFirst({
-      where: { name: catCourse.name }
+const getRealExamStats = (courseName) => {
+  const name = courseName.toLowerCase();
+  if (name.includes("ssc cgl") || name.includes("cgl")) {
+    return { questions: 100, marks: 200, duration: 60 };
+  }
+  if (name.includes("gate")) {
+    return { questions: 65, marks: 100, duration: 180 };
+  }
+  if (name.includes("sebi")) {
+    return { questions: 100, marks: 100, duration: 60 };
+  }
+  if (name.includes("ctet")) {
+    return { questions: 150, marks: 150, duration: 150 };
+  }
+  if (name.includes("fitter")) {
+    return { questions: 50, marks: 100, duration: 120 };
+  }
+  if (name.includes("electrician")) {
+    return { questions: 50, marks: 100, duration: 120 };
+  }
+  if (name.includes("rrb je") || name.includes("je ")) {
+    return { questions: 100, marks: 100, duration: 90 };
+  }
+  if (name.includes("judiciary")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("paramedical")) {
+    return { questions: 100, marks: 100, duration: 90 };
+  }
+  if (name.includes("electronic mechanic")) {
+    return { questions: 50, marks: 100, duration: 120 };
+  }
+  if (name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return { questions: 100, marks: 100, duration: 90 };
+  }
+  if (name.includes("sbi po")) {
+    return { questions: 100, marks: 100, duration: 60 };
+  }
+  if (name.includes("neet")) {
+    return { questions: 45, marks: 180, duration: 50 };
+  }
+  if (name.includes("nda")) {
+    return { questions: 150, marks: 600, duration: 150 };
+  }
+  if (name.includes("upsc")) {
+    return { questions: 100, marks: 200, duration: 120 };
+  }
+  if (name.includes("police") || name.includes("constable")) {
+    return { questions: 150, marks: 300, duration: 120 };
+  }
+  if (name.includes("b.ed")) {
+    return { questions: 100, marks: 200, duration: 180 };
+  }
+  return { questions: 100, marks: 100, duration: 90 };
+};
+
+const getCourseSubjects = (courseName) => {
+  const name = courseName.toLowerCase();
+  if (name.includes("ssc cgl") || name.includes("cgl")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 20 },
+      { name: "General Awareness", qs: 25, marks: 50, duration: 10 },
+      { name: "Quantitative Aptitude", qs: 25, marks: 50, duration: 20 },
+      { name: "English Comprehension", qs: 25, marks: 50, duration: 10 }
+    ];
+  }
+  if (name.includes("gate")) {
+    return [
+      { name: "General Aptitude", qs: 10, marks: 15, duration: 30 },
+      { name: "Engineering Mathematics", qs: 10, marks: 15, duration: 30 },
+      { name: "Discrete Mathematics & Databases", qs: 15, marks: 20, duration: 40 },
+      { name: "Computer Architecture & OS", qs: 15, marks: 25, duration: 40 },
+      { name: "Algorithms & Data Structures", qs: 15, marks: 25, duration: 40 }
+    ];
+  }
+  if (name.includes("sebi")) {
+    return [
+      { name: "General Awareness & Financial Sector", qs: 25, marks: 25, duration: 15 },
+      { name: "English Language", qs: 25, marks: 25, duration: 15 },
+      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
+      { name: "Test of Reasoning", qs: 25, marks: 25, duration: 15 }
+    ];
+  }
+  if (name.includes("ctet")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I (English/Hindi)", qs: 30, marks: 30, duration: 30 },
+      { name: "Language II (English/Hindi/Sanskrit)", qs: 30, marks: 30, duration: 30 },
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "Environmental Studies", qs: 30, marks: 30, duration: 30 }
+    ];
+  }
+  if (name.includes("fitter")) {
+    return [
+      { name: "Trade Theory (Fitter Shop & Safety)", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("electrician")) {
+    return [
+      { name: "Trade Theory (Electrical Circuits & Machines)", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("rrb je") || name.includes("je ")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 15, marks: 15, duration: 15 },
+      { name: "General Awareness", qs: 15, marks: 15, duration: 10 },
+      { name: "General Science", qs: 15, marks: 15, duration: 15 },
+      { name: "Civil & Allied Engineering", qs: 55, marks: 55, duration: 50 }
+    ];
+  }
+  if (name.includes("judiciary")) {
+    return [
+      { name: "Constitutional Law", qs: 25, marks: 25, duration: 45 },
+      { name: "Civil Procedure Code & Law of Evidence", qs: 25, marks: 25, duration: 45 },
+      { name: "Indian Penal Code & Criminal Procedure", qs: 25, marks: 25, duration: 45 },
+      { name: "Contract & Property Law", qs: 25, marks: 25, duration: 45 }
+    ];
+  }
+  if (name.includes("paramedical")) {
+    return [
+      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 20 },
+      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 20 },
+      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 25 },
+      { name: "Medical Surgical Nursing", qs: 25, marks: 25, duration: 25 }
+    ];
+  }
+  if (name.includes("electronic mechanic")) {
+    return [
+      { name: "Electronic Theory & Components", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return [
+      { name: "General Awareness", qs: 40, marks: 40, duration: 35 },
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "General Intelligence & Reasoning", qs: 30, marks: 30, duration: 25 }
+    ];
+  }
+  if (name.includes("sbi po")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
+      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
+    ];
+  }
+  if (name.includes("neet")) {
+    return [
+      { name: "Mechanics & General Physics", qs: 15, marks: 60, duration: 15 },
+      { name: "Electrodynamics & Magnetism", qs: 15, marks: 60, duration: 15 },
+      { name: "Optics & Modern Physics", qs: 15, marks: 60, duration: 20 }
+    ];
+  }
+  if (name.includes("nda")) {
+    return [
+      { name: "English Vocabulary & Grammar", qs: 50, marks: 200, duration: 50 },
+      { name: "Physics & Chemistry", qs: 40, marks: 160, duration: 40 },
+      { name: "General Science & History", qs: 30, marks: 120, duration: 30 },
+      { name: "Geography & Current Affairs", qs: 30, marks: 120, duration: 30 }
+    ];
+  }
+  if (name.includes("upsc")) {
+    return [
+      { name: "History of India & Indian National Movement", qs: 20, marks: 40, duration: 25 },
+      { name: "Indian and World Geography", qs: 20, marks: 40, duration: 25 },
+      { name: "Indian Polity and Governance", qs: 20, marks: 40, duration: 25 },
+      { name: "Economic and Social Development", qs: 20, marks: 40, duration: 25 },
+      { name: "General Science & Ecology", qs: 20, marks: 40, duration: 20 }
+    ];
+  }
+  if (name.includes("police") || name.includes("constable")) {
+    return [
+      { name: "General Knowledge", qs: 38, marks: 76, duration: 30 },
+      { name: "General Hindi", qs: 37, marks: 74, duration: 30 },
+      { name: "Numerical & Mental Ability", qs: 38, marks: 76, duration: 30 },
+      { name: "Mental Aptitude & Reasoning", qs: 37, marks: 74, duration: 30 }
+    ];
+  }
+  if (name.includes("b.ed")) {
+    return [
+      { name: "General Knowledge", qs: 25, marks: 50, duration: 45 },
+      { name: "Language (Hindi or English)", qs: 25, marks: 50, duration: 45 },
+      { name: "General Mental Ability", qs: 25, marks: 50, duration: 45 },
+      { name: "Subject Specialisation (Arts/Science/Commerce)", qs: 25, marks: 50, duration: 45 }
+    ];
+  }
+  return [
+    { name: "General Awareness", qs: 25, marks: 25, duration: 20 },
+    { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 25 },
+    { name: "Reasoning Ability", qs: 25, marks: 25, duration: 25 },
+    { name: "Language & Comprehension", qs: 25, marks: 25, duration: 20 }
+  ];
+};
+
+const generateSubTestsList = (courseName, isPremium) => {
+  const stats = getRealExamStats(courseName);
+  const tests = [];
+
+  // 1-6: Full Length Mock Tests
+  for (let i = 1; i <= 6; i++) {
+    tests.push({
+      name: `Full Length Mock Test ${i}`,
+      type: "Full Mock",
+      qs: stats.questions,
+      marks: stats.marks,
+      duration: stats.duration,
+      isFree: false
     });
-    
-    if (!course) {
-      course = await prisma.course.create({
-        data: { name: catCourse.name, active: true }
-      });
-      console.log(`Created course: ${course.name}`);
+  }
+
+  // 7-8: Sectional Mock Tests
+  tests.push({
+    name: "Sectional Mock Test 1: General Core Skills",
+    type: "Subject Test",
+    qs: Math.max(10, Math.round(stats.questions * 0.5)),
+    marks: Math.max(20, Math.round(stats.marks * 0.5)),
+    duration: Math.max(15, Math.round(stats.duration * 0.5)),
+    isFree: false
+  });
+  tests.push({
+    name: "Sectional Mock Test 2: Advanced Topics & Analysis",
+    type: "Subject Test",
+    qs: Math.max(10, Math.round(stats.questions * 0.5)),
+    marks: Math.max(20, Math.round(stats.marks * 0.5)),
+    duration: Math.max(15, Math.round(stats.duration * 0.5)),
+    isFree: false
+  });
+
+  // 9-10: Previous Year Papers
+  tests.push({
+    name: "Previous Year Paper (2024 Exam)",
+    type: "PYP",
+    qs: stats.questions,
+    marks: stats.marks,
+    duration: stats.duration,
+    isFree: false
+  });
+  tests.push({
+    name: "Previous Year Paper (2025 Exam)",
+    type: "PYP",
+    qs: stats.questions,
+    marks: stats.marks,
+    duration: stats.duration,
+    isFree: false
+  });
+
+  tests.forEach((test, idx) => {
+    if (!isPremium) {
+      test.isFree = true;
     } else {
-      console.log(`Course exists: ${course.name}`);
+      test.isFree = (idx < 3);
     }
-    
-    // 2. Clear old MCQs and insert new ones to guarantee fresh dynamic questions
-    await prisma.mCQQuestion.deleteMany({
-      where: { courseId: course.id }
+  });
+
+  return tests;
+};
+
+async function seed() {
+  console.log('Clearing old purchases...');
+  await prisma.purchase.deleteMany({});
+
+  console.log('Clearing old test series...');
+  await prisma.testSeries.deleteMany({});
+
+  console.log('Clearing old MCQ questions...');
+  await prisma.mCQQuestion.deleteMany({});
+
+  console.log('Unlinking users from courses...');
+  await prisma.user.updateMany({
+    data: { courseId: null }
+  });
+
+  console.log('Clearing old courses...');
+  await prisma.course.deleteMany({});
+
+  console.log('Resetting identity sequences...');
+  try {
+    await prisma.$executeRawUnsafe('ALTER SEQUENCE courses_id_seq RESTART WITH 1;');
+    await prisma.$executeRawUnsafe('ALTER SEQUENCE mcq_questions_id_seq RESTART WITH 1;');
+    await prisma.$executeRawUnsafe('ALTER SEQUENCE test_series_id_seq RESTART WITH 1;');
+    await prisma.$executeRawUnsafe('ALTER SEQUENCE purchases_id_seq RESTART WITH 1;');
+    console.log('Identity sequences reset successfully.');
+  } catch (seqError) {
+    console.error('Warning: Failed to reset sequences.', seqError);
+  }
+
+  console.log('Seeding courses, MCQs, and Test Series for all categories...');
+  for (const catCourse of categoryCourses) {
+    const isPremium = 
+      catCourse.name.includes("SSC CGL") || 
+      catCourse.name.includes("GATE") || 
+      catCourse.name.includes("SEBI") || 
+      catCourse.name.includes("Judiciary") || 
+      catCourse.name.includes("UPSC");
+
+    const course = await prisma.course.create({
+      data: { 
+        name: catCourse.name, 
+        active: true,
+        premium: isPremium
+      }
     });
+    console.log(`Created course (ID: ${course.id}, Premium: ${isPremium}): ${course.name}`);
     
+    // Seed MCQs
     for (const q of catCourse.mcqs) {
       await prisma.mCQQuestion.create({
         data: {
@@ -218,6 +506,23 @@ async function seed() {
       });
     }
     console.log(`Seeded ${catCourse.mcqs.length} MCQs for ${course.name}`);
+
+    // Seed mock test series dynamically
+    const subTests = generateSubTestsList(course.name, course.premium);
+    for (const test of subTests) {
+      await prisma.testSeries.create({
+        data: {
+          courseId: course.id,
+          name: test.name,
+          type: test.type,
+          qs: test.qs,
+          marks: test.marks,
+          duration: test.duration,
+          isFree: test.isFree
+        }
+      });
+    }
+    console.log(`Seeded ${subTests.length} Test Series entries for ${course.name}`);
   }
   console.log('All done!');
 }

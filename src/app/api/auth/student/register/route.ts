@@ -92,7 +92,7 @@ export async function POST(request: Request) {
     const hashedPassword = bcrypt.hashSync(tempPassword, 10);
 
     // Save student to database
-    await prisma.user.create({
+    const newUser = await prisma.user.create({
       data: {
         name,
         email: email.trim().toLowerCase(),
@@ -117,9 +117,46 @@ export async function POST(request: Request) {
       console.warn(`Student account created but welcome email failed to dispatch to: ${email}`);
     }
 
+    // Import jwt dynamically or rely on package to sign token for instant login
+    const jwt = require("jsonwebtoken");
+    const jwtSecret = process.env.JWT_SECRET || "flarelap_foundation_jwt_secret_key_123!";
+    const token = jwt.sign(
+      {
+        id: newUser.id,
+        name: newUser.name,
+        email: newUser.email,
+        role: newUser.role,
+        student_id: newUser.studentId,
+      },
+      jwtSecret,
+      { expiresIn: "7d" }
+    );
+
+    const userData = {
+      id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      student_id: newUser.studentId,
+      phone: newUser.phone,
+      created_at: newUser.createdAt,
+      course_id: newUser.courseId,
+      course_name: courseCheck.name
+    };
+
+    // Record login event in database
+    await prisma.studentLog.create({
+      data: {
+        userId: newUser.id,
+        action: "LOGIN"
+      }
+    });
+
     return NextResponse.json({
-      message: "Student registration successful. Your User ID and temporary password have been sent to your email address.",
-      student_id: studentId
+      message: "Student registration successful.",
+      student_id: studentId,
+      temp_password: tempPassword,
+      token,
+      user: userData
     });
   } catch (error) {
     console.error("Student registration error:", error);

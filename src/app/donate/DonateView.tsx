@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
-import { 
-  Heart, 
-  DollarSign, 
-  QrCode, 
-  Building2, 
-  CheckCircle2, 
-  AlertCircle, 
+import {
+  Heart,
+  DollarSign,
+  QrCode,
+  Building2,
+  CheckCircle2,
+  AlertCircle,
   Info,
   ChevronLeft,
   ChevronRight,
@@ -53,7 +53,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
   const [paymentMethod, setPaymentMethod] = useState("UPI");
   const [transactionId, setTransactionId] = useState("");
   const [message, setMessage] = useState("");
-  
+
   // New Fields
   const [dob, setDob] = useState("");
   const [pan, setPan] = useState("");
@@ -68,7 +68,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
   // Banner State
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // FAQ State
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -110,7 +110,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
       setStatusMessage("Donation amount must be a valid positive number.");
       return;
     }
-    
+
     if (paymentMethod === "UPI" && amtNum > 1500) {
       setStatus("error");
       setStatusMessage("Maximum donation amount via UPI is ₹1500. Please choose another payment mode for larger amounts.");
@@ -177,12 +177,12 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
   };
 
   // Fallback images if gallery is empty
-  const bannerImages = galleryImages && galleryImages.length > 0 
-    ? galleryImages 
+  const bannerImages = galleryImages && galleryImages.length > 0
+    ? galleryImages
     : [
-        { id: 1, imageUrl: 'https://images.unsplash.com/photo-1610486016147-3ce94a5bd0c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', caption: 'Support Indian Education' },
-        { id: 2, imageUrl: 'https://images.unsplash.com/photo-1593344697331-50e5883ef071?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', caption: 'Empower Children Across India' }
-      ];
+      { id: 1, imageUrl: 'https://images.unsplash.com/photo-1610486016147-3ce94a5bd0c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', caption: 'Support Indian Education' },
+      { id: 2, imageUrl: 'https://images.unsplash.com/photo-1593344697331-50e5883ef071?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80', caption: 'Empower Children Across India' }
+    ];
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
@@ -192,7 +192,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         {/* Dynamic Top Banner Carousel */}
         <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden group bg-slate-900">
           {bannerImages.map((img, index) => (
-            <div 
+            <div
               key={img.id}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
             >
@@ -206,23 +206,23 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
           ))}
-          
+
           {/* Slider Controls */}
           {bannerImages.length > 1 && (
             <>
-              <button 
+              <button
                 onClick={prevSlide}
                 className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transition opacity-0 group-hover:opacity-100"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
-              <button 
+              <button
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transition opacity-0 group-hover:opacity-100"
               >
                 <ChevronRight className="h-6 w-6" />
               </button>
-              
+
               {/* Indicators */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                 {bannerImages.map((_, index) => (
@@ -242,7 +242,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         <div className="max-w-7xl mx-auto px-5 py-16 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-slate-900">
-              GIVE EVERY CHILD A CHANCE TO LEARN AND DREAM
+              Empowering the Next Generation: A Catalyst for Systemic Change
             </h1>
           </div>
 
@@ -250,25 +250,51 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
             {/* Left Content */}
             <div className="space-y-6 text-sm text-slate-700 leading-relaxed font-medium">
               <p>
-                Education is every child's right – but in the modern landscape, countless are left behind. For millions of children in India, this simple dream remains out of reach. Poverty, lack of awareness, and deep inequalities often force children out of classrooms and into dead-end, exploitative labour, or other bleak situations.
+                Education is the ultimate social equalizer. Yet, systemic barriers continue to exclude millions of vulnerable children from the classroom. At <strong className="text-emerald-700">Flarelap Foundation</strong>, we believe that quality education is a fundamental human right, not a privilege. Today, widespread economic disparities and institutional gaps force countless young minds out of school, trapping generations in a cycle of poverty. We refuse to accept this status quo. Through our strategic initiatives, we are dismantling these barriers to ensure that every child—regardless of socioeconomic background—gains access to transformative learning experiences.
               </p>
-              <p>
-                At Flarelap Foundation, we believe that education is the most powerful weapon to change lives and impact society broadly. Through our <strong className="text-emerald-700">"Mission Educate"</strong> initiatives, we are creating a fundamental shift. We focus on the <strong className="text-emerald-700">Holistic Growth</strong> of every child, ensuring they don't just learn to read, but they learn to think, lead, and envision a brighter future.
-              </p>
-              <p>
-                Your contribution to Flarelap acts as a catalyst. When you give, you aren't just funding a school; you are building a future. You are providing the tools, the teachers, the books, and the safe spaces they deserve. You engage with young minds who are tomorrow's leaders and innovators in an environment where every child is encouraged, supported, and ultimately valued.
-              </p>
+
+              <div className="space-y-2">
+                <h3 className="text-base font-bold text-slate-900">Holistic Development Model</h3>
+                <p>
+                  We implement a holistic development model designed to cultivate future-ready individuals. Our curriculum equips students to:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong className="text-emerald-700">Navigate Complex Challenges:</strong> Developing critical thinking and analytical problem-solving skills.</li>
+                  <li><strong className="text-emerald-700">Drive Community Leadership:</strong> Instilling confidence to pioneer local civic and social solutions.</li>
+                  <li><strong className="text-emerald-700">Cultivate Long-Term Vision:</strong> Inspiring students to break generational cycles and pursue high-impact careers.</li>
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-base font-bold text-slate-900">Your Investment: The Catalyst for Social Mobility</h3>
+                <p>
+                  When you partner with Flarelap Foundation, your contribution transitions from a simple donation to a high-yield social investment. Your capital directly funds:
+                </p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li><strong className="text-emerald-700">Academic Infrastructure:</strong> Provision of essential learning materials, technology access, and foundational resources.</li>
+                  <li><strong className="text-emerald-700">Human Capital Development:</strong> Recruitment and continuous training of dedicated educators and mentors.</li>
+                  <li><strong className="text-emerald-700">Enriched Learning Environments:</strong> Creation of safe, inclusive, and highly motivating spaces optimized for student success.</li>
+                </ul>
+              </div>
+
               <p className="border-l-4 border-emerald-600 pl-4 text-slate-800 font-semibold italic">
-                “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” Let's build that future together. No child should be turned away from the door of learning because of circumstances out of their control.
+                “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
               </p>
-              <p>
-                Join us today. Every small effort contributes to a massive wave of transformation. Stand with Flarelap Foundation to ensure no child is left behind.
-              </p>
+
+              <div className="space-y-2 border-t border-slate-100 pt-4">
+                <h3 className="text-base font-bold text-slate-900">Partner With Us Today</h3>
+                <p>
+                  Tomorrow’s innovators, executives, and community leaders are waiting for an opportunity to learn. Your strategic support is the missing link. Partner with Flarelap Foundation today to scale our impact and build an equitable future.
+                </p>
+                <p className="text-emerald-700 font-bold">
+                  "Invest in a Child's Future" — Join Our Foundation Circle.
+                </p>
+              </div>
             </div>
 
             {/* Right Form */}
             <div className="bg-white border-2 border-emerald-600 p-8 relative">
-              
+
               {status === "success" ? (
                 <div className="text-center py-10 space-y-6">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
@@ -290,21 +316,21 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
               ) : (
                 <>
                   <div className="text-center mb-6">
-                    <h2 className="text-3xl font-black uppercase text-black tracking-tight" style={{fontFamily: 'Impact, sans-serif'}}>SUPPORT THE CAUSE</h2>
-                    <p className="text-base font-light text-slate-500 uppercase tracking-wide mt-2">MAKE A DIFFERENCE</p>
+                    <h2 className="text-3xl font-black uppercase text-black tracking-tight">Support Every Child to Learn and Dream</h2>
+                    <p className="text-base font-light text-slate-500 uppercase tracking-wide mt-2"></p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    
+
                     {/* Presets Grid */}
                     <div className="flex justify-center gap-6 mb-4">
                       {PRESET_AMOUNTS.map((val) => (
                         <label key={val} className="flex items-center gap-2 cursor-pointer text-slate-500 font-medium text-sm hover:text-slate-900 transition">
-                          <input 
-                            type="radio" 
-                            name="amount" 
-                            value={val} 
-                            checked={selectedPreset === val} 
+                          <input
+                            type="radio"
+                            name="amount"
+                            value={val}
+                            checked={selectedPreset === val}
                             onChange={() => handlePresetClick(val)}
                             className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
                           />
@@ -315,7 +341,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
                     <div className="text-center mb-6">
                       <p className="text-sm font-medium text-slate-700 uppercase">
-                        YOUR DONATION WILL HELP FOR THE<br/>EDUCATION OF 1 CHILD FOR 3 MONTHS
+                        YOUR DONATION WILL HELP FOR THE<br />EDUCATION OF 1 CHILD FOR 3 MONTHS
                       </p>
                     </div>
 
@@ -359,7 +385,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         type="text"
                         value={dob}
                         onFocus={(e) => e.target.type = 'date'}
-                        onBlur={(e) => { if(!e.target.value) e.target.type = 'text'; }}
+                        onBlur={(e) => { if (!e.target.value) e.target.type = 'text'; }}
                         onChange={(e) => setDob(e.target.value)}
                         placeholder="DOB"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
@@ -399,7 +425,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
                       />
                     </div>
-                    
+
                     <input
                       type="text"
                       value={address}
@@ -432,16 +458,16 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         * Note: UPI transactions are capped at ₹1500.
                       </p>
                     )}
-
+                    {/* 
                     <div className="text-[10px] text-slate-500 font-medium leading-relaxed px-2 mt-6 space-y-2">
                       <p>
-                        *YOUR CONTRIBUTIONS ARE ELIGIBLE FOR UPTO 50% TAX BENEFIT UNDER SECTION 80G AS FLARELAP FOUNDATION IS REGISTERED AS NON PROFIT ORGANIZATION*<br/>
+                        *YOUR CONTRIBUTIONS ARE ELIGIBLE FOR UPTO 50% TAX BENEFIT UNDER SECTION 80G AS FLARELAP FOUNDATION IS REGISTERED AS NON PROFIT ORGANIZATION*<br />
                         PAN: AACTS7973G | 80G NUMBER: AACTS7973GF20210
                       </p>
                       <p>
                         Flarelap Foundation may get in touch with you through WhatsApp, email, SMS, or phone to share details about your donation, 80G receipt. <span className="text-emerald-600 cursor-pointer hover:underline">more..</span>
                       </p>
-                    </div>
+                    </div> */}
 
                     {statusMessage && (
                       <div className={`p-3 rounded-md text-xs font-bold text-center ${status === 'error' ? 'bg-red-50 text-red-600' : 'bg-emerald-50 text-emerald-600'}`}>
@@ -469,7 +495,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         <div className="bg-emerald-600 py-12 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-wide">WHAT WILL YOUR DONATION SUPPORT?</h2>
         </div>
-        
+
         <div className="bg-slate-50 py-16">
           <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -512,14 +538,14 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 <p className="text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">States Across India</p>
               </div>
             </div>
-            
+
             {/* Map Right (Using a CSS shape or simple SVG outline since we don't have the exact image) */}
             <div className="md:w-1/2 min-h-[300px] relative bg-slate-200 flex items-center justify-center p-8">
               {/* Simple illustrative dot map representation */}
               <div className="w-full max-w-[300px] h-[400px] relative">
                 {/* Fallback to text if we can't draw the map nicely */}
                 <div className="absolute inset-0 border-[3px] border-dashed border-slate-300 rounded-3xl flex items-center justify-center text-slate-400 rotate-3">
-                  <span className="font-black text-2xl uppercase tracking-widest text-center px-4">Pan-India<br/>Presence</span>
+                  <span className="font-black text-2xl uppercase tracking-widest text-center px-4">Pan-India<br />Presence</span>
                 </div>
                 {/* Decorative dots to simulate map locations */}
                 <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-emerald-600 rounded-full animate-ping"></div>
@@ -535,14 +561,14 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         {/* Section 4: Stories in Motion */}
         <div className="max-w-7xl mx-auto px-5 py-12 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900 mb-10">STORIES IN MOTION</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Video Placeholder 1 */}
             <div className="aspect-video bg-slate-900 rounded-xl relative overflow-hidden group cursor-pointer border-[4px] border-slate-900">
-              <Image 
-                src="https://images.unsplash.com/photo-1595188827986-7ce292a11b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Story 1" 
-                fill 
+              <Image
+                src="https://images.unsplash.com/photo-1595188827986-7ce292a11b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Story 1"
+                fill
                 className="object-cover opacity-60 group-hover:opacity-40 transition"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -557,10 +583,10 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
             {/* Video Placeholder 2 */}
             <div className="aspect-video bg-slate-900 rounded-xl relative overflow-hidden group cursor-pointer border-[4px] border-slate-900">
-              <Image 
-                src="https://images.unsplash.com/photo-1604161547012-7065ce70e281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Story 2" 
-                fill 
+              <Image
+                src="https://images.unsplash.com/photo-1604161547012-7065ce70e281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Story 2"
+                fill
                 className="object-cover opacity-60 group-hover:opacity-40 transition"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -578,27 +604,27 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         {/* Section 5: Glimpses from our Projects */}
         <div className="max-w-7xl mx-auto px-5 py-12 sm:px-6 lg:px-8 text-center border-t border-slate-100">
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900 mb-10">GLIMPSES FROM OUR PROJECTS</h2>
-          
+
           <div className="max-w-4xl mx-auto h-[300px] relative rounded-xl overflow-hidden shadow-lg border-4 border-white">
-             {bannerImages.length > 0 ? (
-               <Image 
-                 src={bannerImages[0].imageUrl} 
-                 alt="Project Glimpse" 
-                 fill 
-                 className="object-cover"
-               />
-             ) : (
-               <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400 font-bold uppercase tracking-widest">
-                 Project Images
-               </div>
-             )}
+            {bannerImages.length > 0 ? (
+              <Image
+                src={bannerImages[0].imageUrl}
+                alt="Project Glimpse"
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-slate-200 flex items-center justify-center text-slate-400 font-bold uppercase tracking-widest">
+                Project Images
+              </div>
+            )}
           </div>
         </div>
 
         {/* Section 6: FAQs */}
         <div className="max-w-4xl mx-auto px-5 py-16 sm:px-6 lg:px-8 border-t border-slate-100">
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-slate-900 mb-10 text-center">FREQUENTLY ASKED QUESTIONS</h2>
-          
+
           <div className="space-y-4">
             {FAQS.map((faq, idx) => (
               <div key={idx} className="border border-slate-200 rounded-xl bg-white shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-300">

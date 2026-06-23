@@ -20,6 +20,8 @@ interface CourseRecord {
   id: number;
   name: string;
   active: boolean;
+  premium: boolean;
+  price?: string | number;
   createdAt: string;
 }
 
@@ -38,6 +40,8 @@ export default function CoursesAdminPage() {
   const [isEditMode, setIsEditMode] = useState(false);
   const [editCourseId, setEditCourseId] = useState<number | null>(null);
   const [newCourseName, setNewCourseName] = useState("");
+  const [newCoursePremium, setNewCoursePremium] = useState(false);
+  const [newCoursePrice, setNewCoursePrice] = useState("299");
 
   const fetchCourses = async () => {
     setLoading(true);
@@ -89,7 +93,7 @@ export default function CoursesAdminPage() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${storedToken}` 
           },
-          body: JSON.stringify({ name: newCourseName }),
+          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice }),
         });
       } else {
         res = await fetch(`${apiUrl}/api/admin/courses`, {
@@ -98,7 +102,7 @@ export default function CoursesAdminPage() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${storedToken}` 
           },
-          body: JSON.stringify({ name: newCourseName }),
+          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice }),
         });
       }
 
@@ -119,6 +123,7 @@ export default function CoursesAdminPage() {
       setIsEditMode(false);
       setEditCourseId(null);
       setNewCourseName("");
+      setNewCoursePremium(false);
     } catch (err: any) {
       setError(err.message || "Failed to save course.");
     } finally {
@@ -154,6 +159,39 @@ export default function CoursesAdminPage() {
       showTemporarySuccess(`Course "${id}" status changed successfully.`);
     } catch (err: any) {
       setError(err.message || "Failed to toggle status.");
+    } finally {
+      setActionLoading(null);
+    }
+  };
+
+  const handleTogglePricing = async (id: number, currentPremium: boolean) => {
+    const storedToken = localStorage.getItem("admin_token");
+    if (!storedToken) return;
+
+    setActionLoading(`pricing-${id}`);
+    setError(null);
+    setSuccessMsg(null);
+
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/admin/courses/${id}`, {
+        method: "PUT",
+        headers: { 
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}` 
+        },
+        body: JSON.stringify({ premium: !currentPremium }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to toggle pricing.");
+      }
+
+      setCourses(prev => prev.map(c => c.id === id ? { ...c, premium: !currentPremium } : c));
+      showTemporarySuccess(`Course "${id}" pricing changed successfully.`);
+    } catch (err: any) {
+      setError(err.message || "Failed to toggle pricing.");
     } finally {
       setActionLoading(null);
     }
@@ -214,6 +252,8 @@ export default function CoursesAdminPage() {
     setIsEditMode(true);
     setEditCourseId(course.id);
     setNewCourseName(course.name);
+    setNewCoursePremium(course.premium || false);
+    setNewCoursePrice(course.price !== undefined ? course.price.toString() : "299");
     setIsModalOpen(true);
   };
 
@@ -221,6 +261,8 @@ export default function CoursesAdminPage() {
     setIsEditMode(false);
     setEditCourseId(null);
     setNewCourseName("");
+    setNewCoursePremium(false);
+    setNewCoursePrice("299");
     setIsModalOpen(true);
   };
 
@@ -337,6 +379,9 @@ export default function CoursesAdminPage() {
                   <th className="py-4 px-5">Date Created</th>
                   <th className="py-4 px-5">Status</th>
                   <th className="py-4 px-5 text-center">Status Toggle</th>
+                  <th className="py-4 px-5">Pricing</th>
+                  <th className="py-4 px-5">Price (₹)</th>
+                  <th className="py-4 px-5 text-center">Paid Toggle</th>
                   <th className="py-4 px-6 text-right">Action</th>
                 </tr>
               </thead>
@@ -394,6 +439,40 @@ export default function CoursesAdminPage() {
                       </button>
                     </td>
 
+                    {/* Pricing Badge */}
+                    <td className="py-4 px-5">
+                      <span className={`rounded-full px-2.5 py-1 text-[10px] font-black uppercase tracking-wider ${
+                        c.premium
+                          ? "bg-purple-100 text-purple-800 dark:bg-purple-950/40 dark:text-purple-400"
+                          : "bg-teal-100 text-teal-800 dark:bg-teal-950/40 dark:text-teal-400"
+                      }`}>
+                        {c.premium ? "Paid" : "Free"}
+                      </span>
+                    </td>
+ 
+                    {/* Course Price */}
+                    <td className="py-4 px-5 font-black text-slate-800 dark:text-slate-200 text-xs">
+                      {c.premium ? `₹${Number(c.price || 299).toFixed(0)}` : "FREE"}
+                    </td>
+
+                    {/* Paid Toggle Switch */}
+                    <td className="py-4 px-5 text-center">
+                      <button
+                        onClick={() => handleTogglePricing(c.id, c.premium)}
+                        disabled={actionLoading === `pricing-${c.id}`}
+                        className={`relative inline-flex h-5.5 w-10 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out outline-none disabled:opacity-50 ${
+                          c.premium ? "bg-purple-650" : "bg-slate-300 dark:bg-slate-700"
+                        }`}
+                        title={c.premium ? "Click to make Free" : "Click to make Paid"}
+                      >
+                        <span
+                          className={`pointer-events-none inline-block h-4.5 w-4.5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
+                            c.premium ? "translate-x-4.5" : "translate-x-0"
+                          }`}
+                        />
+                      </button>
+                    </td>
+
                     {/* Actions */}
                     <td className="py-4 px-6 text-right">
                       <div className="flex items-center justify-end gap-1.5">
@@ -401,7 +480,7 @@ export default function CoursesAdminPage() {
                         <button
                           onClick={() => openEditModal(c)}
                           className="rounded-lg p-2 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-500/10 active:scale-95 transition cursor-pointer"
-                          title="Edit Course Name"
+                          title="Edit Course"
                         >
                           <Pencil className="h-4 w-4" />
                         </button>
@@ -413,7 +492,7 @@ export default function CoursesAdminPage() {
                           title="Delete Course"
                         >
                           {actionLoading === `del-${c.id}` ? (
-                            <div className="h-4 w-4 animate-spin rounded-full border-2 border-rose-605 border-t-transparent" />
+                             <div className="h-4 w-4 animate-spin rounded-full border-2 border-rose-605 border-t-transparent" />
                           ) : (
                             <Trash2 className="h-4 w-4" />
                           )}
@@ -445,10 +524,10 @@ export default function CoursesAdminPage() {
                 <GraduationCap className="h-6 w-6" />
               </div>
               <h3 className="text-base font-extrabold text-slate-950 dark:text-white">
-                {isEditMode ? "Edit Course Name" : "Create New Course"}
+                {isEditMode ? "Edit Course details" : "Create New Course"}
               </h3>
               <p className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold">
-                {isEditMode ? "Modify course name details in the database." : "Configure a study area option for students to enroll in."}
+                {isEditMode ? "Modify course name and premium details in the database." : "Configure a study area option for students to enroll in."}
               </p>
             </div>
 
@@ -470,6 +549,47 @@ export default function CoursesAdminPage() {
                   disabled={actionLoading === "create" || actionLoading === "edit"}
                 />
               </div>
+
+              {/* Pricing Choice */}
+              <div className="flex items-center gap-3 bg-slate-50 dark:bg-slate-955/40 border border-slate-200 dark:border-slate-850 p-3.5 rounded-xl">
+                <button
+                  type="button"
+                  onClick={() => setNewCoursePremium(!newCoursePremium)}
+                  className={`relative inline-flex h-5.5 w-10 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out outline-none disabled:opacity-50 ${
+                    newCoursePremium ? "bg-purple-650" : "bg-slate-300 dark:bg-slate-700"
+                  }`}
+                  disabled={actionLoading === "create" || actionLoading === "edit"}
+                >
+                  <span
+                    className={`pointer-events-none inline-block h-4.5 w-4.5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
+                      newCoursePremium ? "translate-x-4.5" : "translate-x-0"
+                    }`}
+                  />
+                </button>
+                <div>
+                  <span className="block text-xs font-bold text-slate-800 dark:text-white">Premium Paid Course</span>
+                  <span className="block text-[10px] text-slate-400 dark:text-slate-500 font-semibold">Toggling on will lock advanced tests for this course as Premium.</span>
+                </div>
+              </div>
+ 
+              {/* Premium price field */}
+              {newCoursePremium && (
+                <div className="space-y-1.5">
+                  <label className="block text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider mb-2">
+                    Premium Pass Price (₹)
+                  </label>
+                  <input
+                    type="number"
+                    required
+                    min={0}
+                    value={newCoursePrice}
+                    onChange={(e) => setNewCoursePrice(e.target.value)}
+                    placeholder="e.g. 299"
+                    className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-955 px-4 py-2.5 text-xs outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-900 dark:text-white font-semibold"
+                    disabled={actionLoading === "create" || actionLoading === "edit"}
+                  />
+                </div>
+              )}
 
               {/* Action Buttons */}
               <div className="pt-2 flex justify-end gap-3.5">

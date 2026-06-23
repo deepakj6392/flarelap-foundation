@@ -16,6 +16,7 @@ export default function Footer() {
     email: siteConfig.email,
     phone: siteConfig.phone,
     location: siteConfig.location,
+    address: siteConfig.address,
     facebook: siteConfig.links.facebook,
     instagram: "https://www.instagram.com/flarelap_org",
     xLink: siteConfig.links.x,
@@ -33,6 +34,7 @@ export default function Footer() {
             email: data.setting.email || siteConfig.email,
             phone: data.setting.phone || siteConfig.phone,
             location: data.setting.location || siteConfig.location,
+            address: data.setting.address || siteConfig.address,
             facebook: data.setting.facebook || siteConfig.links.facebook,
             instagram: data.setting.instagram || "https://www.instagram.com/flarelap_org",
             xLink: data.setting.xLink || siteConfig.links.x,
@@ -201,8 +203,8 @@ export default function Footer() {
             <div className="mt-2 space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="h-4.5 w-4.5 shrink-0 text-emerald-400 mt-0.5" />
-                <span className="text-xs font-medium text-slate-400 leading-5">
-                  {settings.location}, Global Head Office
+                <span className="text-xs font-medium text-slate-400 leading-5 whitespace-pre-line">
+                  {settings.address || `${settings.location}, Global Head Office`}
                 </span>
               </div>
               <div className="flex items-center gap-3">

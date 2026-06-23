@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { User, Mail, Phone, GraduationCap, CheckCircle2, AlertCircle, Loader2, Heart } from "lucide-react";
 import Swal from "sweetalert2";
 
 export default function StudentRegisterPage() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -25,7 +27,16 @@ export default function StudentRegisterPage() {
         const data = await res.json();
         if (res.ok && data.courses && data.courses.length > 0) {
           setCourses(data.courses);
-          setCourse(data.courses[0].id);
+          
+          // Pre-select course based on query parameter
+          const params = new URLSearchParams(window.location.search);
+          const queryCourse = params.get("course");
+          const hasCourse = data.courses.some((c: any) => c.id.toString() === queryCourse);
+          if (queryCourse && hasCourse) {
+            setCourse(queryCourse);
+          } else {
+            setCourse(data.courses[0].id.toString());
+          }
         }
       } catch (err) {
         console.error("Failed to load courses:", err);
@@ -59,23 +70,58 @@ export default function StudentRegisterPage() {
         throw new Error(data.message || "Registration failed.");
       }
 
-      setSuccess("Account created successfully!");
+      // Save token and user info for auto-login
+      if (data.token && data.user) {
+        localStorage.setItem("student_token", data.token);
+        localStorage.setItem("student_user", JSON.stringify(data.user));
+      }
+
+      setSuccess("Account created and logged in successfully!");
       
-      // Professional success alert
+      // Professional success alert with credentials info
       await Swal.fire({
-        title: "Registration Successful!",
-        text: `Your unique Student ID and temporary password have been dispatched to ${email}.`,
+        title: "Enrollment Successful!",
+        html: `
+          <div class="text-left space-y-3 font-sans text-xs">
+            <p class="font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1.5 rounded-lg border border-emerald-100 mb-2">
+              Welcome, ${name}! Your account has been created and you are automatically signed in.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-205 space-y-2.5">
+              <div>
+                <span class="font-bold text-slate-500 uppercase tracking-wider text-[10px] block">Student Login ID:</span> 
+                <code class="font-mono text-emerald-700 font-black bg-white border border-slate-200 px-2.5 py-1 rounded text-xs select-all block mt-1">${data.student_id}</code>
+              </div>
+              <div>
+                <span class="font-bold text-slate-500 uppercase tracking-wider text-[10px] block">Temporary Password:</span> 
+                <code class="font-mono text-slate-800 font-black bg-white border border-slate-200 px-2.5 py-1 rounded text-xs select-all block mt-1">${data.temp_password}</code>
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-2 font-medium leading-relaxed">
+              Please save these credentials to sign in in the future. A copy has also been sent to your email address at ${email}.
+            </p>
+          </div>
+        `,
         icon: "success",
-        confirmButtonColor: "#4f46e5",
+        confirmButtonText: "Start Learning",
+        confirmButtonColor: "#047857",
         background: "#ffffff",
-        color: "#1e293b",
+        color: "#1f2937",
       });
 
+      // Clear fields
       setName("");
       setEmail("");
       setPhone("");
-      if (courses.length > 0) {
-        setCourse(courses[0].id);
+
+      // Smart redirect
+      const params = new URLSearchParams(window.location.search);
+      const queryCourse = params.get("course");
+      if (queryCourse) {
+        // Send back to the test series details page
+        router.push(`/education/test-series/${queryCourse}`);
+      } else {
+        // Send to dashboard
+        router.push("/student/dashboard");
       }
     } catch (err: any) {
       setError(err.message || "An error occurred during registration.");

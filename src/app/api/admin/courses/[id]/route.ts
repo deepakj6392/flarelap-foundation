@@ -61,7 +61,7 @@ export async function PUT(
     const { id } = await params;
     const courseId = parseInt(id, 10);
     const body = await request.json();
-    const { name, active } = body;
+    const { name, active, premium, price } = body;
 
     if (isNaN(courseId)) {
       return NextResponse.json(
@@ -75,6 +75,8 @@ export async function PUT(
       data: {
         ...(name !== undefined && { name: name.trim() }),
         ...(active !== undefined && { active }),
+        ...(premium !== undefined && { premium }),
+        ...(price !== undefined && { price: parseFloat(price) }),
       },
     });
 

@@ -34,11 +34,11 @@ export async function POST(req: NextRequest) {
     const formData = await req.formData();
     const name = formData.get("name") as string;
     const role = formData.get("role") as string;
-    const description = formData.get("description") as string | null;
-    const facebook = formData.get("facebook") as string | null;
-    const twitter = formData.get("twitter") as string | null;
-    const github = formData.get("github") as string | null;
-    const behance = formData.get("behance") as string | null;
+    const description = (formData.get("description") as string | null) || null;
+    const facebook = (formData.get("facebook") as string | null) || null;
+    const twitter = (formData.get("twitter") as string | null) || null;
+    const github = (formData.get("github") as string | null) || null;
+    const behance = (formData.get("behance") as string | null) || null;
     const orderStr = formData.get("order") as string | null;
     const file = formData.get("image") as File | null;
 

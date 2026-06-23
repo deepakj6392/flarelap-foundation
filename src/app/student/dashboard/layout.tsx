@@ -249,6 +249,7 @@ export default function StudentDashboardLayout({
     if (pathname === "/student/dashboard") return "Scholar Console Overview";
     if (pathname === "/student/dashboard/materials") return "Study Course Materials";
     if (pathname === "/student/dashboard/quiz") return "Interactive Mock Exam";
+    if (pathname === "/student/dashboard/test-series") return "My Test Series & Passes";
     if (pathname === "/student/dashboard/profile") return "Student Security Settings";
     return "Student Dashboard";
   };
@@ -349,6 +350,13 @@ export default function StudentDashboardLayout({
                       className={getSubMenuBtnClass("/student/dashboard/quiz")}
                     >
                       Practice Mock Exams
+                    </Link>
+                    <Link
+                      href="/student/dashboard/test-series"
+                      onClick={() => setSidebarOpen(false)}
+                      className={getSubMenuBtnClass("/student/dashboard/test-series")}
+                    >
+                      Test Series
                     </Link>
                   </div>
                 )}
