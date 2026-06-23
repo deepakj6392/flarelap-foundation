@@ -144,6 +144,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Team Members";
       case "/admin/gallery":
         return "Gallery Manager";
+      case "/admin/blogs":
+        return "Blogs Manager";
       default:
         return "Admin Panel";
     }
@@ -215,6 +217,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/gallery" className={getMenuBtnClass("/admin/gallery")}>
               <Images className={`h-5 w-5 ${pathname === '/admin/gallery' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Gallery
+            </Link>
+            <Link href="/admin/blogs" className={getMenuBtnClass("/admin/blogs")}>
+              <FileText className={`h-5 w-5 ${pathname === '/admin/blogs' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Blogs
             </Link>
 
             {/* Education Collapsible Menu */}

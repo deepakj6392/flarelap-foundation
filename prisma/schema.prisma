@@ -193,3 +193,21 @@ model TestAttempt {
 
   @@map("test_attempts")
 }
+
+model BlogPost {
+  id           Int      @id @default(autoincrement())
+  title        String
+  slug         String   @unique
+  content      String   @db.Text
+  thumbnail    String   @map("thumbnail")
+  excerpt      String   @db.Text
+  metaTitle    String?  @map("meta_title")
+  metaDesc     String?  @map("meta_desc")
+  keywords     String?  @map("keywords")
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("blog_posts")
+}
+
