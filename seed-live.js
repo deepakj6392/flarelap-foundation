@@ -22,9 +22,9 @@ async function main() {
   console.log('Seeding team members...');
   const members = [
     { id: 1, name: 'Dr. Raj Simha', role: 'Founder', description: 'Founder and visionary leader.', order: 1, imageUrl: '/uploads/team/raj_simha.webp' },
-    { id: 2, name: 'Bharat Bhushan', role: 'M.D.', description: 'Medical Director, overseeing health initiatives.', order: 4, imageUrl: '/uploads/team/bharat_bhushan.webp' },
-    { id: 3, name: 'Deepak Jaiswal', role: 'Executive Director', description: 'Executive Director, driving strategic initiatives.', order: 2, imageUrl: '/uploads/team/deepak_jaiswal.webp' },
-    { id: 4, name: 'Amit Tripathi', role: 'Operational Director', description: 'Responsible for day‑to‑day operations and execution.', order: 3, imageUrl: '/uploads/team/amit_tripathi.webp' },
+    { id: 2, name: 'Bharat Bhushan', role: 'M.D.', description: 'Medical Director, overseeing health initiatives.', order: 2, imageUrl: '/uploads/team/bharat_bhushan.webp' },
+    { id: 3, name: 'Deepak Jaiswal', role: 'Executive Director', description: 'Executive Director, driving strategic initiatives.', order: 3, imageUrl: '/uploads/team/deepak_jaiswal.webp' },
+    { id: 4, name: 'Amit Tripathi', role: 'Operational Director', description: 'Responsible for day‑to‑day operations and execution.', order: 4, imageUrl: '/uploads/team/amit_tripathi.webp' },
   ];
 
   for (const m of members) {

@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { mkdir } from "fs/promises";
+import { mkdir, writeFile } from "fs/promises";
 import { join } from "path";
-import sharp from "sharp";
 import { existsSync } from "fs";
 import { revalidatePath } from "next/cache";
 import { verifyAdmin } from "@/lib/auth";
@@ -60,15 +59,31 @@ export async function POST(req: NextRequest) {
       await mkdir(uploadDir, { recursive: true });
     }
 
-    const filename = `team_${Date.now()}.webp`;
-    const filepath = join(uploadDir, filename);
+    let filename = `team_${Date.now()}.webp`;
+    let filepath = join(uploadDir, filename);
+    let imageUrl = `/uploads/team/${filename}`;
 
-    // Convert to webp and save using sharp
-    await sharp(buffer)
-      .webp({ quality: 80 })
-      .toFile(filepath);
+    let sharpSaved = false;
+    try {
+      // Dynamic import to prevent crash in serverless environments like Vercel
+      const sharpModule = await import("sharp");
+      const sharp = sharpModule.default || sharpModule;
+      await sharp(buffer)
+        .webp({ quality: 80 })
+        .toFile(filepath);
+      sharpSaved = true;
+    } catch (error) {
+      console.warn("Sharp is not available or failed. Saving raw file instead.", error);
+    }
 
-    const imageUrl = `/uploads/team/${filename}`;
+    if (!sharpSaved) {
+      // Fallback to saving the file directly with its original extension if sharp is unavailable
+      const fileExt = file.name.split(".").pop() || "png";
+      filename = `team_${Date.now()}.${fileExt}`;
+      filepath = join(uploadDir, filename);
+      imageUrl = `/uploads/team/${filename}`;
+      await writeFile(filepath, buffer);
+    }
 
     const newMember = await prisma.teamMember.create({
       data: {

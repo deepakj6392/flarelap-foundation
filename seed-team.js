@@ -23,7 +23,7 @@ async function main() {
       twitter: null,
       github: null,
       behance: null,
-      order: 4,
+      order: 2,
       imageUrl: '/uploads/team/bharat_bhushan.webp',
     },
     {
@@ -35,7 +35,7 @@ async function main() {
       twitter: null,
       github: null,
       behance: null,
-      order: 2,
+      order: 3,
       imageUrl: '/uploads/team/deepak_jaiswal.webp',
     },
     {
@@ -47,7 +47,7 @@ async function main() {
       twitter: null,
       github: null,
       behance: null,
-      order: 3,
+      order: 4,
       imageUrl: '/uploads/team/amit_tripathi.webp',
     },
   ];
