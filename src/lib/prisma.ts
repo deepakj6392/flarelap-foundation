@@ -11,7 +11,12 @@ const globalForPrisma = global as unknown as { prismaClientV5: PrismaClient };
 let prismaInstance: PrismaClient;
 
 const dbUrl = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/flarelap_foundation?schema=public";
-const pool = new Pool({ connectionString: dbUrl });
+const isLocal = dbUrl.includes("localhost") || dbUrl.includes("127.0.0.1");
+console.log("Prisma initializing with dbUrl:", dbUrl, "isLocal:", isLocal);
+const pool = new Pool({ 
+  connectionString: dbUrl,
+  ssl: isLocal ? false : { rejectUnauthorized: false }
+});
 const adapter = new PrismaPg(pool);
 
 if (process.env.NODE_ENV === "production") {

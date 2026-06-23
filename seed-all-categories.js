@@ -670,6 +670,84 @@ const generateSubTestsList = (courseName, isPremium) => {
   return tests;
 };
 
+const categories = [
+  "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams", 
+  "Fitter", "Electrician", "AE/JE Exams", "Judiciary Exams", 
+  "Paramedical Exams", "Electronic Mechanic", "Railways", 
+  "Banking & Insurance", "State Exams", "Defence Exams", 
+  "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+];
+
+// Helper to match courses to categories
+const getCategoryForCourse = (courseName) => {
+  const name = courseName.toLowerCase();
+  if (name.includes("police") || name.includes("constable")) return "Police Exams";
+  if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
+  if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
+  if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
+  if (name.includes("bank") || name.includes("sbi") || name.includes("ibps") || name.includes("lic") || name.includes("rbi")) return "Banking & Insurance";
+  if (name.includes("sebi") || name.includes("nabard") || name.includes("regulatory")) return "Regulatory Body Exams";
+  if (name.includes("jrf") || name.includes("net") || name.includes("gate")) return "PG Entrance Exam";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
+  if (name.includes("fitter")) return "Fitter";
+  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("judiciary")) return "Judiciary Exams";
+  if (name.includes("paramedical")) return "Paramedical Exams";
+  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
+  if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
+  if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
+  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  return "State Exams"; // Default fallback
+};
+
+const getGeneratedName = (category, idx, baseCourse) => {
+  const num = idx + 1;
+  switch (category) {
+    case "SSC":
+      return `SSC CGL Practice Mock Paper ${num}`;
+    case "AE/JE Exams":
+      return `JE/AE Technical Test Set ${num}`;
+    case "Railways":
+      return `RRB NTPC CBT Mock Exam ${num}`;
+    case "Banking & Insurance":
+      return `IBPS PO Prelims Practice Set ${num}`;
+    case "Regulatory Body Exams":
+      return `NABARD Grade A Officer Prep Set ${num}`;
+    case "PG Entrance Exam":
+      if (baseCourse.name.includes("GATE")) {
+        return `${baseCourse.name.replace("Mock", "Practice").replace("Exam", "Test")} Set ${num}`;
+      } else if (baseCourse.name.includes("UGC") || baseCourse.name.includes("CSIR")) {
+        return `${baseCourse.name.replace("Booster", "Set").replace("Paper", "Test").replace("Prep", "Set")} ${num}`;
+      } else {
+        return `${baseCourse.name} Practice Set ${num}`;
+      }
+    case "Teaching Exams":
+      return `CTET Paper 1 Pedagogy Mock Set ${num}`;
+    case "Fitter":
+      return `ITI Fitter Theory Practice Set ${num}`;
+    case "Electrician":
+      return `ITI Electrician Basic Theory Mock ${num}`;
+    case "Judiciary Exams":
+      return `State Judiciary Law Prep Test ${num}`;
+    case "Paramedical Exams":
+      return `Paramedical Staff Nurse Practice Set ${num}`;
+    case "Electronic Mechanic":
+      return `Electronic Mechanic Semester Prep Set ${num}`;
+    case "Civil Services":
+      return `UPSC Civil Services GS Practice ${num}`;
+    case "Defence Exams":
+      return `NDA General Ability Defence Mock ${num}`;
+    case "Police Exams":
+      return `UP Police Constable Practice Mock ${num}`;
+    case "B.Ed Entrance Exams":
+      return `UP B.Ed Joint Entrance Test Set ${num}`;
+    case "State Exams":
+      return `NEET Practice Mock Set ${num}`;
+    default:
+      return `${baseCourse.name} Simulator Set ${num}`;
+  }
+};
+
 async function seed() {
   console.log('Clearing old purchases...');
   await prisma.purchase.deleteMany({});
@@ -702,55 +780,87 @@ async function seed() {
     console.error('Warning: Failed to reset sequences.', seqError);
   }
 
-  console.log('Seeding courses, MCQs, and Test Series for all categories...');
-  for (const catCourse of categoryCourses) {
+  // Group existing categoryCourses by their category
+  const coursesByCategory = {};
+  for (const cat of categories) {
+    coursesByCategory[cat] = [];
+  }
+
+  for (const course of categoryCourses) {
+    const cat = getCategoryForCourse(course.name);
+    if (coursesByCategory[cat]) {
+      coursesByCategory[cat].push(course);
+    } else {
+      coursesByCategory["State Exams"].push(course);
+    }
+  }
+
+  // Expand each category to contain exactly 20 courses
+  const expandedCourses = [];
+  for (const cat of categories) {
+    const bases = coursesByCategory[cat];
+    if (bases.length === 0) continue; // skip if no base course is defined
+
+    for (let i = 0; i < 20; i++) {
+      const baseCourse = bases[i % bases.length];
+      let courseName = baseCourse.name;
+      if (i >= bases.length) {
+        courseName = getGeneratedName(cat, i - bases.length, baseCourse);
+      }
+      expandedCourses.push({
+        name: courseName,
+        mcqs: baseCourse.mcqs,
+        category: cat
+      });
+    }
+  }
+
+  console.log(`Seeding ${expandedCourses.length} courses with batch MCQ and TestSeries inserts...`);
+
+  for (const item of expandedCourses) {
     const isPremium = 
-      catCourse.name.includes("SSC CGL") || 
-      catCourse.name.includes("GATE") || 
-      catCourse.name.includes("SEBI") || 
-      catCourse.name.includes("Judiciary") || 
-      catCourse.name.includes("UPSC");
+      item.category === "SSC" || 
+      item.category === "PG Entrance Exam" || 
+      item.category === "Regulatory Body Exams" || 
+      item.category === "Judiciary Exams" || 
+      item.category === "Civil Services";
 
     const course = await prisma.course.create({
       data: { 
-        name: catCourse.name, 
+        name: item.name, 
         active: true,
         premium: isPremium
       }
     });
-    console.log(`Created course (ID: ${course.id}, Premium: ${isPremium}): ${course.name}`);
-    
-    // Seed MCQs
-    for (const q of catCourse.mcqs) {
-      await prisma.mCQQuestion.create({
-        data: {
-          courseId: course.id,
-          question: q.question,
-          options: q.options,
-          answer: q.answer,
-          hint: q.hint
-        }
-      });
-    }
-    console.log(`Seeded ${catCourse.mcqs.length} MCQs for ${course.name}`);
 
-    // Seed mock test series dynamically
+    // Seed MCQs in a batch
+    await prisma.mCQQuestion.createMany({
+      data: item.mcqs.map(q => ({
+        courseId: course.id,
+        question: q.question,
+        options: q.options,
+        answer: q.answer,
+        hint: q.hint || ""
+      }))
+    });
+
+    // Seed test series in a batch
     const subTests = generateSubTestsList(course.name, course.premium);
-    for (const test of subTests) {
-      await prisma.testSeries.create({
-        data: {
-          courseId: course.id,
-          name: test.name,
-          type: test.type,
-          qs: test.qs,
-          marks: test.marks,
-          duration: test.duration,
-          isFree: test.isFree
-        }
-      });
-    }
-    console.log(`Seeded ${subTests.length} Test Series entries for ${course.name}`);
+    await prisma.testSeries.createMany({
+      data: subTests.map(test => ({
+        courseId: course.id,
+        name: test.name,
+        type: test.type,
+        qs: test.qs,
+        marks: test.marks,
+        duration: test.duration,
+        isFree: test.isFree
+      }))
+    });
+
+    console.log(`Created course "${course.name}" (ID: ${course.id}) with 15 MCQs and 16 Test Series.`);
   }
+
   console.log('All done!');
 }
 

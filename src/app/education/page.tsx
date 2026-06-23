@@ -210,9 +210,9 @@ const supportOptions = [
     highlight: false,
   },
 ];
-// Helper to match courses to categories
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
+  if (name.includes("police") || name.includes("constable")) return "Police Exams";
   if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
   if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
   if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
@@ -227,7 +227,6 @@ const getCategoryForCourse = (courseName: string): string => {
   if (name.includes("electronic mechanic")) return "Electronic Mechanic";
   if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
   if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
-  if (name.includes("police") || name.includes("constable")) return "Police Exams";
   if (name.includes("b.ed")) return "B.Ed Entrance Exams";
   return "State Exams"; // Default fallback
 };
