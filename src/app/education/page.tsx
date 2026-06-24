@@ -212,22 +212,61 @@ const supportOptions = [
 ];
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
+  
+  // Specific Engineering disciplines first
+  if (name.includes("civil engineering")) return "Civil Engineering";
+  if (name.includes("electrical engineering")) return "Electrical Engineering";
+  if (name.includes("mechanical engineering") || name.includes("mechanical")) return "Mechanical Engineering";
+  if (name.includes("electronics & communication") || name.includes("electronics") || name.includes("ece")) return "Electronics & Communication Eng";
+  if (name.includes("computer science") || name.includes("cse")) return "Computer Science & Engineering";
+  if (name.includes("instrumentation")) return "Instrumentation Engineering";
+  if (name.includes("other engineering")) return "Other Engineering Exams";
+  
+  // Specific Teaching/Academic exams
+  if (name.includes("tgt") || name.includes("pgt")) return "TGT/PGT Exams";
+  if (name.includes("tet") || name.includes("prt")) return "TET/PRT Exams";
+  if (name.includes("net") || name.includes("set")) return "NET/SET Exams";
+  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
+  
+  // ITI and technical
+  if (name.includes("fitter")) return "Fitter";
+  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
+  if (name.includes("iti exam") || name.includes("iti")) return "ITI Exams";
+  
+  // Miscellaneous
+  if (name.includes("non-teaching") || name.includes("non teaching")) return "Non - Teaching Exams";
+  if (name.includes("food tech") || name.includes("food technology")) return "Food Technology";
+  if (name.includes("nursing recruitment") || name.includes("nursing")) return "Nursing Recruitment Exams";
+  if (name.includes("accounting") || name.includes("commerce")) return "Accounting and Commerce";
+  if (name.includes("placement") || name.includes("campus placement")) return "Campus Placements";
+  if (name.includes("nra cet") || name.includes("nra")) return "NRA CET";
+  if (name.includes("government org") || name.includes("gov org") || name.includes("govt org")) return "Government Organizations";
+  if (name.includes("ug entrance") || name.includes("under graduate")) return "UG Entrance Exams";
+  if (name.includes("cuet")) return "CUET";
+  if (name.includes("mba")) return "MBA Entrance Exam";
+  
+  // Standard categories
   if (name.includes("police") || name.includes("constable")) return "Police Exams";
   if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
   if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
   if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
+  
+  // Banking
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("banking")) {
+    if (name.includes("insurance")) return "Banking & Insurance";
+    return "Banking";
+  }
   if (name.includes("bank") || name.includes("sbi") || name.includes("ibps") || name.includes("lic") || name.includes("rbi")) return "Banking & Insurance";
+  
   if (name.includes("sebi") || name.includes("nabard") || name.includes("regulatory")) return "Regulatory Body Exams";
-  if (name.includes("jrf") || name.includes("net") || name.includes("gate")) return "PG Entrance Exam";
-  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
-  if (name.includes("fitter")) return "Fitter";
-  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("jrf") || name.includes("gate")) return "PG Entrance Exam";
   if (name.includes("judiciary")) return "Judiciary Exams";
   if (name.includes("paramedical")) return "Paramedical Exams";
-  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
   if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
   if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
-  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  
   return "State Exams"; // Default fallback
 };
 
@@ -250,6 +289,66 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("lic") || name.includes("insurance")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("non-teaching") || name.includes("non teaching")) {
+    return { questions: 120, marks: 120, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tgt") || name.includes("pgt")) {
+    return { questions: 125, marks: 125, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tet") || name.includes("prt")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("food technology") || name.includes("food tech")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("nursing")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("civil engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("electrical engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("electronics & communication")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("computer science") || name.includes("cse")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("instrumentation")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("other engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("iti exam") || name.includes("iti")) {
+    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("accounting") || name.includes("commerce")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("placement")) {
+    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("government org") || name.includes("gov org")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ug entrance")) {
+    return { questions: 100, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("cuet")) {
+    return { questions: 75, marks: 300, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("mba")) {
+    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
+  }
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
   }
@@ -521,7 +620,14 @@ export default function EducationPage() {
                       "Teaching Exams", "Fitter", "Electrician", "AE/JE Exams",
                       "Judiciary Exams", "Paramedical Exams", "Electronic Mechanic",
                       "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
-                      "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+                      "Civil Services", "Police Exams", "B.Ed Entrance Exams",
+                      "Non - Teaching Exams", "TGT/PGT Exams", "TET/PRT Exams", "NET/SET Exams",
+                      "Food Technology", "Nursing Recruitment Exams", "Mechanical Engineering",
+                      "Civil Engineering", "Electrical Engineering", "Electronics & Communication Eng",
+                      "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
+                      "Accounting and Commerce", "Campus Placements", "NRA CET",
+                      "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
+                      "CUET", "MBA Entrance Exam", "Banking"
                     ].map((cat, idx) => (
                       <li key={idx}>
                         <button
@@ -546,7 +652,14 @@ export default function EducationPage() {
                       "Teaching Exams", "Fitter", "Electrician", "AE/JE Exams",
                       "Judiciary Exams", "Paramedical Exams", "Electronic Mechanic",
                       "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
-                      "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+                      "Civil Services", "Police Exams", "B.Ed Entrance Exams",
+                      "Non - Teaching Exams", "TGT/PGT Exams", "TET/PRT Exams", "NET/SET Exams",
+                      "Food Technology", "Nursing Recruitment Exams", "Mechanical Engineering",
+                      "Civil Engineering", "Electrical Engineering", "Electronics & Communication Eng",
+                      "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
+                      "Accounting and Commerce", "Campus Placements", "NRA CET",
+                      "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
+                      "CUET", "MBA Entrance Exam", "Banking"
                     ].map((cat, idx) => (
                       <li key={idx}>
                         <button

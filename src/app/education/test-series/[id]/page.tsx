@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,7 +23,9 @@ import {
   CreditCard,
   QrCode,
   Smartphone,
-  Loader2
+  Loader2,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import Swal from "sweetalert2";
 
@@ -73,6 +75,66 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("lic") || name.includes("insurance")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("non-teaching") || name.includes("non teaching")) {
+    return { questions: 120, marks: 120, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tgt") || name.includes("pgt")) {
+    return { questions: 125, marks: 125, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tet") || name.includes("prt")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("food technology") || name.includes("food tech")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("nursing")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("civil engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("electrical engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("electronics & communication")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("computer science") || name.includes("cse")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("instrumentation")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("other engineering")) {
+    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("iti exam") || name.includes("iti")) {
+    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("accounting") || name.includes("commerce")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("placement")) {
+    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("government org") || name.includes("gov org")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ug entrance")) {
+    return { questions: 100, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("cuet")) {
+    return { questions: 75, marks: 300, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("mba")) {
+    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
+  }
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
   }
@@ -169,6 +231,152 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
 const getCourseSubjects = (courseName: string) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("lic") || name.includes("insurance")) {
+    return [
+      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 20 },
+      { name: "General Awareness & Current Affairs", qs: 20, marks: 20, duration: 10 },
+      { name: "Insurance & Financial Market Awareness", qs: 20, marks: 20, duration: 10 }
+    ];
+  }
+  if (name.includes("non-teaching") || name.includes("non teaching")) {
+    return [
+      { name: "General Awareness", qs: 30, marks: 30, duration: 30 },
+      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 30 },
+      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 30 },
+      { name: "Language Competency (Hindi & English)", qs: 30, marks: 30, duration: 30 }
+    ];
+  }
+  if (name.includes("tgt") || name.includes("pgt")) {
+    return [
+      { name: "Educational Psychology & Pedagogy", qs: 40, marks: 40, duration: 40 },
+      { name: "General Studies & General Awareness", qs: 35, marks: 35, duration: 30 },
+      { name: "Subject Specialization", qs: 50, marks: 50, duration: 50 }
+    ];
+  }
+  if (name.includes("tet") || name.includes("prt")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I & II", qs: 40, marks: 40, duration: 40 },
+      { name: "Mathematics & Science", qs: 40, marks: 40, duration: 40 },
+      { name: "Environmental Studies", qs: 40, marks: 40, duration: 40 }
+    ];
+  }
+  if (name.includes("food technology") || name.includes("food tech")) {
+    return [
+      { name: "Food Chemistry & Nutrition", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Microbiology & Safety", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Processing & Engineering", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Laws & Standards", qs: 25, marks: 25, duration: 30 }
+    ];
+  }
+  if (name.includes("nursing")) {
+    return [
+      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 30 },
+      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 30 },
+      { name: "Medical-Surgical Nursing", qs: 25, marks: 25, duration: 30 },
+      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 30 }
+    ];
+  }
+  if (name.includes("civil engineering")) {
+    return [
+      { name: "Structural Engineering & Concrete Technology", qs: 30, marks: 30, duration: 50 },
+      { name: "Geotechnical & Transportation Engineering", qs: 30, marks: 30, duration: 50 },
+      { name: "Environmental & Water Resources Engineering", qs: 40, marks: 40, duration: 80 }
+    ];
+  }
+  if (name.includes("electrical engineering")) {
+    return [
+      { name: "Electric Circuits & Fields", qs: 30, marks: 30, duration: 50 },
+      { name: "Electrical Machines & Power Systems", qs: 40, marks: 40, duration: 70 },
+      { name: "Control Systems & Power Electronics", qs: 30, marks: 30, duration: 60 }
+    ];
+  }
+  if (name.includes("electronics & communication")) {
+    return [
+      { name: "Electronic Devices & Analog Circuits", qs: 30, marks: 30, duration: 55 },
+      { name: "Digital Circuits & Microprocessors", qs: 30, marks: 30, duration: 55 },
+      { name: "Signals & Communication Systems", qs: 40, marks: 40, duration: 70 }
+    ];
+  }
+  if (name.includes("computer science") || name.includes("cse")) {
+    return [
+      { name: "Programming, Data Structures & Algorithms", qs: 35, marks: 35, duration: 60 },
+      { name: "Computer Organization & Operating Systems", qs: 35, marks: 35, duration: 60 },
+      { name: "Databases & Computer Networks", qs: 30, marks: 30, duration: 60 }
+    ];
+  }
+  if (name.includes("instrumentation")) {
+    return [
+      { name: "Sensors & Industrial Instrumentation", qs: 30, marks: 30, duration: 50 },
+      { name: "Control Systems & Process Control", qs: 30, marks: 30, duration: 50 },
+      { name: "Measurements & Signal Conditioning", qs: 40, marks: 40, duration: 80 }
+    ];
+  }
+  if (name.includes("other engineering")) {
+    return [
+      { name: "Engineering Mathematics", qs: 30, marks: 30, duration: 50 },
+      { name: "Basic Science & Engineering Mechanics", qs: 45, marks: 45, duration: 80 },
+      { name: "General Aptitude & Professional Ethics", qs: 25, marks: 25, duration: 50 }
+    ];
+  }
+  if (name.includes("iti exam") || name.includes("iti")) {
+    return [
+      { name: "Trade Theory", qs: 20, marks: 40, duration: 50 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 35 }
+    ];
+  }
+  if (name.includes("accounting") || name.includes("commerce")) {
+    return [
+      { name: "Financial Accounting & Auditing", qs: 35, marks: 35, duration: 40 },
+      { name: "Business Economics & Finance", qs: 35, marks: 35, duration: 40 },
+      { name: "Corporate Laws & Taxation", qs: 30, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("placement")) {
+    return [
+      { name: "Quantitative Aptitude", qs: 20, marks: 20, duration: 20 },
+      { name: "Logical Reasoning", qs: 20, marks: 20, duration: 20 },
+      { name: "Verbal Ability & Technical", qs: 20, marks: 20, duration: 20 }
+    ];
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return [
+      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
+      { name: "Reasoning Ability", qs: 25, marks: 25, duration: 15 },
+      { name: "English Language", qs: 25, marks: 25, duration: 15 },
+      { name: "General Awareness", qs: 25, marks: 25, duration: 15 }
+    ];
+  }
+  if (name.includes("government org") || name.includes("gov org")) {
+    return [
+      { name: "General Aptitude & Reasoning", qs: 30, marks: 30, duration: 35 },
+      { name: "General Studies & English", qs: 30, marks: 30, duration: 35 },
+      { name: "Technical Awareness & Post Specific", qs: 40, marks: 40, duration: 50 }
+    ];
+  }
+  if (name.includes("ug entrance")) {
+    return [
+      { name: "General Aptitude", qs: 30, marks: 45, duration: 35 },
+      { name: "Logical Reasoning & English", qs: 40, marks: 60, duration: 50 },
+      { name: "Elementary Mathematics", qs: 30, marks: 45, duration: 35 }
+    ];
+  }
+  if (name.includes("cuet")) {
+    return [
+      { name: "Section IA: Languages", qs: 20, marks: 80, duration: 15 },
+      { name: "Section II: Domain Specific", qs: 25, marks: 100, duration: 25 },
+      { name: "Section III: General Test", qs: 30, marks: 120, duration: 20 }
+    ];
+  }
+  if (name.includes("mba")) {
+    return [
+      { name: "Quantitative Ability", qs: 22, marks: 66, duration: 40 },
+      { name: "Data Interpretation & Logical Reasoning", qs: 20, marks: 60, duration: 40 },
+      { name: "Verbal Ability & Reading Comprehension", qs: 24, marks: 72, duration: 40 }
+    ];
+  }
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return [
       { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 20 },
@@ -313,11 +521,10 @@ const getCourseSubjects = (courseName: string) => {
 const generateSubTestsList = (courseName: string, isPremium: boolean): SubTest[] => {
   const stats = getRealExamStats(courseName);
   const subjects = getCourseSubjects(courseName);
-  
   const tests: SubTest[] = [];
-  
-  // 1. Add 5 Full Mocks
-  for (let i = 1; i <= 5; i++) {
+
+  // 1. Full Length Mock Tests (10 tests)
+  for (let i = 1; i <= 10; i++) {
     tests.push({
       id: `fmt-${i}`,
       name: `Full Length Mock Test ${i}`,
@@ -328,61 +535,163 @@ const generateSubTestsList = (courseName: string, isPremium: boolean): SubTest[]
       isFree: false
     });
   }
-  
-  // 2. Add Subject Tests based on the real subjects
-  subjects.forEach((sub, index) => {
-    tests.push({
-      id: `st-${index + 1}`,
-      name: `Subject Test: ${sub.name}`,
-      type: "Subject Test",
-      qs: sub.qs,
-      marks: sub.marks,
-      duration: sub.duration,
-      isFree: false
+
+  // 2. Subject Tests (3 tests per subject)
+  let stCounter = 1;
+  subjects.forEach((sub) => {
+    for (let i = 1; i <= 3; i++) {
+      tests.push({
+        id: `st-${stCounter++}`,
+        name: `Subject Test ${i}: ${sub.name}`,
+        type: "Subject Test",
+        qs: sub.qs,
+        marks: sub.marks,
+        duration: sub.duration,
+        isFree: false
+      });
+    }
+  });
+
+  // 3. Chapter Tests (3 tests per subject)
+  let ctCounter = 1;
+  subjects.forEach((sub) => {
+    const chapters = [
+      { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
+      { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
+      { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
+    ];
+    chapters.forEach((chap, chapIdx) => {
+      tests.push({
+        id: `ct-${ctCounter++}`,
+        name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
+        type: "Chapter Test",
+        qs: chap.qs,
+        marks: chap.marks,
+        duration: chap.duration,
+        isFree: false
+      });
     });
   });
-  
-  // 3. Add Chapter Tests
-  tests.push({
-    id: "ct-1",
-    name: "Chapter Test 1: Foundation Concept Booster",
-    type: "Chapter Test",
-    qs: 15,
-    marks: 30,
-    duration: 15,
-    isFree: false
-  });
-  tests.push({
-    id: "ct-2",
-    name: "Chapter Test 2: Core Topic Evaluation",
-    type: "Chapter Test",
-    qs: 20,
-    marks: 40,
-    duration: 20,
-    isFree: false
-  });
-  
-  // 4. Add Previous Year Papers
-  tests.push({
-    id: "pyp-1",
-    name: "Previous Year Question Paper (2025)",
-    type: "PYP",
-    qs: stats.questions,
-    marks: stats.marks,
-    duration: stats.duration,
-    isFree: false
-  });
-  
-  // Apply free/paid logic dynamically
-  tests.forEach((test, idx) => {
+
+  // 4. Previous Year Papers (6 tests)
+  for (let i = 0; i < 6; i++) {
+    const year = 2020 + i;
+    tests.push({
+      id: `pyp-${i + 1}`,
+      name: `Previous Year Paper (${year} Exam)`,
+      type: "PYP",
+      qs: stats.questions,
+      marks: stats.marks,
+      duration: stats.duration,
+      isFree: false
+    });
+  }
+
+  // Set isFree flag per type/category: Exactly the first 4 of each type are free
+  const typeCounters: Record<string, number> = {};
+  tests.forEach((test) => {
     if (!isPremium) {
       test.isFree = true;
     } else {
-      test.isFree = (idx < 3); // exactly first 3 tests are Free
+      const currentCount = typeCounters[test.type] || 0;
+      test.isFree = (currentCount < 4);
+      typeCounters[test.type] = currentCount + 1;
     }
   });
-  
+
   return tests;
+};
+
+const TabHeader = ({
+  tabs,
+  activeId,
+  onChange
+}: {
+  tabs: { id: string; label: string }[];
+  activeId: string;
+  onChange: (id: string) => void;
+}) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(false);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setShowLeft(scrollLeft > 5);
+      setShowRight(scrollLeft < scrollWidth - clientWidth - 5);
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener("resize", checkScroll);
+    return () => window.removeEventListener("resize", checkScroll);
+  }, [tabs]);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 200;
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth"
+      });
+      setTimeout(checkScroll, 300);
+    }
+  };
+
+  return (
+    <div className="relative flex items-center bg-white border border-slate-200 rounded-xl px-2 shadow-xs select-none">
+      {showLeft && (
+        <button
+          type="button"
+          onClick={() => scroll("left")}
+          className="absolute left-2 z-10 p-1.5 bg-white hover:bg-slate-50 text-sky-500 hover:text-sky-600 transition cursor-pointer border-none flex items-center justify-center rounded-lg"
+        >
+          <ChevronLeft className="h-5 w-5 stroke-[2.5]" />
+        </button>
+      )}
+      <div
+        ref={scrollRef}
+        onScroll={checkScroll}
+        className="flex-1 overflow-x-auto scroll-smooth flex items-center gap-8 py-3 px-6 scrollbar-none"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        <style dangerouslySetInnerHTML={{__html: `
+          ::-webkit-scrollbar {
+            display: none !important;
+          }
+        `}} />
+        {tabs.map((tab) => {
+          const isActive = tab.id === activeId;
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => onChange(tab.id)}
+              className={`relative py-1 text-xs font-bold transition-all cursor-pointer border-none bg-transparent whitespace-nowrap shrink-0 ${
+                isActive ? "text-sky-500" : "text-slate-655 hover:text-slate-900"
+              }`}
+            >
+              {tab.label}
+              {isActive && (
+                <span className="absolute bottom-[-13px] left-0 right-0 h-[3px] bg-sky-400 rounded-full animate-in fade-in zoom-in duration-200" />
+              )}
+            </button>
+          );
+        })}
+      </div>
+      {showRight && (
+        <button
+          type="button"
+          onClick={() => scroll("right")}
+          className="absolute right-2 z-10 p-1.5 bg-white hover:bg-slate-50 text-sky-500 hover:text-sky-600 transition cursor-pointer border-none flex items-center justify-center rounded-lg"
+        >
+          <ChevronRight className="h-5 w-5 stroke-[2.5]" />
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default function TestSeriesDetailsPage() {
@@ -394,8 +703,14 @@ export default function TestSeriesDetailsPage() {
 
   // Tabs & Lock modal state
   const [activeSubTab, setActiveSubTab] = useState<string>("All");
+  const [activeSubject, setActiveSubject] = useState<string>("All");
   const [isLockModalOpen, setIsLockModalOpen] = useState<boolean>(false);
   const [selectedTestName, setSelectedTestName] = useState<string>("");
+
+  const handleSubTabChange = (tabId: string) => {
+    setActiveSubTab(tabId);
+    setActiveSubject("All");
+  };
 
   // Student purchases and auth states
   const [purchasedCourseIds, setPurchasedCourseIds] = useState<number[]>([]);
@@ -587,17 +902,69 @@ export default function TestSeriesDetailsPage() {
       }))
     : generateSubTestsList(course.name, course.premium);
 
-  // Apply pricing overrides at runtime
-  const subTestsList = rawSubTestsList.map(test => ({
-    ...test,
-    isFree: isCoursePassActive ? true : test.isFree
-  }));
+  // Dynamic free/paid runtime calculation: Exactly the first 4 of each type/category are free
+  const typeCounters: Record<string, number> = {};
+  const subTestsList = rawSubTestsList.map(test => {
+    let isFree = test.isFree;
+    const currentCount = typeCounters[test.type] || 0;
+    typeCounters[test.type] = currentCount + 1;
 
-  const filteredSubTests = subTestsList.filter((test) => {
-    if (activeSubTab === "All") return true;
-    if (activeSubTab === "Full Mock") return test.type === "Full Mock";
-    if (activeSubTab === "Subject Test") return test.type === "Subject Test" || test.type === "Chapter Test";
-    if (activeSubTab === "PYP") return test.type === "PYP";
+    if (!course.premium || isCoursePassActive) {
+      isFree = true;
+    } else {
+      isFree = (currentCount < 4);
+    }
+
+    return {
+      ...test,
+      isFree
+    };
+  });
+
+  const subjects = getCourseSubjects(course.name);
+
+  // Helper to determine subject of a test
+  const getTestSubject = (testItem: typeof subTestsList[0], index: number): string | null => {
+    const nameLower = testItem.name.toLowerCase();
+    const subjectNames = subjects.map(s => s.name);
+    for (const sub of subjectNames) {
+      const subLower = sub.toLowerCase();
+      if (nameLower.includes(subLower)) {
+        return sub;
+      }
+      const subNorm = subLower.replace(/\s*&\s*/g, " and ");
+      if (nameLower.includes(subNorm)) {
+        return sub;
+      }
+      const nameNorm = nameLower.replace(/\s*&\s*/g, " and ");
+      if (nameNorm.includes(subNorm)) {
+        return sub;
+      }
+    }
+    // Fallback partitioning
+    if (testItem.type === "Subject Test" || testItem.type === "Chapter Test") {
+      return subjectNames[index % subjectNames.length] || null;
+    }
+    return null;
+  };
+
+  const filteredSubTests = subTestsList.filter((test, index) => {
+    // 1. Filter by primary category tab
+    if (activeSubTab !== "All") {
+      if (activeSubTab === "Full Mock" && test.type !== "Full Mock") return false;
+      if (activeSubTab === "Subject Test" && test.type !== "Subject Test") return false;
+      if (activeSubTab === "Chapter Test" && test.type !== "Chapter Test") return false;
+      if (activeSubTab === "PYP" && test.type !== "PYP") return false;
+    }
+
+    // 2. Filter by subject sub-tab
+    if (activeSubject !== "All" && ["All", "Subject Test", "Chapter Test"].includes(activeSubTab)) {
+      const testSubject = getTestSubject(test, index);
+      if (testSubject !== activeSubject) {
+        return false;
+      }
+    }
+
     return true;
   });
 
@@ -700,30 +1067,38 @@ export default function TestSeriesDetailsPage() {
                     Practice Tests in this Series
                   </h2>
                   <div className="flex items-center gap-1 text-[11px] bg-slate-100 border border-slate-200 rounded-full px-3 py-1 text-slate-600 font-bold">
-                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "3 Free Tests Included" : "All Free Tests Included")}</span>
+                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "First 4 Tests Free in Each Category" : "All Free Tests Included")}</span>
                   </div>
                 </div>
 
                 {/* Sub-tabs filter */}
-                <div className="flex flex-wrap gap-2 border-b border-slate-100 pb-4">
-                  {[
-                    { id: "All", label: "All Tests" },
-                    { id: "Full Mock", label: "Full Length Mocks" },
-                    { id: "Subject Test", label: "Subject & Chapter Tests" },
-                    { id: "PYP", label: "Previous Papers" }
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveSubTab(tab.id)}
-                      className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer border-none outline-none ${
-                        activeSubTab === tab.id
-                          ? "bg-slate-900 text-white shadow-sm"
-                          : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
+                <div className="flex flex-col gap-4 border-b border-slate-105 pb-5">
+                  <TabHeader
+                    tabs={[
+                      { id: "All", label: "All Tests" },
+                      { id: "Full Mock", label: "Full Length Mocks" },
+                      { id: "Subject Test", label: "Subject Tests" },
+                      { id: "Chapter Test", label: "Chapter Tests" },
+                      { id: "PYP", label: "Previous Papers" }
+                    ]}
+                    activeId={activeSubTab}
+                    onChange={handleSubTabChange}
+                  />
+
+                  {/* Subject Filter Sub-tabs */}
+                  {["All", "Subject Test", "Chapter Test"].includes(activeSubTab) && subjects.length > 0 && (
+                    <div className="flex flex-col gap-2 bg-slate-50 p-3.5 rounded-2xl border border-slate-150">
+                      <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 select-none">Select Subject:</span>
+                      <TabHeader
+                        tabs={[
+                          { id: "All", label: "All Subjects" },
+                          ...subjects.map((sub) => ({ id: sub.name, label: sub.name }))
+                        ]}
+                        activeId={activeSubject}
+                        onChange={setActiveSubject}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* List of subtests */}

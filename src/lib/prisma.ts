@@ -5,6 +5,11 @@ dotenv.config({ path: ".env" });
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { Pool } from "pg";
+import { PrismaNeon } from "@prisma/adapter-neon";
+import { neonConfig } from "@neondatabase/serverless";
+import ws from "ws";
+
+neonConfig.webSocketConstructor = ws;
 
 const globalForPrisma = global as unknown as { prismaClientV5: PrismaClient };
 
@@ -13,11 +18,20 @@ let prismaInstance: PrismaClient;
 const dbUrl = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/flarelap_foundation?schema=public";
 const isLocal = dbUrl.includes("localhost") || dbUrl.includes("127.0.0.1");
 console.log("Prisma initializing with dbUrl:", dbUrl, "isLocal:", isLocal);
-const pool = new Pool({ 
-  connectionString: dbUrl,
-  ssl: isLocal ? false : { rejectUnauthorized: false }
-});
-const adapter = new PrismaPg(pool);
+
+let adapter;
+
+if (isLocal) {
+  const pool = new Pool({ 
+    connectionString: dbUrl,
+    ssl: false
+  });
+  adapter = new PrismaPg(pool);
+} else {
+  adapter = new PrismaNeon({
+    connectionString: dbUrl,
+  });
+}
 
 if (process.env.NODE_ENV === "production") {
   prismaInstance = new PrismaClient({ adapter });
@@ -30,3 +44,4 @@ if (process.env.NODE_ENV === "production") {
 
 export const prisma = prismaInstance;
 export default prisma;
+

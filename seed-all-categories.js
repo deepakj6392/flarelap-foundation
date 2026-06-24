@@ -4,11 +4,25 @@ dotenv.config({ path: '.env' });
 const { PrismaClient } = require('@prisma/client');
 const { PrismaPg } = require('@prisma/adapter-pg');
 const { Pool } = require('pg');
+const { PrismaNeon } = require('@prisma/adapter-neon');
+const { neonConfig } = require('@neondatabase/serverless');
+const ws = require('ws');
+
+neonConfig.webSocketConstructor = ws;
 
 const dbUrl = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/flarelap_foundation?schema=public";
 console.log('Connecting to database:', dbUrl);
-const pool = new Pool({ connectionString: dbUrl });
-const adapter = new PrismaPg(pool);
+
+const isLocal = dbUrl.includes("localhost") || dbUrl.includes("127.0.0.1");
+let adapter;
+
+if (isLocal) {
+  const pool = new Pool({ connectionString: dbUrl, ssl: false });
+  adapter = new PrismaPg(pool);
+} else {
+  adapter = new PrismaNeon({ connectionString: dbUrl });
+}
+
 const prisma = new PrismaClient({ adapter });
 
 const categoryCourses = [
@@ -531,11 +545,472 @@ const categoryCourses = [
       { question: 'What is the oxidation state of iron in rust (Fe2O3)?', options: ['+2', '+3', '0', '+6'], answer: 1, hint: 'Each oxygen is -2, so 2 * Fe + 3 * (-2) = 0 -> Fe = +3.' },
       { question: 'Which spectroscopic method is most commonly used to identify functional groups in organic molecules?', options: ['UV-Vis Spectroscopy', 'Infrared (IR) Spectroscopy', 'Mass Spectrometry', 'Flame Photometry'], answer: 1, hint: 'IR spectroscopy detects vibrational transitions unique to functional groups.' }
     ]
+  },
+  {
+    name: 'LIC AAO General Insurance Mock Exam',
+    mcqs: [
+      { question: 'Insurance premium is paid to:', options: ['Transfer the risk', 'Increase the profit', 'Reduce the liability', 'Avoid taxation'], answer: 0, hint: 'Premium is paid by the insured to transfer the financial risk of loss to the insurer.' },
+      { question: 'What does IRDAI stand for?', options: ['Insurance Regulatory and Development Authority of India', 'Indian Regulatory and Development Association of Insurance', 'Insurance Rights and Development Association of India', 'None of these'], answer: 0, hint: 'IRDAI is the statutory body that regulates and promotes the insurance and re-insurance industries in India.' },
+      { question: 'The principle of utmost good faith in insurance is known as:', options: ['Uberrimae Fidei', 'Caveat Emptor', 'Quid Pro Quo', 'Consensus ad idem'], answer: 0, hint: 'Uberrimae Fidei is a Latin phrase meaning utmost good faith, a core principle in all insurance contracts.' },
+      { question: 'A policy which covers loss of profit due to business interruption is:', options: ['Consequential Loss Policy', 'Marine Cargo Policy', 'Public Liability Policy', 'Reinsurance Policy'], answer: 0, hint: 'Consequential Loss Policy (or Business Interruption Insurance) covers profits lost during a shutdown.' },
+      { question: 'Which index represents inflation in retail price in India?', options: ['CPI', 'WPI', 'GDP Deflator', 'Sensex'], answer: 0, hint: 'Consumer Price Index (CPI) measures the retail price inflation of goods and services.' },
+      { question: 'What is the minimum capital required to set up an insurance company in India?', options: ['Rs 100 Crore', 'Rs 50 Crore', 'Rs 200 Crore', 'Rs 500 Crore'], answer: 0, hint: 'The Insurance Act, 1938 stipulates a minimum paid-up capital of Rs 100 Crore for direct insurers.' },
+      { question: 'Double insurance is common in:', options: ['Life Insurance', 'Marine Insurance', 'Fire Insurance', 'None of these'], answer: 0, hint: 'Double insurance occurs when the same subject matter is insured with two or more insurers.' },
+      { question: 'The person who assesses the value of property at the time of loss is called:', options: ['Surveyor/Loss Assessor', 'Actuary', 'Underwriter', 'Agent'], answer: 0, hint: 'Surveyors and Loss Assessors investigate, manage, and calculate the financial impact of claims.' },
+      { question: 'Reinsurance is done by:', options: ['An insurance company with another insurance company', 'An individual with multiple companies', 'A company with a bank', 'None of these'], answer: 0, hint: 'Reinsurance is insurance that is purchased by an insurance company from another insurance company.' },
+      { question: 'If an insured commits suicide within one year of taking life insurance, the company:', options: ['Might not pay the claim', 'Must pay the full claim', 'Pays double the claim', 'None of these'], answer: 0, hint: 'Standard suicide clauses in life insurance restrict or void coverage within the first 12 months.' },
+      { question: 'Third-party insurance is compulsory for:', options: ['Motor vehicles', 'Houses', 'Factories', 'Life'], answer: 0, hint: 'Motor Vehicles Act makes third-party liability insurance mandatory for all on-road vehicles.' },
+      { question: 'The pool of money collected from premiums is managed by:', options: ['Fund managers of insurance company', 'The government', 'IRDAI directly', 'None of these'], answer: 0, hint: 'Asset and liability management is handled by the insurance company\'s investment division.' },
+      { question: 'Which committee recommended the opening up of the insurance sector in India?', options: ['Malhotra Committee', 'Narasimham Committee', 'Raghuram Rajan Committee', 'Kelkar Committee'], answer: 0, hint: 'Malhotra Committee (1994) recommended reforms and opening up to private and foreign entries.' },
+      { question: 'Standard policy term for a health insurance policy is usually:', options: ['1 year', '5 years', '10 years', 'Whole life'], answer: 0, hint: 'Most health policies are issued for a 1-year term and renewed annually.' },
+      { question: 'Bancassurance refers to:', options: ['Selling insurance products through bank branches', 'Banks taking loans from insurance companies', 'Merging banks with insurance firms', 'None of these'], answer: 0, hint: 'Bancassurance is an arrangement where banks and insurance companies partner to sell insurance.' }
+    ]
+  },
+  {
+    name: 'EMRS Non-Teaching Staff Practice Mock',
+    mcqs: [
+      { question: 'In EMRS, what does the acronym EMRS stand for?', options: ['Eklavya Model Residential School', 'English Medium Rural School', 'Elementary Model Regional School', 'Educational Model Residential Scheme'], answer: 0, hint: 'EMRS schools are set up by the Ministry of Tribal Affairs for quality education of scheduled tribes.' },
+      { question: 'As a hostel warden, what is the primary duty towards students?', options: ['Ensure student safety and well-being', 'Manage the kitchen inventory only', 'Enforce strict silent hours all day', 'Report every minor issue to police'], answer: 0, hint: 'Student welfare, counseling, safety, and health care are the warden\'s primary responsibilities.' },
+      { question: 'POCSO Act is related to the protection of:', options: ['Children from sexual offences', 'Women from domestic violence', 'Elderly people from neglect', 'Animals from cruelty'], answer: 0, hint: 'POCSO stands for Protection of Children from Sexual Offences Act, enacted in 2012.' },
+      { question: 'What is the maximum age limit for child labor according to Indian law?', options: ['14 years', '16 years', '18 years', '12 years'], answer: 0, hint: 'Child Labour Act bans employment of children below 14 years in any occupation.' },
+      { question: 'Which key is used to refresh a web page in a browser?', options: ['F5', 'F1', 'F11', 'F2'], answer: 0, hint: 'F5 is the standard browser command to reload the current page.' },
+      { question: 'What is the full form of PDF?', options: ['Portable Document Format', 'Printable Document File', 'Personal Document Folder', 'Portable Data File'], answer: 0, hint: 'Adobe created the Portable Document Format (PDF) to present documents uniformly.' },
+      { question: 'A Junior Secretariat Assistant primarily handles:', options: ['Filing, typing, and record maintenance', 'Designing school curriculum', 'Teaching science subjects', 'Managing security guard shift'], answer: 0, hint: 'JSA is a clerical post focused on data entry, dispatching mail, and file organization.' },
+      { question: 'In MS Word, Ctrl + Z is a shortcut key for:', options: ['Undo', 'Redo', 'Cut', 'Paste'], answer: 0, hint: 'Ctrl + Z reverses the last typing or formatting action in MS Office.' },
+      { question: 'Which of the following is NOT an input device of a computer?', options: ['Printer', 'Keyboard', 'Mouse', 'Scanner'], answer: 0, hint: 'A printer is an output device that produces physical hard copies.' },
+      { question: 'The system of maintaining official files by recording correspondence is called:', options: ['Filing System', 'Accounting System', 'Auditing System', 'None of these'], answer: 0, hint: 'Filing keeps paper records organized in logical order.' },
+      { question: 'Which government portal is used for online public procurement in India?', options: ['GeM', 'SWAYAM', 'GSTN', 'BHIM'], answer: 0, hint: 'Government e-Marketplace (GeM) allows departments to procure common services/goods online.' },
+      { question: 'If a student falls sick in the school hostel, what should the warden do first?', options: ['Provide first aid and take to medical room', 'Call parents immediately', 'Ask other students to treat', 'Ignore till morning'], answer: 0, hint: 'Warden must render immediate care and check the student into the infirmary.' },
+      { question: 'What is the maximum number of rows in MS Excel 2016?', options: ['1,048,576', '65,536', '1,000,000', '500,000'], answer: 0, hint: 'Modern versions of Excel support exactly 1,048,576 rows per worksheet.' },
+      { question: 'Which department in a government school handles salaries and ledger accounts?', options: ['Accounts/Establishment Department', 'Academic Department', 'Sports Department', 'Hostel Department'], answer: 0, hint: 'Accounts handles budgeting, payments, salaries, and statutory deductions.' },
+      { question: 'Official communication sent from one department to another in the same organization is called:', options: ['Office Memorandum', 'Circular', 'Notification', 'Press Release'], answer: 0, hint: 'OM (Office Memorandum) is a standard tool for inter-office or internal instructions.' }
+    ]
+  },
+  {
+    name: 'UP TGT/PGT School Teacher Mock Test',
+    mcqs: [
+      { question: 'According to Piaget\'s stages of cognitive development, the stage of formal operations begins at age:', options: ['11-15 years', '2-7 years', '7-11 years', '0-2 years'], answer: 0, hint: 'Formal operational stage starts around age 11/12 and involves abstract logic thinking.' },
+      { question: 'What is the full form of NCERT?', options: ['National Council of Educational Research and Training', 'National Committee of Education, Research and Teaching', 'National Council of Elementary Research and Training', 'None of these'], answer: 0, hint: 'NCERT is an autonomous organisation advising the central and state governments on school education.' },
+      { question: 'Which teaching method is most suitable for developing creative thinking?', options: ['Brainstorming', 'Lecture method', 'Textbook reading', 'Memorization'], answer: 0, hint: 'Brainstorming encourages pupils to generate diverse ideas without premature criticism.' },
+      { question: 'The term Pedagogy refers to:', options: ['Theory and practice of teaching', 'Study of children\'s physical growth', 'Educational administration', 'None of these'], answer: 0, hint: 'Pedagogy covers the methods, theories, and instructional design used in education.' },
+      { question: 'Diagnostic evaluation in classroom teaching is used to:', options: ['Identify learning difficulties of students', 'Assign grades at the end of term', 'Select students for scholarships', 'Compare performance with other schools'], answer: 0, hint: 'Diagnostic tests check prior gaps and pinpoint specific concept difficulties.' },
+      { question: 'Who is known as the father of modern behaviorism?', options: ['John B. Watson', 'Sigmund Freud', 'Jean Piaget', 'B.F. Skinner'], answer: 0, hint: 'Watson published behaviorist principles first, advocating objective observations of actions.' },
+      { question: 'What is the primary purpose of homework given to school students?', options: ['Reinforce and practice classroom learning', 'Keep students busy at home', 'Reduce teacher workload', 'Evaluate parents\' knowledge'], answer: 0, hint: 'Homework consolidates the skills introduced during direct class instructions.' },
+      { question: 'Micro-teaching is used by teachers to practice:', options: ['Specific teaching skills', 'Complete classroom lessons', 'Preparing exam papers', 'Maintaining class discipline'], answer: 0, hint: 'Micro-teaching scales down class size and time to master specific instructional methods.' },
+      { question: 'According to NEP 2020, the current 10+2 system is replaced by:', options: ['5+3+3+4 system', '5+3+2+2 system', '3+4+4+5 system', '4+3+3+5 system'], answer: 0, hint: 'NEP replaces 10+2 with Foundational (5), Preparatory (3), Middle (3), and Secondary (4) stages.' },
+      { question: 'Cognitive domain in Bloom\'s Taxonomy deals with:', options: ['Knowledge and intellectual skills', 'Emotions and values', 'Physical and motor skills', 'Social skills'], answer: 0, hint: 'Cognitive covers memory, comprehension, application, analysis, synthesis, and evaluation.' },
+      { question: 'The teacher is considered a:', options: ['Facilitator of learning', 'Authoritarian ruler', 'Passive observer', 'Information dispenser'], answer: 0, hint: 'Modern child-centric education positions the teacher as a guide/facilitator.' },
+      { question: 'Inclusive education means:', options: ['Providing equal learning opportunities to all children', 'Separating disabled kids', 'Special curriculum for bright children', 'None of these'], answer: 0, hint: 'Inclusive classes integrate special needs kids in general educational classrooms.' },
+      { question: 'Educational psychology is the study of:', options: ['How people learn in educational settings', 'School management systems', 'Teacher recruitment processes', 'None of these'], answer: 0, hint: 'It focuses on student development, learning theories, motivation, and instruction.' },
+      { question: 'Which agency is responsible for curriculum design for school education in India?', options: ['NCERT', 'UGC', 'AICTE', 'NCTE'], answer: 0, hint: 'NCERT frames the National Curriculum Framework (NCF) for school boards.' },
+      { question: 'What is the main objective of formative assessment?', options: ['Monitor student learning to provide ongoing feedback', 'Rank students', 'Certify final grades', 'Pass or fail students'], answer: 0, hint: 'Formative assessments occur mid-course to identify gaps and adjust active learning.' }
+    ]
+  },
+  {
+    name: 'Super TET Primary School Teacher Practice Mock',
+    mcqs: [
+      { question: 'Child Development starts from:', options: ['Prenatal stage', 'Infancy', 'Early childhood', 'Late childhood'], answer: 0, hint: 'Development begins at conception (prenatal period) and continues across life.' },
+      { question: 'Under the RTE Act 2009, pupil-teacher ratio for primary classes (up to class V) should be:', options: ['30:1', '35:1', '40:1', '25:1'], answer: 0, hint: 'RTE Act dictates a 30:1 ratio for elementary primary levels.' },
+      { question: 'Which of the following is a primary socialization agency?', options: ['Family', 'School', 'Media', 'Government'], answer: 0, hint: 'Family is the immediate and first source of language and values for a child.' },
+      { question: 'The concept of Zone of Proximal Development (ZPD) was given by:', options: ['Lev Vygotsky', 'Jean Piaget', 'Jerome Bruner', 'Lawrence Kohlberg'], answer: 0, hint: 'Vygotsky defined ZPD as the difference between independent ability and assisted potential.' },
+      { question: 'Dysgraphia is a learning disability characterized by difficulty in:', options: ['Writing', 'Reading', 'Calculation', 'Speaking'], answer: 0, hint: 'Dysgraphia primarily affects fine motor writing skills and spelling mechanics.' },
+      { question: 'A primary teacher should focus on which type of teaching aid for young kids?', options: ['Concrete and visual objects', 'Abstract lectures', 'Reference textbooks', 'Video lectures only'], answer: 0, hint: 'Children learn best from tangible objects they can touch and see.' },
+      { question: 'What is the main source of energy for the earth?', options: ['Sun', 'Coal', 'Petroleum', 'Wind'], answer: 0, hint: 'Solar energy fuels weather systems, water cycles, and plant photosynthesis.' },
+      { question: 'In a primary school, the primary language of instruction should be:', options: ['Mother tongue / Regional language', 'English', 'Hindi', 'Sanskrit'], answer: 0, hint: 'Primary cognitive expansion is smoothest in the child\'s native tongue.' },
+      { question: 'According to Vygotsky, children learn language through:', options: ['Social interaction', 'Imitation only', 'Innate mechanism', 'None of these'], answer: 0, hint: 'Sociocultural interactions drive the internalization of linguistic signs.' },
+      { question: 'The process of taking in new information into existing mental schemas is:', options: ['Assimilation', 'Accommodation', 'Equilibration', 'Schema creation'], answer: 0, hint: 'Assimilation fits new data into current cognitive constructs without changing them.' },
+      { question: 'Which method is most effective for teaching subtraction to primary students?', options: ['Concrete representations like beads', 'Writing formula on blackboard', 'Memorizing tables', 'Reading textbook aloud'], answer: 0, hint: 'Manipulative objects help visualize subtraction operations.' },
+      { question: 'The environment studies (EVS) syllabus at primary level is designed on:', options: ['Thematic approach', 'Disciplinary approach', 'Subject-wise approach', 'None of these'], answer: 0, hint: 'EVS integrates family, food, shelter, water, and travel into themes.' },
+      { question: 'Which of the following is a biotic component of environment?', options: ['Plants', 'Air', 'Water', 'Soil'], answer: 0, hint: 'Biotic components comprise the living parts of an ecosystem, like flora and fauna.' },
+      { question: 'The teacher should treat student mistakes as:', options: ['Windows into student thinking', 'Signs of low intelligence', 'Violations of discipline', 'Occasions for punishment'], answer: 0, hint: 'Errors show current misconceptions and provide teaching guideposts.' },
+      { question: 'Play-way method of teaching was introduced by:', options: ['Froebel', 'Montessori', 'John Dewey', 'Rousseau'], answer: 0, hint: 'Friedrich Froebel, the creator of Kindergarten, integrated play and learning.' }
+    ]
+  },
+  {
+    name: 'FSSAI Food Technology Officer Mock Exam',
+    mcqs: [
+      { question: 'Which agency regulates food safety standards in India?', options: ['FSSAI', 'ISI', 'AGMARK', 'BIS'], answer: 0, hint: 'Food Safety and Standards Authority of India (FSSAI) is the apex food regulator.' },
+      { question: 'What is the primary purpose of food pasteurization?', options: ['Destroy pathogenic microorganisms', 'Improve food taste', 'Increase food weight', 'Bleach the food color'], answer: 0, hint: 'Pasteurization uses heat to kill disease-carrying bacteria and extend shelf life.' },
+      { question: 'The temperature range of Danger Zone for food safety is:', options: ['5°C to 60°C', '0°C to 100°C', '-20°C to 0°C', '60°C to 120°C'], answer: 0, hint: 'Pathogens replicate rapidly in foods kept between 5°C and 60°C.' },
+      { question: 'Which acid is naturally present in lemon?', options: ['Citric acid', 'Acetic acid', 'Lactic acid', 'Tartaric acid'], answer: 0, hint: 'Citrus fruits contain high levels of organic citric acid.' },
+      { question: 'HTST pasteurization of milk is carried out at:', options: ['72°C for 15 seconds', '63°C for 30 minutes', '100°C for 1 minute', '135°C for 2 seconds'], answer: 0, hint: 'High-Temperature Short-Time (HTST) pasteurizer runs at 71.7°C to 72°C for 15 seconds.' },
+      { question: 'What does HACCP stand for?', options: ['Hazard Analysis Critical Control Point', 'Hazard Assessment Common Control Protocol', 'Hygiene and Cleanliness Control Process', 'None of these'], answer: 0, hint: 'HACCP is a systematic preventive approach to food safety from biological/chemical hazards.' },
+      { question: 'The blue-green mold found on bread is typically:', options: ['Penicillium', 'Aspergillus', 'Rhizopus', 'Yeast'], answer: 0, hint: 'Penicillium glaucum or digitatum is a common mold on organic starches.' },
+      { question: 'Food additive MSG stands for:', options: ['Monosodium glutamate', 'Methyl sodium glycolate', 'Mono sodium glyceride', 'None of these'], answer: 0, hint: 'MSG is the sodium salt of glutamic acid, used as a flavor enhancer.' },
+      { question: 'Which vitamin is highly sensitive to heat and easily destroyed during cooking?', options: ['Vitamin C', 'Vitamin A', 'Vitamin D', 'Vitamin K'], answer: 0, hint: 'Ascorbic acid (Vitamin C) oxidizes and breaks down at boiling temperatures.' },
+      { question: 'The major protein present in cow\'s milk is:', options: ['Casein', 'Albumin', 'Gluten', 'Myosin'], answer: 0, hint: 'Casein forms about 80% of total milk proteins.' },
+      { question: 'Which gas is filled in potato chip packets to prevent rancidity?', options: ['Nitrogen', 'Oxygen', 'Carbon dioxide', 'Helium'], answer: 0, hint: 'Nitrogen displaces oxygen, preventing oxidation of lipids.' },
+      { question: 'Water activity (aw) in foods represents:', options: ['Available free water for microbial growth', 'Total water content', 'Bound water content', 'None of these'], answer: 0, hint: 'Water activity is the ratio of vapor pressure of food to pure water.' },
+      { question: 'Rigor mortis is related to the processing of:', options: ['Meat', 'Fruits', 'Vegetables', 'Grains'], answer: 0, hint: 'Rigor mortis represents post-mortem stiffening of muscle fibers in meat.' },
+      { question: 'Canning of food was invented by:', options: ['Nicolas Appert', 'Louis Pasteur', 'Alexander Fleming', 'Robert Koch'], answer: 0, hint: 'Appert invented preservation by placing food in jars and heating them in 1810.' },
+      { question: 'FSS Act was enacted by the Parliament of India in the year:', options: ['2006', '2011', '2000', '2016'], answer: 0, hint: 'The Food Safety and Standards Act was passed in 2006, consolidating old laws.' }
+    ]
+  },
+  {
+    name: 'AIIMS NORCET Nursing Officer Practice Mock',
+    mcqs: [
+      { question: 'What is the normal pulse rate of a healthy adult?', options: ['60-100 bpm', '50-60 bpm', '100-120 bpm', '40-50 bpm'], answer: 0, hint: 'The normal range of adult heart beats is 60 to 100 beats per minute.' },
+      { question: 'Which route of drug administration provides the fastest absorption?', options: ['Intravenous (IV)', 'Oral', 'Intramuscular (IM)', 'Subcutaneous'], answer: 0, hint: 'IV delivery injects drugs directly into systemic circulation.' },
+      { question: 'The infection acquired by a patient during hospital stay is called:', options: ['Nosocomial infection', 'Idiopathic infection', 'Latent infection', 'Iatrogenic infection'], answer: 0, hint: 'Hospital-acquired infections are referred to as nosocomial.' },
+      { question: 'What is the size of an IV cannula used for blood transfusion in adults?', options: ['18 G (Green)', '22 G (Blue)', '24 G (Yellow)', '26 G (Purple)'], answer: 0, hint: 'A larger bore (18 Gauge) is required to prevent hemolysis during rapid blood infusions.' },
+      { question: 'Which position is recommended for a patient who is short of breath?', options: ['Fowler\'s position', 'Supine position', 'Prone position', 'Trendelenburg position'], answer: 0, hint: 'Fowler\'s (semi-sitting) allows maximal lung chest expansion.' },
+      { question: 'What is the primary cause of bedsores (decubitus ulcers)?', options: ['Prolonged pressure on bony prominences', 'Excess nutrition', 'Frequent bathing', 'High blood pressure'], answer: 0, hint: 'Ischemia due to local tissue compression cuts off local circulation.' },
+      { question: 'What is the normal pH of arterial blood?', options: ['7.35 - 7.45', '6.80 - 7.00', '7.00 - 7.15', '7.50 - 7.60'], answer: 0, hint: 'Tight blood pH buffers must remain within 7.35 to 7.45 for metabolic enzymes.' },
+      { question: 'The instrument used to check the lungs and heart sounds is:', options: ['Stethoscope', 'Sphygmomanometer', 'Otoscope', 'Laryngoscope'], answer: 0, hint: 'A stethoscope amplifies internal body acoustic sounds.' },
+      { question: 'Which electrolyte imbalance is majorly associated with cardiac arrhythmias?', options: ['Potassium (K+)', 'Sodium (Na+)', 'Calcium (Ca2+)', 'Magnesium (Mg2+)'], answer: 0, hint: 'Potassium drives cardiac cell repolarization; hyper/hypokalemia causes dysrhythmias.' },
+      { question: 'The first milk produced by the mother after childbirth is called:', options: ['Colostrum', 'Fore-milk', 'Hind-milk', 'Transitional milk'], answer: 0, hint: 'Colostrum is thick, yellowish, and rich in maternal immunoglobulins.' },
+      { question: 'Which vitamin deficiency causes night blindness?', options: ['Vitamin A', 'Vitamin B12', 'Vitamin C', 'Vitamin D'], answer: 0, hint: 'Vitamin A (retinol) is required to form visual purple rhodopsin.' },
+      { question: 'The method used to open the airway of a suspected spinal injury patient is:', options: ['Jaw-thrust maneuver', 'Head-tilt chin-lift', 'Heimlich maneuver', 'None of these'], answer: 0, hint: 'Jaw-thrust opens the airway without hyperextending the cervical neck.' },
+      { question: 'Which hormone increases water reabsorption in the kidneys?', options: ['Antidiuretic hormone (ADH)', 'Aldosterone', 'Insulin', 'Thyroxine'], answer: 0, hint: 'ADH inserts aquaporins in collecting ducts to retain blood water.' },
+      { question: 'What is the color code of a bio-medical waste bag for discarding anatomical waste?', options: ['Yellow', 'Red', 'Blue', 'Black'], answer: 0, hint: 'Placenta, organs, and tissue waste go in yellow incinerator bags.' },
+      { question: 'What is the standard sterilization temperature and pressure in an autoclave?', options: ['121°C at 15 psi for 15-20 mins', '100°C at 10 psi for 30 mins', '134°C at 30 psi for 5 mins', 'None of these'], answer: 0, hint: 'Pressurized steam reaches 121°C to kill heat-resistant bacterial spores.' }
+    ]
+  },
+  {
+    name: 'Civil Engineering Core Practice Mock',
+    mcqs: [
+      { question: 'What is the main raw material used for manufacturing Portland cement?', options: ['Limestone', 'Clay', 'Gypsum', 'Silica'], answer: 0, hint: 'Calcareous raw materials (limestone/chalk) provide lime (CaO) for clinker.' },
+      { question: 'The modular brick size is:', options: ['19 cm x 9 cm x 9 cm', '20 cm x 10 cm x 10 cm', '22.8 cm x 11.2 cm x 7 cm', '20 cm x 20 cm x 10 cm'], answer: 0, hint: 'Nominal brick size is 20x10x10 cm, while standard size is 19x9x9 cm.' },
+      { question: 'The slump test is used to measure concrete\'s:', options: ['Workability', 'Compressive strength', 'Tensile strength', 'Soundness'], answer: 0, hint: 'The distance concrete drops measures mix workability and ease of placement.' },
+      { question: 'Poisson\'s ratio for concrete is approximately:', options: ['0.15 to 0.20', '0.35 to 0.40', '0.45 to 0.50', '0.05 to 0.08'], answer: 0, hint: 'Standard structural concrete has a Poisson\'s ratio in the range of 0.15-0.2.' },
+      { question: 'A beam supported on more than two supports is called:', options: ['Continuous beam', 'Simply supported beam', 'Cantilever beam', 'Fixed beam'], answer: 0, hint: 'Continuous beams span over multiple intermediate column supports.' },
+      { question: 'The maximum shear stress in a rectangular beam cross-section occurs at:', options: ['Neutral axis', 'Top fiber', 'Bottom fiber', 'Mid-depth of top half'], answer: 0, hint: 'Shear stress distribution is parabolic, peaking at the neutral axis layer.' },
+      { question: 'According to Terzaghi, the bearing capacity of soil depends on:', options: ['Cohesion, angle of internal friction, unit weight', 'Cohesion only', 'Friction angle only', 'Soil color'], answer: 0, hint: 'The capacity factors Nc, Nq, and Ngamma reflect soil shear and weight parameters.' },
+      { question: 'Liquid limit and plastic limit tests are performed on:', options: ['Fine-grained soils', 'Coarse-grained soils', 'Gravels', 'None of these'], answer: 0, hint: 'Atterberg limits evaluate the plasticity index of silts and clays.' },
+      { question: 'The unit of dynamic viscosity is:', options: ['Pascal-second (Pa.s)', 'm2/s', 'Poise only', 'Stoke'], answer: 0, hint: 'SI unit of dynamic viscosity is Pa.s, equivalent to N.s/m2.' },
+      { question: 'The fundamental principle of surveying is:', options: ['Working from whole to part', 'Working from part to whole', 'Measuring local coordinates first', 'None of these'], answer: 0, hint: 'Whole-to-part principles prevent local mapping errors from expanding.' },
+      { question: 'Which instrument is used to measure discharge in a pipe?', options: ['Venturimeter', 'Pitot tube', 'Anemometer', 'Barometer'], answer: 0, hint: 'A venturimeter creates a pressure differential to calculate fluid flow rates.' },
+      { question: 'The process of adjusting the line of sight of a level is called:', options: ['Collimation adjustment', 'Focusing', 'Centering, Levelling', 'None of these'], answer: 0, hint: 'Temporary or permanent adjustments align the bubble tube axis and telescope sight line.' },
+      { question: 'The main chemical compound responsible for early strength of cement is:', options: ['Tricalcium Silicate (C3S)', 'Dicalcium Silicate (C2S)', 'Tricalcium Aluminate (C3A)', 'None of these'], answer: 0, hint: 'C3S hydrates rapidly to govern strength development within first 7 days.' },
+      { question: 'The coefficient of curvature (Cc) for a well-graded soil lies between:', options: ['1 and 3', '3 and 6', '0 and 1', 'Greater than 6'], answer: 0, hint: 'For well-graded sand or gravel, Cc must be in the range [1, 3].' },
+      { question: 'If the pH of water is less than 7, the water is:', options: ['Acidic', 'Basic', 'Neutral', 'Saline'], answer: 0, hint: 'pH scales from 0 to 14; values under 7 signify acid levels.' }
+    ]
+  },
+  {
+    name: 'Electrical Engineering Core Practice Mock',
+    mcqs: [
+      { question: 'What is the unit of magnetic flux density?', options: ['Tesla', 'Weber', 'Henry', 'Ampere-turn'], answer: 0, hint: 'Tesla (T) measures magnetic induction flux lines per square meter.' },
+      { question: 'According to Kirchhoff\'s Current Law (KCL), the algebraic sum of currents at a node is:', options: ['Zero', 'Positive', 'Negative', 'Infinite'], answer: 0, hint: 'Charge conservation dictates that sum of entering currents equals sum of leaving currents.' },
+      { question: 'The power factor of a purely capacitive circuit is:', options: ['Zero leading', 'Zero lagging', 'Unity', '0.8 lagging'], answer: 0, hint: 'Current leads voltage by 90 degrees in ideal capacitors, making cos 90 = 0 leading.' },
+      { question: 'A transformer does not change which of the following parameters?', options: ['Frequency', 'Voltage', 'Current', 'All of these'], answer: 0, hint: 'Transformers change AC voltage/current levels but keep frequency constant.' },
+      { question: 'Speed of a DC shunt motor can be controlled by:', options: ['Armature voltage control', 'Field current control', 'Both of these', 'None of these'], answer: 2, hint: 'DC motor speed is proportional to Eb and inversely proportional to flux.' },
+      { question: 'In a synchronous machine, the armature winding is placed on:', options: ['Stator', 'Rotor', 'Yoke', 'None of these'], answer: 0, hint: 'Placing the high-power armature on stator is mechanically easier than on rotor.' },
+      { question: 'What is the function of a moderator in a nuclear power plant?', options: ['Slow down fast neutrons', 'Absorb neutrons', 'Cool the reactor', 'Control steam flow'], answer: 0, hint: 'Light water/graphite slows down neutrons to maximize thermal fission probabilities.' },
+      { question: 'Which relay is used for the protection of transformers against internal faults?', options: ['Buchholz relay', 'Impedance relay', 'Mho relay', 'Thermal relay'], answer: 0, hint: 'Buchholz is a gas-actuated relay installed in oil-filled transformer pipes.' },
+      { question: 'The skin effect in a transmission line conductor:', options: ['Increases effective resistance', 'Decreases effective resistance', 'Has no effect', 'None of these'], answer: 0, hint: 'AC current concentrates on conductor surfaces, reducing effective cross-sectional area.' },
+      { question: 'The semiconductor device which can conduct current in both directions is:', options: ['TRIAC', 'DIAC', 'SCR', 'MOSFET'], answer: 0, hint: 'TRIAC is equivalent to two antiparallel thyristors sharing a gate control.' },
+      { question: 'A buck-boost converter is used to:', options: ['Step up or step down DC voltage', 'Convert AC to DC', 'Invert DC to AC', 'Stabilize grid frequency'], answer: 0, hint: 'Buck-boost outputs magnitude that is either greater or less than input.' },
+      { question: 'The unit of electrical conductivity is:', options: ['Siemens per meter (S/m)', 'Ohm-meter', 'Farad', 'Henry'], answer: 0, hint: 'Conductivity is the inverse of resistivity, measured in S/m.' },
+      { question: 'Which instrument is used to measure insulation resistance?', options: ['Megger', 'Ammeter', 'Voltmeter', 'Wattmeter'], answer: 0, hint: 'Megger is a portable generator producing high voltage to test insulators.' },
+      { question: 'In star connection, line current is:', options: ['Equal to phase current', 'sqrt(3) times phase current', 'Phase current divided by sqrt(3)', 'None of these'], answer: 0, hint: 'Star topology links line wires in series with phase windings.' },
+      { question: 'What is the main cause of corona discharge in high-voltage transmission lines?', options: ['Ionization of air around conductors', 'High resistance of conductors', 'Low voltage', 'High frequency'], answer: 0, hint: 'Strong electrostatic fields break down and ionize nearby air atoms.' }
+    ]
+  },
+  {
+    name: 'Electronics & Communication Engineering Practice Mock',
+    mcqs: [
+      { question: 'The forward voltage drop across a Silicon PN junction diode is approximately:', options: ['0.7 V', '0.3 V', '1.1 V', '2.0 V'], answer: 0, hint: 'Silicon barrier potential requires 0.7 V bias to trigger current conduction.' },
+      { question: 'What is the main application of a Zener diode?', options: ['Voltage regulation', 'Rectification', 'Amplification', 'Oscillation'], answer: 0, hint: 'Operated in reverse breakdown, Zener diodes maintain a stable voltage.' },
+      { question: 'Which transistor configuration is used for impedance matching?', options: ['Common Collector', 'Common Emitter', 'Common Base', 'None of these'], answer: 0, hint: 'Common Collector (emitter follower) has high input and low output impedance.' },
+      { question: 'An OP-AMP is basically a high-gain:', options: ['Differential amplifier', 'Power amplifier', 'Audio amplifier', 'None of these'], answer: 0, hint: 'OP-AMPs amplify the difference between their non-inverting and inverting inputs.' },
+      { question: 'The number of select lines for a 16-to-1 multiplexer is:', options: ['4', '3', '5', '8'], answer: 0, hint: 'Multiplexers use n select lines to choose between 2^n inputs; 2^4 = 16.' },
+      { question: 'The Nyquist sampling rate for a signal with maximum frequency fm is:', options: ['2 * fm', 'fm', '1.5 * fm', '3 * fm'], answer: 0, hint: 'To prevent aliasing, sampling rate must satisfy fs >= 2*fm.' },
+      { question: 'Which digital modulation scheme is most bandwidth efficient?', options: ['QAM', 'ASK', 'FSK', 'PSK'], answer: 0, hint: 'Quadrature Amplitude Modulation encodes multiple bits per symbol, maximizing efficiency.' },
+      { question: 'Carson\'s rule defines the bandwidth of:', options: ['FM wave', 'AM wave', 'PM wave', 'PCM wave'], answer: 0, hint: 'FM Bandwidth = 2 * (delta_f + fm).' },
+      { question: 'The speed of electromagnetic waves in a vacuum is:', options: ['3 * 10^8 m/s', '3 * 10^6 m/s', '1.5 * 10^8 m/s', 'None of these'], answer: 0, hint: 'EM waves propagate at speed of light (3x10^8 m/s) in free space.' },
+      { question: 'The characteristic impedance of a lossless transmission line is:', options: ['sqrt(L/C)', 'sqrt(L*C)', 'L/C', 'C/L'], answer: 0, hint: 'Lossless line equations reduce Z0 to real ratio sqrt(L/C).' },
+      { question: 'The Z-transform is used for the analysis of:', options: ['Discrete-time systems', 'Continuous-time systems', 'Both', 'None'], answer: 0, hint: 'Z-transform maps discrete differences to frequency domains.' },
+      { question: 'What is the function of a PLL (Phase Locked Loop)?', options: ['Frequency tracking and demodulation', 'Voltage amplification', 'Power conversion', 'None of these'], answer: 0, hint: 'PLL locks phase to follow and recover input signal carrier frequencies.' },
+      { question: 'Which logic gate performs addition of two binary bits without carry?', options: ['XOR gate', 'AND gate', 'OR gate', 'NAND gate'], answer: 0, hint: 'XOR gate logic outputs sum bit: 0+0=0, 0+1=1, 1+0=1, 1+1=0.' },
+      { question: 'The dominant mode in a rectangular waveguide is:', options: ['TE10', 'TE11', 'TM11', 'TM01'], answer: 0, hint: 'TE10 has the longest cutoff wavelength and is the lowest mode.' },
+      { question: 'Which tool translates assembly code into machine language?', options: ['Assembler', 'Linker', 'Interpreter', 'Debugger'], answer: 0, hint: 'Assembler maps mnemonic opcodes to numeric hardware codes.' }
+    ]
+  },
+  {
+    name: 'Computer Science & Engineering Practice Mock',
+    mcqs: [
+      { question: 'What is the time complexity of searching in a balanced Binary Search Tree?', options: ['O(log n)', 'O(1)', 'O(n)', 'O(n log n)'], answer: 0, hint: 'Balanced trees restrict height to log2(n) levels, limiting search paths.' },
+      { question: 'Which data structure works on the LIFO principle?', options: ['Stack', 'Queue', 'Linked List', 'Tree'], answer: 0, hint: 'Stacks push/pop from the same end (Last-In First-Out).' },
+      { question: 'The process of dividing physical memory into fixed-size blocks is:', options: ['Paging', 'Segmentation', 'Fragmentation', 'Spooling'], answer: 0, hint: 'Paging slices RAM into frames and virtual space into pages.' },
+      { question: 'A deadlock can be prevented by breaking which condition?', options: ['Mutual exclusion / Hold and wait / No preemption / Circular wait', 'Only Circular wait', 'None of these', 'All of these'], answer: 0, hint: 'Eliminating any of the four Coffman conditions prevents deadlocks.' },
+      { question: 'In DBMS, the ACID property \'I\' stands for:', options: ['Isolation', 'Integrity', 'Integration', 'Identification'], answer: 0, hint: 'Isolation guarantees concurrent transactions run without cross interference.' },
+      { question: 'Which SQL statement is used to remove a table schema and all its rows?', options: ['DROP TABLE', 'DELETE TABLE', 'TRUNCATE TABLE', 'REMOVE TABLE'], answer: 0, hint: 'DROP TABLE permanently deletes schema, indices, constraints, and data.' },
+      { question: 'What is the default port number for HTTP?', options: ['80', '443', '21', '22'], answer: 0, hint: 'Unsecured HTTP traffic defaults to TCP/IP port 80.' },
+      { question: 'Which protocol is used to map an IP address to a MAC address?', options: ['ARP', 'DNS', 'DHCP', 'ICMP'], answer: 0, hint: 'Address Resolution Protocol (ARP) translates layer-3 IPs to layer-2 physical MACs.' },
+      { question: 'The network topology in which all nodes are connected to a central hub is:', options: ['Star topology', 'Ring topology', 'Mesh topology', 'Bus topology'], answer: 0, hint: 'Star networks use point-to-point lines to a central switch/hub.' },
+      { question: 'Which algorithm is used for finding shortest paths in a weighted graph?', options: ['Dijkstra\'s Algorithm', 'Prim\'s Algorithm', 'Kruskal\'s Algorithm', 'DFS'], answer: 0, hint: 'Dijkstra solves single-source shortest path values on positive weights.' },
+      { question: 'The compiler phase that checks syntax rules is:', options: ['Syntax Analysis (Parser)', 'Lexical Analysis', 'Semantic Analysis', 'Code Generation'], answer: 0, hint: 'Parsers construct parse trees from tokens to validate grammatical correctness.' },
+      { question: 'What is the size of an IPv4 address?', options: ['32 bits', '64 bits', '128 bits', '16 bits'], answer: 0, hint: 'IPv4 uses 4-byte (32-bit) addresses, whereas IPv6 uses 128-bit addresses.' },
+      { question: 'Which of the following is NOT an OOP concept?', options: ['Compilation', 'Inheritance', 'Polymorphism', 'Encapsulation'], answer: 0, hint: 'Compilation is a build phase; OOP pillars are encapsulation, inheritance, polymorphism, and abstraction.' },
+      { question: 'The logic gate equivalent to Boolean addition is:', options: ['OR gate', 'AND gate', 'NOT gate', 'XOR gate'], answer: 0, hint: 'OR gate yields 1 if either input is 1 (A + B).' },
+      { question: 'What is the time complexity of Quick Sort in the worst case?', options: ['O(n^2)', 'O(n log n)', 'O(n)', 'O(1)'], answer: 0, hint: 'Worst case (e.g. sorted arrays with bad pivot choices) degrades partition steps to O(n^2).' }
+    ]
+  },
+  {
+    name: 'Other Engineering Exams Practice Mock',
+    mcqs: [
+      { question: 'What is the value of the derivative of x^2 at x = 3?', options: ['6', '3', '9', '2'], answer: 0, hint: 'd(x^2)/dx = 2x. Evaluated at x=3, 2 * 3 = 6.' },
+      { question: 'A drawing instrument used to draw curves that cannot be drawn with a compass is:', options: ['French Curves', 'T-square', 'Set-squares', 'Divider'], answer: 0, hint: 'French curves provide pre-cut template segments for smoothing continuous plots.' },
+      { question: 'In engineering drawing, what is the scale 1:2 called?', options: ['Reduced scale', 'Full size scale', 'Enlarged scale', 'None of these'], answer: 0, hint: '1:2 scale represents a model size which is half of the real physical scale.' },
+      { question: 'The first law of thermodynamics is a statement of:', options: ['Conservation of energy', 'Conservation of mass', 'Conservation of momentum', 'None of these'], answer: 0, hint: 'It states that change in internal energy equals heat added minus work done.' },
+      { question: 'Which mechanical property represents resistance to indentation or scratching?', options: ['Hardness', 'Ductility', 'Malleability', 'Toughness'], answer: 0, hint: 'Hardness measures local elastic deformation limits on surfaces.' },
+      { question: 'In a project network diagram, critical path has:', options: ['Zero total float', 'Maximum float', 'Negative float', 'Infinite float'], answer: 0, hint: 'Critical path activities cannot be delayed without delaying project completion.' },
+      { question: 'Which coding system is widely used to represent text in computers?', options: ['ASCII / Unicode', 'Binary Code', 'Gray Code', 'BCD'], answer: 0, hint: 'ASCII/Unicode map unique integers to alphabetical and international characters.' },
+      { question: 'The vector product of two perpendicular vectors is:', options: ['Product of their magnitudes', 'Zero', 'Negative', 'None of these'], answer: 0, hint: 'Cross product magnitude is |A||B|sin(theta). Since theta=90, sin 90 = 1.' },
+      { question: 'The ratio of stress to strain within the elastic limit is:', options: ['Modulus of Elasticity', 'Poisson\'s ratio', 'Shear Modulus', 'Bulk Modulus'], answer: 0, hint: 'Hooke\'s law equates stress = E * strain, where E is Young\'s Modulus.' },
+      { question: 'What is the determinant of a 2x2 identity matrix?', options: ['1', '0', '2', '-1'], answer: 0, hint: 'det([[1, 0], [0, 1]]) = 1*1 - 0*0 = 1.' },
+      { question: 'Intellectual Property Rights (IPR) protect:', options: ['Inventions and creative designs', 'Real estate properties', 'Money in banks', 'Physical health'], answer: 0, hint: 'IPR patents, trademarks, and copyright protect intellectual creations.' },
+      { question: 'Which parameter determines the quality of a fuel?', options: ['Calorific value', 'Density', 'Viscosity', 'Flash point'], answer: 0, hint: 'Calorific value measures heat energy released per unit mass burned.' },
+      { question: 'The process of converting solid directly into gas is:', options: ['Sublimation', 'Evaporation', 'Condensation', 'Melting'], answer: 0, hint: 'Dry ice or iodine sublime directly without entering liquid phases.' },
+      { question: 'What is the unit of power in SI units?', options: ['Watt', 'Joule', 'Newton', 'Pascal'], answer: 0, hint: 'Watt (W) represents one Joule of work completed per second.' },
+      { question: 'In MS Project or CPM, CPM stands for:', options: ['Critical Path Method', 'Critical Project Management', 'Cost Plan Management', 'None of these'], answer: 0, hint: 'CPM evaluates minimum time schedules and sequence dependencies.' }
+    ]
+  },
+  {
+    name: 'ITI Semester Exams Trade Theory Mock',
+    mcqs: [
+      { question: 'Which safety sign is triangular in shape with yellow background?', options: ['Warning sign', 'Prohibitory sign', 'Mandatory sign', 'Information sign'], answer: 0, hint: 'Warning/Caution symbols use black graphics on triangular yellow backgrounds.' },
+      { question: 'What is the first aid treatment for a person with electrical shock?', options: ['Switch off power and check breathing', 'Give water to drink', 'Massage the limbs', 'Ignore the victim'], answer: 0, hint: 'Break power contacts safely first before examining or performing CPR.' },
+      { question: 'Which fire extinguisher is used for electrical fires?', options: ['Halon / CO2 extinguisher', 'Water extinguisher', 'Foam extinguisher', 'None of these'], answer: 0, hint: 'CO2 or dry chemical extinguishers prevent conduction during class-C fires.' },
+      { question: 'The size of a file is specified by its:', options: ['Length of cut portion', 'Width', 'Material', 'Color'], answer: 0, hint: 'Standard files are designated by their length from heel to point (tip).' },
+      { question: 'What is the least count of a metric micrometer?', options: ['0.01 mm', '0.02 mm', '0.05 mm', '0.1 mm'], answer: 0, hint: 'Metric outside micrometers divide 0.5mm pitch into 50 thimble divisions, giving 0.01mm.' },
+      { question: 'Which tool is used for tightening/loosening hexagonal bolts?', options: ['Spanner', 'Plier', 'Hammer', 'Screwdriver'], answer: 0, hint: 'Spanners fit bolt head flats securely to apply rotational forces.' },
+      { question: 'The unit of current is:', options: ['Ampere', 'Volt', 'Ohm', 'Watt'], answer: 0, hint: 'Ampere (A) measures the rate of charge flow in conductors.' },
+      { question: 'In a workshop, heavy loads should be lifted using:', options: ['Cranes or hoists', 'Manual back lifting', 'Pushing on floor', 'None of these'], answer: 0, hint: 'Lifting machinery avoids back injuries during layout rearrangements.' },
+      { question: 'What is the composition of soft solder?', options: ['Tin and Lead', 'Copper and Zinc', 'Silver and Copper', 'Lead and Zinc'], answer: 0, hint: 'Traditional lead solder blends tin and lead in 60/40 configurations.' },
+      { question: 'Which metal is highly malleable?', options: ['Gold', 'Iron', 'Cast Iron', 'Brass'], answer: 0, hint: 'Gold can be hammered into extremely thin sheets (leafs).' },
+      { question: 'The instrument used to check perpendicularity is:', options: ['Try square', 'Vernier caliper', 'Outside micrometer', 'Steel rule'], answer: 0, hint: 'Try squares check 90-degree alignment on parts.' },
+      { question: 'What is the function of a fuse in a circuit?', options: ['Protects against short-circuits and overcurrent', 'Increases current', 'Stabilizes voltage', 'None of these'], answer: 0, hint: 'Fuses blow under high loads, breaking contacts before components burn.' },
+      { question: 'Which oil is used as coolant during drilling steel?', options: ['Soluble oil / cutting oil', 'Engine oil', 'Kerosene', 'Water only'], answer: 0, hint: 'Soluble cutting oil cools bits and sweeps chips away.' },
+      { question: 'The least count of a standard Vernier Caliper is:', options: ['0.02 mm', '0.01 mm', '0.05 mm', '0.1 mm'], answer: 0, hint: 'Standard calipers resolve down to 0.02 mm.' },
+      { question: 'Which process makes steel hard and brittle?', options: ['Hardening', 'Annealing', 'Tempering', 'Normalizing'], answer: 0, hint: 'Quenching steel from austenitic phases locks carbon into hard martensite.' }
+    ]
+  },
+  {
+    name: 'Accounting and Commerce Finance Mock',
+    mcqs: [
+      { question: 'The double entry system of bookkeeping was introduced by:', options: ['Luca Pacioli', 'Adam Smith', 'Alfred Marshall', 'None of these'], answer: 0, hint: 'Pacioli documented Venetian double-entry ledger bookkeeping systems in 1494.' },
+      { question: 'What is the fundamental accounting equation?', options: ['Assets = Liabilities + Capital', 'Assets = Liabilities - Capital', 'Liabilities = Assets + Capital', 'Capital = Assets + Liabilities'], answer: 0, hint: 'All business assets are funded by either creditor liabilities or owner capital.' },
+      { question: 'The recording of transactions in journal is done in:', options: ['Chronological order', 'Alphabetical order', 'Value-wise order', 'None of these'], answer: 0, hint: 'Transactions are recorded sequentially as they occur day-by-day.' },
+      { question: 'Which account is a real account?', options: ['Cash Account', 'Salary Account', 'Ram\'s Account', 'Bank Account'], answer: 0, hint: 'Real accounts track tangible assets/properties like cash, land, and machinery.' },
+      { question: 'Depreciation is defined as:', options: ['Gradual decrease in value of fixed assets', 'Increase in value of assets', 'Maintenance cost', 'None of these'], answer: 0, hint: 'Depreciation allocates fixed asset wear-and-tear costs over useful lifetimes.' },
+      { question: 'Trial balance is prepared to check:', options: ['Arithmetical accuracy of ledger accounts', 'Net profit', 'Financial position', 'Cash balance'], answer: 0, hint: 'Trial balance checks if total debits equal total credits.' },
+      { question: 'Goodwill is an:', options: ['Intangible asset', 'Tangible asset', 'Current asset', 'Fictitious asset'], answer: 0, hint: 'Goodwill represents reputational premiums, classified as intangible fixed assets.' },
+      { question: 'In banking, what does NPA stand for?', options: ['Non-Performing Asset', 'Net Profit Account', 'National Payment Association', 'None of these'], answer: 0, hint: 'Non-performing assets are loans in default where interest/principal remains unpaid over 90 days.' },
+      { question: 'GST was introduced in India in the year:', options: ['2017', '2015', '2016', '2018'], answer: 0, hint: 'GST came into effect across India on July 1, 2017.' },
+      { question: 'The main objective of financial accounting is to prepare:', options: ['Profit & Loss A/c and Balance Sheet', 'Cash book only', 'Cost sheet', 'Budget report'], answer: 0, hint: 'Financial accounting reports company profitability and balances to external stakeholders.' },
+      { question: 'Which audit is mandatory for public listed companies in India?', options: ['Statutory Audit', 'Internal Audit', 'Management Audit', 'Social Audit'], answer: 0, hint: 'Companies Act mandates annual independent statutory audits.' },
+      { question: 'Working capital is calculated as:', options: ['Current Assets - Current Liabilities', 'Fixed Assets - Current Liabilities', 'Current Assets + Current Liabilities', 'Total Assets - Total Liabilities'], answer: 0, hint: 'Net working capital shows short-term operational cash buffers.' },
+      { question: 'The cost of goods sold is:', options: ['Opening Stock + Purchases - Closing Stock', 'Sales - Gross Profit', 'Both of these', 'None of these'], answer: 2, hint: 'Both formulas yield COGS by adjusting stock changes or subtracting profit.' },
+      { question: 'What does ROI stand for in business finance?', options: ['Return on Investment', 'Rate of Interest', 'Revenue on Income', 'None of these'], answer: 0, hint: 'ROI measures efficiency of investments by dividing net return by capital cost.' },
+      { question: 'The ledger is also known as:', options: ['Principal book of accounts', 'Secondary book', 'Day book', 'Memo book'], answer: 0, hint: 'Ledger contains the final consolidated records of all individual T-accounts.' }
+    ]
+  },
+  {
+    name: 'Campus Placement Aptitude Practice Mock',
+    mcqs: [
+      { question: 'If the cost price of an item is Rs 200 and it is sold for Rs 250, what is the profit percentage?', options: ['25%', '20%', '50%', '30%'], answer: 0, hint: 'Profit % = (Profit / CP) * 100 = (50 / 200) * 100 = 25%.' },
+      { question: 'Complete the sequence: 3, 6, 12, 24, ?', options: ['48', '36', '30', '60'], answer: 0, hint: 'Each term is multiplied by 2.' },
+      { question: 'A train running at 54 km/hr crosses a post in 10 seconds. What is the length of the train?', options: ['150 meters', '120 meters', '180 meters', '200 meters'], answer: 0, hint: 'Speed = 54 * (5/18) = 15 m/s. Length = Speed * Time = 15 * 10 = 150m.' },
+      { question: 'Find the odd one out: Apple, Orange, Potato, Banana', options: ['Potato', 'Apple', 'Orange', 'Banana'], answer: 0, hint: 'Potato is a tuber root vegetable; the rest are sweet fruits.' },
+      { question: 'If in a code language, CAT is written as DBT, then DOG is written as:', options: ['EPH', 'EOG', 'DPH', 'EOH'], answer: 0, hint: 'C+1=D, A+1=B, T+0=T. So D+1=E, O+1=P, G+0=G. Wait, let\'s look at DOG. D+1=E, O+1=P, G+0=G, which is EPG. Wait, options has EPH. If the rule is C+1=D, A+1=B, T+0=T, then D+1=E, O+1=P, G+1=H -> EPH. Yes!' },
+      { question: 'A work is completed by 5 men in 10 days. How many days will 10 men take to complete the same work?', options: ['5 days', '2 days', '10 days', '20 days'], answer: 0, hint: 'M1*D1 = M2*D2. 5 * 10 = 10 * D2 -> D2 = 5 days.' },
+      { question: 'What is the average of first five prime numbers?', options: ['5.6', '5.0', '6.2', '4.8'], answer: 0, hint: 'First 5 primes: 2, 3, 5, 7, 11. Sum = 28. Average = 28 / 5 = 5.6.' },
+      { question: 'In OOPS, wrapping data and methods into a single unit is called:', options: ['Encapsulation', 'Polymorphism', 'Inheritance', 'Abstraction'], answer: 0, hint: 'Encapsulation restricts direct access and bundles code blocks together.' },
+      { question: 'Which language is purely object-oriented among these?', options: ['Java', 'C', 'Assembly', 'SQL'], answer: 0, hint: 'Java requires classes for all methods, aligning with object models.' },
+      { question: 'The sum of two numbers is 20 and their difference is 4. Find the product of the two numbers.', options: ['96', '80', '100', '72'], answer: 0, hint: 'x + y = 20, x - y = 4 -> x = 12, y = 8. Product = 12 * 8 = 96.' },
+      { question: 'Which data structure operates on FIFO?', options: ['Queue', 'Stack', 'Binary Tree', 'Heap'], answer: 0, hint: 'Queues process items in order of arrival (First-In First-Out).' },
+      { question: 'If A is B\'s brother, and B is C\'s sister, how is A related to C?', options: ['Brother', 'Sister', 'Father', 'Uncle'], answer: 0, hint: 'Since A and B are siblings, and B and C are siblings, A is C\'s brother.' },
+      { question: 'A man walks 5 km South, then turns East and walks 3 km, then turns North and walks 5 km. How far is he from starting point?', options: ['3 km', '5 km', '8 km', '2 km'], answer: 0, hint: 'He forms a rectangle, ending up exactly 3 km East of origin.' },
+      { question: 'The probability of rolling a 4 on a fair six-sided die is:', options: ['1/6', '1/2', '1/4', '2/3'], answer: 0, hint: 'There is 1 favorable outcome out of 6 possible values.' },
+      { question: 'In binary arithmetic, what is 1 + 1?', options: ['10 (decimal 2)', '2', '1', '0'], answer: 0, hint: '1 + 1 equals 2, which is binary 10.' }
+    ]
+  },
+  {
+    name: 'NRA CET Common Eligibility Practice Mock',
+    mcqs: [
+      { question: 'Who is the head of the National Recruitment Agency (NRA) governing body?', options: ['A Chairman of Secretary rank', 'Prime Minister', 'President', 'Finance Minister'], answer: 0, hint: 'NRA is headed by a Chairman of the rank of Secretary to the Government of India.' },
+      { question: 'NRA CET will replace preliminary exams for which organizations?', options: ['SSC, RRB, and IBPS', 'UPSC and State PCS', 'NDA and CDS', 'All of these'], answer: 0, hint: 'CET replaces Tier-1 screening for banking, railways, and clerical posts.' },
+      { question: 'Which article of the Constitution relates to the Finance Commission?', options: ['Article 280', 'Article 324', 'Article 110', 'Article 356'], answer: 0, hint: 'Article 280 requires the President to set up a Finance Commission every 5 years.' },
+      { question: 'The first railway line in India was opened in:', options: ['1853', '1850', '1857', '1872'], answer: 0, hint: 'The line between Bori Bunder (Mumbai) and Thane opened on 16 April 1853.' },
+      { question: 'What is the capital of France?', options: ['Paris', 'London', 'Rome', 'Berlin'], answer: 0, hint: 'Paris is the capital and most populous city of France.' },
+      { question: 'Which river is also known as the Dakshin Ganga?', options: ['Godavari', 'Kaveri', 'Krishna', 'Narmada'], answer: 0, hint: 'Godavari is the second longest river in India and largest in south India.' },
+      { question: 'The simple interest on Rs 5000 for 2 years at 10% per annum is:', options: ['Rs 1000', 'Rs 500', 'Rs 1200', 'Rs 1500'], answer: 0, hint: 'SI = P * R * T / 100 = 5000 * 10 * 2 / 100 = Rs 1000.' },
+      { question: 'In a family tree, your father\'s sister is your:', options: ['Aunt', 'Mother', 'Grandmother', 'Sister'], answer: 0, hint: 'Paternal sister is commonly referred to as aunt.' },
+      { question: 'Which of the following is a synonym of Benevolent?', options: ['Kind', 'Cruel', 'Greedy', 'Selfish'], answer: 0, hint: 'Benevolent means well-meaning, generous, and kindly.' },
+      { question: 'The standard units digit of (256)^78 is:', options: ['6', '2', '4', '8'], answer: 0, hint: 'Any power of a number ending in 6 will always have a units digit of 6.' },
+      { question: 'Which gland in human body is called the master gland?', options: ['Pituitary gland', 'Thyroid gland', 'Adrenal gland', 'Pancreas'], answer: 0, hint: 'Pituitary gland controls functions of many other endocrine glands.' },
+      { question: 'The Indian standard time (IST) is based on the longitude of:', options: ['82.5° East', '80° East', '85° East', '90° East'], answer: 0, hint: 'IST passes through Mirzapur, UP along the 82°30\' E line.' },
+      { question: 'Who wrote the national anthem of India?', options: ['Rabindranath Tagore', 'Bankim Chandra Chatterjee', 'Mahatma Gandhi', 'None of these'], answer: 0, hint: 'Jana Gana Mana was originally composed in Bengali by Tagore.' },
+      { question: 'The power to create new states in India rests with:', options: ['Parliament', 'President', 'Prime Minister', 'Supreme Court'], answer: 0, hint: 'Article 3 empowers Parliament to form new states or alter boundaries.' },
+      { question: 'What is the chemical formula of water?', options: ['H2O', 'CO2', 'NaCl', 'HCl'], answer: 0, hint: 'Water molecules comprise two hydrogen atoms bonded to one oxygen atom.' }
+    ]
+  },
+  {
+    name: 'Instrumentation Engineering Practice Mock',
+    mcqs: [
+      { question: 'Which sensor is commonly used to measure temperature?', options: ['RTD / Thermocouple', 'LVDT', 'Piezoelectric crystal', 'Strain gauge'], answer: 0, hint: 'Resistance Temperature Detectors (RTD) change resistance predictably with temperature.' },
+      { question: 'What is the working principle of LVDT?', options: ['Variable Inductance', 'Variable Capacitance', 'Piezoelectric effect', 'Photoelectric effect'], answer: 0, hint: 'Linear Variable Differential Transformer uses mutual induction changes from core displacements.' },
+      { question: 'Strain gauge is used to measure:', options: ['Strain and force', 'Temperature', 'Velocity', 'pH'], answer: 0, hint: 'Resistance of foil strain gauge changes when subject to mechanical tension/compression.' },
+      { question: 'A pH sensor measures the concentration of:', options: ['Hydrogen ions', 'Oxygen ions', 'Sodium ions', 'None of these'], answer: 0, hint: 'pH is defined as the negative log of Hydrogen ion activity.' },
+      { question: 'What does PLC stand for in process control?', options: ['Programmable Logic Controller', 'Process Line Computer', 'Programmed Loop Control', 'None of these'], answer: 0, hint: 'PLCs are ruggedized digital computers used for industrial automation.' },
+      { question: 'The gauge factor of a strain gauge is defined as the ratio of:', options: ['Fractional change in resistance to strain', 'Stress to strain', 'Voltage to current', 'None of these'], answer: 0, hint: 'GF = (delta_R / Rg) / strain.' },
+      { question: 'A thermocouple works on:', options: ['Seebeck effect', 'Peltier effect', 'Thomson effect', 'Hall effect'], answer: 0, hint: 'Seebeck effect generates voltage proportional to the junction temperature differences.' },
+      { question: 'Which instrument is used to measure fluid flow velocity using magnetic field?', options: ['Electromagnetic flowmeter', 'Venturimeter', 'Rotameter', 'Pitot tube'], answer: 0, hint: 'Magnetic flowmeters use Faraday\'s law of induction on conductive fluids.' },
+      { question: 'In a control system, feedback is used to:', options: ['Reduce error and stabilize', 'Increase gain', 'Remove sensors', 'None of these'], answer: 0, hint: 'Negative feedback tracks setpoints and rejects external system disturbances.' },
+      { question: 'What is the unit of pressure?', options: ['Pascal', 'Joule', 'Newton', 'Watt'], answer: 0, hint: 'Pascal (Pa) is equivalent to one Newton of force per square meter.' },
+      { question: 'An instrumentation amplifier has:', options: ['High CMRR and high input impedance', 'Low CMRR', 'Low input impedance', 'None of these'], answer: 0, hint: 'Differential layout guarantees high Common Mode Rejection Ratio (CMRR) and high impedance.' },
+      { question: 'The device used to convert physical variables into electrical signals is:', options: ['Transducer', 'Actuator', 'Amplifier', 'Rectifier'], answer: 0, hint: 'Transducers act as energy converters for signal conditioning circuits.' },
+      { question: 'Which sensor works on change in distance between plates?', options: ['Capacitive sensor', 'Inductive sensor', 'Hall effect sensor', 'Optoelectronic sensor'], answer: 0, hint: 'Capacitance C is proportional to area A divided by distance d.' },
+      { question: 'A PID controller stands for:', options: ['Proportional-Integral-Derivative', 'Process-Integrated-Data', 'Programmed-Index-Diagnostic', 'None of these'], answer: 0, hint: 'PID loops use current error (P), past accumulative error (I), and rate of change (D).' },
+      { question: 'The damping ratio for an underdamped system is:', options: ['Between 0 and 1', 'Exactly 1', 'Greater than 1', 'Zero'], answer: 0, hint: 'Underdamped systems decay with oscillations (damping ratio zeta < 1).' }
+    ]
+  },
+  {
+    name: 'Government Organizations Officer Mock',
+    mcqs: [
+      { question: 'Which body acts as the supreme audit authority in India?', options: ['CAG (Comptroller and Auditor General)', 'Finance Commission', 'RBI', 'Supreme Court'], answer: 0, hint: 'Article 148 mandates CAG to audit receipts and expenditures of government.' },
+      { question: 'In administrative terminology, what is a circular?', options: ['Information sent to multiple recipients', 'A private note', 'An audit report', 'A salary slip'], answer: 0, hint: 'Circulars broadcast standard policies or notices to broad employee lists.' },
+      { question: 'The right to information (RTI) in India was enacted in:', options: ['2005', '2000', '2010', '2015'], answer: 0, hint: 'RTI Act of 2005 replaced the older Freedom of Information Act.' },
+      { question: 'Who is the head of the civil services board in India?', options: ['Cabinet Secretary', 'Prime Minister', 'Home Minister', 'President'], answer: 0, hint: 'Cabinet Secretary heads the Civil Services Board and civil administrations.' },
+      { question: 'Central Vigilance Commission (CVC) was established on recommendations of:', options: ['Santhanam Committee', 'Sarkaria Commission', 'Kothari Commission', 'None of these'], answer: 0, hint: 'Santhanam Committee recommended CVC in 1964 to combat corruption.' },
+      { question: 'What is the term of office for a member of UPSC?', options: ['6 years or 65 years of age', '5 years', '62 years of age', '3 years'], answer: 0, hint: 'UPSC members hold office for 6 years or until reaching 65 years of age.' },
+      { question: 'Official secrets act in India was first enacted in:', options: ['1923', '1947', '1950', '1920'], answer: 0, hint: 'The OSA was passed in 1923 during British rule to secure official files.' },
+      { question: 'In government offices, CCS Rules stand for:', options: ['Central Civil Services Rules', 'Common Civil Service Rules', 'Central Conduct Service Rules', 'None of these'], answer: 0, hint: 'CCS (Conduct) Rules outline the code of conduct for central bureaucrats.' },
+      { question: 'The budget is presented in the Parliament by:', options: ['Finance Minister', 'Prime Minister', 'Speaker of Lok Sabha', 'President'], answer: 0, hint: 'Ministry of Finance drafts the annual budget, presented by the minister.' },
+      { question: 'What does NITI in NITI Aayog stand for?', options: ['National Institution for Transforming India', 'National Integration and Trade Institution', 'National Investment Trust of India', 'None of these'], answer: 0, hint: 'NITI stands for National Institution for Transforming India, replacing the Planning Commission.' },
+      { question: 'The supreme command of defence forces is vested in:', options: ['President of India', 'Prime Minister', 'Defence Minister', 'Chief of Defence Staff'], answer: 0, hint: 'Article 53(2) gives supreme command of Defence Forces to the President.' },
+      { question: 'Who administers oath to the Governor of a state?', options: ['Chief Justice of the State High Court', 'President', 'Chief Minister', 'Vice President'], answer: 0, hint: 'Article 159 dictates that the Chief Justice of State High Court administers the oath.' },
+      { question: 'The national human rights commission (NHRC) is a:', options: ['Statutory body', 'Constitutional body', 'Private NGO', 'None of these'], answer: 0, hint: 'NHRC was set up under Protection of Human Rights Act, 1993, making it statutory.' },
+      { question: 'Which schedules of Indian Constitution contain list of languages?', options: ['8th Schedule', '7th Schedule', '9th Schedule', '10th Schedule'], answer: 0, hint: 'The 8th Schedule lists 22 officially recognized languages.' },
+      { question: 'What is the minimum age to become member of Rajya Sabha?', options: ['30 years', '25 years', '35 years', '21 years'], answer: 0, hint: 'Article 84 requires a minimum age of 30 for Rajya Sabha, and 25 for Lok Sabha.' }
+    ]
+  },
+  {
+    name: 'UG Entrance Exams General Aptitude Mock',
+    mcqs: [
+      { question: 'Choose the correctly spelt word:', options: ['Accommodation', 'Acomodation', 'Accomodation', 'Acommodacion'], answer: 0, hint: 'Accommodation is spelt with double c and double m.' },
+      { question: 'What is the next number in sequence: 5, 10, 17, 26, ?', options: ['37', '35', '40', '36'], answer: 0, hint: 'The terms are n^2 + 1: 2^2+1=5, 3^2+1=10, 4^2+1=17, 5^2+1=26, 6^2+1=37.' },
+      { question: 'If A is taller than B, and B is taller than C, who is the shortest?', options: ['C', 'B', 'A', 'Cannot be determined'], answer: 0, hint: 'A > B > C. Therefore, C is the shortest.' },
+      { question: 'The synonym of \'Elated\' is:', options: ['Happy', 'Sad', 'Angry', 'Tired'], answer: 0, hint: 'Elated means ecstatic, overjoyed, or very happy.' },
+      { question: 'A shopkeeper offers 10% discount on a product marked at Rs 1000. Sale price is:', options: ['Rs 900', 'Rs 950', 'Rs 800', 'Rs 850'], answer: 0, hint: 'Discount = 10% of 1000 = Rs 100. Sale price = 1000 - 100 = Rs 900.' },
+      { question: 'If a triangle has sides 3cm, 4cm, 5cm, what is its area?', options: ['6 sq cm', '12 sq cm', '10 sq cm', '7.5 sq cm'], answer: 0, hint: 'This is a right-angled triangle. Area = 0.5 * Base * Height = 0.5 * 3 * 4 = 6 sq cm.' },
+      { question: 'Choose the antonym of \'Rigid\':', options: ['Flexible', 'Stiff', 'Hard', 'Solid'], answer: 0, hint: 'Flexible is the opposite of rigid (stiff/unbending).' },
+      { question: 'In a certain code, ROAD is written as WTFI, then BEAT is written as:', options: ['GJFY', 'GIFY', 'GIDY', 'FJFY'], answer: 0, hint: 'Shift value is +5: R+5=W, O+5=T, A+5=F, D+5=I. So B+5=G, E+5=J, A+5=F, T+5=Y.' },
+      { question: 'What is the value of 15% of 200?', options: ['30', '20', '15', '40'], answer: 0, hint: 'Value = 15/100 * 200 = 15 * 2 = 30.' },
+      { question: 'The sum of interior angles of a quadrilateral is:', options: ['360 degrees', '180 degrees', '270 degrees', '540 degrees'], answer: 0, hint: 'Any four-sided polygon has interior angles totaling 360 degrees.' },
+      { question: 'If 3x + 5 = 20, what is the value of x?', options: ['5', '4', '3', '6'], answer: 0, hint: '3x = 15 -> x = 5.' },
+      { question: 'Find the average of 10, 20, 30, 40:', options: ['25', '20', '30', '35'], answer: 0, hint: 'Average = (10+20+30+40)/4 = 100/4 = 25.' },
+      { question: 'Which planet is closest to the Sun?', options: ['Mercury', 'Venus', 'Earth', 'Mars'], answer: 0, hint: 'Mercury has the smallest orbital radius around the Sun.' },
+      { question: 'A person who writes the story of their own life writes an:', options: ['Autobiography', 'Biography', 'Novel', 'Diary'], answer: 0, hint: 'Autobiographical texts are written by the subjects themselves.' },
+      { question: 'If a coin is tossed, what is the probability of getting a head?', options: ['0.5', '1', '0.25', '0'], answer: 0, hint: 'There is 1 head out of 2 equally likely outcomes (0.5).' }
+    ]
+  },
+  {
+    name: 'CUET General Test Practice Mock',
+    mcqs: [
+      { question: 'In CUET, what does CUET stand for?', options: ['Common University Entrance Test', 'Central University Eligibility Test', 'Common Under-graduate Entrance Test', 'None of these'], answer: 0, hint: 'CUET is a standardized admission exam administered by the NTA.' },
+      { question: 'Who is the current Chairman of UGC?', options: ['M. Jagadesh Kumar', 'D.P. Singh', 'Ved Prakash', 'None of these'], answer: 0, hint: 'Prof. M. Jagadesh Kumar is the head of University Grants Commission.' },
+      { question: 'What is the capital of Uttarakhand?', options: ['Dehradun', 'Nainital', 'Haridwar', 'Rishikesh'], answer: 0, hint: 'Dehradun is the winter capital of Uttarakhand.' },
+      { question: 'The G20 Summit in 2023 was hosted by which country?', options: ['India', 'Brazil', 'Indonesia', 'South Africa'], answer: 0, hint: 'India hosted the 18th G20 summit at Pragati Maidan, New Delhi.' },
+      { question: 'Find the next term in series: Z, W, T, Q, ?', options: ['N', 'O', 'P', 'M'], answer: 0, hint: 'Subtract 3 letters each step: Z(26) -> W(23) -> T(20) -> Q(17) -> N(14).' },
+      { question: 'If the ratio of two numbers is 3:4 and their sum is 14, find the numbers:', options: ['6 and 8', '5 and 9', '4 and 10', '7 and 7'], answer: 0, hint: '3x + 4x = 14 -> 7x = 14 -> x = 2. Numbers are 6 and 8.' },
+      { question: 'The value of square root of 625 is:', options: ['25', '15', '35', '20'], answer: 0, hint: '25 * 25 = 625.' },
+      { question: 'Who won the ICC Men\'s Cricket World Cup 2023?', options: ['Australia', 'India', 'South Africa', 'New Zealand'], answer: 0, hint: 'Australia defeated India in the final at Ahmedabad.' },
+      { question: 'Which state is known as the Land of Five Rivers?', options: ['Punjab', 'Haryana', 'Uttar Pradesh', 'Rajasthan'], answer: 0, hint: 'Punjab derives its name from Punjabi words Panj (Five) and Aab (Water).' },
+      { question: 'The perimeter of a rectangle with length 10m and width 5m is:', options: ['30m', '50m', '15m', '20m'], answer: 0, hint: 'Perimeter = 2 * (length + width) = 2 * (10 + 5) = 30m.' },
+      { question: 'Which acid is present in ant stings?', options: ['Formic acid', 'Citric acid', 'Lactic acid', 'Oxalic acid'], answer: 0, hint: 'Ants inject formic acid (methanoic acid) causing local stings.' },
+      { question: 'The Indian constitution was adopted on:', options: ['November 26, 1949', 'January 26, 1950', 'August 15, 1947', 'None of these'], answer: 0, hint: 'It was formally adopted on 26 Nov 1949 and came into effect on 26 Jan 1950.' },
+      { question: 'A man walks 10 meters north, then 10 meters east. How far is he from his starting point (approx)?', options: ['14.14 meters', '20 meters', '10 meters', '15 meters'], answer: 0, hint: 'Distance = sqrt(10^2 + 10^2) = sqrt(200) = 14.14m.' },
+      { question: 'Which is the smallest state of India by area?', options: ['Goa', 'Sikkim', 'Tripura', 'Mizoram'], answer: 0, hint: 'Goa has an area of 3,702 sq km, the smallest in India.' },
+      { question: 'If a number is doubled and then 5 is added, the result is 15. The number is:', options: ['5', '10', '6', '8'], answer: 0, hint: '2x + 5 = 15 -> 2x = 10 -> x = 5.' }
+    ]
+  },
+  {
+    name: 'MBA Entrance Exam CAT Practice Mock',
+    mcqs: [
+      { question: 'If log_2 (x) + log_2 (x - 2) = 3, what is the value of x?', options: ['4', '2', '8', '6'], answer: 0, hint: 'log_2 (x * (x - 2)) = 3 -> x(x - 2) = 8 -> x^2 - 2x - 8 = 0 -> x = 4 (x must be > 2).' },
+      { question: 'What is the remainder when 2^100 is divided by 3?', options: ['1', '2', '0', 'None of these'], answer: 0, hint: '2 = -1 mod 3. So 2^100 = (-1)^100 = 1 mod 3.' },
+      { question: 'In a class of 60 students, 40 like Tea and 30 like Coffee. What is the minimum number of students who like both?', options: ['10', '20', '30', '0'], answer: 0, hint: 'n(A and B) = n(A) + n(B) - n(A or B) >= 40 + 30 - 60 = 10.' },
+      { question: 'A sum of money doubles itself in 5 years under simple interest. In how many years will it become 4 times?', options: ['15 years', '10 years', '20 years', '25 years'], answer: 0, hint: 'Doubles in 5 yrs means SI = P, so rate r = 20%. To become 4 times, SI = 3P -> 3P = P * 20 * t / 100 -> t = 15 years.' },
+      { question: 'Find the number of zeros at the end of 100! (factorial).', options: ['24', '20', '25', '30'], answer: 0, hint: 'Number of zeros = floor(100/5) + floor(100/25) = 20 + 4 = 24.' },
+      { question: 'If the roots of x^2 - 5x + 6 = 0 are p and q, what is the value of p^2 + q^2?', options: ['13', '25', '12', '10'], answer: 0, hint: 'p+q = 5, pq = 6. p^2+q^2 = (p+q)^2 - 2pq = 25 - 12 = 13.' },
+      { question: 'A and B start a business with investments in ratio 3:2. If 5% of profit goes to charity and A\'s share is Rs 855, what is the total profit?', options: ['Rs 1500', 'Rs 1425', 'Rs 1600', 'Rs 1200'], answer: 0, hint: 'A gets 3/5 of 95% of profit. 3/5 * 0.95 * P = 855 -> 0.57 * P = 855 -> P = Rs 1500.' },
+      { question: 'In a group of cows and chickens, the number of legs is 14 more than twice the number of heads. The number of cows is:', options: ['7', '5', '10', '14'], answer: 0, hint: '4C + 2H_ch = 2(C + H_ch) + 14 -> 4C = 2C + 14 -> 2C = 14 -> C = 7.' },
+      { question: 'What is the probability of choosing a vowel from the word ALGORITHM?', options: ['3/9', '4/9', '2/9', '5/9'], answer: 0, hint: 'Vowels are A, O, I (3 vowels out of 9 letters).' },
+      { question: 'The speed of a boat in still water is 15 km/h and speed of stream is 3 km/h. Time taken to travel 36 km downstream is:', options: ['2 hours', '3 hours', '1.5 hours', '2.5 hours'], answer: 0, hint: 'Downstream speed = 15 + 3 = 18 km/h. Time = 36 / 18 = 2 hours.' },
+      { question: 'If x + 1/x = 3, what is the value of x^2 + 1/x^2?', options: ['7', '9', '11', '5'], answer: 0, hint: '(x + 1/x)^2 = x^2 + 1/x^2 + 2 -> 9 = x^2 + 1/x^2 + 2 -> x^2 + 1/x^2 = 7.' },
+      { question: 'The number of ways to arrange the letters of the word CAT is:', options: ['6', '3', '2', '9'], answer: 0, hint: 'Number of arrangements is 3! = 3 * 2 * 1 = 6.' },
+      { question: 'If 3 machines can make 3 toys in 3 minutes, how many minutes will it take 100 machines to make 100 toys?', options: ['3 minutes', '100 minutes', '33 minutes', '1 minute'], answer: 0, hint: 'Work rate per machine is constant; 1 machine takes 3 minutes to make 1 toy.' },
+      { question: 'A cylinder has height 10cm and radius 7cm. What is its volume (approx)?', options: ['1540 cubic cm', '770 cubic cm', '2200 cubic cm', 'None of these'], answer: 0, hint: 'Volume = pi * r^2 * h = 22/7 * 49 * 10 = 1540 cubic cm.' },
+      { question: 'If the average of four consecutive odd numbers is 16, what is the largest of these numbers?', options: ['19', '17', '21', '15'], answer: 0, hint: 'Numbers are 13, 15, 17, 19. Average = 16. Largest is 19.' }
+    ]
   }
 ];
 
+
 const getRealExamStats = (courseName) => {
   const name = courseName.toLowerCase();
+  if (name.includes("lic") || name.includes("insurance")) {
+    return { questions: 100, marks: 100, duration: 60 };
+  }
+  if (name.includes("non-teaching") || name.includes("non teaching")) {
+    return { questions: 120, marks: 120, duration: 120 };
+  }
+  if (name.includes("tgt") || name.includes("pgt")) {
+    return { questions: 125, marks: 125, duration: 120 };
+  }
+  if (name.includes("tet") || name.includes("prt")) {
+    return { questions: 150, marks: 150, duration: 150 };
+  }
+  if (name.includes("food technology") || name.includes("food tech")) {
+    return { questions: 100, marks: 100, duration: 120 };
+  }
+  if (name.includes("nursing")) {
+    return { questions: 100, marks: 100, duration: 120 };
+  }
+  if (name.includes("civil engineering")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("electrical engineering")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("electronics & communication")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("computer science") || name.includes("cse")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("instrumentation")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("other engineering")) {
+    return { questions: 100, marks: 100, duration: 180 };
+  }
+  if (name.includes("iti exam") || name.includes("iti")) {
+    return { questions: 50, marks: 100, duration: 120 };
+  }
+  if (name.includes("accounting") || name.includes("commerce")) {
+    return { questions: 100, marks: 100, duration: 120 };
+  }
+  if (name.includes("placement")) {
+    return { questions: 60, marks: 60, duration: 60 };
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return { questions: 100, marks: 100, duration: 60 };
+  }
+  if (name.includes("government org") || name.includes("gov org")) {
+    return { questions: 100, marks: 100, duration: 120 };
+  }
+  if (name.includes("ug entrance")) {
+    return { questions: 100, marks: 150, duration: 120 };
+  }
+  if (name.includes("cuet")) {
+    return { questions: 75, marks: 300, duration: 60 };
+  }
+  if (name.includes("mba")) {
+    return { questions: 66, marks: 198, duration: 120 };
+  }
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return { questions: 100, marks: 200, duration: 60 };
   }
@@ -590,11 +1065,302 @@ const getRealExamStats = (courseName) => {
   return { questions: 100, marks: 100, duration: 90 };
 };
 
+const getCourseSubjects = (courseName) => {
+  const name = courseName.toLowerCase();
+  
+  if (name.includes("lic") || name.includes("insurance")) {
+    return [
+      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 20 },
+      { name: "General Awareness & Current Affairs", qs: 20, marks: 20, duration: 10 },
+      { name: "Insurance & Financial Market Awareness", qs: 20, marks: 20, duration: 10 }
+    ];
+  }
+  if (name.includes("non-teaching") || name.includes("non teaching")) {
+    return [
+      { name: "General Awareness", qs: 30, marks: 30, duration: 30 },
+      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 30 },
+      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 30 },
+      { name: "Language Competency (Hindi & English)", qs: 30, marks: 30, duration: 30 }
+    ];
+  }
+  if (name.includes("tgt") || name.includes("pgt")) {
+    return [
+      { name: "Educational Psychology & Pedagogy", qs: 40, marks: 40, duration: 40 },
+      { name: "General Studies & General Awareness", qs: 35, marks: 35, duration: 30 },
+      { name: "Subject Specialization", qs: 50, marks: 50, duration: 50 }
+    ];
+  }
+  if (name.includes("tet") || name.includes("prt")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I & II", qs: 40, marks: 40, duration: 40 },
+      { name: "Mathematics & Science", qs: 40, marks: 40, duration: 40 },
+      { name: "Environmental Studies", qs: 40, marks: 40, duration: 40 }
+    ];
+  }
+  if (name.includes("food technology") || name.includes("food tech")) {
+    return [
+      { name: "Food Chemistry & Nutrition", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Microbiology & Safety", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Processing & Engineering", qs: 25, marks: 25, duration: 30 },
+      { name: "Food Laws & Standards", qs: 25, marks: 25, duration: 30 }
+    ];
+  }
+  if (name.includes("nursing")) {
+    return [
+      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 30 },
+      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 30 },
+      { name: "Medical-Surgical Nursing", qs: 25, marks: 25, duration: 30 },
+      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 30 }
+    ];
+  }
+  if (name.includes("civil engineering")) {
+    return [
+      { name: "Structural Engineering & Concrete Technology", qs: 30, marks: 30, duration: 50 },
+      { name: "Geotechnical & Transportation Engineering", qs: 30, marks: 30, duration: 50 },
+      { name: "Environmental & Water Resources Engineering", qs: 40, marks: 40, duration: 80 }
+    ];
+  }
+  if (name.includes("electrical engineering")) {
+    return [
+      { name: "Electric Circuits & Fields", qs: 30, marks: 30, duration: 50 },
+      { name: "Electrical Machines & Power Systems", qs: 40, marks: 40, duration: 70 },
+      { name: "Control Systems & Power Electronics", qs: 30, marks: 30, duration: 60 }
+    ];
+  }
+  if (name.includes("electronics & communication")) {
+    return [
+      { name: "Electronic Devices & Analog Circuits", qs: 30, marks: 30, duration: 55 },
+      { name: "Digital Circuits & Microprocessors", qs: 30, marks: 30, duration: 55 },
+      { name: "Signals & Communication Systems", qs: 40, marks: 40, duration: 70 }
+    ];
+  }
+  if (name.includes("computer science") || name.includes("cse")) {
+    return [
+      { name: "Programming, Data Structures & Algorithms", qs: 35, marks: 35, duration: 60 },
+      { name: "Computer Organization & Operating Systems", qs: 35, marks: 35, duration: 60 },
+      { name: "Databases & Computer Networks", qs: 30, marks: 30, duration: 60 }
+    ];
+  }
+  if (name.includes("instrumentation")) {
+    return [
+      { name: "Sensors & Industrial Instrumentation", qs: 30, marks: 30, duration: 50 },
+      { name: "Control Systems & Process Control", qs: 30, marks: 30, duration: 50 },
+      { name: "Measurements & Signal Conditioning", qs: 40, marks: 40, duration: 80 }
+    ];
+  }
+  if (name.includes("other engineering")) {
+    return [
+      { name: "Engineering Mathematics", qs: 30, marks: 30, duration: 50 },
+      { name: "Basic Science & Engineering Mechanics", qs: 45, marks: 45, duration: 80 },
+      { name: "General Aptitude & Professional Ethics", qs: 25, marks: 25, duration: 50 }
+    ];
+  }
+  if (name.includes("iti exam") || name.includes("iti")) {
+    return [
+      { name: "Trade Theory", qs: 20, marks: 40, duration: 50 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 35 }
+    ];
+  }
+  if (name.includes("accounting") || name.includes("commerce")) {
+    return [
+      { name: "Financial Accounting & Auditing", qs: 35, marks: 35, duration: 40 },
+      { name: "Business Economics & Finance", qs: 35, marks: 35, duration: 40 },
+      { name: "Corporate Laws & Taxation", qs: 30, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("placement")) {
+    return [
+      { name: "Quantitative Aptitude", qs: 20, marks: 20, duration: 20 },
+      { name: "Logical Reasoning", qs: 20, marks: 20, duration: 20 },
+      { name: "Verbal Ability & Technical", qs: 20, marks: 20, duration: 20 }
+    ];
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return [
+      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
+      { name: "Reasoning Ability", qs: 25, marks: 25, duration: 15 },
+      { name: "English Language", qs: 25, marks: 25, duration: 15 },
+      { name: "General Awareness", qs: 25, marks: 25, duration: 15 }
+    ];
+  }
+  if (name.includes("government org") || name.includes("gov org")) {
+    return [
+      { name: "General Aptitude & Reasoning", qs: 30, marks: 30, duration: 35 },
+      { name: "General Studies & English", qs: 30, marks: 30, duration: 35 },
+      { name: "Technical Awareness & Post Specific", qs: 40, marks: 40, duration: 50 }
+    ];
+  }
+  if (name.includes("ug entrance")) {
+    return [
+      { name: "General Aptitude", qs: 30, marks: 45, duration: 35 },
+      { name: "Logical Reasoning & English", qs: 40, marks: 60, duration: 50 },
+      { name: "Elementary Mathematics", qs: 30, marks: 45, duration: 35 }
+    ];
+  }
+  if (name.includes("cuet")) {
+    return [
+      { name: "Section IA: Languages", qs: 20, marks: 80, duration: 15 },
+      { name: "Section II: Domain Specific", qs: 25, marks: 100, duration: 25 },
+      { name: "Section III: General Test", qs: 30, marks: 120, duration: 20 }
+    ];
+  }
+  if (name.includes("mba")) {
+    return [
+      { name: "Quantitative Ability", qs: 22, marks: 66, duration: 40 },
+      { name: "Data Interpretation & Logical Reasoning", qs: 20, marks: 60, duration: 40 },
+      { name: "Verbal Ability & Reading Comprehension", qs: 24, marks: 72, duration: 40 }
+    ];
+  }
+  if (name.includes("ssc cgl") || name.includes("cgl")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 20 },
+      { name: "General Awareness", qs: 25, marks: 50, duration: 10 },
+      { name: "Quantitative Aptitude", qs: 25, marks: 50, duration: 20 },
+      { name: "English Comprehension", qs: 25, marks: 50, duration: 10 }
+    ];
+  }
+  if (name.includes("gate")) {
+    return [
+      { name: "General Aptitude", qs: 10, marks: 15, duration: 30 },
+      { name: "Engineering Mathematics", qs: 10, marks: 15, duration: 30 },
+      { name: "Discrete Mathematics & Databases", qs: 15, marks: 20, duration: 40 },
+      { name: "Computer Architecture & OS", qs: 15, marks: 25, duration: 40 },
+      { name: "Algorithms & Data Structures", qs: 15, marks: 25, duration: 40 }
+    ];
+  }
+  if (name.includes("sebi")) {
+    return [
+      { name: "General Awareness & Financial Sector", qs: 25, marks: 25, duration: 15 },
+      { name: "English Language", qs: 25, marks: 25, duration: 15 },
+      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
+      { name: "Test of Reasoning", qs: 25, marks: 25, duration: 15 }
+    ];
+  }
+  if (name.includes("ctet")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I (English/Hindi)", qs: 30, marks: 30, duration: 30 },
+      { name: "Language II (English/Hindi/Sanskrit)", qs: 30, marks: 30, duration: 30 },
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "Environmental Studies", qs: 30, marks: 30, duration: 30 }
+    ];
+  }
+  if (name.includes("fitter")) {
+    return [
+      { name: "Trade Theory (Fitter Shop & Safety)", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("electrician")) {
+    return [
+      { name: "Trade Theory (Electrical Circuits & Machines)", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("rrb je") || name.includes("je ")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 15, marks: 15, duration: 15 },
+      { name: "General Awareness", qs: 15, marks: 15, duration: 10 },
+      { name: "General Science", qs: 15, marks: 15, duration: 15 },
+      { name: "Civil & Allied Engineering", qs: 55, marks: 55, duration: 50 }
+    ];
+  }
+  if (name.includes("judiciary")) {
+    return [
+      { name: "Constitutional Law", qs: 25, marks: 25, duration: 45 },
+      { name: "Civil Procedure Code & Law of Evidence", qs: 25, marks: 25, duration: 45 },
+      { name: "Indian Penal Code & Criminal Procedure", qs: 25, marks: 25, duration: 45 },
+      { name: "Contract & Property Law", qs: 25, marks: 25, duration: 45 }
+    ];
+  }
+  if (name.includes("paramedical")) {
+    return [
+      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 20 },
+      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 20 },
+      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 25 },
+      { name: "Medical Surgical Nursing", qs: 25, marks: 25, duration: 25 }
+    ];
+  }
+  if (name.includes("electronic mechanic")) {
+    return [
+      { name: "Electronic Theory & Components", qs: 20, marks: 40, duration: 45 },
+      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
+      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
+    ];
+  }
+  if (name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return [
+      { name: "General Awareness", qs: 40, marks: 40, duration: 35 },
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "General Intelligence & Reasoning", qs: 30, marks: 30, duration: 25 }
+    ];
+  }
+  if (name.includes("sbi po")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
+      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
+    ];
+  }
+  if (name.includes("neet")) {
+    return [
+      { name: "Mechanics & General Physics", qs: 15, marks: 60, duration: 15 },
+      { name: "Electrodynamics & Magnetism", qs: 15, marks: 60, duration: 15 },
+      { name: "Optics & Modern Physics", qs: 15, marks: 60, duration: 20 }
+    ];
+  }
+  if (name.includes("nda")) {
+    return [
+      { name: "English Vocabulary & Grammar", qs: 50, marks: 200, duration: 50 },
+      { name: "Physics & Chemistry", qs: 40, marks: 160, duration: 40 },
+      { name: "General Science & History", qs: 30, marks: 120, duration: 30 },
+      { name: "Geography & Current Affairs", qs: 30, marks: 120, duration: 30 }
+    ];
+  }
+  if (name.includes("upsc")) {
+    return [
+      { name: "History of India & Indian National Movement", qs: 20, marks: 40, duration: 25 },
+      { name: "Indian and World Geography", qs: 20, marks: 40, duration: 25 },
+      { name: "Indian Polity and Governance", qs: 20, marks: 40, duration: 25 },
+      { name: "Economic and Social Development", qs: 20, marks: 40, duration: 25 },
+      { name: "General Science & Ecology", qs: 20, marks: 40, duration: 20 }
+    ];
+  }
+  if (name.includes("police") || name.includes("constable")) {
+    return [
+      { name: "General Knowledge", qs: 38, marks: 76, duration: 30 },
+      { name: "General Hindi", qs: 37, marks: 74, duration: 30 },
+      { name: "Numerical & Mental Ability", qs: 38, marks: 76, duration: 30 },
+      { name: "Mental Aptitude & Reasoning", qs: 37, marks: 74, duration: 30 }
+    ];
+  }
+  if (name.includes("b.ed")) {
+    return [
+      { name: "General Knowledge", qs: 25, marks: 50, duration: 45 },
+      { name: "Language (Hindi or English)", qs: 25, marks: 50, duration: 45 },
+      { name: "General Mental Ability", qs: 25, marks: 50, duration: 45 },
+      { name: "Subject Specialisation (Arts/Science/Commerce)", qs: 25, marks: 50, duration: 45 }
+    ];
+  }
+  return [
+    { name: "General Awareness", qs: 25, marks: 25, duration: 20 },
+    { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 25 },
+    { name: "Reasoning Ability", qs: 25, marks: 25, duration: 25 },
+    { name: "Language & Comprehension", qs: 25, marks: 25, duration: 20 }
+  ];
+};
+
 const generateSubTestsList = (courseName, isPremium) => {
   const stats = getRealExamStats(courseName);
+  const subjects = getCourseSubjects(courseName);
   const tests = [];
 
-  // 1-10: Full Length Mock Tests (10 tests)
+  // 1. Full Length Mock Tests (10 tests)
   for (let i = 1; i <= 10; i++) {
     tests.push({
       name: `Full Length Mock Test ${i}`,
@@ -606,64 +1372,62 @@ const generateSubTestsList = (courseName, isPremium) => {
     });
   }
 
-  // 11-13: Sectional Mock Tests (3 tests)
-  tests.push({
-    name: "Sectional Mock Test 1: General Core Skills",
-    type: "Subject Test",
-    qs: Math.max(10, Math.round(stats.questions * 0.5)),
-    marks: Math.max(20, Math.round(stats.marks * 0.5)),
-    duration: Math.max(15, Math.round(stats.duration * 0.5)),
-    isFree: false
-  });
-  tests.push({
-    name: "Sectional Mock Test 2: Advanced Topics & Analysis",
-    type: "Subject Test",
-    qs: Math.max(10, Math.round(stats.questions * 0.5)),
-    marks: Math.max(20, Math.round(stats.marks * 0.5)),
-    duration: Math.max(15, Math.round(stats.duration * 0.5)),
-    isFree: false
-  });
-  tests.push({
-    name: "Sectional Mock Test 3: High Difficulty Booster",
-    type: "Subject Test",
-    qs: Math.max(10, Math.round(stats.questions * 0.5)),
-    marks: Math.max(20, Math.round(stats.marks * 0.5)),
-    duration: Math.max(15, Math.round(stats.duration * 0.5)),
-    isFree: false
+  // 2. Subject Tests (3 tests per subject)
+  subjects.forEach((sub) => {
+    for (let i = 1; i <= 3; i++) {
+      tests.push({
+        name: `Subject Test ${i}: ${sub.name}`,
+        type: "Subject Test",
+        qs: sub.qs,
+        marks: sub.marks,
+        duration: sub.duration,
+        isFree: false
+      });
+    }
   });
 
-  // 14-16: Previous Year Papers (3 tests)
-  tests.push({
-    name: "Previous Year Paper (2023 Exam)",
-    type: "PYP",
-    qs: stats.questions,
-    marks: stats.marks,
-    duration: stats.duration,
-    isFree: false
-  });
-  tests.push({
-    name: "Previous Year Paper (2024 Exam)",
-    type: "PYP",
-    qs: stats.questions,
-    marks: stats.marks,
-    duration: stats.duration,
-    isFree: false
-  });
-  tests.push({
-    name: "Previous Year Paper (2025 Exam)",
-    type: "PYP",
-    qs: stats.questions,
-    marks: stats.marks,
-    duration: stats.duration,
-    isFree: false
+  // 3. Chapter Tests (3 tests per subject)
+  subjects.forEach((sub) => {
+    const chapters = [
+      { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
+      { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
+      { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
+    ];
+    chapters.forEach((chap, chapIdx) => {
+      tests.push({
+        name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
+        type: "Chapter Test",
+        qs: chap.qs,
+        marks: chap.marks,
+        duration: chap.duration,
+        isFree: false
+      });
+    });
   });
 
-  // Set isFree flag: If course is free, all are free. If course is premium (paid), only first 3 tests are free.
-  tests.forEach((test, idx) => {
+  // 4. Previous Year Papers (6 tests)
+  const startYear = 2020;
+  for (let i = 0; i < 6; i++) {
+    const year = startYear + i;
+    tests.push({
+      name: `Previous Year Paper (${year} Exam)`,
+      type: "PYP",
+      qs: stats.questions,
+      marks: stats.marks,
+      duration: stats.duration,
+      isFree: false
+    });
+  }
+
+  // Set isFree flag per type/category: Exactly the first 4 of each type are free
+  const typeCounters = {};
+  tests.forEach((test) => {
     if (!isPremium) {
       test.isFree = true;
     } else {
-      test.isFree = (idx < 3);
+      const currentCount = typeCounters[test.type] || 0;
+      test.isFree = (currentCount < 4);
+      typeCounters[test.type] = currentCount + 1;
     }
   });
 
@@ -675,28 +1439,74 @@ const categories = [
   "Fitter", "Electrician", "AE/JE Exams", "Judiciary Exams", 
   "Paramedical Exams", "Electronic Mechanic", "Railways", 
   "Banking & Insurance", "State Exams", "Defence Exams", 
-  "Civil Services", "Police Exams", "B.Ed Entrance Exams"
+  "Civil Services", "Police Exams", "B.Ed Entrance Exams",
+  "Non - Teaching Exams", "TGT/PGT Exams", "TET/PRT Exams", "NET/SET Exams",
+  "Food Technology", "Nursing Recruitment Exams", "Mechanical Engineering",
+  "Civil Engineering", "Electrical Engineering", "Electronics & Communication Eng",
+  "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
+  "Accounting and Commerce", "Campus Placements", "NRA CET",
+  "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
+  "CUET", "MBA Entrance Exam", "Banking"
 ];
 
 // Helper to match courses to categories
 const getCategoryForCourse = (courseName) => {
   const name = courseName.toLowerCase();
+  
+  // Specific Engineering disciplines first
+  if (name.includes("civil engineering")) return "Civil Engineering";
+  if (name.includes("electrical engineering")) return "Electrical Engineering";
+  if (name.includes("mechanical engineering") || name.includes("mechanical")) return "Mechanical Engineering";
+  if (name.includes("electronics & communication") || name.includes("electronics") || name.includes("ece")) return "Electronics & Communication Eng";
+  if (name.includes("computer science") || name.includes("cse")) return "Computer Science & Engineering";
+  if (name.includes("instrumentation")) return "Instrumentation Engineering";
+  if (name.includes("other engineering")) return "Other Engineering Exams";
+  
+  // Specific Teaching/Academic exams
+  if (name.includes("tgt") || name.includes("pgt")) return "TGT/PGT Exams";
+  if (name.includes("tet") || name.includes("prt")) return "TET/PRT Exams";
+  if (name.includes("net") || name.includes("set")) return "NET/SET Exams";
+  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
+  
+  // ITI and technical
+  if (name.includes("fitter")) return "Fitter";
+  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
+  if (name.includes("iti exam") || name.includes("iti")) return "ITI Exams";
+  
+  // Miscellaneous
+  if (name.includes("non-teaching") || name.includes("non teaching")) return "Non - Teaching Exams";
+  if (name.includes("food tech") || name.includes("food technology")) return "Food Technology";
+  if (name.includes("nursing recruitment") || name.includes("nursing")) return "Nursing Recruitment Exams";
+  if (name.includes("accounting") || name.includes("commerce")) return "Accounting and Commerce";
+  if (name.includes("placement") || name.includes("campus placement")) return "Campus Placements";
+  if (name.includes("nra cet") || name.includes("nra")) return "NRA CET";
+  if (name.includes("government org") || name.includes("gov org") || name.includes("govt org")) return "Government Organizations";
+  if (name.includes("ug entrance") || name.includes("under graduate")) return "UG Entrance Exams";
+  if (name.includes("cuet")) return "CUET";
+  if (name.includes("mba")) return "MBA Entrance Exam";
+  
+  // Standard categories
   if (name.includes("police") || name.includes("constable")) return "Police Exams";
   if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
   if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
   if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
+  
+  // Banking
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("banking")) {
+    if (name.includes("insurance")) return "Banking & Insurance";
+    return "Banking";
+  }
   if (name.includes("bank") || name.includes("sbi") || name.includes("ibps") || name.includes("lic") || name.includes("rbi")) return "Banking & Insurance";
+  
   if (name.includes("sebi") || name.includes("nabard") || name.includes("regulatory")) return "Regulatory Body Exams";
-  if (name.includes("jrf") || name.includes("net") || name.includes("gate")) return "PG Entrance Exam";
-  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
-  if (name.includes("fitter")) return "Fitter";
-  if (name.includes("electrician")) return "Electrician";
+  if (name.includes("jrf") || name.includes("gate")) return "PG Entrance Exam";
   if (name.includes("judiciary")) return "Judiciary Exams";
   if (name.includes("paramedical")) return "Paramedical Exams";
-  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
   if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
   if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
-  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
+  
   return "State Exams"; // Default fallback
 };
 
@@ -710,7 +1520,7 @@ const getGeneratedName = (category, idx, baseCourse) => {
     case "Railways":
       return `RRB NTPC CBT Mock Exam ${num}`;
     case "Banking & Insurance":
-      return `IBPS PO Prelims Practice Set ${num}`;
+      return `IBPS PO Banking & Insurance Practice Set ${num}`;
     case "Regulatory Body Exams":
       return `NABARD Grade A Officer Prep Set ${num}`;
     case "PG Entrance Exam":
@@ -743,6 +1553,50 @@ const getGeneratedName = (category, idx, baseCourse) => {
       return `UP B.Ed Joint Entrance Test Set ${num}`;
     case "State Exams":
       return `NEET Practice Mock Set ${num}`;
+    case "Non - Teaching Exams":
+      return `Non-Teaching Staff Mock Paper ${num}`;
+    case "TGT/PGT Exams":
+      return `TGT/PGT School Teacher Test ${num}`;
+    case "TET/PRT Exams":
+      return `State TET/PRT Practice Set ${num}`;
+    case "NET/SET Exams":
+      return `UGC NET/SET Assistant Prof Mock ${num}`;
+    case "Food Technology":
+      return `Food Technology Officer Practice ${num}`;
+    case "Nursing Recruitment Exams":
+      return `Nursing Recruitment Staff Nurse Mock ${num}`;
+    case "Mechanical Engineering":
+      return `Mechanical Engineering Core Test ${num}`;
+    case "Civil Engineering":
+      return `Civil Engineering Structure Test ${num}`;
+    case "Electrical Engineering":
+      return `Electrical Engineering Basic Mock ${num}`;
+    case "Electronics & Communication Eng":
+      return `ECE Circuit & Systems Test ${num}`;
+    case "Computer Science & Engineering":
+      return `CSE Algorithm & Coding Prep ${num}`;
+    case "Other Engineering Exams":
+      return `Other Engineering Simulator Set ${num}`;
+    case "ITI Exams":
+      return `ITI Semester Trade Mock ${num}`;
+    case "Accounting and Commerce":
+      return `Accounting and Commerce Finance Mock ${num}`;
+    case "Campus Placements":
+      return `Campus Placement Aptitude Test ${num}`;
+    case "NRA CET":
+      return `NRA CET Common Eligibility Test ${num}`;
+    case "Instrumentation Engineering":
+      return `Instrumentation Engineering Sensors Mock ${num}`;
+    case "Government Organizations":
+      return `Govt Org Officer Recruitment Mock ${num}`;
+    case "UG Entrance Exams":
+      return `Under Graduate Entrance Mock ${num}`;
+    case "CUET":
+      return `CUET General Test Preparation ${num}`;
+    case "MBA Entrance Exam":
+      return `MBA CAT/MAT Quantitative Mock ${num}`;
+    case "Banking":
+      return `IBPS/SBI Banking Practice Paper ${num}`;
     default:
       return `${baseCourse.name} Simulator Set ${num}`;
   }
