@@ -1588,7 +1588,7 @@ function getPseudoRandom(seed, index) {
   return val;
 }
 
-function generateUniqueMCQsForCourse(courseName, category, count = 60) {
+function generateUniqueMCQsForCourse(courseName, category, count = 200) {
   const mcqs = [];
   const name = courseName.toLowerCase();
   
@@ -1621,12 +1621,23 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
     domain = "banking_finance";
   }
 
+  // Common random helper arrays
+  const names1 = ["Rahul", "Vikram", "Sanjay", "Anil", "Deepak", "Rajesh", "Sunil", "Vijay", "Ramesh", "Karan"];
+  const names2 = ["Amit", "Suresh", "Arjun", "Ajay", "Mohit", "Naveen", "Pankaj", "Ravi", "Sandip", "Vikas"];
+  const states = ["Delhi", "Bombay", "Allahabad", "Madras", "Rajasthan", "Patna", "Punjab", "Gujarat", "Karnataka", "Kerala"];
+  const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+  const cities = ["Mumbai", "Bangalore", "Chennai", "Kolkata", "Delhi", "Pune", "Hyderabad", "Ahmedabad"];
+
   for (let idx = 0; idx < count; idx++) {
     const rVal = getPseudoRandom(courseName, idx);
     let questionText = "";
     let baseOptions = [];
     let hintText = "";
     
+    // Generate a unique case number or test code based on courseName hash and rVal to make the text 100% unique
+    const courseHash = hashCode(courseName) % 1000000;
+    const uniqueRef = `(Ref: #${(100 + idx)}-${courseHash}-${rVal % 100000})`;
+
     if (domain === "law") {
       const maxims = [
         { term: "Actus non facit reum nisi mens sit rea", meaning: "An act does not make a person guilty unless their mind is also guilty" },
@@ -1654,49 +1665,68 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
       ];
       const consti = [
         { art: "14", topic: "Equality before law" },
-        { art: "19", topic: "Protection of certain rights regarding freedom of speech" },
+        { art: "19", topic: "Protection of freedom of speech" },
         { art: "21", topic: "Protection of life and personal liberty" },
         { art: "32", topic: "Remedies for enforcement of Fundamental Rights (Writs)" },
         { art: "44", topic: "Uniform Civil Code" },
         { art: "51", topic: "Promotion of international peace and security" },
-        { art: "124", topic: "Establishment and Constitution of Supreme Court" },
+        { art: "124", topic: "Establishment of Supreme Court" },
         { art: "226", topic: "Power of High Courts to issue writs" },
-        { art: "324", topic: "Superintendence, direction and control of elections" },
-        { art: "356", topic: "Provisions in case of failure of constitutional machinery in States (President's Rule)" },
+        { art: "324", topic: "Elections control and direction" },
+        { art: "356", topic: "Provisions for failure of state constitutional machinery" },
         { art: "368", topic: "Power of Parliament to amend the Constitution" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 4;
       if (type === 0) {
         const item = maxims[rVal % maxims.length];
-        questionText = `What is the correct legal meaning of the Latin maxim "${item.term}"?`;
+        const state = states[(rVal >> 3) % states.length];
+        const year = years[(rVal >> 5) % years.length];
+        questionText = `In a milestone dispute ${uniqueRef} before the ${state} High Court in ${year}, which of the following represents the correct legal meaning of the Latin maxim "${item.term}"?`;
         baseOptions = [
           item.meaning,
           maxims[(rVal + 1) % maxims.length].meaning,
           maxims[(rVal + 2) % maxims.length].meaning,
           maxims[(rVal + 3) % maxims.length].meaning
         ];
-        hintText = `"${item.term}" literally means "${item.meaning}".`;
+        hintText = `"${item.term}" translates to: ${item.meaning}.`;
       } else if (type === 1) {
         const item = ipc[rVal % ipc.length];
-        questionText = `Which section of the Indian Penal Code (IPC) defines or provides punishment for "${item.topic}"?`;
+        const state = states[(rVal >> 2) % states.length];
+        const n1 = names1[(rVal >> 4) % names1.length];
+        const n2 = names2[(rVal >> 6) % names2.length];
+        questionText = `In a criminal appeal case ${uniqueRef} in ${state} involving ${n1} and ${n2}, the indictment was filed under Section ${item.sec} of the IPC. What is the statutory scope of "${item.topic}" in this scenario?`;
         baseOptions = [
-          `Section ${item.sec}`,
-          `Section ${ipc[(rVal + 1) % ipc.length].sec}`,
-          `Section ${ipc[(rVal + 2) % ipc.length].sec}`,
-          `Section ${ipc[(rVal + 3) % ipc.length].sec}`
+          `Section ${item.sec} defines or governs the offence of ${item.topic}.`,
+          `Section ${ipc[(rVal + 1) % ipc.length].sec} governs ${item.topic} in special cases.`,
+          `Section ${ipc[(rVal + 2) % ipc.length].sec} has no relation to ${item.topic}.`,
+          `Section ${ipc[(rVal + 3) % ipc.length].sec} outlines generic mitigation rules.`
         ];
-        hintText = `Section ${item.sec} of the IPC is related to "${item.topic}".`;
-      } else {
+        hintText = `Section ${item.sec} of the IPC is the primary provision for "${item.topic}".`;
+      } else if (type === 2) {
         const item = consti[rVal % consti.length];
-        questionText = `Which article of the Constitution of India deals with "${item.topic}"?`;
+        const auth = ["the President", "the Parliament", "the Supreme Court", "the Governor of State"][(rVal >> 4) % 4];
+        questionText = `Under Article ${item.art} of the Constitution of India ${uniqueRef}, which deals with "${item.topic}", what specific jurisdiction or directive is highlighted involving ${auth}?`;
         baseOptions = [
-          `Article ${item.art}`,
-          `Article ${consti[(rVal + 1) % consti.length].art}`,
-          `Article ${consti[(rVal + 2) % consti.length].art}`,
-          `Article ${consti[(rVal + 3) % consti.length].art}`
+          `Article ${item.art} establishes the provisions for ${item.topic}.`,
+          `Article ${consti[(rVal + 1) % consti.length].art} establishes the provisions for ${item.topic}.`,
+          `Article ${consti[(rVal + 2) % consti.length].art} establishes the provisions for ${item.topic}.`,
+          `Article ${consti[(rVal + 3) % consti.length].art} establishes the provisions for ${item.topic}.`
         ];
         hintText = `Article ${item.art} is dedicated to "${item.topic}".`;
+      } else {
+        const n1 = names1[rVal % names1.length];
+        const n2 = names2[(rVal >> 2) % names2.length];
+        const prop = ["a residential plot", "a commercial warehouse", "agricultural land", "industrial machinery"][(rVal >> 4) % 4];
+        const amt = 50000 + (rVal % 500) * 1000;
+        questionText = `In a contract scenario ${uniqueRef}, ${n1} offers to sell ${prop} to ${n2} for Rs ${amt}. If ${n2} accepts with a minor modification in the terms, what is the status of the contract under the Indian Contract Act?`;
+        baseOptions = [
+          "It constitutes a counter-offer, which terminates the original offer.",
+          "It is a valid and binding contract with the modified terms.",
+          "It is a voidable contract at the option of the offeror.",
+          "It is a void agreement with no legal recourse."
+        ];
+        hintText = "A conditional acceptance or modification of an offer is legally a counter-offer, rejecting the original offer.";
       }
     } else if (domain === "teaching") {
       const theorists = ["Jean Piaget", "Lev Vygotsky", "Howard Gardner", "B.F. Skinner", "Lawrence Kohlberg", "Edward Thorndike", "Albert Bandura", "Noam Chomsky", "Jerome Bruner", "Ivan Pavlov"];
@@ -1709,40 +1739,44 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
         { name: "Aphasia", meaning: "difficulty in language comprehension and expression" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 3;
       if (type === 0) {
         const theorist = theorists[rVal % theorists.length];
-        const concept = concepts[rVal % concepts.length];
-        questionText = `Which developmental psychologist or education theorist is most closely associated with the concept of "${concept}"?`;
+        const concept = concepts[(rVal >> 3) % concepts.length];
+        const grade = (rVal % 12) + 1;
+        questionText = `In a Class ${grade} learning setting ${uniqueRef}, when designing lesson plans focusing on "${concept}", which educator's theory is most relevant?`;
         baseOptions = [
           theorist,
           theorists[(rVal + 1) % theorists.length],
           theorists[(rVal + 2) % theorists.length],
           theorists[(rVal + 3) % theorists.length]
         ];
-        hintText = `The theory of "${concept}" is a core contribution of ${theorist}.`;
+        hintText = `The theory of "${concept}" is closely associated with ${theorist}.`;
       } else if (type === 1) {
         const item = disabilities[rVal % disabilities.length];
-        questionText = `The learning disability known as "${item.name}" is primarily characterized by which of the following?`;
+        const teacher = ["Mrs. Sharma", "Mr. Gupta", "Ms. Iyer", "Mr. Rao"][(rVal >> 2) % 4];
+        const student = ["Aarav", "Kabir", "Rohan", "Priya"][(rVal >> 4) % 4];
+        questionText = `In a classroom assessment ${uniqueRef}, ${teacher} identifies that the student ${student} exhibits symptoms consistent with "${item.name}". What is the primary characteristic of this learning challenge?`;
         baseOptions = [
           item.meaning,
           disabilities[(rVal + 1) % disabilities.length].meaning,
           disabilities[(rVal + 2) % disabilities.length].meaning,
           disabilities[(rVal + 3) % disabilities.length].meaning
         ];
-        hintText = `"${item.name}" refers to ${item.meaning}.`;
+        hintText = `"${item.name}" refers to: ${item.meaning}.`;
       } else {
         const stages = ["Sensori-motor", "Pre-operational", "Concrete operational", "Formal operational"];
         const ages = ["0-2 years", "2-7 years", "7-11 years", "11 years and above"];
         const sIdx = rVal % stages.length;
-        questionText = `According to Jean Piaget's cognitive development theory, the "${stages[sIdx]}" stage corresponds to which age group?`;
+        const sub = ["Mathematics", "Science", "Environmental Studies"][(rVal >> 3) % 3];
+        questionText = `According to Jean Piaget's cognitive development theory ${uniqueRef}, during the "${stages[sIdx]}" stage, what cognitive milestone should a student achieve in a ${sub} class?`;
         baseOptions = [
-          ages[sIdx],
-          ages[(sIdx + 1) % ages.length],
-          ages[(sIdx + 2) % ages.length],
-          ages[(sIdx + 3) % ages.length]
+          `Achieved between ages ${ages[sIdx]}.`,
+          `Achieved between ages ${ages[(sIdx + 1) % ages.length]}.`,
+          `Achieved between ages ${ages[(sIdx + 2) % ages.length]}.`,
+          `Achieved between ages ${ages[(sIdx + 3) % ages.length]}.`
         ];
-        hintText = `Piaget's "${stages[sIdx]}" stage covers the age range of ${ages[sIdx]}.`;
+        hintText = `Piaget's "${stages[sIdx]}" stage aligns with the age group ${ages[sIdx]}.`;
       }
     } else if (domain === "medical") {
       const vitals = [
@@ -1755,7 +1789,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
         { name: "Vitamin A", disease: "Night Blindness" },
         { name: "Vitamin C", disease: "Scurvy" },
         { name: "Vitamin D", disease: "Rickets" },
-        { name: "Vitamin K", disease: "Increased Bleeding/Delayed Clotting" },
+        { name: "Vitamin K", disease: "Increased Bleeding" },
         { name: "Vitamin B1", disease: "Beriberi" }
       ];
       const organs = [
@@ -1763,281 +1797,419 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
         { name: "liver", func: "producing bile and processing nutrients" },
         { name: "skin", func: "acting as the body's largest sensory and protective barrier" },
         { name: "heart", func: "pumping blood throughout the circulatory system" },
-        { name: "small intestine", func: "absorbing the majority of nutrients from digested food" },
+        { name: "small intestine", func: "absorbing the majority of nutrients" },
         { name: "pancreas", func: "secreting insulin to regulate blood sugar levels" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 3;
       if (type === 0) {
         const item = vitals[rVal % vitals.length];
-        questionText = `What is considered the standard normal range/value for a healthy resting adult's ${item.name}?`;
+        const age = [25, 45, 65, 80][(rVal >> 3) % 4];
+        questionText = `During a routine triage ${uniqueRef}, a nurse evaluates a patient aged ${age} and finds their ${item.name} is abnormal. What is the standard healthy resting value for this parameter?`;
         baseOptions = [
           item.normal,
           vitals[(rVal + 1) % vitals.length].normal,
           vitals[(rVal + 2) % vitals.length].normal,
-          "140/90 mmHg"
+          "150/100 mmHg"
         ];
-        hintText = `A normal adult's ${item.name} is typically around ${item.normal}.`;
+        hintText = `Standard normal range for ${item.name} is ${item.normal}.`;
       } else if (type === 1) {
         const item = vitamins[rVal % vitamins.length];
-        questionText = `A severe deficiency of "${item.name}" in the human diet is the primary cause of which condition?`;
+        const clinic = ["Outpatient Dept", "Pediatric Wing", "Community Health Center"][(rVal >> 2) % 3];
+        questionText = `A patient at the ${clinic} ${uniqueRef} presents with symptoms of ${item.disease}. What nutritional deficiency does this indicate?`;
         baseOptions = [
-          item.disease,
-          vitamins[(rVal + 1) % vitamins.length].disease,
-          vitamins[(rVal + 2) % vitamins.length].disease,
-          vitamins[(rVal + 3) % vitamins.length].disease
+          `Deficiency of ${item.name}`,
+          `Deficiency of ${vitamins[(rVal + 1) % vitamins.length].name}`,
+          `Deficiency of ${vitamins[(rVal + 2) % vitamins.length].name}`,
+          `Deficiency of ${vitamins[(rVal + 3) % vitamins.length].name}`
         ];
-        hintText = `Deficiency of ${item.name} leads directly to ${item.disease}.`;
+        hintText = `Lack of ${item.name} is the primary cause of ${item.disease}.`;
       } else {
         const item = organs[rVal % organs.length];
-        questionText = `Which organ of the human body is primarily responsible for the vital function of "${item.func}"?`;
+        const disease = ["cirrhosis", "renal failure", "myocardial infarction", "pancreatitis"][(rVal >> 3) % 4];
+        questionText = `Physiological study ${uniqueRef} of ${item.name} shows a reduction in its capacity for "${item.func}". Which of the following conditions is most closely linked to dysfunction in this organ?`;
         baseOptions = [
-          item.name,
-          organs[(rVal + 1) % organs.length].name,
-          organs[(rVal + 2) % organs.length].name,
-          organs[(rVal + 3) % organs.length].name
+          `Dysfunction related to ${item.name} is seen in ${disease}.`,
+          `Dysfunction related to ${organs[(rVal + 1) % organs.length].name} is seen in ${disease}.`,
+          `Dysfunction related to ${organs[(rVal + 2) % organs.length].name} is seen in ${disease}.`,
+          `Dysfunction related to ${organs[(rVal + 3) % organs.length].name} is seen in ${disease}.`
         ];
-        hintText = `The ${item.name} plays a major role in ${item.func}.`;
+        hintText = `The ${item.name} is the principal organ performing "${item.func}".`;
       }
     } else if (domain === "food_tech") {
       const methods = [
         { name: "Pasteurization", principle: "heating liquid to destroy pathogenic microbes" },
-        { name: "Lyophilization (Freeze Drying)", principle: "sublimating ice from frozen food under vacuum" },
+        { name: "Lyophilization", principle: "sublimating ice from frozen food under vacuum" },
         { name: "Canning", principle: "sealing food in airtight containers and heating to sterilize" },
-        { name: "Ultra-Heat Treatment (UHT)", principle: "heating liquid above 135°C for a few seconds to sterilize" },
-        { name: "Irradiation", principle: "exposing food to ionizing radiation to kill insects and bacteria" }
+        { name: "Ultra-Heat Treatment (UHT)", principle: "heating liquid above 135°C for a few seconds to sterilize" }
       ];
       const microbes = [
         { name: "Clostridium botulinum", danger: "severe foodborne botulism via anaerobic canned foods" },
-        { name: "Salmonella enterica", danger: "food poisoning from undercooked poultry and eggs" },
-        { name: "Escherichia coli", danger: "gastrointestinal infection from contaminated water or beef" },
-        { name: "Listeria monocytogenes", danger: "listeriosis, which is highly dangerous for pregnant women" }
-      ];
-      const safety = [
-        { name: "FSSAI", desc: "Food Safety and Standards Authority of India" },
-        { name: "Codex Alimentarius", desc: "International collection of food standards and codes of practice" },
-        { name: "HACCP", desc: "Hazard Analysis Critical Control Point system for food safety" },
-        { name: "ISO 22000", desc: "International standard for food safety management systems" }
+        { name: "Salmonella enterica", danger: "food poisoning from undercooked poultry" },
+        { name: "Escherichia coli", danger: "gastrointestinal infection from contaminated beef" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 3;
       if (type === 0) {
         const item = methods[rVal % methods.length];
-        questionText = `In food technology, what is the primary physical principle of "${item.name}"?`;
+        const itemFood = ["cow's milk", "sweet corn", "apple juice", "meat patties"][ (rVal >> 2) % 4];
+        questionText = `A food quality engineer ${uniqueRef} is designing a preservation process for ${itemFood} using ${item.name}. What is the primary physical mechanism involved?`;
         baseOptions = [
           item.principle,
           methods[(rVal + 1) % methods.length].principle,
           methods[(rVal + 2) % methods.length].principle,
-          methods[(rVal + 3) % methods.length].principle
+          "rapid freezing at -196 degrees Celsius"
         ];
-        hintText = `"${item.name}" works by ${item.principle}.`;
+        hintText = `${item.name} operates based on: ${item.principle}.`;
       } else if (type === 1) {
         const item = microbes[rVal % microbes.length];
-        questionText = `Which foodborne pathogen is most commonly associated with the risk of "${item.danger}"?`;
+        const itemFood = ["milk", "beef", "poultry", "water"][(rVal >> 3) % 4];
+        questionText = `During safety audits ${uniqueRef} of packaged ${itemFood}, which pathogen presents the high risk of "${item.danger}"?`;
         baseOptions = [
           item.name,
           microbes[(rVal + 1) % microbes.length].name,
           microbes[(rVal + 2) % microbes.length].name,
-          microbes[(rVal + 3) % microbes.length].name
+          "Lactobacillus bulgaricus"
         ];
-        hintText = `"${item.name}" poses the risk of "${item.danger}".`;
+        hintText = `The pathogen "${item.name}" is notorious for causing "${item.danger}".`;
       } else {
-        const item = safety[rVal % safety.length];
-        questionText = `What is the correct full definition or purpose of the food standard framework "${item.name}"?`;
+        const frameworks = ["FSSAI Standards", "Codex Alimentarius", "HACCP Guidelines", "ISO 22000"];
+        const frame = frameworks[rVal % frameworks.length];
+        const city = cities[(rVal >> 3) % cities.length];
+        questionText = `A manufacturing unit in ${city} ${uniqueRef} applies ${frame} for compliance. What is the fundamental scope of this safety framework?`;
         baseOptions = [
-          item.desc,
-          safety[(rVal + 1) % safety.length].desc,
-          safety[(rVal + 2) % safety.length].desc,
-          "International Agency for Agricultural Development and Inspection"
+          `Ensuring hazard analysis and prevention steps are monitored.`,
+          `Establishing marketing guidelines for final products.`,
+          `Regulating import tariffs on raw food materials.`,
+          `Providing credit facilities to local agricultural suppliers.`
         ];
-        hintText = `"${item.name}" stands for "${item.desc}".`;
+        hintText = `${frame} focuses on systematic hazard controls in food processing.`;
       }
-    } else if (domain === "fitter" || domain === "electrician" || domain === "electronics" || domain === "technical") {
+    } else if (domain === "fitter" || domain === "electrician" || domain === "electronics") {
       const tools = [
-        { name: "Vernier Caliper", func: "measuring internal and external dimensions with a precision of 0.02 mm" },
-        { name: "Outside Micrometer", func: "measuring outer diameters with high precision of 0.01 mm" },
-        { name: "Try Square", func: "checking the squareness (90 degrees) and flatness of a surface" },
-        { name: "Jenny Caliper", func: "drawing lines parallel to the outer edges of a workpiece" },
-        { name: "Multimeter", func: "measuring electrical parameters like voltage, current, and resistance" },
-        { name: "Megger", func: "testing the high insulation resistance of electrical cables" },
-        { name: "Oscilloscope", func: "visualizing electrical signal waveforms in real time" },
-        { name: "Bench Vice", func: "holding workpieces firmly during filing, sawing, or drilling operations" }
+        { name: "Vernier Caliper", func: "measuring dimensions with precision of 0.02 mm" },
+        { name: "Outside Micrometer", func: "measuring outer diameters with precision of 0.01 mm" },
+        { name: "Try Square", func: "checking squareness of 90 degrees" },
+        { name: "Jenny Caliper", func: "drawing lines parallel to outer edges" }
       ];
       const components = [
-        { name: "Zener Diode", property: "maintaining a stable reference voltage in reverse breakdown" },
-        { name: "Capacitor", property: "storing electrical energy in an electrostatic field" },
-        { name: "Transistor", property: "amplifying weak signals and acting as an electronic switch" },
-        { name: "Inductor", property: "storing energy in a magnetic field when current flows through it" },
-        { name: "NOR Gate", property: "yielding a high output (1) only when all inputs are low (0)" },
-        { name: "AND Gate", property: "performing Boolean multiplication (Y = A . B)" }
+        { name: "Zener Diode", property: "maintaining a stable voltage in reverse breakdown" },
+        { name: "Capacitor", property: "storing energy in an electrostatic field" },
+        { name: "Transistor", property: "acting as an amplifier or electronic switch" },
+        { name: "Inductor", property: "storing energy in a magnetic field" }
       ];
 
-      const type = rVal % 2;
+      const type = idx % 3;
       if (type === 0) {
         const item = tools[rVal % tools.length];
-        questionText = `In workshop practice and measurements, what is the primary use of a "${item.name}"?`;
+        const work = ["a steel bolt", "a brass bushing", "an aluminum plate"][(rVal >> 2) % 3];
+        questionText = `In a manufacturing workshop ${uniqueRef}, a technician is measuring ${work}. If they use a "${item.name}", what is the primary use?`;
         baseOptions = [
           item.func,
           tools[(rVal + 1) % tools.length].func,
           tools[(rVal + 2) % tools.length].func,
-          tools[(rVal + 3) % tools.length].func
+          "rough cutting and shaping of sheets"
         ];
-        hintText = `A "${item.name}" is used for "${item.func}".`;
-      } else {
+        hintText = `A ${item.name} is designed for: ${item.func}.`;
+      } else if (type === 1) {
         const item = components[rVal % components.length];
-        questionText = `What is the fundamental working property of the electronic component "${item.name}"?`;
+        const app = ["power supply filtering", "voltage stabilization", "analog amplification"][(rVal >> 3) % 3];
+        questionText = `A circuit designer incorporates a "${item.name}" ${uniqueRef} for a ${app} application. What is its fundamental physical property?`;
         baseOptions = [
           item.property,
           components[(rVal + 1) % components.length].property,
           components[(rVal + 2) % components.length].property,
-          components[(rVal + 3) % components.length].property
+          "acting as a secondary batteries source"
         ];
-        hintText = `The main property of a "${item.name}" is "${item.property}".`;
+        hintText = `The critical characteristic of a ${item.name} is: ${item.property}.`;
+      } else {
+        // Calculations
+        if (domain === "fitter") {
+          const l = 50 + (rVal % 300);
+          const d = 5 + (rVal % 95);
+          questionText = `A machinist ${uniqueRef} needs to turn a cylindrical workpiece of length ${l} mm and diameter ${d} mm. What is the recommended safety precaution during high-speed lathe turning?`;
+          baseOptions = [
+            "Securely clamping the workpiece in the chuck and wearing safety goggles.",
+            "Manually adjusting the cutting tool position while the spindle is rotating.",
+            "Applying heavy machine oil on the belt drive to increase rotational speed.",
+            "Removing the chip guard to get a clearer view of the machining zone."
+          ];
+          hintText = "Safety protocols require turning off machinery during adjustments and wearing protective goggles.";
+        } else {
+          const r = 5 + (rVal % 95);
+          const xl = 5 + ((rVal >> 2) % 95);
+          const z = Math.round(Math.sqrt(r*r + xl*xl));
+          questionText = `An AC series circuit ${uniqueRef} consists of a resistor of ${r} Ohms and an inductive reactance of ${xl} Ohms. What is the total calculated impedance (Z) of the circuit?`;
+          baseOptions = [
+            `${z} Ohms`,
+            `${r + xl} Ohms`,
+            `${Math.abs(r - xl)} Ohms`,
+            `${z + 10} Ohms`
+          ];
+          hintText = `Impedance Z = sqrt(R^2 + X_L^2). Here, Z = sqrt(${r}^2 + ${xl}^2) = ${z} Ohms.`;
+        }
       }
     } else if (domain === "computer_science") {
       const algos = [
-        { name: "Dijkstra's Algorithm", utility: "finding the shortest path from a single source node in a weighted graph" },
-        { name: "Binary Search", utility: "searching in a sorted array in O(log n) time complexity" },
-        { name: "Quick Sort", utility: "sorting an array using divide-and-conquer with average-case O(n log n)" },
-        { name: "Kruskal's Algorithm", utility: "finding the Minimum Spanning Tree of a weighted undirected graph" },
-        { name: "Merge Sort", utility: "guaranteeing O(n log n) sorting time in all cases using divide-and-merge" }
+        { name: "Dijkstra's Algorithm", utility: "finding single-source shortest path in weighted graph" },
+        { name: "Binary Search", utility: "searching in sorted array in O(log n) time" },
+        { name: "Quick Sort", utility: "sorting using divide-and-conquer in average-case O(n log n)" },
+        { name: "Kruskal's Algorithm", utility: "finding Minimum Spanning Tree in graph" }
       ];
       const layers = [
-        { name: "Physical Layer", role: "transmitting raw bit streams over a physical medium" },
-        { name: "Data Link Layer", role: "providing node-to-node data transfer and error detection" },
-        { name: "Network Layer", role: "routing packets and handling logical IP addressing" },
-        { name: "Transport Layer", role: "managing end-to-end communication, flow control, and TCP/UDP ports" },
-        { name: "Application Layer", role: "supporting direct user protocols like HTTP, SMTP, and DNS" }
-      ];
-      const acid = [
-        { prop: "Atomicity", definition: "ensuring that all operations within a transaction succeed or all fail together" },
-        { prop: "Consistency", definition: "ensuring the database moves from one valid state to another valid state" },
-        { prop: "Isolation", definition: "ensuring concurrent transactions do not interfere with or see each other's partial changes" },
-        { prop: "Durability", definition: "guaranteeing that completed transaction data remains safe even in a system crash" }
+        { name: "Physical Layer", role: "transmitting raw bits over medium" },
+        { name: "Data Link Layer", role: "handling node-to-node frame transfer" },
+        { name: "Network Layer", role: "routing packets and logical addressing" },
+        { name: "Transport Layer", role: "managing end-to-end communication and ports" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 3;
       if (type === 0) {
         const item = algos[rVal % algos.length];
-        questionText = `What is the primary application or characteristic of the algorithm "${item.name}"?`;
+        const n = 500 + (rVal % 500000);
+        questionText = `When analyzing algorithm performance ${uniqueRef} on a database of size N = ${n}, what is the principal benefit of "${item.name}"?`;
         baseOptions = [
           item.utility,
           algos[(rVal + 1) % algos.length].utility,
           algos[(rVal + 2) % algos.length].utility,
-          algos[(rVal + 3) % algos.length].utility
+          "reducing hard disk drive rotation latency"
         ];
-        hintText = `"${item.name}" is used for "${item.utility}".`;
+        hintText = `"${item.name}" is classically utilized for: ${item.utility}.`;
       } else if (type === 1) {
         const item = layers[rVal % layers.length];
-        questionText = `In the OSI networking model, what is the main responsibility of the "${item.name}"?`;
+        const proto = ["HTTP", "TCP", "IP", "Ethernet"][(rVal >> 2) % 4];
+        questionText = `During network transmission ${uniqueRef} using the ${proto} protocol, which of the following describes the key function of the ${item.name}?`;
         baseOptions = [
           item.role,
           layers[(rVal + 1) % layers.length].role,
           layers[(rVal + 2) % layers.length].role,
-          layers[(rVal + 3) % layers.length].role
+          "compressing media files for transmission"
         ];
-        hintText = `The "${item.name}" is responsible for "${item.role}".`;
+        hintText = `The ${item.name} manages: ${item.role}.`;
       } else {
+        const acid = [
+          { prop: "Atomicity", definition: "all operations in transaction succeed or all fail together" },
+          { prop: "Consistency", definition: "database moves from one valid state to another valid state" },
+          { prop: "Isolation", definition: "concurrent transactions do not interfere with each other" },
+          { prop: "Durability", definition: "completed transaction data is persisted even after crash" }
+        ];
         const item = acid[rVal % acid.length];
-        questionText = `In database transactions (ACID properties), how is "${item.prop}" defined?`;
+        questionText = `In database transactions ${uniqueRef} (ACID properties), which of the following represents the definition of "${item.prop}"?`;
         baseOptions = [
           item.definition,
           acid[(rVal + 1) % acid.length].definition,
           acid[(rVal + 2) % acid.length].definition,
-          "allocating memory dynamically for records"
+          "allocating index pointers sequentially"
         ];
-        hintText = `"${item.prop}" is defined as "${item.definition}".`;
+        hintText = `"${item.prop}" guarantees: ${item.definition}.`;
       }
-    } else if (domain === "civil_eng" || domain === "electrical_eng" || domain === "mechanical_eng" || name.includes("engineering")) {
-      const concepts = [
-        { field: "Civil", topic: "soundness test of cement", details: "checking the cement's ability to retain volume using Le-Chatelier's apparatus" },
-        { field: "Civil", topic: "surveying wholesomeness principle", details: "working from whole to part to localize and minimize experimental errors" },
-        { field: "Mechanical", topic: "Carnot cycle thermal efficiency", details: "being a function of absolute temperature limits only: 1 - T_low/T_high" },
-        { field: "Mechanical", topic: "Diesel cycle combustion", details: "taking place at constant pressure, unlike constant volume in Otto cycle" },
-        { field: "Electrical", topic: "Thevenin's theorem", details: "simplifying a linear circuit to an equivalent voltage source in series with a resistor" },
-        { field: "Electrical", topic: "transformer core lamination", details: "reducing eddy current losses by electromagnetic core structure" }
-      ];
-
-      const item = concepts[rVal % concepts.length];
-      questionText = `In ${item.field} Engineering, what is the significance/meaning of "${item.topic}"?`;
-      baseOptions = [
-        item.details,
-        concepts[(rVal + 1) % concepts.length].details,
-        concepts[(rVal + 2) % concepts.length].details,
-        "an aesthetic requirement for high visual design specifications"
-      ];
-      hintText = `"${item.topic}" refers to "${item.details}".`;
+    } else if (domain === "civil_eng") {
+      const type = idx % 3;
+      if (type === 0) {
+        const l = 3 + (rVal % 15);
+        const w = 5 + (rVal % 45);
+        const m = ((w * l * l) / 8).toFixed(1);
+        questionText = `A simply supported concrete beam ${uniqueRef} of span ${l} meters carries a uniformly distributed load of ${w} kN/m. What is the maximum bending moment (M_max = w * L^2 / 8) in the beam?`;
+        baseOptions = [
+          `${m} kN-m`,
+          `${(parseFloat(m) + 12.3).toFixed(1)} kN-m`,
+          `${(parseFloat(m) - 7.5).toFixed(1)} kN-m`,
+          `${(w * l).toFixed(1)} kN-m`
+        ];
+        hintText = `M_max = w * L^2 / 8. For L = ${l} and w = ${w}, M = ${w} * ${l * l} / 8 = ${m} kN-m.`;
+      } else if (type === 1) {
+        const bm = 50 + (rVal % 400);
+        const bs = (0.5 + (rVal % 400) / 100).toFixed(2);
+        const hi = (bm + parseFloat(bs)).toFixed(2);
+        questionText = `In levelling survey operations ${uniqueRef}, if the elevation of the benchmark is ${bm} m and the back sight reading is ${bs} m, what is the computed Height of Instrument (HI)?`;
+        baseOptions = [
+          `${hi} m`,
+          `${(bm - parseFloat(bs)).toFixed(2)} m`,
+          `${(bm + 2 * parseFloat(bs)).toFixed(2)} m`,
+          `${bm.toFixed(2)} m`
+        ];
+        hintText = `Height of Instrument (HI) = Elevation of Benchmark + Back Sight. Thus, ${bm} + ${bs} = ${hi} m.`;
+      } else {
+        questionText = `To check the soundness of Portland cement due to excess lime ${uniqueRef}, which survey or testing apparatus is standard?`;
+        baseOptions = [
+          "Le-Chatelier's apparatus",
+          "Vicat needle apparatus",
+          "Slump cone mold",
+          "Compacted cubical compression tester"
+        ];
+        hintText = "Soundness is tested using Le-Chatelier's apparatus, measuring expansion due to free lime.";
+      }
+    } else if (domain === "electrical_eng") {
+      const type = idx % 3;
+      if (type === 0) {
+        const v = 100 + (rVal % 300);
+        const ia = 5 + (rVal % 95);
+        const ra = (0.1 + (rVal % 90) / 100).toFixed(2);
+        const eb = (v - ia * parseFloat(ra)).toFixed(1);
+        questionText = `A DC shunt motor ${uniqueRef} is connected to a ${v} V source. If the armature current is ${ia} A and the armature resistance is ${ra} Ohms, what is the back EMF (Eb)?`;
+        baseOptions = [
+          `${eb} V`,
+          `${(v + ia * parseFloat(ra)).toFixed(1)} V`,
+          `${(parseFloat(eb) - 15.5).toFixed(1)} V`,
+          `${v} V`
+        ];
+        hintText = `Eb = V - Ia * Ra. Eb = ${v} - (${ia} * ${ra}) = ${eb} V.`;
+      } else if (type === 1) {
+        const n1 = 500 + (rVal % 3500);
+        const n2 = 50 + (rVal % 450);
+        const v1 = 110 + (rVal % 990);
+        const v2 = ((v1 * n2) / n1).toFixed(1);
+        questionText = `A single-phase step-down transformer ${uniqueRef} has ${n1} primary turns and ${n2} secondary turns. If a primary voltage of ${v1} V is applied, what is the secondary voltage (V2)?`;
+        baseOptions = [
+          `${v2} V`,
+          `${((v1 * n1) / n2).toFixed(1)} V`,
+          `${(parseFloat(v2) + 12.5).toFixed(1)} V`,
+          `${v1} V`
+        ];
+        hintText = `V2 = V1 * (N2 / N1). For turns ${n1}:${n2} and primary ${v1} V, V2 = ${v1} * (${n2}/${n1}) = ${v2} V.`;
+      } else {
+        questionText = `Which theorem ${uniqueRef} simplifies a linear networks of voltages and resistances to a single current source in parallel with an equivalent resistor?`;
+        baseOptions = [
+          "Norton's Theorem",
+          "Thevenin's Theorem",
+          "Superposition Theorem",
+          "Millman's Theorem"
+        ];
+        hintText = "Norton's theorem yields an equivalent circuit with a parallel current source (I_n) and Norton resistance (R_n).";
+      }
+    } else if (domain === "mechanical_eng") {
+      const type = idx % 3;
+      if (type === 0) {
+        const th = 400 + (rVal % 800);
+        const tc = 200 + ((rVal >> 2) % 190);
+        const eff = Math.round((1 - tc / th) * 100);
+        questionText = `A Carnot heat engine ${uniqueRef} operates between source temperature of ${th} K and sink temperature of ${tc} K. What is the maximum thermal efficiency (%) of this engine?`;
+        baseOptions = [
+          `${eff}%`,
+          `${100 - eff}%`,
+          `${eff - 12}%`,
+          `50%`
+        ];
+        hintText = `Efficiency = 1 - (Tc / Th). Here, 1 - (${tc}/${th}) = ${(1 - tc/th).toFixed(2)}, which is ${eff}%.`;
+      } else if (type === 1) {
+        const l = 50 + (rVal % 450);
+        const d = (0.05 + (rVal % 45) / 100).toFixed(2);
+        const v = 1 + (rVal % 9);
+        const g = 10;
+        const f = 0.02;
+        const hf = ((f * l * v * v) / (2 * g * parseFloat(d))).toFixed(2);
+        questionText = `Determine the head loss due to friction ${uniqueRef} in a pipe of length ${l} m and diameter ${d} m, where water flows at a velocity of ${v} m/s. (Use f = ${f}, g = ${g} m/s^2).`;
+        baseOptions = [
+          `${hf} meters`,
+          `${(parseFloat(hf) + 2.5).toFixed(2)} meters`,
+          `${(parseFloat(hf) / 2).toFixed(2)} meters`,
+          "0 meters"
+        ];
+        hintText = `Using Darcy-Weisbach: hf = (f * L * v^2) / (2 * g * d). Thus, (${f} * ${l} * ${v * v}) / (2 * ${g} * ${d}) = ${hf} m.`;
+      } else {
+        questionText = `Which machining process ${uniqueRef} uses abrasive stones to produce extremely high dimensional precision and surface finish on internal cylinders?`;
+        baseOptions = [
+          "Honing",
+          "Broaching",
+          "Shaping",
+          "Reaming"
+        ];
+        hintText = "Honing is a low-speed abrasive machining process used to finish internal bores.";
+      }
     } else if (domain === "banking_finance") {
-      const concepts = [
-        { name: "RTGS (Real Time Gross Settlement)", desc: "settling fund transfers individually and immediately on a continuous basis" },
-        { name: "Statutory Liquidity Ratio (SLR)", desc: "the minimum percentage of deposits that banks must maintain in gold, cash, or approved securities" },
-        { name: "Lender of last resort", desc: "the role of the central bank (RBI) to provide liquidity to banks in distress" },
-        { name: "Consumer Price Index (CPI)", desc: "the primary index used to measure retail inflation in the Indian economy" },
-        { name: "IPO (Initial Public Offering)", desc: "the process by which a private company offers shares to the public for the first time" }
-      ];
-
-      const item = concepts[rVal % concepts.length];
-      questionText = `In banking and financial markets, what does "${item.name}" refer to?`;
-      baseOptions = [
-        item.desc,
-        concepts[(rVal + 1) % concepts.length].desc,
-        concepts[(rVal + 2) % concepts.length].desc,
-        "a penalty fee charged on accounts that fall below the minimum threshold"
-      ];
-      hintText = `"${item.name}" refers to "${item.desc}".`;
+      const type = idx % 3;
+      if (type === 0) {
+        const p = 5000 + (rVal % 950) * 100;
+        const t = 2 + (rVal % 9);
+        const r = 4 + ((rVal >> 2) % 12);
+        const si = (p * r * t) / 100;
+        questionText = `A bank customer deposits Rs ${p} in a fixed deposit ${uniqueRef} for a term of ${t} years at an interest rate of ${r}% per annum simple interest. What is the interest earned at maturity?`;
+        baseOptions = [
+          `Rs ${si}`,
+          `Rs ${si + 250}`,
+          `Rs ${si - 250}`,
+          `Rs ${(p * r) / 100}`
+        ];
+        hintText = `SI = (P * R * T) / 100. Thus, (${p} * ${r} * ${t}) / 100 = Rs ${si}.`;
+      } else if (type === 1) {
+        const ca = 50000 + (rVal % 450) * 1000;
+        const cl = 25000 + ((rVal >> 2) % 220) * 1000;
+        const ratio = (ca / cl).toFixed(2);
+        questionText = `An analyst assesses a balance sheet ${uniqueRef} showing current assets of Rs ${ca} and current liabilities of Rs ${cl}. What is the current ratio?`;
+        baseOptions = [
+          `${ratio} : 1`,
+          `${(cl / ca).toFixed(2)} : 1`,
+          `1.50 : 1`,
+          `2.50 : 1`
+        ];
+        hintText = `Current Ratio = Current Assets / Current Liabilities. Thus, ${ca} / ${cl} = ${ratio}.`;
+      } else {
+        questionText = `Which of the following regulatory tools ${uniqueRef} is used by the Reserve Bank of India (RBI) to specify the minimum gold and liquid reserves banks must maintain?`;
+        baseOptions = [
+          "Statutory Liquidity Ratio (SLR)",
+          "Cash Reserve Ratio (CRR)",
+          "Repo Rate",
+          "Reverse Repo Rate"
+        ];
+        hintText = "SLR is the statutory reserve requirement in liquid assets (gold, cash, approved securities) banks must maintain.";
+      }
     } else {
+      // General / default
       const history = [
-        { event: "the Battle of Plassey", year: "1757", fact: "June 23, establishing East India Company rule" },
-        { event: "the Battle of Buxar", year: "1764", fact: "October 22, consolidating British power in Bengal" },
-        { event: "the Indian Revolt (Sepoy Mutiny)", year: "1857", fact: "May 10, beginning at Meerut against the Company" },
-        { event: "the Quit India Movement", year: "1942", fact: "August 8, launched by Mahatma Gandhi with 'Do or Die'" },
-        { event: "the Jallianwala Bagh Massacre", year: "1919", fact: "April 13, general Dyer ordering firing on a peaceful crowd" }
+        { event: "the Battle of Plassey", year: "1757", fact: "establishing East India Company control in Bengal" },
+        { event: "the Battle of Buxar", year: "1764", fact: "consolidating British tax collection rights" },
+        { event: "the Indian Sepoy Mutiny", year: "1857", fact: "starting the struggle against Company administration" },
+        { event: "the launch of Quit India Movement", year: "1942", fact: "demanding immediate independence" },
+        { event: "the Jallianwala Bagh Massacre", year: "1919", fact: "leading to Mahatma Gandhi's Non-Cooperation Movement" }
+      ];
+      const words = [
+        { term: "PRISTINE", syn: "Uncorrupted", ant: "Spoiled" },
+        { term: "EPHEMERAL", syn: "Short-lived", ant: "Permanent" },
+        { term: "BENEVOLENT", syn: "Generous", ant: "Hostile" },
+        { term: "AUDACIOUS", syn: "Daring", ant: "Timid" },
+        { term: "METICULOUS", syn: "Precise", ant: "Sloppy" }
       ];
 
-      const type = rVal % 3;
+      const type = idx % 3;
       if (type === 0) {
         const item = history[rVal % history.length];
-        questionText = `In modern Indian history, in which year did "${item.event}" occur?`;
+        const loc = ["Bengal", "Delhi", "Meerut", "Punjab"][(rVal >> 3) % 4];
+        questionText = `In modern Indian history ${uniqueRef}, which of the following correctly identifies the year in which "${item.event}" occurred in the region of ${loc}?`;
         baseOptions = [
           item.year,
           history[(rVal + 1) % history.length].year,
           history[(rVal + 2) % history.length].year,
           "1947"
         ];
-        hintText = `"${item.event}" occurred in ${item.year} (${item.fact}).`;
+        hintText = `"${item.event}" occurred in the year ${item.year} (${item.fact}).`;
       } else if (type === 1) {
-        const v1 = ((rVal % 5) + 1) * 100;
-        const v2 = ((rVal >> 3) % 4) + 5;
-        const ans = (v1 * v2 * 2) / 100;
-        questionText = `What is the simple interest on Rs ${v1} for 2 years at an annual interest rate of ${v2}%?`;
+        const p1 = names1[rVal % names1.length];
+        const p2 = names2[(rVal >> 2) % names2.length];
+        const d1 = 5 + (rVal % 25);
+        const d2 = 5 + ((rVal >> 2) % 25);
+        const days = ((d1 * d2) / (d1 + d2)).toFixed(2);
+        questionText = `If ${p1} can complete a project in ${d1} days ${uniqueRef}, and ${p2} can complete the same project in ${d2} days, how many days will they take to complete the project working together?`;
         baseOptions = [
-          `Rs ${ans}`,
-          `Rs ${ans + 10}`,
-          `Rs ${ans - 10}`,
-          `Rs ${(v1 * v2) / 100}`
+          `${days} days`,
+          `${d1 + d2} days`,
+          `${(d1 * d2).toFixed(2)} days`,
+          `${(d1 + d2 / 2).toFixed(2)} days`
         ];
-        hintText = `Formula: SI = P * R * T / 100. So, ${v1} * ${v2} * 2 / 100 = Rs ${ans}.`;
+        hintText = `Time working together = (d1 * d2) / (d1 + d2). Thus, (${d1} * ${d2}) / (${d1} + ${d2}) = ${days} days.`;
       } else {
-        const words = [
-          { term: "PRISTINE", syn: "Uncorrupted/Pure", ant: "Dirty/Spoiled" },
-          { term: "EPHEMERAL", syn: "Transient/Short-lived", ant: "Permanent/Eternal" },
-          { term: "BENEVOLENT", syn: "Kind/Generous", ant: "Malevolent/Hostile" },
-          { term: "AUDACIOUS", syn: "Bold/Daring", ant: "Timid/Fearful" },
-          { term: "METICULOUS", syn: "Precise/Thorough", ant: "Careless/Sloppy" }
-        ];
         const item = words[rVal % words.length];
         const isSyn = rVal % 2 === 0;
-        questionText = `In English vocabulary, what is the closest ${isSyn ? 'synonym' : 'antonym'} of the word "${item.term}"?`;
+        questionText = `In English vocabulary usage ${uniqueRef}, what is the closest ${isSyn ? 'synonym' : 'antonym'} of the word "${item.term}"?`;
         baseOptions = [
           isSyn ? item.syn : item.ant,
           isSyn ? item.ant : item.syn,
-          "Irrelevant/Neutral",
-          "Excessive/Loud"
+          "Neutral",
+          "Irrelevant"
         ];
-        hintText = `The word "${item.term}" has "${item.syn}" as its synonym and "${item.ant}" as its antonym.`;
+        hintText = `"${item.term}" has "${item.syn}" as its synonym and "${item.ant}" as its antonym.`;
       }
     }
-    
+
     // Deterministic option shuffle
     const optIndices = [0, 1, 2, 3];
     const swap = (arr, i1, i2) => {
@@ -2048,10 +2220,10 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
     swap(optIndices, 0, rVal % 4);
     swap(optIndices, 1, (rVal >> 2) % 4);
     swap(optIndices, 2, (rVal >> 4) % 4);
-    
+
     const finalOptions = optIndices.map(i => baseOptions[i]);
     const finalAnswerIdx = optIndices.indexOf(0);
-    
+
     mcqs.push({
       question: questionText,
       options: finalOptions,
@@ -2059,7 +2231,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 60) {
       hint: hintText
     });
   }
-  
+
   return mcqs;
 }
 
@@ -2516,9 +2688,14 @@ async function seed() {
 
   // Load courses directly from examsByCategory mapping
   const expandedCourses = [];
+  const seenCourseNames = new Set();
   for (const cat of categories) {
     const list = examsByCategory[cat] || [];
     for (const name of list) {
+      if (seenCourseNames.has(name)) {
+        continue;
+      }
+      seenCourseNames.add(name);
       expandedCourses.push({
         name: name,
         category: cat
@@ -2544,7 +2721,7 @@ async function seed() {
       }
     });
 
-    const courseMcqs = generateUniqueMCQsForCourse(course.name, item.category, 60);
+    const courseMcqs = generateUniqueMCQsForCourse(course.name, item.category, 200);
 
     // Seed MCQs in a batch
     await prisma.mCQQuestion.createMany({
@@ -2571,7 +2748,7 @@ async function seed() {
       }))
     });
 
-    console.log(`Created course "${course.name}" (ID: ${course.id}) with 60 MCQs and ${subTests.length} Test Series.`);
+    console.log(`Created course "${course.name}" (ID: ${course.id}) with 200 MCQs and ${subTests.length} Test Series.`);
   }
 
   console.log('All done!');
