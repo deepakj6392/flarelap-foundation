@@ -289,6 +289,24 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
+    return { questions: 120, marks: 300, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("pcs") || name.includes("civil services")) {
+    return { questions: 100, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
+    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
+  }
+  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
   if (name.includes("lic") || name.includes("insurance")) {
     return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
   }

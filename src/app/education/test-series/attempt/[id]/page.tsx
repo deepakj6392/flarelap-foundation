@@ -38,6 +38,15 @@ interface TestDetails {
   duration: number;
 }
 
+function createPRNG(seed: number) {
+  return function() {
+    let t = (seed += 0x6D2B79F5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 export default function CBTTestAttemptPage() {
   const params = useParams();
   const router = useRouter();
@@ -167,15 +176,42 @@ export default function CBTTestAttemptPage() {
 
         const baseQuestions = dbMcqs.length > 0 ? dbMcqs : fallbackMcqs;
 
-        // Repeat & pad questions dynamically to match test series question count
+        // Deterministically shuffle questions and options based on details.id (test ID)
+        const seed = details.id || 12345;
+        const rng = createPRNG(seed);
+
+        // Shuffle base questions first
+        const shuffledBase = [...baseQuestions];
+        for (let i = shuffledBase.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          const temp = shuffledBase[i];
+          shuffledBase[i] = shuffledBase[j];
+          shuffledBase[j] = temp;
+        }
+
         const paddedQuestions: MCQQuestion[] = [];
         for (let i = 0; i < details.qs; i++) {
-          const baseQ = baseQuestions[i % baseQuestions.length];
+          const baseQ = shuffledBase[i % shuffledBase.length];
+          
+          // Pair options with their original index to trace correct answer
+          const mappedOpts = baseQ.options.map((opt, idx) => ({ opt, originalIdx: idx }));
+          
+          // Shuffle options using rng
+          for (let j = mappedOpts.length - 1; j > 0; j--) {
+            const k = Math.floor(rng() * (j + 1));
+            const temp = mappedOpts[j];
+            mappedOpts[j] = mappedOpts[k];
+            mappedOpts[k] = temp;
+          }
+
+          const newOptions = mappedOpts.map(x => x.opt);
+          const newAnswer = mappedOpts.findIndex(x => x.originalIdx === baseQ.answer);
+
           paddedQuestions.push({
             id: i + 1,
             question: baseQ.question,
-            options: [...baseQ.options],
-            answer: baseQ.answer,
+            options: newOptions,
+            answer: newAnswer >= 0 ? newAnswer : baseQ.answer,
             hint: baseQ.hint || ""
           });
         }

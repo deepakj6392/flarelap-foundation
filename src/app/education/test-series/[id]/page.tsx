@@ -75,6 +75,24 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
+    return { questions: 120, marks: 300, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("pcs") || name.includes("civil services")) {
+    return { questions: 100, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
+    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
+  }
+  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
   if (name.includes("lic") || name.includes("insurance")) {
     return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
   }
@@ -137,6 +155,33 @@ const getRealExamStats = (courseName: string): RealExamStats => {
   }
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("ssc chsl") || name.includes("chsl")) {
+    return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("ssc mts") || name.includes("mts")) {
+    return { questions: 90, marks: 270, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("ssc gd") || name.includes("gd constable")) {
+    return { questions: 80, marks: 160, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("ssc cpo") || name.includes("cpo")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ssc je") || name.includes("je ")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ssc stenographer") || name.includes("stenographer")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ssc jht") || name.includes("jht")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("ssc selection post") || name.includes("selection post")) {
+    return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("ssc departmental") || name.includes("departmental")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
   }
   if (name.includes("gate")) {
     return { questions: 65, marks: 100, duration: 180, language: "English Only" };
@@ -231,6 +276,46 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
 const getCourseSubjects = (courseName: string) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
+    return [
+      { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
+      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
+    ];
+  }
+  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
+    return [
+      { name: "English Language", qs: 40, marks: 100, duration: 40 },
+      { name: "General Knowledge", qs: 40, marks: 100, duration: 40 },
+      { name: "Elementary Mathematics", qs: 40, marks: 100, duration: 40 }
+    ];
+  }
+  if (name.includes("pcs") || name.includes("civil services")) {
+    return [
+      { name: "General Studies Paper I", qs: 50, marks: 100, duration: 60 },
+      { name: "General Studies Paper II (CSAT)", qs: 50, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
+    return [
+      { name: "Numerical Ability", qs: 20, marks: 20, duration: 20 },
+      { name: "Verbal Ability", qs: 20, marks: 20, duration: 20 },
+      { name: "Reasoning Ability", qs: 20, marks: 20, duration: 20 }
+    ];
+  }
+  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return [
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "General Intelligence & Reasoning", qs: 35, marks: 35, duration: 30 },
+      { name: "General Awareness & Science", qs: 35, marks: 35, duration: 30 }
+    ];
+  }
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
+      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
+    ];
+  }
   if (name.includes("lic") || name.includes("insurance")) {
     return [
       { name: "Reasoning Ability", qs: 30, marks: 30, duration: 20 },
@@ -377,12 +462,63 @@ const getCourseSubjects = (courseName: string) => {
       { name: "Verbal Ability & Reading Comprehension", qs: 24, marks: 72, duration: 40 }
     ];
   }
-  if (name.includes("ssc cgl") || name.includes("cgl")) {
+  if (name.includes("ssc cgl") || name.includes("cgl") || name.includes("ssc chsl") || name.includes("chsl") || name.includes("selection post")) {
     return [
-      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 20 },
+      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 15 },
       { name: "General Awareness", qs: 25, marks: 50, duration: 10 },
       { name: "Quantitative Aptitude", qs: 25, marks: 50, duration: 20 },
-      { name: "English Comprehension", qs: 25, marks: 50, duration: 10 }
+      { name: "English Comprehension", qs: 25, marks: 50, duration: 15 }
+    ];
+  }
+  if (name.includes("ssc mts") || name.includes("mts")) {
+    return [
+      { name: "Numerical & Mathematical Ability", qs: 20, marks: 60, duration: 25 },
+      { name: "Reasoning Ability & Problem Solving", qs: 20, marks: 60, duration: 25 },
+      { name: "General Awareness", qs: 25, marks: 75, duration: 20 },
+      { name: "English Language & Comprehension", qs: 25, marks: 75, duration: 20 }
+    ];
+  }
+  if (name.includes("ssc gd") || name.includes("gd constable")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 20, marks: 40, duration: 15 },
+      { name: "General Knowledge & General Awareness", qs: 20, marks: 40, duration: 15 },
+      { name: "Elementary Mathematics", qs: 20, marks: 40, duration: 15 },
+      { name: "English or Hindi Language", qs: 20, marks: 40, duration: 15 }
+    ];
+  }
+  if (name.includes("ssc cpo") || name.includes("cpo")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
+      { name: "General Knowledge & General Awareness", qs: 50, marks: 50, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 50, marks: 50, duration: 40 },
+      { name: "English Comprehension", qs: 50, marks: 50, duration: 30 }
+    ];
+  }
+  if (name.includes("ssc je") || name.includes("je ")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
+      { name: "General Awareness", qs: 50, marks: 50, duration: 30 },
+      { name: "General Engineering (Civil/Electrical/Mechanical)", qs: 100, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("ssc stenographer") || name.includes("stenographer")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 35 },
+      { name: "General Awareness", qs: 50, marks: 50, duration: 35 },
+      { name: "English Language & Comprehension", qs: 100, marks: 100, duration: 50 }
+    ];
+  }
+  if (name.includes("ssc jht") || name.includes("jht")) {
+    return [
+      { name: "General Hindi", qs: 100, marks: 100, duration: 60 },
+      { name: "General English", qs: 100, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("ssc departmental") || name.includes("departmental")) {
+    return [
+      { name: "General Awareness", qs: 30, marks: 30, duration: 40 },
+      { name: "Office Procedure & Rules", qs: 40, marks: 40, duration: 40 },
+      { name: "English Language & Writing", qs: 30, marks: 30, duration: 40 }
     ];
   }
   if (name.includes("gate")) {

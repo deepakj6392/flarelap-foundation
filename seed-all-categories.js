@@ -951,6 +951,24 @@ const categoryCourses = [
 
 const getRealExamStats = (courseName) => {
   const name = courseName.toLowerCase();
+  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
+    return { questions: 150, marks: 300, duration: 180 };
+  }
+  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
+    return { questions: 120, marks: 300, duration: 120 };
+  }
+  if (name.includes("pcs") || name.includes("civil services")) {
+    return { questions: 100, marks: 200, duration: 120 };
+  }
+  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
+    return { questions: 60, marks: 60, duration: 60 };
+  }
+  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return { questions: 100, marks: 100, duration: 90 };
+  }
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
+    return { questions: 100, marks: 100, duration: 60 };
+  }
   if (name.includes("lic") || name.includes("insurance")) {
     return { questions: 100, marks: 100, duration: 60 };
   }
@@ -1011,8 +1029,36 @@ const getRealExamStats = (courseName) => {
   if (name.includes("mba")) {
     return { questions: 66, marks: 198, duration: 120 };
   }
+  // SSC exams detailed configurations
   if (name.includes("ssc cgl") || name.includes("cgl")) {
     return { questions: 100, marks: 200, duration: 60 };
+  }
+  if (name.includes("ssc chsl") || name.includes("chsl")) {
+    return { questions: 100, marks: 200, duration: 60 };
+  }
+  if (name.includes("ssc mts") || name.includes("mts")) {
+    return { questions: 90, marks: 270, duration: 90 };
+  }
+  if (name.includes("ssc gd") || name.includes("gd constable")) {
+    return { questions: 80, marks: 160, duration: 60 };
+  }
+  if (name.includes("ssc cpo") || name.includes("cpo")) {
+    return { questions: 200, marks: 200, duration: 120 };
+  }
+  if (name.includes("ssc je") || name.includes("je ")) {
+    return { questions: 200, marks: 200, duration: 120 };
+  }
+  if (name.includes("ssc stenographer") || name.includes("stenographer")) {
+    return { questions: 200, marks: 200, duration: 120 };
+  }
+  if (name.includes("ssc jht") || name.includes("jht")) {
+    return { questions: 200, marks: 200, duration: 120 };
+  }
+  if (name.includes("ssc selection post") || name.includes("selection post")) {
+    return { questions: 100, marks: 200, duration: 60 };
+  }
+  if (name.includes("ssc departmental") || name.includes("departmental")) {
+    return { questions: 100, marks: 100, duration: 120 };
   }
   if (name.includes("gate")) {
     return { questions: 65, marks: 100, duration: 180 };
@@ -1068,6 +1114,46 @@ const getRealExamStats = (courseName) => {
 const getCourseSubjects = (courseName) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
+    return [
+      { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
+      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
+    ];
+  }
+  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
+    return [
+      { name: "English Language", qs: 40, marks: 100, duration: 40 },
+      { name: "General Knowledge", qs: 40, marks: 100, duration: 40 },
+      { name: "Elementary Mathematics", qs: 40, marks: 100, duration: 40 }
+    ];
+  }
+  if (name.includes("pcs") || name.includes("civil services")) {
+    return [
+      { name: "General Studies Paper I", qs: 50, marks: 100, duration: 60 },
+      { name: "General Studies Paper II (CSAT)", qs: 50, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
+    return [
+      { name: "Numerical Ability", qs: 20, marks: 20, duration: 20 },
+      { name: "Verbal Ability", qs: 20, marks: 20, duration: 20 },
+      { name: "Reasoning Ability", qs: 20, marks: 20, duration: 20 }
+    ];
+  }
+  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
+    return [
+      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
+      { name: "General Intelligence & Reasoning", qs: 35, marks: 35, duration: 30 },
+      { name: "General Awareness & Science", qs: 35, marks: 35, duration: 30 }
+    ];
+  }
+  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
+      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
+    ];
+  }
   if (name.includes("lic") || name.includes("insurance")) {
     return [
       { name: "Reasoning Ability", qs: 30, marks: 30, duration: 20 },
@@ -1214,12 +1300,64 @@ const getCourseSubjects = (courseName) => {
       { name: "Verbal Ability & Reading Comprehension", qs: 24, marks: 72, duration: 40 }
     ];
   }
-  if (name.includes("ssc cgl") || name.includes("cgl")) {
+  // SSC exams detailed configurations
+  if (name.includes("ssc cgl") || name.includes("cgl") || name.includes("ssc chsl") || name.includes("chsl") || name.includes("selection post")) {
     return [
-      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 20 },
+      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 15 },
       { name: "General Awareness", qs: 25, marks: 50, duration: 10 },
       { name: "Quantitative Aptitude", qs: 25, marks: 50, duration: 20 },
-      { name: "English Comprehension", qs: 25, marks: 50, duration: 10 }
+      { name: "English Comprehension", qs: 25, marks: 50, duration: 15 }
+    ];
+  }
+  if (name.includes("ssc mts") || name.includes("mts")) {
+    return [
+      { name: "Numerical & Mathematical Ability", qs: 20, marks: 60, duration: 25 },
+      { name: "Reasoning Ability & Problem Solving", qs: 20, marks: 60, duration: 25 },
+      { name: "General Awareness", qs: 25, marks: 75, duration: 20 },
+      { name: "English Language & Comprehension", qs: 25, marks: 75, duration: 20 }
+    ];
+  }
+  if (name.includes("ssc gd") || name.includes("gd constable")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 20, marks: 40, duration: 15 },
+      { name: "General Knowledge & General Awareness", qs: 20, marks: 40, duration: 15 },
+      { name: "Elementary Mathematics", qs: 20, marks: 40, duration: 15 },
+      { name: "English or Hindi Language", qs: 20, marks: 40, duration: 15 }
+    ];
+  }
+  if (name.includes("ssc cpo") || name.includes("cpo")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
+      { name: "General Knowledge & General Awareness", qs: 50, marks: 50, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 50, marks: 50, duration: 40 },
+      { name: "English Comprehension", qs: 50, marks: 50, duration: 30 }
+    ];
+  }
+  if (name.includes("ssc je") || name.includes("je ")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
+      { name: "General Awareness", qs: 50, marks: 50, duration: 30 },
+      { name: "General Engineering (Civil/Electrical/Mechanical)", qs: 100, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("ssc stenographer") || name.includes("stenographer")) {
+    return [
+      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 35 },
+      { name: "General Awareness", qs: 50, marks: 50, duration: 35 },
+      { name: "English Language & Comprehension", qs: 100, marks: 100, duration: 50 }
+    ];
+  }
+  if (name.includes("ssc jht") || name.includes("jht")) {
+    return [
+      { name: "General Hindi", qs: 100, marks: 100, duration: 60 },
+      { name: "General English", qs: 100, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("ssc departmental") || name.includes("departmental")) {
+    return [
+      { name: "General Awareness", qs: 30, marks: 30, duration: 40 },
+      { name: "Office Procedure & Rules", qs: 40, marks: 40, duration: 40 },
+      { name: "English Language & Writing", qs: 30, marks: 30, duration: 40 }
     ];
   }
   if (name.includes("gate")) {
@@ -1434,6 +1572,497 @@ const generateSubTestsList = (courseName, isPremium) => {
   return tests;
 };
 
+function hashCode(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return Math.abs(hash);
+}
+
+function getPseudoRandom(seed, index) {
+  let val = hashCode(seed) + index * 98765;
+  val = (val * 1103515245 + 12345) & 0x7fffffff;
+  return val;
+}
+
+function generateUniqueMCQsForCourse(courseName, category, count = 60) {
+  const mcqs = [];
+  const name = courseName.toLowerCase();
+  
+  let domain = "general";
+  if (name.includes("judiciary") || name.includes("law")) {
+    domain = "law";
+  } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs")) {
+    domain = "civil_services";
+  } else if (name.includes("nursing") || name.includes("paramedical")) {
+    domain = "medical";
+  } else if (name.includes("food technology") || name.includes("food tech")) {
+    domain = "food_tech";
+  } else if (name.includes("fitter")) {
+    domain = "fitter";
+  } else if (name.includes("electrician")) {
+    domain = "electrician";
+  } else if (name.includes("electronic mechanic") || name.includes("electronics")) {
+    domain = "electronics";
+  } else if (name.includes("computer science") || name.includes("cse") || name.includes("gate cs")) {
+    domain = "computer_science";
+  } else if (name.includes("civil engineering")) {
+    domain = "civil_eng";
+  } else if (name.includes("electrical engineering")) {
+    domain = "electrical_eng";
+  } else if (name.includes("mechanical engineering") || name.includes("mechanical")) {
+    domain = "mechanical_eng";
+  } else if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed")) {
+    domain = "teaching";
+  } else if (name.includes("banking") || name.includes("insurance") || name.includes("sbi") || name.includes("ibps") || name.includes("sebi") || name.includes("lic") || name.includes("mba") || name.includes("placement")) {
+    domain = "banking_finance";
+  }
+
+  for (let idx = 0; idx < count; idx++) {
+    const rVal = getPseudoRandom(courseName, idx);
+    let questionText = "";
+    let baseOptions = [];
+    let hintText = "";
+    
+    if (domain === "law") {
+      const maxims = [
+        { term: "Actus non facit reum nisi mens sit rea", meaning: "An act does not make a person guilty unless their mind is also guilty" },
+        { term: "Audi alteram partem", meaning: "Listen to the other side (no one should be condemned unheard)" },
+        { term: "Res judicata pro veritate accipitur", meaning: "A matter judged is accepted as truth" },
+        { term: "Caveat emptor", meaning: "Let the buyer beware" },
+        { term: "Damnum sine injuria", meaning: "Damage without legal injury" },
+        { term: "Ubi jus ibi remedium", meaning: "Where there is a right, there is a remedy" },
+        { term: "Volenti non fit injuria", meaning: "To a willing person, injury is not done" },
+        { term: "Delegatus non potest delegare", meaning: "A delegate cannot delegate" },
+        { term: "Salus populi suprema lex", meaning: "The welfare of the people is the supreme law" }
+      ];
+      const ipc = [
+        { sec: "300", topic: "Murder" },
+        { sec: "302", topic: "Punishment for Murder" },
+        { sec: "304", topic: "Culpable Homicide" },
+        { sec: "307", topic: "Attempt to Murder" },
+        { sec: "375", topic: "Rape" },
+        { sec: "378", topic: "Theft" },
+        { sec: "379", topic: "Punishment for Theft" },
+        { sec: "390", topic: "Robbery" },
+        { sec: "405", topic: "Criminal Breach of Trust" },
+        { sec: "415", topic: "Cheating" },
+        { sec: "420", topic: "Cheating and dishonestly inducing delivery of property" }
+      ];
+      const consti = [
+        { art: "14", topic: "Equality before law" },
+        { art: "19", topic: "Protection of certain rights regarding freedom of speech" },
+        { art: "21", topic: "Protection of life and personal liberty" },
+        { art: "32", topic: "Remedies for enforcement of Fundamental Rights (Writs)" },
+        { art: "44", topic: "Uniform Civil Code" },
+        { art: "51", topic: "Promotion of international peace and security" },
+        { art: "124", topic: "Establishment and Constitution of Supreme Court" },
+        { art: "226", topic: "Power of High Courts to issue writs" },
+        { art: "324", topic: "Superintendence, direction and control of elections" },
+        { art: "356", topic: "Provisions in case of failure of constitutional machinery in States (President's Rule)" },
+        { art: "368", topic: "Power of Parliament to amend the Constitution" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const item = maxims[rVal % maxims.length];
+        questionText = `What is the correct legal meaning of the Latin maxim "${item.term}"?`;
+        baseOptions = [
+          item.meaning,
+          maxims[(rVal + 1) % maxims.length].meaning,
+          maxims[(rVal + 2) % maxims.length].meaning,
+          maxims[(rVal + 3) % maxims.length].meaning
+        ];
+        hintText = `"${item.term}" literally means "${item.meaning}".`;
+      } else if (type === 1) {
+        const item = ipc[rVal % ipc.length];
+        questionText = `Which section of the Indian Penal Code (IPC) defines or provides punishment for "${item.topic}"?`;
+        baseOptions = [
+          `Section ${item.sec}`,
+          `Section ${ipc[(rVal + 1) % ipc.length].sec}`,
+          `Section ${ipc[(rVal + 2) % ipc.length].sec}`,
+          `Section ${ipc[(rVal + 3) % ipc.length].sec}`
+        ];
+        hintText = `Section ${item.sec} of the IPC is related to "${item.topic}".`;
+      } else {
+        const item = consti[rVal % consti.length];
+        questionText = `Which article of the Constitution of India deals with "${item.topic}"?`;
+        baseOptions = [
+          `Article ${item.art}`,
+          `Article ${consti[(rVal + 1) % consti.length].art}`,
+          `Article ${consti[(rVal + 2) % consti.length].art}`,
+          `Article ${consti[(rVal + 3) % consti.length].art}`
+        ];
+        hintText = `Article ${item.art} is dedicated to "${item.topic}".`;
+      }
+    } else if (domain === "teaching") {
+      const theorists = ["Jean Piaget", "Lev Vygotsky", "Howard Gardner", "B.F. Skinner", "Lawrence Kohlberg", "Edward Thorndike", "Albert Bandura", "Noam Chomsky", "Jerome Bruner", "Ivan Pavlov"];
+      const concepts = ["Cognitive Development Stages", "Social Constructivism", "Multiple Intelligences Theory", "Operant Conditioning", "Moral Development Stages", "Trial and Error Learning", "Social Learning Theory", "Language Acquisition Device", "Scaffolding in instruction", "Classical Conditioning"];
+      const disabilities = [
+        { name: "Dyslexia", meaning: "difficulty in reading and language comprehension" },
+        { name: "Dysgraphia", meaning: "difficulty in writing and fine motor skills" },
+        { name: "Dyscalculia", meaning: "difficulty in mathematical calculations" },
+        { name: "ADHD", meaning: "difficulty with attention, hyperactivity, and impulsivity" },
+        { name: "Aphasia", meaning: "difficulty in language comprehension and expression" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const theorist = theorists[rVal % theorists.length];
+        const concept = concepts[rVal % concepts.length];
+        questionText = `Which developmental psychologist or education theorist is most closely associated with the concept of "${concept}"?`;
+        baseOptions = [
+          theorist,
+          theorists[(rVal + 1) % theorists.length],
+          theorists[(rVal + 2) % theorists.length],
+          theorists[(rVal + 3) % theorists.length]
+        ];
+        hintText = `The theory of "${concept}" is a core contribution of ${theorist}.`;
+      } else if (type === 1) {
+        const item = disabilities[rVal % disabilities.length];
+        questionText = `The learning disability known as "${item.name}" is primarily characterized by which of the following?`;
+        baseOptions = [
+          item.meaning,
+          disabilities[(rVal + 1) % disabilities.length].meaning,
+          disabilities[(rVal + 2) % disabilities.length].meaning,
+          disabilities[(rVal + 3) % disabilities.length].meaning
+        ];
+        hintText = `"${item.name}" refers to ${item.meaning}.`;
+      } else {
+        const stages = ["Sensori-motor", "Pre-operational", "Concrete operational", "Formal operational"];
+        const ages = ["0-2 years", "2-7 years", "7-11 years", "11 years and above"];
+        const sIdx = rVal % stages.length;
+        questionText = `According to Jean Piaget's cognitive development theory, the "${stages[sIdx]}" stage corresponds to which age group?`;
+        baseOptions = [
+          ages[sIdx],
+          ages[(sIdx + 1) % ages.length],
+          ages[(sIdx + 2) % ages.length],
+          ages[(sIdx + 3) % ages.length]
+        ];
+        hintText = `Piaget's "${stages[sIdx]}" stage covers the age range of ${ages[sIdx]}.`;
+      }
+    } else if (domain === "medical") {
+      const vitals = [
+        { name: "blood pressure", normal: "120/80 mmHg" },
+        { name: "resting heart rate", normal: "60-100 beats per minute" },
+        { name: "body temperature", normal: "37°C (98.6°F)" },
+        { name: "respiratory rate", normal: "12-20 breaths per minute" }
+      ];
+      const vitamins = [
+        { name: "Vitamin A", disease: "Night Blindness" },
+        { name: "Vitamin C", disease: "Scurvy" },
+        { name: "Vitamin D", disease: "Rickets" },
+        { name: "Vitamin K", disease: "Increased Bleeding/Delayed Clotting" },
+        { name: "Vitamin B1", disease: "Beriberi" }
+      ];
+      const organs = [
+        { name: "kidneys", func: "filtering metabolic waste from blood" },
+        { name: "liver", func: "producing bile and processing nutrients" },
+        { name: "skin", func: "acting as the body's largest sensory and protective barrier" },
+        { name: "heart", func: "pumping blood throughout the circulatory system" },
+        { name: "small intestine", func: "absorbing the majority of nutrients from digested food" },
+        { name: "pancreas", func: "secreting insulin to regulate blood sugar levels" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const item = vitals[rVal % vitals.length];
+        questionText = `What is considered the standard normal range/value for a healthy resting adult's ${item.name}?`;
+        baseOptions = [
+          item.normal,
+          vitals[(rVal + 1) % vitals.length].normal,
+          vitals[(rVal + 2) % vitals.length].normal,
+          "140/90 mmHg"
+        ];
+        hintText = `A normal adult's ${item.name} is typically around ${item.normal}.`;
+      } else if (type === 1) {
+        const item = vitamins[rVal % vitamins.length];
+        questionText = `A severe deficiency of "${item.name}" in the human diet is the primary cause of which condition?`;
+        baseOptions = [
+          item.disease,
+          vitamins[(rVal + 1) % vitamins.length].disease,
+          vitamins[(rVal + 2) % vitamins.length].disease,
+          vitamins[(rVal + 3) % vitamins.length].disease
+        ];
+        hintText = `Deficiency of ${item.name} leads directly to ${item.disease}.`;
+      } else {
+        const item = organs[rVal % organs.length];
+        questionText = `Which organ of the human body is primarily responsible for the vital function of "${item.func}"?`;
+        baseOptions = [
+          item.name,
+          organs[(rVal + 1) % organs.length].name,
+          organs[(rVal + 2) % organs.length].name,
+          organs[(rVal + 3) % organs.length].name
+        ];
+        hintText = `The ${item.name} plays a major role in ${item.func}.`;
+      }
+    } else if (domain === "food_tech") {
+      const methods = [
+        { name: "Pasteurization", principle: "heating liquid to destroy pathogenic microbes" },
+        { name: "Lyophilization (Freeze Drying)", principle: "sublimating ice from frozen food under vacuum" },
+        { name: "Canning", principle: "sealing food in airtight containers and heating to sterilize" },
+        { name: "Ultra-Heat Treatment (UHT)", principle: "heating liquid above 135°C for a few seconds to sterilize" },
+        { name: "Irradiation", principle: "exposing food to ionizing radiation to kill insects and bacteria" }
+      ];
+      const microbes = [
+        { name: "Clostridium botulinum", danger: "severe foodborne botulism via anaerobic canned foods" },
+        { name: "Salmonella enterica", danger: "food poisoning from undercooked poultry and eggs" },
+        { name: "Escherichia coli", danger: "gastrointestinal infection from contaminated water or beef" },
+        { name: "Listeria monocytogenes", danger: "listeriosis, which is highly dangerous for pregnant women" }
+      ];
+      const safety = [
+        { name: "FSSAI", desc: "Food Safety and Standards Authority of India" },
+        { name: "Codex Alimentarius", desc: "International collection of food standards and codes of practice" },
+        { name: "HACCP", desc: "Hazard Analysis Critical Control Point system for food safety" },
+        { name: "ISO 22000", desc: "International standard for food safety management systems" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const item = methods[rVal % methods.length];
+        questionText = `In food technology, what is the primary physical principle of "${item.name}"?`;
+        baseOptions = [
+          item.principle,
+          methods[(rVal + 1) % methods.length].principle,
+          methods[(rVal + 2) % methods.length].principle,
+          methods[(rVal + 3) % methods.length].principle
+        ];
+        hintText = `"${item.name}" works by ${item.principle}.`;
+      } else if (type === 1) {
+        const item = microbes[rVal % microbes.length];
+        questionText = `Which foodborne pathogen is most commonly associated with the risk of "${item.danger}"?`;
+        baseOptions = [
+          item.name,
+          microbes[(rVal + 1) % microbes.length].name,
+          microbes[(rVal + 2) % microbes.length].name,
+          microbes[(rVal + 3) % microbes.length].name
+        ];
+        hintText = `"${item.name}" poses the risk of "${item.danger}".`;
+      } else {
+        const item = safety[rVal % safety.length];
+        questionText = `What is the correct full definition or purpose of the food standard framework "${item.name}"?`;
+        baseOptions = [
+          item.desc,
+          safety[(rVal + 1) % safety.length].desc,
+          safety[(rVal + 2) % safety.length].desc,
+          "International Agency for Agricultural Development and Inspection"
+        ];
+        hintText = `"${item.name}" stands for "${item.desc}".`;
+      }
+    } else if (domain === "fitter" || domain === "electrician" || domain === "electronics" || domain === "technical") {
+      const tools = [
+        { name: "Vernier Caliper", func: "measuring internal and external dimensions with a precision of 0.02 mm" },
+        { name: "Outside Micrometer", func: "measuring outer diameters with high precision of 0.01 mm" },
+        { name: "Try Square", func: "checking the squareness (90 degrees) and flatness of a surface" },
+        { name: "Jenny Caliper", func: "drawing lines parallel to the outer edges of a workpiece" },
+        { name: "Multimeter", func: "measuring electrical parameters like voltage, current, and resistance" },
+        { name: "Megger", func: "testing the high insulation resistance of electrical cables" },
+        { name: "Oscilloscope", func: "visualizing electrical signal waveforms in real time" },
+        { name: "Bench Vice", func: "holding workpieces firmly during filing, sawing, or drilling operations" }
+      ];
+      const components = [
+        { name: "Zener Diode", property: "maintaining a stable reference voltage in reverse breakdown" },
+        { name: "Capacitor", property: "storing electrical energy in an electrostatic field" },
+        { name: "Transistor", property: "amplifying weak signals and acting as an electronic switch" },
+        { name: "Inductor", property: "storing energy in a magnetic field when current flows through it" },
+        { name: "NOR Gate", property: "yielding a high output (1) only when all inputs are low (0)" },
+        { name: "AND Gate", property: "performing Boolean multiplication (Y = A . B)" }
+      ];
+
+      const type = rVal % 2;
+      if (type === 0) {
+        const item = tools[rVal % tools.length];
+        questionText = `In workshop practice and measurements, what is the primary use of a "${item.name}"?`;
+        baseOptions = [
+          item.func,
+          tools[(rVal + 1) % tools.length].func,
+          tools[(rVal + 2) % tools.length].func,
+          tools[(rVal + 3) % tools.length].func
+        ];
+        hintText = `A "${item.name}" is used for "${item.func}".`;
+      } else {
+        const item = components[rVal % components.length];
+        questionText = `What is the fundamental working property of the electronic component "${item.name}"?`;
+        baseOptions = [
+          item.property,
+          components[(rVal + 1) % components.length].property,
+          components[(rVal + 2) % components.length].property,
+          components[(rVal + 3) % components.length].property
+        ];
+        hintText = `The main property of a "${item.name}" is "${item.property}".`;
+      }
+    } else if (domain === "computer_science") {
+      const algos = [
+        { name: "Dijkstra's Algorithm", utility: "finding the shortest path from a single source node in a weighted graph" },
+        { name: "Binary Search", utility: "searching in a sorted array in O(log n) time complexity" },
+        { name: "Quick Sort", utility: "sorting an array using divide-and-conquer with average-case O(n log n)" },
+        { name: "Kruskal's Algorithm", utility: "finding the Minimum Spanning Tree of a weighted undirected graph" },
+        { name: "Merge Sort", utility: "guaranteeing O(n log n) sorting time in all cases using divide-and-merge" }
+      ];
+      const layers = [
+        { name: "Physical Layer", role: "transmitting raw bit streams over a physical medium" },
+        { name: "Data Link Layer", role: "providing node-to-node data transfer and error detection" },
+        { name: "Network Layer", role: "routing packets and handling logical IP addressing" },
+        { name: "Transport Layer", role: "managing end-to-end communication, flow control, and TCP/UDP ports" },
+        { name: "Application Layer", role: "supporting direct user protocols like HTTP, SMTP, and DNS" }
+      ];
+      const acid = [
+        { prop: "Atomicity", definition: "ensuring that all operations within a transaction succeed or all fail together" },
+        { prop: "Consistency", definition: "ensuring the database moves from one valid state to another valid state" },
+        { prop: "Isolation", definition: "ensuring concurrent transactions do not interfere with or see each other's partial changes" },
+        { prop: "Durability", definition: "guaranteeing that completed transaction data remains safe even in a system crash" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const item = algos[rVal % algos.length];
+        questionText = `What is the primary application or characteristic of the algorithm "${item.name}"?`;
+        baseOptions = [
+          item.utility,
+          algos[(rVal + 1) % algos.length].utility,
+          algos[(rVal + 2) % algos.length].utility,
+          algos[(rVal + 3) % algos.length].utility
+        ];
+        hintText = `"${item.name}" is used for "${item.utility}".`;
+      } else if (type === 1) {
+        const item = layers[rVal % layers.length];
+        questionText = `In the OSI networking model, what is the main responsibility of the "${item.name}"?`;
+        baseOptions = [
+          item.role,
+          layers[(rVal + 1) % layers.length].role,
+          layers[(rVal + 2) % layers.length].role,
+          layers[(rVal + 3) % layers.length].role
+        ];
+        hintText = `The "${item.name}" is responsible for "${item.role}".`;
+      } else {
+        const item = acid[rVal % acid.length];
+        questionText = `In database transactions (ACID properties), how is "${item.prop}" defined?`;
+        baseOptions = [
+          item.definition,
+          acid[(rVal + 1) % acid.length].definition,
+          acid[(rVal + 2) % acid.length].definition,
+          "allocating memory dynamically for records"
+        ];
+        hintText = `"${item.prop}" is defined as "${item.definition}".`;
+      }
+    } else if (domain === "civil_eng" || domain === "electrical_eng" || domain === "mechanical_eng" || name.includes("engineering")) {
+      const concepts = [
+        { field: "Civil", topic: "soundness test of cement", details: "checking the cement's ability to retain volume using Le-Chatelier's apparatus" },
+        { field: "Civil", topic: "surveying wholesomeness principle", details: "working from whole to part to localize and minimize experimental errors" },
+        { field: "Mechanical", topic: "Carnot cycle thermal efficiency", details: "being a function of absolute temperature limits only: 1 - T_low/T_high" },
+        { field: "Mechanical", topic: "Diesel cycle combustion", details: "taking place at constant pressure, unlike constant volume in Otto cycle" },
+        { field: "Electrical", topic: "Thevenin's theorem", details: "simplifying a linear circuit to an equivalent voltage source in series with a resistor" },
+        { field: "Electrical", topic: "transformer core lamination", details: "reducing eddy current losses by electromagnetic core structure" }
+      ];
+
+      const item = concepts[rVal % concepts.length];
+      questionText = `In ${item.field} Engineering, what is the significance/meaning of "${item.topic}"?`;
+      baseOptions = [
+        item.details,
+        concepts[(rVal + 1) % concepts.length].details,
+        concepts[(rVal + 2) % concepts.length].details,
+        "an aesthetic requirement for high visual design specifications"
+      ];
+      hintText = `"${item.topic}" refers to "${item.details}".`;
+    } else if (domain === "banking_finance") {
+      const concepts = [
+        { name: "RTGS (Real Time Gross Settlement)", desc: "settling fund transfers individually and immediately on a continuous basis" },
+        { name: "Statutory Liquidity Ratio (SLR)", desc: "the minimum percentage of deposits that banks must maintain in gold, cash, or approved securities" },
+        { name: "Lender of last resort", desc: "the role of the central bank (RBI) to provide liquidity to banks in distress" },
+        { name: "Consumer Price Index (CPI)", desc: "the primary index used to measure retail inflation in the Indian economy" },
+        { name: "IPO (Initial Public Offering)", desc: "the process by which a private company offers shares to the public for the first time" }
+      ];
+
+      const item = concepts[rVal % concepts.length];
+      questionText = `In banking and financial markets, what does "${item.name}" refer to?`;
+      baseOptions = [
+        item.desc,
+        concepts[(rVal + 1) % concepts.length].desc,
+        concepts[(rVal + 2) % concepts.length].desc,
+        "a penalty fee charged on accounts that fall below the minimum threshold"
+      ];
+      hintText = `"${item.name}" refers to "${item.desc}".`;
+    } else {
+      const history = [
+        { event: "the Battle of Plassey", year: "1757", fact: "June 23, establishing East India Company rule" },
+        { event: "the Battle of Buxar", year: "1764", fact: "October 22, consolidating British power in Bengal" },
+        { event: "the Indian Revolt (Sepoy Mutiny)", year: "1857", fact: "May 10, beginning at Meerut against the Company" },
+        { event: "the Quit India Movement", year: "1942", fact: "August 8, launched by Mahatma Gandhi with 'Do or Die'" },
+        { event: "the Jallianwala Bagh Massacre", year: "1919", fact: "April 13, general Dyer ordering firing on a peaceful crowd" }
+      ];
+
+      const type = rVal % 3;
+      if (type === 0) {
+        const item = history[rVal % history.length];
+        questionText = `In modern Indian history, in which year did "${item.event}" occur?`;
+        baseOptions = [
+          item.year,
+          history[(rVal + 1) % history.length].year,
+          history[(rVal + 2) % history.length].year,
+          "1947"
+        ];
+        hintText = `"${item.event}" occurred in ${item.year} (${item.fact}).`;
+      } else if (type === 1) {
+        const v1 = ((rVal % 5) + 1) * 100;
+        const v2 = ((rVal >> 3) % 4) + 5;
+        const ans = (v1 * v2 * 2) / 100;
+        questionText = `What is the simple interest on Rs ${v1} for 2 years at an annual interest rate of ${v2}%?`;
+        baseOptions = [
+          `Rs ${ans}`,
+          `Rs ${ans + 10}`,
+          `Rs ${ans - 10}`,
+          `Rs ${(v1 * v2) / 100}`
+        ];
+        hintText = `Formula: SI = P * R * T / 100. So, ${v1} * ${v2} * 2 / 100 = Rs ${ans}.`;
+      } else {
+        const words = [
+          { term: "PRISTINE", syn: "Uncorrupted/Pure", ant: "Dirty/Spoiled" },
+          { term: "EPHEMERAL", syn: "Transient/Short-lived", ant: "Permanent/Eternal" },
+          { term: "BENEVOLENT", syn: "Kind/Generous", ant: "Malevolent/Hostile" },
+          { term: "AUDACIOUS", syn: "Bold/Daring", ant: "Timid/Fearful" },
+          { term: "METICULOUS", syn: "Precise/Thorough", ant: "Careless/Sloppy" }
+        ];
+        const item = words[rVal % words.length];
+        const isSyn = rVal % 2 === 0;
+        questionText = `In English vocabulary, what is the closest ${isSyn ? 'synonym' : 'antonym'} of the word "${item.term}"?`;
+        baseOptions = [
+          isSyn ? item.syn : item.ant,
+          isSyn ? item.ant : item.syn,
+          "Irrelevant/Neutral",
+          "Excessive/Loud"
+        ];
+        hintText = `The word "${item.term}" has "${item.syn}" as its synonym and "${item.ant}" as its antonym.`;
+      }
+    }
+    
+    // Deterministic option shuffle
+    const optIndices = [0, 1, 2, 3];
+    const swap = (arr, i1, i2) => {
+      const temp = arr[i1];
+      arr[i1] = arr[i2];
+      arr[i2] = temp;
+    };
+    swap(optIndices, 0, rVal % 4);
+    swap(optIndices, 1, (rVal >> 2) % 4);
+    swap(optIndices, 2, (rVal >> 4) % 4);
+    
+    const finalOptions = optIndices.map(i => baseOptions[i]);
+    const finalAnswerIdx = optIndices.indexOf(0);
+    
+    mcqs.push({
+      question: questionText,
+      options: finalOptions,
+      answer: finalAnswerIdx,
+      hint: hintText
+    });
+  }
+  
+  return mcqs;
+}
+
 const categories = [
   "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams", 
   "Fitter", "Electrician", "AE/JE Exams", "Judiciary Exams", 
@@ -1448,6 +2077,257 @@ const categories = [
   "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
   "CUET", "MBA Entrance Exam", "Banking"
 ];
+
+const examsByCategory = {
+  "SSC": [
+    "SSC CGL Mock Test",
+    "SSC CHSL Mock Test",
+    "SSC MTS Mock Test",
+    "SSC GD Constable Mock Test",
+    "SSC CPO Mock Test",
+    "SSC JE Mock Test",
+    "SSC Stenographer Mock Test",
+    "SSC JHT (Junior Hindi Translator) Mock Test",
+    "SSC Selection Post Mock Test",
+    "SSC Departmental Exams Mock Test"
+  ],
+  "PG Entrance Exam": [
+    "GATE Computer Science Mock Test",
+    "GATE Electrical Engineering Mock Test",
+    "GATE Civil Engineering Mock Test",
+    "GATE Mechanical Engineering Mock Test",
+    "GATE Electronics & Comm Mock Test",
+    "UGC NET General Paper 1 Mock Test",
+    "CSIR NET Life Sciences Mock Test",
+    "CSIR NET Chemical Sciences Mock Test"
+  ],
+  "Regulatory Body Exams": [
+    "SEBI Grade A Officer Mock Test",
+    "NABARD Grade A Officer Mock Test",
+    "RBI Grade B Officer Mock Test",
+    "PFRDA Grade A Officer Mock Test",
+    "IFSCA Grade A Officer Mock Test"
+  ],
+  "Teaching Exams": [
+    "CTET Paper 1 Pedagogy Mock Test",
+    "CTET Paper 2 Pedagogy Mock Test",
+    "UPTET Paper 1 Mock Test",
+    "UPTET Paper 2 Mock Test",
+    "KVS PGT General Mock Test",
+    "KVS TGT General Mock Test",
+    "NVS TGT Mock Test",
+    "Super TET Mock Test"
+  ],
+  "Fitter": [
+    "ITI Fitter Semester 1 Mock Test",
+    "ITI Fitter Semester 2 Mock Test",
+    "ITI Fitter Yearly Theory Mock Test"
+  ],
+  "Electrician": [
+    "ITI Electrician Semester 1 Mock Test",
+    "ITI Electrician Semester 2 Mock Test",
+    "ITI Electrician Yearly Theory Mock Test"
+  ],
+  "AE/JE Exams": [
+    "RRB JE Civil Engineering Mock Test",
+    "RRB JE Electrical Engineering Mock Test",
+    "RRB JE Mechanical Engineering Mock Test",
+    "SSC JE Civil Technical Mock Test",
+    "SSC JE Electrical Technical Mock Test",
+    "SSC JE Mechanical Technical Mock Test",
+    "State PSC AE Civil Mock Test",
+    "State PSC JE Electrical Mock Test"
+  ],
+  "Judiciary Exams": [
+    "Delhi Judiciary Service Mock Test",
+    "UP Civil Judge Junior Mock Test",
+    "Bihar Judiciary Exam Mock Test",
+    "MP Judiciary Service Mock Test",
+    "Rajasthan Judiciary Mock Test"
+  ],
+  "Paramedical Exams": [
+    "AIIMS NORCET Staff Nurse Mock Test",
+    "ESIC Staff Nurse Recruitment Mock Test",
+    "RRB Paramedical Staff Mock Test",
+    "DSSSB Nursing Officer Mock Test"
+  ],
+  "Electronic Mechanic": [
+    "ITI Electronic Mechanic Semester 1 Mock Test",
+    "ITI Electronic Mechanic Semester 2 Mock Test",
+    "ITI Electronic Mechanic Yearly Theory Mock Test"
+  ],
+  "Railways": [
+    "RRB NTPC CBT 1 Mock Test",
+    "RRB NTPC CBT 2 Mock Test",
+    "RRB ALP Stage 1 Mock Test",
+    "RRB ALP Stage 2 Mock Test",
+    "RRB Group D Mock Test",
+    "RRB JE CBT 1 Mock Test"
+  ],
+  "Banking & Insurance": [
+    "SBI PO Mock Test",
+    "SBI Clerk Mock Test",
+    "IBPS PO Mock Test",
+    "IBPS Clerk Mock Test",
+    "IBPS RRB PO Mock Test",
+    "RBI Assistant Mock Test",
+    "LIC AAO Mock Test",
+    "LIC ADO Mock Test",
+    "NIACL AO Mock Test"
+  ],
+  "State Exams": [
+    "UPPSC PCS Prelims Mock Test",
+    "BPSC PCS Prelims Mock Test",
+    "MPPSC PCS Prelims Mock Test",
+    "RAS Rajasthan PCS Mock Test",
+    "MPSC Maharashtra PCS Mock Test"
+  ],
+  "Defence Exams": [
+    "NDA General Ability Mock Test",
+    "CDS Elementary Mathematics Mock Test",
+    "CDS General Knowledge Mock Test",
+    "AFCAT Entry Mock Test",
+    "CAPF Assistant Commandant Mock Test",
+    "Indian Airforce X/Y Group Mock Test"
+  ],
+  "Civil Services": [
+    "UPSC Civil Services Prelims GS 1 Mock Test",
+    "UPSC Civil Services Prelims CSAT Mock Test",
+    "State PSC GS Paper 1 Mock Test",
+    "State PSC GS Paper 2 Mock Test"
+  ],
+  "Police Exams": [
+    "UP Police Constable Mock Test",
+    "UP Police SI Mock Test",
+    "Delhi Police Constable Mock Test",
+    "Delhi Police SI Mock Test",
+    "Bihar Police Constable Mock Test"
+  ],
+  "B.Ed Entrance Exams": [
+    "UP B.Ed Joint Entrance Exam Mock Test",
+    "Bihar B.Ed CET Mock Test",
+    "Delhi University B.Ed Entrance Mock Test"
+  ],
+  "Non - Teaching Exams": [
+    "EMRS Non-Teaching Staff Mock Test",
+    "DSSSB Non-Teaching Assistant Mock Test",
+    "KVS Non-Teaching Clerk Mock Test"
+  ],
+  "TGT/PGT Exams": [
+    "UP TGT School Teacher Mock Test",
+    "UP PGT School Teacher Mock Test",
+    "DSSSB TGT Mock Test",
+    "KVS PGT Mock Test"
+  ],
+  "TET/PRT Exams": [
+    "CTET Paper 1 Child Pedagogy",
+    "CTET Paper 2 Child Pedagogy",
+    "UPTET Paper 1 Mock Test",
+    "Super TET Primary Teacher Mock Test"
+  ],
+  "NET/SET Exams": [
+    "UGC NET Paper 1 General Aptitude",
+    "UGC NET Commerce Paper 2 Mock Test",
+    "UGC NET Computer Science Mock Test",
+    "CSIR NET Life Sciences Mock Test"
+  ],
+  "Food Technology": [
+    "FSSAI Central Food Safety Officer Mock Test",
+    "FSSAI Technical Officer Mock Test",
+    "State Food Safety Officer Mock Test"
+  ],
+  "Nursing Recruitment Exams": [
+    "AIIMS NORCET Nursing Officer Mock Test",
+    "ESIC Staff Nurse Recruitment Mock Test",
+    "DSSSB Nursing Officer Mock Test"
+  ],
+  "Mechanical Engineering": [
+    "GATE Mechanical Engineering Mock Test",
+    "SSC JE Mechanical Mock Test",
+    "RRB JE Mechanical Mock Test",
+    "ISRO Mechanical Mock Test"
+  ],
+  "Civil Engineering": [
+    "GATE Civil Engineering Mock Test",
+    "SSC JE Civil Mock Test",
+    "RRB JE Civil Mock Test",
+    "ISRO Civil Mock Test"
+  ],
+  "Electrical Engineering": [
+    "GATE Electrical Engineering Mock Test",
+    "SSC JE Electrical Mock Test",
+    "RRB JE Electrical Mock Test",
+    "ISRO Electrical Mock Test"
+  ],
+  "Electronics & Communication Eng": [
+    "GATE Electronics & Comm Mock Test",
+    "ISRO Electronics Mock Test",
+    "BARC Electronics Mock Test"
+  ],
+  "Computer Science & Engineering": [
+    "GATE Computer Science & IT Mock Test",
+    "ISRO Computer Science Mock Test",
+    "NIELIT Scientist B Mock Test"
+  ],
+  "Other Engineering Exams": [
+    "GATE Chemical Engineering Mock Test",
+    "GATE Biotechnology Mock Test",
+    "GATE Aerospace Engineering Mock Test"
+  ],
+  "ITI Exams": [
+    "ITI Fitter Trade Theory Mock Test",
+    "ITI Electrician Trade Theory Mock Test",
+    "ITI Electronic Mechanic Trade Theory Mock Test"
+  ],
+  "Accounting and Commerce": [
+    "UGC NET Commerce Paper 2 Mock Test",
+    "CA Foundation Principles of Accounting",
+    "CMA Foundation Financial Accounting"
+  ],
+  "Campus Placements": [
+    "TCS NQT Cognitive Skills Mock Test",
+    "Infosys Specialist Programmer Mock Test",
+    "Wipro Elite Talent Hunt Mock Test",
+    "Cognizant GenC Quantitative Mock Test"
+  ],
+  "NRA CET": [
+    "NRA CET Matriculation 10th Level Mock Test",
+    "NRA CET Higher Secondary 12th Level Mock Test",
+    "NRA CET Graduation Level Mock Test"
+  ],
+  "Instrumentation Engineering": [
+    "GATE Instrumentation Engineering Mock Test",
+    "ISRO Instrumentation Mock Test"
+  ],
+  "Government Organizations": [
+    "ISRO Scientist recruitment Mock Test",
+    "BARC Scientific Officer Mock Test",
+    "DRDO Scientist B Mock Test"
+  ],
+  "UG Entrance Exams": [
+    "CUET UG General Test Mock Test",
+    "JEE Main Physics & Chemistry Mock Test",
+    "JEE Main Mathematics Mock Test",
+    "NEET UG Complete Practice Mock Test"
+  ],
+  "CUET": [
+    "CUET UG Section III General Test Mock Test",
+    "CUET UG Section IA English Mock Test",
+    "CUET UG Physics & Chemistry Mock Test"
+  ],
+  "MBA Entrance Exam": [
+    "CAT Quantitative Aptitude Mock Test",
+    "CAT Data Interpretation & LR Mock Test",
+    "CAT Verbal Ability & RC Mock Test",
+    "CMAT Complete Syllabus Mock Test"
+  ],
+  "Banking": [
+    "SBI PO Preliminary Mock Test",
+    "SBI Clerk Preliminary Mock Test",
+    "IBPS PO Preliminary Mock Test",
+    "IBPS Clerk Preliminary Mock Test"
+  ]
+};
 
 // Helper to match courses to categories
 const getCategoryForCourse = (courseName) => {
@@ -1634,36 +2514,13 @@ async function seed() {
     console.error('Warning: Failed to reset sequences.', seqError);
   }
 
-  // Group existing categoryCourses by their category
-  const coursesByCategory = {};
-  for (const cat of categories) {
-    coursesByCategory[cat] = [];
-  }
-
-  for (const course of categoryCourses) {
-    const cat = getCategoryForCourse(course.name);
-    if (coursesByCategory[cat]) {
-      coursesByCategory[cat].push(course);
-    } else {
-      coursesByCategory["State Exams"].push(course);
-    }
-  }
-
-  // Expand each category to contain exactly 20 courses
+  // Load courses directly from examsByCategory mapping
   const expandedCourses = [];
   for (const cat of categories) {
-    const bases = coursesByCategory[cat];
-    if (bases.length === 0) continue; // skip if no base course is defined
-
-    for (let i = 0; i < 20; i++) {
-      const baseCourse = bases[i % bases.length];
-      let courseName = baseCourse.name;
-      if (i >= bases.length) {
-        courseName = getGeneratedName(cat, i - bases.length, baseCourse);
-      }
+    const list = examsByCategory[cat] || [];
+    for (const name of list) {
       expandedCourses.push({
-        name: courseName,
-        mcqs: baseCourse.mcqs,
+        name: name,
         category: cat
       });
     }
@@ -1687,9 +2544,11 @@ async function seed() {
       }
     });
 
+    const courseMcqs = generateUniqueMCQsForCourse(course.name, item.category, 60);
+
     // Seed MCQs in a batch
     await prisma.mCQQuestion.createMany({
-      data: item.mcqs.map(q => ({
+      data: courseMcqs.map(q => ({
         courseId: course.id,
         question: q.question,
         options: q.options,
@@ -1712,7 +2571,7 @@ async function seed() {
       }))
     });
 
-    console.log(`Created course "${course.name}" (ID: ${course.id}) with 15 MCQs and 16 Test Series.`);
+    console.log(`Created course "${course.name}" (ID: ${course.id}) with 60 MCQs and ${subTests.length} Test Series.`);
   }
 
   console.log('All done!');
