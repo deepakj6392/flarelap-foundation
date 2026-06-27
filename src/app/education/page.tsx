@@ -210,134 +210,219 @@ const supportOptions = [
     highlight: false,
   },
 ];
+const courseToCategory: { [key: string]: string } = {
+  "ssc cgl mock test": "SSC",
+  "ssc chsl mock test": "SSC",
+  "ssc mts mock test": "SSC",
+  "ssc gd constable mock test": "SSC",
+  "ssc cpo mock test": "SSC",
+  "ssc je mock test": "SSC",
+  "ssc stenographer mock test": "SSC",
+  "ssc jht (junior hindi translator) mock test": "SSC",
+  "ssc selection post mock test": "SSC",
+  "ssc departmental exams mock test": "SSC",
+  "cuet pg mock test": "PG Entrance Exam",
+  "iit jam mock test": "PG Entrance Exam",
+  "gate (pg/m.tech) mock test": "PG Entrance Exam",
+  "cat (mba) mock test": "PG Entrance Exam",
+  "cmat (mba) mock test": "PG Entrance Exam",
+  "xat (mba) mock test": "PG Entrance Exam",
+  "mat (mba) mock test": "PG Entrance Exam",
+  "neet pg (medical) mock test": "PG Entrance Exam",
+  "gpat (pharmacy) mock test": "PG Entrance Exam",
+  "clat pg (law) mock test": "PG Entrance Exam",
+  "tiss cuet pg mock test": "PG Entrance Exam",
+  "nimcet (mca) mock test": "PG Entrance Exam",
+  "jnu pg entrance (cuet pg route) mock test": "PG Entrance Exam",
+  "university specific pg entrance exams mock test": "PG Entrance Exam",
+  "rbi grade b mock test": "Regulatory Body Exams",
+  "rbi assistant mock test": "Banking & Insurance",
+  "sebi grade a mock test": "Regulatory Body Exams",
+  "nabard grade a mock test": "Regulatory Body Exams",
+  "irdai grade a mock test": "Regulatory Body Exams",
+  "pfrda grade a mock test": "Regulatory Body Exams",
+  "sidbi grade a mock test": "Regulatory Body Exams",
+  "ifsca grade a mock test": "Regulatory Body Exams",
+  "ibbi exam mock test": "Regulatory Body Exams",
+  "ctet mock test": "Teaching Exams",
+  "state tet (htet, uptet, reet, btet, etc.) mock test": "Teaching Exams",
+  "ugc net mock test": "Teaching Exams",
+  "csir net mock test": "Teaching Exams",
+  "kvs teacher exam mock test": "Teaching Exams",
+  "nvs teacher exam mock test": "Teaching Exams",
+  "dsssb teacher exam mock test": "Teaching Exams",
+  "tgt exam mock test": "Teaching Exams",
+  "pgt exam mock test": "Teaching Exams",
+  "prt exam mock test": "Teaching Exams",
+  "b.ed entrance exam mock test": "Teaching Exams",
+  "m.ed entrance exam mock test": "Teaching Exams",
+  "set (state eligibility test) mock test": "Teaching Exams",
+  "iti fitter semester 1 mock test": "Fitter",
+  "iti fitter semester 2 mock test": "Fitter",
+  "iti fitter yearly theory mock test": "Fitter",
+  "iti electrician semester 1 mock test": "Electrician",
+  "iti electrician semester 2 mock test": "Electrician",
+  "iti electrician yearly theory mock test": "Electrician",
+  "rrb je civil engineering mock test": "AE/JE Exams",
+  "rrb je electrical engineering mock test": "AE/JE Exams",
+  "rrb je mechanical engineering mock test": "AE/JE Exams",
+  "ssc je civil technical mock test": "AE/JE Exams",
+  "ssc je electrical technical mock test": "AE/JE Exams",
+  "ssc je mechanical technical mock test": "AE/JE Exams",
+  "state psc ae civil mock test": "AE/JE Exams",
+  "state psc je electrical mock test": "AE/JE Exams",
+  "delhi judiciary service mock test": "Judiciary Exams",
+  "up civil judge junior mock test": "Judiciary Exams",
+  "bihar judiciary exam mock test": "Judiciary Exams",
+  "mp judiciary service mock test": "Judiciary Exams",
+  "rajasthan judiciary mock test": "Judiciary Exams",
+  "aiims paramedical entrance exam mock test": "Paramedical Exams",
+  "pgimer paramedical entrance mock test": "Paramedical Exams",
+  "jipmer paramedical entrance mock test": "Paramedical Exams",
+  "cuet ug (paramedical courses) mock test": "Paramedical Exams",
+  "neet ug (some allied health courses) mock test": "Paramedical Exams",
+  "up cpet (abvmu paramedical) mock test": "Paramedical Exams",
+  "ruhs paramedical entrance mock test": "Paramedical Exams",
+  "jenpas ug (west bengal) mock test": "Paramedical Exams",
+  "smfwbee mock test": "Paramedical Exams",
+  "uttarakhand paramedical entrance mock test": "Paramedical Exams",
+  "bihar dcece paramedical mock test": "Paramedical Exams",
+  "ipu cet (paramedical courses) mock test": "Paramedical Exams",
+  "iti electronic mechanic semester 1 mock test": "Electronic Mechanic",
+  "iti electronic mechanic semester 2 mock test": "Electronic Mechanic",
+  "iti electronic mechanic yearly theory mock test": "Electronic Mechanic",
+  "rrb ntpc cbt 1 mock test": "Railways",
+  "rrb ntpc cbt 2 mock test": "Railways",
+  "rrb alp stage 1 mock test": "Railways",
+  "rrb alp stage 2 mock test": "Railways",
+  "rrb group d mock test": "Railways",
+  "rrb je cbt 1 mock test": "Railways",
+  "sbi po mock test": "Banking & Insurance",
+  "sbi clerk mock test": "Banking & Insurance",
+  "ibps po mock test": "Banking & Insurance",
+  "ibps clerk mock test": "Banking & Insurance",
+  "ibps rrb po mock test": "Banking & Insurance",
+  "lic aao mock test": "Banking & Insurance",
+  "lic ado mock test": "Banking & Insurance",
+  "niacl ao mock test": "Banking & Insurance",
+  "uppsc pcs prelims mock test": "State Exams",
+  "bpsc pcs prelims mock test": "State Exams",
+  "mppsc pcs prelims mock test": "State Exams",
+  "ras rajasthan pcs mock test": "State Exams",
+  "mpsc maharashtra pcs mock test": "State Exams",
+  "nda general ability mock test": "Defence Exams",
+  "cds elementary mathematics mock test": "Defence Exams",
+  "cds general knowledge mock test": "Defence Exams",
+  "afcat entry mock test": "Defence Exams",
+  "capf assistant commandant mock test": "Defence Exams",
+  "indian airforce x/y group mock test": "Defence Exams",
+  "upsc civil services prelims gs 1 mock test": "Civil Services",
+  "upsc civil services prelims csat mock test": "Civil Services",
+  "state psc gs paper 1 mock test": "Civil Services",
+  "state psc gs paper 2 mock test": "Civil Services",
+  "up police constable mock test": "Police Exams",
+  "up police si mock test": "Police Exams",
+  "delhi police constable mock test": "Police Exams",
+  "delhi police si mock test": "Police Exams",
+  "bihar police constable mock test": "Police Exams",
+  "up b.ed joint entrance exam mock test": "B.Ed Entrance Exams",
+  "bihar b.ed cet mock test": "B.Ed Entrance Exams",
+  "delhi university b.ed entrance mock test": "B.Ed Entrance Exams",
+  "emrs non-teaching staff mock test": "Non - Teaching Exams",
+  "dsssb non-teaching assistant mock test": "Non - Teaching Exams",
+  "kvs non-teaching clerk mock test": "Non - Teaching Exams",
+  "up tgt school teacher mock test": "TGT/PGT Exams",
+  "up pgt school teacher mock test": "TGT/PGT Exams",
+  "dsssb tgt mock test": "TGT/PGT Exams",
+  "kvs pgt mock test": "TGT/PGT Exams",
+  "ctet paper 1 child pedagogy": "TET/PRT Exams",
+  "ctet paper 2 child pedagogy": "TET/PRT Exams",
+  "uptet paper 1 mock test": "TET/PRT Exams",
+  "super tet primary teacher mock test": "TET/PRT Exams",
+  "ugc net paper 1 general aptitude": "NET/SET Exams",
+  "ugc net commerce paper 2 mock test": "Accounting and Commerce",
+  "ugc net computer science mock test": "NET/SET Exams",
+  "csir net life sciences mock test": "NET/SET Exams",
+  "fssai central food safety officer mock test": "Food Technology",
+  "fssai technical officer mock test": "Food Technology",
+  "state food safety officer mock test": "Food Technology",
+  "aiims norcet nursing officer mock test": "Nursing Recruitment Exams",
+  "esic staff nurse recruitment mock test": "Nursing Recruitment Exams",
+  "dsssb nursing officer mock test": "Nursing Recruitment Exams",
+  "gate mechanical engineering mock test": "Mechanical Engineering",
+  "ssc je mechanical mock test": "Mechanical Engineering",
+  "rrb je mechanical mock test": "Mechanical Engineering",
+  "isro mechanical mock test": "Mechanical Engineering",
+  "gate civil engineering mock test": "Civil Engineering",
+  "ssc je civil mock test": "Civil Engineering",
+  "rrb je civil mock test": "Civil Engineering",
+  "isro civil mock test": "Civil Engineering",
+  "gate electrical engineering mock test": "Electrical Engineering",
+  "ssc je electrical mock test": "Electrical Engineering",
+  "rrb je electrical mock test": "Electrical Engineering",
+  "isro electrical mock test": "Electrical Engineering",
+  "gate electronics & comm mock test": "Electronics & Communication Eng",
+  "isro electronics mock test": "Electronics & Communication Eng",
+  "barc electronics mock test": "Electronics & Communication Eng",
+  "gate computer science & it mock test": "Computer Science & Engineering",
+  "isro computer science mock test": "Computer Science & Engineering",
+  "nielit scientist b mock test": "Computer Science & Engineering",
+  "gate chemical engineering mock test": "Other Engineering Exams",
+  "gate biotechnology mock test": "Other Engineering Exams",
+  "gate aerospace engineering mock test": "Other Engineering Exams",
+  "iti fitter trade theory mock test": "ITI Exams",
+  "iti electrician trade theory mock test": "ITI Exams",
+  "iti electronic mechanic trade theory mock test": "ITI Exams",
+  "ca foundation principles of accounting": "Accounting and Commerce",
+  "cma foundation financial accounting": "Accounting and Commerce",
+  "tcs nqt cognitive skills mock test": "Campus Placements",
+  "infosys specialist programmer mock test": "Campus Placements",
+  "wipro elite talent hunt mock test": "Campus Placements",
+  "cognizant genc quantitative mock test": "Campus Placements",
+  "nra cet matriculation 10th level mock test": "NRA CET",
+  "nra cet higher secondary 12th level mock test": "NRA CET",
+  "nra cet graduation level mock test": "NRA CET",
+  "gate instrumentation engineering mock test": "Instrumentation Engineering",
+  "isro instrumentation mock test": "Instrumentation Engineering",
+  "isro scientist recruitment mock test": "Government Organizations",
+  "barc scientific officer mock test": "Government Organizations",
+  "drdo scientist b mock test": "Government Organizations",
+  "cuet ug general test mock test": "UG Entrance Exams",
+  "jee main physics & chemistry mock test": "UG Entrance Exams",
+  "jee main mathematics mock test": "UG Entrance Exams",
+  "neet ug complete practice mock test": "UG Entrance Exams",
+  "cuet ug section iii general test mock test": "CUET",
+  "cuet ug section ia english mock test": "CUET",
+  "cuet ug physics & chemistry mock test": "CUET",
+  "cat quantitative aptitude mock test": "MBA Entrance Exam",
+  "cat data interpretation & lr mock test": "MBA Entrance Exam",
+  "cat verbal ability & rc mock test": "MBA Entrance Exam",
+  "cmat complete syllabus mock test": "MBA Entrance Exam",
+  "sbi po preliminary mock test": "Banking",
+  "sbi clerk preliminary mock test": "Banking",
+  "ibps po preliminary mock test": "Banking",
+  "ibps clerk preliminary mock test": "Banking",
+};
+
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
+  if (courseToCategory[name]) {
+    return courseToCategory[name];
+  }
   
-  // Specific Paramedical Exams override first
-  if (
-    name.includes("aiims paramedical") ||
-    name.includes("pgimer paramedical") ||
-    name.includes("jipmer paramedical") ||
-    name.includes("cuet ug (paramedical") ||
-    name.includes("neet ug (some allied") ||
-    name.includes("up cpet") ||
-    name.includes("ruhs paramedical") ||
-    name.includes("jenpas ug") ||
-    name.includes("smfwbee") ||
-    name.includes("uttarakhand paramedical") ||
-    name.includes("bihar dcece") ||
-    name.includes("ipu cet (paramedical")
-  ) {
+  // Specific fallback overrides in case of dynamic matching differences
+  if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
     return "Paramedical Exams";
   }
-
-  // Specific Teaching Exams override first
-  if (
-    name.includes("ctet mock test") ||
-    name.includes("state tet (htet, uptet, reet, btet, etc.)") ||
-    name.includes("ugc net mock test") ||
-    name.includes("csir net mock test") ||
-    name.includes("kvs teacher exam") ||
-    name.includes("nvs teacher exam") ||
-    name.includes("dsssb teacher exam") ||
-    name.includes("tgt exam mock test") ||
-    name.includes("pgt exam mock test") ||
-    name.includes("prt exam mock test") ||
-    name.includes("b.ed entrance exam mock test") ||
-    name.includes("m.ed entrance exam mock test") ||
-    name.includes("set (state eligibility test) mock test")
-  ) {
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("net") || name.includes("set") || name.includes("m.ed")) {
     return "Teaching Exams";
   }
-
-  // Specific Regulatory Body Exams override first
-  if (
-    name.includes("rbi grade b") ||
-    name.includes("rbi assistant") ||
-    name.includes("sebi grade a") ||
-    name.includes("nabard grade a") ||
-    name.includes("irdai grade a") ||
-    name.includes("pfrda grade a") ||
-    name.includes("sidbi grade a") ||
-    name.includes("ifsca grade a") ||
-    name.includes("ibbi exam")
-  ) {
+  if (name.includes("rbi") || name.includes("sebi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
     return "Regulatory Body Exams";
   }
-
-  // Specific PG Entrance override first
-  if (
-    name.includes("cuet pg") ||
-    name.includes("iit jam") ||
-    name.includes("gate (pg/m.tech)") ||
-    name.includes("cat (mba)") ||
-    name.includes("cmat (mba)") ||
-    name.includes("xat (mba)") ||
-    name.includes("mat (mba)") ||
-    name.includes("neet pg") ||
-    name.includes("gpat") ||
-    name.includes("clat pg") ||
-    name.includes("tiss cuet pg") ||
-    name.includes("nimcet") ||
-    name.includes("jnu pg") ||
-    name.includes("university specific pg")
-  ) {
+  if (name.includes("cuet pg") || name.includes("iit jam") || name.includes("gate") || name.includes("cat") || name.includes("cmat") || name.includes("xat") || name.includes("mat") || name.includes("neet pg") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet")) {
     return "PG Entrance Exam";
   }
-
-  // Specific Engineering disciplines first
-  if (name.includes("civil engineering")) return "Civil Engineering";
-  if (name.includes("electrical engineering")) return "Electrical Engineering";
-  if (name.includes("mechanical engineering") || name.includes("mechanical")) return "Mechanical Engineering";
-  if (name.includes("electronics & communication") || name.includes("electronics") || name.includes("ece")) return "Electronics & Communication Eng";
-  if (name.includes("computer science") || name.includes("cse")) return "Computer Science & Engineering";
-  if (name.includes("instrumentation")) return "Instrumentation Engineering";
-  if (name.includes("other engineering")) return "Other Engineering Exams";
-  
-  // Specific Teaching/Academic exams
-  if (name.includes("tgt") || name.includes("pgt")) return "TGT/PGT Exams";
-  if (name.includes("tet") || name.includes("prt")) return "TET/PRT Exams";
-  if (name.includes("net") || name.includes("set")) return "NET/SET Exams";
-  if (name.includes("b.ed")) return "B.Ed Entrance Exams";
-  if (name.includes("teaching") || name.includes("ctet") || name.includes("uptet") || name.includes("kvs")) return "Teaching Exams";
-  
-  // ITI and technical
-  if (name.includes("fitter")) return "Fitter";
-  if (name.includes("electrician")) return "Electrician";
-  if (name.includes("electronic mechanic")) return "Electronic Mechanic";
-  if (name.includes("iti exam") || name.includes("iti")) return "ITI Exams";
-  
-  // Miscellaneous
-  if (name.includes("non-teaching") || name.includes("non teaching")) return "Non - Teaching Exams";
-  if (name.includes("food tech") || name.includes("food technology")) return "Food Technology";
-  if (name.includes("nursing recruitment") || name.includes("nursing")) return "Nursing Recruitment Exams";
-  if (name.includes("accounting") || name.includes("commerce")) return "Accounting and Commerce";
-  if (name.includes("placement") || name.includes("campus placement")) return "Campus Placements";
-  if (name.includes("nra cet") || name.includes("nra")) return "NRA CET";
-  if (name.includes("government org") || name.includes("gov org") || name.includes("govt org")) return "Government Organizations";
-  if (name.includes("ug entrance") || name.includes("under graduate")) return "UG Entrance Exams";
-  if (name.includes("cuet")) return "CUET";
-  if (name.includes("mba")) return "MBA Entrance Exam";
-  
-  // Standard categories
-  if (name.includes("police") || name.includes("constable")) return "Police Exams";
-  if (name.includes("ssc") || name.includes("cgl") || name.includes("cpo")) return "SSC";
-  if (name.includes("ae") || name.includes("je")) return "AE/JE Exams";
-  if (name.includes("rrb") || name.includes("alp") || name.includes("ntpc") || name.includes("group d")) return "Railways";
-  
-  // Banking
-  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("banking")) {
-    if (name.includes("insurance")) return "Banking & Insurance";
-    return "Banking";
-  }
-  if (name.includes("bank") || name.includes("sbi") || name.includes("ibps") || name.includes("lic") || name.includes("rbi")) return "Banking & Insurance";
-  
-  if (name.includes("sebi") || name.includes("nabard") || name.includes("regulatory")) return "Regulatory Body Exams";
-  if (name.includes("jrf") || name.includes("gate")) return "PG Entrance Exam";
-  if (name.includes("judiciary")) return "Judiciary Exams";
-  if (name.includes("paramedical")) return "Paramedical Exams";
-  if (name.includes("civil") || name.includes("upsc") || name.includes("pcs")) return "Civil Services";
-  if (name.includes("nda") || name.includes("cds") || name.includes("defence") || name.includes("afcat")) return "Defence Exams";
   
   return "State Exams"; // Default fallback
 };
