@@ -75,6 +75,42 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("aiims paramedical")) {
+    return { questions: 90, marks: 90, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("pgimer paramedical")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
+  }
+  if (name.includes("jipmer paramedical")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
+  }
+  if (name.includes("cuet ug (paramedical")) {
+    return { questions: 120, marks: 600, duration: 135, language: "English, Hindi" };
+  }
+  if (name.includes("neet ug (some allied")) {
+    return { questions: 180, marks: 720, duration: 200, language: "English, Hindi" };
+  }
+  if (name.includes("up cpet")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("ruhs paramedical")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("jenpas ug")) {
+    return { questions: 100, marks: 115, duration: 90, language: "English Only" };
+  }
+  if (name.includes("smfwbee")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
+  }
+  if (name.includes("uttarakhand paramedical")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("bihar dcece")) {
+    return { questions: 90, marks: 450, duration: 135, language: "English, Hindi" };
+  }
+  if (name.includes("ipu cet (paramedical")) {
+    return { questions: 150, marks: 600, duration: 150, language: "English Only" };
+  }
   if (name.includes("ctet mock test")) {
     return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
   }
@@ -384,6 +420,82 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
 const getCourseSubjects = (courseName: string) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("aiims paramedical")) {
+    return [
+      { name: "Physics", qs: 30, marks: 30, duration: 30 },
+      { name: "Chemistry", qs: 30, marks: 30, duration: 30 },
+      { name: "Biology/Mathematics", qs: 30, marks: 30, duration: 30 }
+    ];
+  }
+  if (name.includes("pgimer paramedical")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
+      { name: "Biology/Maths & General English", qs: 50, marks: 50, duration: 45 }
+    ];
+  }
+  if (name.includes("jipmer paramedical")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
+      { name: "Biology/English/Aptitude", qs: 50, marks: 50, duration: 45 }
+    ];
+  }
+  if (name.includes("cuet ug (paramedical")) {
+    return [
+      { name: "Section I: English Language", qs: 40, marks: 200, duration: 45 },
+      { name: "Section II: Physics & Chemistry", qs: 80, marks: 400, duration: 90 }
+    ];
+  }
+  if (name.includes("neet ug (some allied")) {
+    return [
+      { name: "Physics", qs: 45, marks: 180, duration: 50 },
+      { name: "Chemistry", qs: 45, marks: 180, duration: 50 },
+      { name: "Biology (Botany & Zoology)", qs: 90, marks: 360, duration: 100 }
+    ];
+  }
+  if (name.includes("up cpet")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
+      { name: "Biology/English/General Knowledge", qs: 50, marks: 50, duration: 45 }
+    ];
+  }
+  if (name.includes("ruhs paramedical")) {
+    return [
+      { name: "Physics", qs: 50, marks: 50, duration: 60 },
+      { name: "Chemistry", qs: 50, marks: 50, duration: 60 }
+    ];
+  }
+  if (name.includes("jenpas ug")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
+      { name: "Biology, English & Logical Reasoning", qs: 50, marks: 65, duration: 45 }
+    ];
+  }
+  if (name.includes("smfwbee")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 60 },
+      { name: "Biology / Allied Sciences", qs: 50, marks: 50, duration: 60 }
+    ];
+  }
+  if (name.includes("uttarakhand paramedical")) {
+    return [
+      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 60 },
+      { name: "Biology / General Science", qs: 50, marks: 50, duration: 60 }
+    ];
+  }
+  if (name.includes("bihar dcece")) {
+    return [
+      { name: "General Science (Physics, Chemistry, Biology)", qs: 25, marks: 125, duration: 40 },
+      { name: "Mathematics & Hindi", qs: 30, marks: 150, duration: 45 },
+      { name: "English & General Knowledge", qs: 35, marks: 175, duration: 50 }
+    ];
+  }
+  if (name.includes("ipu cet (paramedical")) {
+    return [
+      { name: "Physics", qs: 50, marks: 200, duration: 50 },
+      { name: "Chemistry", qs: 50, marks: 200, duration: 50 },
+      { name: "Biology", qs: 50, marks: 200, duration: 50 }
+    ];
+  }
   if (name.includes("ctet mock test")) {
     return [
       { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },

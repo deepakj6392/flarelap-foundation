@@ -1597,7 +1597,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
     domain = "law";
   } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs")) {
     domain = "civil_services";
-  } else if (name.includes("nursing") || name.includes("paramedical") || name.includes("neet pg") || name.includes("gpat")) {
+  } else if (name.includes("nursing") || name.includes("paramedical") || name.includes("neet pg") || name.includes("gpat") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("neet ug")) {
     domain = "medical";
   } else if (name.includes("food technology") || name.includes("food tech")) {
     domain = "food_tech";
@@ -2333,10 +2333,18 @@ const examsByCategory = {
     "Rajasthan Judiciary Mock Test"
   ],
   "Paramedical Exams": [
-    "AIIMS NORCET Staff Nurse Mock Test",
-    "ESIC Staff Nurse Recruitment Mock Test",
-    "RRB Paramedical Staff Mock Test",
-    "DSSSB Nursing Officer Mock Test"
+    "AIIMS Paramedical Entrance Exam Mock Test",
+    "PGIMER Paramedical Entrance Mock Test",
+    "JIPMER Paramedical Entrance Mock Test",
+    "CUET UG (Paramedical courses) Mock Test",
+    "NEET UG (some allied health courses) Mock Test",
+    "UP CPET (ABVMU Paramedical) Mock Test",
+    "RUHS Paramedical Entrance Mock Test",
+    "JENPAS UG (West Bengal) Mock Test",
+    "SMFWBEE Mock Test",
+    "Uttarakhand Paramedical Entrance Mock Test",
+    "Bihar DCECE Paramedical Mock Test",
+    "IPU CET (Paramedical courses) Mock Test"
   ],
   "Electronic Mechanic": [
     "ITI Electronic Mechanic Semester 1 Mock Test",
@@ -2520,6 +2528,24 @@ const examsByCategory = {
 const getCategoryForCourse = (courseName) => {
   const name = courseName.toLowerCase();
   
+  // Specific Paramedical Exams override first
+  if (
+    name.includes("aiims paramedical") ||
+    name.includes("pgimer paramedical") ||
+    name.includes("jipmer paramedical") ||
+    name.includes("cuet ug (paramedical") ||
+    name.includes("neet ug (some allied") ||
+    name.includes("up cpet") ||
+    name.includes("ruhs paramedical") ||
+    name.includes("jenpas ug") ||
+    name.includes("smfwbee") ||
+    name.includes("uttarakhand paramedical") ||
+    name.includes("bihar dcece") ||
+    name.includes("ipu cet (paramedical")
+  ) {
+    return "Paramedical Exams";
+  }
+
   // Specific Teaching Exams override first
   if (
     name.includes("ctet mock test") ||
@@ -2723,33 +2749,45 @@ const getGeneratedName = (category, idx, baseCourse) => {
   }
 };
 
+async function executeWithRetry(fn, retries = 5, delayMs = 3000) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      console.warn(`Database operation failed (attempt ${i + 1}/${retries}). Retrying in ${delayMs}ms... Error:`, err.message || err);
+      if (i === retries - 1) throw err;
+      await new Promise(res => setTimeout(res, delayMs));
+    }
+  }
+}
+
 async function seed() {
   console.log('Clearing old purchases...');
-  await prisma.purchase.deleteMany({});
+  await executeWithRetry(() => prisma.purchase.deleteMany({}));
 
   console.log('Clearing old test attempts...');
-  await prisma.testAttempt.deleteMany({});
+  await executeWithRetry(() => prisma.testAttempt.deleteMany({}));
 
   console.log('Clearing old test series...');
-  await prisma.testSeries.deleteMany({});
+  await executeWithRetry(() => prisma.testSeries.deleteMany({}));
 
   console.log('Clearing old MCQ questions...');
-  await prisma.mCQQuestion.deleteMany({});
+  await executeWithRetry(() => prisma.mCQQuestion.deleteMany({}));
 
   console.log('Unlinking users from courses...');
-  await prisma.user.updateMany({
+  await executeWithRetry(() => prisma.user.updateMany({
     data: { courseId: null }
-  });
+  }));
 
   console.log('Clearing old courses...');
-  await prisma.course.deleteMany({});
+  await executeWithRetry(() => prisma.course.deleteMany({}));
 
   console.log('Resetting identity sequences...');
   try {
-    await prisma.$executeRawUnsafe('ALTER SEQUENCE courses_id_seq RESTART WITH 1;');
-    await prisma.$executeRawUnsafe('ALTER SEQUENCE mcq_questions_id_seq RESTART WITH 1;');
-    await prisma.$executeRawUnsafe('ALTER SEQUENCE test_series_id_seq RESTART WITH 1;');
-    await prisma.$executeRawUnsafe('ALTER SEQUENCE purchases_id_seq RESTART WITH 1;');
+    await executeWithRetry(() => prisma.$executeRawUnsafe('ALTER SEQUENCE courses_id_seq RESTART WITH 1;'));
+    await executeWithRetry(() => prisma.$executeRawUnsafe('ALTER SEQUENCE mcq_questions_id_seq RESTART WITH 1;'));
+    await executeWithRetry(() => prisma.$executeRawUnsafe('ALTER SEQUENCE test_series_id_seq RESTART WITH 1;'));
+    await executeWithRetry(() => prisma.$executeRawUnsafe('ALTER SEQUENCE purchases_id_seq RESTART WITH 1;'));
     console.log('Identity sequences reset successfully.');
   } catch (seqError) {
     console.error('Warning: Failed to reset sequences.', seqError);
@@ -2782,18 +2820,18 @@ async function seed() {
       item.category === "Judiciary Exams" || 
       item.category === "Civil Services";
 
-    const course = await prisma.course.create({
+    const course = await executeWithRetry(() => prisma.course.create({
       data: { 
         name: item.name, 
         active: true,
         premium: isPremium
       }
-    });
+    }));
 
     const courseMcqs = generateUniqueMCQsForCourse(course.name, item.category, 200);
 
     // Seed MCQs in a batch
-    await prisma.mCQQuestion.createMany({
+    await executeWithRetry(() => prisma.mCQQuestion.createMany({
       data: courseMcqs.map(q => ({
         courseId: course.id,
         question: q.question,
@@ -2801,11 +2839,11 @@ async function seed() {
         answer: q.answer,
         hint: q.hint || ""
       }))
-    });
+    }));
 
     // Seed test series in a batch
     const subTests = generateSubTestsList(course.name, course.premium);
-    await prisma.testSeries.createMany({
+    await executeWithRetry(() => prisma.testSeries.createMany({
       data: subTests.map(test => ({
         courseId: course.id,
         name: test.name,
@@ -2815,9 +2853,12 @@ async function seed() {
         duration: test.duration,
         isFree: test.isFree
       }))
-    });
+    }));
 
     console.log(`Created course "${course.name}" (ID: ${course.id}) with 200 MCQs and ${subTests.length} Test Series.`);
+    
+    // Add small delay to prevent rate limits/timeouts on serverless database
+    await new Promise(res => setTimeout(res, 150));
   }
 
   console.log('All done!');

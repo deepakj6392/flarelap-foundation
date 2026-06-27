@@ -213,6 +213,24 @@ const supportOptions = [
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
   
+  // Specific Paramedical Exams override first
+  if (
+    name.includes("aiims paramedical") ||
+    name.includes("pgimer paramedical") ||
+    name.includes("jipmer paramedical") ||
+    name.includes("cuet ug (paramedical") ||
+    name.includes("neet ug (some allied") ||
+    name.includes("up cpet") ||
+    name.includes("ruhs paramedical") ||
+    name.includes("jenpas ug") ||
+    name.includes("smfwbee") ||
+    name.includes("uttarakhand paramedical") ||
+    name.includes("bihar dcece") ||
+    name.includes("ipu cet (paramedical")
+  ) {
+    return "Paramedical Exams";
+  }
+
   // Specific Teaching Exams override first
   if (
     name.includes("ctet mock test") ||
@@ -343,6 +361,42 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("aiims paramedical")) {
+    return { questions: 90, marks: 90, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("pgimer paramedical")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
+  }
+  if (name.includes("jipmer paramedical")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
+  }
+  if (name.includes("cuet ug (paramedical")) {
+    return { questions: 120, marks: 600, duration: 135, language: "English, Hindi" };
+  }
+  if (name.includes("neet ug (some allied")) {
+    return { questions: 180, marks: 720, duration: 200, language: "English, Hindi" };
+  }
+  if (name.includes("up cpet")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
+  if (name.includes("ruhs paramedical")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("jenpas ug")) {
+    return { questions: 100, marks: 115, duration: 90, language: "English Only" };
+  }
+  if (name.includes("smfwbee")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
+  }
+  if (name.includes("uttarakhand paramedical")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("bihar dcece")) {
+    return { questions: 90, marks: 450, duration: 135, language: "English, Hindi" };
+  }
+  if (name.includes("ipu cet (paramedical")) {
+    return { questions: 150, marks: 600, duration: 150, language: "English Only" };
+  }
   if (name.includes("ctet mock test")) {
     return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
   }
