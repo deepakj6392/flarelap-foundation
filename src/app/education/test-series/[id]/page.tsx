@@ -201,6 +201,9 @@ const getRealExamStats = (courseName: string): RealExamStats => {
   if (name.includes("neet pg")) {
     return { questions: 200, marks: 800, duration: 210, language: "English Only" };
   }
+  if (name.includes("gk mock test") || name.includes("state gk")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
   if (name.includes("gpat")) {
     return { questions: 125, marks: 500, duration: 180, language: "English Only" };
   }
@@ -487,6 +490,13 @@ const getCourseSubjects = (courseName: string) => {
       { name: "General Science (Physics, Chemistry, Biology)", qs: 25, marks: 125, duration: 40 },
       { name: "Mathematics & Hindi", qs: 30, marks: 150, duration: 45 },
       { name: "English & General Knowledge", qs: 35, marks: 175, duration: 50 }
+    ];
+  }
+  if (name.includes("gk mock test") || name.includes("state gk")) {
+    return [
+      { name: "State History & Geography", qs: 40, marks: 40, duration: 35 },
+      { name: "State Polity & Economy", qs: 30, marks: 30, duration: 25 },
+      { name: "State Current Affairs & Culture", qs: 30, marks: 30, duration: 30 }
     ];
   }
   if (name.includes("ipu cet (paramedical")) {

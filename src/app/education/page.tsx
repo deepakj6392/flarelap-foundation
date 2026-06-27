@@ -402,6 +402,18 @@ const courseToCategory: { [key: string]: string } = {
   "sbi clerk preliminary mock test": "Banking",
   "ibps po preliminary mock test": "Banking",
   "ibps clerk preliminary mock test": "Banking",
+  "rajasthan gk mock test": "State GK",
+  "uttar pradesh gk mock test": "State GK",
+  "bihar gk mock test": "State GK",
+  "madhya pradesh gk mock test": "State GK",
+  "maharashtra gk mock test": "State GK",
+  "haryana gk mock test": "State GK",
+  "punjab gk mock test": "State GK",
+  "gujarat gk mock test": "State GK",
+  "west bengal gk mock test": "State GK",
+  "karnataka gk mock test": "State GK",
+  "tamil nadu gk mock test": "State GK",
+  "andhra pradesh gk mock test": "State GK",
 };
 
 const getCategoryForCourse = (courseName: string): string => {
@@ -411,6 +423,9 @@ const getCategoryForCourse = (courseName: string): string => {
   }
   
   // Specific fallback overrides in case of dynamic matching differences
+  if (name.includes("state gk") || name.includes("gk")) {
+    return "State GK";
+  }
   if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
     return "Paramedical Exams";
   }
@@ -523,6 +538,9 @@ const getRealExamStats = (courseName: string): RealExamStats => {
   }
   if (name.includes("rbi grade b")) {
     return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("gk mock test") || name.includes("state gk")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
   }
   if (name.includes("rbi assistant")) {
     return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
@@ -811,7 +829,7 @@ export default function EducationPage() {
     "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
     "Accounting and Commerce", "Campus Placements", "NRA CET",
     "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
-    "CUET", "MBA Entrance Exam", "Banking"
+    "CUET", "MBA Entrance Exam", "Banking", "State GK"
   ];
 
   let filteredCourses = courses.filter((course) => {
@@ -990,7 +1008,7 @@ export default function EducationPage() {
                       "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
                       "Accounting and Commerce", "Campus Placements", "NRA CET",
                       "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
-                      "CUET", "MBA Entrance Exam", "Banking"
+                      "CUET", "MBA Entrance Exam", "Banking", "State GK"
                     ].map((cat, idx) => (
                       <li key={idx}>
                         <button
@@ -1022,7 +1040,7 @@ export default function EducationPage() {
                       "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
                       "Accounting and Commerce", "Campus Placements", "NRA CET",
                       "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
-                      "CUET", "MBA Entrance Exam", "Banking"
+                      "CUET", "MBA Entrance Exam", "Banking", "State GK"
                     ].map((cat, idx) => (
                       <li key={idx}>
                         <button

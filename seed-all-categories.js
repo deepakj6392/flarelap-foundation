@@ -1595,7 +1595,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
   let domain = "general";
   if (name.includes("judiciary") || name.includes("law")) {
     domain = "law";
-  } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs")) {
+  } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs") || name.includes("gk") || name.includes("state gk")) {
     domain = "civil_services";
   } else if (name.includes("nursing") || name.includes("paramedical") || name.includes("neet pg") || name.includes("gpat") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("neet ug")) {
     domain = "medical";
@@ -2247,7 +2247,7 @@ const categories = [
   "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
   "Accounting and Commerce", "Campus Placements", "NRA CET",
   "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
-  "CUET", "MBA Entrance Exam", "Banking"
+  "CUET", "MBA Entrance Exam", "Banking", "State GK"
 ];
 
 const examsByCategory = {
@@ -2521,6 +2521,20 @@ const examsByCategory = {
     "SBI Clerk Preliminary Mock Test",
     "IBPS PO Preliminary Mock Test",
     "IBPS Clerk Preliminary Mock Test"
+  ],
+  "State GK": [
+    "Rajasthan GK Mock Test",
+    "Uttar Pradesh GK Mock Test",
+    "Bihar GK Mock Test",
+    "Madhya Pradesh GK Mock Test",
+    "Maharashtra GK Mock Test",
+    "Haryana GK Mock Test",
+    "Punjab GK Mock Test",
+    "Gujarat GK Mock Test",
+    "West Bengal GK Mock Test",
+    "Karnataka GK Mock Test",
+    "Tamil Nadu GK Mock Test",
+    "Andhra Pradesh GK Mock Test"
   ]
 };
 
@@ -2716,6 +2730,18 @@ const courseToCategory = {
   "sbi clerk preliminary mock test": "Banking",
   "ibps po preliminary mock test": "Banking",
   "ibps clerk preliminary mock test": "Banking",
+  "rajasthan gk mock test": "State GK",
+  "uttar pradesh gk mock test": "State GK",
+  "bihar gk mock test": "State GK",
+  "madhya pradesh gk mock test": "State GK",
+  "maharashtra gk mock test": "State GK",
+  "haryana gk mock test": "State GK",
+  "punjab gk mock test": "State GK",
+  "gujarat gk mock test": "State GK",
+  "west bengal gk mock test": "State GK",
+  "karnataka gk mock test": "State GK",
+  "tamil nadu gk mock test": "State GK",
+  "andhra pradesh gk mock test": "State GK",
 };
 
 // Helper to match courses to categories
@@ -2726,6 +2752,9 @@ const getCategoryForCourse = (courseName) => {
   }
   
   // Specific fallback overrides in case of dynamic matching differences
+  if (name.includes("state gk") || name.includes("gk")) {
+    return "State GK";
+  }
   if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
     return "Paramedical Exams";
   }
