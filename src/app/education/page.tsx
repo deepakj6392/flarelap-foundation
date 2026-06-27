@@ -660,7 +660,22 @@ export default function EducationPage() {
     }
   };
 
-  const filteredCourses = courses.filter((course) => {
+  const categoryOrder = [
+    "SSC", "PG Entrance Exam", "Regulatory Body Exams",
+    "Teaching Exams", "Fitter", "Electrician", "AE/JE Exams",
+    "Judiciary Exams", "Paramedical Exams", "Electronic Mechanic",
+    "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
+    "Civil Services", "Police Exams", "B.Ed Entrance Exams",
+    "Non - Teaching Exams", "TGT/PGT Exams", "TET/PRT Exams", "NET/SET Exams",
+    "Food Technology", "Nursing Recruitment Exams", "Mechanical Engineering",
+    "Civil Engineering", "Electrical Engineering", "Electronics & Communication Eng",
+    "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
+    "Accounting and Commerce", "Campus Placements", "NRA CET",
+    "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
+    "CUET", "MBA Entrance Exam", "Banking"
+  ];
+
+  let filteredCourses = courses.filter((course) => {
     const matchesSearch = course.name.toLowerCase().includes(searchQuery.toLowerCase());
     if (activeCategory === "All") {
       return matchesSearch;
@@ -668,6 +683,35 @@ export default function EducationPage() {
       return matchesSearch && getCategoryForCourse(course.name) === activeCategory;
     }
   });
+
+  if (activeCategory === "All") {
+    const groups: { [key: string]: typeof courses } = {};
+    filteredCourses.forEach((course) => {
+      const cat = getCategoryForCourse(course.name);
+      if (!groups[cat]) {
+        groups[cat] = [];
+      }
+      groups[cat].push(course);
+    });
+
+    const allCats = Array.from(new Set([...categoryOrder, ...Object.keys(groups)]));
+    const interleaved: typeof courses = [];
+    let maxLen = 0;
+    allCats.forEach((cat) => {
+      if (groups[cat] && groups[cat].length > maxLen) {
+        maxLen = groups[cat].length;
+      }
+    });
+
+    for (let i = 0; i < maxLen; i++) {
+      allCats.forEach((cat) => {
+        if (groups[cat] && i < groups[cat].length) {
+          interleaved.push(groups[cat][i]);
+        }
+      });
+    }
+    filteredCourses = interleaved;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-950 font-sans antialiased">
