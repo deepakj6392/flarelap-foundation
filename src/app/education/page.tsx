@@ -213,6 +213,26 @@ const supportOptions = [
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
   
+  // Specific PG Entrance override first
+  if (
+    name.includes("cuet pg") ||
+    name.includes("iit jam") ||
+    name.includes("gate (pg/m.tech)") ||
+    name.includes("cat (mba)") ||
+    name.includes("cmat (mba)") ||
+    name.includes("xat (mba)") ||
+    name.includes("mat (mba)") ||
+    name.includes("neet pg") ||
+    name.includes("gpat") ||
+    name.includes("clat pg") ||
+    name.includes("tiss cuet pg") ||
+    name.includes("nimcet") ||
+    name.includes("jnu pg") ||
+    name.includes("university specific pg")
+  ) {
+    return "PG Entrance Exam";
+  }
+
   // Specific Engineering disciplines first
   if (name.includes("civil engineering")) return "Civil Engineering";
   if (name.includes("electrical engineering")) return "Electrical Engineering";
@@ -289,6 +309,48 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("cuet pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
+  }
+  if (name.includes("iit jam")) {
+    return { questions: 60, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("gate (pg/m.tech)")) {
+    return { questions: 65, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("cat (mba)")) {
+    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
+  }
+  if (name.includes("cmat (mba)")) {
+    return { questions: 100, marks: 400, duration: 180, language: "English Only" };
+  }
+  if (name.includes("xat (mba)")) {
+    return { questions: 100, marks: 100, duration: 210, language: "English Only" };
+  }
+  if (name.includes("mat (mba)")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("neet pg")) {
+    return { questions: 200, marks: 800, duration: 210, language: "English Only" };
+  }
+  if (name.includes("gpat")) {
+    return { questions: 125, marks: 500, duration: 180, language: "English Only" };
+  }
+  if (name.includes("clat pg")) {
+    return { questions: 120, marks: 120, duration: 120, language: "English Only" };
+  }
+  if (name.includes("tiss cuet pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English Only" };
+  }
+  if (name.includes("nimcet")) {
+    return { questions: 120, marks: 1000, duration: 120, language: "English Only" };
+  }
+  if (name.includes("jnu pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
+  }
+  if (name.includes("university specific pg")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
   if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
     return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
   }

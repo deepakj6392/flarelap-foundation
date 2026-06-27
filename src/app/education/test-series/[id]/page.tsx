@@ -75,6 +75,48 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("cuet pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
+  }
+  if (name.includes("iit jam")) {
+    return { questions: 60, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("gate (pg/m.tech)")) {
+    return { questions: 65, marks: 100, duration: 180, language: "English Only" };
+  }
+  if (name.includes("cat (mba)")) {
+    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
+  }
+  if (name.includes("cmat (mba)")) {
+    return { questions: 100, marks: 400, duration: 180, language: "English Only" };
+  }
+  if (name.includes("xat (mba)")) {
+    return { questions: 100, marks: 100, duration: 210, language: "English Only" };
+  }
+  if (name.includes("mat (mba)")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("neet pg")) {
+    return { questions: 200, marks: 800, duration: 210, language: "English Only" };
+  }
+  if (name.includes("gpat")) {
+    return { questions: 125, marks: 500, duration: 180, language: "English Only" };
+  }
+  if (name.includes("clat pg")) {
+    return { questions: 120, marks: 120, duration: 120, language: "English Only" };
+  }
+  if (name.includes("tiss cuet pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English Only" };
+  }
+  if (name.includes("nimcet")) {
+    return { questions: 120, marks: 1000, duration: 120, language: "English Only" };
+  }
+  if (name.includes("jnu pg")) {
+    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
+  }
+  if (name.includes("university specific pg")) {
+    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
+  }
   if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
     return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
   }
@@ -276,6 +318,106 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
 const getCourseSubjects = (courseName: string) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("cuet pg")) {
+    return [
+      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
+      { name: "Part B: Domain Knowledge", qs: 50, marks: 200, duration: 70 }
+    ];
+  }
+  if (name.includes("iit jam")) {
+    return [
+      { name: "Section A: Multiple Choice (MCQ)", qs: 30, marks: 50, duration: 90 },
+      { name: "Section B: Multiple Select (MSQ)", qs: 10, marks: 20, duration: 30 },
+      { name: "Section C: Numerical Answer Type (NAT)", qs: 20, marks: 30, duration: 60 }
+    ];
+  }
+  if (name.includes("gate (pg/m.tech)")) {
+    return [
+      { name: "General Aptitude", qs: 10, marks: 15, duration: 30 },
+      { name: "Core Engineering Subjects", qs: 55, marks: 85, duration: 150 }
+    ];
+  }
+  if (name.includes("cat (mba)")) {
+    return [
+      { name: "Verbal Ability & Reading Comprehension (VARC)", qs: 24, marks: 72, duration: 40 },
+      { name: "Data Interpretation & Logical Reasoning (DILR)", qs: 20, marks: 60, duration: 40 },
+      { name: "Quantitative Ability (QA)", qs: 22, marks: 66, duration: 40 }
+    ];
+  }
+  if (name.includes("cmat (mba)")) {
+    return [
+      { name: "Quantitative Techniques & Data Interpretation", qs: 20, marks: 80, duration: 36 },
+      { name: "Logical Reasoning", qs: 20, marks: 80, duration: 36 },
+      { name: "Language Comprehension", qs: 20, marks: 80, duration: 36 },
+      { name: "General Awareness", qs: 20, marks: 80, duration: 36 },
+      { name: "Innovation & Entrepreneurship", qs: 20, marks: 80, duration: 36 }
+    ];
+  }
+  if (name.includes("xat (mba)")) {
+    return [
+      { name: "Verbal and Logical Ability", qs: 26, marks: 26, duration: 55 },
+      { name: "Decision Making", qs: 21, marks: 21, duration: 45 },
+      { name: "Quantitative Ability & Data Interpretation", qs: 28, marks: 28, duration: 60 },
+      { name: "General Knowledge & Essay", qs: 25, marks: 25, duration: 50 }
+    ];
+  }
+  if (name.includes("mat (mba)")) {
+    return [
+      { name: "Language Comprehension", qs: 30, marks: 30, duration: 24 },
+      { name: "Intelligence & Critical Reasoning", qs: 30, marks: 30, duration: 24 },
+      { name: "Mathematical Skills", qs: 30, marks: 30, duration: 24 },
+      { name: "Data Analysis & Sufficiency", qs: 30, marks: 30, duration: 24 },
+      { name: "Indian & Global Environment", qs: 30, marks: 30, duration: 24 }
+    ];
+  }
+  if (name.includes("neet pg")) {
+    return [
+      { name: "Part A: Pre-Clinical Subjects", qs: 50, marks: 200, duration: 50 },
+      { name: "Part B: Para-Clinical Subjects", qs: 50, marks: 200, duration: 50 },
+      { name: "Part C: Clinical Subjects", qs: 100, marks: 400, duration: 110 }
+    ];
+  }
+  if (name.includes("gpat")) {
+    return [
+      { name: "Pharmaceutics & Allied Subjects", qs: 38, marks: 152, duration: 55 },
+      { name: "Pharmaceutical Chemistry", qs: 38, marks: 152, duration: 55 },
+      { name: "Pharmacology", qs: 28, marks: 112, duration: 40 },
+      { name: "Pharmacognosy", qs: 11, marks: 44, duration: 15 },
+      { name: "Other Pharmacy Subjects", qs: 10, marks: 40, duration: 15 }
+    ];
+  }
+  if (name.includes("clat pg")) {
+    return [
+      { name: "Constitutional Law", qs: 40, marks: 40, duration: 40 },
+      { name: "Jurisprudence & Other Law Subjects", qs: 80, marks: 80, duration: 80 }
+    ];
+  }
+  if (name.includes("tiss cuet pg")) {
+    return [
+      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
+      { name: "Part B: Domain Knowledge (HRM/ODCL)", qs: 50, marks: 200, duration: 70 }
+    ];
+  }
+  if (name.includes("nimcet")) {
+    return [
+      { name: "Mathematics", qs: 50, marks: 600, duration: 50 },
+      { name: "Analytical Ability & Logical Reasoning", qs: 40, marks: 240, duration: 40 },
+      { name: "Computer Awareness", qs: 20, marks: 120, duration: 20 },
+      { name: "General English", qs: 10, marks: 40, duration: 10 }
+    ];
+  }
+  if (name.includes("jnu pg")) {
+    return [
+      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
+      { name: "Part B: Domain Knowledge (JNU Subjects)", qs: 50, marks: 200, duration: 70 }
+    ];
+  }
+  if (name.includes("university specific pg")) {
+    return [
+      { name: "General English & Aptitude", qs: 25, marks: 25, duration: 20 },
+      { name: "Domain/Subject Specific Knowledge", qs: 75, marks: 75, duration: 70 }
+    ];
+  }
   if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
     return [
       { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },

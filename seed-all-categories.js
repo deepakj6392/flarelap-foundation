@@ -1597,7 +1597,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
     domain = "law";
   } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs")) {
     domain = "civil_services";
-  } else if (name.includes("nursing") || name.includes("paramedical")) {
+  } else if (name.includes("nursing") || name.includes("paramedical") || name.includes("neet pg") || name.includes("gpat")) {
     domain = "medical";
   } else if (name.includes("food technology") || name.includes("food tech")) {
     domain = "food_tech";
@@ -1607,7 +1607,7 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
     domain = "electrician";
   } else if (name.includes("electronic mechanic") || name.includes("electronics")) {
     domain = "electronics";
-  } else if (name.includes("computer science") || name.includes("cse") || name.includes("gate cs")) {
+  } else if (name.includes("computer science") || name.includes("cse") || name.includes("gate cs") || name.includes("nimcet")) {
     domain = "computer_science";
   } else if (name.includes("civil engineering")) {
     domain = "civil_eng";
@@ -2264,14 +2264,20 @@ const examsByCategory = {
     "SSC Departmental Exams Mock Test"
   ],
   "PG Entrance Exam": [
-    "GATE Computer Science Mock Test",
-    "GATE Electrical Engineering Mock Test",
-    "GATE Civil Engineering Mock Test",
-    "GATE Mechanical Engineering Mock Test",
-    "GATE Electronics & Comm Mock Test",
-    "UGC NET General Paper 1 Mock Test",
-    "CSIR NET Life Sciences Mock Test",
-    "CSIR NET Chemical Sciences Mock Test"
+    "CUET PG Mock Test",
+    "IIT JAM Mock Test",
+    "GATE (PG/M.Tech) Mock Test",
+    "CAT (MBA) Mock Test",
+    "CMAT (MBA) Mock Test",
+    "XAT (MBA) Mock Test",
+    "MAT (MBA) Mock Test",
+    "NEET PG (Medical) Mock Test",
+    "GPAT (Pharmacy) Mock Test",
+    "CLAT PG (Law) Mock Test",
+    "TISS CUET PG Mock Test",
+    "NIMCET (MCA) Mock Test",
+    "JNU PG Entrance (CUET PG route) Mock Test",
+    "University specific PG Entrance Exams Mock Test"
   ],
   "Regulatory Body Exams": [
     "SEBI Grade A Officer Mock Test",
@@ -2505,6 +2511,26 @@ const examsByCategory = {
 const getCategoryForCourse = (courseName) => {
   const name = courseName.toLowerCase();
   
+  // Specific PG Entrance override first
+  if (
+    name.includes("cuet pg") ||
+    name.includes("iit jam") ||
+    name.includes("gate (pg/m.tech)") ||
+    name.includes("cat (mba)") ||
+    name.includes("cmat (mba)") ||
+    name.includes("xat (mba)") ||
+    name.includes("mat (mba)") ||
+    name.includes("neet pg") ||
+    name.includes("gpat") ||
+    name.includes("clat pg") ||
+    name.includes("tiss cuet pg") ||
+    name.includes("nimcet") ||
+    name.includes("jnu pg") ||
+    name.includes("university specific pg")
+  ) {
+    return "PG Entrance Exam";
+  }
+
   // Specific Engineering disciplines first
   if (name.includes("civil engineering")) return "Civil Engineering";
   if (name.includes("electrical engineering")) return "Electrical Engineering";
