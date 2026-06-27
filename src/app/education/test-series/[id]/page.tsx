@@ -75,6 +75,72 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("ctet mock test")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("state tet (htet, uptet, reet, btet, etc.)")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("ugc net mock test")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("csir net mock test")) {
+    return { questions: 120, marks: 200, duration: 180, language: "English Only" };
+  }
+  if (name.includes("kvs teacher exam")) {
+    return { questions: 180, marks: 180, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("nvs teacher exam")) {
+    return { questions: 150, marks: 150, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("dsssb teacher exam")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tgt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("pgt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("prt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("b.ed entrance exam mock test")) {
+    return { questions: 100, marks: 200, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("m.ed entrance exam mock test")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("set (state eligibility test) mock test")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("rbi grade b")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("rbi assistant")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("sebi grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("nabard grade a")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("irdai grade a")) {
+    return { questions: 160, marks: 160, duration: 90, language: "English Only" };
+  }
+  if (name.includes("pfrda grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("sidbi grade a")) {
+    return { questions: 160, marks: 200, duration: 120, language: "English Only" };
+  }
+  if (name.includes("ifsca grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("ibbi exam")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
+  }
   if (name.includes("cuet pg")) {
     return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
   }
@@ -318,6 +384,156 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
 const getCourseSubjects = (courseName: string) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("ctet mock test")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I & II", qs: 60, marks: 60, duration: 60 },
+      { name: "Mathematics & Environmental Studies", qs: 60, marks: 60, duration: 60 }
+    ];
+  }
+  if (name.includes("state tet (htet, uptet, reet, btet, etc.)")) {
+    return [
+      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
+      { name: "Language I & II", qs: 60, marks: 60, duration: 60 },
+      { name: "Subject Competency (Math/Science/Social)", qs: 60, marks: 60, duration: 60 }
+    ];
+  }
+  if (name.includes("ugc net mock test")) {
+    return [
+      { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
+      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
+    ];
+  }
+  if (name.includes("csir net mock test")) {
+    return [
+      { name: "Part A: General Aptitude", qs: 20, marks: 30, duration: 30 },
+      { name: "Part B: Subject MCQs", qs: 50, marks: 70, duration: 60 },
+      { name: "Part C: Analytical Questions", qs: 50, marks: 100, duration: 90 }
+    ];
+  }
+  if (name.includes("kvs teacher exam")) {
+    return [
+      { name: "Proficiency in Languages (English & Hindi)", qs: 20, marks: 20, duration: 20 },
+      { name: "GA, Reasoning & Computer Literacy", qs: 20, marks: 20, duration: 20 },
+      { name: "Perspectives on Education and Leadership", qs: 40, marks: 40, duration: 40 },
+      { name: "Subject Specific Syllabus", qs: 100, marks: 100, duration: 100 }
+    ];
+  }
+  if (name.includes("nvs teacher exam")) {
+    return [
+      { name: "General English & Hindi", qs: 30, marks: 30, duration: 30 },
+      { name: "General Awareness & Reasoning", qs: 30, marks: 30, duration: 35 },
+      { name: "ICT Literacy & Teaching Aptitude", qs: 20, marks: 20, duration: 25 },
+      { name: "Subject Knowledge", qs: 70, marks: 70, duration: 90 }
+    ];
+  }
+  if (name.includes("dsssb teacher exam")) {
+    return [
+      { name: "Section A: General Awareness, Quant, Reasoning, Lang", qs: 100, marks: 100, duration: 60 },
+      { name: "Section B: Teaching Methodology / Subject Specific", qs: 100, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("tgt exam mock test")) {
+    return [
+      { name: "General Paper (English, Hindi, GK, Aptitude)", qs: 50, marks: 50, duration: 40 },
+      { name: "Subject Specialization", qs: 100, marks: 100, duration: 80 }
+    ];
+  }
+  if (name.includes("pgt exam mock test")) {
+    return [
+      { name: "General Paper (English, Hindi, GK, Aptitude)", qs: 50, marks: 50, duration: 40 },
+      { name: "Post Graduate Subject Specialization", qs: 100, marks: 100, duration: 80 }
+    ];
+  }
+  if (name.includes("prt exam mock test")) {
+    return [
+      { name: "General English & Hindi", qs: 30, marks: 30, duration: 25 },
+      { name: "GK, Reasoning & Computer Literacy", qs: 40, marks: 40, duration: 35 },
+      { name: "Pedagogy & Child Development", qs: 80, marks: 80, duration: 60 }
+    ];
+  }
+  if (name.includes("b.ed entrance exam mock test")) {
+    return [
+      { name: "General Knowledge & Language", qs: 50, marks: 100, duration: 90 },
+      { name: "General Aptitude & Subject Test", qs: 50, marks: 100, duration: 90 }
+    ];
+  }
+  if (name.includes("m.ed entrance exam mock test")) {
+    return [
+      { name: "Education & Psychology Foundation", qs: 50, marks: 50, duration: 60 },
+      { name: "Teaching Aptitude & Methodology", qs: 50, marks: 50, duration: 60 }
+    ];
+  }
+  if (name.includes("set (state eligibility test) mock test")) {
+    return [
+      { name: "Paper 1: General Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
+      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
+    ];
+  }
+  if (name.includes("rbi grade b")) {
+    return [
+      { name: "General Awareness", qs: 80, marks: 80, duration: 25 },
+      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 25 },
+      { name: "English Language", qs: 30, marks: 30, duration: 25 },
+      { name: "Reasoning", qs: 60, marks: 60, duration: 45 }
+    ];
+  }
+  if (name.includes("rbi assistant")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Numerical Ability", qs: 35, marks: 35, duration: 20 },
+      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
+    ];
+  }
+  if (name.includes("sebi grade a")) {
+    return [
+      { name: "Paper 1: General Stream (GA, English, Quant, Reasoning)", qs: 50, marks: 50, duration: 40 },
+      { name: "Paper 2: Commerce, Finance, Management", qs: 50, marks: 50, duration: 40 }
+    ];
+  }
+  if (name.includes("nabard grade a")) {
+    return [
+      { name: "Reasoning & Decision Making", qs: 30, marks: 30, duration: 20 },
+      { name: "English Language & Computer", qs: 50, marks: 50, duration: 30 },
+      { name: "General Awareness & Quantitative Aptitude", qs: 40, marks: 40, duration: 25 },
+      { name: "Economic & Social Issues (with focus on Rural India)", qs: 40, marks: 40, duration: 25 },
+      { name: "Agriculture & Rural Development", qs: 40, marks: 40, duration: 20 }
+    ];
+  }
+  if (name.includes("irdai grade a")) {
+    return [
+      { name: "English Language", qs: 40, marks: 40, duration: 20 },
+      { name: "Reasoning", qs: 40, marks: 40, duration: 25 },
+      { name: "Quantitative Aptitude", qs: 40, marks: 40, duration: 25 },
+      { name: "General Awareness", qs: 40, marks: 40, duration: 20 }
+    ];
+  }
+  if (name.includes("pfrda grade a")) {
+    return [
+      { name: "Paper 1: General English, Quant, Reasoning, GA", qs: 50, marks: 50, duration: 40 },
+      { name: "Paper 2: Commerce, Finance, Management, Pension Sector", qs: 50, marks: 50, duration: 40 }
+    ];
+  }
+  if (name.includes("sidbi grade a")) {
+    return [
+      { name: "English Language", qs: 30, marks: 30, duration: 20 },
+      { name: "Quantitative Aptitude", qs: 40, marks: 40, duration: 30 },
+      { name: "Reasoning Aptitude", qs: 40, marks: 60, duration: 40 },
+      { name: "General Awareness (focus on Banking & Financial Sector)", qs: 50, marks: 70, duration: 30 }
+    ];
+  }
+  if (name.includes("ifsca grade a")) {
+    return [
+      { name: "Paper 1: General English, Quant, Reasoning, GA", qs: 50, marks: 50, duration: 40 },
+      { name: "Paper 2: Financial Sector & Capital Markets", qs: 50, marks: 50, duration: 40 }
+    ];
+  }
+  if (name.includes("ibbi exam")) {
+    return [
+      { name: "Insolvency and Bankruptcy Code, 2016", qs: 50, marks: 50, duration: 60 },
+      { name: "General Laws, Finance, and Corporate Laws", qs: 50, marks: 50, duration: 60 }
+    ];
+  }
   if (name.includes("cuet pg")) {
     return [
       { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },

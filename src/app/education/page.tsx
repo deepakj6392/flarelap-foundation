@@ -213,6 +213,40 @@ const supportOptions = [
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
   
+  // Specific Teaching Exams override first
+  if (
+    name.includes("ctet mock test") ||
+    name.includes("state tet (htet, uptet, reet, btet, etc.)") ||
+    name.includes("ugc net mock test") ||
+    name.includes("csir net mock test") ||
+    name.includes("kvs teacher exam") ||
+    name.includes("nvs teacher exam") ||
+    name.includes("dsssb teacher exam") ||
+    name.includes("tgt exam mock test") ||
+    name.includes("pgt exam mock test") ||
+    name.includes("prt exam mock test") ||
+    name.includes("b.ed entrance exam mock test") ||
+    name.includes("m.ed entrance exam mock test") ||
+    name.includes("set (state eligibility test) mock test")
+  ) {
+    return "Teaching Exams";
+  }
+
+  // Specific Regulatory Body Exams override first
+  if (
+    name.includes("rbi grade b") ||
+    name.includes("rbi assistant") ||
+    name.includes("sebi grade a") ||
+    name.includes("nabard grade a") ||
+    name.includes("irdai grade a") ||
+    name.includes("pfrda grade a") ||
+    name.includes("sidbi grade a") ||
+    name.includes("ifsca grade a") ||
+    name.includes("ibbi exam")
+  ) {
+    return "Regulatory Body Exams";
+  }
+
   // Specific PG Entrance override first
   if (
     name.includes("cuet pg") ||
@@ -309,6 +343,72 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("ctet mock test")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("state tet (htet, uptet, reet, btet, etc.)")) {
+    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
+  }
+  if (name.includes("ugc net mock test")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("csir net mock test")) {
+    return { questions: 120, marks: 200, duration: 180, language: "English Only" };
+  }
+  if (name.includes("kvs teacher exam")) {
+    return { questions: 180, marks: 180, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("nvs teacher exam")) {
+    return { questions: 150, marks: 150, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("dsssb teacher exam")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("tgt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("pgt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("prt exam mock test")) {
+    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("b.ed entrance exam mock test")) {
+    return { questions: 100, marks: 200, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("m.ed entrance exam mock test")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("set (state eligibility test) mock test")) {
+    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
+  }
+  if (name.includes("rbi grade b")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("rbi assistant")) {
+    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
+  }
+  if (name.includes("sebi grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("nabard grade a")) {
+    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
+  }
+  if (name.includes("irdai grade a")) {
+    return { questions: 160, marks: 160, duration: 90, language: "English Only" };
+  }
+  if (name.includes("pfrda grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("sidbi grade a")) {
+    return { questions: 160, marks: 200, duration: 120, language: "English Only" };
+  }
+  if (name.includes("ifsca grade a")) {
+    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
+  }
+  if (name.includes("ibbi exam")) {
+    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
+  }
   if (name.includes("cuet pg")) {
     return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
   }

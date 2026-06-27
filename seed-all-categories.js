@@ -1615,9 +1615,9 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
     domain = "electrical_eng";
   } else if (name.includes("mechanical engineering") || name.includes("mechanical")) {
     domain = "mechanical_eng";
-  } else if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed")) {
+  } else if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("net") || name.includes("set") || name.includes("m.ed")) {
     domain = "teaching";
-  } else if (name.includes("banking") || name.includes("insurance") || name.includes("sbi") || name.includes("ibps") || name.includes("sebi") || name.includes("lic") || name.includes("mba") || name.includes("placement")) {
+  } else if (name.includes("banking") || name.includes("insurance") || name.includes("sbi") || name.includes("ibps") || name.includes("sebi") || name.includes("lic") || name.includes("mba") || name.includes("placement") || name.includes("rbi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
     domain = "banking_finance";
   }
 
@@ -2280,21 +2280,30 @@ const examsByCategory = {
     "University specific PG Entrance Exams Mock Test"
   ],
   "Regulatory Body Exams": [
-    "SEBI Grade A Officer Mock Test",
-    "NABARD Grade A Officer Mock Test",
-    "RBI Grade B Officer Mock Test",
-    "PFRDA Grade A Officer Mock Test",
-    "IFSCA Grade A Officer Mock Test"
+    "RBI Grade B Mock Test",
+    "RBI Assistant Mock Test",
+    "SEBI Grade A Mock Test",
+    "NABARD Grade A Mock Test",
+    "IRDAI Grade A Mock Test",
+    "PFRDA Grade A Mock Test",
+    "SIDBI Grade A Mock Test",
+    "IFSCA Grade A Mock Test",
+    "IBBI Exam Mock Test"
   ],
   "Teaching Exams": [
-    "CTET Paper 1 Pedagogy Mock Test",
-    "CTET Paper 2 Pedagogy Mock Test",
-    "UPTET Paper 1 Mock Test",
-    "UPTET Paper 2 Mock Test",
-    "KVS PGT General Mock Test",
-    "KVS TGT General Mock Test",
-    "NVS TGT Mock Test",
-    "Super TET Mock Test"
+    "CTET Mock Test",
+    "State TET (HTET, UPTET, REET, BTET, etc.) Mock Test",
+    "UGC NET Mock Test",
+    "CSIR NET Mock Test",
+    "KVS Teacher Exam Mock Test",
+    "NVS Teacher Exam Mock Test",
+    "DSSSB Teacher Exam Mock Test",
+    "TGT Exam Mock Test",
+    "PGT Exam Mock Test",
+    "PRT Exam Mock Test",
+    "B.Ed Entrance Exam Mock Test",
+    "M.Ed Entrance Exam Mock Test",
+    "SET (State Eligibility Test) Mock Test"
   ],
   "Fitter": [
     "ITI Fitter Semester 1 Mock Test",
@@ -2511,6 +2520,40 @@ const examsByCategory = {
 const getCategoryForCourse = (courseName) => {
   const name = courseName.toLowerCase();
   
+  // Specific Teaching Exams override first
+  if (
+    name.includes("ctet mock test") ||
+    name.includes("state tet (htet, uptet, reet, btet, etc.)") ||
+    name.includes("ugc net mock test") ||
+    name.includes("csir net mock test") ||
+    name.includes("kvs teacher exam") ||
+    name.includes("nvs teacher exam") ||
+    name.includes("dsssb teacher exam") ||
+    name.includes("tgt exam mock test") ||
+    name.includes("pgt exam mock test") ||
+    name.includes("prt exam mock test") ||
+    name.includes("b.ed entrance exam mock test") ||
+    name.includes("m.ed entrance exam mock test") ||
+    name.includes("set (state eligibility test) mock test")
+  ) {
+    return "Teaching Exams";
+  }
+
+  // Specific Regulatory Body Exams override first
+  if (
+    name.includes("rbi grade b") ||
+    name.includes("rbi assistant") ||
+    name.includes("sebi grade a") ||
+    name.includes("nabard grade a") ||
+    name.includes("irdai grade a") ||
+    name.includes("pfrda grade a") ||
+    name.includes("sidbi grade a") ||
+    name.includes("ifsca grade a") ||
+    name.includes("ibbi exam")
+  ) {
+    return "Regulatory Body Exams";
+  }
+
   // Specific PG Entrance override first
   if (
     name.includes("cuet pg") ||
