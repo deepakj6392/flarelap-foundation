@@ -1,8 +1,8 @@
 const { PrismaClient } = require('@prisma/client');
 const { PrismaPg } = require('@prisma/adapter-pg');
 const { Pool } = require('pg');
-
-const dbUrl = "postgresql://postgres:postgres@localhost:5432/flarelap_foundation?schema=public";
+ 
+const dbUrl = "postgresql://postgres:Flarelap@123@localhost:5432/flarelap-foundation";
 const pool = new Pool({ connectionString: dbUrl });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
