@@ -113,7 +113,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isOtherAmount, setIsOtherAmount] = useState<boolean>(false);
 
-  const showDetailedFields = parseFloat(amount) >= 2000;
+  const showDetailedFields = parseFloat(amount) > 2000;
 
   // Auto-slide banner
   useEffect(() => {
@@ -413,7 +413,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
             </div>
 
             {/* Right Form */}
-            <div className="bg-white border-2 border-emerald-600 p-8 relative">
+            <div className="bg-white border-2 rounded border-emerald-600 p-8 relative">
 
               {status === "success" ? (
                 <div className="text-center py-10 space-y-6">
@@ -468,7 +468,8 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                             value={"more"}
                             checked={isOtherAmount}
                             onChange={() => {
-                              handlePresetClick(5000);
+                              setSelectedPreset(null);
+                              setAmount("");
                               setIsOtherAmount(!isOtherAmount);
                             }}
                             className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
@@ -479,17 +480,17 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
                     <div className="text-center mb-6">
                       <p className="text-sm font-medium text-slate-700 uppercase">
-                        YOUR DONATION WILL HELP FOR THE<br />EDUCATION OF 1 CHILD FOR 3 MONTHS
+                        YOUR DONATION WILL HELP FOR THE<br />EDUCATION & WELFARE.
                       </p>
                     </div>
 
                     {/* Amount Input */}
                     {isOtherAmount && (
                       <input
-                        type="number"
+                        type="number" 
                         value={amount}
                         onChange={(e) => handleAmountChange(e.target.value)}
-                        placeholder="Other Amount"
+                        placeholder="Enter Donation Amount (₹2000+)"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
                         disabled={status === "loading"}
                         min="2001"
@@ -593,7 +594,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                       className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
                     />
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4">
                       <input
                         type="text"
                         maxLength={6}
@@ -601,12 +602,6 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onChange={(e) => setPincode(e.target.value.replace(/\D/g, ""))}
                         placeholder="Pincode"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
-                      />
-                      <input
-                        type="text"
-                        value="Online Payment (UPI/Card/Netbanking)"
-                        disabled
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100 text-slate-500 text-sm font-semibold outline-none cursor-not-allowed"
                       />
                     </div>
                     </>
@@ -634,7 +629,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         disabled={status === "loading"}
                         className="px-8 py-2.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-base font-bold shadow-sm transition disabled:opacity-50"
                       >
-                        {status === "loading" ? "Processing..." : "Submit"}
+                        {status === "loading" ? "Processing..." : "Pay"}
                       </button>
                     </div>
                   </form>
