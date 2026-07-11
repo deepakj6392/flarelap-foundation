@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import Herader from "@/components/common/Herader";
 import Footer from "@/components/common/Footer";
 import { 
@@ -43,6 +44,7 @@ interface Course {
   id: number;
   name: string;
   premium: boolean;
+  price?: number | string | any;
   testSeries?: DBTestSeries[];
 }
 
@@ -1389,38 +1391,94 @@ export default function TestSeriesDetailsPage() {
 
     setPaymentLoading(true);
 
-    // Simulate 1.5s delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
     try {
-      const res = await fetch("/api/student/purchases", {
+      // 1. Create order on backend
+      const orderRes = await fetch("/api/student/purchases/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${studentToken}`
         },
-        body: JSON.stringify({
-          courseId: course?.id,
-          amount: 299.00,
-          paymentMethod: paymentTab === "card" ? "Credit Card" : "UPI QR Scan"
-        })
+        body: JSON.stringify({ courseId: course?.id })
       });
 
-      const data = await res.json();
-      if (res.ok) {
-        setIsCheckoutModalOpen(false);
-        setIsLockModalOpen(false);
-        await fetchPurchases();
-        
-        Swal.fire({
-          title: "Payment Successful!",
-          text: `You have successfully unlocked the Premium Pass for "${course?.name}".`,
-          icon: "success",
-          confirmButtonColor: "#047857"
-        });
-      } else {
-        throw new Error(data.message || "Failed to complete purchase.");
+      const orderData = await orderRes.json();
+      if (!orderRes.ok) throw new Error(orderData.message || "Failed to initiate payment.");
+
+      const { orderId, keyId, currency } = orderData;
+
+      if (!(window as any).Razorpay) {
+        throw new Error("Razorpay SDK failed to load. Please refresh the page.");
       }
+
+      // 2. Open Razorpay Popup
+      const options = {
+        key: keyId,
+        amount: orderData.amount, // in paise
+        currency: currency,
+        name: "Flarelap Foundation",
+        description: `Premium Test Series Pass for ${course?.name}`,
+        order_id: orderId,
+        handler: async function (response: any) {
+          setPaymentLoading(true);
+          try {
+            // 3. Verify payment on backend
+            const verifyRes = await fetch("/api/student/purchases", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${studentToken}`
+              },
+              body: JSON.stringify({
+                courseId: course?.id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+                amount: parseFloat(orderData.coursePrice || "299")
+              })
+            });
+
+            const verifyData = await verifyRes.json();
+            if (!verifyRes.ok) throw new Error(verifyData.message || "Payment verification failed.");
+
+            setIsCheckoutModalOpen(false);
+            setIsLockModalOpen(false);
+            await fetchPurchases();
+
+            Swal.fire({
+              title: "Payment Successful!",
+              text: `You have successfully unlocked the Premium Pass for "${course?.name}".`,
+              icon: "success",
+              confirmButtonColor: "#047857"
+            });
+          } catch (err: any) {
+            Swal.fire({
+              title: "Verification Failed",
+              text: err.message || "Payment completed, but verification failed. Please contact support.",
+              icon: "warning",
+              confirmButtonColor: "#dc2626"
+            });
+          } finally {
+            setPaymentLoading(false);
+          }
+        },
+        prefill: {
+          name: studentProfile?.name || "",
+          email: studentProfile?.email || "",
+          contact: studentProfile?.phone || ""
+        },
+        theme: {
+          color: "#047857"
+        },
+        modal: {
+          ondismiss: function () {
+            setPaymentLoading(false);
+          }
+        }
+      };
+
+      const rzp = new (window as any).Razorpay(options);
+      rzp.open();
     } catch (err: any) {
       Swal.fire({
         title: "Payment Failed",
@@ -1428,7 +1486,6 @@ export default function TestSeriesDetailsPage() {
         icon: "error",
         confirmButtonColor: "#dc2626"
       });
-    } finally {
       setPaymentLoading(false);
     }
   };
@@ -1929,7 +1986,7 @@ export default function TestSeriesDetailsPage() {
       )}
 
       {/* Upgrade to Premium Checkout Modal */}
-      {isCheckoutModalOpen && (
+      {isCheckoutModalOpen && course && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/65 backdrop-blur-xs animate-in fade-in duration-200">
           <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl relative space-y-5 text-slate-955">
             <button 
@@ -1941,113 +1998,27 @@ export default function TestSeriesDetailsPage() {
 
             <div className="space-y-1 text-left">
               <span className="inline-block text-[10px] font-black uppercase text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-100">Checkout Portal</span>
-              <h3 className="text-lg font-black text-slate-900 mt-2">Secure Payment Pass</h3>
-              <p className="text-xs text-slate-500 font-semibold">Unlock full access to {course.name} Test Series</p>
+              <h3 className="text-lg font-black text-slate-900 mt-2">Unlock Premium Pass</h3>
+              <p className="text-xs text-slate-500 font-semibold">Get instant full access to {course.name} Test Series</p>
             </div>
 
             <hr className="border-slate-105" />
 
             {/* Price block */}
-            <div className="flex justify-between items-center bg-slate-50 rounded-xl p-3.5 border border-slate-150 text-left">
-              <span className="text-xs font-extrabold text-slate-500">Premium Pass (1 Year)</span>
-              <span className="text-base font-black text-emerald-700">₹299.00</span>
+            <div className="flex justify-between items-center bg-slate-50 rounded-xl p-4 border border-slate-150 text-left">
+              <div>
+                <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider">Premium Access</span>
+                <span className="text-sm font-semibold text-slate-800">1 Year Validity</span>
+              </div>
+              <span className="text-xl font-black text-emerald-700">₹{parseFloat(course.price?.toString() || "299")}.00</span>
             </div>
 
-            {/* Payment Method tabs */}
-            <div className="flex gap-2">
-              {[
-                { id: "card", label: "Card", icon: CreditCard },
-                { id: "upi", label: "UPI Scan", icon: QrCode }
-              ].map(tab => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    type="button"
-                    onClick={() => setPaymentTab(tab.id as any)}
-                    className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-bold transition border cursor-pointer ${
-                      paymentTab === tab.id 
-                        ? "bg-emerald-700 text-white border-emerald-700 shadow-sm"
-                        : "bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200"
-                    }`}
-                  >
-                    <Icon className="h-4 w-4" />
-                    {tab.label}
-                  </button>
-                );
-              })}
+            <div className="text-[11px] text-slate-500 font-medium leading-relaxed bg-slate-50/50 p-3 rounded-lg border border-slate-100 text-left">
+              Payments are securely processed online. You can pay via UPI, Credit/Debit Card, Netbanking, or Wallets using Razorpay.
             </div>
 
             {/* Form */}
-            <form onSubmit={handlePaymentSubmit} className="space-y-4 text-xs font-semibold text-left">
-              {paymentTab === "card" ? (
-                <div className="space-y-3">
-                  <div className="space-y-1.5">
-                    <label className="block text-slate-550 uppercase tracking-wider text-[10px] font-black">Cardholder Name</label>
-                    <input
-                      required
-                      type="text"
-                      placeholder="John Doe"
-                      value={cardName}
-                      onChange={(e) => setCardName(e.target.value)}
-                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-900"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="block text-slate-555 uppercase tracking-wider text-[10px] font-black">Card Number</label>
-                    <input
-                      required
-                      type="text"
-                      placeholder="4111 2222 3333 4444"
-                      value={cardNumber}
-                      onChange={(e) => setCardNumber(e.target.value)}
-                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-900"
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="block text-slate-555 uppercase tracking-wider text-[10px] font-black">Expiry</label>
-                      <input
-                        required
-                        type="text"
-                        placeholder="MM/YY"
-                        value={cardExpiry}
-                        onChange={(e) => setCardExpiry(e.target.value)}
-                        className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-900"
-                      />
-                    </div>
-                    <div className="space-y-1.5">
-                      <label className="block text-slate-555 uppercase tracking-wider text-[10px] font-black">CVV</label>
-                      <input
-                        required
-                        type="password"
-                        placeholder="***"
-                        maxLength={3}
-                        value={cardCvv}
-                        onChange={(e) => setCardCvv(e.target.value)}
-                        className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-900"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-2xl border border-slate-150 text-center space-y-3">
-                  <div className="bg-white p-2 rounded-xl border border-slate-200 shadow-inner">
-                    <div className="w-32 h-32 bg-slate-100 flex items-center justify-center border-2 border-dashed border-emerald-500 rounded-lg relative overflow-hidden">
-                      <QrCode className="h-20 w-20 text-slate-800" />
-                      <div className="absolute inset-0 bg-emerald-500/5 animate-pulse" />
-                    </div>
-                  </div>
-                  <p className="text-[10px] text-slate-500 font-semibold max-w-xs leading-relaxed">
-                    Scan the QR code with any UPI app (PhonePe, Google Pay, Paytm) to pay securely.
-                  </p>
-                  <div className="inline-flex items-center gap-1.5 bg-emerald-105 text-emerald-800 px-3 py-1 rounded-full text-[10px] font-bold">
-                    <Smartphone className="h-3.5 w-3.5" />
-                    UPI Gateway Active
-                  </div>
-                </div>
-              )}
-
+            <form onSubmit={handlePaymentSubmit} className="space-y-4">
               {/* Submit Buttons */}
               <div className="flex flex-col gap-2 pt-2">
                 <button
@@ -2058,10 +2029,10 @@ export default function TestSeriesDetailsPage() {
                   {paymentLoading ? (
                     <>
                       <Loader2 className="h-4.5 w-4.5 animate-spin" />
-                      Processing payment...
+                      Processing...
                     </>
                   ) : (
-                    `Confirm & Pay ₹299`
+                    `Pay Online via Razorpay`
                   )}
                 </button>
                 <button
@@ -2077,6 +2048,7 @@ export default function TestSeriesDetailsPage() {
         </div>
       )}
 
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       <Footer />
     </div>
   );

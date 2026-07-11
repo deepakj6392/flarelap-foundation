@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import jwt from "jsonwebtoken";
+import crypto from "crypto";
 
 export async function GET(request: Request) {
   try {
@@ -65,7 +66,15 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { courseId, amount, paymentMethod, transactionId } = body;
+    const { 
+      courseId, 
+      amount, 
+      paymentMethod, 
+      transactionId,
+      razorpay_order_id,
+      razorpay_payment_id,
+      razorpay_signature 
+    } = body;
 
     if (!courseId) {
       return NextResponse.json({ message: "Course ID is required." }, { status: 400 });
@@ -96,13 +105,45 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "You have already purchased this test series." }, { status: 400 });
     }
 
+    let finalAmount = amount !== undefined ? parseFloat(amount) : parseFloat(courseExists.price.toString());
+    let finalMethod = paymentMethod || "Simulated Card";
+    let finalTxnId = transactionId || `TXN_${Date.now()}_${Math.floor(Math.random() * 1000)}`;
+
+    // Verify signature if using Razorpay details
+    if (razorpay_order_id && razorpay_payment_id && razorpay_signature) {
+      const keySecret = process.env.RAZORPAY_SECRET_KEY;
+      if (!keySecret) {
+        return NextResponse.json(
+          { message: "Razorpay key secret is not configured on the server." },
+          { status: 500 }
+        );
+      }
+
+      const sign = razorpay_order_id + "|" + razorpay_payment_id;
+      const expectedSign = crypto
+        .createHmac("sha256", keySecret)
+        .update(sign.toString())
+        .digest("hex");
+
+      if (razorpay_signature !== expectedSign) {
+        return NextResponse.json(
+          { message: "Payment verification failed. Invalid signature." },
+          { status: 400 }
+        );
+      }
+
+      finalAmount = parseFloat(courseExists.price.toString());
+      finalMethod = "Razorpay";
+      finalTxnId = razorpay_payment_id;
+    }
+
     const newPurchase = await prisma.purchase.create({
       data: {
         userId: decoded.id,
         courseId: numericCourseId,
-        amount: amount !== undefined ? parseFloat(amount) : 299.00,
-        paymentMethod: paymentMethod || "Simulated Card",
-        transactionId: transactionId || `TXN_${Date.now()}_${Math.floor(Math.random() * 1000)}`,
+        amount: finalAmount,
+        paymentMethod: finalMethod,
+        transactionId: finalTxnId,
         status: "COMPLETED"
       },
       include: {

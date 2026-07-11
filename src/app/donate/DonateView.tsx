@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import {
@@ -23,7 +24,46 @@ import {
   Minus
 } from "lucide-react";
 
-const PRESET_AMOUNTS = [1500, 3000, 6000, 12000];
+const INDIAN_STATES = [
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal",
+  "Andaman and Nicobar Islands",
+  "Chandigarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
+  "Delhi",
+  "Jammu and Kashmir",
+  "Ladakh",
+  "Lakshadweep",
+  "Puducherry"
+];
+
+const PRESET_AMOUNTS = [100, 500, 1000, 1500, 2000];
 
 const FAQS = [
   {
@@ -48,9 +88,9 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [amount, setAmount] = useState<string>("1500");
-  const [selectedPreset, setSelectedPreset] = useState<number | null>(1500);
-  const [paymentMethod, setPaymentMethod] = useState("UPI");
+  const [amount, setAmount] = useState<string>("100");
+  const [selectedPreset, setSelectedPreset] = useState<number | null>(100);
+  const [paymentMethod, setPaymentMethod] = useState("Razorpay");
   const [transactionId, setTransactionId] = useState("");
   const [message, setMessage] = useState("");
 
@@ -71,6 +111,9 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
   // FAQ State
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [isOtherAmount, setIsOtherAmount] = useState<boolean>(false);
+
+  const showDetailedFields = parseFloat(amount) >= 2000;
 
   // Auto-slide banner
   useEffect(() => {
@@ -96,6 +139,23 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
     }
   };
 
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setPhone("");
+    setAmount("1500");
+    setSelectedPreset(1500);
+    setPaymentMethod("Razorpay");
+    setTransactionId("");
+    setMessage("");
+    setPan("");
+    setDob("");
+    setAddress("");
+    setCity("");
+    setStateName("");
+    setPincode("");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !amount || !paymentMethod) {
@@ -111,52 +171,112 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
       return;
     }
 
-    if (paymentMethod === "UPI" && amtNum > 1500) {
-      setStatus("error");
-      setStatusMessage("Maximum donation amount via UPI is ₹1500. Please choose another payment mode for larger amounts.");
-      return;
-    }
-
     setStatus("loading");
     setStatusMessage("");
 
-    try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-      const res = await fetch(`${apiUrl}/api/foundation/donations`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          amount: amtNum,
-          paymentMethod,
-          transactionId: transactionId || "PENDING", // fallback if removed from UI
-          message: `PAN: ${pan}, DOB: ${dob}, Address: ${address}, ${city}, ${state}, ${country} - ${pincode} | Msg: ${message}`,
-        }),
-      });
+    if (paymentMethod === "Razorpay") {
+      try {
+        const orderRes = await fetch("/api/foundation/donations/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: amtNum }),
+        });
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message || "Failed to submit donation.");
+        const orderData = await orderRes.json();
+        if (!orderRes.ok) throw new Error(orderData.message || "Failed to initiate payment.");
 
-      setStatus("success");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setAmount("1500");
-      setSelectedPreset(1500);
-      setPaymentMethod("UPI");
-      setTransactionId("");
-      setMessage("");
-      setPan("");
-      setDob("");
-      setAddress("");
-      setCity("");
-      setStateName("");
-      setPincode("");
-    } catch (err: any) {
-      setStatus("error");
-      setStatusMessage(err.message || "An error occurred. Please try again later.");
+        const { orderId, keyId, currency } = orderData;
+
+        if (!(window as any).Razorpay) {
+          throw new Error("Razorpay SDK failed to load. Please refresh the page.");
+        }
+
+        const options = {
+          key: keyId,
+          amount: amtNum * 100,
+          currency: currency,
+          name: "Flarelap Foundation",
+          description: "Donation for Education and Skill Development",
+          order_id: orderId,
+          handler: async function (response: any) {
+            setStatus("loading");
+            setStatusMessage("Verifying payment...");
+            try {
+              const verifyRes = await fetch("/api/foundation/donations", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name,
+                  email,
+                  phone,
+                  amount: amtNum,
+                  paymentMethod: "Razorpay",
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  message: `PAN: ${pan}, DOB: ${dob}, Address: ${address}, ${city}, ${state}, ${country} - ${pincode} | Msg: ${message}`,
+                }),
+              });
+
+              const verifyData = await verifyRes.json();
+              if (!verifyRes.ok) throw new Error(verifyData.message || "Failed to verify donation.");
+
+              setStatus("success");
+              resetForm();
+            } catch (err: any) {
+              setStatus("error");
+              setStatusMessage(err.message || "Payment verification failed. Please contact support.");
+            }
+          },
+          prefill: {
+            name: name,
+            email: email,
+            contact: phone,
+          },
+          theme: {
+            color: "#059669",
+          },
+          modal: {
+            ondismiss: function () {
+              setStatus("idle");
+              setStatusMessage("Payment cancelled by user.");
+            },
+          },
+        };
+
+        const rzp = new (window as any).Razorpay(options);
+        rzp.open();
+      } catch (err: any) {
+        setStatus("error");
+        setStatusMessage(err.message || "Failed to start payment process.");
+      }
+    } else {
+      // Manual bank transfer (offline)
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const res = await fetch(`${apiUrl}/api/foundation/donations`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            amount: amtNum,
+            paymentMethod,
+            transactionId: transactionId || "PENDING",
+            message: `PAN: ${pan}, DOB: ${dob}, Address: ${address}, ${city}, ${state}, ${country} - ${pincode} | Msg: ${message}`,
+          }),
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.message || "Failed to submit donation.");
+
+        setStatus("success");
+        resetForm();
+      } catch (err: any) {
+        setStatus("error");
+        setStatusMessage(err.message || "An error occurred. Please try again later.");
+      }
     }
   };
 
@@ -331,12 +451,30 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                             name="amount"
                             value={val}
                             checked={selectedPreset === val}
-                            onChange={() => handlePresetClick(val)}
+                            onChange={() => {
+                              handlePresetClick(val);
+                              setIsOtherAmount(false);
+                            }}
                             className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
                           />
                           ₹ {val}
                         </label>
                       ))}
+
+                      <label key="more" className="flex items-center gap-2 cursor-pointer text-slate-500 font-medium text-sm hover:text-slate-900 transition">
+                          <input
+                            type="radio"
+                            name="otherAmount"
+                            value={"more"}
+                            checked={isOtherAmount}
+                            onChange={() => {
+                              handlePresetClick(5000);
+                              setIsOtherAmount(!isOtherAmount);
+                            }}
+                            className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
+                          />
+                           More
+                        </label>
                     </div>
 
                     <div className="text-center mb-6">
@@ -346,16 +484,16 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                     </div>
 
                     {/* Amount Input */}
-                    <input
-                      type="number"
-                      value={selectedPreset === null ? amount : ""}
-                      onChange={(e) => handleAmountChange(e.target.value)}
-                      placeholder="Other Amount"
-                      className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
-                      disabled={status === "loading"}
-                      min="1"
-                      max={paymentMethod === "UPI" ? 1500 : undefined}
-                    />
+                    {isOtherAmount && (
+                      <input
+                        type="number"
+                        value={amount}
+                        onChange={(e) => handleAmountChange(e.target.value)}
+                        placeholder="Other Amount"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        disabled={status === "loading"}
+                        min="2001"
+                    />)}
 
                     <div className="grid grid-cols-2 gap-4">
                       <input
@@ -365,6 +503,8 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter Full Name"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={256}
+                        minLength={3}
                       />
                       <input
                         type="email"
@@ -373,13 +513,21 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter Email ID"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={256}
+                        minLength={3}
                       />
+                      </div>
+                      { showDetailedFields && (
+                        <>
+                        <div className="grid grid-cols-2 gap-4">
                       <input
                         type="tel"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="Enter Mobile No"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={15}
+                        minLength={10}
                       />
                       <input
                         type="text"
@@ -387,8 +535,10 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onFocus={(e) => e.target.type = 'date'}
                         onBlur={(e) => { if (!e.target.value) e.target.type = 'text'; }}
                         onChange={(e) => setDob(e.target.value)}
-                        placeholder="DOB"
+                        placeholder="Date of Birth"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={15}
+                        minLength={8}
                       />
                       <input
                         type="text"
@@ -397,25 +547,30 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onChange={(e) => setPan(e.target.value.toUpperCase())}
                         placeholder="Pan No"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition uppercase"
+                        maxLength={10}
+                        pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
+                        title="Please enter a valid PAN number"
                       />
                       <input
                         type="text"
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
-                        placeholder="India"
+                        placeholder="Country"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={50}
+                        minLength={3}
                       />
                       <select
                         value={state}
                         onChange={(e) => setStateName(e.target.value)}
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition appearance-none"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-650 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition appearance-none font-medium"
                       >
                         <option value="">Select State</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Other">Other</option>
+                        {INDIAN_STATES.map((s) => (
+                          <option key={s} value={s}>
+                            {s}
+                          </option>
+                        ))}
                       </select>
                       <input
                         type="text"
@@ -423,6 +578,8 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onChange={(e) => setCity(e.target.value)}
                         placeholder="City"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        maxLength={50}
+                        minLength={3}
                       />
                     </div>
 
@@ -431,33 +588,29 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
                       placeholder="Address"
+                      maxLength={256}
+                      minLength={50}
                       className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
                     />
 
                     <div className="grid grid-cols-2 gap-4">
                       <input
                         type="text"
+                        maxLength={6}
                         value={pincode}
-                        onChange={(e) => setPincode(e.target.value)}
+                        onChange={(e) => setPincode(e.target.value.replace(/\D/g, ""))}
                         placeholder="Pincode"
                         className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
                       />
-                      <select
-                        value={paymentMethod}
-                        onChange={(e) => setPaymentMethod(e.target.value)}
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 focus:border-emerald-500 focus:bg-white outline-none text-sm transition appearance-none font-semibold"
-                      >
-                        <option value="UPI">Pay via UPI</option>
-                        <option value="Bank Transfer">Bank Transfer</option>
-                        <option value="Card">Credit/Debit Card</option>
-                      </select>
+                      <input
+                        type="text"
+                        value="Online Payment (UPI/Card/Netbanking)"
+                        disabled
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100 text-slate-500 text-sm font-semibold outline-none cursor-not-allowed"
+                      />
                     </div>
-
-                    {paymentMethod === "UPI" && (
-                      <p className="text-[10px] text-emerald-600 font-bold px-2">
-                        * Note: UPI transactions are capped at ₹1500.
-                      </p>
-                    )}
+                    </>
+                      )}
                     {/* 
                     <div className="text-[10px] text-slate-500 font-medium leading-relaxed px-2 mt-6 space-y-2">
                       <p>
@@ -649,6 +802,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
       </main>
 
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       <Footer />
     </div>
   );
