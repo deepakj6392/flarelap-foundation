@@ -1093,6 +1093,12 @@ const getRealExamStats = (courseName) => {
   if (name.includes("sbi po")) {
     return { questions: 100, marks: 100, duration: 60 };
   }
+  if (name.includes("neet ug") || name.includes("neet mock test series")) {
+    return { questions: 180, marks: 720, duration: 200 };
+  }
+  if (name.includes("jee main") || name.includes("jee mock test series")) {
+    return { questions: 90, marks: 300, duration: 180 };
+  }
   if (name.includes("neet")) {
     return { questions: 45, marks: 180, duration: 50 };
   }
@@ -1114,6 +1120,26 @@ const getRealExamStats = (courseName) => {
 const getCourseSubjects = (courseName) => {
   const name = courseName.toLowerCase();
   
+  if (name.includes("neet ug") || name.includes("neet mock test series")) {
+    return [
+      { name: "Physics", qs: 45, marks: 180, duration: 50 },
+      { name: "Chemistry", qs: 45, marks: 180, duration: 50 },
+      { name: "Biology (Botany & Zoology)", qs: 90, marks: 360, duration: 100 }
+    ];
+  }
+  if (name.includes("jee main") || name.includes("jee mock test series")) {
+    return [
+      { name: "Physics", qs: 30, marks: 100, duration: 60 },
+      { name: "Chemistry", qs: 30, marks: 100, duration: 60 },
+      { name: "Mathematics", qs: 30, marks: 100, duration: 60 }
+    ];
+  }
+  if (name.includes("indian history") || name.includes("indian geography") || name.includes("indian polity") || name.includes("indian economy") || name.includes("indian environment") || name.includes("indian admin") || name.includes("indian sports") || name.includes("indian socialism") || name.includes("indian freedom")) {
+    return [
+      { name: "Core Conceptual Foundations", qs: 50, marks: 50, duration: 45 },
+      { name: "Advanced Application & Analysis", qs: 50, marks: 50, duration: 45 }
+    ];
+  }
   if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
     return [
       { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
@@ -1497,80 +1523,97 @@ const generateSubTestsList = (courseName, isPremium) => {
   const stats = getRealExamStats(courseName);
   const subjects = getCourseSubjects(courseName);
   const tests = [];
+  const name = courseName.toLowerCase();
 
-  // 1. Full Length Mock Tests (10 tests)
-  for (let i = 1; i <= 10; i++) {
-    tests.push({
-      name: `Full Length Mock Test ${i}`,
-      type: "Full Mock",
-      qs: stats.questions,
-      marks: stats.marks,
-      duration: stats.duration,
-      isFree: false
-    });
-  }
+  const isSpecial20TestCourse = 
+    name.includes("neet") || 
+    name.includes("jee") || 
+    name.includes("ugc net paper 1") || 
+    name.includes("ugc net paper-1") ||
+    name.includes("upsc civil services prelims gs");
 
-  // 2. Subject Tests (3 tests per subject)
-  subjects.forEach((sub) => {
-    for (let i = 1; i <= 3; i++) {
+  if (isSpecial20TestCourse) {
+    // Generate exactly 20 mock tests
+    for (let i = 1; i <= 20; i++) {
       tests.push({
-        name: `Subject Test ${i}: ${sub.name}`,
-        type: "Subject Test",
-        qs: sub.qs,
-        marks: sub.marks,
-        duration: sub.duration,
+        name: `Complete Mock Test ${i}`,
+        type: "Full Mock",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
         isFree: false
       });
     }
-  });
-
-  // 3. Chapter Tests (3 tests per subject)
-  subjects.forEach((sub) => {
-    const chapters = [
-      { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
-      { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
-      { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
-    ];
-    chapters.forEach((chap, chapIdx) => {
+  } else {
+    // Default dynamic distribution
+    // 1. Full Length Mock Tests (10 tests)
+    for (let i = 1; i <= 10; i++) {
       tests.push({
-        name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
-        type: "Chapter Test",
-        qs: chap.qs,
-        marks: chap.marks,
-        duration: chap.duration,
+        name: `Full Length Mock Test ${i}`,
+        type: "Full Mock",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
         isFree: false
       });
-    });
-  });
+    }
 
-  // 4. Previous Year Papers (6 tests)
-  const startYear = 2020;
-  for (let i = 0; i < 6; i++) {
-    const year = startYear + i;
-    tests.push({
-      name: `Previous Year Paper (${year} Exam)`,
-      type: "PYP",
-      qs: stats.questions,
-      marks: stats.marks,
-      duration: stats.duration,
-      isFree: false
+    // 2. Subject Tests (3 tests per subject)
+    subjects.forEach((sub) => {
+      for (let i = 1; i <= 3; i++) {
+        tests.push({
+          name: `Subject Test ${i}: ${sub.name}`,
+          type: "Subject Test",
+          qs: sub.qs,
+          marks: sub.marks,
+          duration: sub.duration,
+          isFree: false
+        });
+      }
     });
+
+    // 3. Chapter Tests (3 tests per subject)
+    subjects.forEach((sub) => {
+      const chapters = [
+        { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
+        { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
+        { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
+      ];
+      chapters.forEach((chap, chapIdx) => {
+        tests.push({
+          name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
+          type: "Chapter Test",
+          qs: chap.qs,
+          marks: chap.marks,
+          duration: chap.duration,
+          isFree: false
+        });
+      });
+    });
+
+    // 4. Previous Year Papers (6 tests)
+    const startYear = 2020;
+    for (let i = 0; i < 6; i++) {
+      const year = startYear + i;
+      tests.push({
+        name: `Previous Year Paper (${year} Exam)`,
+        type: "PYP",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
+        isFree: false
+      });
+    }
   }
 
-  // Set isFree flag per type/category: Exactly the first 4 of each type are free
-  const typeCounters = {};
-  tests.forEach((test) => {
-    if (!isPremium) {
-      test.isFree = true;
-    } else {
-      const currentCount = typeCounters[test.type] || 0;
-      test.isFree = (currentCount < 4);
-      typeCounters[test.type] = currentCount + 1;
-    }
+  // Set exactly the first 3 tests as free
+  tests.forEach((test, index) => {
+    test.isFree = (index < 3);
   });
 
   return tests;
 };
+
 
 function hashCode(str) {
   let hash = 0;
@@ -1595,7 +1638,11 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
   let domain = "general";
   if (name.includes("judiciary") || name.includes("law")) {
     domain = "law";
-  } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs") || name.includes("gk") || name.includes("state gk")) {
+  } else if (name.includes("gk") || name.includes("state gk")) {
+    domain = "state_gk";
+  } else if (name.includes("indian history") || name.includes("indian geography") || name.includes("indian polity") || name.includes("indian economy") || name.includes("indian environment") || name.includes("indian admin") || name.includes("indian sports") || name.includes("indian socialism") || name.includes("indian freedom")) {
+    domain = "indian_studies";
+  } else if (name.includes("civil services") || name.includes("upsc") || name.includes("pcs")) {
     domain = "civil_services";
   } else if (name.includes("nursing") || name.includes("paramedical") || name.includes("neet pg") || name.includes("gpat") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("neet ug")) {
     domain = "medical";
@@ -2153,7 +2200,177 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
         ];
         hintText = "SLR is the statutory reserve requirement in liquid assets (gold, cash, approved securities) banks must maintain.";
       }
+    } else if (domain === "state_gk") {
+      const type = idx % 9;
+      const stateName = courseName.replace(" GK Mock Test", "");
+      if (type === 0) {
+        questionText = `Regarding the History of ${stateName} ${uniqueRef}, which of the following events or dynasties played a pivotal role in shaping its early heritage?`;
+        baseOptions = [
+          `The ancient regional rulers and freedom struggles specific to ${stateName}.`,
+          `The central dynasties of external regions only.`,
+          `The maritime trades of distant coastal states.`,
+          `The industrial revolution policies of modern cities.`
+        ];
+        hintText = `${stateName} has a rich historical backdrop marked by distinct local dynasties and participation in freedom movements.`;
+      } else if (type === 1) {
+        questionText = `In terms of the Geography of ${stateName} ${uniqueRef}, which geographical feature or river basin forms the lifeline of this region?`;
+        baseOptions = [
+          `The major rivers, hills, and soil types native to ${stateName}.`,
+          `The Himalayan glaciers of the far north.`,
+          `The desert dunes of Western Rajasthan.`,
+          `The coastal backwaters of Kerala.`
+        ];
+        hintText = `Understanding the local rivers, terrain, and soil is crucial for ${stateName} geography.`;
+      } else if (type === 2) {
+        questionText = `Discussing the Political scenario in ${stateName} ${uniqueRef}, how are the local governance and assembly constituencies structured?`;
+        baseOptions = [
+          `Through the State Legislative Assembly of ${stateName} and local representative systems.`,
+          `Directly by municipal bodies of neighboring states.`,
+          `Through a unicameral central advisory council.`,
+          `By the federal supreme court administrators.`
+        ];
+        hintText = `The political system is anchored by the state assembly and local administrative divisions of ${stateName}.`;
+      } else if (type === 3) {
+        questionText = `Under the Economic pillar of ${stateName} ${uniqueRef}, which sector contributes the most to the state's Gross State Domestic Product (GSDP)?`;
+        baseOptions = [
+          `The primary agricultural and mineral resources abundant in ${stateName}.`,
+          `The global financial services of major megacities.`,
+          `The heavy shipping ports of international waters.`,
+          `The software exports of adjacent IT hubs.`
+        ];
+        hintText = `Agriculture, local industries, and mineral resources form the economic backbone of ${stateName}.`;
+      } else if (type === 4) {
+        questionText = `Regarding the Environment and ecology of ${stateName} ${uniqueRef}, which national park or wildlife reserve is a protected habitat here?`;
+        baseOptions = [
+          `The biodiversity zones and protected sanctuaries of ${stateName}.`,
+          `The marine national park of the Gulf of Mannar.`,
+          `The high altitude cold desert biosphere reserves.`,
+          `The mangrove ecosystems of the Sundarbans.`
+        ];
+        hintText = `Preserving the native fauna and flora in local reserves is a key focus of ${stateName}'s environmental policy.`;
+      } else if (type === 5) {
+        questionText = `In the Administrative structure of ${stateName} ${uniqueRef}, how is the executive power distributed between the Governor, Chief Minister, and state bureaucrats?`;
+        baseOptions = [
+          `The Chief Minister leads the council of ministers with administrative execution by the State Secretariat.`,
+          `The Union Cabinet directly controls day-to-day district administration.`,
+          `The municipal corporation of the capital has absolute authority over all districts.`,
+          `The administrative control is fully outsourced to regional private boards.`
+        ];
+        hintText = `The executive authority rests with the Chief Minister and Council of Ministers, assisted by state civil services.`;
+      } else if (type === 6) {
+        questionText = `Which of the following Historical Places in ${stateName} ${uniqueRef} is recognized for its archaeological significance and ancient monuments?`;
+        baseOptions = [
+          `The local heritage forts, temples, and excavation sites of ${stateName}.`,
+          `The Taj Mahal and monuments of Agra.`,
+          `The Sun Temple located at Konark.`,
+          `The ruins of Hampi in Karnataka.`
+        ];
+        hintText = `${stateName} boasts several historical sites reflecting its architectural and cultural evolution.`;
+      } else if (type === 7) {
+        questionText = `In the realm of Sports, which traditional game or modern sport tournament is celebrated with high enthusiasm in ${stateName} ${uniqueRef}?`;
+        baseOptions = [
+          `The regional sports festivals, state academies, and local athletes of ${stateName}.`,
+          `The international winter games of Gulmarg.`,
+          `The Nehru Trophy Boat Race of Punnamada Lake.`,
+          `The national polo championships of Rajasthan.`
+        ];
+        hintText = `Sports development is encouraged through state sports councils and regional athletic meets in ${stateName}.`;
+      } else {
+        questionText = `How does Socialism and social welfare policy manifest in ${stateName} ${uniqueRef} to uplift the marginalized communities?`;
+        baseOptions = [
+          `Through targeted state welfare schemes, food security, and educational subsidies.`,
+          `By leaving all healthcare and schooling completely to international charities.`,
+          `Through high flat-rate taxes on agricultural activities.`,
+          `By restricting migration to urban sectors.`
+        ];
+        hintText = `Socialism is implemented through state-sponsored direct benefit transfers, welfare schemes, and reservation policies.`;
+      }
+    } else if (domain === "indian_studies") {
+      const type = idx % 9;
+      if (type === 0) {
+        questionText = `To clear your basic concept of Indian History ${uniqueRef}: What was the primary characteristic of the town planning system of the Indus Valley Civilisation?`;
+        baseOptions = [
+          "Grid-pattern streets and advanced drainage systems",
+          "Randomly built stone structures without sanitation",
+          "Circular fortification with no public baths",
+          "Exclusive reliance on cave dwellings"
+        ];
+        hintText = "The Indus Valley Civilisation is renowned for its urban planning, featuring grid pattern streets and covered brick drains.";
+      } else if (type === 1) {
+        questionText = `To clear your basic concept of Indian Geography ${uniqueRef}: Which longitude is accepted as the Standard Meridian of India?`;
+        baseOptions = [
+          "82°30' E, passing through Mirzapur",
+          "68°7' E, passing through Gujarat",
+          "97°25' E, passing through Arunachal",
+          "0° longitude (Greenwich Meridian)"
+        ];
+        hintText = "The 82°30' E longitude is the Standard Meridian of India, defining Indian Standard Time (IST).";
+      } else if (type === 2) {
+        questionText = `To clear your basic concept of Indian Polity ${uniqueRef}: Which part of the Indian Constitution contains the Fundamental Rights?`;
+        baseOptions = [
+          "Part III (Articles 12 to 35)",
+          "Part IV (Directive Principles)",
+          "Part IVA (Fundamental Duties)",
+          "Part I (Union and its Territory)"
+        ];
+        hintText = "Part III of the Indian Constitution is secure and guarantees fundamental rights for all citizens.";
+      } else if (type === 3) {
+        questionText = `To clear your basic concept of Indian Economy ${uniqueRef}: In which sector of the economy is disguised unemployment most commonly observed in India?`;
+        baseOptions = [
+          "Agricultural sector",
+          "Information Technology sector",
+          "Manufacturing and heavy engineering",
+          "Financial and banking services"
+        ];
+        hintText = "Disguised unemployment, where more workers are engaged than necessary, is highly prevalent in Indian agriculture.";
+      } else if (type === 4) {
+        questionText = `To clear your basic concept of Indian Environment ${uniqueRef}: What is the primary objective of the Project Tiger initiative launched in 1973?`;
+        baseOptions = [
+          "Ensuring a viable population of Bengal tigers in their natural habitats",
+          "Promoting commercial breeding of tigers for export",
+          "Relocating all tigers to zoological parks in urban centers",
+          "Training tigers for forest security duties"
+        ];
+        hintText = "Project Tiger is a major wildlife conservation project aimed at saving the endangered Bengal tiger population.";
+      } else if (type === 5) {
+        questionText = `To clear your basic concept of Indian Administration ${uniqueRef}: Who is the constitutional head of the executive in the Government of India?`;
+        baseOptions = [
+          "The President of India",
+          "The Prime Minister of India",
+          "The Chief Justice of India",
+          "The Cabinet Secretary"
+        ];
+        hintText = "Under Article 53 of the Constitution, the executive power of the Union is vested in the President of India.";
+      } else if (type === 6) {
+        questionText = `To clear your basic concept of Indian Sports ${uniqueRef}: What is the national sports code objective regarding the promotion of sports in rural areas?`;
+        baseOptions = [
+          "Identifying talent at the grassroots level through schemes like Khelo India",
+          "Restricting sports funding exclusively to national level athletes",
+          "Limiting sports infrastructure to capital cities",
+          "Replacing traditional games with online gaming platforms"
+        ];
+        hintText = "The National Sports Code and schemes like Khelo India focus on discovering and training rural sports talent.";
+      } else if (type === 7) {
+        questionText = `To clear your basic concept of Indian Socialism ${uniqueRef}: What does the term 'Socialist' added to the Preamble of the Indian Constitution imply?`;
+        baseOptions = [
+          "A democratic socialism aiming to end poverty, ignorance, disease, and inequality of opportunity",
+          "Complete nationalisation of all private property and ban on private business",
+          "Alignment of India with the Soviet bloc during the Cold War",
+          "Preferential distribution of wealth to political parties"
+        ];
+        hintText = "Indian socialism is democratic socialism, aiming to establish a welfare state with a mixed economy.";
+      } else {
+        questionText = `To clear your basic concept of the Indian Freedom Movement ${uniqueRef}: Which movement was launched by Mahatma Gandhi in response to the partition of Bengal (or Rowlatt Act / Salt Tax)?`;
+        baseOptions = [
+          "The Civil Disobedience Movement (Salt Satyagraha in 1930)",
+          "The Swadeshi Movement (1905)",
+          "The Non-Cooperation Movement (1920)",
+          "The Quit India Movement (1942)"
+        ];
+        hintText = "The Salt Satyagraha began with the Dandi March in 1930 to protest the British monopoly on salt.";
+      }
     } else {
+
       // General / default
       const history = [
         { event: "the Battle of Plassey", year: "1757", fact: "establishing East India Company control in Bengal" },
@@ -2237,17 +2454,13 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
 
 const categories = [
   "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams", 
-  "Fitter", "Electrician", "AE/JE Exams", "Judiciary Exams", 
-  "Paramedical Exams", "Electronic Mechanic", "Railways", 
-  "Banking & Insurance", "State Exams", "Defence Exams", 
-  "Civil Services", "Police Exams", "B.Ed Entrance Exams",
-  "Non - Teaching Exams", "TGT/PGT Exams", "TET/PRT Exams", "NET/SET Exams",
-  "Food Technology", "Nursing Recruitment Exams", "Mechanical Engineering",
-  "Civil Engineering", "Electrical Engineering", "Electronics & Communication Eng",
-  "Computer Science & Engineering", "Other Engineering Exams", "ITI Exams",
-  "Accounting and Commerce", "Campus Placements", "NRA CET",
-  "Instrumentation Engineering", "Government Organizations", "UG Entrance Exams",
-  "CUET", "MBA Entrance Exam", "Banking", "State GK"
+  "ITI Exams", "AE/JE Exams", "Judiciary Exams", "Paramedical Exams", 
+  "Railways", "Banking & Insurance", "State Exams", "Defence Exams", 
+  "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET Exams", 
+  "Food Technology", "Nursing Recruitment Exams", "Engineering Test", 
+  "Accounting and Commerce", "Campus Placements", "NRA CET", 
+  "Government Organizations", "UG Entrance Exams", "NEET", "JEE", 
+  "MBA Entrance Exam", "State GK", "Indian Studies"
 ];
 
 const examsByCategory = {
@@ -2303,17 +2516,32 @@ const examsByCategory = {
     "PRT Exam Mock Test",
     "B.Ed Entrance Exam Mock Test",
     "M.Ed Entrance Exam Mock Test",
-    "SET (State Eligibility Test) Mock Test"
+    "SET (State Eligibility Test) Mock Test",
+    "UP TGT School Teacher Mock Test",
+    "UP PGT School Teacher Mock Test",
+    "DSSSB TGT Mock Test",
+    "KVS PGT Mock Test",
+    "UP B.Ed Joint Entrance Exam Mock Test",
+    "Bihar B.Ed CET Mock Test",
+    "Delhi University B.Ed Entrance Mock Test",
+    "CTET Paper 1 Child Pedagogy",
+    "CTET Paper 2 Child Pedagogy",
+    "UPTET Paper 1 Mock Test",
+    "Super TET Primary Teacher Mock Test"
   ],
-  "Fitter": [
+  "ITI Exams": [
     "ITI Fitter Semester 1 Mock Test",
     "ITI Fitter Semester 2 Mock Test",
-    "ITI Fitter Yearly Theory Mock Test"
-  ],
-  "Electrician": [
+    "ITI Fitter Yearly Theory Mock Test",
     "ITI Electrician Semester 1 Mock Test",
     "ITI Electrician Semester 2 Mock Test",
-    "ITI Electrician Yearly Theory Mock Test"
+    "ITI Electrician Yearly Theory Mock Test",
+    "ITI Electronic Mechanic Semester 1 Mock Test",
+    "ITI Electronic Mechanic Semester 2 Mock Test",
+    "ITI Electronic Mechanic Yearly Theory Mock Test",
+    "ITI Fitter Trade Theory Mock Test",
+    "ITI Electrician Trade Theory Mock Test",
+    "ITI Electronic Mechanic Trade Theory Mock Test"
   ],
   "AE/JE Exams": [
     "RRB JE Civil Engineering Mock Test",
@@ -2330,7 +2558,20 @@ const examsByCategory = {
     "UP Civil Judge Junior Mock Test",
     "Bihar Judiciary Exam Mock Test",
     "MP Judiciary Service Mock Test",
-    "Rajasthan Judiciary Mock Test"
+    "Rajasthan Judiciary Mock Test",
+    "Haryana Judiciary Exam Mock Test",
+    "Punjab Judiciary Exam Mock Test",
+    "Gujarat Judiciary Exam Mock Test",
+    "Maharashtra Judiciary Exam Mock Test",
+    "West Bengal Judiciary Exam Mock Test",
+    "Himachal Pradesh Judiciary Exam Mock Test",
+    "Jharkhand Judiciary Exam Mock Test",
+    "Chhattisgarh Judiciary Exam Mock Test",
+    "Uttarakhand Judiciary Exam Mock Test",
+    "Odisha Judiciary Exam Mock Test",
+    "Karnataka Judiciary Exam Mock Test",
+    "Tamil Nadu Judiciary Exam Mock Test",
+    "Andhra Pradesh Judiciary Exam Mock Test"
   ],
   "Paramedical Exams": [
     "AIIMS Paramedical Entrance Exam Mock Test",
@@ -2345,11 +2586,6 @@ const examsByCategory = {
     "Uttarakhand Paramedical Entrance Mock Test",
     "Bihar DCECE Paramedical Mock Test",
     "IPU CET (Paramedical courses) Mock Test"
-  ],
-  "Electronic Mechanic": [
-    "ITI Electronic Mechanic Semester 1 Mock Test",
-    "ITI Electronic Mechanic Semester 2 Mock Test",
-    "ITI Electronic Mechanic Yearly Theory Mock Test"
   ],
   "Railways": [
     "RRB NTPC CBT 1 Mock Test",
@@ -2368,14 +2604,20 @@ const examsByCategory = {
     "RBI Assistant Mock Test",
     "LIC AAO Mock Test",
     "LIC ADO Mock Test",
-    "NIACL AO Mock Test"
+    "NIACL AO Mock Test",
+    "SBI PO Preliminary Mock Test",
+    "SBI Clerk Preliminary Mock Test",
+    "IBPS PO Preliminary Mock Test",
+    "IBPS Clerk Preliminary Mock Test"
   ],
   "State Exams": [
     "UPPSC PCS Prelims Mock Test",
     "BPSC PCS Prelims Mock Test",
     "MPPSC PCS Prelims Mock Test",
     "RAS Rajasthan PCS Mock Test",
-    "MPSC Maharashtra PCS Mock Test"
+    "MPSC Maharashtra PCS Mock Test",
+    "State PSC GS Paper 1 Mock Test",
+    "State PSC GS Paper 2 Mock Test"
   ],
   "Defence Exams": [
     "NDA General Ability Mock Test",
@@ -2387,9 +2629,7 @@ const examsByCategory = {
   ],
   "Civil Services": [
     "UPSC Civil Services Prelims GS 1 Mock Test",
-    "UPSC Civil Services Prelims CSAT Mock Test",
-    "State PSC GS Paper 1 Mock Test",
-    "State PSC GS Paper 2 Mock Test"
+    "UPSC Civil Services Prelims CSAT Mock Test"
   ],
   "Police Exams": [
     "UP Police Constable Mock Test",
@@ -2398,33 +2638,35 @@ const examsByCategory = {
     "Delhi Police SI Mock Test",
     "Bihar Police Constable Mock Test"
   ],
-  "B.Ed Entrance Exams": [
-    "UP B.Ed Joint Entrance Exam Mock Test",
-    "Bihar B.Ed CET Mock Test",
-    "Delhi University B.Ed Entrance Mock Test"
-  ],
   "Non - Teaching Exams": [
     "EMRS Non-Teaching Staff Mock Test",
     "DSSSB Non-Teaching Assistant Mock Test",
     "KVS Non-Teaching Clerk Mock Test"
   ],
-  "TGT/PGT Exams": [
-    "UP TGT School Teacher Mock Test",
-    "UP PGT School Teacher Mock Test",
-    "DSSSB TGT Mock Test",
-    "KVS PGT Mock Test"
-  ],
-  "TET/PRT Exams": [
-    "CTET Paper 1 Child Pedagogy",
-    "CTET Paper 2 Child Pedagogy",
-    "UPTET Paper 1 Mock Test",
-    "Super TET Primary Teacher Mock Test"
-  ],
   "NET/SET Exams": [
+    "UGC NET Paper 1 Mock Test Series",
+    "UGC NET Economics Mock Test",
+    "UGC NET Political Science Mock Test",
+    "UGC NET Philosophy Mock Test",
+    "UGC NET Psychology Mock Test",
+    "UGC NET Sociology Mock Test",
+    "UGC NET History Mock Test",
+    "UGC NET Anthropology Mock Test",
+    "UGC NET Commerce Mock Test",
+    "UGC NET Education Mock Test",
+    "UGC NET Social Work Mock Test",
+    "UGC NET Defence Studies Mock Test",
+    "UGC NET Home Science Mock Test",
+    "UGC NET Public Administration Mock Test",
+    "UGC NET Population Studies Mock Test",
+    "UGC NET Music Mock Test",
+    "UGC NET Mock Test",
+    "CSIR NET Life Sciences Mock Test",
+    "CSIR NET Mock Test",
+    "SET (State Eligibility Test) Mock Test",
     "UGC NET Paper 1 General Aptitude",
     "UGC NET Commerce Paper 2 Mock Test",
-    "UGC NET Computer Science Mock Test",
-    "CSIR NET Life Sciences Mock Test"
+    "UGC NET Computer Science Mock Test"
   ],
   "Food Technology": [
     "FSSAI Central Food Safety Officer Mock Test",
@@ -2436,43 +2678,30 @@ const examsByCategory = {
     "ESIC Staff Nurse Recruitment Mock Test",
     "DSSSB Nursing Officer Mock Test"
   ],
-  "Mechanical Engineering": [
+  "Engineering Test": [
     "GATE Mechanical Engineering Mock Test",
     "SSC JE Mechanical Mock Test",
     "RRB JE Mechanical Mock Test",
-    "ISRO Mechanical Mock Test"
-  ],
-  "Civil Engineering": [
+    "ISRO Mechanical Mock Test",
     "GATE Civil Engineering Mock Test",
     "SSC JE Civil Mock Test",
     "RRB JE Civil Mock Test",
-    "ISRO Civil Mock Test"
-  ],
-  "Electrical Engineering": [
+    "ISRO Civil Mock Test",
     "GATE Electrical Engineering Mock Test",
     "SSC JE Electrical Mock Test",
     "RRB JE Electrical Mock Test",
-    "ISRO Electrical Mock Test"
-  ],
-  "Electronics & Communication Eng": [
+    "ISRO Electrical Mock Test",
     "GATE Electronics & Comm Mock Test",
     "ISRO Electronics Mock Test",
-    "BARC Electronics Mock Test"
-  ],
-  "Computer Science & Engineering": [
+    "BARC Electronics Mock Test",
     "GATE Computer Science & IT Mock Test",
     "ISRO Computer Science Mock Test",
-    "NIELIT Scientist B Mock Test"
-  ],
-  "Other Engineering Exams": [
+    "NIELIT Scientist B Mock Test",
     "GATE Chemical Engineering Mock Test",
     "GATE Biotechnology Mock Test",
-    "GATE Aerospace Engineering Mock Test"
-  ],
-  "ITI Exams": [
-    "ITI Fitter Trade Theory Mock Test",
-    "ITI Electrician Trade Theory Mock Test",
-    "ITI Electronic Mechanic Trade Theory Mock Test"
+    "GATE Aerospace Engineering Mock Test",
+    "GATE Instrumentation Engineering Mock Test",
+    "ISRO Instrumentation Mock Test"
   ],
   "Accounting and Commerce": [
     "UGC NET Commerce Paper 2 Mock Test",
@@ -2490,10 +2719,6 @@ const examsByCategory = {
     "NRA CET Higher Secondary 12th Level Mock Test",
     "NRA CET Graduation Level Mock Test"
   ],
-  "Instrumentation Engineering": [
-    "GATE Instrumentation Engineering Mock Test",
-    "ISRO Instrumentation Mock Test"
-  ],
   "Government Organizations": [
     "ISRO Scientist recruitment Mock Test",
     "BARC Scientific Officer Mock Test",
@@ -2501,26 +2726,24 @@ const examsByCategory = {
   ],
   "UG Entrance Exams": [
     "CUET UG General Test Mock Test",
+    "CUET UG Section III General Test Mock Test",
+    "CUet ia english mock test",
+    "CUet physics & chemistry mock test"
+  ],
+  "NEET": [
+    "NEET UG Complete Practice Mock Test",
+    "NEET UG Mock Test Series"
+  ],
+  "JEE": [
     "JEE Main Physics & Chemistry Mock Test",
     "JEE Main Mathematics Mock Test",
-    "NEET UG Complete Practice Mock Test"
-  ],
-  "CUET": [
-    "CUET UG Section III General Test Mock Test",
-    "CUET UG Section IA English Mock Test",
-    "CUET UG Physics & Chemistry Mock Test"
+    "JEE Main Mock Test Series"
   ],
   "MBA Entrance Exam": [
     "CAT Quantitative Aptitude Mock Test",
     "CAT Data Interpretation & LR Mock Test",
     "CAT Verbal Ability & RC Mock Test",
     "CMAT Complete Syllabus Mock Test"
-  ],
-  "Banking": [
-    "SBI PO Preliminary Mock Test",
-    "SBI Clerk Preliminary Mock Test",
-    "IBPS PO Preliminary Mock Test",
-    "IBPS Clerk Preliminary Mock Test"
   ],
   "State GK": [
     "Rajasthan GK Mock Test",
@@ -2534,7 +2757,38 @@ const examsByCategory = {
     "West Bengal GK Mock Test",
     "Karnataka GK Mock Test",
     "Tamil Nadu GK Mock Test",
-    "Andhra Pradesh GK Mock Test"
+    "Andhra Pradesh GK Mock Test",
+    "Kerala GK Mock Test",
+    "Telangana GK Mock Test",
+    "Odisha GK Mock Test",
+    "Assam GK Mock Test",
+    "Jharkhand GK Mock Test",
+    "Chhattisgarh GK Mock Test",
+    "Uttarakhand GK Mock Test",
+    "Himachal Pradesh GK Mock Test",
+    "Jammu & Kashmir GK Mock Test",
+    "Goa GK Mock Test",
+    "Tripura GK Mock Test",
+    "Manipur GK Mock Test",
+    "Meghalaya GK Mock Test",
+    "Nagaland GK Mock Test",
+    "Arunachal Pradesh GK Mock Test",
+    "Mizoram GK Mock Test",
+    "Sikkim GK Mock Test",
+    "Delhi GK Mock Test",
+    "Puducherry GK Mock Test",
+    "Ladakh GK Mock Test"
+  ],
+  "Indian Studies": [
+    "Indian History Mock Test",
+    "Indian Geography Mock Test",
+    "Indian Polity & Constitution Mock Test",
+    "Indian Economy Mock Test",
+    "Indian Environment & Ecology Mock Test",
+    "Indian Administration & Governance Mock Test",
+    "Indian Sports & Culture Mock Test",
+    "Indian Socialism & Social Welfare Mock Test",
+    "Indian Freedom Movement Mock Test"
   ]
 };
 
@@ -2585,25 +2839,78 @@ const courseToCategory = {
   "b.ed entrance exam mock test": "Teaching Exams",
   "m.ed entrance exam mock test": "Teaching Exams",
   "set (state eligibility test) mock test": "Teaching Exams",
-  "iti fitter semester 1 mock test": "Fitter",
-  "iti fitter semester 2 mock test": "Fitter",
-  "iti fitter yearly theory mock test": "Fitter",
-  "iti electrician semester 1 mock test": "Electrician",
-  "iti electrician semester 2 mock test": "Electrician",
-  "iti electrician yearly theory mock test": "Electrician",
-  "rrb je civil engineering mock test": "AE/JE Exams",
-  "rrb je electrical engineering mock test": "AE/JE Exams",
-  "rrb je mechanical engineering mock test": "AE/JE Exams",
-  "ssc je civil technical mock test": "AE/JE Exams",
-  "ssc je electrical technical mock test": "AE/JE Exams",
-  "ssc je mechanical technical mock test": "AE/JE Exams",
-  "state psc ae civil mock test": "AE/JE Exams",
-  "state psc je electrical mock test": "AE/JE Exams",
+  "up tgt school teacher mock test": "Teaching Exams",
+  "up pgt school teacher mock test": "Teaching Exams",
+  "dsssb tgt mock test": "Teaching Exams",
+  "kvs pgt mock test": "Teaching Exams",
+  "up b.ed joint entrance exam mock test": "Teaching Exams",
+  "bihar b.ed cet mock test": "Teaching Exams",
+  "delhi university b.ed entrance mock test": "Teaching Exams",
+  "ctet paper 1 child pedagogy": "Teaching Exams",
+  "ctet paper 2 child pedagogy": "Teaching Exams",
+  "uptet paper 1 mock test": "Teaching Exams",
+  "super tet primary teacher mock test": "Teaching Exams",
+  "iti fitter semester 1 mock test": "ITI Exams",
+  "iti fitter semester 2 mock test": "ITI Exams",
+  "iti fitter yearly theory mock test": "ITI Exams",
+  "iti electrician semester 1 mock test": "ITI Exams",
+  "iti electrician semester 2 mock test": "ITI Exams",
+  "iti electrician yearly theory mock test": "ITI Exams",
+  "iti electronic mechanic semester 1 mock test": "ITI Exams",
+  "iti electronic mechanic semester 2 mock test": "ITI Exams",
+  "iti electronic mechanic yearly theory mock test": "ITI Exams",
+  "iti fitter trade theory mock test": "ITI Exams",
+  "iti electrician trade theory mock test": "ITI Exams",
+  "iti electronic mechanic trade theory mock test": "ITI Exams",
+  "rrb je civil engineering mock test": "Engineering Test",
+  "rrb je electrical engineering mock test": "Engineering Test",
+  "rrb je mechanical engineering mock test": "Engineering Test",
+  "ssc je civil technical mock test": "Engineering Test",
+  "ssc je electrical technical mock test": "Engineering Test",
+  "ssc je mechanical technical mock test": "Engineering Test",
+  "state psc ae civil mock test": "Engineering Test",
+  "state psc je electrical mock test": "Engineering Test",
+  "gate mechanical engineering mock test": "Engineering Test",
+  "ssc je mechanical mock test": "Engineering Test",
+  "rrb je mechanical mock test": "Engineering Test",
+  "isro mechanical mock test": "Engineering Test",
+  "gate civil engineering mock test": "Engineering Test",
+  "ssc je civil mock test": "Engineering Test",
+  "rrb je civil mock test": "Engineering Test",
+  "isro civil mock test": "Engineering Test",
+  "gate electrical engineering mock test": "Engineering Test",
+  "ssc je electrical mock test": "Engineering Test",
+  "rrb je electrical mock test": "Engineering Test",
+  "isro electrical mock test": "Engineering Test",
+  "gate electronics & comm mock test": "Engineering Test",
+  "isro electronics mock test": "Engineering Test",
+  "barc electronics mock test": "Engineering Test",
+  "gate computer science & it mock test": "Engineering Test",
+  "isro computer science mock test": "Engineering Test",
+  "nielit scientist b mock test": "Engineering Test",
+  "gate chemical engineering mock test": "Engineering Test",
+  "gate biotechnology mock test": "Engineering Test",
+  "gate aerospace engineering mock test": "Engineering Test",
+  "gate instrumentation engineering mock test": "Engineering Test",
+  "isro instrumentation mock test": "Engineering Test",
   "delhi judiciary service mock test": "Judiciary Exams",
   "up civil judge junior mock test": "Judiciary Exams",
   "bihar judiciary exam mock test": "Judiciary Exams",
   "mp judiciary service mock test": "Judiciary Exams",
   "rajasthan judiciary mock test": "Judiciary Exams",
+  "haryana judiciary exam mock test": "Judiciary Exams",
+  "punjab judiciary exam mock test": "Judiciary Exams",
+  "gujarat judiciary exam mock test": "Judiciary Exams",
+  "maharashtra judiciary exam mock test": "Judiciary Exams",
+  "west bengal judiciary exam mock test": "Judiciary Exams",
+  "himachal pradesh judiciary exam mock test": "Judiciary Exams",
+  "jharkhand judiciary exam mock test": "Judiciary Exams",
+  "chhattisgarh judiciary exam mock test": "Judiciary Exams",
+  "uttarakhand judiciary exam mock test": "Judiciary Exams",
+  "odisha judiciary exam mock test": "Judiciary Exams",
+  "karnataka judiciary exam mock test": "Judiciary Exams",
+  "tamil nadu judiciary exam mock test": "Judiciary Exams",
+  "andhra pradesh judiciary exam mock test": "Judiciary Exams",
   "aiims paramedical entrance exam mock test": "Paramedical Exams",
   "pgimer paramedical entrance mock test": "Paramedical Exams",
   "jipmer paramedical entrance mock test": "Paramedical Exams",
@@ -2616,9 +2923,6 @@ const courseToCategory = {
   "uttarakhand paramedical entrance mock test": "Paramedical Exams",
   "bihar dcece paramedical mock test": "Paramedical Exams",
   "ipu cet (paramedical courses) mock test": "Paramedical Exams",
-  "iti electronic mechanic semester 1 mock test": "Electronic Mechanic",
-  "iti electronic mechanic semester 2 mock test": "Electronic Mechanic",
-  "iti electronic mechanic yearly theory mock test": "Electronic Mechanic",
   "rrb ntpc cbt 1 mock test": "Railways",
   "rrb ntpc cbt 2 mock test": "Railways",
   "rrb alp stage 1 mock test": "Railways",
@@ -2633,11 +2937,17 @@ const courseToCategory = {
   "lic aao mock test": "Banking & Insurance",
   "lic ado mock test": "Banking & Insurance",
   "niacl ao mock test": "Banking & Insurance",
+  "sbi po preliminary mock test": "Banking & Insurance",
+  "sbi clerk preliminary mock test": "Banking & Insurance",
+  "ibps po preliminary mock test": "Banking & Insurance",
+  "ibps clerk preliminary mock test": "Banking & Insurance",
   "uppsc pcs prelims mock test": "State Exams",
   "bpsc pcs prelims mock test": "State Exams",
   "mppsc pcs prelims mock test": "State Exams",
   "ras rajasthan pcs mock test": "State Exams",
   "mpsc maharashtra pcs mock test": "State Exams",
+  "state psc gs paper 1 mock test": "State Exams",
+  "state psc gs paper 2 mock test": "State Exams",
   "nda general ability mock test": "Defence Exams",
   "cds elementary mathematics mock test": "Defence Exams",
   "cds general knowledge mock test": "Defence Exams",
@@ -2646,90 +2956,49 @@ const courseToCategory = {
   "indian airforce x/y group mock test": "Defence Exams",
   "upsc civil services prelims gs 1 mock test": "Civil Services",
   "upsc civil services prelims csat mock test": "Civil Services",
-  "state psc gs paper 1 mock test": "Civil Services",
-  "state psc gs paper 2 mock test": "Civil Services",
   "up police constable mock test": "Police Exams",
   "up police si mock test": "Police Exams",
   "delhi police constable mock test": "Police Exams",
   "delhi police si mock test": "Police Exams",
   "bihar police constable mock test": "Police Exams",
-  "up b.ed joint entrance exam mock test": "B.Ed Entrance Exams",
-  "bihar b.ed cet mock test": "B.Ed Entrance Exams",
-  "delhi university b.ed entrance mock test": "B.Ed Entrance Exams",
   "emrs non-teaching staff mock test": "Non - Teaching Exams",
   "dsssb non-teaching assistant mock test": "Non - Teaching Exams",
   "kvs non-teaching clerk mock test": "Non - Teaching Exams",
-  "up tgt school teacher mock test": "TGT/PGT Exams",
-  "up pgt school teacher mock test": "TGT/PGT Exams",
-  "dsssb tgt mock test": "TGT/PGT Exams",
-  "kvs pgt mock test": "TGT/PGT Exams",
-  "ctet paper 1 child pedagogy": "TET/PRT Exams",
-  "ctet paper 2 child pedagogy": "TET/PRT Exams",
-  "uptet paper 1 mock test": "TET/PRT Exams",
-  "super tet primary teacher mock test": "TET/PRT Exams",
   "ugc net paper 1 general aptitude": "NET/SET Exams",
   "ugc net commerce paper 2 mock test": "Accounting and Commerce",
   "ugc net computer science mock test": "NET/SET Exams",
   "csir net life sciences mock test": "NET/SET Exams",
+  "ugc net paper 1 mock test series": "NET/SET Exams",
+  "ugc net economics mock test": "NET/SET Exams",
+  "ugc net political science mock test": "NET/SET Exams",
+  "ugc net philosophy mock test": "NET/SET Exams",
+  "ugc net psychology mock test": "NET/SET Exams",
+  "ugc net sociology mock test": "NET/SET Exams",
+  "ugc net history mock test": "NET/SET Exams",
+  "ugc net anthropology mock test": "NET/SET Exams",
+  "ugc net commerce mock test": "NET/SET Exams",
+  "ugc net education mock test": "NET/SET Exams",
+  "ugc net social work mock test": "NET/SET Exams",
+  "ugc net defence studies mock test": "NET/SET Exams",
+  "ugc net home science mock test": "NET/SET Exams",
+  "ugc net public administration mock test": "NET/SET Exams",
+  "ugc net population studies mock test": "NET/SET Exams",
+  "ugc net music mock test": "NET/SET Exams",
   "fssai central food safety officer mock test": "Food Technology",
   "fssai technical officer mock test": "Food Technology",
   "state food safety officer mock test": "Food Technology",
   "aiims norcet nursing officer mock test": "Nursing Recruitment Exams",
   "esic staff nurse recruitment mock test": "Nursing Recruitment Exams",
   "dsssb nursing officer mock test": "Nursing Recruitment Exams",
-  "gate mechanical engineering mock test": "Mechanical Engineering",
-  "ssc je mechanical mock test": "Mechanical Engineering",
-  "rrb je mechanical mock test": "Mechanical Engineering",
-  "isro mechanical mock test": "Mechanical Engineering",
-  "gate civil engineering mock test": "Civil Engineering",
-  "ssc je civil mock test": "Civil Engineering",
-  "rrb je civil mock test": "Civil Engineering",
-  "isro civil mock test": "Civil Engineering",
-  "gate electrical engineering mock test": "Electrical Engineering",
-  "ssc je electrical mock test": "Electrical Engineering",
-  "rrb je electrical mock test": "Electrical Engineering",
-  "isro electrical mock test": "Electrical Engineering",
-  "gate electronics & comm mock test": "Electronics & Communication Eng",
-  "isro electronics mock test": "Electronics & Communication Eng",
-  "barc electronics mock test": "Electronics & Communication Eng",
-  "gate computer science & it mock test": "Computer Science & Engineering",
-  "isro computer science mock test": "Computer Science & Engineering",
-  "nielit scientist b mock test": "Computer Science & Engineering",
-  "gate chemical engineering mock test": "Other Engineering Exams",
-  "gate biotechnology mock test": "Other Engineering Exams",
-  "gate aerospace engineering mock test": "Other Engineering Exams",
-  "iti fitter trade theory mock test": "ITI Exams",
-  "iti electrician trade theory mock test": "ITI Exams",
-  "iti electronic mechanic trade theory mock test": "ITI Exams",
-  "ca foundation principles of accounting": "Accounting and Commerce",
-  "cma foundation financial accounting": "Accounting and Commerce",
-  "tcs nqt cognitive skills mock test": "Campus Placements",
-  "infosys specialist programmer mock test": "Campus Placements",
-  "wipro elite talent hunt mock test": "Campus Placements",
-  "cognizant genc quantitative mock test": "Campus Placements",
-  "nra cet matriculation 10th level mock test": "NRA CET",
-  "nra cet higher secondary 12th level mock test": "NRA CET",
-  "nra cet graduation level mock test": "NRA CET",
-  "gate instrumentation engineering mock test": "Instrumentation Engineering",
-  "isro instrumentation mock test": "Instrumentation Engineering",
-  "isro scientist recruitment mock test": "Government Organizations",
-  "barc scientific officer mock test": "Government Organizations",
-  "drdo scientist b mock test": "Government Organizations",
   "cuet ug general test mock test": "UG Entrance Exams",
-  "jee main physics & chemistry mock test": "UG Entrance Exams",
-  "jee main mathematics mock test": "UG Entrance Exams",
-  "neet ug complete practice mock test": "UG Entrance Exams",
-  "cuet ug section iii general test mock test": "CUET",
-  "cuet ug section ia english mock test": "CUET",
-  "cuet ug physics & chemistry mock test": "CUET",
-  "cat quantitative aptitude mock test": "MBA Entrance Exam",
-  "cat data interpretation & lr mock test": "MBA Entrance Exam",
-  "cat verbal ability & rc mock test": "MBA Entrance Exam",
-  "cmat complete syllabus mock test": "MBA Entrance Exam",
-  "sbi po preliminary mock test": "Banking",
-  "sbi clerk preliminary mock test": "Banking",
-  "ibps po preliminary mock test": "Banking",
-  "ibps clerk preliminary mock test": "Banking",
+  "cuet ug section iii general test mock test": "UG Entrance Exams",
+  "cuet ia english mock test": "UG Entrance Exams",
+  "cuet physics & chemistry mock test": "UG Entrance Exams",
+  "neet ug complete practice mock test": "NEET",
+  "neet ug mock test series": "NEET",
+  "jee main physics & chemistry mock test": "JEE",
+  "jee main mathematics mock test": "JEE",
+  "jee main mock test series": "JEE",
   "rajasthan gk mock test": "State GK",
   "uttar pradesh gk mock test": "State GK",
   "bihar gk mock test": "State GK",
@@ -2742,7 +3011,37 @@ const courseToCategory = {
   "karnataka gk mock test": "State GK",
   "tamil nadu gk mock test": "State GK",
   "andhra pradesh gk mock test": "State GK",
+  "kerala gk mock test": "State GK",
+  "telangana gk mock test": "State GK",
+  "odisha gk mock test": "State GK",
+  "assam gk mock test": "State GK",
+  "jharkhand gk mock test": "State GK",
+  "chhattisgarh gk mock test": "State GK",
+  "uttarakhand gk mock test": "State GK",
+  "himachal pradesh gk mock test": "State GK",
+  "jammu & kashmir gk mock test": "State GK",
+  "goa gk mock test": "State GK",
+  "tripura gk mock test": "State GK",
+  "manipur gk mock test": "State GK",
+  "meghalaya gk mock test": "State GK",
+  "nagaland gk mock test": "State GK",
+  "arunachal pradesh gk mock test": "State GK",
+  "mizoram gk mock test": "State GK",
+  "sikkim gk mock test": "State GK",
+  "delhi gk mock test": "State GK",
+  "puducherry gk mock test": "State GK",
+  "ladakh gk mock test": "State GK",
+  "indian history mock test": "Indian Studies",
+  "indian geography mock test": "Indian Studies",
+  "indian polity & constitution mock test": "Indian Studies",
+  "indian economy mock test": "Indian Studies",
+  "indian environment & ecology mock test": "Indian Studies",
+  "indian administration & governance mock test": "Indian Studies",
+  "indian sports & culture mock test": "Indian Studies",
+  "indian socialism & social welfare mock test": "Indian Studies",
+  "indian freedom movement mock test": "Indian Studies"
 };
+
 
 // Helper to match courses to categories
 const getCategoryForCourse = (courseName) => {
@@ -2750,10 +3049,11 @@ const getCategoryForCourse = (courseName) => {
   if (courseToCategory[name]) {
     return courseToCategory[name];
   }
-  
-  // Specific fallback overrides in case of dynamic matching differences
   if (name.includes("state gk") || name.includes("gk")) {
     return "State GK";
+  }
+  if (name.includes("indian history") || name.includes("indian geography") || name.includes("indian polity") || name.includes("indian economy") || name.includes("indian environment") || name.includes("indian admin") || name.includes("indian sports") || name.includes("indian socialism") || name.includes("indian freedom")) {
+    return "Indian Studies";
   }
   if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
     return "Paramedical Exams";
@@ -2767,9 +3067,21 @@ const getCategoryForCourse = (courseName) => {
   if (name.includes("cuet pg") || name.includes("iit jam") || name.includes("gate") || name.includes("cat") || name.includes("cmat") || name.includes("xat") || name.includes("mat") || name.includes("neet pg") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet")) {
     return "PG Entrance Exam";
   }
-  
-  return "State Exams"; // Default fallback
+  if (name.includes("fitter") || name.includes("electrician") || name.includes("electronic mechanic") || name.includes("iti")) {
+    return "ITI Exams";
+  }
+  if (name.includes("mechanical") || name.includes("civil engineering") || name.includes("electrical engineering") || name.includes("electronics &") || name.includes("computer science &") || name.includes("instrumentation")) {
+    return "Engineering Test";
+  }
+  if (name.includes("neet")) {
+    return "NEET";
+  }
+  if (name.includes("jee")) {
+    return "JEE";
+  }
+  return "State Exams";
 };
+
 
 const getGeneratedName = (category, idx, baseCourse) => {
   const num = idx + 1;
@@ -2781,7 +3093,7 @@ const getGeneratedName = (category, idx, baseCourse) => {
     case "Railways":
       return `RRB NTPC CBT Mock Exam ${num}`;
     case "Banking & Insurance":
-      return `IBPS PO Banking & Insurance Practice Set ${num}`;
+      return `IBPS/SBI Banking Practice Paper ${num}`;
     case "Regulatory Body Exams":
       return `NABARD Grade A Officer Prep Set ${num}`;
     case "PG Entrance Exam":
@@ -2793,75 +3105,46 @@ const getGeneratedName = (category, idx, baseCourse) => {
         return `${baseCourse.name} Practice Set ${num}`;
       }
     case "Teaching Exams":
-      return `CTET Paper 1 Pedagogy Mock Set ${num}`;
-    case "Fitter":
-      return `ITI Fitter Theory Practice Set ${num}`;
-    case "Electrician":
-      return `ITI Electrician Basic Theory Mock ${num}`;
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
+    case "ITI Exams":
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
     case "Judiciary Exams":
-      return `State Judiciary Law Prep Test ${num}`;
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
     case "Paramedical Exams":
       return `Paramedical Staff Nurse Practice Set ${num}`;
-    case "Electronic Mechanic":
-      return `Electronic Mechanic Semester Prep Set ${num}`;
     case "Civil Services":
       return `UPSC Civil Services GS Practice ${num}`;
     case "Defence Exams":
       return `NDA General Ability Defence Mock ${num}`;
     case "Police Exams":
       return `UP Police Constable Practice Mock ${num}`;
-    case "B.Ed Entrance Exams":
-      return `UP B.Ed Joint Entrance Test Set ${num}`;
     case "State Exams":
-      return `NEET Practice Mock Set ${num}`;
-    case "Non - Teaching Exams":
-      return `Non-Teaching Staff Mock Paper ${num}`;
-    case "TGT/PGT Exams":
-      return `TGT/PGT School Teacher Test ${num}`;
-    case "TET/PRT Exams":
-      return `State TET/PRT Practice Set ${num}`;
+      return `State PCS Civil Services Mock Set ${num}`;
     case "NET/SET Exams":
-      return `UGC NET/SET Assistant Prof Mock ${num}`;
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
+    case "Engineering Test":
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
+    case "NEET":
+      return `NEET UG Practice Mock Set ${num}`;
+    case "JEE":
+      return `JEE Main Practice Mock Set ${num}`;
+    case "State GK":
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
+    case "Indian Studies":
+      return `${baseCourse.name.replace("Mock Test", "Practice Set")} Set ${num}`;
     case "Food Technology":
       return `Food Technology Officer Practice ${num}`;
     case "Nursing Recruitment Exams":
       return `Nursing Recruitment Staff Nurse Mock ${num}`;
-    case "Mechanical Engineering":
-      return `Mechanical Engineering Core Test ${num}`;
-    case "Civil Engineering":
-      return `Civil Engineering Structure Test ${num}`;
-    case "Electrical Engineering":
-      return `Electrical Engineering Basic Mock ${num}`;
-    case "Electronics & Communication Eng":
-      return `ECE Circuit & Systems Test ${num}`;
-    case "Computer Science & Engineering":
-      return `CSE Algorithm & Coding Prep ${num}`;
-    case "Other Engineering Exams":
-      return `Other Engineering Simulator Set ${num}`;
-    case "ITI Exams":
-      return `ITI Semester Trade Mock ${num}`;
-    case "Accounting and Commerce":
-      return `Accounting and Commerce Finance Mock ${num}`;
     case "Campus Placements":
       return `Campus Placement Aptitude Test ${num}`;
     case "NRA CET":
       return `NRA CET Common Eligibility Test ${num}`;
-    case "Instrumentation Engineering":
-      return `Instrumentation Engineering Sensors Mock ${num}`;
-    case "Government Organizations":
-      return `Govt Org Officer Recruitment Mock ${num}`;
-    case "UG Entrance Exams":
-      return `Under Graduate Entrance Mock ${num}`;
-    case "CUET":
-      return `CUET General Test Preparation ${num}`;
-    case "MBA Entrance Exam":
-      return `MBA CAT/MAT Quantitative Mock ${num}`;
-    case "Banking":
-      return `IBPS/SBI Banking Practice Paper ${num}`;
     default:
       return `${baseCourse.name} Simulator Set ${num}`;
   }
 };
+
 
 async function executeWithRetry(fn, retries = 5, delayMs = 3000) {
   for (let i = 0; i < retries; i++) {
@@ -2932,13 +3215,17 @@ async function seed() {
       item.category === "PG Entrance Exam" || 
       item.category === "Regulatory Body Exams" || 
       item.category === "Judiciary Exams" || 
-      item.category === "Civil Services";
+      item.category === "Civil Services" ||
+      item.category === "NEET" ||
+      item.category === "JEE" ||
+      item.category === "NET/SET Exams";
 
     const course = await executeWithRetry(() => prisma.course.create({
       data: { 
         name: item.name, 
         active: true,
-        premium: isPremium
+        premium: isPremium,
+        price: isPremium ? 99.00 : 0.00
       }
     }));
 

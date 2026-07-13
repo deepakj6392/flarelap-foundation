@@ -18,7 +18,7 @@ async function main() {
       id: 2,
       name: 'Bharat Bhushan',
       role: 'M.D.',
-      description: 'Medical Director, overseeing health initiatives.',
+      description: 'Managing Director, overseeing health initiatives.',
       facebook: null,
       twitter: null,
       github: null,

@@ -365,6 +365,12 @@ const getRealExamStats = (courseName: string): RealExamStats => {
   if (name.includes("sbi po")) {
     return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
   }
+  if (name.includes("neet ug") || name.includes("neet mock test series")) {
+    return { questions: 180, marks: 720, duration: 200, language: "English, Hindi" };
+  }
+  if (name.includes("jee main") || name.includes("jee mock test series")) {
+    return { questions: 90, marks: 300, duration: 180, language: "English Only" };
+  }
   if (name.includes("neet")) {
     return { questions: 45, marks: 180, duration: 50, language: "English, Hindi" };
   }
@@ -386,8 +392,17 @@ const getRealExamStats = (courseName: string): RealExamStats => {
 const getCourseMetadata = (courseName: string, courseId: number, isPremium: boolean): CourseMetadata => {
   const hash = courseName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) + (courseId || 0);
   const userCount = ((hash % 400) + 400).toFixed(1) + "k";
-  const totalTests = 150;
-  const freeTests = isPremium ? 3 : 150;
+  
+  const name = courseName.toLowerCase();
+  const isSpecial20TestCourse = 
+    name.includes("neet") || 
+    name.includes("jee") || 
+    name.includes("ugc net paper 1") || 
+    name.includes("ugc net paper-1") ||
+    name.includes("upsc civil services prelims gs");
+  
+  const totalTests = isSpecial20TestCourse ? 20 : 150;
+  const freeTests = isPremium ? 3 : totalTests;
   
   const stats = getRealExamStats(courseName);
 
@@ -407,14 +422,14 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
     freeTests,
     languages: stats.language,
     bullets: isPremium ? [
-      "2 Full Mock Tests (Free)",
-      "1 Subject Test (Free)",
-      "147 Premium Pass Tests",
+      "3 Mock Tests (Free)",
+      `${totalTests - 3} Premium Pass Tests`,
+      "Unlimited access during subscription",
       `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
     ] : [
       "5 Full Length Mock Tests",
       "3 Subject Practice Tests",
-      "142 Chapter Practice Tests",
+      `${totalTests - 8} Chapter Practice Tests`,
       `100% Free Access for All`
     ],
     gradient,
@@ -1140,80 +1155,100 @@ const generateSubTestsList = (courseName: string, isPremium: boolean): SubTest[]
   const stats = getRealExamStats(courseName);
   const subjects = getCourseSubjects(courseName);
   const tests: SubTest[] = [];
+  const name = courseName.toLowerCase();
 
-  // 1. Full Length Mock Tests (10 tests)
-  for (let i = 1; i <= 10; i++) {
-    tests.push({
-      id: `fmt-${i}`,
-      name: `Full Length Mock Test ${i}`,
-      type: "Full Mock",
-      qs: stats.questions,
-      marks: stats.marks,
-      duration: stats.duration,
-      isFree: false
-    });
-  }
+  const isSpecial20TestCourse = 
+    name.includes("neet") || 
+    name.includes("jee") || 
+    name.includes("ugc net paper 1") || 
+    name.includes("ugc net paper-1") ||
+    name.includes("upsc civil services prelims gs");
 
-  // 2. Subject Tests (3 tests per subject)
-  let stCounter = 1;
-  subjects.forEach((sub) => {
-    for (let i = 1; i <= 3; i++) {
+  if (isSpecial20TestCourse) {
+    // Generate exactly 20 mock tests
+    for (let i = 1; i <= 20; i++) {
       tests.push({
-        id: `st-${stCounter++}`,
-        name: `Subject Test ${i}: ${sub.name}`,
-        type: "Subject Test",
-        qs: sub.qs,
-        marks: sub.marks,
-        duration: sub.duration,
+        id: `fmt-${i}`,
+        name: `Complete Mock Test ${i}`,
+        type: "Full Mock",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
         isFree: false
       });
     }
-  });
-
-  // 3. Chapter Tests (3 tests per subject)
-  let ctCounter = 1;
-  subjects.forEach((sub) => {
-    const chapters = [
-      { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
-      { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
-      { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
-    ];
-    chapters.forEach((chap, chapIdx) => {
+  } else {
+    // 1. Full Length Mock Tests (10 tests)
+    for (let i = 1; i <= 10; i++) {
       tests.push({
-        id: `ct-${ctCounter++}`,
-        name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
-        type: "Chapter Test",
-        qs: chap.qs,
-        marks: chap.marks,
-        duration: chap.duration,
+        id: `fmt-${i}`,
+        name: `Full Length Mock Test ${i}`,
+        type: "Full Mock",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
         isFree: false
       });
-    });
-  });
+    }
 
-  // 4. Previous Year Papers (6 tests)
-  for (let i = 0; i < 6; i++) {
-    const year = 2020 + i;
-    tests.push({
-      id: `pyp-${i + 1}`,
-      name: `Previous Year Paper (${year} Exam)`,
-      type: "PYP",
-      qs: stats.questions,
-      marks: stats.marks,
-      duration: stats.duration,
-      isFree: false
+    // 2. Subject Tests (3 tests per subject)
+    let stCounter = 1;
+    subjects.forEach((sub) => {
+      for (let i = 1; i <= 3; i++) {
+        tests.push({
+          id: `st-${stCounter++}`,
+          name: `Subject Test ${i}: ${sub.name}`,
+          type: "Subject Test",
+          qs: sub.qs,
+          marks: sub.marks,
+          duration: sub.duration,
+          isFree: false
+        });
+      }
     });
+
+    // 3. Chapter Tests (3 tests per subject)
+    let ctCounter = 1;
+    subjects.forEach((sub) => {
+      const chapters = [
+        { prefix: "Foundation Concept Booster", qs: 15, marks: 30, duration: 15 },
+        { prefix: "Core Topic Evaluation", qs: 20, marks: 40, duration: 20 },
+        { prefix: "Advanced Practice Set", qs: 25, marks: 50, duration: 20 }
+      ];
+      chapters.forEach((chap, chapIdx) => {
+        tests.push({
+          id: `ct-${ctCounter++}`,
+          name: `Chapter Test ${chapIdx + 1}: ${sub.name} - ${chap.prefix}`,
+          type: "Chapter Test",
+          qs: chap.qs,
+          marks: chap.marks,
+          duration: chap.duration,
+          isFree: false
+        });
+      });
+    });
+
+    // 4. Previous Year Papers (6 tests)
+    for (let i = 0; i < 6; i++) {
+      const year = 2020 + i;
+      tests.push({
+        id: `pyp-${i + 1}`,
+        name: `Previous Year Paper (${year} Exam)`,
+        type: "PYP",
+        qs: stats.questions,
+        marks: stats.marks,
+        duration: stats.duration,
+        isFree: false
+      });
+    }
   }
 
-  // Set isFree flag per type/category: Exactly the first 4 of each type are free
-  const typeCounters: Record<string, number> = {};
-  tests.forEach((test) => {
+  // Set first 3 tests free, rest premium
+  tests.forEach((test, index) => {
     if (!isPremium) {
       test.isFree = true;
     } else {
-      const currentCount = typeCounters[test.type] || 0;
-      test.isFree = (currentCount < 4);
-      typeCounters[test.type] = currentCount + 1;
+      test.isFree = (index < 3);
     }
   });
 
@@ -1434,7 +1469,7 @@ export default function TestSeriesDetailsPage() {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
-                amount: parseFloat(orderData.coursePrice || "299")
+                amount: parseFloat(orderData.coursePrice || "99")
               })
             });
 
@@ -1575,17 +1610,11 @@ export default function TestSeriesDetailsPage() {
       }))
     : generateSubTestsList(course.name, course.premium);
 
-  // Dynamic free/paid runtime calculation: Exactly the first 4 of each type/category are free
-  const typeCounters: Record<string, number> = {};
   const subTestsList = rawSubTestsList.map(test => {
     let isFree = test.isFree;
-    const currentCount = typeCounters[test.type] || 0;
-    typeCounters[test.type] = currentCount + 1;
 
     if (!course.premium || isCoursePassActive) {
       isFree = true;
-    } else {
-      isFree = (currentCount < 4);
     }
 
     return {
@@ -1740,7 +1769,7 @@ export default function TestSeriesDetailsPage() {
                     Practice Tests in this Series
                   </h2>
                   <div className="flex items-center gap-1 text-[11px] bg-slate-100 border border-slate-200 rounded-full px-3 py-1 text-slate-600 font-bold">
-                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "First 4 Tests Free in Each Category" : "All Free Tests Included")}</span>
+                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "First 3 Tests Free" : "All Free Tests Included")}</span>
                   </div>
                 </div>
 
@@ -1883,10 +1912,10 @@ export default function TestSeriesDetailsPage() {
                   </span>
                   <div className="mt-4 flex items-baseline gap-2">
                     <span className="text-3xl font-black text-slate-900">
-                      {course.premium ? "₹299" : "FREE"}
+                      {course.premium ? `₹${parseFloat(course.price?.toString() || "99")}` : "FREE"}
                     </span>
                     <span className="text-xs font-semibold text-slate-500">
-                      {course.premium ? "/ Year" : "Mock Tests Included"}
+                      {course.premium ? "/ Month" : "Mock Tests Included"}
                     </span>
                   </div>
                 </div>
@@ -1894,7 +1923,7 @@ export default function TestSeriesDetailsPage() {
                 <div className="space-y-3 pt-2 border-t border-slate-100">
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
                     <span>Active Period</span>
-                    <span className="text-slate-800 font-bold">12 Months</span>
+                    <span className="text-slate-800 font-bold">{course.premium ? "1 Month" : "Lifetime"}</span>
                   </div>
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
                     <span>Format</span>
@@ -1921,7 +1950,7 @@ export default function TestSeriesDetailsPage() {
                   {!studentToken 
                     ? "Continue to Register" 
                     : (course.premium && !purchasedCourseIds.includes(course.id) && Number(studentProfile?.course_id) !== course.id) 
-                      ? "Buy Premium Pass - ₹299" 
+                      ? `Buy Premium Pass - ₹${parseFloat(course.price?.toString() || "99")}` 
                       : "Start Mock Test"}
                 </button>
 
@@ -1972,7 +2001,7 @@ export default function TestSeriesDetailsPage() {
                 }}
                 className="w-full py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs uppercase tracking-wider text-center transition active:scale-[0.98] cursor-pointer border-none shadow-md shadow-emerald-700/10"
               >
-                Get Premium Pass - ₹299 / Year
+                Get Premium Pass - ₹{parseFloat(course.price?.toString() || "99")} / Month
               </button>
               <button
                 onClick={() => setIsLockModalOpen(false)}
@@ -2008,9 +2037,9 @@ export default function TestSeriesDetailsPage() {
             <div className="flex justify-between items-center bg-slate-50 rounded-xl p-4 border border-slate-150 text-left">
               <div>
                 <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider">Premium Access</span>
-                <span className="text-sm font-semibold text-slate-800">1 Year Validity</span>
+                <span className="text-sm font-semibold text-slate-800">1 Month Validity</span>
               </div>
-              <span className="text-xl font-black text-emerald-700">₹{parseFloat(course.price?.toString() || "299")}.00</span>
+              <span className="text-xl font-black text-emerald-700">₹{parseFloat(course.price?.toString() || "99")}.00</span>
             </div>
 
             <div className="text-[11px] text-slate-500 font-medium leading-relaxed bg-slate-50/50 p-3 rounded-lg border border-slate-100 text-left">
