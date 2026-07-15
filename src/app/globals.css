@@ -97,4 +97,16 @@ textarea {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+.correct-option {
+  background-color: #f0fdf4 !important;
+  border-color: #22c55e !important;
+  color: #14532d !important;
+}
+
+.incorrect-option {
+  background-color: #fef2f2 !important;
+  border-color: #f87171 !important;
+  color: #991b1b !important;
+}
+
 

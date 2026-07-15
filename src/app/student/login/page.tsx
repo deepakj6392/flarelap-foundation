@@ -172,9 +172,16 @@ export default function StudentLoginPage() {
                   type="button"
                   onClick={handleSendOtp}
                   disabled={loading}
-                  className="px-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition active:scale-[0.98] border-none shrink-0 cursor-pointer"
+                  className="px-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition active:scale-[0.98] border-none shrink-0 cursor-pointer flex items-center justify-center gap-1.5"
                 >
-                  Send OTP
+                  {loading ? (
+                    <>
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send OTP"
+                  )}
                 </button>
               )}
             </div>

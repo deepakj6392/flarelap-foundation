@@ -253,9 +253,8 @@ export default function CBTTestAttemptPage() {
   }, []);
 
   const toggleFullscreen = () => {
-    if (!containerRef.current) return;
     if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen().catch((err) => {
+      document.documentElement.requestFullscreen().catch((err) => {
         console.error("Error attempting to enable full-screen:", err);
       });
     } else {
@@ -265,14 +264,17 @@ export default function CBTTestAttemptPage() {
 
   const startTest = () => {
     if (!isAgreed) {
-      Swal.fire("Agreement Required", "Please accept the declaration checkbox to begin.", "warning");
+      Swal.fire({
+        title: "Agreement Required",
+        text: "Please accept the declaration checkbox to begin.",
+        icon: "warning",
+        target: (document.fullscreenElement as HTMLElement) || "body"
+      });
       return;
     }
     setIsConsentScreen(false);
     // Request full screen on start
-    if (containerRef.current) {
-      containerRef.current.requestFullscreen().catch(() => {});
-    }
+    document.documentElement.requestFullscreen().catch(() => {});
   };
 
   // CBT scoring logic (+2 for correct, -0.5 for incorrect)
@@ -310,7 +312,8 @@ export default function CBTTestAttemptPage() {
       title: "Time Expired!",
       text: "Your mock test time has run out. Submitting your test automatically.",
       icon: "info",
-      confirmButtonText: "View Scorecard"
+      confirmButtonText: "View Scorecard",
+      target: (document.fullscreenElement as HTMLElement) || "body"
     }).then(() => {
       submitTestResults();
     });
@@ -321,23 +324,24 @@ export default function CBTTestAttemptPage() {
     const unanswered = questions.length - results.answered;
 
     Swal.fire({
-      title: "Submit Mock Test?",
+      title: "Final Submit Mock Test?",
       html: `
         <div class="text-left text-xs font-sans space-y-2 mt-2">
           <p class="font-bold text-slate-700">Are you sure you want to finish and submit the test?</p>
           <div class="bg-slate-50 p-3 rounded-lg border space-y-1">
             <div>• Answered: <span class="font-bold text-emerald-600">${results.answered}</span></div>
             <div>• Unanswered: <span class="font-bold text-slate-550">${unanswered}</span></div>
-            <div>• Marked for Review: <span class="font-bold text-indigo-600">${Object.keys(markedForReview).length}</span></div>
+            <div>• Reviewed: <span class="font-bold text-indigo-600">${Object.keys(markedForReview).length}</span></div>
           </div>
         </div>
       `,
       icon: "question",
       showCancelButton: true,
-      confirmButtonText: "Yes, Submit Test",
+      confirmButtonText: "Yes, Final Submit Test",
       cancelButtonText: "Keep Attempting",
       confirmButtonColor: "#047857",
-      cancelButtonColor: "#6b7280"
+      cancelButtonColor: "#6b7280",
+      target: (document.fullscreenElement as HTMLElement) || "body"
     }).then((res) => {
       if (res.isConfirmed) {
         submitTestResults();
@@ -350,7 +354,12 @@ export default function CBTTestAttemptPage() {
     const finalTestId = testDetails?.id || parseInt(testIdStr || "", 10);
 
     if (!studentToken || !finalTestId || !finalCourseId) {
-      Swal.fire("Error", "Missing auth token or test/course context parameters.", "error");
+      Swal.fire({
+        title: "Error",
+        text: "Missing auth token or test/course context parameters.",
+        icon: "error",
+        target: (document.fullscreenElement as HTMLElement) || "body"
+      });
       return;
     }
     setLoading(true);
@@ -405,7 +414,12 @@ export default function CBTTestAttemptPage() {
         throw new Error("Failed to save attempt in database.");
       }
     } catch (err: any) {
-      Swal.fire("Error Saving Results", err.message || "Failed to submit test.", "error");
+      Swal.fire({
+        title: "Error Saving Results",
+        text: err.message || "Failed to submit test.",
+        icon: "error",
+        target: (document.fullscreenElement as HTMLElement) || "body"
+      });
     } finally {
       setLoading(false);
     }
@@ -431,9 +445,8 @@ export default function CBTTestAttemptPage() {
     setAnswers(prev => ({ ...prev, [currentIndex]: optIdx }));
   };
 
-  const toggleReview = () => {
-    setMarkedForReview(prev => ({ ...prev, [currentIndex]: !prev[currentIndex] }));
-    handleNext();
+  const handleReviewCurrentQuestion = () => {
+    setMarkedForReview(prev => ({ ...prev, [currentIndex]: true }));
   };
 
   const clearResponse = () => {
@@ -697,24 +710,50 @@ export default function CBTTestAttemptPage() {
                   <div className="grid gap-3.5 max-w-2xl pt-2">
                     {currentQ.options.map((opt, optIdx) => {
                       const isChecked = selectedOpt === optIdx;
+                      const isCorrect = optIdx === currentQ.answer;
+
+                      let optionClass = "";
+                      if (isReviewed) {
+                        if (isCorrect) {
+                          optionClass = "correct-option font-bold ring-1 ring-green-600/15";
+                        } else {
+                          optionClass = "incorrect-option ring-1 ring-red-500/15";
+                        }
+                      } else {
+                        optionClass = isChecked
+                          ? "border-emerald-600 bg-emerald-50/50 text-emerald-900 font-bold ring-1 ring-emerald-600/15"
+                          : "border-slate-200 hover:border-slate-350 bg-white text-slate-650";
+                      }
+
                       return (
                         <button
                           key={optIdx}
-                          onClick={() => handleSelectOption(optIdx)}
-                          className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between cursor-pointer outline-none ${
-                            isChecked
-                              ? "border-emerald-600 bg-emerald-50/50 text-emerald-900 font-bold ring-1 ring-emerald-600/15"
-                              : "border-slate-200 hover:border-slate-350 bg-white text-slate-650"
-                          }`}
+                          onClick={() => !isReviewed && handleSelectOption(optIdx)}
+                          disabled={isReviewed}
+                          className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between outline-none ${
+                            isReviewed ? "cursor-not-allowed" : "cursor-pointer"
+                          } ${optionClass}`}
                         >
                           <span>{optIdx + 1}. {opt}</span>
-                          <span className={`h-4.5 w-4.5 rounded-full border flex items-center justify-center shrink-0 ${
-                            isChecked 
-                              ? "border-emerald-600 text-emerald-600" 
-                              : "border-slate-300"
-                          }`}>
-                            {isChecked && <span className="h-2 w-2 rounded-full bg-emerald-600" />}
-                          </span>
+                          {isReviewed ? (
+                            isCorrect ? (
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-white shrink-0">
+                                <CheckCircle2 className="h-3.5 w-3.5" />
+                              </span>
+                            ) : (
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-white shrink-0">
+                                <X className="h-3.5 w-3.5" />
+                              </span>
+                            )
+                          ) : (
+                            <span className={`h-4.5 w-4.5 rounded-full border flex items-center justify-center shrink-0 ${
+                              isChecked 
+                                ? "border-emerald-600 text-emerald-600" 
+                                : "border-slate-300"
+                            }`}>
+                              {isChecked && <span className="h-2 w-2 rounded-full bg-emerald-600" />}
+                            </span>
+                          )}
                         </button>
                       );
                     })}
@@ -727,14 +766,16 @@ export default function CBTTestAttemptPage() {
               <div className="border-t pt-5 flex flex-wrap items-center justify-between gap-4 mt-8 shrink-0">
                 <div className="flex gap-3">
                   <button 
-                    onClick={toggleReview}
-                    className="px-5 py-3 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 text-indigo-750 font-bold rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer"
+                    onClick={handleReviewCurrentQuestion}
+                    disabled={isReviewed}
+                    className="px-5 py-3 bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 text-indigo-750 font-bold rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Mark for Review & Next
+                    Review
                   </button>
                   <button 
                     onClick={clearResponse}
-                    className="px-5 py-3 bg-white border hover:bg-slate-50 text-slate-700 font-bold rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer"
+                    disabled={isReviewed}
+                    className="px-5 py-3 bg-white border hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed text-slate-700 font-bold rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer"
                   >
                     Clear Response
                   </button>
@@ -760,7 +801,7 @@ export default function CBTTestAttemptPage() {
                       onClick={confirmSubmitTest}
                       className="px-7 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer border-none shadow"
                     >
-                      Submit Test
+                      Final Submit Test
                     </button>
                   )}
                 </div>
@@ -837,7 +878,7 @@ export default function CBTTestAttemptPage() {
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-2">
                         <span className="h-3 w-3 rounded-sm bg-indigo-600" />
-                        <span>Mark for Review</span>
+                        <span>Reviewed</span>
                       </div>
                       <span className="font-extrabold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded-md">{reviewCount}</span>
                     </div>
@@ -850,7 +891,7 @@ export default function CBTTestAttemptPage() {
                   className="w-full py-3 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-700 hover:to-red-700 text-white font-black rounded-xl text-xs uppercase tracking-wider transition active:scale-[0.98] cursor-pointer border-none shadow-md shadow-rose-700/10 flex items-center justify-center gap-2"
                 >
                   <CheckCircle2 className="h-4.5 w-4.5" />
-                  Submit Test
+                  Final Submit Test
                 </button>
               </div>
 

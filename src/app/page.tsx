@@ -18,7 +18,8 @@ import {
   Compass,
   FileText,
   Clock,
-  Sparkles
+  Sparkles,
+  Loader2
 } from "lucide-react";
 
 const focusAreas = [
@@ -852,9 +853,16 @@ export default function Home() {
                     <button
                       type="submit"
                       disabled={newsletterStatus === "loading"}
-                      className="w-full sm:w-auto shrink-0 rounded-full bg-emerald-700 hover:bg-emerald-800 px-6 py-3 text-xs font-bold text-white shadow-md transition disabled:opacity-50"
+                      className="w-full sm:w-auto shrink-0 rounded-full bg-emerald-700 hover:bg-emerald-800 px-6 py-3 text-xs font-bold text-white shadow-md transition disabled:opacity-50 flex items-center justify-center gap-1.5"
                     >
-                      {newsletterStatus === "loading" ? "Subscribing..." : "Subscribe Now"}
+                      {newsletterStatus === "loading" ? (
+                        <>
+                          <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                          Subscribing...
+                        </>
+                      ) : (
+                        "Subscribe Now"
+                      )}
                     </button>
                   </div>
                 </form>

@@ -6,6 +6,7 @@ import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { sampleImages } from "@/constants/images";
 import { siteConfig } from "@/constants/site";
+import { Loader2 } from "lucide-react";
 
 export default function ContactPage() {
 	const [name, setName] = useState("");
@@ -119,9 +120,16 @@ export default function ContactPage() {
 										<button
 											type="submit"
 											disabled={status === "loading"}
-											className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-800 transition disabled:opacity-50"
+											className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-800 transition disabled:opacity-50 gap-1.5"
 										>
-											{status === "loading" ? "Sending..." : "Send message"}
+											{status === "loading" ? (
+												<>
+													<Loader2 className="h-4 w-4 animate-spin" />
+													Sending...
+												</>
+											) : (
+												"Send message"
+											)}
 										</button>
 
 										{statusMessage && (

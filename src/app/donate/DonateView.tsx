@@ -21,7 +21,8 @@ import {
   Briefcase,
   Play,
   Plus,
-  Minus
+  Minus,
+  Loader2
 } from "lucide-react";
 
 const INDIAN_STATES = [
@@ -627,9 +628,16 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                       <button
                         type="submit"
                         disabled={status === "loading"}
-                        className="px-8 py-2.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-base font-bold shadow-sm transition disabled:opacity-50"
+                        className="px-8 py-2.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-base font-bold shadow-sm transition disabled:opacity-50 flex items-center justify-center gap-1.5"
                       >
-                        {status === "loading" ? "Processing..." : "Pay"}
+                        {status === "loading" ? (
+                          <>
+                            <Loader2 className="h-4.5 w-4.5 animate-spin" />
+                            Processing...
+                          </>
+                        ) : (
+                          "Pay"
+                        )}
                       </button>
                     </div>
                   </form>
