@@ -140,7 +140,7 @@ export default function StudentDashboardPage() {
           </div>
           <Link
             href="/student/dashboard/materials"
-            className="self-start md:self-auto shrink-0 rounded-2xl bg-white hover:bg-emerald-50 text-emerald-850 px-6 py-3.5 text-xs font-black shadow-lg shadow-emerald-950/20 transition-all hover:scale-[1.02] text-center"
+            className="self-start md:self-auto shrink-0 rounded-2xl bg-white hover:bg-emerald-50 text-slate-900 px-6 py-3.5 text-xs font-black shadow-lg shadow-emerald-950/20 transition-all hover:scale-[1.02] text-center"
           >
             Explore Study Materials
           </Link>
