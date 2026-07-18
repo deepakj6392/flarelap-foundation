@@ -47,6 +47,15 @@ function createPRNG(seed: number) {
   };
 }
 
+const getSwalTarget = (): HTMLElement | string => {
+  if (typeof document === 'undefined') return "body";
+  const fsEl = document.fullscreenElement;
+  if (fsEl && fsEl !== document.documentElement) {
+    return fsEl as HTMLElement;
+  }
+  return "body";
+};
+
 export default function CBTTestAttemptPage() {
   const params = useParams();
   const router = useRouter();
@@ -268,7 +277,7 @@ export default function CBTTestAttemptPage() {
         title: "Agreement Required",
         text: "Please accept the declaration checkbox to begin.",
         icon: "warning",
-        target: (document.fullscreenElement as HTMLElement) || "body"
+        target: getSwalTarget()
       });
       return;
     }
@@ -313,7 +322,7 @@ export default function CBTTestAttemptPage() {
       text: "Your mock test time has run out. Submitting your test automatically.",
       icon: "info",
       confirmButtonText: "View Scorecard",
-      target: (document.fullscreenElement as HTMLElement) || "body"
+      target: getSwalTarget()
     }).then(() => {
       submitTestResults();
     });
@@ -341,7 +350,7 @@ export default function CBTTestAttemptPage() {
       cancelButtonText: "Keep Attempting",
       confirmButtonColor: "#047857",
       cancelButtonColor: "#6b7280",
-      target: (document.fullscreenElement as HTMLElement) || "body"
+      target: getSwalTarget()
     }).then((res) => {
       if (res.isConfirmed) {
         submitTestResults();
@@ -358,7 +367,7 @@ export default function CBTTestAttemptPage() {
         title: "Error",
         text: "Missing auth token or test/course context parameters.",
         icon: "error",
-        target: (document.fullscreenElement as HTMLElement) || "body"
+        target: getSwalTarget()
       });
       return;
     }
@@ -418,7 +427,7 @@ export default function CBTTestAttemptPage() {
         title: "Error Saving Results",
         text: err.message || "Failed to submit test.",
         icon: "error",
-        target: (document.fullscreenElement as HTMLElement) || "body"
+        target: getSwalTarget()
       });
     } finally {
       setLoading(false);
