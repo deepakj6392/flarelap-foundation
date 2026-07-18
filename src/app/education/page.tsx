@@ -221,7 +221,7 @@ const courseToCategory: { [key: string]: string } = {
   "ssc jht (junior hindi translator) mock test": "SSC",
   "ssc selection post mock test": "SSC",
   "ssc departmental exams mock test": "SSC",
-  "cuet pg mock test": "PG Entrance Exam",
+  "cuet pg mock test": "UG Entrance Exam",
   "iit jam mock test": "PG Entrance Exam",
   "gate (pg/m.tech) mock test": "PG Entrance Exam",
   "cat (mba) mock test": "PG Entrance Exam",
@@ -231,9 +231,9 @@ const courseToCategory: { [key: string]: string } = {
   "neet pg (medical) mock test": "PG Entrance Exam",
   "gpat (pharmacy) mock test": "PG Entrance Exam",
   "clat pg (law) mock test": "PG Entrance Exam",
-  "tiss cuet pg mock test": "PG Entrance Exam",
+  "tiss cuet pg mock test": "UG Entrance Exam",
   "nimcet (mca) mock test": "PG Entrance Exam",
-  "jnu pg entrance (cuet pg route) mock test": "PG Entrance Exam",
+  "jnu pg entrance (cuet pg route) mock test": "UG Entrance Exam",
   "university specific pg entrance exams mock test": "PG Entrance Exam",
   "rbi grade b mock test": "Regulatory Body Exams",
   "rbi assistant mock test": "Banking & Insurance",
@@ -244,42 +244,42 @@ const courseToCategory: { [key: string]: string } = {
   "sidbi grade a mock test": "Regulatory Body Exams",
   "ifsca grade a mock test": "Regulatory Body Exams",
   "ibbi exam mock test": "Regulatory Body Exams",
-  "ctet mock test": "Teaching Exams",
-  "state tet (htet, uptet, reet, btet, etc.) mock test": "Teaching Exams",
-  "ugc net mock test": "Teaching Exams",
-  "csir net mock test": "Teaching Exams",
-  "kvs teacher exam mock test": "Teaching Exams",
-  "nvs teacher exam mock test": "Teaching Exams",
-  "dsssb teacher exam mock test": "Teaching Exams",
-  "tgt exam mock test": "Teaching Exams",
-  "pgt exam mock test": "Teaching Exams",
-  "prt exam mock test": "Teaching Exams",
-  "b.ed entrance exam mock test": "Teaching Exams",
-  "m.ed entrance exam mock test": "Teaching Exams",
-  "set (state eligibility test) mock test": "Teaching Exams",
-  "up tgt school teacher mock test": "Teaching Exams",
-  "up pgt school teacher mock test": "Teaching Exams",
-  "dsssb tgt mock test": "Teaching Exams",
-  "kvs pgt mock test": "Teaching Exams",
-  "up b.ed joint entrance exam mock test": "Teaching Exams",
-  "bihar b.ed cet mock test": "Teaching Exams",
-  "delhi university b.ed entrance mock test": "Teaching Exams",
-  "ctet paper 1 child pedagogy": "Teaching Exams",
-  "ctet paper 2 child pedagogy": "Teaching Exams",
-  "uptet paper 1 mock test": "Teaching Exams",
-  "super tet primary teacher mock test": "Teaching Exams",
-  "iti fitter semester 1 mock test": "ITI Exams",
-  "iti fitter semester 2 mock test": "ITI Exams",
-  "iti fitter yearly theory mock test": "ITI Exams",
-  "iti electrician semester 1 mock test": "ITI Exams",
-  "iti electrician semester 2 mock test": "ITI Exams",
-  "iti electrician yearly theory mock test": "ITI Exams",
-  "iti electronic mechanic semester 1 mock test": "ITI Exams",
-  "iti electronic mechanic semester 2 mock test": "ITI Exams",
-  "iti electronic mechanic yearly theory mock test": "ITI Exams",
-  "iti fitter trade theory mock test": "ITI Exams",
-  "iti electrician trade theory mock test": "ITI Exams",
-  "iti electronic mechanic trade theory mock test": "ITI Exams",
+  "ctet mock test": "Teaching Exam",
+  "state tet (htet, uptet, reet, btet, etc.) mock test": "Teaching Exam",
+  "ugc net mock test": "NET/SET",
+  "csir net mock test": "NET/SET",
+  "kvs teacher exam mock test": "Teaching Exam",
+  "nvs teacher exam mock test": "Teaching Exam",
+  "dsssb teacher exam mock test": "Teaching Exam",
+  "tgt exam mock test": "Teaching Exam",
+  "pgt exam mock test": "Teaching Exam",
+  "prt exam mock test": "Teaching Exam",
+  "b.ed entrance exam mock test": "Teaching Exam",
+  "m.ed entrance exam mock test": "Teaching Exam",
+  "set (state eligibility test) mock test": "NET/SET",
+  "up tgt school teacher mock test": "Teaching Exam",
+  "up pgt school teacher mock test": "Teaching Exam",
+  "dsssb tgt mock test": "Teaching Exam",
+  "kvs pgt mock test": "Teaching Exam",
+  "up b.ed joint entrance exam mock test": "Teaching Exam",
+  "bihar b.ed cet mock test": "Teaching Exam",
+  "delhi university b.ed entrance mock test": "Teaching Exam",
+  "ctet paper 1 child pedagogy": "Teaching Exam",
+  "ctet paper 2 child pedagogy": "Teaching Exam",
+  "uptet paper 1 mock test": "Teaching Exam",
+  "super tet primary teacher mock test": "Teaching Exam",
+  "iti fitter semester 1 mock test": "ITI Exam",
+  "iti fitter semester 2 mock test": "ITI Exam",
+  "iti fitter yearly theory mock test": "ITI Exam",
+  "iti electrician semester 1 mock test": "ITI Exam",
+  "iti electrician semester 2 mock test": "ITI Exam",
+  "iti electrician yearly theory mock test": "ITI Exam",
+  "iti electronic mechanic semester 1 mock test": "ITI Exam",
+  "iti electronic mechanic semester 2 mock test": "ITI Exam",
+  "iti electronic mechanic yearly theory mock test": "ITI Exam",
+  "iti fitter trade theory mock test": "ITI Exam",
+  "iti electrician trade theory mock test": "ITI Exam",
+  "iti electronic mechanic trade theory mock test": "ITI Exam",
   "rrb je civil engineering mock test": "Engineering Test",
   "rrb je electrical engineering mock test": "Engineering Test",
   "rrb je mechanical engineering mock test": "Engineering Test",
@@ -311,24 +311,35 @@ const courseToCategory: { [key: string]: string } = {
   "gate aerospace engineering mock test": "Engineering Test",
   "gate instrumentation engineering mock test": "Engineering Test",
   "isro instrumentation mock test": "Engineering Test",
-  "delhi judiciary service mock test": "Judiciary Exams",
-  "up civil judge junior mock test": "Judiciary Exams",
-  "bihar judiciary exam mock test": "Judiciary Exams",
-  "mp judiciary service mock test": "Judiciary Exams",
-  "rajasthan judiciary mock test": "Judiciary Exams",
-  "haryana judiciary exam mock test": "Judiciary Exams",
-  "punjab judiciary exam mock test": "Judiciary Exams",
-  "gujarat judiciary exam mock test": "Judiciary Exams",
-  "maharashtra judiciary exam mock test": "Judiciary Exams",
-  "west bengal judiciary exam mock test": "Judiciary Exams",
-  "himachal pradesh judiciary exam mock test": "Judiciary Exams",
-  "jharkhand judiciary exam mock test": "Judiciary Exams",
-  "chhattisgarh judiciary exam mock test": "Judiciary Exams",
-  "uttarakhand judiciary exam mock test": "Judiciary Exams",
-  "odisha judiciary exam mock test": "Judiciary Exams",
-  "karnataka judiciary exam mock test": "Judiciary Exams",
-  "tamil nadu judiciary exam mock test": "Judiciary Exams",
-  "andhra pradesh judiciary exam mock test": "Judiciary Exams",
+  "delhi judiciary service mock test": "Judiciary Exam",
+  "up civil judge junior mock test": "Judiciary Exam",
+  "bihar judiciary exam mock test": "Judiciary Exam",
+  "mp judiciary service mock test": "Judiciary Exam",
+  "rajasthan judiciary mock test": "Judiciary Exam",
+  "haryana judiciary exam mock test": "Judiciary Exam",
+  "punjab judiciary exam mock test": "Judiciary Exam",
+  "gujarat judiciary exam mock test": "Judiciary Exam",
+  "maharashtra judiciary exam mock test": "Judiciary Exam",
+  "west bengal judiciary exam mock test": "Judiciary Exam",
+  "himachal pradesh judiciary exam mock test": "Judiciary Exam",
+  "jharkhand judiciary exam mock test": "Judiciary Exam",
+  "chhattisgarh judiciary exam mock test": "Judiciary Exam",
+  "uttarakhand judiciary exam mock test": "Judiciary Exam",
+  "odisha judiciary exam mock test": "Judiciary Exam",
+  "karnataka judiciary exam mock test": "Judiciary Exam",
+  "tamil nadu judiciary exam mock test": "Judiciary Exam",
+  "andhra pradesh judiciary exam mock test": "Judiciary Exam",
+  "telangana judiciary exam mock test": "Judiciary Exam",
+  "kerala judiciary exam mock test": "Judiciary Exam",
+  "assam judiciary exam mock test": "Judiciary Exam",
+  "jammu & kashmir judiciary exam mock test": "Judiciary Exam",
+  "goa judiciary exam mock test": "Judiciary Exam",
+  "tripura judiciary exam mock test": "Judiciary Exam",
+  "manipur judiciary exam mock test": "Judiciary Exam",
+  "meghalaya judiciary exam mock test": "Judiciary Exam",
+  "nagaland judiciary exam mock test": "Judiciary Exam",
+  "arunachal pradesh judiciary exam mock test": "Judiciary Exam",
+  "sikkim judiciary exam mock test": "Judiciary Exam",
   "aiims paramedical entrance exam mock test": "Paramedical Exams",
   "pgimer paramedical entrance mock test": "Paramedical Exams",
   "jipmer paramedical entrance mock test": "Paramedical Exams",
@@ -359,21 +370,21 @@ const courseToCategory: { [key: string]: string } = {
   "sbi clerk preliminary mock test": "Banking & Insurance",
   "ibps po preliminary mock test": "Banking & Insurance",
   "ibps clerk preliminary mock test": "Banking & Insurance",
-  "uppsc pcs prelims mock test": "State Exams",
-  "bpsc pcs prelims mock test": "State Exams",
-  "mppsc pcs prelims mock test": "State Exams",
-  "ras rajasthan pcs mock test": "State Exams",
-  "mpsc maharashtra pcs mock test": "State Exams",
-  "state psc gs paper 1 mock test": "State Exams",
-  "state psc gs paper 2 mock test": "State Exams",
+  "uppsc pcs prelims mock test": "State Exam",
+  "bpsc pcs prelims mock test": "State Exam",
+  "mppsc pcs prelims mock test": "State Exam",
+  "ras rajasthan pcs mock test": "State Exam",
+  "mpsc maharashtra pcs mock test": "State Exam",
+  "state psc gs paper 1 mock test": "State Exam",
+  "state psc gs paper 2 mock test": "State Exam",
+  "state pcs gs practice": "State Exam",
   "nda general ability mock test": "Defence Exams",
   "cds elementary mathematics mock test": "Defence Exams",
   "cds general knowledge mock test": "Defence Exams",
   "afcat entry mock test": "Defence Exams",
   "capf assistant commandant mock test": "Defence Exams",
   "indian airforce x/y group mock test": "Defence Exams",
-  "upsc civil services prelims gs 1 mock test": "Civil Services",
-  "upsc civil services prelims csat mock test": "Civil Services",
+  "upsc civil services prelims gs mock test": "Civil Services",
   "up police constable mock test": "Police Exams",
   "up police si mock test": "Police Exams",
   "delhi police constable mock test": "Police Exams",
@@ -382,36 +393,36 @@ const courseToCategory: { [key: string]: string } = {
   "emrs non-teaching staff mock test": "Non - Teaching Exams",
   "dsssb non-teaching assistant mock test": "Non - Teaching Exams",
   "kvs non-teaching clerk mock test": "Non - Teaching Exams",
-  "ugc net paper 1 general aptitude": "NET/SET Exams",
+  "ugc net paper 1 general aptitude": "NET/SET",
   "ugc net commerce paper 2 mock test": "Accounting and Commerce",
-  "ugc net computer science mock test": "NET/SET Exams",
-  "csir net life sciences mock test": "NET/SET Exams",
-  "ugc net paper 1 mock test series": "NET/SET Exams",
-  "ugc net economics mock test": "NET/SET Exams",
-  "ugc net political science mock test": "NET/SET Exams",
-  "ugc net philosophy mock test": "NET/SET Exams",
-  "ugc net psychology mock test": "NET/SET Exams",
-  "ugc net sociology mock test": "NET/SET Exams",
-  "ugc net history mock test": "NET/SET Exams",
-  "ugc net anthropology mock test": "NET/SET Exams",
-  "ugc net commerce mock test": "NET/SET Exams",
-  "ugc net education mock test": "NET/SET Exams",
-  "ugc net social work mock test": "NET/SET Exams",
-  "ugc net defence studies mock test": "NET/SET Exams",
-  "ugc net home science mock test": "NET/SET Exams",
-  "ugc net public administration mock test": "NET/SET Exams",
-  "ugc net population studies mock test": "NET/SET Exams",
-  "ugc net music mock test": "NET/SET Exams",
+  "ugc net computer science mock test": "NET/SET",
+  "csir net life sciences mock test": "NET/SET",
+  "ugc net paper 1 mock test series": "NET/SET",
+  "ugc net economics mock test": "NET/SET",
+  "ugc net political science mock test": "NET/SET",
+  "ugc net philosophy mock test": "NET/SET",
+  "ugc net psychology mock test": "NET/SET",
+  "ugc net sociology mock test": "NET/SET",
+  "ugc net history mock test": "NET/SET",
+  "ugc net anthropology mock test": "NET/SET",
+  "ugc net commerce mock test": "NET/SET",
+  "ugc net education mock test": "NET/SET",
+  "ugc net social work mock test": "NET/SET",
+  "ugc net defence studies mock test": "NET/SET",
+  "ugc net home science mock test": "NET/SET",
+  "ugc net public administration mock test": "NET/SET",
+  "ugc net population studies mock test": "NET/SET",
+  "ugc net music mock test": "NET/SET",
   "fssai central food safety officer mock test": "Food Technology",
   "fssai technical officer mock test": "Food Technology",
   "state food safety officer mock test": "Food Technology",
   "aiims norcet nursing officer mock test": "Nursing Recruitment Exams",
   "esic staff nurse recruitment mock test": "Nursing Recruitment Exams",
   "dsssb nursing officer mock test": "Nursing Recruitment Exams",
-  "cuet ug general test mock test": "UG Entrance Exams",
-  "cuet ug section iii general test mock test": "UG Entrance Exams",
-  "cuet ia english mock test": "UG Entrance Exams",
-  "cuet physics & chemistry mock test": "UG Entrance Exams",
+  "cuet ug general test mock test": "UG Entrance Exam",
+  "cuet ug section iii general test mock test": "UG Entrance Exam",
+  "cuet ia english mock test": "UG Entrance Exam",
+  "cuet physics & chemistry mock test": "UG Entrance Exam",
   "neet ug complete practice mock test": "NEET",
   "neet ug mock test series": "NEET",
   "jee main physics & chemistry mock test": "JEE",
@@ -449,6 +460,10 @@ const courseToCategory: { [key: string]: string } = {
   "delhi gk mock test": "State GK",
   "puducherry gk mock test": "State GK",
   "ladakh gk mock test": "State GK",
+  "andaman & nicobar gk mock test": "State GK",
+  "chandigarh gk mock test": "State GK",
+  "dadra & nagar haveli & daman & diu gk mock test": "State GK",
+  "lakshadweep gk mock test": "State GK",
   "indian history mock test": "Indian Studies",
   "indian geography mock test": "Indian Studies",
   "indian polity & constitution mock test": "Indian Studies",
@@ -475,8 +490,8 @@ const getCategoryForCourse = (courseName: string): string => {
   if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
     return "Paramedical Exams";
   }
-  if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("net") || name.includes("set") || name.includes("m.ed")) {
-    return "Teaching Exams";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("m.ed")) {
+    return "Teaching Exam";
   }
   if (name.includes("rbi") || name.includes("sebi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
     return "Regulatory Body Exams";
@@ -485,7 +500,7 @@ const getCategoryForCourse = (courseName: string): string => {
     return "PG Entrance Exam";
   }
   if (name.includes("fitter") || name.includes("electrician") || name.includes("electronic mechanic") || name.includes("iti")) {
-    return "ITI Exams";
+    return "ITI Exam";
   }
   if (name.includes("mechanical") || name.includes("civil engineering") || name.includes("electrical engineering") || name.includes("electronics &") || name.includes("computer science &") || name.includes("instrumentation")) {
     return "Engineering Test";
@@ -496,7 +511,10 @@ const getCategoryForCourse = (courseName: string): string => {
   if (name.includes("jee")) {
     return "JEE";
   }
-  return "State Exams";
+  if (name.includes("net") || name.includes("set")) {
+    return "NET/SET";
+  }
+  return "State Exam";
 };
 
 
@@ -519,6 +537,12 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("neet") && !name.includes("allied")) {
+    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
+  }
+  if (name.includes("jee")) {
+    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
+  }
   if (name.includes("aiims paramedical")) {
     return { questions: 90, marks: 90, duration: 90, language: "English, Hindi" };
   }
@@ -801,8 +825,17 @@ const getRealExamStats = (courseName: string): RealExamStats => {
 const getCourseMetadata = (courseName: string, courseId: number, isPremium: boolean): CourseMetadata => {
   const hash = courseName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) + (courseId || 0);
   const userCount = ((hash % 400) + 400).toFixed(1) + "k";
-  const totalTests = 150;
-  const freeTests = isPremium ? 3 : 150;
+  
+  const name = courseName.toLowerCase();
+  const isSpecial20TestCourse = 
+    name.includes("neet") || 
+    name.includes("jee") || 
+    name.includes("ugc net paper 1") || 
+    name.includes("ugc net paper-1") ||
+    name.includes("upsc civil services prelims gs");
+
+  const totalTests = isSpecial20TestCourse ? 20 : 150;
+  const freeTests = 3;
   
   const stats = getRealExamStats(courseName);
 
@@ -816,22 +849,26 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
   const icons: ("award" | "book" | "text" | "globe")[] = ["award", "book", "text", "globe"];
   const iconName = icons[hash % icons.length];
 
+  const bullets = isSpecial20TestCourse 
+    ? [
+        "3 Full Mock Tests (Free)",
+        "17 Premium Pass Tests",
+        "2026 Exam Pattern Aligned",
+        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
+      ]
+    : [
+        "3 Full Mock Tests (Free)",
+        `${totalTests - 3} Premium Pass Tests`,
+        "Comprehensive Syllabus Cover",
+        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
+      ];
+
   return {
     users: `${userCount} Users`,
     totalTests,
     freeTests,
     languages: stats.language,
-    bullets: isPremium ? [
-      "2 Full Mock Tests (Free)",
-      "1 Subject Test (Free)",
-      "147 Premium Pass Tests",
-      `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
-    ] : [
-      "5 Full Length Mock Tests",
-      "3 Subject Practice Tests",
-      "142 Chapter Practice Tests",
-      `100% Free Access for All`
-    ],
+    bullets,
     gradient,
     iconName
   };
@@ -876,13 +913,13 @@ export default function EducationPage() {
   };
 
   const categoryOrder = [
-    "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams",
-    "ITI Exams", "AE/JE Exams", "Judiciary Exams", "Paramedical Exams",
-    "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
-    "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET Exams",
+    "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exam",
+    "ITI Exam", "Judiciary Exam", "Paramedical Exams",
+    "Railways", "Banking & Insurance", "State Exam", "Defence Exams",
+    "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET",
     "Food Technology", "Nursing Recruitment Exams", "Engineering Test",
     "Accounting and Commerce", "Campus Placements", "NRA CET",
-    "Government Organizations", "UG Entrance Exams", "NEET", "JEE",
+    "Government Organizations", "UG Entrance Exam", "NEET", "JEE",
     "MBA Entrance Exam", "State GK", "Indian Studies"
   ];
 
@@ -1051,13 +1088,13 @@ export default function EducationPage() {
                 <div className="w-full md:w-64 border-r border-slate-100 bg-white overflow-y-auto hidden md:block">
                   <ul className="flex flex-col py-2">
                     {[
-                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams",
-                      "ITI Exams", "AE/JE Exams", "Judiciary Exams", "Paramedical Exams",
-                      "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
-                      "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET Exams",
+                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exam",
+                      "ITI Exam", "Judiciary Exam", "Paramedical Exams",
+                      "Railways", "Banking & Insurance", "State Exam", "Defence Exams",
+                      "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET",
                       "Food Technology", "Nursing Recruitment Exams", "Engineering Test",
                       "Accounting and Commerce", "Campus Placements", "NRA CET",
-                      "Government Organizations", "UG Entrance Exams", "NEET", "JEE",
+                      "Government Organizations", "UG Entrance Exam", "NEET", "JEE",
                       "MBA Entrance Exam", "State GK", "Indian Studies"
                     ].map((cat, idx) => (
                       <li key={idx}>
@@ -1079,13 +1116,13 @@ export default function EducationPage() {
                 <div className="w-full border-b border-slate-100 bg-white overflow-x-auto md:hidden scrollbar-hide">
                   <ul className="flex flex-row py-2 px-4 whitespace-nowrap gap-2">
                     {[
-                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exams",
-                      "ITI Exams", "AE/JE Exams", "Judiciary Exams", "Paramedical Exams",
-                      "Railways", "Banking & Insurance", "State Exams", "Defence Exams",
-                      "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET Exams",
+                      "All", "SSC", "PG Entrance Exam", "Regulatory Body Exams", "Teaching Exam",
+                      "ITI Exam", "Judiciary Exam", "Paramedical Exams",
+                      "Railways", "Banking & Insurance", "State Exam", "Defence Exams",
+                      "Civil Services", "Police Exams", "Non - Teaching Exams", "NET/SET",
                       "Food Technology", "Nursing Recruitment Exams", "Engineering Test",
                       "Accounting and Commerce", "Campus Placements", "NRA CET",
-                      "Government Organizations", "UG Entrance Exams", "NEET", "JEE",
+                      "Government Organizations", "UG Entrance Exam", "NEET", "JEE",
                       "MBA Entrance Exam", "State GK", "Indian Studies"
                     ].map((cat, idx) => (
                       <li key={idx}>
@@ -1136,7 +1173,7 @@ export default function EducationPage() {
                                       ? "bg-purple-600 text-white shadow-xs"
                                       : "bg-emerald-600 text-white shadow-xs"
                                   }`}>
-                                    {course.premium ? "Paid" : "Free"}
+                                    {course.premium ? `₹${Number(course.price || 99).toFixed(0)}/Month` : "Free"}
                                   </span>
                                 </div>
                               </div>

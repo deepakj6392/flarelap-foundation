@@ -77,6 +77,12 @@ interface RealExamStats {
 
 const getRealExamStats = (courseName: string): RealExamStats => {
   const name = courseName.toLowerCase();
+  if (name.includes("neet") && !name.includes("allied")) {
+    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
+  }
+  if (name.includes("jee")) {
+    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
+  }
   if (name.includes("aiims paramedical")) {
     return { questions: 90, marks: 90, duration: 90, language: "English, Hindi" };
   }
@@ -400,9 +406,9 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
     name.includes("ugc net paper 1") || 
     name.includes("ugc net paper-1") ||
     name.includes("upsc civil services prelims gs");
-  
+
   const totalTests = isSpecial20TestCourse ? 20 : 150;
-  const freeTests = isPremium ? 3 : totalTests;
+  const freeTests = 3;
   
   const stats = getRealExamStats(courseName);
 
@@ -416,22 +422,26 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
   const icons: ("award" | "book" | "text" | "globe")[] = ["award", "book", "text", "globe"];
   const iconName = icons[hash % icons.length];
 
+  const bullets = isSpecial20TestCourse 
+    ? [
+        "3 Full Mock Tests (Free)",
+        "17 Premium Pass Tests",
+        "2026 Exam Pattern Aligned",
+        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
+      ]
+    : [
+        "3 Full Mock Tests (Free)",
+        `${totalTests - 3} Premium Pass Tests`,
+        "Comprehensive Syllabus Cover",
+        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
+      ];
+
   return {
     users: `${userCount} Users`,
     totalTests,
     freeTests,
     languages: stats.language,
-    bullets: isPremium ? [
-      "3 Mock Tests (Free)",
-      `${totalTests - 3} Premium Pass Tests`,
-      "Unlimited access during subscription",
-      `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
-    ] : [
-      "5 Full Length Mock Tests",
-      "3 Subject Practice Tests",
-      `${totalTests - 8} Chapter Practice Tests`,
-      `100% Free Access for All`
-    ],
+    bullets,
     gradient,
     iconName
   };
