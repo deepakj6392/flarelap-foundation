@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://flarelap.org",
   ogImage: "/samples/community.svg",
   email: "contact@flarelap.org",
-  phone: "+919729817600",
+  phone: "",
   location: "India",
   address: "Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.",
   navItems: [

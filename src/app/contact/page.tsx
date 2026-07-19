@@ -163,12 +163,6 @@ export default function ContactPage() {
 										{contactInfo.email}
 									</a>
 								</p>
-								<p className="mt-2 text-sm text-slate-700">
-									Phone:{" "}
-									<a href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`} className="text-emerald-700 hover:underline font-bold">
-										{contactInfo.phone}
-									</a>
-								</p>
 							</div>
 
 							<div className="rounded-lg bg-white p-6 shadow-sm">

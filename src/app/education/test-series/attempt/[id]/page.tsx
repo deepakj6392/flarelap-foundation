@@ -20,6 +20,8 @@ import {
   Loader2
 } from "lucide-react";
 import Swal from "sweetalert2";
+import { translateTextToHindi, translateOptionToHindi } from "@/lib/translator";
+
 
 interface MCQQuestion {
   id: number;
@@ -711,7 +713,7 @@ export default function CBTTestAttemptPage() {
                 <div className="space-y-5 text-sm font-semibold text-slate-800 leading-relaxed font-sans text-left">
                   <p className="font-black text-slate-955 text-base leading-snug">
                     {language === "Hindi" 
-                      ? `[अनुवादित] ${currentQ.question}`
+                      ? translateTextToHindi(currentQ.question)
                       : currentQ.question}
                   </p>
                   
@@ -730,8 +732,8 @@ export default function CBTTestAttemptPage() {
                         }
                       } else {
                         optionClass = isChecked
-                          ? "border-emerald-600 bg-emerald-50/50 text-emerald-900 font-bold ring-1 ring-emerald-600/15"
-                          : "border-slate-200 hover:border-slate-350 bg-white text-slate-650";
+                           ? "border-emerald-600 bg-emerald-50/50 text-emerald-900 font-bold ring-1 ring-emerald-600/15"
+                           : "border-slate-200 hover:border-slate-350 bg-white text-slate-650";
                       }
 
                       return (
@@ -743,7 +745,7 @@ export default function CBTTestAttemptPage() {
                             isReviewed ? "cursor-not-allowed" : "cursor-pointer"
                           } ${optionClass}`}
                         >
-                          <span>{optIdx + 1}. {opt}</span>
+                          <span>{optIdx + 1}. {language === "Hindi" ? translateOptionToHindi(opt) : opt}</span>
                           {isReviewed ? (
                             isCorrect ? (
                               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-white shrink-0">

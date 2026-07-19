@@ -224,10 +224,6 @@ const courseToCategory: { [key: string]: string } = {
   "cuet pg mock test": "UG Entrance Exam",
   "iit jam mock test": "PG Entrance Exam",
   "gate (pg/m.tech) mock test": "PG Entrance Exam",
-  "cat (mba) mock test": "PG Entrance Exam",
-  "cmat (mba) mock test": "PG Entrance Exam",
-  "xat (mba) mock test": "PG Entrance Exam",
-  "mat (mba) mock test": "PG Entrance Exam",
   "neet pg (medical) mock test": "PG Entrance Exam",
   "gpat (pharmacy) mock test": "PG Entrance Exam",
   "clat pg (law) mock test": "PG Entrance Exam",
@@ -385,6 +381,15 @@ const courseToCategory: { [key: string]: string } = {
   "capf assistant commandant mock test": "Defence Exams",
   "indian airforce x/y group mock test": "Defence Exams",
   "upsc civil services prelims gs mock test": "Civil Services",
+  "upsc civil services csat mock test": "Civil Services",
+  "uppsc civil services prelims mock test": "Civil Services",
+  "bpsc civil services prelims mock test": "Civil Services",
+  "mppsc civil services prelims mock test": "Civil Services",
+  "ras rajasthan civil services mock test": "Civil Services",
+  "mpsc maharashtra civil services mock test": "Civil Services",
+  "hppsc civil services prelims mock test": "Civil Services",
+  "ukpsc civil services prelims mock test": "Civil Services",
+  "gpsc civil services prelims mock test": "Civil Services",
   "up police constable mock test": "Police Exams",
   "up police si mock test": "Police Exams",
   "delhi police constable mock test": "Police Exams",
@@ -394,7 +399,7 @@ const courseToCategory: { [key: string]: string } = {
   "dsssb non-teaching assistant mock test": "Non - Teaching Exams",
   "kvs non-teaching clerk mock test": "Non - Teaching Exams",
   "ugc net paper 1 general aptitude": "NET/SET",
-  "ugc net commerce paper 2 mock test": "Accounting and Commerce",
+  "ugc net commerce paper 2 mock test": "NET/SET",
   "ugc net computer science mock test": "NET/SET",
   "csir net life sciences mock test": "NET/SET",
   "ugc net paper 1 mock test series": "NET/SET",
@@ -425,9 +430,77 @@ const courseToCategory: { [key: string]: string } = {
   "cuet physics & chemistry mock test": "UG Entrance Exam",
   "neet ug complete practice mock test": "NEET",
   "neet ug mock test series": "NEET",
+  "neet ug full syllabus mock test 1": "NEET",
+  "neet ug full syllabus mock test 2": "NEET",
+  "neet ug full syllabus mock test 3": "NEET",
+  "neet ug full syllabus mock test 4": "NEET",
+  "neet ug full syllabus mock test 5": "NEET",
+  "neet ug physics chapter-wise mock test": "NEET",
+  "neet ug chemistry chapter-wise mock test": "NEET",
+  "neet ug biology botany mock test": "NEET",
+  "neet ug biology zoology mock test": "NEET",
+  "neet ug previous year paper 2025": "NEET",
+  "neet ug previous year paper 2024": "NEET",
+  "neet ug previous year paper 2023": "NEET",
+  "neet ug section-a physics speed test": "NEET",
+  "neet ug section-b chemistry speed test": "NEET",
+  "neet ug organic chemistry target mock test": "NEET",
+  "neet ug inorganic chemistry target mock test": "NEET",
+  "neet ug mechanics physics target mock test": "NEET",
+  "neet ug electrodynamics physics target mock test": "NEET",
   "jee main physics & chemistry mock test": "JEE",
   "jee main mathematics mock test": "JEE",
   "jee main mock test series": "JEE",
+  "jee main full syllabus mock test 1": "JEE",
+  "jee main full syllabus mock test 2": "JEE",
+  "jee main full syllabus mock test 3": "JEE",
+  "jee main full syllabus mock test 4": "JEE",
+  "jee main full syllabus mock test 5": "JEE",
+  "jee main physics section-a speed test": "JEE",
+  "jee main chemistry section-a speed test": "JEE",
+  "jee main mathematics section-a speed test": "JEE",
+  "jee main mathematics algebra mock test": "JEE",
+  "jee main mathematics calculus mock test": "JEE",
+  "jee main physics mechanics mock test": "JEE",
+  "jee main physics electromagnetism mock test": "JEE",
+  "jee main chemistry organic mock test": "JEE",
+  "jee main chemistry inorganic mock test": "JEE",
+  "jee main chemistry physical mock test": "JEE",
+  "jee main previous year paper 2025": "JEE",
+  "jee main previous year paper 2024": "JEE",
+  "jee main previous year paper 2023": "JEE",
+  "tcs nqt cognitive skills mock test": "Campus Placements",
+  "infosys specialist programmer mock test": "Campus Placements",
+  "wipro elite talent hunt mock test": "Campus Placements",
+  "cognizant genc quantitative mock test": "Campus Placements",
+  "accenture green channel mock test": "Campus Placements",
+  "capgemini excelerator mock test": "Campus Placements",
+  "hcl tech bee mock test": "Campus Placements",
+  "lti mindtree aptitude mock test": "Campus Placements",
+  "deloitte nla aptitude mock test": "Campus Placements",
+  "dxc technology placement mock test": "Campus Placements",
+  "tech mahindra technical & aptitude mock test": "Campus Placements",
+  "campus placement general aptitude mock test": "Campus Placements",
+  "ca foundation principles of accounting": "Accounting and Commerce",
+  "cma foundation financial accounting": "Accounting and Commerce",
+  "ca intermediate group 1 accounting mock test": "Accounting and Commerce",
+  "ca intermediate group 2 advanced accounting mock test": "Accounting and Commerce",
+  "cma intermediate financial accounting mock test": "Accounting and Commerce",
+  "cs executive corporate and management accounting mock test": "Accounting and Commerce",
+  "uppcl assistant accountant accounts mock test": "Accounting and Commerce",
+  "state accountant and auditor exam mock test": "Accounting and Commerce",
+  "tally erp 9 & gst professional practice mock test": "Accounting and Commerce",
+  "ca foundation business laws mock test": "Accounting and Commerce",
+  "cat (mba) mock test": "MBA Entrance Exam",
+  "cmat (mba) mock test": "MBA Entrance Exam",
+  "xat (mba) mock test": "MBA Entrance Exam",
+  "mat (mba) mock test": "MBA Entrance Exam",
+  "snap (mba) mock test": "MBA Entrance Exam",
+  "nmat (mba) mock test": "MBA Entrance Exam",
+  "mah cet (mba) mock test": "MBA Entrance Exam",
+  "ibsat (mba) mock test": "MBA Entrance Exam",
+  "tancet (mba) mock test": "MBA Entrance Exam",
+  "general mba entrance mock test": "MBA Entrance Exam",
   "rajasthan gk mock test": "State GK",
   "uttar pradesh gk mock test": "State GK",
   "bihar gk mock test": "State GK",
@@ -481,6 +554,15 @@ const getCategoryForCourse = (courseName: string): string => {
   if (courseToCategory[name]) {
     return courseToCategory[name];
   }
+  if (name.includes("neet pg")) {
+    return "PG Entrance Exam";
+  }
+  if (name.includes("neet")) {
+    return "NEET";
+  }
+  if (name.includes("jee")) {
+    return "JEE";
+  }
   if (name.includes("state gk") || name.includes("gk")) {
     return "State GK";
   }
@@ -496,7 +578,10 @@ const getCategoryForCourse = (courseName: string): string => {
   if (name.includes("rbi") || name.includes("sebi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
     return "Regulatory Body Exams";
   }
-  if (name.includes("cuet pg") || name.includes("iit jam") || name.includes("gate") || name.includes("cat") || name.includes("cmat") || name.includes("xat") || name.includes("mat") || name.includes("neet pg") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet")) {
+  if (name.includes("mba") || name.includes("cat (mba)") || name.includes("cmat (mba)") || name.includes("xat (mba)") || name.includes("mat (mba)") || name.includes("snap") || name.includes("nmat") || name.includes("ibsat") || name.includes("tancet mba")) {
+    return "MBA Entrance Exam";
+  }
+  if (name.includes("cuet pg") || name.includes("iit jam") || name.includes("gate") || name.includes("cat") || name.includes("cmat") || name.includes("xat") || name.includes("mat") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet")) {
     return "PG Entrance Exam";
   }
   if (name.includes("fitter") || name.includes("electrician") || name.includes("electronic mechanic") || name.includes("iti")) {
@@ -504,12 +589,6 @@ const getCategoryForCourse = (courseName: string): string => {
   }
   if (name.includes("mechanical") || name.includes("civil engineering") || name.includes("electrical engineering") || name.includes("electronics &") || name.includes("computer science &") || name.includes("instrumentation")) {
     return "Engineering Test";
-  }
-  if (name.includes("neet")) {
-    return "NEET";
-  }
-  if (name.includes("jee")) {
-    return "JEE";
   }
   if (name.includes("net") || name.includes("set")) {
     return "NET/SET";
@@ -832,7 +911,8 @@ const getCourseMetadata = (courseName: string, courseId: number, isPremium: bool
     name.includes("jee") || 
     name.includes("ugc net paper 1") || 
     name.includes("ugc net paper-1") ||
-    name.includes("upsc civil services prelims gs");
+    name.includes("civil services") ||
+    name.includes("upsc");
 
   const totalTests = isSpecial20TestCourse ? 20 : 150;
   const freeTests = 3;
