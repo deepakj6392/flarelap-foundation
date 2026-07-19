@@ -17,9 +17,8 @@ export default function StudentLoginPage() {
   const [success, setSuccess] = useState<string | null>(null);
 
   const handleSendOtp = async (e: React.MouseEvent) => {
-    e.preventDefault();
     if (!loginId) {
-      setError("Please enter your Email or Mobile Number.");
+      setError("Please enter your Email Address.");
       return;
     }
     setError(null);
@@ -42,7 +41,7 @@ export default function StudentLoginPage() {
       
       Swal.fire({
         title: "OTP Dispatched!",
-        text: `We have sent a verification code to your email or mobile. (Use test code: ${data.otp})`,
+        text: `We have sent a verification code to your email. (Use test code: ${data.otp})`,
         icon: "success",
         confirmButtonColor: "#047857"
       });
@@ -128,7 +127,7 @@ export default function StudentLoginPage() {
       <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
         <div className="text-center space-y-1">
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Student Login</h2>
-          <p className="text-xs text-slate-500 font-semibold">Sign in securely using Mobile number or Email OTP.</p>
+          <p className="text-xs text-slate-500 font-semibold">Sign in securely using Email OTP.</p>
         </div>
 
         {error && (
@@ -150,19 +149,19 @@ export default function StudentLoginPage() {
           {/* User ID / Email */}
           <div>
             <label className="block text-xs font-bold text-slate-550 uppercase tracking-wider mb-2">
-              Email or Mobile Number
+              Email Address
             </label>
             <div className="relative flex gap-2">
               <div className="relative flex-1">
                 <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4.5 w-4.5" />
                 </span>
                 <input
-                  type="text"
+                  type="email"
                   required
                   value={loginId}
                   onChange={(e) => setLoginId(e.target.value)}
-                  placeholder="Enter email or mobile number"
+                  placeholder="Enter your email address"
                   className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
                   disabled={loading || otpSent}
                 />

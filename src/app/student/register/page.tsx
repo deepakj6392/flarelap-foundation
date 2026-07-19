@@ -54,7 +54,7 @@ export default function StudentRegisterPage() {
     setError(null);
     setSuccess(null);
 
-    if (!name || !email || !phone) {
+    if (!name || !email) {
       setError("Please fill in all required fields.");
       return;
     }
@@ -66,7 +66,7 @@ export default function StudentRegisterPage() {
       const res = await fetch(`${apiUrl}/api/auth/student/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, course }),
+        body: JSON.stringify({ name, email, phone: "", course }),
       });
 
       const data = await res.json();
@@ -222,26 +222,7 @@ export default function StudentRegisterPage() {
             </div>
           </div>
 
-          {/* Phone Number */}
-          <div>
-            <label className="block text-xs font-bold text-slate-550 uppercase tracking-wider mb-2">
-              Phone Number
-            </label>
-            <div className="relative">
-              <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-                <Phone className="h-4 w-4" />
-              </span>
-              <input
-                type="tel"
-                required
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="e.g. +91 9876543210"
-                className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
-                disabled={loading}
-              />
-            </div>
-          </div>
+
 
           {/* Primary Subject */}
           <div>

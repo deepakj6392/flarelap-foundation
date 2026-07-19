@@ -27,9 +27,9 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, course } = await request.json();
 
-    if (!name || !email || !phone || !course) {
+    if (!name || !email || !course) {
       return NextResponse.json(
-        { message: "Please fill in all required fields (Name, Email, Phone, Course)." },
+        { message: "Please fill in all required fields (Name, Email, Course)." },
         { status: 400 }
       );
     }
@@ -112,7 +112,7 @@ export async function POST(request: Request) {
         password: hashedPassword,
         role: "student",
         studentId,
-        phone,
+        phone: phone ? phone.trim() : "",
         tempPassword,
         categoryId: categoryId,
         courseId: defaultCourse ? defaultCourse.id : null
