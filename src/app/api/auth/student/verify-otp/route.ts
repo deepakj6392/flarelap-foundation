@@ -27,7 +27,8 @@ export async function POST(request: Request) {
         ]
       },
       include: {
-        course: true
+        course: true,
+        category: true
       }
     });
 
@@ -95,7 +96,9 @@ export async function POST(request: Request) {
       phone: user.phone,
       created_at: user.createdAt,
       course_id: user.courseId,
-      course_name: user.course?.name || "None"
+      course_name: user.course?.name || "None",
+      category_id: user.categoryId,
+      category_name: user.category?.name || "None"
     };
 
     // Log login activity

@@ -11,6 +11,11 @@ export async function GET(request: Request) {
   try {
     const courses = await prisma.course.findMany({
       orderBy: { id: "asc" },
+      include: {
+        category: {
+          select: { id: true, name: true }
+        }
+      }
     });
     return NextResponse.json({ courses });
   } catch (error: any) {
@@ -30,7 +35,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { name, premium, price } = body;
+    const { name, premium, price, categoryId } = body;
 
     if (!name) {
       return NextResponse.json(
@@ -44,7 +49,13 @@ export async function POST(request: Request) {
         name: name.trim(),
         premium: premium !== undefined ? premium : false,
         price: price !== undefined && price !== "" ? parseFloat(price) : 299.00,
+        categoryId: categoryId ? parseInt(categoryId, 10) : null
       },
+      include: {
+        category: {
+          select: { id: true, name: true }
+        }
+      }
     });
 
     return NextResponse.json({

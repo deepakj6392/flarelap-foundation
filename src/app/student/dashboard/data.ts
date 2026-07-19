@@ -6,6 +6,8 @@ export interface StudentProfile {
   created_at: string;
   course_name?: string;
   course_id?: number | string;
+  category_id?: number | string;
+  category_name?: string;
 }
 
 export interface StudyMaterial {

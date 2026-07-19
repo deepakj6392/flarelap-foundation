@@ -28,7 +28,7 @@ export async function GET(request: Request) {
       where: { userId: decoded.id, status: "COMPLETED" },
       include: {
         course: {
-          select: { name: true, premium: true }
+          select: { name: true, premium: true, categoryId: true }
         }
       },
       orderBy: { createdAt: "desc" }

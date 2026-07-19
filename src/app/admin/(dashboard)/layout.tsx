@@ -134,6 +134,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Manage Courses";
       case "/admin/education/test-series":
         return "Manage Test Series";
+      case "/admin/education/categories":
+        return "Manage Categories";
       case "/admin/donations":
         return "Donation Records";
       case "/admin/students":
@@ -274,6 +276,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   >
                     <GraduationCap className="h-3.5 w-3.5" />
                     Manage Courses
+                  </Link>
+                  <Link
+                    href="/admin/education/categories"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/education/categories"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <BookOpen className="h-3.5 w-3.5" />
+                    Manage Categories
                   </Link>
                   <Link
                     href="/admin/education/test-series"

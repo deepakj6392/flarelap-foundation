@@ -22,12 +22,18 @@ interface CourseRecord {
   name: string;
   premium: boolean;
   active: boolean;
+  categoryId?: number | null;
 }
 
 interface PurchaseRecord {
   id: number;
   courseId: number;
   status: string;
+  course?: {
+    name: string;
+    premium: boolean;
+    categoryId?: number | null;
+  } | null;
 }
 
 export default function StudentTestSeriesPage() {
@@ -81,8 +87,17 @@ export default function StudentTestSeriesPage() {
   // 2. It is free.
   // 3. They have purchased it.
   const isCourseUnlocked = (course: CourseRecord) => {
-    if (course.id === enrolledCourseId) return true;
     if (!course.premium) return true;
+    if (course.id === enrolledCourseId) return true;
+    
+    // Unlock if the student has purchased any course in this category
+    if (course.categoryId) {
+      const hasPurchasedCategory = purchases.some(p => {
+        return p.course?.categoryId === course.categoryId && p.status === "COMPLETED";
+      });
+      if (hasPurchasedCategory) return true;
+    }
+    
     return purchases.some(p => p.courseId === course.id && p.status === "COMPLETED");
   };
 

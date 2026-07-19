@@ -19,9 +19,9 @@ async function main() {
   console.log("Updating site settings in the database...");
   let setting = await prisma.siteSetting.findFirst();
   const data = {
-    email: "support@flarelap.org",
+    email: "contact@flarelap.org",
     phone: "+919729817600",
-    address: "Sirsal (38), Kaithal,\nHaryana, India. PIN-136026",
+    address: "Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.",
     location: "India"
   };
   if (setting) {

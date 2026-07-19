@@ -23,10 +23,13 @@ interface CourseRecord {
   premium: boolean;
   price?: string | number;
   createdAt: string;
+  categoryId?: number | null;
+  category?: { id: number; name: string } | null;
 }
 
 export default function CoursesAdminPage() {
   const [courses, setCourses] = useState<CourseRecord[]>([]);
+  const [categories, setCategories] = useState<{ id: number; name: string }[]>([]);
   
   // UI states
   const [loading, setLoading] = useState(true);
@@ -41,7 +44,26 @@ export default function CoursesAdminPage() {
   const [editCourseId, setEditCourseId] = useState<number | null>(null);
   const [newCourseName, setNewCourseName] = useState("");
   const [newCoursePremium, setNewCoursePremium] = useState(false);
-  const [newCoursePrice, setNewCoursePrice] = useState("299");
+  const [newCoursePrice, setNewCoursePrice] = useState("59");
+  const [newCourseCategory, setNewCourseCategory] = useState("");
+
+  const fetchCategories = async () => {
+    try {
+      const storedToken = localStorage.getItem("admin_token");
+      if (!storedToken) return;
+
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const res = await fetch(`${apiUrl}/api/admin/categories`, {
+        headers: { Authorization: `Bearer ${storedToken}` },
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setCategories(data.categories || []);
+      }
+    } catch (err) {
+      console.error("Failed to load categories:", err);
+    }
+  };
 
   const fetchCourses = async () => {
     setLoading(true);
@@ -69,6 +91,7 @@ export default function CoursesAdminPage() {
 
   useEffect(() => {
     fetchCourses();
+    fetchCategories();
   }, []);
 
   const handleSaveCourse = async (e: React.FormEvent) => {
@@ -93,7 +116,7 @@ export default function CoursesAdminPage() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${storedToken}` 
           },
-          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice }),
+          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice, categoryId: newCourseCategory || null }),
         });
       } else {
         res = await fetch(`${apiUrl}/api/admin/courses`, {
@@ -102,7 +125,7 @@ export default function CoursesAdminPage() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${storedToken}` 
           },
-          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice }),
+          body: JSON.stringify({ name: newCourseName, premium: newCoursePremium, price: newCoursePrice, categoryId: newCourseCategory || null }),
         });
       }
 
@@ -124,6 +147,7 @@ export default function CoursesAdminPage() {
       setEditCourseId(null);
       setNewCourseName("");
       setNewCoursePremium(false);
+      setNewCourseCategory("");
     } catch (err: any) {
       setError(err.message || "Failed to save course.");
     } finally {
@@ -253,7 +277,8 @@ export default function CoursesAdminPage() {
     setEditCourseId(course.id);
     setNewCourseName(course.name);
     setNewCoursePremium(course.premium || false);
-    setNewCoursePrice(course.price !== undefined ? course.price.toString() : "299");
+    setNewCoursePrice(course.price !== undefined ? course.price.toString() : "59");
+    setNewCourseCategory(course.categoryId ? course.categoryId.toString() : "");
     setIsModalOpen(true);
   };
 
@@ -262,7 +287,8 @@ export default function CoursesAdminPage() {
     setEditCourseId(null);
     setNewCourseName("");
     setNewCoursePremium(false);
-    setNewCoursePrice("299");
+    setNewCoursePrice("59");
+    setNewCourseCategory("");
     setIsModalOpen(true);
   };
 
@@ -399,7 +425,12 @@ export default function CoursesAdminPage() {
 
                     {/* Course Name */}
                     <td className="py-4 px-5 font-extrabold text-slate-950 dark:text-white text-xs">
-                      {c.name}
+                      <div>{c.name}</div>
+                      {c.category && (
+                        <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">
+                          {c.category.name}
+                        </div>
+                      )}
                     </td>
 
                     {/* Created At */}
@@ -452,7 +483,7 @@ export default function CoursesAdminPage() {
  
                     {/* Course Price */}
                     <td className="py-4 px-5 font-black text-slate-800 dark:text-slate-200 text-xs">
-                      {c.premium ? `₹${Number(c.price || 299).toFixed(0)}` : "FREE"}
+                      {c.premium ? `₹${Number(c.price || 59).toFixed(0)}` : "FREE"}
                     </td>
 
                     {/* Paid Toggle Switch */}
@@ -550,6 +581,26 @@ export default function CoursesAdminPage() {
                 />
               </div>
 
+              {/* Category Select */}
+              <div>
+                <label className="block text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider mb-2">
+                  Category Series
+                </label>
+                <select
+                  value={newCourseCategory}
+                  onChange={(e) => setNewCourseCategory(e.target.value)}
+                  className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-955 px-4 py-2.5 text-xs outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-900 dark:text-white font-semibold"
+                  disabled={actionLoading === "create" || actionLoading === "edit"}
+                >
+                  <option value="">-- No Category --</option>
+                  {categories.map((cat) => (
+                    <option key={cat.id} value={cat.id}>
+                      {cat.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               {/* Pricing Choice */}
               <div className="flex items-center gap-3 bg-slate-50 dark:bg-slate-955/40 border border-slate-200 dark:border-slate-850 p-3.5 rounded-xl">
                 <button
@@ -584,7 +635,7 @@ export default function CoursesAdminPage() {
                     min={0}
                     value={newCoursePrice}
                     onChange={(e) => setNewCoursePrice(e.target.value)}
-                    placeholder="e.g. 299"
+                    placeholder="e.g. 59"
                     className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-955 px-4 py-2.5 text-xs outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-900 dark:text-white font-semibold"
                     disabled={actionLoading === "create" || actionLoading === "edit"}
                   />

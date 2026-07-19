@@ -5,7 +5,6 @@ import Link from "next/link";
 import { siteConfig } from "@/constants/site";
 import {
   Mail,
-  Phone,
   MapPin,
   ArrowUpRight
 } from "lucide-react";
@@ -214,15 +213,6 @@ export default function Footer() {
                   className="text-xs font-medium text-slate-400 hover:text-emerald-400 transition"
                 >
                   {settings.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-4.5 w-4.5 shrink-0 text-emerald-400" />
-                <a
-                  href={`tel:${settings.phone.replace(/\s+/g, '')}`}
-                  className="text-xs font-medium text-slate-400 hover:text-emerald-400 transition"
-                >
-                  {settings.phone}
                 </a>
               </div>
             </div>

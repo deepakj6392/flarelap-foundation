@@ -46,6 +46,7 @@ interface Course {
   premium: boolean;
   price?: number | string | any;
   testSeries?: DBTestSeries[];
+  categoryId?: number | null;
 }
 
 interface SubTest {
@@ -1377,6 +1378,7 @@ export default function TestSeriesDetailsPage() {
 
   // Student purchases and auth states
   const [purchasedCourseIds, setPurchasedCourseIds] = useState<number[]>([]);
+  const [purchasedCategoryIds, setPurchasedCategoryIds] = useState<number[]>([]);
   const [studentToken, setStudentToken] = useState<string | null>(null);
   const [studentProfile, setStudentProfile] = useState<any>(null);
 
@@ -1415,6 +1417,11 @@ export default function TestSeriesDetailsPage() {
         const data = await res.json();
         const ids = (data.purchases || []).map((p: any) => p.courseId);
         setPurchasedCourseIds(ids);
+
+        const catIds = (data.purchases || [])
+          .map((p: any) => p.course?.categoryId)
+          .filter((catId: any) => catId !== null && catId !== undefined);
+        setPurchasedCategoryIds(catIds);
       }
     } catch (err) {
       console.error("Failed to load purchases:", err);
@@ -1479,7 +1486,7 @@ export default function TestSeriesDetailsPage() {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
-                amount: parseFloat(orderData.coursePrice || "99")
+                amount: parseFloat(orderData.coursePrice || "59")
               })
             });
 
@@ -1604,7 +1611,11 @@ export default function TestSeriesDetailsPage() {
   const stats = getRealExamStats(course.name);
 
   // Determine if student has premium access
-  const isCoursePassActive = !course.premium || (studentProfile && Number(studentProfile.course_id) === course.id) || purchasedCourseIds.includes(course.id);
+  const isCoursePassActive = 
+    !course.premium || 
+    (studentProfile && Number(studentProfile.course_id) === course.id) || 
+    purchasedCourseIds.includes(course.id) ||
+    (course.categoryId && purchasedCategoryIds.includes(course.categoryId));
 
   // Load from database if available, else fallback to generator
   const dbTests = course.testSeries || [];
@@ -1922,7 +1933,7 @@ export default function TestSeriesDetailsPage() {
                   </span>
                   <div className="mt-4 flex items-baseline gap-2">
                     <span className="text-3xl font-black text-slate-900">
-                      {course.premium ? `₹${parseFloat(course.price?.toString() || "99")}` : "FREE"}
+                      {course.premium ? `₹${parseFloat(course.price?.toString() || "59")}` : "FREE"}
                     </span>
                     <span className="text-xs font-semibold text-slate-500">
                       {course.premium ? "/ Month" : "Mock Tests Included"}
@@ -1960,7 +1971,7 @@ export default function TestSeriesDetailsPage() {
                   {!studentToken 
                     ? "Continue to Register" 
                     : (course.premium && !purchasedCourseIds.includes(course.id) && Number(studentProfile?.course_id) !== course.id) 
-                      ? `Buy Premium Pass - ₹${parseFloat(course.price?.toString() || "99")}` 
+                      ? `Buy Premium Pass - ₹${parseFloat(course.price?.toString() || "59")}` 
                       : "Start Mock Test"}
                 </button>
 
@@ -2011,7 +2022,7 @@ export default function TestSeriesDetailsPage() {
                 }}
                 className="w-full py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs uppercase tracking-wider text-center transition active:scale-[0.98] cursor-pointer border-none shadow-md shadow-emerald-700/10"
               >
-                Get Premium Pass - ₹{parseFloat(course.price?.toString() || "99")} / Month
+                Get Premium Pass - ₹{parseFloat(course.price?.toString() || "59")} / Month
               </button>
               <button
                 onClick={() => setIsLockModalOpen(false)}
@@ -2049,7 +2060,7 @@ export default function TestSeriesDetailsPage() {
                 <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider">Premium Access</span>
                 <span className="text-sm font-semibold text-slate-800">1 Month Validity</span>
               </div>
-              <span className="text-xl font-black text-emerald-700">₹{parseFloat(course.price?.toString() || "99")}.00</span>
+              <span className="text-xl font-black text-emerald-700">₹{parseFloat(course.price?.toString() || "59")}.00</span>
             </div>
 
             <div className="text-[11px] text-slate-500 font-medium leading-relaxed bg-slate-50/50 p-3 rounded-lg border border-slate-100 text-left">

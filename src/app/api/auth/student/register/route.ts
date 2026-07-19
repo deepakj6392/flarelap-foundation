@@ -45,23 +45,36 @@ export async function POST(request: Request) {
       );
     }
 
-    // Verify course exists
-    const courseId = parseInt(course, 10);
-    if (isNaN(courseId)) {
+    // Verify category exists
+    const categoryId = parseInt(course, 10);
+    if (isNaN(categoryId)) {
       return NextResponse.json(
-        { message: "Invalid course selection." },
+        { message: "Invalid category selection." },
         { status: 400 }
       );
     }
 
-    const courseCheck = await prisma.course.findUnique({
-      where: { id: courseId }
+    const categoryCheck = await prisma.category.findUnique({
+      where: { id: categoryId }
     });
-    if (!courseCheck) {
+    if (!categoryCheck) {
       return NextResponse.json(
-        { message: "Selected course does not exist." },
+        { message: "Selected category does not exist." },
         { status: 400 }
       );
+    }
+
+    // Resolve a default course belonging to this category for compatibility
+    let defaultCourse = await prisma.course.findFirst({
+      where: { categoryId: categoryId, active: true }
+    });
+    if (!defaultCourse) {
+      defaultCourse = await prisma.course.findFirst({
+        where: { categoryId: categoryId }
+      });
+    }
+    if (!defaultCourse) {
+      defaultCourse = await prisma.course.findFirst();
     }
 
     // Generate unique student ID
@@ -101,7 +114,8 @@ export async function POST(request: Request) {
         studentId,
         phone,
         tempPassword,
-        courseId: courseId // Save course ID relation
+        categoryId: categoryId,
+        courseId: defaultCourse ? defaultCourse.id : null
       }
     });
 
@@ -117,7 +131,6 @@ export async function POST(request: Request) {
       console.warn(`Student account created but welcome email failed to dispatch to: ${email}`);
     }
 
-    // Import jwt dynamically or rely on package to sign token for instant login
     const jwt = require("jsonwebtoken");
     const jwtSecret = process.env.JWT_SECRET || "flarelap_foundation_jwt_secret_key_123!";
     const token = jwt.sign(
@@ -140,7 +153,9 @@ export async function POST(request: Request) {
       phone: newUser.phone,
       created_at: newUser.createdAt,
       course_id: newUser.courseId,
-      course_name: courseCheck.name
+      course_name: defaultCourse ? defaultCourse.name : "N/A",
+      category_id: newUser.categoryId,
+      category_name: categoryCheck.name
     };
 
     // Record login event in database

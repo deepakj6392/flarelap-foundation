@@ -126,8 +126,8 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <p className="mt-4">
                   Ordinarily, Flarelap Global Foundation does not retain user data beyond what is needed to fulfill the purposes above. Where data is stored as part of a specific sign-up, you may request deletion of your information at any time by writing to us at{" "}
-                  <a href="mailto:support@flarelap.org" className="text-emerald-700 hover:underline font-bold">
-                    support@flarelap.org
+                  <a href="mailto:contact@flarelap.org" className="text-emerald-700 hover:underline font-bold">
+                    contact@flarelap.org
                   </a>
                   . We will delete all such information within two working days of your request, subject to any legal record-keeping obligations.
                 </p>
@@ -210,8 +210,8 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <p className="text-xs text-slate-600 mt-1 font-bold">
                     Email:{" "}
-                    <a href="mailto:support@flarelap.org" className="underline hover:text-emerald-950">
-                      support@flarelap.org
+                    <a href="mailto:contact@flarelap.org" className="underline hover:text-emerald-950">
+                      contact@flarelap.org
                     </a>
                   </p>
                 </div>

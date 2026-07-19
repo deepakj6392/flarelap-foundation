@@ -23,6 +23,8 @@ model User {
   tempPassword String?      @map("temp_password")
   courseId     Int?         @map("course_id")
   course       Course?      @relation(fields: [courseId], references: [id])
+  categoryId   Int?         @map("category_id")
+  category     Category?    @relation(fields: [categoryId], references: [id], onDelete: SetNull)
   logs         StudentLog[]
   purchases    Purchase[]
   testAttempts TestAttempt[]
@@ -68,8 +70,10 @@ model Course {
   name        String
   active      Boolean       @default(true)
   premium     Boolean       @default(false)
-  price       Decimal       @default(299.00) @db.Decimal(12, 2)
+  price       Decimal       @default(59.00) @db.Decimal(12, 2)
   createdAt   DateTime      @default(now()) @map("created_at")
+  categoryId  Int?          @map("category_id")
+  category    Category?     @relation(fields: [categoryId], references: [id], onDelete: SetNull)
   users       User[]
   mcqs        MCQQuestion[]
   testSeries  TestSeries[]
@@ -146,9 +150,9 @@ model Purchase {
 
 model SiteSetting {
   id        Int      @id @default(autoincrement())
-  email     String   @default("support@flarelap.org")
+  email     String   @default("contact@flarelap.org")
   phone     String   @default("+919729817600")
-  address   String   @default("Sirsal (38), Kaithal, Haryana, India. PIN-136026")
+  address   String   @default("Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.")
   location  String   @default("India")
   facebook  String   @default("https://www.facebook.com/flarelap.org")
   instagram String   @default("https://www.instagram.com/flarelap_org")
@@ -209,5 +213,16 @@ model BlogPost {
   updatedAt    DateTime @updatedAt @map("updated_at")
 
   @@map("blog_posts")
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  courses   Course[]
+  users     User[]
+
+  @@map("categories")
 }
 

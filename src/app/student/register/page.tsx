@@ -20,29 +20,33 @@ export default function StudentRegisterPage() {
   const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchCourses = async () => {
+    const fetchCategories = async () => {
       try {
         const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-        const res = await fetch(`${apiUrl}/api/courses`);
+        const res = await fetch(`${apiUrl}/api/categories`);
         const data = await res.json();
-        if (res.ok && data.courses && data.courses.length > 0) {
-          setCourses(data.courses);
-          
-          // Pre-select course based on query parameter
+        if (res.ok && data.categories && data.categories.length > 0) {
+          const formatted = data.categories.map((c: any) => ({
+            id: c.id.toString(),
+            name: c.name
+          }));
+          setCourses(formatted);
+
+          // Pre-select category based on query parameter
           const params = new URLSearchParams(window.location.search);
-          const queryCourse = params.get("course");
-          const hasCourse = data.courses.some((c: any) => c.id.toString() === queryCourse);
-          if (queryCourse && hasCourse) {
-            setCourse(queryCourse);
+          const queryCategory = params.get("category") || params.get("course");
+          const hasCategory = formatted.some((c: any) => c.id === queryCategory);
+          if (queryCategory && hasCategory) {
+            setCourse(queryCategory);
           } else {
-            setCourse(data.courses[0].id.toString());
+            setCourse(formatted[0].id);
           }
         }
       } catch (err) {
-        console.error("Failed to load courses:", err);
+        console.error("Failed to load categories:", err);
       }
     };
-    fetchCourses();
+    fetchCategories();
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -77,7 +81,7 @@ export default function StudentRegisterPage() {
       }
 
       setSuccess("Account created and logged in successfully!");
-      
+
       // Professional success alert with credentials info
       await Swal.fire({
         title: "Enrollment Successful!",
@@ -138,7 +142,7 @@ export default function StudentRegisterPage() {
 
   return (
     <div className="min-h-screen bg-[linear-gradient(135deg,#f8fafc_0%,#eefdf4_45%,#fffbeb_100%)] flex flex-col items-center justify-center p-5 font-sans">
-      
+
       {/* Brand logo header */}
       <Link href="/" className="flex items-center gap-2 mb-6">
         <Image
@@ -242,7 +246,7 @@ export default function StudentRegisterPage() {
           {/* Primary Subject */}
           <div>
             <label className="block text-xs font-bold text-slate-550 uppercase tracking-wider mb-2">
-              Select Course Area
+              Select Mock Test Category
             </label>
             <div className="relative">
               <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
@@ -255,7 +259,7 @@ export default function StudentRegisterPage() {
                 disabled={loading || courses.length === 0}
               >
                 {courses.length === 0 ? (
-                  <option value="">Loading courses...</option>
+                  <option value="">Loading categories...</option>
                 ) : (
                   courses.map((c) => (
                     <option key={c.id} value={c.id}>
@@ -292,8 +296,8 @@ export default function StudentRegisterPage() {
               Login As Student
             </Link>
           </div>
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="text-slate-500 hover:text-emerald-700 hover:underline text-[10.5px] font-bold"
           >
             &#8592; Back to Home

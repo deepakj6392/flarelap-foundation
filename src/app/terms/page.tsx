@@ -116,7 +116,7 @@ export default function TermsAndConditionsPage() {
                   However, we recognize that errors can happen (such as technical double-charges or unauthorized transactions). In such events:
                 </p>
                 <ul className="list-disc pl-5 mt-3 space-y-2 text-slate-650">
-                  <li>Donors may submit a written refund request by emailing us at <a href="mailto:support@flarelap.org" className="text-emerald-700 hover:underline font-bold">support@flarelap.org</a> within 15 working days from the transaction date.</li>
+                  <li>Donors may submit a written refund request by emailing us at <a href="mailto:contact@flarelap.org" className="text-emerald-700 hover:underline font-bold">contact@flarelap.org</a> within 15 working days from the transaction date.</li>
                   <li>Requests must include valid proof of deduction, bank transaction reference ID, and date of donation.</li>
                   <li>Approved refunds will be processed and credited back to the original payment source within 7 to 10 working days of approval, subject to gateway processing times.</li>
                 </ul>
@@ -176,8 +176,8 @@ export default function TermsAndConditionsPage() {
                   </p>
                   <p className="text-xs text-slate-600 mt-1 font-bold">
                     Email:{" "}
-                    <a href="mailto:support@flarelap.org" className="underline hover:text-emerald-950">
-                      support@flarelap.org
+                    <a href="mailto:contact@flarelap.org" className="underline hover:text-emerald-950">
+                      contact@flarelap.org
                     </a>
                   </p>
                 </div>

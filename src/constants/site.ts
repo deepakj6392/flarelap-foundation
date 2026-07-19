@@ -3,10 +3,10 @@ export const siteConfig = {
   description: "Empower people and change lives",
   url: "https://flarelap.org",
   ogImage: "/samples/community.svg",
-  email: "support@flarelap.org",
+  email: "contact@flarelap.org",
   phone: "+919729817600",
   location: "India",
-  address: "Sirsal (38), Kaithal,\nHaryana, India. PIN-136026",
+  address: "Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.",
   navItems: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
@@ -18,7 +18,7 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   links: {
-  email: "mailto:support@flarelap.org",
+  email: "mailto:contact@flarelap.org",
     x: "https://x.com/Flarelap_Org",
     facebook: "https://www.facebook.com/flarelap.org",
     youtube: "https://www.youtube.com/@flarelap_org",

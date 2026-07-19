@@ -1173,7 +1173,7 @@ export default function EducationPage() {
                                       ? "bg-purple-600 text-white shadow-xs"
                                       : "bg-emerald-600 text-white shadow-xs"
                                   }`}>
-                                    {course.premium ? `₹${Number(course.price || 99).toFixed(0)}/Month` : "Free"}
+                                    {course.premium ? `₹${Number(course.price || 59).toFixed(0)}/Month` : "Free"}
                                   </span>
                                 </div>
                               </div>
