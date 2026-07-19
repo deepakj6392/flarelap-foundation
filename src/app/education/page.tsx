@@ -545,7 +545,13 @@ const courseToCategory: { [key: string]: string } = {
   "indian administration & governance mock test": "Indian Studies",
   "indian sports & culture mock test": "Indian Studies",
   "indian socialism & social welfare mock test": "Indian Studies",
-  "indian freedom movement mock test": "Indian Studies"
+  "indian freedom movement mock test": "Indian Studies",
+  "nra cet matriculation 10th level mock test": "NRA CET",
+  "nra cet higher secondary 12th level mock test": "NRA CET",
+  "nra cet graduation level mock test": "NRA CET",
+  "isro scientist recruitment mock test": "Government Organizations",
+  "barc scientific officer mock test": "Government Organizations",
+  "drdo scientist b mock test": "Government Organizations"
 };
 
 
@@ -553,6 +559,12 @@ const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
   if (courseToCategory[name]) {
     return courseToCategory[name];
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return "NRA CET";
+  }
+  if (name.includes("government organization") || name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
+    return "Government Organizations";
   }
   if (name.includes("neet pg")) {
     return "PG Entrance Exam";

@@ -297,7 +297,7 @@ const getRealExamStats = (courseName: string): RealExamStats => {
   if (name.includes("nra cet") || name.includes("nra")) {
     return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
   }
-  if (name.includes("government org") || name.includes("gov org")) {
+  if (name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
     return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
   }
   if (name.includes("ug entrance")) {
@@ -942,7 +942,7 @@ const getCourseSubjects = (courseName: string) => {
       { name: "General Awareness", qs: 25, marks: 25, duration: 15 }
     ];
   }
-  if (name.includes("government org") || name.includes("gov org")) {
+  if (name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
     return [
       { name: "General Aptitude & Reasoning", qs: 30, marks: 30, duration: 35 },
       { name: "General Studies & English", qs: 30, marks: 30, duration: 35 },

@@ -1017,7 +1017,7 @@ const getRealExamStats = (courseName) => {
   if (name.includes("nra cet") || name.includes("nra")) {
     return { questions: 100, marks: 100, duration: 60 };
   }
-  if (name.includes("government org") || name.includes("gov org")) {
+  if (name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
     return { questions: 100, marks: 100, duration: 120 };
   }
   if (name.includes("ug entrance")) {
@@ -1295,7 +1295,7 @@ const getCourseSubjects = (courseName) => {
       { name: "General Awareness", qs: 25, marks: 25, duration: 15 }
     ];
   }
-  if (name.includes("government org") || name.includes("gov org")) {
+  if (name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
     return [
       { name: "General Aptitude & Reasoning", qs: 30, marks: 30, duration: 35 },
       { name: "General Studies & English", qs: 30, marks: 30, duration: 35 },
@@ -1668,6 +1668,10 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
     domain = "teaching";
   } else if (name.includes("banking") || name.includes("insurance") || name.includes("sbi") || name.includes("ibps") || name.includes("sebi") || name.includes("lic") || name.includes("mba") || name.includes("placement") || name.includes("rbi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
     domain = "banking_finance";
+  } else if (name.includes("nra cet") || name.includes("nra")) {
+    domain = "nra_cet";
+  } else if (name.includes("government organization") || name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
+    domain = "gov_org";
   }
 
   // Common random helper arrays
@@ -2435,6 +2439,230 @@ function generateUniqueMCQsForCourse(courseName, category, count = 200) {
           "The Quit India Movement (1942)"
         ];
         hintText = "The Salt Satyagraha began with the Dandi March in 1930 to protest the British monopoly on salt.";
+      }
+    } else if (domain === "nra_cet") {
+      const type = idx % 4;
+      if (type === 0) {
+        const quantTypes = [
+          () => {
+            const p1 = names1[rVal % names1.length];
+            const p2 = names2[(rVal >> 2) % names2.length];
+            const d1 = 6 + (rVal % 15);
+            const d2 = 8 + ((rVal >> 2) % 20);
+            const ansVal = ((d1 * d2) / (d1 + d2)).toFixed(2);
+            return {
+              q: `If ${p1} can complete a project in ${d1} days and ${p2} can complete the same project in ${d2} days, how many days will they take to complete the project working together?`,
+              opts: [`${ansVal} days`, `${d1 + d2} days`, `${(d1 * d2).toFixed(2)} days`, `${(d1 + d2 / 2).toFixed(2)} days`],
+              hint: `Time working together = (d1 * d2) / (d1 + d2). Thus, (${d1} * ${d2}) / (${d1} + ${d2}) = ${ansVal} days.`
+            };
+          },
+          () => {
+            const cp = 100 + (rVal % 90) * 10;
+            const profitPct = 5 + (rVal % 8) * 5;
+            const sp = Math.round(cp * (1 + profitPct / 100));
+            return {
+              q: `A shopkeeper buys an item for Rs ${cp} and sells it at a profit of ${profitPct}%. What is the selling price of the item?`,
+              opts: [`Rs ${sp}`, `Rs ${cp + profitPct}`, `Rs ${Math.round(cp * 1.05)}`, `Rs ${cp - profitPct}`],
+              hint: `Selling Price (SP) = Cost Price (CP) * (1 + Profit% / 100) = ${cp} * (1 + ${profitPct}/100) = Rs ${sp}.`
+            };
+          },
+          () => {
+            const p = 1000 + (rVal % 90) * 100;
+            const r = 5 + (rVal % 11);
+            const t = 2 + (rVal % 5);
+            const si = (p * r * t) / 100;
+            return {
+              q: `Calculate the simple interest on a principal of Rs ${p} at a rate of ${r}% per annum for a period of ${t} years.`,
+              opts: [`Rs ${si}`, `Rs ${si + 50}`, `Rs ${si - 50}`, `Rs ${(p * r) / 100}`],
+              hint: `Simple Interest (SI) = (P * R * T) / 100 = (${p} * ${r} * ${t}) / 100 = Rs ${si}.`
+            };
+          },
+          () => {
+            const length = 100 + (rVal % 15) * 20;
+            const time = 10 + (rVal % 11) * 2;
+            const speedKmph = Math.round((length / time) * 18 / 5);
+            return {
+              q: `A train of length ${length} meters passes a telegraph post in ${time} seconds. What is the speed of the train in km/h?`,
+              opts: [`${speedKmph} km/h`, `${speedKmph - 5} km/h`, `${speedKmph + 5} km/h`, `${Math.round(length / time)} km/h`],
+              hint: `Speed = Distance / Time = ${length} / ${time} m/s. To convert to km/h, multiply by 18/5. Speed = (${length}/${time}) * (18/5) = ${speedKmph} km/h.`
+            };
+          },
+          () => {
+            const mult = 2 + (rVal % 8);
+            const a = 3 * mult;
+            const b = 4 * mult;
+            const add = 4 + (rVal % 6) * 2;
+            const newA = a + add;
+            const newB = b + add;
+            return {
+              q: `The ratio of two numbers is 3:4. If ${add} is added to each of them, their ratio becomes ${newA}:${newB}. What is the larger of the two numbers?`,
+              opts: [`${b}`, `${a}`, `${b + add}`, `${a + b}`],
+              hint: `Let the numbers be 3x and 4x. (3x + ${add}) / (4x + ${add}) = ${newA}/${newB}. Solving this gives x = ${mult}. Thus, the larger number (4x) is 4 * ${mult} = ${b}.`
+            };
+          }
+        ];
+        const res = quantTypes[rVal % quantTypes.length]();
+        questionText = res.q;
+        baseOptions = res.opts;
+        hintText = res.hint;
+      } else if (type === 1) {
+        const reasoningTypes = [
+          () => {
+            const offset = 1 + (rVal % 4);
+            const words = ["CAT", "DOG", "BLUE", "RED", "MIND"];
+            const word = words[rVal % words.length];
+            const coded = word.split("").map(c => String.fromCharCode(c.charCodeAt(0) + offset)).join("");
+            const target = "GAME";
+            const targetCoded = target.split("").map(c => String.fromCharCode(c.charCodeAt(0) + offset)).join("");
+            return {
+              q: `In a certain code language, if "${word}" is written as "${coded}", how would the word "${target}" be written in that same code language?`,
+              opts: [targetCoded, targetCoded.toLowerCase(), target, "None of these"],
+              hint: `Each letter of the word is shifted forward by ${offset} positions in the alphabet.`
+            };
+          },
+          () => {
+            const ageRank = 10 + (rVal % 40);
+            return {
+              q: `In a row of ${ageRank + 15} students, Rahul is ${ageRank}th from the left end. What is his position from the right end of the row?`,
+              opts: [`${16}`, `${15}`, `${17}`, `${14}`],
+              hint: `Position from right = Total students - Position from left + 1 = (${ageRank + 15}) - ${ageRank} + 1 = 16th.`
+            };
+          },
+          () => {
+            return {
+              q: `Pointing to a lady in a photograph, Rohit said, "She is the daughter of my grandmother's only child." How is the lady related to Rohit?`,
+              opts: ["Sister", "Mother", "Aunt", "Cousin"],
+              hint: `Rohit's grandmother's only child is Rohit's mother or father. Their daughter would be Rohit's sister.`
+            };
+          },
+          () => {
+            const s = [
+              { seq: "2, 4, 8, 16, 32", next: "64", hint: "multiplying by 2" },
+              { seq: "5, 10, 17, 26, 37", next: "50", hint: "differences of consecutive odd numbers (+5, +7, +9, +11, +13)" },
+              { seq: "1, 9, 25, 49, 81", next: "121", hint: "squares of consecutive odd numbers (1^2, 3^2, 5^2, 7^2, 9^2, 11^2)" }
+            ][rVal % 3];
+            return {
+              q: `Identify the next term in the number series: ${s.seq}, ?`,
+              opts: [s.next, `${parseInt(s.next) + 10}`, `${parseInt(s.next) - 8}`, `${parseInt(s.next) * 2}`],
+              hint: `The pattern involves ${s.hint}. The next term is ${s.next}.`
+            };
+          }
+        ];
+        const res = reasoningTypes[rVal % reasoningTypes.length]();
+        questionText = res.q;
+        baseOptions = res.opts;
+        hintText = res.hint;
+      } else if (type === 2) {
+        const englishQuestions = [
+          { q: "Choose the word with the correct spelling from the options below:", opts: ["Bureaucracy", "Burocracy", "Bureaucracye", "Bureacracy"], hint: "Bureaucracy is spelled with -eau- and -cracy." },
+          { q: "What is the closest synonym of the word 'Mitigate'?", opts: ["Alleviate", "Aggravate", "Intensify", "Confirm"], hint: "Mitigate means to make less severe, serious, or painful. Alleviate is its synonym." },
+          { q: "What is the correct antonym of the word 'Zenith'?", opts: ["Nadir", "Peak", "Summit", "Apex"], hint: "Zenith is the highest point, and Nadir is the lowest point." },
+          { q: "Fill in the blank with the appropriate preposition: She has been living in this city ________ 2018.", opts: ["since", "for", "from", "during"], hint: "We use 'since' for a specific point of time in the past." },
+          { q: "Identify the error in the sentence: 'One of the student was absent yesterday.'", opts: ["student (should be students)", "was (should be were)", "absent (should be absence)", "No error"], hint: "The phrase 'one of' is followed by a plural noun: 'one of the students'." }
+        ];
+        const item = englishQuestions[rVal % englishQuestions.length];
+        questionText = item.q;
+        baseOptions = item.opts;
+        hintText = item.hint;
+      } else {
+        const gkQuestions = [
+          { q: "Who is the ex-officio Chairman of the NITI Aayog in India?", opts: ["The Prime Minister", "The President", "The Finance Minister", "The Vice President"], hint: "The Prime Minister of India serves as the ex-officio chairperson of the NITI Aayog." },
+          { q: "Which fundamental right was removed from the list of Fundamental Rights by the 44th Constitutional Amendment Act, 1978?", opts: ["Right to Property", "Right to Education", "Right to Freedom of Speech", "Right to Equality"], hint: "The 44th Amendment removed the Right to Property as a fundamental right and made it a legal right under Article 300A." },
+          { q: "The river Narmada originates from which of the following mountain ranges or plateaus?", opts: ["Amarkantak Plateau", "Satpura Range", "Vindhya Range", "Western Ghats"], hint: "Narmada river originates from the Amarkantak Hills in Madhya Pradesh." },
+          { q: "Which planet is commonly referred to as the 'Earth's twin' due to its similar size and density?", opts: ["Venus", "Mars", "Jupiter", "Mercury"], hint: "Venus is similar in size, mass, and bulk composition to Earth, making it Earth's twin." },
+          { q: "Which vitamin deficiency is the primary cause of the disease Scurvy?", opts: ["Vitamin C", "Vitamin A", "Vitamin B1", "Vitamin D"], hint: "Scurvy is caused by a severe deficiency of Vitamin C (ascorbic acid)." }
+        ];
+        const item = gkQuestions[rVal % gkQuestions.length];
+        questionText = item.q;
+        baseOptions = item.opts;
+        hintText = item.hint;
+      }
+    } else if (domain === "gov_org") {
+      const type = idx % 3;
+      if (type === 0) {
+        const techAptitude = [
+          () => {
+            const red = 3 + (rVal % 5);
+            const blue = 4 + ((rVal >> 2) % 6);
+            const greenVal = 2 + ((rVal >> 4) % 4);
+            const total = red + blue + greenVal;
+            const prob = (red / total).toFixed(3);
+            return {
+              q: `A bag contains ${red} red balls, ${blue} blue balls, and ${greenVal} green balls. If a ball is drawn at random, what is the probability that it is red?`,
+              opts: [`${prob}`, `${(blue/total).toFixed(3)}`, `${(greenVal/total).toFixed(3)}`, `${((red+greenVal)/total).toFixed(3)}`],
+              hint: `Probability = Favorable outcomes / Total outcomes = ${red} / (${red} + ${blue} + ${greenVal}) = ${red} / ${total} = ${prob}.`
+            };
+          },
+          () => {
+            const base = 2 + (rVal % 3);
+            const exp = 4 + (rVal % 4);
+            const val = Math.pow(base, exp);
+            return {
+              q: `Find the value of x if log_${base}(x) = ${exp}.`,
+              opts: [`${val}`, `${base * exp}`, `${exp}`, `${val + 1}`],
+              hint: `If log_b(x) = y, then x = b^y. Thus x = ${base}^${exp} = ${val}.`
+            };
+          },
+          () => {
+            const word = ["ISRO", "BARC", "DRDO"][(rVal % 3)];
+            let permutations = 24;
+            return {
+              q: `In how many different ways can the letters of the word "${word}" be arranged?`,
+              opts: [`${permutations}`, `${permutations / 2}`, `${permutations * 2}`, `12`],
+              hint: `All letters are unique. Number of arrangements = 4! = 4 * 3 * 2 * 1 = 24.`
+            };
+          }
+        ];
+        const res = techAptitude[rVal % techAptitude.length]();
+        questionText = res.q;
+        baseOptions = res.opts;
+        hintText = res.hint;
+      } else if (type === 1) {
+        const gsEnglish = [
+          { q: "Which of the following rocket launchers is known as the 'workhorse of ISRO'?", opts: ["PSLV (Polar Satellite Launch Vehicle)", "GSLV", "LVM3", "ASLV"], hint: "PSLV is called the workhorse of ISRO due to its high reliability and successful launches." },
+          { q: "Who was the first Chairman of the Atomic Energy Commission of India?", opts: ["Dr. Homi J. Bhabha", "Dr. Vikram Sarabhai", "Dr. A.P.J. Abdul Kalam", "Dr. Satish Dhawan"], hint: "Dr. Homi Jehangir Bhabha was the founding Chairman of the Atomic Energy Commission in 1948." },
+          { q: "Which main battle tank has been indigenously designed and developed by DRDO's CVRDE?", opts: ["Arjun MBT", "T-90 Bhishma", "T-72 Ajeya", "Vijayanta"], hint: "Arjun is a third-generation main battle tank developed for the Indian Army by DRDO." },
+          { q: "Where is the Satish Dhawan Space Centre (SDSC-SHAR) located?", opts: ["Sriharikota, Andhra Pradesh", "Thiruvananthapuram, Kerala", "Bengaluru, Karnataka", "Mahendragiri, Tamil Nadu"], hint: "SDSC is located in Sriharikota, Andhra Pradesh, and is India's primary launch center." },
+          { q: "What was the codename of India's first successful nuclear bomb test conducted in Pokhran in 1974?", opts: ["Smiling Buddha", "Operation Vijay", "Operation Shakti", "Desert Storm"], hint: "The nuclear test conducted on 18 May 1974 was codenamed Smiling Buddha." }
+        ];
+        const item = gsEnglish[rVal % gsEnglish.length];
+        questionText = item.q;
+        baseOptions = item.opts;
+        hintText = item.hint;
+      } else {
+        let techQ = {};
+        if (name.includes("isro")) {
+          const questions = [
+            { q: "Which cryogenic rocket engine is used in the upper stage of ISRO's LVM3 (GSLV Mk III)?", opts: ["CE-20", "CE-7.5", "Vikas Engine", "Hadley Engine"], hint: "CE-20 is a cryogenic rocket engine developed by Liquid Propulsion Systems Centre of ISRO for LVM3." },
+            { q: "What is the orbital altitude range of a Geostationary Earth Orbit (GEO) satellite?", opts: ["35,786 km", "20,200 km", "500-1500 km", "10,000 km"], hint: "A geostationary orbit lies exactly 35,786 km above Earth's equator." },
+            { q: "Which satellite navigation system has been developed indigenously by ISRO?", opts: ["NavIC", "GPS", "GLONASS", "Galileo"], hint: "NavIC (Navigation with Indian Constellation) is India's autonomous regional satellite navigation system." }
+          ];
+          techQ = questions[rVal % questions.length];
+        } else if (name.includes("barc")) {
+          const questions = [
+            { q: "Which substance is most commonly used as both a moderator and a coolant in Indian PHWRs?", opts: ["Heavy Water (D2O)", "Light Water (H2O)", "Liquid Sodium", "Graphite"], hint: "Pressurized Heavy Water Reactors use Heavy Water (deuterium oxide) as both coolant and moderator." },
+            { q: "Which isotope of Uranium is the fissionable material present in natural uranium?", opts: ["Uranium-235", "Uranium-238", "Uranium-234", "Uranium-239"], hint: "Natural Uranium is mostly U-238, but U-235 is the fissionable isotope (about 0.72% concentration)." },
+            { q: "The process of splitting a heavy nucleus into lighter nuclei with the release of energy is called:", opts: ["Nuclear Fission", "Nuclear Fusion", "Radioactive Decay", "Alpha Emission"], hint: "Nuclear fission is the process where a heavy nucleus splits, releasing kinetic energy and free neutrons." }
+          ];
+          techQ = questions[rVal % questions.length];
+        } else if (name.includes("drdo")) {
+          const questions = [
+            { q: "BrahMos, the supersonic cruise missile, was developed as a joint venture between DRDO and which country?", opts: ["Russia", "Israel", "USA", "France"], hint: "BrahMos is named after the Brahmaputra and Moskva rivers, a joint venture between India (DRDO) and Russia (NPOM)." },
+            { q: "Which of the following is an indigenously developed short-range surface-to-air missile (SAM) by DRDO?", opts: ["Akash", "Prithvi", "Agni", "Nirbhay"], hint: "Akash is a mobile air defense system developed by DRDO." },
+            { q: "Which unmanned aerial vehicle (UAV) is being developed by DRDO for reconnaissance?", opts: ["Rustom", "Heron", "Predator", "Searcher"], hint: "Rustom is a medium-altitude long-endurance unmanned aerial vehicle developed by DRDO." }
+          ];
+          techQ = questions[rVal % questions.length];
+        } else {
+          const questions = [
+            { q: "Which thermodynamic cycle is the basis of steam power plant operations?", opts: ["Rankine Cycle", "Carnot Cycle", "Brayton Cycle", "Otto Cycle"], hint: "The Rankine cycle is an idealized thermodynamic cycle of heat engines that converts heat into mechanical work using water." },
+            { q: "In control systems, a proportional-integral-derivative (PID) controller uses derivative action to:", opts: ["Improve transient response and reduce overshoot", "Eliminate steady-state error", "Increase steady-state gain", "Reduce high-frequency noise"], hint: "Derivative control predicts system behavior and improves settling time and overshoot." },
+            { q: "Which semiconductor material is most widely used in modern integrated circuits (ICs)?", opts: ["Silicon", "Germanium", "Gallium Arsenide", "Carbon Nanotubes"], hint: "Silicon remains the dominant semiconductor for ICs due to its abundance and stable oxide layer." }
+          ];
+          techQ = questions[rVal % questions.length];
+        }
+        questionText = techQ.q;
+        baseOptions = techQ.opts;
+        hintText = techQ.hint;
       }
     } else {
 
@@ -3264,7 +3492,13 @@ const courseToCategory = {
   "indian administration & governance mock test": "Indian Studies",
   "indian sports & culture mock test": "Indian Studies",
   "indian socialism & social welfare mock test": "Indian Studies",
-  "indian freedom movement mock test": "Indian Studies"
+  "indian freedom movement mock test": "Indian Studies",
+  "nra cet matriculation 10th level mock test": "NRA CET",
+  "nra cet higher secondary 12th level mock test": "NRA CET",
+  "nra cet graduation level mock test": "NRA CET",
+  "isro scientist recruitment mock test": "Government Organizations",
+  "barc scientific officer mock test": "Government Organizations",
+  "drdo scientist b mock test": "Government Organizations"
 };
 
 
@@ -3273,6 +3507,12 @@ const getCategoryForCourse = (courseName) => {
   const name = courseName.toLowerCase();
   if (courseToCategory[name]) {
     return courseToCategory[name];
+  }
+  if (name.includes("nra cet") || name.includes("nra")) {
+    return "NRA CET";
+  }
+  if (name.includes("government organization") || name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
+    return "Government Organizations";
   }
   if (name.includes("neet pg")) {
     return "PG Entrance Exam";
