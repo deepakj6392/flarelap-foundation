@@ -229,6 +229,7 @@ model Category {
 
 model Volunteer {
   id              Int      @id @default(autoincrement())
+  memberId        String?  @unique @map("member_id")
   profilePhoto    String?  @map("profile_photo") @db.Text
   fullName        String   @map("full_name")
   gender          String

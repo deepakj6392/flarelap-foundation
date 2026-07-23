@@ -12,7 +12,30 @@ export async function GET(request: Request) {
     const volunteers = await prisma.volunteer.findMany({
       orderBy: { createdAt: "desc" }
     });
-    return NextResponse.json({ volunteers });
+
+    // Ensure all volunteers have a valid Member ID
+    const updatedVolunteers = await Promise.all(
+      volunteers.map(async (v) => {
+        if (!v.memberId) {
+          const digitsOnly = (v.phone || "").replace(/\D/g, "");
+          const phoneLast2 = digitsOnly.length >= 2 ? digitsOnly.slice(-2) : "00";
+          const yearLast2 = (v.createdAt ? new Date(v.createdAt) : new Date()).getFullYear().toString().slice(-2);
+          const mId = `FGF-00${phoneLast2}${yearLast2}`;
+          try {
+            await prisma.volunteer.update({
+              where: { id: v.id },
+              data: { memberId: mId }
+            });
+            return { ...v, memberId: mId };
+          } catch (e) {
+            return v;
+          }
+        }
+        return v;
+      })
+    );
+
+    return NextResponse.json({ volunteers: updatedVolunteers });
   } catch (error: any) {
     console.error("Admin volunteers fetch error:", error);
     return NextResponse.json(
@@ -110,8 +133,26 @@ export async function POST(request: Request) {
       }
     }
 
+    // Generate Unique Member ID: FGF-00 + (Last 2 digits of phone) + (Last 2 digits of current year)
+    const digitsOnly = phone.trim().replace(/\D/g, "");
+    const phoneLast2 = digitsOnly.length >= 2 ? digitsOnly.slice(-2) : "00";
+    const yearLast2 = new Date().getFullYear().toString().slice(-2);
+    let generatedMemberId = `FGF-00${phoneLast2}${yearLast2}`;
+
+    // Ensure uniqueness
+    const existingMember = await prisma.volunteer.findFirst({
+      where: { memberId: generatedMemberId }
+    });
+    if (existingMember) {
+      const count = await prisma.volunteer.count({
+        where: { memberId: { startsWith: generatedMemberId } }
+      });
+      generatedMemberId = `${generatedMemberId}-${count + 1}`;
+    }
+
     const newVolunteer = await prisma.volunteer.create({
       data: {
+        memberId: generatedMemberId,
         fullName: fullName.trim(),
         gender: gender || "Male",
         dob: dob || "",

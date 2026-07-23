@@ -32,6 +32,7 @@ import {
 
 interface Volunteer {
   id: number;
+  memberId?: string | null;
   profilePhoto?: string | null;
   fullName: string;
   gender: string;
@@ -385,6 +386,7 @@ export default function AdminVolunteersPage() {
   // Filter & Search Volunteers
   const filteredVolunteers = volunteers.filter((v) => {
     const matchesSearch =
+      (v.memberId && v.memberId.toLowerCase().includes(searchQuery.toLowerCase())) ||
       v.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       v.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
       v.phone.includes(searchQuery) ||
@@ -465,7 +467,7 @@ export default function AdminVolunteersPage() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by name, phone, email, PAN, UID..."
+            placeholder="Search by Member ID, Name, Phone, Email, PAN, UID..."
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
           />
         </div>
@@ -525,6 +527,7 @@ export default function AdminVolunteersPage() {
             <table className="w-full text-left text-xs text-slate-700 dark:text-slate-300">
               <thead className="bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 text-[11px] font-black uppercase text-slate-500 tracking-wider">
                 <tr>
+                  <th className="py-3.5 px-4">Member ID</th>
                   <th className="py-3.5 px-4">Volunteer</th>
                   <th className="py-3.5 px-4">Contact</th>
                   <th className="py-3.5 px-4">DOB / Age</th>
@@ -537,8 +540,17 @@ export default function AdminVolunteersPage() {
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 font-medium">
                 {filteredVolunteers.map((v) => {
                   const age = calculateAge(v.dob);
+                  const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
                   return (
                     <tr key={v.id} className="hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition">
+                      {/* Member ID Badge */}
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/70 dark:border-indigo-800/60 text-[11px] font-mono font-black text-indigo-700 dark:text-indigo-300 shadow-2xs">
+                          <CreditCard className="h-3.5 w-3.5 text-indigo-500 shrink-0" />
+                          {displayMemberId}
+                        </span>
+                      </td>
+
                       {/* Volunteer Name & Photo */}
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-3">
@@ -1168,14 +1180,20 @@ export default function AdminVolunteersPage() {
                     <User className="h-8 w-8 text-emerald-600" />
                   )}
                 </div>
-                <div>
-                  <h3 className="text-lg font-black text-slate-900 dark:text-white">
-                    {viewVolunteer.fullName}
-                  </h3>
-                  <p className="text-xs text-slate-500 font-bold">
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <h3 className="text-lg font-black text-slate-900 dark:text-white">
+                      {viewVolunteer.fullName}
+                    </h3>
+                    <span className="inline-flex items-center gap-1 bg-indigo-600 text-white text-[11px] font-mono font-black px-3 py-0.5 rounded-full shadow-xs">
+                      <CreditCard className="h-3.5 w-3.5" />
+                      {viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`}
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 font-bold mt-1">
                     {viewVolunteer.gender} • DOB: {viewVolunteer.dob || "N/A"}
                   </p>
-                  <span className="inline-block mt-1 bg-purple-100 text-purple-800 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md border border-purple-200/60">
+                  <span className="inline-block mt-1 bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md border border-purple-200/60 dark:border-purple-800/50">
                     {viewVolunteer.education}
                   </span>
                 </div>
@@ -1183,6 +1201,13 @@ export default function AdminVolunteersPage() {
 
               {/* Grid Info */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="p-3 rounded-xl border border-indigo-200/70 dark:border-indigo-800/60 bg-indigo-50/50 dark:bg-indigo-950/30 space-y-1">
+                  <span className="text-indigo-600 dark:text-indigo-400 font-bold uppercase text-[10px]">Official Member ID</span>
+                  <p className="font-mono font-black text-sm text-indigo-700 dark:text-indigo-300">
+                    {viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`}
+                  </p>
+                </div>
+
                 <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
                   <span className="text-slate-400 font-bold uppercase text-[10px]">Contact Info</span>
                   <p className="font-bold text-slate-900 dark:text-slate-100">{viewVolunteer.email}</p>
@@ -1203,10 +1228,12 @@ export default function AdminVolunteersPage() {
                   </p>
                 </div>
 
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1 sm:col-span-2">
                   <span className="text-slate-400 font-bold uppercase text-[10px]">Identity Docs</span>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">PAN: {viewVolunteer.panNo || "N/A"}</p>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
+                  <div className="flex flex-wrap gap-4 mt-0.5">
+                    <p className="font-bold text-slate-900 dark:text-slate-100">PAN: {viewVolunteer.panNo || "N/A"}</p>
+                    <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
+                  </div>
                 </div>
               </div>
 
