@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
+import Swal from "sweetalert2";
+import { useRouter } from "next/navigation";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
 import { getCourseMetadata } from "@/lib/testSeriesGenerator";
@@ -22,7 +25,10 @@ import {
   Stethoscope,
   Search,
   Zap,
-  Globe
+  Globe,
+  Loader2,
+  Lock,
+  CheckCircle2
 } from "lucide-react";
 
 interface ExamItem {
@@ -645,10 +651,148 @@ const getCategoryForCourse = (courseName: string): string => {
 
 
 export default function EducationPage() {
+  const router = useRouter();
   const [courses, setCourses] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [studentToken, setStudentToken] = useState<string | null>(null);
+  const [purchasedCourseIds, setPurchasedCourseIds] = useState<number[]>([]);
+  const [purchasingCourseId, setPurchasingCourseId] = useState<number | null>(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("student_token");
+    if (token) {
+      setStudentToken(token);
+      fetchStudentPurchases(token);
+    }
+  }, []);
+
+  const fetchStudentPurchases = async (token: string) => {
+    try {
+      const res = await fetch("/api/student/purchases", {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const pIds = (data.purchases || []).map((p: any) => p.courseId);
+        setPurchasedCourseIds(pIds);
+      }
+    } catch (err) {
+      console.error("Error fetching purchases:", err);
+    }
+  };
+
+  const handleRazorpayCheckout = async (course: any) => {
+    if (!studentToken) {
+      Swal.fire({
+        title: "Login Required",
+        text: "Please login or register to buy the Premium Pass.",
+        icon: "info",
+        showCancelButton: true,
+        confirmButtonText: "Login Now",
+        confirmButtonColor: "#047857"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          router.push(`/student/login?redirect=/education`);
+        }
+      });
+      return;
+    }
+
+    setPurchasingCourseId(course.id);
+
+    try {
+      // 1. Create order on backend
+      const orderRes = await fetch("/api/student/purchases/create-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${studentToken}`
+        },
+        body: JSON.stringify({ courseId: course.id })
+      });
+
+      const orderData = await orderRes.json();
+      if (!orderRes.ok) throw new Error(orderData.message || "Failed to initiate payment.");
+
+      const { orderId, keyId, currency } = orderData;
+
+      if (!(window as any).Razorpay) {
+        throw new Error("Razorpay SDK failed to load. Please refresh the page.");
+      }
+
+      // 2. Open Razorpay Popup
+      const options = {
+        key: keyId,
+        amount: orderData.amount, // in paise
+        currency: currency,
+        name: "Flarelap Foundation",
+        description: `Premium Pass for ${course.name}`,
+        order_id: orderId,
+        handler: async function (response: any) {
+          setPurchasingCourseId(course.id);
+          try {
+            // 3. Verify payment on backend
+            const verifyRes = await fetch("/api/student/purchases", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${studentToken}`
+              },
+              body: JSON.stringify({
+                courseId: course.id,
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+                amount: parseFloat(orderData.coursePrice || course.price || "59")
+              })
+            });
+
+            const verifyData = await verifyRes.json();
+            if (!verifyRes.ok) throw new Error(verifyData.message || "Payment verification failed.");
+
+            setPurchasedCourseIds(prev => [...prev, course.id]);
+
+            Swal.fire({
+              title: "Payment Successful!",
+              text: `You have successfully unlocked the Premium Pass for "${course.name}".`,
+              icon: "success",
+              confirmButtonColor: "#047857"
+            });
+          } catch (err: any) {
+            Swal.fire({
+              title: "Verification Failed",
+              text: err.message || "Payment completed, but verification failed. Please contact support.",
+              icon: "warning",
+              confirmButtonColor: "#dc2626"
+            });
+          } finally {
+            setPurchasingCourseId(null);
+          }
+        },
+        theme: {
+          color: "#047857"
+        },
+        modal: {
+          ondismiss: function () {
+            setPurchasingCourseId(null);
+          }
+        }
+      };
+
+      const rzp = new (window as any).Razorpay(options);
+      rzp.open();
+    } catch (err: any) {
+      Swal.fire({
+        title: "Payment Failed",
+        text: err.message || "Something went wrong during checkout. Please try again.",
+        icon: "error",
+        confirmButtonColor: "#dc2626"
+      });
+      setPurchasingCourseId(null);
+    }
+  };
 
   useEffect(() => {
     async function fetchCourses() {
@@ -1044,9 +1188,34 @@ export default function EducationPage() {
                               </ul>
                             </div>
                             <div className="p-4 mt-auto">
-                              <Link href={`/education/test-series/${course.id}`} className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-md text-sm text-center transition-colors">
-                                View Test Series
-                              </Link>
+                              {course.premium && !purchasedCourseIds.includes(course.id) ? (
+                                <div className="flex gap-2">
+                                  <Link 
+                                    href={`/education/test-series/${course.id}`} 
+                                    className="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold rounded-lg text-xs text-center transition-colors flex items-center justify-center"
+                                  >
+                                    View Tests
+                                  </Link>
+                                  <button 
+                                    onClick={() => handleRazorpayCheckout(course)}
+                                    disabled={purchasingCourseId === course.id}
+                                    className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg text-xs text-center transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs border-none"
+                                  >
+                                    {purchasingCourseId === course.id ? (
+                                      <Loader2 className="h-4 w-4 animate-spin" />
+                                    ) : (
+                                      `Buy Pass (₹${parseFloat(course.price?.toString() || "59").toFixed(0)})`
+                                    )}
+                                  </button>
+                                </div>
+                              ) : (
+                                <Link 
+                                  href={`/education/test-series/${course.id}`} 
+                                  className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-lg text-sm text-center transition-colors"
+                                >
+                                  {purchasedCourseIds.includes(course.id) ? "Access Unlocked Pass" : "View Test Series"}
+                                </Link>
+                              )}
                             </div>
                           </div>
                         );
@@ -1178,6 +1347,7 @@ export default function EducationPage() {
         </section>
       </main>
 
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="lazyOnload" />
       <Footer />
     </div>
   );
