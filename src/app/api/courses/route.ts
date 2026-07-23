@@ -6,6 +6,11 @@ export async function GET() {
     let courses = await prisma.course.findMany({
       where: { active: true },
       orderBy: { name: "asc" },
+      include: {
+        testSeries: {
+          select: { id: true, isFree: true }
+        }
+      }
     });
 
     if (courses.length === 0) {
@@ -43,6 +48,11 @@ export async function GET() {
       courses = await prisma.course.findMany({
         where: { active: true },
         orderBy: { name: "asc" },
+        include: {
+          testSeries: {
+            select: { id: true, isFree: true }
+          }
+        }
       });
     }
 

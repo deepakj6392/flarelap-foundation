@@ -16,6 +16,7 @@ import {
   Loader2
 } from "lucide-react";
 import { useDashboard } from "../layout";
+import { getCourseTestCount } from "@/lib/testSeriesGenerator";
 
 interface CourseRecord {
   id: number;
@@ -174,7 +175,7 @@ export default function StudentTestSeriesPage() {
 
                         <div className="flex items-center gap-1.5 text-xs text-slate-405 dark:text-slate-400 font-bold">
                           <BookOpen className="h-4 w-4" />
-                          <span>150 practice mock tests</span>
+                          <span>{getCourseTestCount(course.name, course.premium, (course as any).testSeries)} practice mock tests</span>
                         </div>
                       </div>
 
@@ -203,31 +204,36 @@ export default function StudentTestSeriesPage() {
               <p className="text-xs text-slate-500 font-medium pl-1">You have unlocked all test series packages!</p>
             ) : (
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {otherTestSeries.map(course => (
-                  <div 
-                    key={course.id} 
-                    className={`rounded-2xl border p-5 flex flex-col justify-between hover:shadow-md transition ${bgCard}`}
-                  >
-                    <div className="space-y-3.5">
-                      <div className="flex items-start justify-between">
-                        <span className="rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/20 text-purple-800 dark:text-purple-450 border border-purple-200/50">
-                          Premium Course
-                        </span>
-                        <span className="flex items-center gap-1 text-[10px] bg-amber-500/10 text-amber-500 rounded-full px-2.5 py-0.5 font-bold border border-amber-500/20">
-                          <Lock className="h-3 w-3" />
-                          Locked
-                        </span>
-                      </div>
+                {otherTestSeries.map(course => {
+                  const totalCount = getCourseTestCount(course.name, course.premium, (course as any).testSeries);
+                  const freeCount = Math.min(totalCount, 3);
+                  const premCount = Math.max(0, totalCount - freeCount);
 
-                      <h4 className={`text-sm font-black leading-tight ${textHeading} min-h-[38px] line-clamp-2`}>
-                        {course.name}
-                      </h4>
+                  return (
+                    <div 
+                      key={course.id} 
+                      className={`rounded-2xl border p-5 flex flex-col justify-between hover:shadow-md transition ${bgCard}`}
+                    >
+                      <div className="space-y-3.5">
+                        <div className="flex items-start justify-between">
+                          <span className="rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider bg-purple-100 dark:bg-purple-950/20 text-purple-800 dark:text-purple-450 border border-purple-200/50">
+                            Premium Course
+                          </span>
+                          <span className="flex items-center gap-1 text-[10px] bg-amber-500/10 text-amber-500 rounded-full px-2.5 py-0.5 font-bold border border-amber-500/20">
+                            <Lock className="h-3 w-3" />
+                            Locked
+                          </span>
+                        </div>
 
-                      <div className="flex items-center gap-1.5 text-xs text-slate-405 dark:text-slate-400 font-bold">
-                        <BookOpen className="h-4 w-4" />
-                        <span>147 Premium + 3 Free Tests</span>
+                        <h4 className={`text-sm font-black leading-tight ${textHeading} min-h-[38px] line-clamp-2`}>
+                          {course.name}
+                        </h4>
+
+                        <div className="flex items-center gap-1.5 text-xs text-slate-405 dark:text-slate-400 font-bold">
+                          <BookOpen className="h-4 w-4" />
+                          <span>{premCount > 0 ? `${premCount} Premium + ${freeCount} Free Tests` : `${totalCount} Free Tests`}</span>
+                        </div>
                       </div>
-                    </div>
 
                     <Link 
                       href={`/education/test-series/${course.id}`} 
@@ -237,8 +243,9 @@ export default function StudentTestSeriesPage() {
                       <ChevronRight className="h-3.5 w-3.5" />
                     </Link>
                   </div>
-                ))}
-              </div>
+                );
+              })}
+            </div>
             )}
           </div>
 

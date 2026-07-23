@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/common/Footer";
 import Herader from "@/components/common/Herader";
+import { getCourseMetadata } from "@/lib/testSeriesGenerator";
 import { sampleImages } from "@/constants/images";
 import {
   BookOpen,
@@ -546,9 +547,33 @@ const courseToCategory: { [key: string]: string } = {
   "indian sports & culture mock test": "Indian Studies",
   "indian socialism & social welfare mock test": "Indian Studies",
   "indian freedom movement mock test": "Indian Studies",
-  "nra cet matriculation 10th level mock test": "NRA CET",
-  "nra cet higher secondary 12th level mock test": "NRA CET",
-  "nra cet graduation level mock test": "NRA CET",
+  "nra cet 12th level mock test": "NRA CET",
+  "nra cet graduates mock test": "NRA CET",
+  "nra cet 10th level mock test": "NRA CET",
+  "aiims cre ldc/udc/steno/deo/jaa/sa mock test": "Government Organizations",
+  "nbe junior assistant 2024 mock tests series": "Government Organizations",
+  "isro assistant mock test 2022": "Government Organizations",
+  "isro junior personal assistant mock test 2022": "Government Organizations",
+  "ccras udc/ldc/steno/assistant mock test": "Government Organizations",
+  "nbe junior assistant mock test": "Government Organizations",
+  "cwc (central warehousing corporation) superintendent mock test": "Government Organizations",
+  "fci manager phase i & ii mock test 2022": "Government Organizations",
+  "fci stenographer mock test 2022": "Government Organizations",
+  "csir junior secretariat assistant (jsa) 2025 mock test": "Government Organizations",
+  "csir aso/so mock test 2023": "Government Organizations",
+  "upsc epfo personal assistant mock test": "Government Organizations",
+  "csir junior stenographer 2025 mock test": "Government Organizations",
+  "aai junior executive (common cadre) mock test": "Government Organizations",
+  "supreme court junior court assistant mock test": "Government Organizations",
+  "ccras mts 2025 mock test series": "Government Organizations",
+  "cbse junior assistant mock test 2025 (old)": "Government Organizations",
+  "jci junior assistant mock test series": "Government Organizations",
+  "cbse assistant/superintendent & all other post(tier i) mock test": "Government Organizations",
+  "npcil stipendiary trainee (category ii) prelims 2026 mock test": "Government Organizations",
+  "india post postman & mail guard mock test": "Government Organizations",
+  "epfo stenographer (group c) mock test 2023": "Government Organizations",
+  "sgpgi stenographer mock test series 2025": "Government Organizations",
+  "npcil scientific assistant physics mock test": "Government Organizations",
   "isro scientist recruitment mock test": "Government Organizations",
   "barc scientific officer mock test": "Government Organizations",
   "drdo scientist b mock test": "Government Organizations"
@@ -563,7 +588,15 @@ const getCategoryForCourse = (courseName: string): string => {
   if (name.includes("nra cet") || name.includes("nra")) {
     return "NRA CET";
   }
-  if (name.includes("government organization") || name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
+  if (
+    name.includes("government organization") || name.includes("government org") || name.includes("gov org") ||
+    name.includes("aiims cre") || name.includes("nbe junior assistant") || name.includes("isro") ||
+    name.includes("ccras") || name.includes("cwc") || name.includes("fci") ||
+    name.includes("csir") || name.includes("epfo") || name.includes("aai junior") ||
+    name.includes("supreme court") || name.includes("cbse") || name.includes("jci") ||
+    name.includes("npcil") || name.includes("india post") || name.includes("sgpgi") ||
+    name.includes("barc") || name.includes("drdo")
+  ) {
     return "Government Organizations";
   }
   if (name.includes("neet pg")) {
@@ -609,362 +642,7 @@ const getCategoryForCourse = (courseName: string): string => {
 };
 
 
-interface CourseMetadata {
-  users: string;
-  totalTests: number;
-  freeTests: number;
-  languages: string;
-  bullets: string[];
-  gradient: string;
-  iconName: "award" | "book" | "text" | "globe";
-}
 
-interface RealExamStats {
-  questions: number;
-  marks: number;
-  duration: number;
-  language: string;
-}
-
-const getRealExamStats = (courseName: string): RealExamStats => {
-  const name = courseName.toLowerCase();
-  if (name.includes("neet") && !name.includes("allied")) {
-    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
-  }
-  if (name.includes("jee")) {
-    return { questions: 20, marks: 80, duration: 30, language: "English, Hindi" };
-  }
-  if (name.includes("aiims paramedical")) {
-    return { questions: 90, marks: 90, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("pgimer paramedical")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
-  }
-  if (name.includes("jipmer paramedical")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English Only" };
-  }
-  if (name.includes("cuet ug (paramedical")) {
-    return { questions: 120, marks: 600, duration: 135, language: "English, Hindi" };
-  }
-  if (name.includes("neet ug (some allied")) {
-    return { questions: 180, marks: 720, duration: 200, language: "English, Hindi" };
-  }
-  if (name.includes("up cpet")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("ruhs paramedical")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("jenpas ug")) {
-    return { questions: 100, marks: 115, duration: 90, language: "English Only" };
-  }
-  if (name.includes("smfwbee")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
-  }
-  if (name.includes("uttarakhand paramedical")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("bihar dcece")) {
-    return { questions: 90, marks: 450, duration: 135, language: "English, Hindi" };
-  }
-  if (name.includes("ipu cet (paramedical")) {
-    return { questions: 150, marks: 600, duration: 150, language: "English Only" };
-  }
-  if (name.includes("ctet mock test")) {
-    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
-  }
-  if (name.includes("state tet (htet, uptet, reet, btet, etc.)")) {
-    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
-  }
-  if (name.includes("ugc net mock test")) {
-    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("csir net mock test")) {
-    return { questions: 120, marks: 200, duration: 180, language: "English Only" };
-  }
-  if (name.includes("kvs teacher exam")) {
-    return { questions: 180, marks: 180, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("nvs teacher exam")) {
-    return { questions: 150, marks: 150, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("dsssb teacher exam")) {
-    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("tgt exam mock test")) {
-    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("pgt exam mock test")) {
-    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("prt exam mock test")) {
-    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("b.ed entrance exam mock test")) {
-    return { questions: 100, marks: 200, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("m.ed entrance exam mock test")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("set (state eligibility test) mock test")) {
-    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("rbi grade b")) {
-    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("gk mock test") || name.includes("state gk")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("rbi assistant")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("sebi grade a")) {
-    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
-  }
-  if (name.includes("nabard grade a")) {
-    return { questions: 200, marks: 200, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("irdai grade a")) {
-    return { questions: 160, marks: 160, duration: 90, language: "English Only" };
-  }
-  if (name.includes("pfrda grade a")) {
-    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
-  }
-  if (name.includes("sidbi grade a")) {
-    return { questions: 160, marks: 200, duration: 120, language: "English Only" };
-  }
-  if (name.includes("ifsca grade a")) {
-    return { questions: 100, marks: 100, duration: 80, language: "English Only" };
-  }
-  if (name.includes("ibbi exam")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English Only" };
-  }
-  if (name.includes("cuet pg")) {
-    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
-  }
-  if (name.includes("iit jam")) {
-    return { questions: 60, marks: 100, duration: 180, language: "English Only" };
-  }
-  if (name.includes("gate (pg/m.tech)")) {
-    return { questions: 65, marks: 100, duration: 180, language: "English Only" };
-  }
-  if (name.includes("cat (mba)")) {
-    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
-  }
-  if (name.includes("cmat (mba)")) {
-    return { questions: 100, marks: 400, duration: 180, language: "English Only" };
-  }
-  if (name.includes("xat (mba)")) {
-    return { questions: 100, marks: 100, duration: 210, language: "English Only" };
-  }
-  if (name.includes("mat (mba)")) {
-    return { questions: 150, marks: 150, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("neet pg")) {
-    return { questions: 200, marks: 800, duration: 210, language: "English Only" };
-  }
-  if (name.includes("gpat")) {
-    return { questions: 125, marks: 500, duration: 180, language: "English Only" };
-  }
-  if (name.includes("clat pg")) {
-    return { questions: 120, marks: 120, duration: 120, language: "English Only" };
-  }
-  if (name.includes("tiss cuet pg")) {
-    return { questions: 75, marks: 300, duration: 105, language: "English Only" };
-  }
-  if (name.includes("nimcet")) {
-    return { questions: 120, marks: 1000, duration: 120, language: "English Only" };
-  }
-  if (name.includes("jnu pg")) {
-    return { questions: 75, marks: 300, duration: 105, language: "English, Hindi" };
-  }
-  if (name.includes("university specific pg")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
-    return { questions: 150, marks: 300, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
-    return { questions: 120, marks: 300, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("pcs") || name.includes("civil services")) {
-    return { questions: 100, marks: 200, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
-    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
-  }
-  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("lic") || name.includes("insurance")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("non-teaching") || name.includes("non teaching")) {
-    return { questions: 120, marks: 120, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("tgt") || name.includes("pgt")) {
-    return { questions: 125, marks: 125, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("tet") || name.includes("prt")) {
-    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
-  }
-  if (name.includes("food technology") || name.includes("food tech")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("nursing")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("civil engineering")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("electrical engineering")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("electronics & communication")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("computer science") || name.includes("cse")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
-  }
-  if (name.includes("instrumentation")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English Only" };
-  }
-  if (name.includes("other engineering")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("iti exam") || name.includes("iti")) {
-    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("accounting") || name.includes("commerce")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("placement")) {
-    return { questions: 60, marks: 60, duration: 60, language: "English Only" };
-  }
-  if (name.includes("nra cet") || name.includes("nra")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("government org") || name.includes("gov org")) {
-    return { questions: 100, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("ug entrance")) {
-    return { questions: 100, marks: 150, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("cuet")) {
-    return { questions: 75, marks: 300, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("mba")) {
-    return { questions: 66, marks: 198, duration: 120, language: "English Only" };
-  }
-  if (name.includes("ssc cgl") || name.includes("cgl")) {
-    return { questions: 100, marks: 200, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("gate")) {
-    return { questions: 65, marks: 100, duration: 180, language: "English Only" };
-  }
-  if (name.includes("sebi")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("ctet")) {
-    return { questions: 150, marks: 150, duration: 150, language: "English, Hindi" };
-  }
-  if (name.includes("fitter")) {
-    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("electrician")) {
-    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("rrb je") || name.includes("je ")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("judiciary")) {
-    return { questions: 100, marks: 100, duration: 180, language: "English, Hindi" };
-  }
-  if (name.includes("paramedical")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("electronic mechanic")) {
-    return { questions: 50, marks: 100, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("rrb ntpc") || name.includes("ntpc")) {
-    return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-  }
-  if (name.includes("sbi po")) {
-    return { questions: 100, marks: 100, duration: 60, language: "English, Hindi" };
-  }
-  if (name.includes("neet")) {
-    return { questions: 45, marks: 180, duration: 50, language: "English, Hindi" };
-  }
-  if (name.includes("nda")) {
-    return { questions: 150, marks: 600, duration: 150, language: "English, Hindi" };
-  }
-  if (name.includes("upsc")) {
-    return { questions: 100, marks: 200, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("police") || name.includes("constable")) {
-    return { questions: 150, marks: 300, duration: 120, language: "English, Hindi" };
-  }
-  if (name.includes("b.ed")) {
-    return { questions: 100, marks: 200, duration: 180, language: "English, Hindi" };
-  }
-  return { questions: 100, marks: 100, duration: 90, language: "English, Hindi" };
-};
-
-const getCourseMetadata = (courseName: string, courseId: number, isPremium: boolean): CourseMetadata => {
-  const hash = courseName.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) + (courseId || 0);
-  const userCount = ((hash % 400) + 400).toFixed(1) + "k";
-  
-  const name = courseName.toLowerCase();
-  const isSpecial20TestCourse = 
-    name.includes("neet") || 
-    name.includes("jee") || 
-    name.includes("ugc net paper 1") || 
-    name.includes("ugc net paper-1") ||
-    name.includes("civil services") ||
-    name.includes("upsc");
-
-  const totalTests = isSpecial20TestCourse ? 20 : 150;
-  const freeTests = 3;
-  
-  const stats = getRealExamStats(courseName);
-
-  const gradients = [
-    "from-purple-200/50 to-purple-50",
-    "from-pink-200/50 to-pink-50",
-    "from-indigo-200/50 to-indigo-50"
-  ];
-  const gradient = gradients[hash % gradients.length];
-  
-  const icons: ("award" | "book" | "text" | "globe")[] = ["award", "book", "text", "globe"];
-  const iconName = icons[hash % icons.length];
-
-  const bullets = isSpecial20TestCourse 
-    ? [
-        "3 Full Mock Tests (Free)",
-        "17 Premium Pass Tests",
-        "2026 Exam Pattern Aligned",
-        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
-      ]
-    : [
-        "3 Full Mock Tests (Free)",
-        `${totalTests - 3} Premium Pass Tests`,
-        "Comprehensive Syllabus Cover",
-        `Exam Pattern: ${stats.questions} Qs | ${stats.duration} Mins`
-      ];
-
-  return {
-    users: `${userCount} Users`,
-    totalTests,
-    freeTests,
-    languages: stats.language,
-    bullets,
-    gradient,
-    iconName
-  };
-};
 
 export default function EducationPage() {
   const [courses, setCourses] = useState<any[]>([]);
@@ -976,10 +654,49 @@ export default function EducationPage() {
     async function fetchCourses() {
       try {
         const res = await fetch("/api/courses");
+        let fetchedCourses: any[] = [];
         if (res.ok) {
           const data = await res.json();
-          setCourses(data.courses || []);
+          fetchedCourses = data.courses || [];
         }
+
+        const staticGovAndNraCourses = [
+          { id: 9001, name: "NRA CET 12th Level Mock Test", premium: true },
+          { id: 9002, name: "NRA CET Graduates Mock Test", premium: true },
+          { id: 9003, name: "AIIMS CRE LDC/UDC/Steno/DEO/JAA/SA Mock Test", premium: true },
+          { id: 9004, name: "NBE Junior Assistant 2024 Mock Tests Series", premium: true },
+          { id: 9005, name: "ISRO Assistant Mock Test 2022", premium: true },
+          { id: 9006, name: "ISRO Junior Personal Assistant Mock Test 2022", premium: true },
+          { id: 9007, name: "CCRAS UDC/LDC/Steno/Assistant Mock Test", premium: true },
+          { id: 9008, name: "NBE Junior Assistant Mock Test", premium: true },
+          { id: 9009, name: "CWC (Central Warehousing Corporation) Superintendent Mock Test", premium: true },
+          { id: 9010, name: "FCI Manager Phase I & II Mock Test 2022", premium: true },
+          { id: 9011, name: "FCI Stenographer Mock Test 2022", premium: true },
+          { id: 9012, name: "CSIR Junior Secretariat Assistant (JSA) 2025 Mock Test", premium: true },
+          { id: 9013, name: "CSIR ASO/SO Mock Test 2023", premium: true },
+          { id: 9014, name: "UPSC EPFO Personal Assistant Mock Test", premium: true },
+          { id: 9015, name: "CSIR Junior Stenographer 2025 Mock Test", premium: true },
+          { id: 9016, name: "AAI Junior Executive (Common Cadre) Mock Test", premium: true },
+          { id: 9017, name: "Supreme Court Junior Court Assistant Mock Test", premium: true },
+          { id: 9018, name: "CCRAS MTS 2025 Mock Test Series", premium: true },
+          { id: 9019, name: "CBSE Junior Assistant Mock Test 2025 (Old)", premium: true },
+          { id: 9020, name: "JCI Junior Assistant Mock Test Series", premium: true },
+          { id: 9021, name: "CBSE Assistant/Superintendent & All Other Post(Tier I) Mock Test", premium: true },
+          { id: 9022, name: "NPCIL Stipendiary Trainee (Category II) Prelims 2026 Mock Test", premium: true },
+          { id: 9023, name: "India Post Postman & Mail Guard Mock Test", premium: true },
+          { id: 9024, name: "EPFO Stenographer (Group C) Mock Test 2023", premium: true },
+          { id: 9025, name: "SGPGI Stenographer Mock Test Series 2025", premium: true },
+          { id: 9026, name: "NPCIL Scientific Assistant Physics Mock Test", premium: true }
+        ];
+
+        const cleanedFetched = fetchedCourses.filter((c: any) => 
+          !c.name.toLowerCase().includes("10th level")
+        );
+
+        const existingNames = new Set(cleanedFetched.map((c: any) => c.name.toLowerCase().trim()));
+        const missingStatic = staticGovAndNraCourses.filter(c => !existingNames.has(c.name.toLowerCase().trim()));
+
+        setCourses([...cleanedFetched, ...missingStatic]);
       } catch (err) {
         console.error("Failed to fetch courses:", err);
       } finally {
@@ -1019,6 +736,40 @@ export default function EducationPage() {
     const matchesSearch = course.name.toLowerCase().includes(searchQuery.toLowerCase());
     if (activeCategory === "All") {
       return matchesSearch;
+    } else if (activeCategory === "NRA CET") {
+      const lower = course.name.toLowerCase().trim();
+      const isExactNra = lower === "nra cet 12th level mock test" || lower === "nra cet graduates mock test";
+      return matchesSearch && isExactNra;
+    } else if (activeCategory === "Government Organizations") {
+      const lower = course.name.toLowerCase().trim();
+      const targetGovList = [
+        "aiims cre ldc/udc/steno/deo/jaa/sa mock test",
+        "nbe junior assistant 2024 mock tests series",
+        "isro assistant mock test 2022",
+        "isro junior personal assistant mock test 2022",
+        "ccras udc/ldc/steno/assistant mock test",
+        "nbe junior assistant mock test",
+        "cwc (central warehousing corporation) superintendent mock test",
+        "fci manager phase i & ii mock test 2022",
+        "fci stenographer mock test 2022",
+        "csir junior secretariat assistant (jsa) 2025 mock test",
+        "csir aso/so mock test 2023",
+        "upsc epfo personal assistant mock test",
+        "csir junior stenographer 2025 mock test",
+        "aai junior executive (common cadre) mock test",
+        "supreme court junior court assistant mock test",
+        "ccras mts 2025 mock test series",
+        "cbse junior assistant mock test 2025 (old)",
+        "jci junior assistant mock test series",
+        "cbse assistant/superintendent & all other post(tier i) mock test",
+        "npcil stipendiary trainee (category ii) prelims 2026 mock test",
+        "india post postman & mail guard mock test",
+        "epfo stenographer (group c) mock test 2023",
+        "sgpgi stenographer mock test series 2025",
+        "npcil scientific assistant physics mock test"
+      ];
+      const isTargetGov = targetGovList.includes(lower) || getCategoryForCourse(course.name) === "Government Organizations";
+      return matchesSearch && isTargetGov;
     } else {
       return matchesSearch && getCategoryForCourse(course.name) === activeCategory;
     }
@@ -1247,7 +998,7 @@ export default function EducationPage() {
                   ) : (
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                       {filteredCourses.map((course) => {
-                        const meta = getCourseMetadata(course.name, course.id, course.premium);
+                        const meta = getCourseMetadata(course.name, course.id, course.premium, course.testSeries);
                         return (
                           <div key={course.id} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                             <div className={`bg-gradient-to-br ${meta.gradient} p-5 rounded-t-xl`}>
