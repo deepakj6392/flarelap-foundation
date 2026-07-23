@@ -22,7 +22,8 @@ import {
   FileText,
   Settings,
   Heart,
-  Images
+  Images,
+  HeartHandshake
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -140,6 +141,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Donation Records";
       case "/admin/students":
         return "Student Directory";
+      case "/admin/volunteers":
+        return "Volunteer Directory";
       case "/admin/profile":
         return "Update Profile";
       case "/admin/team":
@@ -215,6 +218,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/students" className={getMenuBtnClass("/admin/students")}>
               <GraduationCap className={`h-5 w-5 ${pathname === '/admin/students' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Students
+            </Link>
+            <Link href="/admin/volunteers" className={getMenuBtnClass("/admin/volunteers")}>
+              <HeartHandshake className={`h-5 w-5 ${pathname === '/admin/volunteers' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Volunteers
             </Link>
             <Link href="/admin/gallery" className={getMenuBtnClass("/admin/gallery")}>
               <Images className={`h-5 w-5 ${pathname === '/admin/gallery' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />

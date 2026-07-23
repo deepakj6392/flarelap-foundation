@@ -226,3 +226,31 @@ model Category {
   @@map("categories")
 }
 
+model Volunteer {
+  id              Int      @id @default(autoincrement())
+  profilePhoto    String?  @map("profile_photo") @db.Text
+  fullName        String   @map("full_name")
+  gender          String
+  dob             String
+  panNo           String?  @map("pan_no")
+  panCardDoc      String?  @map("pan_card_doc") @db.Text
+  uidNo           String?  @map("uid_no")
+  uidFrontDoc     String?  @map("uid_front_doc") @db.Text
+  uidBackDoc      String?  @map("uid_back_doc") @db.Text
+  email           String
+  phone           String
+  education       String
+  specializations String?
+  street          String?
+  villageCity     String?  @map("village_city")
+  district        String?
+  state           String?
+  pincode         String?
+  agreement       Boolean  @default(true)
+  status          String   @default("APPROVED")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@map("volunteers")
+}
+
+
