@@ -1,15 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/constants/site";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LayoutDashboard } from "lucide-react";
 
 export default function Herader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
   const [desktopMoreOpen, setDesktopMoreOpen] = useState(false);
+  const [isStudentLoggedIn, setIsStudentLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("student_token");
+    const user = localStorage.getItem("student_user");
+    if (token && user) {
+      setIsStudentLoggedIn(true);
+    }
+  }, []);
 
   // Split navigation items
   const mainNavItems = siteConfig.navItems.filter((item) =>
@@ -83,12 +92,22 @@ export default function Herader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/student/login"
-            className="hidden sm:inline-flex shrink-0 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-850 px-4 py-2 text-xs font-bold transition"
-          >
-            Login As Student
-          </Link>
+          {isStudentLoggedIn ? (
+            <Link
+              href="/student/dashboard"
+              className="hidden sm:inline-flex items-center gap-1.5 shrink-0 rounded-full bg-sky-500 hover:bg-sky-600 active:scale-95 text-white px-4 py-2 text-xs font-bold transition shadow-sm"
+            >
+              <LayoutDashboard className="h-3.5 w-3.5" />
+              Go to Student Dashboard
+            </Link>
+          ) : (
+            <Link
+              href="/student/login"
+              className="hidden sm:inline-flex shrink-0 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-850 px-4 py-2 text-xs font-bold transition"
+            >
+              Login As Student
+            </Link>
+          )}
           <Link
             href="#contact"
             className="hidden sm:inline-flex shrink-0 rounded-full bg-emerald-700 px-4 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-emerald-800"
@@ -151,13 +170,24 @@ export default function Herader() {
               )}
             </div>
 
-            <Link
-              href="/student/login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 px-4 py-2.5 text-xs font-bold hover:bg-slate-50 transition"
-            >
-              Login As Student
-            </Link>
+            {isStudentLoggedIn ? (
+              <Link
+                href="/student/dashboard"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white px-4 py-2.5 text-xs font-bold transition shadow-sm"
+              >
+                <LayoutDashboard className="h-4 w-4" />
+                Go to Student Dashboard
+              </Link>
+            ) : (
+              <Link
+                href="/student/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-2 inline-flex w-full items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 px-4 py-2.5 text-xs font-bold hover:bg-slate-50 transition"
+              >
+                Login As Student
+              </Link>
+            )}
             <Link
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
