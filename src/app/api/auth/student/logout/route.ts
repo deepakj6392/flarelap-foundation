@@ -24,12 +24,26 @@ export async function POST(request: Request) {
     }
 
     // Record logout event in database
-    await prisma.studentLog.create({
-      data: {
-        userId: decoded.id,
-        action: "LOGOUT"
-      }
-    });
+    try {
+      await prisma.studentLog.create({
+        data: {
+          userId: decoded.id,
+          action: "LOGOUT"
+        }
+      });
+      await prisma.userLog.create({
+        data: {
+          userId: decoded.id,
+          userDisplayId: decoded.student_id || `STU-${decoded.id}`,
+          userName: decoded.name || "Student",
+          email: decoded.email,
+          role: "STUDENT",
+          action: "LOGOUT"
+        }
+      });
+    } catch (logErr) {
+      console.error("Student logout userLog error:", logErr);
+    }
 
     return NextResponse.json({ message: "Logged out successfully." });
   } catch (error: any) {

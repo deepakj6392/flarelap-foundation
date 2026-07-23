@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { query } from "@/lib/db";
+import { prisma } from "@/lib/prisma";
 import { sendTfaOtpEmail } from "@/lib/mail";
 
 export async function POST(request: Request) {
@@ -110,6 +111,22 @@ export async function POST(request: Request) {
       jwtSecret,
       { expiresIn: "1d" }
     );
+
+    // Record login event in UserLog table
+    try {
+      await prisma.userLog.create({
+        data: {
+          userId: user.id,
+          userDisplayId: `ADM-${user.id}`,
+          userName: user.name || "Super Admin",
+          email: user.email,
+          role: "ADMIN",
+          action: "LOGIN"
+        }
+      });
+    } catch (logErr) {
+      console.error("Admin userLog error:", logErr);
+    }
 
     return NextResponse.json({
       user: {

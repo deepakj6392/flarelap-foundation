@@ -254,4 +254,19 @@ model Volunteer {
   @@map("volunteers")
 }
 
+model UserLog {
+  id            Int      @id @default(autoincrement())
+  userId        Int?     @map("user_id")
+  userDisplayId String   @map("user_display_id")
+  userName      String   @map("user_name")
+  email         String
+  role          String   @default("STUDENT") // "ADMIN" | "STUDENT"
+  action        String   @default("LOGIN") // "LOGIN" | "LOGOUT"
+  ipAddress     String?  @map("ip_address")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("user_logs")
+}
+
+
 

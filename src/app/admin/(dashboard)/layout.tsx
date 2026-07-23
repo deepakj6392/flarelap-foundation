@@ -23,7 +23,8 @@ import {
   Settings,
   Heart,
   Images,
-  HeartHandshake
+  HeartHandshake,
+  History
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -143,6 +144,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Student Directory";
       case "/admin/volunteers":
         return "Volunteer Directory";
+      case "/admin/user-logs":
+        return "User Login & Activity Logs";
       case "/admin/profile":
         return "Update Profile";
       case "/admin/team":
@@ -222,6 +225,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/volunteers" className={getMenuBtnClass("/admin/volunteers")}>
               <HeartHandshake className={`h-5 w-5 ${pathname === '/admin/volunteers' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Volunteers
+            </Link>
+            <Link href="/admin/user-logs" className={getMenuBtnClass("/admin/user-logs")}>
+              <History className={`h-5 w-5 ${pathname === '/admin/user-logs' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              User Logs
             </Link>
             <Link href="/admin/gallery" className={getMenuBtnClass("/admin/gallery")}>
               <Images className={`h-5 w-5 ${pathname === '/admin/gallery' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />

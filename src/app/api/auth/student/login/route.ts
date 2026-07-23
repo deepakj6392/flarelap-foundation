@@ -75,12 +75,26 @@ export async function POST(request: Request) {
     };
 
     // Record login event in database
-    await prisma.studentLog.create({
-      data: {
-        userId: user.id,
-        action: "LOGIN"
-      }
-    });
+    try {
+      await prisma.studentLog.create({
+        data: {
+          userId: user.id,
+          action: "LOGIN"
+        }
+      });
+      await prisma.userLog.create({
+        data: {
+          userId: user.id,
+          userDisplayId: user.studentId || `STU-${user.id}`,
+          userName: user.name || "Student",
+          email: user.email,
+          role: "STUDENT",
+          action: "LOGIN"
+        }
+      });
+    } catch (logErr) {
+      console.error("Student login userLog error:", logErr);
+    }
 
     return NextResponse.json({
       message: "Student logged in successfully.",
