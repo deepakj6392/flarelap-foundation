@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 import {
   HeartHandshake,
   Plus,
@@ -314,7 +315,25 @@ export default function AdminVolunteersPage() {
   };
 
   const handleDeleteVolunteer = async (id: number) => {
-    if (!confirm("Are you sure you want to remove this volunteer from system?")) return;
+    const isDark = typeof document !== "undefined" && document.querySelector(".dark") !== null;
+
+    const result = await Swal.fire({
+      title: "Delete Volunteer?",
+      text: "Are you sure you want to remove this volunteer from system? This action cannot be undone.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, Delete Volunteer",
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#64748b",
+      background: isDark ? "#0f172a" : "#ffffff",
+      color: isDark ? "#ffffff" : "#1e293b",
+      customClass: {
+        popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+      }
+    });
+
+    if (!result.isConfirmed) return;
 
     const storedToken = localStorage.getItem("admin_token");
     if (!storedToken) return;
@@ -331,10 +350,33 @@ export default function AdminVolunteersPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Failed to delete volunteer.");
 
+      Swal.fire({
+        title: "Deleted Successfully!",
+        text: "Volunteer record has been removed from the system.",
+        icon: "success",
+        confirmButtonColor: "#10b981",
+        background: isDark ? "#0f172a" : "#ffffff",
+        color: isDark ? "#ffffff" : "#1e293b",
+        customClass: {
+          popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+        }
+      });
+
       setSuccessMsg("Volunteer record deleted successfully.");
       fetchVolunteers();
     } catch (err: any) {
       setError(err.message || "Failed to delete volunteer.");
+      Swal.fire({
+        title: "Deletion Failed",
+        text: err.message || "Failed to delete volunteer.",
+        icon: "error",
+        confirmButtonColor: "#ef4444",
+        background: isDark ? "#0f172a" : "#ffffff",
+        color: isDark ? "#ffffff" : "#1e293b",
+        customClass: {
+          popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+        }
+      });
     } finally {
       setActionLoading(null);
     }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 import { Plus, Trash2, Edit2, Loader2, Save, X, Image as ImageIcon } from "lucide-react";
 
 // SVG Icons for social links in admin dashboard
@@ -192,7 +193,25 @@ export default function AdminTeamPage() {
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm("Are you sure you want to delete this team member?")) return;
+    const isDark = typeof document !== "undefined" && document.querySelector(".dark") !== null;
+
+    const result = await Swal.fire({
+      title: "Delete Team Member?",
+      text: "Are you sure you want to delete this team member? This action cannot be undone.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, Delete",
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#64748b",
+      background: isDark ? "#0f172a" : "#ffffff",
+      color: isDark ? "#ffffff" : "#1e293b",
+      customClass: {
+        popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+      }
+    });
+
+    if (!result.isConfirmed) return;
 
     try {
       const res = await fetch(`/api/team/${id}`, {
@@ -200,9 +219,24 @@ export default function AdminTeamPage() {
         headers: getAuthHeaders(),
       });
       if (res.ok) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "Team member has been deleted.",
+          icon: "success",
+          confirmButtonColor: "#10b981",
+          background: isDark ? "#0f172a" : "#ffffff",
+          color: isDark ? "#ffffff" : "#1e293b",
+        });
         fetchMembers();
       } else {
-        alert("Failed to delete member");
+        Swal.fire({
+          title: "Error",
+          text: "Failed to delete team member.",
+          icon: "error",
+          confirmButtonColor: "#ef4444",
+          background: isDark ? "#0f172a" : "#ffffff",
+          color: isDark ? "#ffffff" : "#1e293b",
+        });
       }
     } catch (error) {
       console.error(error);

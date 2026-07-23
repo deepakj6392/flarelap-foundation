@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Swal from "sweetalert2";
 import { Plus, Trash2, Edit2, Loader2, Save, X, Image as ImageIcon, Eye, FileText, Globe } from "lucide-react";
 
 interface BlogPost {
@@ -182,7 +183,25 @@ export default function AdminBlogsPage() {
   };
 
   const handleDelete = async (blog: BlogPost) => {
-    if (!confirm(`Are you sure you want to delete "${blog.title}"?`)) return;
+    const isDark = typeof document !== "undefined" && document.querySelector(".dark") !== null;
+
+    const result = await Swal.fire({
+      title: "Delete Blog Post?",
+      text: `Are you sure you want to delete "${blog.title}"? This action cannot be undone.`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, Delete Blog",
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "#ef4444",
+      cancelButtonColor: "#64748b",
+      background: isDark ? "#0f172a" : "#ffffff",
+      color: isDark ? "#ffffff" : "#1e293b",
+      customClass: {
+        popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+      }
+    });
+
+    if (!result.isConfirmed) return;
 
     try {
       const res = await fetch(`/api/blogs/${blog.id}`, {
@@ -190,9 +209,24 @@ export default function AdminBlogsPage() {
         headers: getAuthHeaders(),
       });
       if (res.ok) {
+        Swal.fire({
+          title: "Deleted!",
+          text: "Blog post has been removed.",
+          icon: "success",
+          confirmButtonColor: "#10b981",
+          background: isDark ? "#0f172a" : "#ffffff",
+          color: isDark ? "#ffffff" : "#1e293b",
+        });
         fetchBlogs();
       } else {
-        alert("Failed to delete blog post");
+        Swal.fire({
+          title: "Error",
+          text: "Failed to delete blog post.",
+          icon: "error",
+          confirmButtonColor: "#ef4444",
+          background: isDark ? "#0f172a" : "#ffffff",
+          color: isDark ? "#ffffff" : "#1e293b",
+        });
       }
     } catch (error) {
       console.error("Error deleting blog:", error);
