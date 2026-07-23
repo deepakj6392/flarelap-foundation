@@ -18,12 +18,14 @@ import {
   MapPin,
   Globe,
   Link as LinkIcon,
-  X
+  X,
+  Upload,
+  Image as ImageIcon
 } from "lucide-react";
 
 export default function ProfilePage() {
   // Tab state
-  const [activeTab, setActiveTab] = useState("security");
+  const [activeTab, setActiveTab] = useState("branding");
 
   // Profile state
   const [name, setName] = useState("");
@@ -45,6 +47,8 @@ export default function ProfilePage() {
   const [instagram, setInstagram] = useState("");
   const [xLink, setXLink] = useState("");
   const [youtube, setYoutube] = useState("");
+  const [logoUrl, setLogoUrl] = useState<string>("/logo.png");
+  const [logoError, setLogoError] = useState<string | null>(null);
 
   // UI states
   const [showPassword, setShowPassword] = useState(false);
@@ -106,10 +110,31 @@ export default function ProfilePage() {
         setInstagram(data.setting.instagram);
         setXLink(data.setting.xLink);
         setYoutube(data.setting.youtube);
+        if (data.setting.logoUrl) {
+          setLogoUrl(data.setting.logoUrl);
+        }
       }
     } catch (err: any) {
       console.error("Error loading site settings:", err);
     }
+  };
+
+  const handleLogoUpload = (file: File) => {
+    setLogoError(null);
+    const maxSizeBytes = 3 * 1024 * 1024; // 3MB limit
+    if (file.size > maxSizeBytes) {
+      setLogoError(`Logo file size exceeds 3MB limit! (${(file.size / (1024 * 1024)).toFixed(2)}MB)`);
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setLogoUrl(reader.result as string);
+    };
+    reader.onerror = () => {
+      setLogoError("Failed to read logo image file.");
+    };
+    reader.readAsDataURL(file);
   };
 
   // Handle Profile Details update
@@ -194,7 +219,8 @@ export default function ProfilePage() {
           facebook,
           instagram,
           xLink,
-          youtube
+          youtube,
+          logoUrl
         }),
       });
 
@@ -204,7 +230,7 @@ export default function ProfilePage() {
         throw new Error(data.message || "Failed to save site configurations.");
       }
 
-      setSuccess("Site settings updated successfully.");
+      setSuccess("Site settings and Logo updated successfully.");
     } catch (err: any) {
       setError(err.message || "An error occurred while saving site configurations.");
     } finally {
@@ -346,6 +372,18 @@ export default function ProfilePage() {
       <div className="flex border-b border-slate-200 dark:border-slate-800 gap-1.5 overflow-x-auto">
         <button
           type="button"
+          onClick={() => { setActiveTab("branding"); setError(null); setSuccess(null); }}
+          className={`flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold transition border-b-2 outline-none whitespace-nowrap ${
+            activeTab === "branding"
+              ? "border-emerald-600 text-emerald-600 dark:text-emerald-400"
+              : "border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+          }`}
+        >
+          <ImageIcon className="h-4 w-4" />
+          Site Logo & Branding
+        </button>
+        <button
+          type="button"
           onClick={() => { setActiveTab("security"); setError(null); setSuccess(null); }}
           className={`flex items-center gap-2 px-4.5 py-2.5 text-xs font-bold transition border-b-2 outline-none whitespace-nowrap ${
             activeTab === "security"
@@ -397,6 +435,85 @@ export default function ProfilePage() {
       )}
 
       {/* Tab Contents */}
+      {activeTab === "branding" && (
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
+          <h3 className="text-sm font-extrabold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3 flex items-center gap-2">
+            <ImageIcon className="h-4.5 w-4.5 text-emerald-500" />
+            Website Brand Logo & Site Branding
+          </h3>
+
+          <form onSubmit={handleUpdateSiteSettings} className="space-y-6">
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row items-center gap-6">
+              {/* Logo Preview */}
+              <div className="relative h-28 w-28 rounded-2xl border-2 border-dashed border-emerald-500/40 bg-white dark:bg-slate-900 flex items-center justify-center p-2 shrink-0 shadow-sm overflow-hidden">
+                {logoUrl ? (
+                  <img src={logoUrl} alt="Website Brand Logo" className="h-full w-full object-contain" />
+                ) : (
+                  <ImageIcon className="h-10 w-10 text-slate-400" />
+                )}
+              </div>
+
+              <div className="space-y-2 text-center sm:text-left flex-1">
+                <h4 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider">
+                  Upload Dynamic Site Logo (Max 3MB)
+                </h4>
+                <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                  Upload your official website brand logo (PNG/JPG). Updating logo here dynamically updates it across Header, Footer, Admin Console, and Student Learning Portal.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start pt-1">
+                  <label className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl text-xs font-extrabold cursor-pointer transition shadow-sm">
+                    <Upload className="h-4 w-4" />
+                    Choose New Logo Image
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        if (e.target.files?.[0]) {
+                          handleLogoUpload(e.target.files[0]);
+                        }
+                      }}
+                      className="hidden"
+                    />
+                  </label>
+
+                  {logoUrl && logoUrl !== "/logo.png" && (
+                    <button
+                      type="button"
+                      onClick={() => setLogoUrl("/logo.png")}
+                      className="text-xs text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-bold underline cursor-pointer"
+                    >
+                      Reset to Default Logo
+                    </button>
+                  )}
+                </div>
+                {logoError && <p className="text-xs text-red-500 font-bold mt-1">{logoError}</p>}
+              </div>
+            </div>
+
+            <div className="pt-2 flex justify-end">
+              <button
+                type="submit"
+                disabled={settingsSaving}
+                className="flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] transition px-6 py-2.5 text-xs font-bold text-white shadow-md disabled:opacity-50 cursor-pointer border-none"
+              >
+                {settingsSaving ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Saving Logo...
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="h-4 w-4" />
+                    Save Logo & Branding Settings
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+
       {activeTab === "security" && (
         <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
           {/* Account Form */}
