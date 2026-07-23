@@ -323,6 +323,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 fill
                 className="object-cover opacity-80"
                 priority={index === 0}
+                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
@@ -726,6 +727,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 alt="Story 1"
                 fill
                 className="object-cover opacity-60 group-hover:opacity-40 transition"
+                unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white group-hover:bg-red-700 transition">
@@ -744,6 +746,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 alt="Story 2"
                 fill
                 className="object-cover opacity-60 group-hover:opacity-40 transition"
+                unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-16 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white group-hover:bg-red-700 transition">

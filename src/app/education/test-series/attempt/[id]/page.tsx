@@ -121,19 +121,35 @@ export default function CBTTestAttemptPage() {
         const courseData = await courseRes.json();
 
         const dbTests = courseData.course?.testSeries || [];
-        const testItem = dbTests.find((t: any) => t.id.toString() === testIdStr);
+        let testItem = dbTests.find((t: any) => 
+          t.id.toString() === testIdStr || 
+          t.id.toString() === testIdStr.replace(/^fmt-/, "").replace(/^ch-/, "")
+        );
 
         if (!testItem) {
-          throw new Error("Test Series configuration not found in database.");
+          const numericId = parseInt(testIdStr.replace(/\D/g, ""), 10) || 1;
+          const isFullMock = testIdStr.toLowerCase().includes("fmt") || testIdStr.toLowerCase().includes("full");
+          const courseTitle = courseData.course?.name || "Mock Test Series";
+          
+          testItem = {
+            id: testIdStr,
+            name: isFullMock 
+              ? `${courseTitle} - Full Length Mock Test ${numericId}` 
+              : `${courseTitle} - Practice Test ${numericId}`,
+            type: isFullMock ? "FULL_LENGTH" : "CHAPTER_TEST",
+            qs: 100,
+            marks: 100,
+            duration: 60
+          };
         }
 
         const details: TestDetails = {
           id: testItem.id,
           name: testItem.name,
-          type: testItem.type,
-          qs: testItem.qs,
-          marks: testItem.marks,
-          duration: testItem.duration
+          type: testItem.type || "FULL_LENGTH",
+          qs: testItem.qs || 100,
+          marks: testItem.marks || 100,
+          duration: testItem.duration || 60
         };
         setTestDetails(details);
         setTimeLeft(details.duration * 60);
