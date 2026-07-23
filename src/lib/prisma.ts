@@ -39,7 +39,8 @@ function getPrismaInstance(): PrismaClient {
 
   if (
     !globalForPrisma.prismaClientV5 ||
-    !(globalForPrisma.prismaClientV5 as any).volunteer
+    !(globalForPrisma.prismaClientV5 as any).volunteer ||
+    !(globalForPrisma.prismaClientV5 as any).userLog
   ) {
     globalForPrisma.prismaClientV5 = createPrismaClient();
   }
@@ -49,20 +50,22 @@ function getPrismaInstance(): PrismaClient {
 
 export const prisma: PrismaClient = new Proxy({} as PrismaClient, {
   get(_target, prop, receiver) {
-    const instance = getPrismaInstance();
-    // If accessing a model property that is undefined on cached instance, force recreation
+    let instance = getPrismaInstance();
+
+    // Check if property is a string model delegate that is undefined on cached instance
     if (
       typeof prop === "string" &&
-      !(prop in instance) &&
-      !prop.startsWith("$")
+      !prop.startsWith("$") &&
+      !prop.startsWith("_") &&
+      (instance as any)[prop] === undefined
     ) {
       globalForPrisma.prismaClientV5 = createPrismaClient();
+      instance = globalForPrisma.prismaClientV5;
     }
 
-    const currentInstance = getPrismaInstance();
-    const value = Reflect.get(currentInstance, prop, receiver);
+    const value = (instance as any)[prop];
     if (typeof value === "function") {
-      return value.bind(currentInstance);
+      return value.bind(instance);
     }
     return value;
   }

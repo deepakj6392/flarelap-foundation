@@ -33,21 +33,30 @@ export async function GET(request: Request) {
       ];
     }
 
-    const logs = await prisma.userLog.findMany({
+    const userLogModel = (prisma as any).userLog;
+    if (!userLogModel) {
+      return NextResponse.json({
+        success: true,
+        logs: [],
+        stats: { totalLogs: 0, adminLogs: 0, studentLogs: 0, todayLogins: 0 }
+      });
+    }
+
+    const logs = await userLogModel.findMany({
       where,
       orderBy: { createdAt: "desc" },
       take: 200
     });
 
     // Compute metrics/stats
-    const totalLogs = await prisma.userLog.count();
-    const adminLogs = await prisma.userLog.count({ where: { role: "ADMIN" } });
-    const studentLogs = await prisma.userLog.count({ where: { role: "STUDENT" } });
+    const totalLogs = await userLogModel.count();
+    const adminLogs = await userLogModel.count({ where: { role: "ADMIN" } });
+    const studentLogs = await userLogModel.count({ where: { role: "STUDENT" } });
 
     const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
 
-    const todayLogins = await prisma.userLog.count({
+    const todayLogins = await userLogModel.count({
       where: {
         createdAt: { gte: todayStart },
         action: "LOGIN"
