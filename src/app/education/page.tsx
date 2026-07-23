@@ -1188,34 +1188,12 @@ export default function EducationPage() {
                               </ul>
                             </div>
                             <div className="p-4 mt-auto">
-                              {course.premium && !purchasedCourseIds.includes(course.id) ? (
-                                <div className="flex gap-2">
-                                  <Link 
-                                    href={`/education/test-series/${course.id}`} 
-                                    className="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold rounded-lg text-xs text-center transition-colors flex items-center justify-center"
-                                  >
-                                    View Tests
-                                  </Link>
-                                  <button 
-                                    onClick={() => handleRazorpayCheckout(course)}
-                                    disabled={purchasingCourseId === course.id}
-                                    className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-lg text-xs text-center transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs border-none"
-                                  >
-                                    {purchasingCourseId === course.id ? (
-                                      <Loader2 className="h-4 w-4 animate-spin" />
-                                    ) : (
-                                      `Buy Pass (₹${parseFloat(course.price?.toString() || "59").toFixed(0)})`
-                                    )}
-                                  </button>
-                                </div>
-                              ) : (
-                                <Link 
-                                  href={`/education/test-series/${course.id}`} 
-                                  className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] text-white font-bold rounded-lg text-sm text-center transition-colors"
-                                >
-                                  {purchasedCourseIds.includes(course.id) ? "Access Unlocked Pass" : "View Test Series"}
-                                </Link>
-                              )}
+                              <Link 
+                                href={`/education/test-series/${course.id}`} 
+                                className="block w-full py-2.5 bg-[#00c2ff] hover:bg-[#00b0e6] active:scale-[0.98] text-white font-black rounded-xl text-xs sm:text-sm text-center transition shadow-sm"
+                              >
+                                View Tests
+                              </Link>
                             </div>
                           </div>
                         );
