@@ -11,6 +11,7 @@ export default function Herader() {
   const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
   const [desktopMoreOpen, setDesktopMoreOpen] = useState(false);
   const [isStudentLoggedIn, setIsStudentLoggedIn] = useState(false);
+  const [logoUrl, setLogoUrl] = useState("/logo.png");
 
   useEffect(() => {
     const token = localStorage.getItem("student_token");
@@ -18,6 +19,20 @@ export default function Herader() {
     if (token && user) {
       setIsStudentLoggedIn(true);
     }
+
+    async function loadSettings() {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const res = await fetch(`${apiUrl}/api/site-settings`);
+        const data = await res.json();
+        if (res.ok && data.setting?.logoUrl) {
+          setLogoUrl(data.setting.logoUrl);
+        }
+      } catch (err) {
+        console.error("Error fetching site settings logo in header:", err);
+      }
+    }
+    loadSettings();
   }, []);
 
   // Split navigation items
@@ -33,13 +48,10 @@ export default function Herader() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur dark:bg-slate-950/90 dark:border-slate-800/80">
       <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex min-w-0 items-center gap-3">
-          <Image
-            src="/logo.png"
+          <img
+            src={logoUrl}
             alt={`${siteConfig.name} logo`}
-            width={56}
-            height={56}
             className="h-12 w-12 rounded-full object-contain"
-            priority
           />
           <div className="min-w-0">
             <p className="text-base font-bold leading-tight text-slate-950 dark:text-white sm:text-lg">

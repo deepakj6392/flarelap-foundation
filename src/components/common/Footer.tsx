@@ -20,6 +20,7 @@ export default function Footer() {
     instagram: "https://www.instagram.com/flarelap_org",
     xLink: siteConfig.links.x,
     youtube: siteConfig.links.youtube,
+    logoUrl: "/logo.png"
   });
 
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Footer() {
             instagram: data.setting.instagram || "https://www.instagram.com/flarelap_org",
             xLink: data.setting.xLink || siteConfig.links.x,
             youtube: data.setting.youtube || siteConfig.links.youtube,
+            logoUrl: data.setting.logoUrl || "/logo.png"
           });
         }
       } catch (err) {
@@ -56,11 +58,9 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
+              <img
+                src={settings.logoUrl}
                 alt="Flarelap Global Foundation logo"
-                width={50}
-                height={50}
                 className="h-12 w-12 rounded-full object-contain bg-white p-0.5"
               />
               <div>
