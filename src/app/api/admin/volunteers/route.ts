@@ -57,8 +57,6 @@ export async function POST(request: Request) {
       fullName,
       gender,
       dob,
-      panNo,
-      panCardDoc,
       uidNo,
       uidFrontDoc,
       uidBackDoc,
@@ -122,17 +120,6 @@ export async function POST(request: Request) {
       }
     }
 
-    // PAN Card Validation if provided
-    if (panNo && panNo.trim()) {
-      const cleanPan = panNo.trim().toUpperCase();
-      if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(cleanPan)) {
-        return NextResponse.json(
-          { message: "Invalid PAN Card Number format (e.g. ABCDE1234F)." },
-          { status: 400 }
-        );
-      }
-    }
-
     // Generate Unique Member ID: FGF-00 + (Last 2 digits of phone) + (Last 2 digits of current year)
     const digitsOnly = phone.trim().replace(/\D/g, "");
     const phoneLast2 = digitsOnly.length >= 2 ? digitsOnly.slice(-2) : "00";
@@ -156,8 +143,6 @@ export async function POST(request: Request) {
         fullName: fullName.trim(),
         gender: gender || "Male",
         dob: dob || "",
-        panNo: panNo ? panNo.trim().toUpperCase() : null,
-        panCardDoc: panCardDoc || null,
         uidNo: uidNo ? uidNo.trim().replace(/\s+/g, "") : null,
         uidFrontDoc: uidFrontDoc || null,
         uidBackDoc: uidBackDoc || null,

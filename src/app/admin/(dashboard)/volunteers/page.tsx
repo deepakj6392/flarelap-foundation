@@ -37,8 +37,6 @@ interface Volunteer {
   fullName: string;
   gender: string;
   dob: string;
-  panNo?: string | null;
-  panCardDoc?: string | null;
   uidNo?: string | null;
   uidFrontDoc?: string | null;
   uidBackDoc?: string | null;
@@ -81,7 +79,6 @@ export default function AdminVolunteersPage() {
   const [fullName, setFullName] = useState("");
   const [gender, setGender] = useState("Male");
   const [dob, setDob] = useState("");
-  const [panNo, setPanNo] = useState("");
   const [uidNo, setUidNo] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -96,13 +93,11 @@ export default function AdminVolunteersPage() {
 
   // Image Upload Fields (Base64 data or URLs) Max 3MB
   const [profilePhoto, setProfilePhoto] = useState<string | null>(null);
-  const [panCardDoc, setPanCardDoc] = useState<string | null>(null);
   const [uidFrontDoc, setUidFrontDoc] = useState<string | null>(null);
   const [uidBackDoc, setUidBackDoc] = useState<string | null>(null);
 
   // File Upload Error Messages
   const [photoError, setPhotoError] = useState<string | null>(null);
-  const [panDocError, setPanDocError] = useState<string | null>(null);
   const [uidFrontDocError, setUidFrontDocError] = useState<string | null>(null);
   const [uidBackDocError, setUidBackDocError] = useState<string | null>(null);
   const [dobError, setDobError] = useState<string | null>(null);
@@ -188,7 +183,6 @@ export default function AdminVolunteersPage() {
     setFullName("");
     setGender("Male");
     setDob("");
-    setPanNo("");
     setUidNo("");
     setEmail("");
     setPhone("");
@@ -201,11 +195,9 @@ export default function AdminVolunteersPage() {
     setPincode("");
     setAgreement(true);
     setProfilePhoto(null);
-    setPanCardDoc(null);
     setUidFrontDoc(null);
     setUidBackDoc(null);
     setPhotoError(null);
-    setPanDocError(null);
     setUidFrontDocError(null);
     setUidBackDocError(null);
     setDobError(null);
@@ -225,7 +217,6 @@ export default function AdminVolunteersPage() {
     setFullName(v.fullName);
     setGender(v.gender || "Male");
     setDob(v.dob || "");
-    setPanNo(v.panNo || "");
     setUidNo(v.uidNo || "");
     setEmail(v.email);
     setPhone(v.phone);
@@ -238,7 +229,6 @@ export default function AdminVolunteersPage() {
     setPincode(v.pincode || "");
     setAgreement(v.agreement);
     setProfilePhoto(v.profilePhoto || null);
-    setPanCardDoc(v.panCardDoc || null);
     setUidFrontDoc(v.uidFrontDoc || null);
     setUidBackDoc(v.uidBackDoc || null);
     setIsModalOpen(true);
@@ -267,8 +257,6 @@ export default function AdminVolunteersPage() {
       fullName: fullName.trim(),
       gender,
       dob,
-      panNo: panNo.trim().toUpperCase(),
-      panCardDoc,
       uidNo: uidNo.trim().replace(/\s+/g, ""),
       uidFrontDoc,
       uidBackDoc,
@@ -390,7 +378,6 @@ export default function AdminVolunteersPage() {
       v.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
       v.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
       v.phone.includes(searchQuery) ||
-      (v.panNo && v.panNo.toLowerCase().includes(searchQuery.toLowerCase())) ||
       (v.uidNo && v.uidNo.includes(searchQuery)) ||
       (v.villageCity && v.villageCity.toLowerCase().includes(searchQuery.toLowerCase())) ||
       (v.state && v.state.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -414,7 +401,7 @@ export default function AdminVolunteersPage() {
               Volunteer Directory & Management
             </h1>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Register new volunteers, review PAN & Aadhaar identity documents, and manage active contributors.
+              Register new volunteers, review Aadhaar UID identity documents, and manage active contributors.
             </p>
           </div>
         </div>
@@ -467,7 +454,7 @@ export default function AdminVolunteersPage() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by Member ID, Name, Phone, Email, PAN, UID..."
+            placeholder="Search by Member ID, Name, Phone, Email, UID..."
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
           />
         </div>
@@ -533,7 +520,7 @@ export default function AdminVolunteersPage() {
                   <th className="py-3.5 px-4">DOB / Age</th>
                   <th className="py-3.5 px-4">Education</th>
                   <th className="py-3.5 px-4">Address</th>
-                  <th className="py-3.5 px-4">Identity Docs</th>
+                  <th className="py-3.5 px-4">Aadhaar / UID</th>
                   <th className="py-3.5 px-4 text-center">Actions</th>
                 </tr>
               </thead>
@@ -624,55 +611,37 @@ export default function AdminVolunteersPage() {
                         </div>
                       </td>
 
-                      {/* Identity Docs */}
+                      {/* Aadhaar / UID */}
                       <td className="py-4 px-4">
-                        <div className="flex flex-col gap-1">
-                          {v.panNo ? (
-                            <button
-                              onClick={() => {
-                                if (v.panCardDoc) {
-                                  setViewDocImage({ title: `PAN Card: ${v.panNo}`, url: v.panCardDoc });
-                                }
-                              }}
-                              className={`text-[10px] font-bold px-2 py-0.5 rounded border text-left flex items-center justify-between gap-1 transition ${
-                                v.panCardDoc 
-                                  ? "bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 border-emerald-200 hover:underline cursor-pointer"
-                                  : "bg-slate-100 dark:bg-slate-800 text-slate-500 border-slate-200"
-                              }`}
-                            >
-                              <span>PAN: {v.panNo}</span>
-                              {v.panCardDoc && <Eye className="h-3 w-3 text-emerald-600 shrink-0" />}
-                            </button>
-                          ) : (
-                            <span className="text-[10px] text-slate-400">PAN: N/A</span>
-                          )}
-
-                          {v.uidNo ? (
-                            <div className="flex items-center gap-1">
-                              <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
-                                UID: {v.uidNo}
-                              </span>
+                        {v.uidNo ? (
+                          <div className="flex flex-col gap-1">
+                            <span className="text-[11px] font-mono font-bold text-slate-800 dark:text-slate-200">
+                              UID: {v.uidNo}
+                            </span>
+                            <div className="flex items-center gap-1.5">
                               {v.uidFrontDoc && (
                                 <button
                                   onClick={() => setViewDocImage({ title: `Aadhaar Front (${v.uidNo})`, url: v.uidFrontDoc! })}
-                                  className="text-[9px] bg-blue-50 text-blue-600 border border-blue-200 px-1.5 py-0.5 rounded font-bold hover:bg-blue-100 transition cursor-pointer"
+                                  className="text-[9px] bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 px-2 py-0.5 rounded font-bold hover:bg-blue-100 transition cursor-pointer flex items-center gap-1"
                                 >
+                                  <Eye className="h-2.5 w-2.5" />
                                   Front
                                 </button>
                               )}
                               {v.uidBackDoc && (
                                 <button
                                   onClick={() => setViewDocImage({ title: `Aadhaar Back (${v.uidNo})`, url: v.uidBackDoc! })}
-                                  className="text-[9px] bg-indigo-50 text-indigo-600 border border-indigo-200 px-1.5 py-0.5 rounded font-bold hover:bg-indigo-100 transition cursor-pointer"
+                                  className="text-[9px] bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 px-2 py-0.5 rounded font-bold hover:bg-indigo-100 transition cursor-pointer flex items-center gap-1"
                                 >
+                                  <Eye className="h-2.5 w-2.5" />
                                   Back
                                 </button>
                               )}
                             </div>
-                          ) : (
-                            <span className="text-[10px] text-slate-400">UID: N/A</span>
-                          )}
-                        </div>
+                          </div>
+                        ) : (
+                          <span className="text-[10px] text-slate-400">UID: N/A</span>
+                        )}
                       </td>
 
                       {/* Actions */}
@@ -914,53 +883,11 @@ export default function AdminVolunteersPage() {
                 </div>
               </div>
 
-              {/* PAN & Aadhaar Identity Section */}
+              {/* Aadhaar Identity Section */}
               <div className="space-y-4 pt-2">
                 <h4 className="text-xs font-black uppercase text-emerald-600 dark:text-emerald-400 tracking-wider flex items-center gap-2 pb-1 border-b border-slate-100 dark:border-slate-800">
-                  <CreditCard className="h-4 w-4" /> Identity & Verification Documents
+                  <CreditCard className="h-4 w-4" /> Aadhaar (UID) Verification Documents
                 </h4>
-
-                {/* PAN NO Section */}
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                        PAN NO. (Letter & Number)
-                      </label>
-                      <input
-                        type="text"
-                        maxLength={10}
-                        value={panNo}
-                        onChange={(e) => setPanNo(e.target.value.toUpperCase())}
-                        placeholder="ABCDE1234F"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none uppercase"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                        PAN Card Document Image (JPG/PNG, Max 3MB)
-                      </label>
-                      <label className="flex items-center justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-3.5 py-2 rounded-xl text-xs font-semibold cursor-pointer hover:border-emerald-500 transition">
-                        <span className="text-slate-500 truncate">
-                          {panCardDoc ? "PAN Document Attached ✓" : "Upload JPG"}
-                        </span>
-                        <Upload className="h-4 w-4 text-emerald-600 shrink-0 ml-2" />
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={(e) => {
-                            if (e.target.files?.[0]) {
-                              handleImageUpload(e.target.files[0], setPanCardDoc, setPanDocError);
-                            }
-                          }}
-                          className="hidden"
-                        />
-                      </label>
-                      {panDocError && <p className="text-[10px] text-red-500 font-bold mt-1">{panDocError}</p>}
-                    </div>
-                  </div>
-                </div>
 
                 {/* Aadhaar UID Section */}
                 <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 space-y-3">
@@ -1228,58 +1155,41 @@ export default function AdminVolunteersPage() {
                   </p>
                 </div>
 
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1 sm:col-span-2">
-                  <span className="text-slate-400 font-bold uppercase text-[10px]">Identity Docs</span>
-                  <div className="flex flex-wrap gap-4 mt-0.5">
-                    <p className="font-bold text-slate-900 dark:text-slate-100">PAN: {viewVolunteer.panNo || "N/A"}</p>
-                    <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
-                  </div>
+                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                  <span className="text-slate-400 font-bold uppercase text-[10px]">Identity Doc</span>
+                  <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
                 </div>
               </div>
 
               {/* Document Previews */}
               <div className="space-y-3 pt-2">
-                <h4 className="text-xs font-black uppercase text-slate-500 tracking-wider">Uploaded Document Previews</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {viewVolunteer.panCardDoc ? (
-                    <div
-                      onClick={() => setViewDocImage({ title: "PAN Card", url: viewVolunteer.panCardDoc! })}
-                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
-                    >
-                      <img src={viewVolunteer.panCardDoc} alt="PAN Card" className="h-24 w-full object-cover rounded-lg mb-1" />
-                      <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">PAN Card</span>
-                    </div>
-                  ) : (
-                    <div className="border border-dashed border-slate-200 rounded-xl p-4 text-center text-slate-400 text-[10px] flex items-center justify-center">
-                      No PAN Image
-                    </div>
-                  )}
-
+                <h4 className="text-xs font-black uppercase text-slate-500 tracking-wider">Uploaded Aadhaar Document Previews</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {viewVolunteer.uidFrontDoc ? (
                     <div
                       onClick={() => setViewDocImage({ title: "Aadhaar Front", url: viewVolunteer.uidFrontDoc! })}
-                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
+                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
                     >
-                      <img src={viewVolunteer.uidFrontDoc} alt="Aadhaar Front" className="h-24 w-full object-cover rounded-lg mb-1" />
-                      <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">Aadhaar Front</span>
+                      <img src={viewVolunteer.uidFrontDoc} alt="Aadhaar Front" className="h-32 w-full object-cover rounded-lg mb-1.5" />
+                      <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Front Card</span>
                     </div>
                   ) : (
-                    <div className="border border-dashed border-slate-200 rounded-xl p-4 text-center text-slate-400 text-[10px] flex items-center justify-center">
-                      No Aadhaar Front
+                    <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
+                      No Aadhaar Front Image
                     </div>
                   )}
 
                   {viewVolunteer.uidBackDoc ? (
                     <div
                       onClick={() => setViewDocImage({ title: "Aadhaar Back", url: viewVolunteer.uidBackDoc! })}
-                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
+                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
                     >
-                      <img src={viewVolunteer.uidBackDoc} alt="Aadhaar Back" className="h-24 w-full object-cover rounded-lg mb-1" />
-                      <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">Aadhaar Back</span>
+                      <img src={viewVolunteer.uidBackDoc} alt="Aadhaar Back" className="h-32 w-full object-cover rounded-lg mb-1.5" />
+                      <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Back Card</span>
                     </div>
                   ) : (
-                    <div className="border border-dashed border-slate-200 rounded-xl p-4 text-center text-slate-400 text-[10px] flex items-center justify-center">
-                      No Aadhaar Back
+                    <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
+                      No Aadhaar Back Image
                     </div>
                   )}
                 </div>

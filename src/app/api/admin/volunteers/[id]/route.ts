@@ -24,8 +24,6 @@ export async function PUT(
       fullName,
       gender,
       dob,
-      panNo,
-      panCardDoc,
       uidNo,
       uidFrontDoc,
       uidBackDoc,
@@ -73,25 +71,12 @@ export async function PUT(
       }
     }
 
-    // PAN Card Validation if provided
-    if (panNo && panNo.trim()) {
-      const cleanPan = panNo.trim().toUpperCase();
-      if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(cleanPan)) {
-        return NextResponse.json(
-          { message: "Invalid PAN Card Number format (e.g. ABCDE1234F)." },
-          { status: 400 }
-        );
-      }
-    }
-
     const updatedVolunteer = await prisma.volunteer.update({
       where: { id: volunteerId },
       data: {
         ...(fullName !== undefined && { fullName: fullName.trim() }),
         ...(gender !== undefined && { gender }),
         ...(dob !== undefined && { dob }),
-        ...(panNo !== undefined && { panNo: panNo ? panNo.trim().toUpperCase() : null }),
-        ...(panCardDoc !== undefined && { panCardDoc }),
         ...(uidNo !== undefined && { uidNo: uidNo ? uidNo.trim().replace(/\s+/g, "") : null }),
         ...(uidFrontDoc !== undefined && { uidFrontDoc }),
         ...(uidBackDoc !== undefined && { uidBackDoc }),
