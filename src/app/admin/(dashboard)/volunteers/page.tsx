@@ -61,7 +61,7 @@ interface Volunteer {
   createdAt: string;
 }
 
-const DESIGNATION_OPTIONS = [
+const DEFAULT_DESIGNATION_OPTIONS = [
   "Volunteer",
   "Member",
   "Director",
@@ -715,8 +715,28 @@ export default function AdminVolunteersPage() {
     }
   };
 
+  const [designationList, setDesignationList] = useState<string[]>(DEFAULT_DESIGNATION_OPTIONS);
+
+  const fetchDesignationsList = async () => {
+    try {
+      const res = await fetch("/api/admin/designations");
+      const data = await res.json();
+      if (res.ok && data.designations && data.designations.length > 0) {
+        const activeTitles = data.designations
+          .filter((d: any) => d.status === "ACTIVE")
+          .map((d: any) => d.title);
+        if (activeTitles.length > 0) {
+          setDesignationList(activeTitles);
+        }
+      }
+    } catch (e) {
+      // Fallback to default
+    }
+  };
+
   useEffect(() => {
     fetchVolunteers();
+    fetchDesignationsList();
   }, []);
 
   // Image file reader helper with 3MB Limit (3 * 1024 * 1024 = 3,145,728 bytes)
@@ -1504,7 +1524,7 @@ export default function AdminVolunteersPage() {
                       onChange={(e) => setDesignation(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
                     >
-                      {DESIGNATION_OPTIONS.map((opt) => (
+                      {designationList.map((opt) => (
                         <option key={opt} value={opt}>
                           {opt}
                         </option>

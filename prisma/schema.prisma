@@ -272,5 +272,14 @@ model UserLog {
   @@map("user_logs")
 }
 
+model Designation {
+  id        Int      @id @default(autoincrement())
+  title     String   @unique
+  status    String   @default("ACTIVE")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("designations")
+}
+
 
 
