@@ -424,7 +424,10 @@ export default function AdminVolunteersPage() {
             </div>
             <div class="accent-strip"></div>
 
-            <div class="card-body-front" style="padding: 6px 14px 10px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+            <div class="card-body-front" style="padding: 6px 14px 10px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; position: relative; overflow: hidden;">
+              <!-- Faint Watermark Logo Background -->
+              <img src="/id-watermark.jpg" alt="Watermark" style="position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; opacity: 0.08; pointer-events: none; z-index: 1; border-radius: 50%; object-fit: cover;" />
+
               <!-- Circular Profile Photo (Below Header Banner) -->
               <div style="position: relative; margin-top: 4px; z-index: 5;">
                 <img src="${photoUrl}" alt="${v.fullName}" style="width: 96px; height: 96px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.14); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
@@ -2211,7 +2214,14 @@ export default function AdminVolunteersPage() {
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
                           {/* Card Body - Centered Circular Photo & Executive Layout */}
-                          <div className="p-3 flex-1 flex flex-col justify-between items-center text-center bg-gradient-to-b from-blue-50/30 via-white to-slate-50 relative">
+                          <div className="p-3 flex-1 flex flex-col justify-between items-center text-center bg-gradient-to-b from-blue-50/30 via-white to-slate-50 relative overflow-hidden">
+                            {/* Faint Watermark Logo Background */}
+                            <img
+                              src="/id-watermark.jpg"
+                              alt="Watermark"
+                              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] opacity-[0.08] pointer-events-none z-0 rounded-full object-cover"
+                            />
+
                             {/* Circular Profile Photo (Below Header Banner) */}
                             <div className="mt-1 relative z-10">
                               <div className="w-[96px] h-[96px] rounded-full border-3 border-white shadow-md overflow-hidden bg-slate-100 mx-auto">
