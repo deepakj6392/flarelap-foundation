@@ -4,7 +4,7 @@ import { verifyAdmin } from "@/lib/auth";
 
 export async function PUT(
   request: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const admin = verifyAdmin(request);
   if (!admin) {
@@ -12,11 +12,20 @@ export async function PUT(
   }
 
   try {
-    const { id } = await params;
+    const resolvedParams = await Promise.resolve(params);
+    const id = resolvedParams?.id;
     const volunteerId = parseInt(id, 10);
 
     if (isNaN(volunteerId)) {
       return NextResponse.json({ message: "Invalid Volunteer ID." }, { status: 400 });
+    }
+
+    const volunteerModel = (prisma as any).volunteer;
+    if (!volunteerModel) {
+      return NextResponse.json(
+        { message: "Database model delegate not ready." },
+        { status: 500 }
+      );
     }
 
     const body = await request.json();
@@ -63,7 +72,7 @@ export async function PUT(
     }
 
     // UID Aadhaar Validation if provided
-    if (uidNo && uidNo.trim()) {
+    if (uidNo && typeof uidNo === "string" && uidNo.trim()) {
       const cleanUid = uidNo.trim().replace(/\s+/g, "");
       if (!/^\d{12}$/.test(cleanUid)) {
         return NextResponse.json(
@@ -73,24 +82,24 @@ export async function PUT(
       }
     }
 
-    const updatedVolunteer = await prisma.volunteer.update({
+    const updatedVolunteer = await volunteerModel.update({
       where: { id: volunteerId },
       data: {
-        ...(fullName !== undefined && { fullName: fullName.trim() }),
+        ...(fullName !== undefined && fullName !== null && { fullName: String(fullName).trim() }),
         ...(gender !== undefined && { gender }),
         ...(dob !== undefined && { dob }),
-        ...(uidNo !== undefined && { uidNo: uidNo ? uidNo.trim().replace(/\s+/g, "") : null }),
+        ...(uidNo !== undefined && { uidNo: uidNo ? String(uidNo).trim().replace(/\s+/g, "") : null }),
         ...(uidFrontDoc !== undefined && { uidFrontDoc }),
         ...(uidBackDoc !== undefined && { uidBackDoc }),
-        ...(email !== undefined && { email: email.trim().toLowerCase() }),
-        ...(phone !== undefined && { phone: phone.trim() }),
+        ...(email !== undefined && email !== null && { email: String(email).trim().toLowerCase() }),
+        ...(phone !== undefined && phone !== null && { phone: String(phone).trim() }),
         ...(education !== undefined && { education }),
-        ...(specializations !== undefined && { specializations: specializations ? specializations.trim() : null }),
-        ...(street !== undefined && { street: street ? street.trim() : null }),
-        ...(villageCity !== undefined && { villageCity: villageCity ? villageCity.trim() : null }),
-        ...(district !== undefined && { district: district ? district.trim() : null }),
-        ...(state !== undefined && { state: state ? state.trim() : null }),
-        ...(pincode !== undefined && { pincode: pincode ? pincode.trim() : null }),
+        ...(specializations !== undefined && { specializations: specializations ? String(specializations).trim() : null }),
+        ...(street !== undefined && { street: street ? String(street).trim() : null }),
+        ...(villageCity !== undefined && { villageCity: villageCity ? String(villageCity).trim() : null }),
+        ...(district !== undefined && { district: district ? String(district).trim() : null }),
+        ...(state !== undefined && { state: state ? String(state).trim() : null }),
+        ...(pincode !== undefined && { pincode: pincode ? String(pincode).trim() : null }),
         ...(profilePhoto !== undefined && { profilePhoto }),
         ...(agreement !== undefined && { agreement: Boolean(agreement) }),
         ...(status !== undefined && { status }),
@@ -106,7 +115,7 @@ export async function PUT(
   } catch (error: any) {
     console.error("Admin volunteer update error:", error);
     return NextResponse.json(
-      { message: "An error occurred while updating volunteer." },
+      { message: error?.message || "An error occurred while updating volunteer." },
       { status: 500 }
     );
   }
@@ -114,7 +123,7 @@ export async function PUT(
 
 export async function DELETE(
   request: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const admin = verifyAdmin(request);
   if (!admin) {
@@ -122,14 +131,20 @@ export async function DELETE(
   }
 
   try {
-    const { id } = await params;
+    const resolvedParams = await Promise.resolve(params);
+    const id = resolvedParams?.id;
     const volunteerId = parseInt(id, 10);
 
     if (isNaN(volunteerId)) {
       return NextResponse.json({ message: "Invalid Volunteer ID." }, { status: 400 });
     }
 
-    await prisma.volunteer.delete({
+    const volunteerModel = (prisma as any).volunteer;
+    if (!volunteerModel) {
+      return NextResponse.json({ message: "Database model not available." }, { status: 500 });
+    }
+
+    await volunteerModel.delete({
       where: { id: volunteerId }
     });
 
@@ -137,7 +152,7 @@ export async function DELETE(
   } catch (error: any) {
     console.error("Admin volunteer deletion error:", error);
     return NextResponse.json(
-      { message: "An error occurred while deleting volunteer." },
+      { message: error?.message || "An error occurred while deleting volunteer." },
       { status: 500 }
     );
   }
