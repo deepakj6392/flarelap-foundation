@@ -251,9 +251,12 @@ export default function AdminVolunteersPage() {
           }
           .info-column {
             flex: 1;
+            height: 120px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            box-sizing: border-box;
+            padding: 2px 0;
           }
           .info-row-item {
             display: flex;
@@ -261,23 +264,21 @@ export default function AdminVolunteersPage() {
             justify-content: space-between;
             border-bottom: 1px solid #f1f5f9;
             padding-bottom: 3px;
-            margin-bottom: 4px;
           }
           .info-row-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
             padding-bottom: 0;
           }
           .info-key {
-            font-size: 8px;
+            font-size: 9.5px;
             font-weight: 800;
             color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.4px;
             white-space: nowrap;
           }
           .info-val-right {
-            font-size: 9.5px;
+            font-size: 11px;
             font-weight: 800;
             color: #0f172a;
             text-align: right;
@@ -289,7 +290,7 @@ export default function AdminVolunteersPage() {
           .info-val-blue {
             color: #2563eb;
             font-family: monospace;
-            font-size: 11px;
+            font-size: 13px;
             font-weight: 900;
           }
           .volunteer-name {
@@ -2213,7 +2214,7 @@ export default function AdminVolunteersPage() {
                           <div className="p-3.5 flex-1 flex flex-col justify-between bg-gradient-to-b from-blue-50/30 via-white to-slate-50">
                             <div className="flex gap-3 items-start">
                               {/* Photo */}
-                              <div className="w-[96px] h-[118px] rounded-lg border-2 border-slate-900 overflow-hidden bg-slate-100 shrink-0 shadow-md">
+                              <div className="w-[96px] h-[120px] rounded-lg border-2 border-slate-900 overflow-hidden bg-slate-100 shrink-0 shadow-md">
                                 {viewVolunteer.profilePhoto ? (
                                   <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="w-full h-full object-cover" />
                                 ) : (
@@ -2222,23 +2223,23 @@ export default function AdminVolunteersPage() {
                                   </div>
                                 )}
                               </div>
-                              {/* Details - Single-Row Key Value Layout */}
-                              <div className="flex-1 space-y-1.5 text-left font-sans self-stretch flex flex-col justify-between">
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
-                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
-                                  <span className="font-mono font-black text-[11px] text-blue-600 tracking-tight">{displayMemberId}</span>
+                              {/* Details - Equal Height & Larger Font Sizes */}
+                              <div className="flex-1 h-[120px] text-left font-sans flex flex-col justify-between py-0.5">
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
+                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
+                                  <span className="font-mono font-black text-[13px] text-blue-600 tracking-tight">{displayMemberId}</span>
                                 </div>
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
-                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
-                                  <span className="font-extrabold text-[9.5px] text-slate-900 truncate max-w-[95px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
+                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
+                                  <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
                                 </div>
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
-                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
-                                  <span className="font-bold text-[9px] text-slate-800">{startDateStr}</span>
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
+                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
+                                  <span className="font-bold text-[10.5px] text-slate-800">{startDateStr}</span>
                                 </div>
                                 <div className="flex items-center justify-between">
-                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
-                                  <span className="font-bold text-[9px] text-slate-800">{endDateStr}</span>
+                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
+                                  <span className="font-bold text-[10.5px] text-slate-800">{endDateStr}</span>
                                 </div>
                               </div>
                             </div>
