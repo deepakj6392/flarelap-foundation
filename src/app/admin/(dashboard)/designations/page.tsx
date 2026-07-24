@@ -181,6 +181,41 @@ export default function AdminDesignationsPage() {
     }
   };
 
+  const handleToggleStatus = async (d: Designation) => {
+    const newStatus = d.status === "ACTIVE" ? "INACTIVE" : "ACTIVE";
+    const storedToken = localStorage.getItem("admin_token");
+    if (!storedToken) return;
+
+    try {
+      const res = await fetch(`/api/admin/designations/${d.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}`,
+        },
+        body: JSON.stringify({ status: newStatus }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setDesignations((prev) =>
+          prev.map((item) => (item.id === d.id ? { ...item, status: newStatus } : item))
+        );
+        Swal.fire({
+          icon: "success",
+          title: "Status Updated!",
+          text: `Designation '${d.title}' is now ${newStatus}.`,
+          timer: 1500,
+          showConfirmButton: false,
+        });
+      } else {
+        throw new Error(data.message || "Failed to update status.");
+      }
+    } catch (err: any) {
+      Swal.fire("Error", err.message || "Could not update status.", "error");
+    }
+  };
+
   // Filtered List
   const filteredDesignations = designations.filter((d) => {
     const matchesSearch = d.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -354,15 +389,19 @@ export default function AdminDesignationsPage() {
 
                       {/* Status */}
                       <td className="py-4 px-4">
-                        <span
-                          className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase border ${
+                        <button
+                          type="button"
+                          onClick={() => handleToggleStatus(d)}
+                          title="Click to toggle status (ACTIVE / INACTIVE)"
+                          className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase border transition cursor-pointer active:scale-95 ${
                             d.status === "ACTIVE"
-                              ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border-emerald-200/70 dark:border-emerald-800/60"
-                              : "bg-slate-100 dark:bg-slate-800 text-slate-500 border-slate-200 dark:border-slate-700"
+                              ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border-emerald-200/70 dark:border-emerald-800/60 hover:bg-emerald-100"
+                              : "bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border-amber-200/70 dark:border-amber-800/60 hover:bg-amber-100"
                           }`}
                         >
+                          <span className={`h-1.5 w-1.5 rounded-full ${d.status === "ACTIVE" ? "bg-emerald-500" : "bg-amber-500"}`}></span>
                           {d.status || "ACTIVE"}
-                        </span>
+                        </button>
                       </td>
 
                       {/* Created Date */}

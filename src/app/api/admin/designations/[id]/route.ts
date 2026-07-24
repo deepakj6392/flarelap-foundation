@@ -52,41 +52,44 @@ export async function PUT(
     const body = await request.json();
     const { title, status } = body;
 
+    const updateData: any = {};
+    if (title !== undefined && title !== null && String(title).trim() !== "") {
+      updateData.title = String(title).trim();
+    }
+    if (status !== undefined && status !== null) {
+      updateData.status = String(status);
+    }
+
     const designationModel = getDesignationModel();
     if (designationModel) {
-      const updateData: any = {};
-      if (title !== undefined && title !== null) {
-        updateData.title = String(title).trim();
-      }
-      if (status !== undefined && status !== null) {
-        updateData.status = String(status);
-      }
+      try {
+        const updated = await designationModel.update({
+          where: { id: designationId },
+          data: updateData,
+        });
 
-      const updated = await designationModel.update({
-        where: { id: designationId },
-        data: updateData,
-      });
-
-      return NextResponse.json({
-        designation: updated,
-        message: "Designation updated successfully!",
-      });
+        return NextResponse.json({
+          designation: updated,
+          message: "Designation updated successfully!",
+        });
+      } catch (ormErr: any) {
+        console.warn("ORM designation update failed, executing raw SQL fallback...", ormErr?.message);
+      }
     }
 
     // Raw SQL Fallback
-    const cleanTitle = title ? String(title).trim() : undefined;
-    const cleanStatus = status ? String(status) : undefined;
+    const cleanTitle = title !== undefined && title !== null && String(title).trim() !== "" ? String(title).trim() : null;
+    const cleanStatus = status !== undefined && status !== null ? String(status) : null;
 
-    if (cleanTitle || cleanStatus) {
-      await (prisma as any).$executeRawUnsafe(
-        `UPDATE "designations" SET "title" = COALESCE($1, "title"), "status" = COALESCE($2, "status") WHERE "id" = $3;`,
-        cleanTitle || null,
-        cleanStatus || null,
-        designationId
-      );
-    }
+    const updatedRows = await (prisma as any).$queryRawUnsafe(
+      `UPDATE "designations" SET "title" = COALESCE($1, "title"), "status" = COALESCE($2, "status") WHERE "id" = $3 RETURNING "id", "title", "status", "created_at" AS "createdAt";`,
+      cleanTitle,
+      cleanStatus,
+      designationId
+    );
 
     return NextResponse.json({
+      designation: updatedRows?.[0] || { id: designationId, title: cleanTitle, status: cleanStatus },
       message: "Designation updated successfully!",
     });
   } catch (error: any) {
@@ -116,10 +119,14 @@ export async function DELETE(
 
     const designationModel = getDesignationModel();
     if (designationModel) {
-      await designationModel.delete({
-        where: { id: designationId },
-      });
-      return NextResponse.json({ message: "Designation deleted successfully!" });
+      try {
+        await designationModel.delete({
+          where: { id: designationId },
+        });
+        return NextResponse.json({ message: "Designation deleted successfully!" });
+      } catch (ormErr: any) {
+        console.warn("ORM delete failed, using raw SQL fallback...", ormErr?.message);
+      }
     }
 
     // Raw SQL Fallback
