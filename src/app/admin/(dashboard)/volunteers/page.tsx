@@ -114,7 +114,7 @@ export default function AdminVolunteersPage() {
     const endDateStr = formatDateSafe(mExp, defaultEnd);
 
     const photoUrl = v.profilePhoto || "/favicon.ico";
-    const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
+    const qrData = encodeURIComponent(`https://flarelap.org/verify-volunteer?id=${displayMemberId}`);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
 
     const printWindow = window.open("", "_blank");
@@ -417,7 +417,7 @@ export default function AdminVolunteersPage() {
             </div>
 
             <div class="card-footer-front">
-              VALIDATED MEMBER ID CARD • WWW.FLARELAPFOUNDATION.ORG
+              VALIDATED MEMBER ID CARD • WWW.FLARELAP.ORG
             </div>
           </div>
 
@@ -489,7 +489,7 @@ export default function AdminVolunteersPage() {
     const endDateStr = formatDateSafe(mExp, defaultEnd);
 
     const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-    const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
+    const qrData = encodeURIComponent(`https://flarelap.org/verify-volunteer?id=${displayMemberId}`);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
 
     const printWindow = window.open("", "_blank");
@@ -1747,7 +1747,7 @@ export default function AdminVolunteersPage() {
         const endDateStr = formatDateSafe(mExp, defaultEnd);
 
         const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`)}`;
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(`https://flarelap.org/verify-volunteer?id=${displayMemberId}`)}`;
 
         return (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-xs animate-in fade-in duration-200">
@@ -2176,7 +2176,7 @@ export default function AdminVolunteersPage() {
                           </div>
 
                           <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider">
-                            VALIDATED MEMBER ID CARD • WWW.FLARELAPFOUNDATION.ORG
+                            VALIDATED MEMBER ID CARD • WWW.FLARELAP.ORG
                           </div>
                         </div>
                       </div>
