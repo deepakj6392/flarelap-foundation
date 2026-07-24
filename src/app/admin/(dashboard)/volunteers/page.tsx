@@ -375,18 +375,9 @@ export default function AdminVolunteersPage() {
         <div class="cards-wrapper">
           <!-- FRONT SIDE -->
           <div class="id-card">
-            <div class="card-header-gradient">
-              <div class="clip-hole"></div>
-              <div class="header-brand">
-                <svg class="star-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M50 5 L63 35 L95 38 L70 60 L78 92 L50 74 L22 92 L30 60 L5 38 L37 35 Z" fill="#ffffff"/>
-                  <path d="M10 50 Q 50 15 90 50 Q 50 85 10 50 Z" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.6"/>
-                </svg>
-                <div>
-                  <div class="brand-title">FLARELAP GLOBAL FOUNDATION</div>
-                  <div class="brand-tagline">EMPOWER PEOPLE & CHANGE LIVES</div>
-                </div>
-              </div>
+            <div class="card-header-gradient" style="padding: 0; height: 95px;">
+              <div class="clip-hole" style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
+              <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div class="accent-strip"></div>
 
@@ -432,10 +423,9 @@ export default function AdminVolunteersPage() {
 
           <!-- BACK SIDE -->
           <div class="id-card">
-            <div class="card-header-gradient">
-              <div class="clip-hole"></div>
-              <div class="brand-title" style="text-align: center; font-size: 13px;">FLARELAP GLOBAL FOUNDATION</div>
-              <div class="brand-tagline" style="text-align: center;">CONNECTING COMMUNITIES & INNOVATION</div>
+            <div class="card-header-gradient" style="padding: 0; height: 95px;">
+              <div class="clip-hole" style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
+              <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div class="accent-strip"></div>
 
@@ -2117,24 +2107,10 @@ export default function AdminVolunteersPage() {
                         </span>
                         <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
                           {/* Header Banner */}
-                          <div className="bg-gradient-to-r from-[#0038a8] via-[#5b127d] to-[#e60067] p-3 text-white relative shadow-md">
+                          <div className="relative h-[95px] w-full overflow-hidden bg-[#0038a8]">
                             {/* Lanyard Hole Cutout */}
-                            <div className="w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full mx-auto mb-2 opacity-90"></div>
-                            <div className="flex items-center gap-2.5">
-                              {/* White Star Logo SVG */}
-                              <svg className="w-10 h-10 shrink-0 drop-shadow-md" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M50 5 L63 35 L95 38 L70 60 L78 92 L50 74 L22 92 L30 60 L5 38 L37 35 Z" fill="#ffffff"/>
-                                <path d="M10 50 Q 50 15 90 50 Q 50 85 10 50 Z" stroke="#ffffff" strokeWidth="4" fill="none" opacity="0.6"/>
-                              </svg>
-                              <div>
-                                <div className="text-[13px] font-black tracking-wide uppercase leading-tight text-white">
-                                  FLARELAP GLOBAL FOUNDATION
-                                </div>
-                                <div className="text-[7.5px] font-bold tracking-wider text-slate-100 opacity-90 mt-0.5">
-                                  EMPOWER PEOPLE & CHANGE LIVES
-                                </div>
-                              </div>
-                            </div>
+                            <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full z-10 opacity-90"></div>
+                            <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" className="w-full h-full object-cover" />
                           </div>
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
@@ -2212,14 +2188,10 @@ export default function AdminVolunteersPage() {
                         </span>
                         <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
                           {/* Back Header */}
-                          <div className="bg-gradient-to-r from-[#0038a8] via-[#5b127d] to-[#e60067] p-3 text-white relative shadow-md text-center">
-                            <div className="w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full mx-auto mb-2 opacity-90"></div>
-                            <div className="text-xs font-black tracking-wider uppercase text-white">
-                              FLARELAP GLOBAL FOUNDATION
-                            </div>
-                            <div className="text-[7.5px] font-bold tracking-widest text-slate-100 opacity-90 mt-0.5">
-                              CONNECTING COMMUNITIES & INNOVATION
-                            </div>
+                          <div className="relative h-[95px] w-full overflow-hidden bg-[#0038a8]">
+                            {/* Lanyard Hole Cutout */}
+                            <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full z-10 opacity-90"></div>
+                            <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" className="w-full h-full object-cover" />
                           </div>
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
