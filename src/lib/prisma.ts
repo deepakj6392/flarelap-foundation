@@ -12,7 +12,7 @@ neonConfig.webSocketConstructor = ws;
 
 const globalForPrisma = global as unknown as { prismaClientV5: PrismaClient };
 
-function createPrismaClient(): PrismaClient {
+export function createPrismaClient(): PrismaClient {
   const dbUrl = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/flarelap_foundation?schema=public";
   const isLocal = dbUrl.includes("localhost") || dbUrl.includes("127.0.0.1");
 
@@ -32,16 +32,17 @@ function createPrismaClient(): PrismaClient {
   return new PrismaClient({ adapter });
 }
 
+export function resetPrismaClient(): PrismaClient {
+  globalForPrisma.prismaClientV5 = createPrismaClient();
+  return globalForPrisma.prismaClientV5;
+}
+
 function getPrismaInstance(): PrismaClient {
   if (process.env.NODE_ENV === "production") {
     return createPrismaClient();
   }
 
-  if (
-    !globalForPrisma.prismaClientV5 ||
-    !(globalForPrisma.prismaClientV5 as any).volunteer ||
-    !(globalForPrisma.prismaClientV5 as any).userLog
-  ) {
+  if (!globalForPrisma.prismaClientV5) {
     globalForPrisma.prismaClientV5 = createPrismaClient();
   }
 
@@ -51,17 +52,6 @@ function getPrismaInstance(): PrismaClient {
 export const prisma: PrismaClient = new Proxy({} as PrismaClient, {
   get(_target, prop, receiver) {
     let instance = getPrismaInstance();
-
-    // Check if property is a string model delegate that is undefined on cached instance
-    if (
-      typeof prop === "string" &&
-      !prop.startsWith("$") &&
-      !prop.startsWith("_") &&
-      (instance as any)[prop] === undefined
-    ) {
-      globalForPrisma.prismaClientV5 = createPrismaClient();
-      instance = globalForPrisma.prismaClientV5;
-    }
 
     const value = (instance as any)[prop];
     if (typeof value === "function") {

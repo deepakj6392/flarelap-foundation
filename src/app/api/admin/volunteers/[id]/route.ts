@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma, resetPrismaClient } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
 export async function PUT(
@@ -20,12 +20,9 @@ export async function PUT(
       return NextResponse.json({ message: "Invalid Volunteer ID." }, { status: 400 });
     }
 
-    const volunteerModel = (prisma as any).volunteer;
+    let volunteerModel = (prisma as any).volunteer;
     if (!volunteerModel) {
-      return NextResponse.json(
-        { message: "Database model delegate not ready." },
-        { status: 500 }
-      );
+      volunteerModel = (resetPrismaClient() as any).volunteer;
     }
 
     const body = await request.json();
@@ -85,31 +82,43 @@ export async function PUT(
       }
     }
 
-    const updatedVolunteer = await volunteerModel.update({
-      where: { id: volunteerId },
-      data: {
-        ...(fullName !== undefined && fullName !== null && { fullName: String(fullName).trim() }),
-        ...(gender !== undefined && { gender }),
-        ...(dob !== undefined && { dob }),
-        ...(uidNo !== undefined && { uidNo: uidNo ? String(uidNo).trim().replace(/\s+/g, "") : null }),
-        ...(uidFrontDoc !== undefined && { uidFrontDoc }),
-        ...(uidBackDoc !== undefined && { uidBackDoc }),
-        ...(email !== undefined && email !== null && { email: String(email).trim().toLowerCase() }),
-        ...(phone !== undefined && phone !== null && { phone: String(phone).trim() }),
-        ...(education !== undefined && { education }),
-        ...(specializations !== undefined && { specializations: specializations ? String(specializations).trim() : null }),
-        ...(street !== undefined && { street: street ? String(street).trim() : null }),
-        ...(villageCity !== undefined && { villageCity: villageCity ? String(villageCity).trim() : null }),
-        ...(district !== undefined && { district: district ? String(district).trim() : null }),
-        ...(state !== undefined && { state: state ? String(state).trim() : null }),
-        ...(pincode !== undefined && { pincode: pincode ? String(pincode).trim() : null }),
-        ...(profilePhoto !== undefined && { profilePhoto }),
-        ...(agreement !== undefined && { agreement: Boolean(agreement) }),
-        ...(status !== undefined && { status }),
-        ...(finalMemberSince !== undefined && { memberSince: finalMemberSince || null }),
-        ...(expiryDate !== undefined && { expiryDate: expiryDate || null })
-      }
-    });
+    const updateData = {
+      ...(fullName !== undefined && fullName !== null && { fullName: String(fullName).trim() }),
+      ...(gender !== undefined && { gender }),
+      ...(dob !== undefined && { dob }),
+      ...(uidNo !== undefined && { uidNo: uidNo ? String(uidNo).trim().replace(/\s+/g, "") : null }),
+      ...(uidFrontDoc !== undefined && { uidFrontDoc }),
+      ...(uidBackDoc !== undefined && { uidBackDoc }),
+      ...(email !== undefined && email !== null && { email: String(email).trim().toLowerCase() }),
+      ...(phone !== undefined && phone !== null && { phone: String(phone).trim() }),
+      ...(education !== undefined && { education }),
+      ...(specializations !== undefined && { specializations: specializations ? String(specializations).trim() : null }),
+      ...(street !== undefined && { street: street ? String(street).trim() : null }),
+      ...(villageCity !== undefined && { villageCity: villageCity ? String(villageCity).trim() : null }),
+      ...(district !== undefined && { district: district ? String(district).trim() : null }),
+      ...(state !== undefined && { state: state ? String(state).trim() : null }),
+      ...(pincode !== undefined && { pincode: pincode ? String(pincode).trim() : null }),
+      ...(profilePhoto !== undefined && { profilePhoto }),
+      ...(agreement !== undefined && { agreement: Boolean(agreement) }),
+      ...(status !== undefined && { status }),
+      ...(finalMemberSince !== undefined && { memberSince: finalMemberSince || null }),
+      ...(expiryDate !== undefined && { expiryDate: expiryDate || null })
+    };
+
+    let updatedVolunteer;
+    try {
+      updatedVolunteer = await volunteerModel.update({
+        where: { id: volunteerId },
+        data: updateData
+      });
+    } catch (err: any) {
+      console.warn("Prisma update initial attempt failed, resetting client and retrying...", err.message);
+      const freshModel = (resetPrismaClient() as any).volunteer;
+      updatedVolunteer = await freshModel.update({
+        where: { id: volunteerId },
+        data: updateData
+      });
+    }
 
     return NextResponse.json({
       volunteer: updatedVolunteer,
@@ -142,9 +151,9 @@ export async function DELETE(
       return NextResponse.json({ message: "Invalid Volunteer ID." }, { status: 400 });
     }
 
-    const volunteerModel = (prisma as any).volunteer;
+    let volunteerModel = (prisma as any).volunteer;
     if (!volunteerModel) {
-      return NextResponse.json({ message: "Database model not available." }, { status: 500 });
+      volunteerModel = (resetPrismaClient() as any).volunteer;
     }
 
     await volunteerModel.delete({
