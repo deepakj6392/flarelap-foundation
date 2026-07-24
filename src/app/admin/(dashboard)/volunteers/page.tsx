@@ -27,7 +27,11 @@ import {
   Briefcase,
   CheckSquare,
   Filter,
-  RefreshCw
+  RefreshCw,
+  Award,
+  Printer,
+  Download,
+  FileCheck
 } from "lucide-react";
 
 interface Volunteer {
@@ -73,7 +77,168 @@ export default function AdminVolunteersPage() {
 
   // View Details / Document Modal State
   const [viewVolunteer, setViewVolunteer] = useState<Volunteer | null>(null);
+  const [activeViewTab, setActiveViewTab] = useState<"details" | "certificate">("details");
   const [viewDocImage, setViewDocImage] = useState<{ title: string; url: string } | null>(null);
+
+  // Print / Download Certificate Helper
+  const handlePrintCertificate = (v: Volunteer) => {
+    const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+    const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
+    const startDateStr = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    const endDateStr = regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
+
+    const printWindow = window.open("", "_blank");
+    if (!printWindow) return;
+
+    printWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Certificate of Appreciation - ${v.fullName}</title>
+        <style>
+          @page { size: A4 landscape; margin: 0; }
+          body {
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+          }
+          .cert-outer {
+            width: 1000px;
+            background: #ffffff;
+            border: 10px solid #1e293b;
+            padding: 6px;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+          }
+          .cert-inner {
+            border: 2px solid #334155;
+            padding: 35px 45px;
+            text-align: center;
+            position: relative;
+          }
+          .cert-header {
+            font-size: 32px;
+            font-weight: 900;
+            color: #1e3a8a;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+          }
+          .cert-logo {
+            height: 90px;
+            width: 90px;
+            margin: 0 auto 15px auto;
+            border-radius: 16px;
+            object-fit: contain;
+          }
+          .cert-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+          }
+          .cert-body {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #1e293b;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: justify;
+            text-align-last: center;
+          }
+          .highlight {
+            color: #dc2626;
+            font-weight: bold;
+          }
+          .cert-meta {
+            margin-top: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0f172a;
+          }
+          .cert-footer {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 15px;
+          }
+          .qr-img {
+            width: 95px;
+            height: 95px;
+          }
+          .sig-box {
+            border: 1.5px solid #86efac;
+            border-radius: 16px;
+            padding: 10px 35px;
+            text-align: center;
+            background: #fafafa;
+          }
+          .sig-cursive {
+            font-family: 'Brush Script MT', 'Great Vibes', cursive, 'Times New Roman';
+            font-size: 32px;
+            color: #0f172a;
+            font-style: italic;
+          }
+          .sig-title {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: #1e293b;
+            margin-top: 2px;
+          }
+          @media print {
+            body { padding: 0; background: white; }
+            .cert-outer { width: 100%; border-width: 8px; box-shadow: none; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="cert-outer">
+          <div class="cert-inner">
+            <div class="cert-header">FLARELAP GLOBAL FOUNDATION</div>
+            <img src="/logo.png" alt="Logo" class="cert-logo" onerror="this.src='/favicon.ico'" />
+            <div class="cert-title">CERTIFICATE OF APPRECIATION</div>
+            <div class="cert-body">
+              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a Volunteer with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
+              <br/><br/>
+              We highly commend their invaluable contribution, passion, and spirit of service.
+            </div>
+            <div class="cert-meta">
+              ID: <span class="highlight">${displayMemberId}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Issued: <span class="highlight">${issueDateStr}</span>
+            </div>
+            <div class="cert-footer">
+              <img src="${qrUrl}" alt="QR" class="qr-img" />
+              <div class="sig-box">
+                <div class="sig-cursive">Bharat Bhushan</div>
+                <div class="sig-title">Managing Director</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          window.onload = function() {
+            setTimeout(function() {
+              window.print();
+            }, 400);
+          }
+        </script>
+      </body>
+      </html>
+    `);
+    printWindow.document.close();
+  };
 
   // Form Fields State
   const [fullName, setFullName] = useState("");
@@ -1080,124 +1245,290 @@ export default function AdminVolunteersPage() {
         </div>
       )}
 
-      {/* VIEW FULL DETAILS MODAL */}
-      {viewVolunteer && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="w-full max-w-2xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
-            <div className="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
-              <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-                <HeartHandshake className="h-5 w-5 text-emerald-500" />
-                Volunteer Profile Details
-              </h3>
-              <button
-                onClick={() => setViewVolunteer(null)}
-                className="p-1.5 rounded-lg text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
+      {/* VIEW FULL DETAILS & CERTIFICATE MODAL */}
+      {viewVolunteer && (() => {
+        const displayMemberId = viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+        const regDate = viewVolunteer.createdAt ? new Date(viewVolunteer.createdAt) : new Date();
+        const startDateStr = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const endDateStr = regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`)}`;
 
-            <div className="p-6 overflow-y-auto space-y-6">
-              {/* Profile Card */}
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
-                <div className="h-16 w-16 rounded-full bg-emerald-100 dark:bg-emerald-950 overflow-hidden border-2 border-emerald-500/30 flex items-center justify-center shrink-0">
-                  {viewVolunteer.profilePhoto ? (
-                    <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="h-full w-full object-cover" />
-                  ) : (
-                    <User className="h-8 w-8 text-emerald-600" />
-                  )}
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="text-lg font-black text-slate-900 dark:text-white">
-                      {viewVolunteer.fullName}
-                    </h3>
-                    <span className="inline-flex items-center gap-1 bg-indigo-600 text-white text-[11px] font-mono font-black px-3 py-0.5 rounded-full shadow-xs">
-                      <CreditCard className="h-3.5 w-3.5" />
-                      {viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`}
-                    </span>
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 backdrop-blur-xs animate-in fade-in duration-200">
+            <div className="w-full max-w-4xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+              {/* Modal Header */}
+              <div className="flex flex-wrap items-center justify-between p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <HeartHandshake className="h-5 w-5" />
                   </div>
-                  <p className="text-xs text-slate-500 font-bold mt-1">
-                    {viewVolunteer.gender} • DOB: {viewVolunteer.dob || "N/A"}
-                  </p>
-                  <span className="inline-block mt-1 bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md border border-purple-200/60 dark:border-purple-800/50">
-                    {viewVolunteer.education}
-                  </span>
+                  <div>
+                    <h3 className="text-base font-black text-slate-900 dark:text-white">
+                      Volunteer Profile & Certificate
+                    </h3>
+                    <p className="text-xs text-slate-500 font-medium">
+                      Member ID: <span className="font-mono font-bold text-indigo-600 dark:text-indigo-400">{displayMemberId}</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => handlePrintCertificate(viewVolunteer)}
+                    className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition transform active:scale-95 cursor-pointer"
+                    title="Print / Save Certificate as PDF"
+                  >
+                    <Printer className="h-4 w-4" />
+                    <span className="hidden sm:inline">Print / Save PDF</span>
+                  </button>
+                  <button
+                    onClick={() => setViewVolunteer(null)}
+                    className="p-2 rounded-xl text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+                  >
+                    <X className="h-5 w-5" />
+                  </button>
                 </div>
               </div>
 
-              {/* Grid Info */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <div className="p-3 rounded-xl border border-indigo-200/70 dark:border-indigo-800/60 bg-indigo-50/50 dark:bg-indigo-950/30 space-y-1">
-                  <span className="text-indigo-600 dark:text-indigo-400 font-bold uppercase text-[10px]">Official Member ID</span>
-                  <p className="font-mono font-black text-sm text-indigo-700 dark:text-indigo-300">
-                    {viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`}
-                  </p>
-                </div>
-
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
-                  <span className="text-slate-400 font-bold uppercase text-[10px]">Contact Info</span>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">{viewVolunteer.email}</p>
-                  <p className="font-medium text-slate-600 dark:text-slate-400">{viewVolunteer.phone}</p>
-                </div>
-
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
-                  <span className="text-slate-400 font-bold uppercase text-[10px]">Specializations / Nature of Work</span>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">{viewVolunteer.specializations || "N/A"}</p>
-                </div>
-
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
-                  <span className="text-slate-400 font-bold uppercase text-[10px]">Address</span>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">
-                    {[viewVolunteer.street, viewVolunteer.villageCity, viewVolunteer.district, viewVolunteer.state, viewVolunteer.pincode]
-                      .filter(Boolean)
-                      .join(", ") || "N/A"}
-                  </p>
-                </div>
-
-                <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
-                  <span className="text-slate-400 font-bold uppercase text-[10px]">Identity Doc</span>
-                  <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
-                </div>
+              {/* Navigation Tabs */}
+              <div className="flex border-b border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/50 px-6 pt-2 gap-2">
+                <button
+                  onClick={() => setActiveViewTab("details")}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
+                    activeViewTab === "details"
+                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                  }`}
+                >
+                  <User className="h-4 w-4" />
+                  Overview & Aadhaar Docs
+                </button>
+                <button
+                  onClick={() => setActiveViewTab("certificate")}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
+                    activeViewTab === "certificate"
+                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                  }`}
+                >
+                  <Award className="h-4 w-4 text-amber-500" />
+                  Certificate of Appreciation 🎖️
+                </button>
               </div>
 
-              {/* Document Previews */}
-              <div className="space-y-3 pt-2">
-                <h4 className="text-xs font-black uppercase text-slate-500 tracking-wider">Uploaded Aadhaar Document Previews</h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {viewVolunteer.uidFrontDoc ? (
-                    <div
-                      onClick={() => setViewDocImage({ title: "Aadhaar Front", url: viewVolunteer.uidFrontDoc! })}
-                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
-                    >
-                      <img src={viewVolunteer.uidFrontDoc} alt="Aadhaar Front" className="h-32 w-full object-cover rounded-lg mb-1.5" />
-                      <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Front Card</span>
+              {/* Modal Body Content */}
+              <div className="p-6 overflow-y-auto space-y-6">
+                {activeViewTab === "details" ? (
+                  <>
+                    {/* Profile Card */}
+                    <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
+                      <div className="h-16 w-16 rounded-full bg-emerald-100 dark:bg-emerald-950 overflow-hidden border-2 border-emerald-500/30 flex items-center justify-center shrink-0">
+                        {viewVolunteer.profilePhoto ? (
+                          <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="h-full w-full object-cover" />
+                        ) : (
+                          <User className="h-8 w-8 text-emerald-600" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <h3 className="text-lg font-black text-slate-900 dark:text-white">
+                            {viewVolunteer.fullName}
+                          </h3>
+                          <span className="inline-flex items-center gap-1 bg-indigo-600 text-white text-[11px] font-mono font-black px-3 py-0.5 rounded-full shadow-xs">
+                            <CreditCard className="h-3.5 w-3.5" />
+                            {displayMemberId}
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-500 font-bold mt-1">
+                          {viewVolunteer.gender} • DOB: {viewVolunteer.dob || "N/A"}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className="inline-block bg-purple-100 dark:bg-purple-950/60 text-purple-800 dark:text-purple-300 text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md border border-purple-200/60 dark:border-purple-800/50">
+                            {viewVolunteer.education}
+                          </span>
+                          <button
+                            onClick={() => setActiveViewTab("certificate")}
+                            className="inline-flex items-center gap-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 text-[10px] font-black px-2.5 py-0.5 rounded-md hover:bg-amber-500/20 transition cursor-pointer"
+                          >
+                            <Award className="h-3 w-3" /> View Certificate
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  ) : (
-                    <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
-                      No Aadhaar Front Image
-                    </div>
-                  )}
 
-                  {viewVolunteer.uidBackDoc ? (
-                    <div
-                      onClick={() => setViewDocImage({ title: "Aadhaar Back", url: viewVolunteer.uidBackDoc! })}
-                      className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
-                    >
-                      <img src={viewVolunteer.uidBackDoc} alt="Aadhaar Back" className="h-32 w-full object-cover rounded-lg mb-1.5" />
-                      <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Back Card</span>
+                    {/* Grid Info */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                      <div className="p-3 rounded-xl border border-indigo-200/70 dark:border-indigo-800/60 bg-indigo-50/50 dark:bg-indigo-950/30 space-y-1">
+                        <span className="text-indigo-600 dark:text-indigo-400 font-bold uppercase text-[10px]">Official Member ID</span>
+                        <p className="font-mono font-black text-sm text-indigo-700 dark:text-indigo-300">
+                          {displayMemberId}
+                        </p>
+                      </div>
+
+                      <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                        <span className="text-slate-400 font-bold uppercase text-[10px]">Contact Info</span>
+                        <p className="font-bold text-slate-900 dark:text-slate-100">{viewVolunteer.email}</p>
+                        <p className="font-medium text-slate-600 dark:text-slate-400">{viewVolunteer.phone}</p>
+                      </div>
+
+                      <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                        <span className="text-slate-400 font-bold uppercase text-[10px]">Specializations / Nature of Work</span>
+                        <p className="font-bold text-slate-900 dark:text-slate-100">{viewVolunteer.specializations || "N/A"}</p>
+                      </div>
+
+                      <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                        <span className="text-slate-400 font-bold uppercase text-[10px]">Address</span>
+                        <p className="font-bold text-slate-900 dark:text-slate-100">
+                          {[viewVolunteer.street, viewVolunteer.villageCity, viewVolunteer.district, viewVolunteer.state, viewVolunteer.pincode]
+                            .filter(Boolean)
+                            .join(", ") || "N/A"}
+                        </p>
+                      </div>
+
+                      <div className="p-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 space-y-1">
+                        <span className="text-slate-400 font-bold uppercase text-[10px]">Identity Doc</span>
+                        <p className="font-bold text-slate-900 dark:text-slate-100">UID (Aadhaar): {viewVolunteer.uidNo || "N/A"}</p>
+                      </div>
                     </div>
-                  ) : (
-                    <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
-                      No Aadhaar Back Image
+
+                    {/* Document Previews */}
+                    <div className="space-y-3 pt-2">
+                      <h4 className="text-xs font-black uppercase text-slate-500 tracking-wider">Uploaded Aadhaar Document Previews</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {viewVolunteer.uidFrontDoc ? (
+                          <div
+                            onClick={() => setViewDocImage({ title: "Aadhaar Front", url: viewVolunteer.uidFrontDoc! })}
+                            className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
+                          >
+                            <img src={viewVolunteer.uidFrontDoc} alt="Aadhaar Front" className="h-32 w-full object-cover rounded-lg mb-1.5" />
+                            <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Front Card</span>
+                          </div>
+                        ) : (
+                          <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
+                            No Aadhaar Front Image
+                          </div>
+                        )}
+
+                        {viewVolunteer.uidBackDoc ? (
+                          <div
+                            onClick={() => setViewDocImage({ title: "Aadhaar Back", url: viewVolunteer.uidBackDoc! })}
+                            className="border border-slate-200 dark:border-slate-800 rounded-xl p-2.5 bg-slate-50 dark:bg-slate-950 text-center cursor-pointer hover:border-emerald-500 transition"
+                          >
+                            <img src={viewVolunteer.uidBackDoc} alt="Aadhaar Back" className="h-32 w-full object-cover rounded-lg mb-1.5" />
+                            <span className="text-xs font-extrabold text-slate-700 dark:text-slate-300">Aadhaar Back Card</span>
+                          </div>
+                        ) : (
+                          <div className="border border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-6 text-center text-slate-400 text-xs font-semibold flex items-center justify-center">
+                            No Aadhaar Back Image
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  )}
-                </div>
+                  </>
+                ) : (
+                  /* CERTIFICATE OF APPRECIATION TAB */
+                  <div className="space-y-4">
+                    {/* Action Bar */}
+                    <div className="flex items-center justify-between bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800">
+                      <div>
+                        <h4 className="text-xs font-black uppercase text-slate-900 dark:text-white">
+                          Official Certificate Preview
+                        </h4>
+                        <p className="text-[11px] text-slate-500 font-medium">
+                          Click Print / Download PDF to print or save a vector-quality A4 landscape certificate.
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => handlePrintCertificate(viewVolunteer)}
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider shadow-md shadow-emerald-600/10 transition transform active:scale-95 cursor-pointer"
+                      >
+                        <Printer className="h-4 w-4" />
+                        Print / Save PDF
+                      </button>
+                    </div>
+
+                    {/* Certificate Outer Frame */}
+                    <div className="p-2 bg-slate-900 rounded-2xl shadow-xl border-4 border-slate-900 overflow-x-auto">
+                      <div className="min-w-[700px] bg-white text-slate-900 p-2 border-4 border-slate-900 box-border">
+                        <div className="border-2 border-slate-800 p-8 sm:p-10 text-center relative font-serif">
+                          {/* Header Title */}
+                          <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-wider uppercase mb-4 font-serif">
+                            FLARELAP GLOBAL FOUNDATION
+                          </h2>
+
+                          {/* Center Logo */}
+                          <div className="my-3 flex justify-center">
+                            <img
+                              src="/logo.png"
+                              alt="Flarelap Logo"
+                              className="h-20 w-20 object-contain rounded-2xl shadow-sm"
+                              onError={(e) => {
+                                (e.target as HTMLElement).style.display = "none";
+                              }}
+                            />
+                          </div>
+
+                          {/* Certificate Title */}
+                          <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-widest uppercase my-5 font-serif border-b-2 border-slate-100 pb-2 inline-block px-6">
+                            CERTIFICATE OF APPRECIATION
+                          </h3>
+
+                          {/* Certificate Body Paragraph */}
+                          <div className="text-xs sm:text-sm leading-relaxed text-slate-800 max-w-3xl mx-auto my-6 text-justify sm:text-center font-serif">
+                            This certificate is proudly presented to{" "}
+                            <span className="text-red-600 font-extrabold underline decoration-red-200">
+                              {viewVolunteer.fullName}
+                            </span>{" "}
+                            in deep gratitude for their outstanding dedication and selfless service as a Volunteer with{" "}
+                            <span className="text-red-600 font-extrabold">Flarelap Global Foundation</span> from{" "}
+                            <span className="text-red-600 font-extrabold">{startDateStr}</span> to{" "}
+                            <span className="text-red-600 font-extrabold">{endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
+                            <br /><br />
+                            We highly commend their invaluable contribution, passion, and spirit of service.
+                          </div>
+
+                          {/* ID & Date */}
+                          <div className="text-xs sm:text-sm font-bold text-slate-900 my-5 flex items-center justify-center gap-6 font-serif">
+                            <span>
+                              ID: <span className="text-red-600 font-extrabold font-mono">{displayMemberId}</span>
+                            </span>
+                            <span>
+                              Issued: <span className="text-red-600 font-extrabold">{issueDateStr}</span>
+                            </span>
+                          </div>
+
+                          {/* Footer Row: QR Code & Signature */}
+                          <div className="mt-8 pt-4 border-t border-slate-100 flex items-end justify-between px-4">
+                            {/* QR Code */}
+                            <div className="flex flex-col items-center">
+                              <img
+                                src={qrUrl}
+                                alt="Verification QR Code"
+                                className="h-20 w-20 border border-slate-200 rounded-lg p-1 bg-white shadow-2xs"
+                              />
+                            </div>
+
+                            {/* Signature Box */}
+                            <div className="border-1.5 border-emerald-300 rounded-2xl px-8 py-2.5 bg-slate-50/80 text-center">
+                              <p className="font-serif italic text-2xl font-black text-slate-900 tracking-wide">
+                                Bharat Bhushan
+                              </p>
+                              <p className="text-[11px] font-sans font-bold text-slate-800 uppercase tracking-wider mt-0.5">
+                                Managing Director
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
 
       {/* VIEW ENLARGED DOCUMENT IMAGE MODAL */}
       {viewDocImage && (
