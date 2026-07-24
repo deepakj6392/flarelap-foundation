@@ -73,8 +73,11 @@ export async function POST(request: Request) {
       agreement,
       status,
       memberSince,
+      membersSince,
       expiryDate
     } = body;
+
+    const finalMemberSince = memberSince || membersSince || null;
 
     if (!fullName || !fullName.trim()) {
       return NextResponse.json({ message: "Volunteer Full Name is required." }, { status: 400 });
@@ -160,7 +163,7 @@ export async function POST(request: Request) {
         profilePhoto: profilePhoto || null,
         agreement: agreement !== undefined ? Boolean(agreement) : true,
         status: status || "APPROVED",
-        memberSince: memberSince || null,
+        memberSince: finalMemberSince,
         expiryDate: expiryDate || null
       }
     });

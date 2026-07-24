@@ -49,8 +49,11 @@ export async function PUT(
       agreement,
       status,
       memberSince,
+      membersSince,
       expiryDate
     } = body;
+
+    const finalMemberSince = memberSince !== undefined ? memberSince : membersSince;
 
     // Age validation if DOB provided
     if (dob) {
@@ -103,7 +106,7 @@ export async function PUT(
         ...(profilePhoto !== undefined && { profilePhoto }),
         ...(agreement !== undefined && { agreement: Boolean(agreement) }),
         ...(status !== undefined && { status }),
-        ...(memberSince !== undefined && { memberSince: memberSince || null }),
+        ...(finalMemberSince !== undefined && { memberSince: finalMemberSince || null }),
         ...(expiryDate !== undefined && { expiryDate: expiryDate || null })
       }
     });
