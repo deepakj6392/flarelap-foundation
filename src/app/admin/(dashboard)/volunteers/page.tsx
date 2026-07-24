@@ -55,10 +55,32 @@ interface Volunteer {
   pincode?: string | null;
   agreement: boolean;
   status: string;
+  designation?: string | null;
   memberSince?: string | null;
   expiryDate?: string | null;
   createdAt: string;
 }
+
+const DESIGNATION_OPTIONS = [
+  "Volunteer",
+  "Member",
+  "Director",
+  "Supervisor",
+  "Secretary",
+  "Founder",
+  "Chairman",
+  "President",
+  "Vice-President",
+  "Treasurer",
+  "Executive Director",
+  "CEO",
+  "Program Coordinator",
+  "General Secretary",
+  "Field Worker",
+  "Watchman",
+  "Security Guard",
+  "Executive Officer"
+];
 
 export default function AdminVolunteersPage() {
   const [volunteers, setVolunteers] = useState<Volunteer[]>([]);
@@ -389,7 +411,7 @@ export default function AdminVolunteersPage() {
                   <div class="info-val info-val-highlight">${displayMemberId}</div>
 
                   <div class="info-label">DESIGNATION</div>
-                  <div class="info-val">Volunteer Member</div>
+                  <div class="info-val">${v.designation || "Volunteer"}</div>
 
                   <div class="info-label">MEMBER SINCE</div>
                   <div class="info-val">${startDateStr}</div>
@@ -613,7 +635,7 @@ export default function AdminVolunteersPage() {
             <img src="/logo.png" alt="Logo" class="cert-logo" onerror="this.src='/favicon.ico'" />
             <div class="cert-title">CERTIFICATE OF APPRECIATION</div>
             <div class="cert-body">
-              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a Volunteer with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
+              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a <span class="highlight">${v.designation || "Volunteer"}</span> with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
               <br/><br/>
               We highly commend their invaluable contribution, passion, and spirit of service.
             </div>
@@ -650,6 +672,7 @@ export default function AdminVolunteersPage() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [education, setEducation] = useState("Graduate");
+  const [designation, setDesignation] = useState("Volunteer");
   const [specializations, setSpecializations] = useState("");
   const [street, setStreet] = useState("");
   const [villageCity, setVillageCity] = useState("");
@@ -754,6 +777,7 @@ export default function AdminVolunteersPage() {
     setEmail("");
     setPhone("");
     setEducation("Graduate");
+    setDesignation("Volunteer");
     setSpecializations("");
     setStreet("");
     setVillageCity("");
@@ -790,6 +814,7 @@ export default function AdminVolunteersPage() {
     setEmail(v.email);
     setPhone(v.phone);
     setEducation(v.education || "Graduate");
+    setDesignation(v.designation || "Volunteer");
     setSpecializations(v.specializations || "");
     setStreet(v.street || "");
     setVillageCity(v.villageCity || "");
@@ -887,6 +912,7 @@ export default function AdminVolunteersPage() {
       email: email.trim(),
       phone: phone.trim(),
       education,
+      designation,
       specializations: specializations.trim(),
       street: street.trim(),
       villageCity: villageCity.trim(),
@@ -1178,9 +1204,14 @@ export default function AdminVolunteersPage() {
                             <h4 className="font-extrabold text-slate-900 dark:text-white leading-tight">
                               {v.fullName}
                             </h4>
-                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                              {v.gender}
-                            </span>
+                            <div className="flex items-center gap-1.5 mt-0.5">
+                              <span className="inline-block bg-blue-100 dark:bg-blue-950/70 text-blue-800 dark:text-blue-300 text-[9.5px] font-black uppercase px-2 py-0.5 rounded border border-blue-200/80 dark:border-blue-800/60">
+                                {v.designation || "Volunteer"}
+                              </span>
+                              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                                • {v.gender}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -1460,6 +1491,24 @@ export default function AdminVolunteersPage() {
                       <option value="Graduate">Graduate</option>
                       <option value="Postgraduate">Postgraduate</option>
                       <option value="Ph.D">Ph.D</option>
+                    </select>
+                  </div>
+
+                  {/* Designation */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Member Designation *
+                    </label>
+                    <select
+                      value={designation}
+                      onChange={(e) => setDesignation(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
+                    >
+                      {DESIGNATION_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
                     </select>
                   </div>
 
@@ -2032,8 +2081,9 @@ export default function AdminVolunteersPage() {
                             <span className="text-red-600 font-extrabold underline decoration-red-200">
                               {viewVolunteer.fullName}
                             </span>{" "}
-                            in deep gratitude for their outstanding dedication and selfless service as a Volunteer with{" "}
-                            <span className="text-red-600 font-extrabold">Flarelap Global Foundation</span> from{" "}
+                            in deep gratitude for their outstanding dedication and selfless service as a{" "}
+                            <span className="text-red-600 font-extrabold">{viewVolunteer.designation || "Volunteer"}</span>{" "}
+                            with <span className="text-red-600 font-extrabold">Flarelap Global Foundation</span> from{" "}
                             <span className="text-red-600 font-extrabold">{startDateStr}</span> to{" "}
                             <span className="text-red-600 font-extrabold">{endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
                             <br /><br />
@@ -2134,9 +2184,9 @@ export default function AdminVolunteersPage() {
                                   <span className="font-mono font-black text-xs text-blue-600">{displayMemberId}</span>
                                 </div>
                                 <div>
-                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">DESIGNATION</span>
-                                  <span className="font-bold text-[10px] text-slate-800">Volunteer Member</span>
-                                </div>
+                                    <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">DESIGNATION</span>
+                                    <span className="font-bold text-[10px] text-slate-800">{viewVolunteer.designation || "Volunteer"}</span>
+                                  </div>
                                 <div>
                                   <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">MEMBER SINCE</span>
                                   <span className="font-bold text-[10px] text-slate-800">{startDateStr}</span>

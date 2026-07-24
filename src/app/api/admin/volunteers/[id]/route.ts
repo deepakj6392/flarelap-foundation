@@ -45,6 +45,7 @@ export async function PUT(
       profilePhoto,
       agreement,
       status,
+      designation,
       memberSince,
       membersSince,
       expiryDate
@@ -101,6 +102,7 @@ export async function PUT(
       ...(profilePhoto !== undefined && { profilePhoto }),
       ...(agreement !== undefined && { agreement: Boolean(agreement) }),
       ...(status !== undefined && { status }),
+      ...(designation !== undefined && { designation: String(designation).trim() || "Volunteer" }),
       ...(finalMemberSince !== undefined && { memberSince: finalMemberSince || null }),
       ...(expiryDate !== undefined && { expiryDate: expiryDate || null })
     };

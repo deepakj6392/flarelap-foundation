@@ -72,6 +72,7 @@ export async function POST(request: Request) {
       profilePhoto,
       agreement,
       status,
+      designation,
       memberSince,
       membersSince,
       expiryDate
@@ -163,6 +164,7 @@ export async function POST(request: Request) {
         profilePhoto: profilePhoto || null,
         agreement: agreement !== undefined ? Boolean(agreement) : true,
         status: status || "APPROVED",
+        designation: designation ? designation.trim() : "Volunteer",
         memberSince: finalMemberSince,
         expiryDate: expiryDate || null
       }
