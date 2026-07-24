@@ -113,7 +113,7 @@ export default function AdminVolunteersPage() {
     const startDateStr = formatDateSafe(mSince, defaultStart);
     const endDateStr = formatDateSafe(mExp, defaultEnd);
 
-    const photoUrl = v.profilePhoto || "/favicon.ico";
+    const photoUrl = v.profilePhoto || "/default-volunteer-photo.jpg";
     const qrData = encodeURIComponent(`https://flarelap.org/verify-volunteer?id=${displayMemberId}`);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
 
