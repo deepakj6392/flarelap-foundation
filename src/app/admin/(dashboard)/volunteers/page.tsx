@@ -365,17 +365,11 @@ export default function AdminVolunteersPage() {
             letter-spacing: 0.5px;
             text-transform: uppercase;
           }
-          .holo-side-strip {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 14px;
-            background: repeating-linear-gradient(45deg, #e2e8f0, #e2e8f0 4px, #cbd5e1 4px, #cbd5e1 8px);
-            border-right: 1px solid #cbd5e1;
-          }
           .back-content {
-            margin-left: 10px;
+            margin-left: 0;
+            width: 100%;
+            position: relative;
+            z-index: 5;
           }
           .rules-title {
             font-size: 9.5px;
@@ -480,8 +474,10 @@ export default function AdminVolunteersPage() {
             </div>
             <div class="accent-strip"></div>
 
-            <div class="card-body-front">
-              <div class="holo-side-strip"></div>
+            <div class="card-body-front" style="position: relative; overflow: hidden; padding: 14px;">
+              <!-- Faint Watermark Logo Background for Back Side -->
+              <img src="/id-watermark.jpg" alt="Watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; opacity: 0.08; pointer-events: none; z-index: 1; border-radius: 50%; object-fit: cover;" />
+
               <div class="back-content">
                 <div class="rules-title">CARDHOLDER RULES & CONTACT</div>
                 <ul class="rules-list">
@@ -505,7 +501,7 @@ export default function AdminVolunteersPage() {
                 </div>
               </div>
 
-              <div class="card-footer-front" style="margin-top: auto; margin-left: -14px; margin-right: -14px; margin-bottom: -14px;">
+              <div class="card-footer-front" style="margin-top: auto; margin-left: -14px; margin-right: -14px; margin-bottom: -14px; position: relative; z-index: 5;">
                 FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
               </div>
             </div>
@@ -2294,11 +2290,15 @@ export default function AdminVolunteersPage() {
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
                           {/* Back Content */}
-                          <div className="p-3.5 flex-1 flex flex-col justify-between relative bg-white">
-                            {/* Hologram strip decoration */}
-                            <div className="absolute top-0 left-0 bottom-0 w-3 bg-repeating-linear-gradient(45deg,#cbd5e1,#cbd5e1 4px,#e2e8f0 4px,#e2e8f0 8px) border-r border-slate-200"></div>
+                          <div className="p-3.5 flex-1 flex flex-col justify-between relative bg-white overflow-hidden">
+                            {/* Faint Watermark Logo Background */}
+                            <img
+                              src="/id-watermark.jpg"
+                              alt="Watermark"
+                              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] opacity-[0.08] pointer-events-none z-0 rounded-full object-cover"
+                            />
 
-                            <div className="pl-3 text-left">
+                            <div className="text-left relative z-10">
                               <div className="text-[9.5px] font-black text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2">
                                 CARDHOLDER RULES & CONTACT
                               </div>
@@ -2310,7 +2310,7 @@ export default function AdminVolunteersPage() {
                                 <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
                               </ul>
 
-                              <div className="bg-slate-50 border border-slate-200 rounded-lg p-2 text-center mt-4">
+                              <div className="bg-slate-50/90 border border-slate-200 rounded-lg p-2 text-center mt-4">
                                 <span className="text-[8.5px] font-black text-slate-900">
                                   ISSUE DATE: {startDateStr} &nbsp;|&nbsp; VALID UNTIL: {endDateStr}
                                 </span>
@@ -2327,7 +2327,7 @@ export default function AdminVolunteersPage() {
                               </div>
                             </div>
 
-                            <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider -mx-3.5 -mb-3.5">
+                            <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider -mx-3.5 -mb-3.5 relative z-10">
                               FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
                             </div>
                           </div>
