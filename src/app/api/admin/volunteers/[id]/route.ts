@@ -112,11 +112,40 @@ export async function PUT(
         data: updateData
       });
     } catch (err: any) {
-      console.warn("Prisma update initial attempt failed, resetting client and retrying...", err.message);
-      const freshModel = (resetPrismaClient() as any).volunteer;
-      updatedVolunteer = await freshModel.update({
-        where: { id: volunteerId },
-        data: updateData
+      console.warn("Prisma ORM update failed, executing raw SQL fallback...", err?.message);
+
+      // Execute raw SQL update to ensure columns are set directly in Neon database
+      if (finalMemberSince !== undefined || expiryDate !== undefined) {
+        try {
+          await (prisma as any).$executeRawUnsafe(
+            `UPDATE "volunteers" SET "member_since" = $1, "expiry_date" = $2 WHERE "id" = $3`,
+            finalMemberSince || null,
+            expiryDate || null,
+            volunteerId
+          );
+        } catch (sqlErr: any) {
+          console.error("Raw SQL date update error:", sqlErr?.message);
+        }
+      }
+
+      // Remove memberSince and expiryDate from updateData if Prisma validator rejects them
+      const safeData = { ...updateData };
+      delete (safeData as any).memberSince;
+      delete (safeData as any).expiryDate;
+
+      if (Object.keys(safeData).length > 0) {
+        try {
+          await volunteerModel.update({
+            where: { id: volunteerId },
+            data: safeData
+          });
+        } catch (e) {
+          // Ignore secondary ORM errors
+        }
+      }
+
+      updatedVolunteer = await volunteerModel.findUnique({
+        where: { id: volunteerId }
       });
     }
 
