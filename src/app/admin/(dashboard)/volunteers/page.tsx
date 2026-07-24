@@ -87,21 +87,31 @@ export default function AdminVolunteersPage() {
   const [expiryDate, setExpiryDate] = useState("");
   const [savingDates, setSavingDates] = useState(false);
 
+  // Safe Date Formatter helper
+  const formatDateSafe = (dateVal: string | null | undefined, defaultDate: Date): string => {
+    if (!dateVal) {
+      return defaultDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    }
+    const d = new Date(dateVal);
+    if (isNaN(d.getTime())) {
+      return defaultDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    }
+    return d.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+  };
+
   // Print / Download Certificate Helper
   const handlePrintCertificate = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
     const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
 
-    const mSince = customMemberSince || v.memberSince;
-    const mExp = customExpiryDate || v.expiryDate;
+    const mSince = customMemberSince !== undefined ? customMemberSince : v.memberSince;
+    const mExp = customExpiryDate !== undefined ? customExpiryDate : v.expiryDate;
 
-    const startDateStr = mSince 
-      ? new Date(mSince).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
-      : new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-    
-    const endDateStr = mExp
-      ? new Date(mExp).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
-      : regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    const defaultStart = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate());
+    const defaultEnd = regDate;
+
+    const startDateStr = formatDateSafe(mSince, defaultStart);
+    const endDateStr = formatDateSafe(mExp, defaultEnd);
 
     const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
@@ -1352,16 +1362,14 @@ export default function AdminVolunteersPage() {
         const displayMemberId = viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
         const regDate = viewVolunteer.createdAt ? new Date(viewVolunteer.createdAt) : new Date();
 
-        const mSince = memberSince || viewVolunteer.memberSince;
-        const mExp = expiryDate || viewVolunteer.expiryDate;
+        const mSince = memberSince !== undefined && memberSince !== "" ? memberSince : viewVolunteer.memberSince;
+        const mExp = expiryDate !== undefined && expiryDate !== "" ? expiryDate : viewVolunteer.expiryDate;
 
-        const startDateStr = mSince 
-          ? new Date(mSince).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
-          : new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const defaultStart = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate());
+        const defaultEnd = regDate;
 
-        const endDateStr = mExp
-          ? new Date(mExp).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
-          : regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const startDateStr = formatDateSafe(mSince, defaultStart);
+        const endDateStr = formatDateSafe(mExp, defaultEnd);
 
         const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
         const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`)}`;
