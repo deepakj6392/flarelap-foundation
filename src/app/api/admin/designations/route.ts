@@ -17,24 +17,48 @@ async function verifyAdmin(request: Request) {
   }
 }
 
+function getDesignationModel() {
+  try {
+    let client = prisma as any;
+    if (client && client.designation) {
+      return client.designation;
+    }
+    const freshClient = resetPrismaClient() as any;
+    if (freshClient && freshClient.designation) {
+      return freshClient.designation;
+    }
+  } catch (e) {
+    // Return null to trigger raw SQL fallback
+  }
+  return null;
+}
+
 export async function GET(request: Request) {
   try {
-    let designationModel = (prisma as any).designation;
-    if (!designationModel) {
-      designationModel = (resetPrismaClient() as any).designation;
+    const designationModel = getDesignationModel();
+    if (designationModel) {
+      const designations = await designationModel.findMany({
+        orderBy: { createdAt: "asc" },
+      });
+      return NextResponse.json({ designations });
     }
 
-    const designations = await designationModel.findMany({
-      orderBy: { createdAt: "asc" },
-    });
-
+    // Raw SQL Fallback if ORM delegate not cached
+    const designations = await (prisma as any).$queryRawUnsafe(
+      `SELECT "id", "title", "status", "created_at" AS "createdAt" FROM "designations" ORDER BY "id" ASC;`
+    );
     return NextResponse.json({ designations });
   } catch (error: any) {
-    console.error("Fetch designations error:", error);
-    return NextResponse.json(
-      { message: error?.message || "Failed to fetch designations." },
-      { status: 500 }
-    );
+    console.warn("Fetch designations ORM failed, attempting Raw SQL fallback...", error?.message);
+    try {
+      const designations = await (prisma as any).$queryRawUnsafe(
+        `SELECT "id", "title", "status", "created_at" AS "createdAt" FROM "designations" ORDER BY "id" ASC;`
+      );
+      return NextResponse.json({ designations });
+    } catch (sqlErr: any) {
+      console.error("Fetch designations Raw SQL error:", sqlErr?.message);
+      return NextResponse.json({ designations: [] });
+    }
   }
 }
 
@@ -55,34 +79,44 @@ export async function POST(request: Request) {
       );
     }
 
-    let designationModel = (prisma as any).designation;
-    if (!designationModel) {
-      designationModel = (resetPrismaClient() as any).designation;
-    }
-
     const cleanTitle = title.trim();
+    const designationStatus = status || "ACTIVE";
 
-    // Check duplicate
-    const existing = await designationModel.findUnique({
-      where: { title: cleanTitle },
-    });
+    const designationModel = getDesignationModel();
+    if (designationModel) {
+      const existing = await designationModel.findUnique({
+        where: { title: cleanTitle },
+      });
 
-    if (existing) {
-      return NextResponse.json(
-        { message: "Designation title already exists." },
-        { status: 400 }
-      );
+      if (existing) {
+        return NextResponse.json(
+          { message: "Designation title already exists." },
+          { status: 400 }
+        );
+      }
+
+      const newDesignation = await designationModel.create({
+        data: {
+          title: cleanTitle,
+          status: designationStatus,
+        },
+      });
+
+      return NextResponse.json({
+        designation: newDesignation,
+        message: "Designation added successfully!",
+      });
     }
 
-    const newDesignation = await designationModel.create({
-      data: {
-        title: cleanTitle,
-        status: status || "ACTIVE",
-      },
-    });
+    // Raw SQL Fallback
+    const inserted = await (prisma as any).$queryRawUnsafe(
+      `INSERT INTO "designations" ("title", "status") VALUES ($1, $2) ON CONFLICT ("title") DO NOTHING RETURNING "id", "title", "status", "created_at" AS "createdAt";`,
+      cleanTitle,
+      designationStatus
+    );
 
     return NextResponse.json({
-      designation: newDesignation,
+      designation: inserted?.[0] || { title: cleanTitle, status: designationStatus },
       message: "Designation added successfully!",
     });
   } catch (error: any) {

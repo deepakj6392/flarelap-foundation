@@ -17,6 +17,22 @@ async function verifyAdmin(request: Request) {
   }
 }
 
+function getDesignationModel() {
+  try {
+    let client = prisma as any;
+    if (client && client.designation) {
+      return client.designation;
+    }
+    const freshClient = resetPrismaClient() as any;
+    if (freshClient && freshClient.designation) {
+      return freshClient.designation;
+    }
+  } catch (e) {
+    // Return null to trigger raw SQL fallback
+  }
+  return null;
+}
+
 export async function PUT(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -36,26 +52,41 @@ export async function PUT(
     const body = await request.json();
     const { title, status } = body;
 
-    let designationModel = (prisma as any).designation;
-    if (!designationModel) {
-      designationModel = (resetPrismaClient() as any).designation;
+    const designationModel = getDesignationModel();
+    if (designationModel) {
+      const updateData: any = {};
+      if (title !== undefined && title !== null) {
+        updateData.title = String(title).trim();
+      }
+      if (status !== undefined && status !== null) {
+        updateData.status = String(status);
+      }
+
+      const updated = await designationModel.update({
+        where: { id: designationId },
+        data: updateData,
+      });
+
+      return NextResponse.json({
+        designation: updated,
+        message: "Designation updated successfully!",
+      });
     }
 
-    const updateData: any = {};
-    if (title !== undefined && title !== null) {
-      updateData.title = String(title).trim();
-    }
-    if (status !== undefined && status !== null) {
-      updateData.status = String(status);
-    }
+    // Raw SQL Fallback
+    const cleanTitle = title ? String(title).trim() : undefined;
+    const cleanStatus = status ? String(status) : undefined;
 
-    const updated = await designationModel.update({
-      where: { id: designationId },
-      data: updateData,
-    });
+    if (cleanTitle || cleanStatus) {
+      await (prisma as any).$executeRawUnsafe(
+        `UPDATE "designations" SET "title" = COALESCE($1, "title"), "status" = COALESCE($2, "status") WHERE "id" = $3;`,
+        cleanTitle || null,
+        cleanStatus || null,
+        designationId
+      );
+    }
 
     return NextResponse.json({
-      designation: updated,
       message: "Designation updated successfully!",
     });
   } catch (error: any) {
@@ -83,14 +114,19 @@ export async function DELETE(
       return NextResponse.json({ message: "Invalid designation ID." }, { status: 400 });
     }
 
-    let designationModel = (prisma as any).designation;
-    if (!designationModel) {
-      designationModel = (resetPrismaClient() as any).designation;
+    const designationModel = getDesignationModel();
+    if (designationModel) {
+      await designationModel.delete({
+        where: { id: designationId },
+      });
+      return NextResponse.json({ message: "Designation deleted successfully!" });
     }
 
-    await designationModel.delete({
-      where: { id: designationId },
-    });
+    // Raw SQL Fallback
+    await (prisma as any).$executeRawUnsafe(
+      `DELETE FROM "designations" WHERE "id" = $1;`,
+      designationId
+    );
 
     return NextResponse.json({ message: "Designation deleted successfully!" });
   } catch (error: any) {
