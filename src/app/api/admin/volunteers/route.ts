@@ -71,7 +71,9 @@ export async function POST(request: Request) {
       pincode,
       profilePhoto,
       agreement,
-      status
+      status,
+      memberSince,
+      expiryDate
     } = body;
 
     if (!fullName || !fullName.trim()) {
@@ -157,7 +159,9 @@ export async function POST(request: Request) {
         pincode: pincode ? pincode.trim() : null,
         profilePhoto: profilePhoto || null,
         agreement: agreement !== undefined ? Boolean(agreement) : true,
-        status: status || "APPROVED"
+        status: status || "APPROVED",
+        memberSince: memberSince || null,
+        expiryDate: expiryDate || null
       }
     });
 

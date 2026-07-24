@@ -250,6 +250,8 @@ model Volunteer {
   pincode         String?
   agreement       Boolean  @default(true)
   status          String   @default("APPROVED")
+  memberSince     String?  @map("member_since")
+  expiryDate      String?  @map("expiry_date")
   createdAt       DateTime @default(now()) @map("created_at")
 
   @@map("volunteers")

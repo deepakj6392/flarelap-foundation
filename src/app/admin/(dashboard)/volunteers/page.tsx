@@ -55,6 +55,8 @@ interface Volunteer {
   pincode?: string | null;
   agreement: boolean;
   status: string;
+  memberSince?: string | null;
+  expiryDate?: string | null;
   createdAt: string;
 }
 
@@ -80,12 +82,27 @@ export default function AdminVolunteersPage() {
   const [activeViewTab, setActiveViewTab] = useState<"details" | "certificate">("details");
   const [viewDocImage, setViewDocImage] = useState<{ title: string; url: string } | null>(null);
 
+  // Member Since & Expiry Date State
+  const [memberSince, setMemberSince] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [savingDates, setSavingDates] = useState(false);
+
   // Print / Download Certificate Helper
-  const handlePrintCertificate = (v: Volunteer) => {
+  const handlePrintCertificate = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
     const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
-    const startDateStr = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-    const endDateStr = regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+
+    const mSince = customMemberSince || v.memberSince;
+    const mExp = customExpiryDate || v.expiryDate;
+
+    const startDateStr = mSince 
+      ? new Date(mSince).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+      : new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+    
+    const endDateStr = mExp
+      ? new Date(mExp).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+      : regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+
     const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
@@ -366,6 +383,8 @@ export default function AdminVolunteersPage() {
     setUidFrontDocError(null);
     setUidBackDocError(null);
     setDobError(null);
+    setMemberSince("");
+    setExpiryDate("");
     setIsEditMode(false);
     setEditVolunteerId(null);
   };
@@ -396,7 +415,62 @@ export default function AdminVolunteersPage() {
     setProfilePhoto(v.profilePhoto || null);
     setUidFrontDoc(v.uidFrontDoc || null);
     setUidBackDoc(v.uidBackDoc || null);
+    setMemberSince(v.memberSince || "");
+    setExpiryDate(v.expiryDate || "");
     setIsModalOpen(true);
+  };
+
+  const handleOpenViewModal = (v: Volunteer) => {
+    setViewVolunteer(v);
+    setMemberSince(v.memberSince || "");
+    setExpiryDate(v.expiryDate || "");
+    setActiveViewTab("details");
+  };
+
+  const handleSaveVolunteerDates = async () => {
+    if (!viewVolunteer) return;
+    const storedToken = localStorage.getItem("admin_token");
+    if (!storedToken) return;
+
+    setSavingDates(true);
+    try {
+      const res = await fetch(`/api/admin/volunteers/${viewVolunteer.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}`,
+        },
+        body: JSON.stringify({
+          memberSince,
+          expiryDate,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.volunteer) {
+        setViewVolunteer(data.volunteer);
+        setVolunteers((prev) =>
+          prev.map((v) => (v.id === data.volunteer.id ? data.volunteer : v))
+        );
+        Swal.fire({
+          icon: "success",
+          title: "Dates Saved!",
+          text: "Member Since & Expiry Date updated successfully.",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      } else {
+        throw new Error(data.message || "Failed to update dates.");
+      }
+    } catch (err: any) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: err.message || "Something went wrong while saving dates.",
+      });
+    } finally {
+      setSavingDates(false);
+    }
   };
 
   const handleSaveVolunteer = async (e: React.FormEvent) => {
@@ -436,7 +510,9 @@ export default function AdminVolunteersPage() {
       pincode: pincode.trim(),
       profilePhoto,
       agreement,
-      status: "APPROVED"
+      status: "APPROVED",
+      memberSince,
+      expiryDate
     };
 
     try {
@@ -1031,6 +1107,32 @@ export default function AdminVolunteersPage() {
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none"
                     />
                   </div>
+
+                  {/* Member Since (Start Date) */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Member Since (Start Date)
+                    </label>
+                    <input
+                      type="date"
+                      value={memberSince}
+                      onChange={(e) => setMemberSince(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
+                    />
+                  </div>
+
+                  {/* Expiry Date (Tenure End) */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                      Expiry Date (Tenure End)
+                    </label>
+                    <input
+                      type="date"
+                      value={expiryDate}
+                      onChange={(e) => setExpiryDate(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
+                    />
+                  </div>
                 </div>
 
                 {/* Specialization / Nature of Work */}
@@ -1249,8 +1351,18 @@ export default function AdminVolunteersPage() {
       {viewVolunteer && (() => {
         const displayMemberId = viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
         const regDate = viewVolunteer.createdAt ? new Date(viewVolunteer.createdAt) : new Date();
-        const startDateStr = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-        const endDateStr = regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+
+        const mSince = memberSince || viewVolunteer.memberSince;
+        const mExp = expiryDate || viewVolunteer.expiryDate;
+
+        const startDateStr = mSince 
+          ? new Date(mSince).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+          : new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate()).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+
+        const endDateStr = mExp
+          ? new Date(mExp).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+          : regDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+
         const issueDateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
         const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`)}`;
 
@@ -1275,7 +1387,7 @@ export default function AdminVolunteersPage() {
 
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => handlePrintCertificate(viewVolunteer)}
+                    onClick={() => handlePrintCertificate(viewVolunteer, memberSince, expiryDate)}
                     className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition transform active:scale-95 cursor-pointer"
                     title="Print / Save Certificate as PDF"
                   >
@@ -1319,6 +1431,52 @@ export default function AdminVolunteersPage() {
 
               {/* Modal Body Content */}
               <div className="p-6 overflow-y-auto space-y-6">
+                {/* Member Since & Expiry Date Configuration Box */}
+                <div className="p-4 rounded-xl bg-amber-500/10 dark:bg-amber-950/30 border border-amber-500/30 space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                      <h4 className="text-xs font-black uppercase text-amber-900 dark:text-amber-300 tracking-wider">
+                        Member Since & Expiry Date (Custom Certificate Dates)
+                      </h4>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleSaveVolunteerDates}
+                      disabled={savingDates}
+                      className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-xs transition transform active:scale-95 cursor-pointer disabled:opacity-50 border-none"
+                    >
+                      {savingDates ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <FileCheck className="h-3.5 w-3.5" />}
+                      Save Dates
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Member Since (Start Date)
+                      </label>
+                      <input
+                        type="date"
+                        value={memberSince}
+                        onChange={(e) => setMemberSince(e.target.value)}
+                        className="w-full px-3 py-2 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-white dark:bg-slate-900 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500/30 outline-none cursor-pointer"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Expiry Date (Tenure End)
+                      </label>
+                      <input
+                        type="date"
+                        value={expiryDate}
+                        onChange={(e) => setExpiryDate(e.target.value)}
+                        className="w-full px-3 py-2 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-white dark:bg-slate-900 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500/30 outline-none cursor-pointer"
+                      />
+                    </div>
+                  </div>
+                </div>
                 {activeViewTab === "details" ? (
                   <>
                     {/* Profile Card */}

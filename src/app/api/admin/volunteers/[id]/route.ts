@@ -38,7 +38,9 @@ export async function PUT(
       pincode,
       profilePhoto,
       agreement,
-      status
+      status,
+      memberSince,
+      expiryDate
     } = body;
 
     // Age validation if DOB provided
@@ -91,7 +93,9 @@ export async function PUT(
         ...(pincode !== undefined && { pincode: pincode ? pincode.trim() : null }),
         ...(profilePhoto !== undefined && { profilePhoto }),
         ...(agreement !== undefined && { agreement: Boolean(agreement) }),
-        ...(status !== undefined && { status })
+        ...(status !== undefined && { status }),
+        ...(memberSince !== undefined && { memberSince: memberSince || null }),
+        ...(expiryDate !== undefined && { expiryDate: expiryDate || null })
       }
     });
 
