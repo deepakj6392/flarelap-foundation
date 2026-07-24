@@ -251,26 +251,46 @@ export default function AdminVolunteersPage() {
           }
           .info-column {
             flex: 1;
-            font-size: 11px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
           }
-          .info-label {
-            font-size: 8.5px;
+          .info-row-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 3px;
+            margin-bottom: 4px;
+          }
+          .info-row-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+          .info-key {
+            font-size: 8px;
             font-weight: 800;
             color: #64748b;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-top: 3px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
           }
-          .info-val {
-            font-size: 10.5px;
+          .info-val-right {
+            font-size: 9.5px;
             font-weight: 800;
             color: #0f172a;
-            line-height: 1.2;
+            text-align: right;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 105px;
           }
-          .info-val-highlight {
+          .info-val-blue {
             color: #2563eb;
             font-family: monospace;
-            font-size: 12px;
+            font-size: 11px;
+            font-weight: 900;
           }
           .volunteer-name {
             font-size: 15px;
@@ -407,17 +427,22 @@ export default function AdminVolunteersPage() {
               <div class="photo-info-row">
                 <img src="${photoUrl}" alt="${v.fullName}" class="photo-frame" onerror="this.src='/favicon.ico'" />
                 <div class="info-column">
-                  <div class="info-label">MEMBER ID</div>
-                  <div class="info-val info-val-highlight">${displayMemberId}</div>
-
-                  <div class="info-label">DESIGNATION</div>
-                  <div class="info-val">${v.designation || "Volunteer"}</div>
-
-                  <div class="info-label">MEMBER SINCE</div>
-                  <div class="info-val">${startDateStr}</div>
-
-                  <div class="info-label">EXPIRY DATE</div>
-                  <div class="info-val">${endDateStr}</div>
+                  <div class="info-row-item">
+                    <span class="info-key">Member ID</span>
+                    <span class="info-val-right info-val-blue">${displayMemberId}</span>
+                  </div>
+                  <div class="info-row-item">
+                    <span class="info-key">Designation</span>
+                    <span class="info-val-right">${v.designation || "Volunteer"}</span>
+                  </div>
+                  <div class="info-row-item">
+                    <span class="info-key">Member Since</span>
+                    <span class="info-val-right">${startDateStr}</span>
+                  </div>
+                  <div class="info-row-item">
+                    <span class="info-key">Expiry Date</span>
+                    <span class="info-val-right">${endDateStr}</span>
+                  </div>
                 </div>
               </div>
 
@@ -2197,23 +2222,23 @@ export default function AdminVolunteersPage() {
                                   </div>
                                 )}
                               </div>
-                              {/* Details */}
-                              <div className="flex-1 space-y-1 text-left">
-                                <div>
-                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">MEMBER ID</span>
-                                  <span className="font-mono font-black text-xs text-blue-600">{displayMemberId}</span>
+                              {/* Details - Single-Row Key Value Layout */}
+                              <div className="flex-1 space-y-1.5 text-left font-sans self-stretch flex flex-col justify-between">
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
+                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
+                                  <span className="font-mono font-black text-[11px] text-blue-600 tracking-tight">{displayMemberId}</span>
                                 </div>
-                                <div>
-                                    <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">DESIGNATION</span>
-                                    <span className="font-bold text-[10px] text-slate-800">{viewVolunteer.designation || "Volunteer"}</span>
-                                  </div>
-                                <div>
-                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">MEMBER SINCE</span>
-                                  <span className="font-bold text-[10px] text-slate-800">{startDateStr}</span>
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
+                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
+                                  <span className="font-extrabold text-[9.5px] text-slate-900 truncate max-w-[95px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
                                 </div>
-                                <div>
-                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">EXPIRY DATE</span>
-                                  <span className="font-bold text-[10px] text-slate-800">{endDateStr}</span>
+                                <div className="flex items-center justify-between border-b border-slate-100 pb-0.5">
+                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
+                                  <span className="font-bold text-[9px] text-slate-800">{startDateStr}</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                  <span className="text-[8px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
+                                  <span className="font-bold text-[9px] text-slate-800">{endDateStr}</span>
                                 </div>
                               </div>
                             </div>
