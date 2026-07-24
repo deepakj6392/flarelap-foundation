@@ -424,43 +424,43 @@ export default function AdminVolunteersPage() {
             </div>
             <div class="accent-strip"></div>
 
-            <div class="card-body-front">
-              <div class="photo-info-row">
-                <img src="${photoUrl}" alt="${v.fullName}" class="photo-frame" onerror="this.src='/favicon.ico'" />
-                <div class="info-column">
-                  <div class="info-row-item">
-                    <span class="info-key">Member ID</span>
-                    <span class="info-val-right info-val-blue">${displayMemberId}</span>
-                  </div>
-                  <div class="info-row-item">
-                    <span class="info-key">Designation</span>
-                    <span class="info-val-right">${v.designation || "Volunteer"}</span>
-                  </div>
-                  <div class="info-row-item">
-                    <span class="info-key">Member Since</span>
-                    <span class="info-val-right">${startDateStr}</span>
-                  </div>
-                  <div class="info-row-item">
-                    <span class="info-key">Expiry Date</span>
-                    <span class="info-val-right">${endDateStr}</span>
-                  </div>
+            <div class="card-body-front" style="padding: 6px 14px 10px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center;">
+              <!-- Circular Profile Photo (Below Header Banner) -->
+              <div style="position: relative; margin-top: 4px; z-index: 5;">
+                <img src="${photoUrl}" alt="${v.fullName}" style="width: 96px; height: 96px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.14); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
+              </div>
+
+              <!-- Member Name & Designation Badge -->
+              <div style="margin-top: 4px; width: 100%;">
+                <div style="font-size: 16px; font-weight: 900; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2;">${v.fullName}</div>
+                <div style="display: inline-block; background: linear-gradient(135deg, #0f172a, #334155); color: #ffffff; padding: 2px 14px; border-radius: 20px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px;">
+                  ${v.designation || "Volunteer"}
                 </div>
               </div>
 
-              <div>
-                <div class="volunteer-name">${v.fullName}</div>
-                <div class="sig-row">
-                  <div>
-                    <div class="sig-text">${v.fullName.split(' ')[0]}</div>
-                    <div class="sig-label">MEMBER SIGNATURE</div>
-                  </div>
-                  <div class="stamp-badge">✓ APPROVED</div>
+              <!-- Centered Key Details Card Box -->
+              <div style="width: 100%; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px 12px; margin-top: 6px; box-sizing: border-box;">
+                <div class="info-row-item">
+                  <span class="info-key">Member ID</span>
+                  <span class="info-val-right info-val-blue">${displayMemberId}</span>
+                </div>
+                <div class="info-row-item">
+                  <span class="info-key">Designation</span>
+                  <span class="info-val-right">${v.designation || "Volunteer"}</span>
+                </div>
+                <div class="info-row-item">
+                  <span class="info-key">Member Since</span>
+                  <span class="info-val-right">${startDateStr}</span>
+                </div>
+                <div class="info-row-item" style="border-bottom: none; padding-bottom: 0;">
+                  <span class="info-key">Expiry Date</span>
+                  <span class="info-val-right">${endDateStr}</span>
                 </div>
               </div>
 
-              <div class="qr-holo-row">
-                <img src="${qrUrl}" alt="QR" class="qr-card-img" />
-                <div class="holo-badge">★ OFFICIAL MEMBER</div>
+              <!-- Hologram Official Badge -->
+              <div style="margin-top: 6px;">
+                <div class="holo-badge" style="display: inline-block;">★ OFFICIAL MEMBER</div>
               </div>
             </div>
 
@@ -2210,11 +2210,11 @@ export default function AdminVolunteersPage() {
                           </div>
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
-                          {/* Card Body */}
-                          <div className="p-3.5 flex-1 flex flex-col justify-between bg-gradient-to-b from-blue-50/30 via-white to-slate-50">
-                            <div className="flex gap-3 items-start">
-                              {/* Photo */}
-                              <div className="w-[96px] h-[120px] rounded-lg border-2 border-slate-900 overflow-hidden bg-slate-100 shrink-0 shadow-md">
+                          {/* Card Body - Centered Circular Photo & Executive Layout */}
+                          <div className="p-3 flex-1 flex flex-col justify-between items-center text-center bg-gradient-to-b from-blue-50/30 via-white to-slate-50 relative">
+                            {/* Circular Profile Photo (Below Header Banner) */}
+                            <div className="mt-1 relative z-10">
+                              <div className="w-[96px] h-[96px] rounded-full border-3 border-white shadow-md overflow-hidden bg-slate-100 mx-auto">
                                 {viewVolunteer.profilePhoto ? (
                                   <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="w-full h-full object-cover" />
                                 ) : (
@@ -2223,51 +2223,43 @@ export default function AdminVolunteersPage() {
                                   </div>
                                 )}
                               </div>
-                              {/* Details - Equal Height & Larger Font Sizes */}
-                              <div className="flex-1 h-[120px] text-left font-sans flex flex-col justify-between py-0.5">
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
-                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
-                                  <span className="font-mono font-black text-[13px] text-blue-600 tracking-tight">{displayMemberId}</span>
-                                </div>
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
-                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
-                                  <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
-                                </div>
-                                <div className="flex items-center justify-between border-b border-slate-100 pb-1">
-                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
-                                  <span className="font-bold text-[10.5px] text-slate-800">{startDateStr}</span>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                  <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
-                                  <span className="font-bold text-[10.5px] text-slate-800">{endDateStr}</span>
-                                </div>
-                              </div>
                             </div>
 
-                            <div className="text-left mt-2">
-                              <div className="text-sm font-black text-slate-900 uppercase tracking-wide border-b border-slate-200 pb-1">
+                            {/* Member Name & Designation Badge */}
+                            <div className="w-full mt-1">
+                              <h3 className="text-base font-black text-slate-900 uppercase tracking-wide leading-tight">
                                 {viewVolunteer.fullName}
+                              </h3>
+                              <span className="inline-block bg-gradient-to-r from-slate-900 to-slate-800 text-white text-[9px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow-xs tracking-wider mt-1">
+                                {viewVolunteer.designation || "Volunteer"}
+                              </span>
+                            </div>
+
+                            {/* Centered Key Details Card Container */}
+                            <div className="w-full bg-slate-50/80 border border-slate-200/80 rounded-xl p-2.5 space-y-1.5 mt-2">
+                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
+                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
+                                <span className="font-mono font-black text-[13px] text-blue-600 tracking-tight">{displayMemberId}</span>
                               </div>
-                              <div className="flex items-end justify-between mt-2">
-                                <div>
-                                  <div className="font-serif italic text-lg text-slate-900 font-bold">
-                                    {viewVolunteer.fullName.split(' ')[0]}
-                                  </div>
-                                  <div className="text-[7.5px] font-extrabold text-slate-400 uppercase border-t border-slate-300 pt-0.5 w-20">
-                                    MEMBER SIGNATURE
-                                  </div>
-                                </div>
-                                <span className="text-[8px] font-black uppercase text-emerald-600 border border-emerald-500 px-1.5 py-0.5 rounded -rotate-6 bg-emerald-50">
-                                  ✓ APPROVED
-                                </span>
+                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
+                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
+                                <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
+                              </div>
+                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
+                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
+                                <span className="font-bold text-[10.5px] text-slate-800">{startDateStr}</span>
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
+                                <span className="font-bold text-[10.5px] text-slate-800">{endDateStr}</span>
                               </div>
                             </div>
 
-                            <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
-                              <img src={qrUrl} alt="QR" className="w-12 h-12" />
-                              <div className="bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 text-white text-[8px] font-black px-2 py-1 rounded-md shadow-xs tracking-wider">
+                            {/* Hologram Official Badge */}
+                            <div className="mt-2">
+                              <span className="bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 text-white text-[8.5px] font-black px-2.5 py-1 rounded-md shadow-xs tracking-wider inline-block">
                                 ★ OFFICIAL MEMBER
-                              </div>
+                              </span>
                             </div>
                           </div>
 
