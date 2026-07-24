@@ -1,21 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma, resetPrismaClient } from "@/lib/prisma";
-import jwt from "jsonwebtoken";
-
-const JWT_SECRET = process.env.JWT_SECRET || "flarelap-secret-key-2026";
-
-async function verifyAdmin(request: Request) {
-  try {
-    const authHeader = request.headers.get("Authorization");
-    if (!authHeader || !authHeader.startsWith("Bearer ")) return null;
-    const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, JWT_SECRET) as any;
-    if (decoded.role !== "ADMIN") return null;
-    return decoded;
-  } catch {
-    return null;
-  }
-}
+import { verifyAdmin } from "@/lib/auth";
 
 function getDesignationModel() {
   try {
@@ -63,7 +48,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const admin = await verifyAdmin(request);
+  const admin = verifyAdmin(request);
   if (!admin) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
@@ -84,28 +69,32 @@ export async function POST(request: Request) {
 
     const designationModel = getDesignationModel();
     if (designationModel) {
-      const existing = await designationModel.findUnique({
-        where: { title: cleanTitle },
-      });
+      try {
+        const existing = await designationModel.findUnique({
+          where: { title: cleanTitle },
+        });
 
-      if (existing) {
-        return NextResponse.json(
-          { message: "Designation title already exists." },
-          { status: 400 }
-        );
+        if (existing) {
+          return NextResponse.json(
+            { message: "Designation title already exists." },
+            { status: 400 }
+          );
+        }
+
+        const newDesignation = await designationModel.create({
+          data: {
+            title: cleanTitle,
+            status: designationStatus,
+          },
+        });
+
+        return NextResponse.json({
+          designation: newDesignation,
+          message: "Designation added successfully!",
+        });
+      } catch (ormErr: any) {
+        console.warn("ORM designation create failed, trying raw SQL fallback...", ormErr?.message);
       }
-
-      const newDesignation = await designationModel.create({
-        data: {
-          title: cleanTitle,
-          status: designationStatus,
-        },
-      });
-
-      return NextResponse.json({
-        designation: newDesignation,
-        message: "Designation added successfully!",
-      });
     }
 
     // Raw SQL Fallback
