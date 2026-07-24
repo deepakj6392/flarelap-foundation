@@ -397,8 +397,8 @@ export default function AdminVolunteersPage() {
         <div class="cards-wrapper">
           <!-- FRONT SIDE -->
           <div class="id-card">
-            <div class="card-header-gradient" style="padding: 0; height: 95px;">
-              <div class="clip-hole" style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
+            <div class="card-header-gradient" style="padding: 0; height: 102px;">
+              <div class="clip-hole" style="position: absolute; top: 5px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
               <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div class="accent-strip"></div>
@@ -445,8 +445,8 @@ export default function AdminVolunteersPage() {
 
           <!-- BACK SIDE -->
           <div class="id-card">
-            <div class="card-header-gradient" style="padding: 0; height: 95px;">
-              <div class="clip-hole" style="position: absolute; top: 6px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
+            <div class="card-header-gradient" style="padding: 0; height: 102px;">
+              <div class="clip-hole" style="position: absolute; top: 5px; left: 50%; transform: translateX(-50%); z-index: 10; margin: 0;"></div>
               <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
             </div>
             <div class="accent-strip"></div>
@@ -2177,7 +2177,7 @@ export default function AdminVolunteersPage() {
                         </span>
                         <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
                           {/* Header Banner */}
-                          <div className="relative h-[95px] w-full overflow-hidden bg-[#0038a8]">
+                          <div className="relative h-[102px] w-full overflow-hidden bg-[#0038a8]">
                             {/* Lanyard Hole Cutout */}
                             <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full z-10 opacity-90"></div>
                             <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" className="w-full h-full object-cover" />
@@ -2258,7 +2258,7 @@ export default function AdminVolunteersPage() {
                         </span>
                         <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
                           {/* Back Header */}
-                          <div className="relative h-[95px] w-full overflow-hidden bg-[#0038a8]">
+                          <div className="relative h-[102px] w-full overflow-hidden bg-[#0038a8]">
                             {/* Lanyard Hole Cutout */}
                             <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full z-10 opacity-90"></div>
                             <img src="/id-banner.jpg" alt="Flarelap Global Foundation Banner" className="w-full h-full object-cover" />
