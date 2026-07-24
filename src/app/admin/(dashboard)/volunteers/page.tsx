@@ -79,7 +79,7 @@ export default function AdminVolunteersPage() {
 
   // View Details / Document Modal State
   const [viewVolunteer, setViewVolunteer] = useState<Volunteer | null>(null);
-  const [activeViewTab, setActiveViewTab] = useState<"details" | "certificate">("details");
+  const [activeViewTab, setActiveViewTab] = useState<"details" | "certificate" | "idcard">("details");
   const [viewDocImage, setViewDocImage] = useState<{ title: string; url: string } | null>(null);
 
   // Member Since & Expiry Date State
@@ -97,6 +97,391 @@ export default function AdminVolunteersPage() {
       return defaultDate.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     }
     return d.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+  };
+
+  // Print / Download ID Card Helper
+  const handlePrintIdCard = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
+    const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+    const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
+
+    const mSince = customMemberSince !== undefined && customMemberSince !== "" ? customMemberSince : v.memberSince;
+    const mExp = customExpiryDate !== undefined && customExpiryDate !== "" ? customExpiryDate : v.expiryDate;
+
+    const defaultStart = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate());
+    const defaultEnd = regDate;
+
+    const startDateStr = formatDateSafe(mSince, defaultStart);
+    const endDateStr = formatDateSafe(mExp, defaultEnd);
+
+    const photoUrl = v.profilePhoto || "/favicon.ico";
+    const qrData = encodeURIComponent(`https://flarelapfoundation.org/verify-volunteer?id=${displayMemberId}`);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${qrData}`;
+
+    const printWindow = window.open("", "_blank");
+    if (!printWindow) return;
+
+    printWindow.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Volunteer ID Card - ${v.fullName}</title>
+        <style>
+          @page { size: A4 portrait; margin: 15mm; }
+          body {
+            margin: 0;
+            padding: 20px;
+            background: #f1f5f9;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            box-sizing: border-box;
+          }
+          .cards-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+          }
+          .id-card {
+            width: 320px;
+            height: 510px;
+            background: #ffffff;
+            border-radius: 18px;
+            border: 2px solid #cbd5e1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+          }
+          .card-header-gradient {
+            background: linear-gradient(135deg, #0038a8 0%, #5b127d 50%, #e60067 100%);
+            padding: 16px 14px;
+            color: #ffffff;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+          }
+          .clip-hole {
+            width: 36px;
+            height: 12px;
+            background: #ffffff;
+            border: 2px solid #94a3b8;
+            border-radius: 10px;
+            margin: 0 auto 10px auto;
+            opacity: 0.95;
+          }
+          .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .star-logo-icon {
+            width: 44px;
+            height: 44px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+          }
+          .brand-title {
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            line-height: 1.15;
+            color: #ffffff;
+          }
+          .brand-tagline {
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            color: #f1f5f9;
+            margin-top: 2px;
+          }
+          .accent-strip {
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8 0%, #34d399 50%, #fbbf24 100%);
+          }
+          .card-body-front {
+            padding: 14px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: radial-gradient(circle at 90% 10%, rgba(224,231,255,0.4) 0%, rgba(255,255,255,1) 70%);
+            position: relative;
+          }
+          .photo-info-row {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+          }
+          .photo-frame {
+            width: 98px;
+            height: 120px;
+            border-radius: 10px;
+            border: 2.5px solid #1e293b;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            background: #e2e8f0;
+          }
+          .info-column {
+            flex: 1;
+            font-size: 11px;
+          }
+          .info-label {
+            font-size: 8.5px;
+            font-weight: 800;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 3px;
+          }
+          .info-val {
+            font-size: 10.5px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+          }
+          .info-val-highlight {
+            color: #2563eb;
+            font-family: monospace;
+            font-size: 12px;
+          }
+          .volunteer-name {
+            font-size: 15px;
+            font-weight: 900;
+            color: #0f172a;
+            text-transform: uppercase;
+            margin-top: 8px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 4px;
+            letter-spacing: 0.5px;
+          }
+          .sig-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 8px;
+          }
+          .sig-text {
+            font-family: 'Brush Script MT', 'Great Vibes', cursive, 'Times New Roman';
+            font-size: 20px;
+            color: #0f172a;
+          }
+          .sig-label {
+            font-size: 8px;
+            font-weight: 800;
+            color: #64748b;
+            text-transform: uppercase;
+            border-top: 1px solid #cbd5e1;
+            padding-top: 2px;
+            width: 90px;
+          }
+          .stamp-badge {
+            border: 2px solid #16a34a;
+            color: #16a34a;
+            font-size: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            transform: rotate(-6deg);
+            display: inline-block;
+            background: #f0fdf4;
+          }
+          .qr-holo-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+          }
+          .qr-card-img {
+            width: 50px;
+            height: 50px;
+          }
+          .holo-badge {
+            background: linear-gradient(135deg, #0284c7, #818cf8, #f43f5e);
+            color: #ffffff;
+            font-size: 8.5px;
+            font-weight: 900;
+            padding: 4px 8px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+          }
+          .card-footer-front {
+            background: #0f172a;
+            color: #ffffff;
+            text-align: center;
+            padding: 6px 10px;
+            font-size: 7.5px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+          }
+          .holo-side-strip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 14px;
+            background: repeating-linear-gradient(45deg, #e2e8f0, #e2e8f0 4px, #cbd5e1 4px, #cbd5e1 8px);
+            border-right: 1px solid #cbd5e1;
+          }
+          .back-content {
+            margin-left: 10px;
+          }
+          .rules-title {
+            font-size: 9.5px;
+            font-weight: 900;
+            color: #0f172a;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2px;
+          }
+          .rules-list {
+            font-size: 8px;
+            color: #334155;
+            line-height: 1.45;
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+          }
+          .rules-list li {
+            margin-bottom: 4px;
+          }
+          .validity-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 5px;
+            text-align: center;
+            font-size: 8.5px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 8px;
+          }
+          @media print {
+            body { padding: 0; background: white; }
+            .id-card { box-shadow: none; border-width: 1.5px; page-break-inside: avoid; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="cards-wrapper">
+          <!-- FRONT SIDE -->
+          <div class="id-card">
+            <div class="card-header-gradient">
+              <div class="clip-hole"></div>
+              <div class="header-brand">
+                <svg class="star-logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50 5 L63 35 L95 38 L70 60 L78 92 L50 74 L22 92 L30 60 L5 38 L37 35 Z" fill="#ffffff"/>
+                  <path d="M10 50 Q 50 15 90 50 Q 50 85 10 50 Z" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.6"/>
+                </svg>
+                <div>
+                  <div class="brand-title">FLARELAP GLOBAL FOUNDATION</div>
+                  <div class="brand-tagline">EMPOWER PEOPLE & CHANGE LIVES</div>
+                </div>
+              </div>
+            </div>
+            <div class="accent-strip"></div>
+
+            <div class="card-body-front">
+              <div class="photo-info-row">
+                <img src="${photoUrl}" alt="${v.fullName}" class="photo-frame" onerror="this.src='/favicon.ico'" />
+                <div class="info-column">
+                  <div class="info-label">MEMBER ID</div>
+                  <div class="info-val info-val-highlight">${displayMemberId}</div>
+
+                  <div class="info-label">DESIGNATION</div>
+                  <div class="info-val">Volunteer Member</div>
+
+                  <div class="info-label">MEMBER SINCE</div>
+                  <div class="info-val">${startDateStr}</div>
+
+                  <div class="info-label">EXPIRY DATE</div>
+                  <div class="info-val">${endDateStr}</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="volunteer-name">${v.fullName}</div>
+                <div class="sig-row">
+                  <div>
+                    <div class="sig-text">${v.fullName.split(' ')[0]}</div>
+                    <div class="sig-label">MEMBER SIGNATURE</div>
+                  </div>
+                  <div class="stamp-badge">✓ APPROVED</div>
+                </div>
+              </div>
+
+              <div class="qr-holo-row">
+                <img src="${qrUrl}" alt="QR" class="qr-card-img" />
+                <div class="holo-badge">★ OFFICIAL MEMBER</div>
+              </div>
+            </div>
+
+            <div class="card-footer-front">
+              VALIDATED MEMBER ID CARD • WWW.FLARELAPFOUNDATION.ORG
+            </div>
+          </div>
+
+          <!-- BACK SIDE -->
+          <div class="id-card">
+            <div class="card-header-gradient">
+              <div class="clip-hole"></div>
+              <div class="brand-title" style="text-align: center; font-size: 13px;">FLARELAP GLOBAL FOUNDATION</div>
+              <div class="brand-tagline" style="text-align: center;">CONNECTING COMMUNITIES & INNOVATION</div>
+            </div>
+            <div class="accent-strip"></div>
+
+            <div class="card-body-front">
+              <div class="holo-side-strip"></div>
+              <div class="back-content">
+                <div class="rules-title">CARDHOLDER RULES & CONTACT</div>
+                <ul class="rules-list">
+                  <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
+                  <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
+                  <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
+                  <li>4. FOR EMERGENCIES, CONTACT SECURITY: +91 9729817600.</li>
+                  <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
+                </ul>
+
+                <div class="validity-box">
+                  ISSUE DATE: ${startDateStr} &nbsp;|&nbsp; VALID UNTIL: ${endDateStr}
+                </div>
+
+                <div class="sig-row" style="margin-top: 14px;">
+                  <div>
+                    <div class="sig-text">Bharat Bhushan</div>
+                    <div class="sig-label">AUTHORIZED SIGNATORY</div>
+                  </div>
+                  <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 44px; height: 44px;" />
+                </div>
+              </div>
+
+              <div class="card-footer-front" style="margin-top: auto; margin-left: -14px; margin-right: -14px; margin-bottom: -14px;">
+                FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          window.onload = function() {
+            setTimeout(function() {
+              window.print();
+            }, 400);
+          }
+        </script>
+      </body>
+      </html>
+    `);
+    printWindow.document.close();
   };
 
   // Print / Download Certificate Helper
@@ -1435,6 +1820,17 @@ export default function AdminVolunteersPage() {
                   <Award className="h-4 w-4 text-amber-500" />
                   Certificate of Appreciation 🎖️
                 </button>
+                <button
+                  onClick={() => setActiveViewTab("idcard")}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
+                    activeViewTab === "idcard"
+                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                  }`}
+                >
+                  <CreditCard className="h-4 w-4 text-indigo-500" />
+                  Official ID Card 🪪
+                </button>
               </div>
 
               {/* Modal Body Content */}
@@ -1592,7 +1988,7 @@ export default function AdminVolunteersPage() {
                       </div>
                     </div>
                   </>
-                ) : (
+                ) : activeViewTab === "certificate" ? (
                   /* CERTIFICATE OF APPRECIATION TAB */
                   <div className="space-y-4">
                     {/* Action Bar */}
@@ -1683,6 +2079,186 @@ export default function AdminVolunteersPage() {
                               <p className="text-[11px] font-sans font-bold text-slate-800 uppercase tracking-wider mt-0.5">
                                 Managing Director
                               </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* OFFICIAL ID CARD TAB */
+                  <div className="space-y-6">
+                    {/* Action Bar */}
+                    <div className="flex flex-wrap items-center justify-between bg-slate-50 dark:bg-slate-950 p-4 rounded-xl border border-slate-200/80 dark:border-slate-800 gap-3">
+                      <div>
+                        <h4 className="text-xs font-black uppercase text-slate-900 dark:text-white flex items-center gap-2">
+                          <CreditCard className="h-4 w-4 text-indigo-500" />
+                          Official Volunteer ID Badge (Front & Back)
+                        </h4>
+                        <p className="text-[11px] text-slate-500 font-medium">
+                          Vector-styled vertical lanyard card badge with official gradient header, QR verification code, & security rules.
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => handlePrintIdCard(viewVolunteer, memberSince, expiryDate)}
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider shadow-md shadow-purple-600/20 transition transform active:scale-95 cursor-pointer border-none"
+                      >
+                        <Printer className="h-4 w-4" />
+                        Print / Save ID Card
+                      </button>
+                    </div>
+
+                    {/* Live Cards Container */}
+                    <div className="flex flex-wrap items-center justify-center gap-8 py-4">
+                      {/* FRONT SIDE PREVIEW */}
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+                          Front Side
+                        </span>
+                        <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
+                          {/* Header Banner */}
+                          <div className="bg-gradient-to-r from-[#0038a8] via-[#5b127d] to-[#e60067] p-3 text-white relative shadow-md">
+                            {/* Lanyard Hole Cutout */}
+                            <div className="w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full mx-auto mb-2 opacity-90"></div>
+                            <div className="flex items-center gap-2.5">
+                              {/* White Star Logo SVG */}
+                              <svg className="w-10 h-10 shrink-0 drop-shadow-md" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50 5 L63 35 L95 38 L70 60 L78 92 L50 74 L22 92 L30 60 L5 38 L37 35 Z" fill="#ffffff"/>
+                                <path d="M10 50 Q 50 15 90 50 Q 50 85 10 50 Z" stroke="#ffffff" strokeWidth="4" fill="none" opacity="0.6"/>
+                              </svg>
+                              <div>
+                                <div className="text-[13px] font-black tracking-wide uppercase leading-tight text-white">
+                                  FLARELAP GLOBAL FOUNDATION
+                                </div>
+                                <div className="text-[7.5px] font-bold tracking-wider text-slate-100 opacity-90 mt-0.5">
+                                  EMPOWER PEOPLE & CHANGE LIVES
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
+
+                          {/* Card Body */}
+                          <div className="p-3.5 flex-1 flex flex-col justify-between bg-gradient-to-b from-blue-50/30 via-white to-slate-50">
+                            <div className="flex gap-3 items-start">
+                              {/* Photo */}
+                              <div className="w-[96px] h-[118px] rounded-lg border-2 border-slate-900 overflow-hidden bg-slate-100 shrink-0 shadow-md">
+                                {viewVolunteer.profilePhoto ? (
+                                  <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="w-full h-full object-cover" />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-500">
+                                    <User className="h-10 w-10" />
+                                  </div>
+                                )}
+                              </div>
+                              {/* Details */}
+                              <div className="flex-1 space-y-1 text-left">
+                                <div>
+                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">MEMBER ID</span>
+                                  <span className="font-mono font-black text-xs text-blue-600">{displayMemberId}</span>
+                                </div>
+                                <div>
+                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">DESIGNATION</span>
+                                  <span className="font-bold text-[10px] text-slate-800">Volunteer Member</span>
+                                </div>
+                                <div>
+                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">MEMBER SINCE</span>
+                                  <span className="font-bold text-[10px] text-slate-800">{startDateStr}</span>
+                                </div>
+                                <div>
+                                  <span className="block text-[8px] font-black text-slate-400 uppercase tracking-wider">EXPIRY DATE</span>
+                                  <span className="font-bold text-[10px] text-slate-800">{endDateStr}</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="text-left mt-2">
+                              <div className="text-sm font-black text-slate-900 uppercase tracking-wide border-b border-slate-200 pb-1">
+                                {viewVolunteer.fullName}
+                              </div>
+                              <div className="flex items-end justify-between mt-2">
+                                <div>
+                                  <div className="font-serif italic text-lg text-slate-900 font-bold">
+                                    {viewVolunteer.fullName.split(' ')[0]}
+                                  </div>
+                                  <div className="text-[7.5px] font-extrabold text-slate-400 uppercase border-t border-slate-300 pt-0.5 w-20">
+                                    MEMBER SIGNATURE
+                                  </div>
+                                </div>
+                                <span className="text-[8px] font-black uppercase text-emerald-600 border border-emerald-500 px-1.5 py-0.5 rounded -rotate-6 bg-emerald-50">
+                                  ✓ APPROVED
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+                              <img src={qrUrl} alt="QR" className="w-12 h-12" />
+                              <div className="bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 text-white text-[8px] font-black px-2 py-1 rounded-md shadow-xs tracking-wider">
+                                ★ OFFICIAL MEMBER
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider">
+                            VALIDATED MEMBER ID CARD • WWW.FLARELAPFOUNDATION.ORG
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BACK SIDE PREVIEW */}
+                      <div className="flex flex-col items-center gap-2">
+                        <span className="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
+                          Back Side
+                        </span>
+                        <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
+                          {/* Back Header */}
+                          <div className="bg-gradient-to-r from-[#0038a8] via-[#5b127d] to-[#e60067] p-3 text-white relative shadow-md text-center">
+                            <div className="w-8 h-2.5 bg-white/90 border border-slate-400 rounded-full mx-auto mb-2 opacity-90"></div>
+                            <div className="text-xs font-black tracking-wider uppercase text-white">
+                              FLARELAP GLOBAL FOUNDATION
+                            </div>
+                            <div className="text-[7.5px] font-bold tracking-widest text-slate-100 opacity-90 mt-0.5">
+                              CONNECTING COMMUNITIES & INNOVATION
+                            </div>
+                          </div>
+                          <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
+
+                          {/* Back Content */}
+                          <div className="p-3.5 flex-1 flex flex-col justify-between relative bg-white">
+                            {/* Hologram strip decoration */}
+                            <div className="absolute top-0 left-0 bottom-0 w-3 bg-repeating-linear-gradient(45deg,#cbd5e1,#cbd5e1 4px,#e2e8f0 4px,#e2e8f0 8px) border-r border-slate-200"></div>
+
+                            <div className="pl-3 text-left">
+                              <div className="text-[9.5px] font-black text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2">
+                                CARDHOLDER RULES & CONTACT
+                              </div>
+                              <ul className="text-[8px] text-slate-700 space-y-1.5 font-medium leading-tight">
+                                <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
+                                <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
+                                <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
+                                <li>4. FOR EMERGENCIES, CONTACT SECURITY: +91 9729817600.</li>
+                                <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
+                              </ul>
+
+                              <div className="bg-slate-50 border border-slate-200 rounded-lg p-2 text-center mt-4">
+                                <span className="text-[8.5px] font-black text-slate-900">
+                                  ISSUE DATE: {startDateStr} &nbsp;|&nbsp; VALID UNTIL: {endDateStr}
+                                </span>
+                              </div>
+
+                              <div className="flex items-center justify-between mt-4 pt-2">
+                                <div>
+                                  <div className="font-serif italic text-base font-bold text-slate-900">Bharat Bhushan</div>
+                                  <div className="text-[7.5px] font-extrabold text-slate-400 uppercase border-t border-slate-300 pt-0.5 w-24">
+                                    AUTHORIZED SIGNATORY
+                                  </div>
+                                </div>
+                                <img src={qrUrl} alt="QR" className="w-10 h-10" />
+                              </div>
+                            </div>
+
+                            <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider -mx-3.5 -mb-3.5">
+                              FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
                             </div>
                           </div>
                         </div>
