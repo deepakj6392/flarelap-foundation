@@ -141,20 +141,22 @@ export default function StudentRegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#f8fafc_0%,#eefdf4_45%,#fffbeb_100%)] flex flex-col items-center justify-center p-5 font-sans">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#f8fafc_0%,#f5f3ff_45%,#fff1f6_100%)] flex flex-col items-center justify-center p-5 font-sans">
 
       {/* Brand logo header */}
-      <Link href="/" className="flex items-center gap-2 mb-6">
-        <Image
-          src="/logo.png"
-          alt="Flarelap logo"
-          width={44}
-          height={44}
-          className="h-10 w-10 rounded-full object-contain"
-        />
+      <Link href="/" className="flex items-center gap-3 mb-6 group">
+        <div className="p-0.5 rounded-full bg-gradient-to-tr from-[#5d00e5] via-[#d60086] to-[#ff6427] shadow-sm">
+          <Image
+            src="/logo.png"
+            alt="Flarelap logo"
+            width={44}
+            height={44}
+            className="h-10 w-10 rounded-full object-contain bg-white p-0.5"
+          />
+        </div>
         <div>
           <h1 className="text-base font-black tracking-tight text-slate-900 leading-none">Flarelap</h1>
-          <p className="text-[9px] font-bold text-emerald-700 uppercase tracking-widest mt-0.5">Learning Portal</p>
+          <p className="text-[9px] font-bold text-brand-gradient uppercase tracking-widest mt-0.5">Learning Portal</p>
         </div>
       </Link>
 

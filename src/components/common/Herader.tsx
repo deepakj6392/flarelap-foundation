@@ -47,17 +47,19 @@ export default function Herader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur dark:bg-slate-950/90 dark:border-slate-800/80">
       <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex min-w-0 items-center gap-3">
-          <img
-            src={logoUrl}
-            alt={`${siteConfig.name} logo`}
-            className="h-12 w-12 rounded-full object-contain"
-          />
+        <Link href="/" className="flex min-w-0 items-center gap-3 group">
+          <div className="relative p-0.5 rounded-full bg-gradient-to-tr from-[#5d00e5] via-[#d60086] to-[#ff6427] transition-transform duration-300 group-hover:scale-105 shadow-sm">
+            <img
+              src={logoUrl}
+              alt={`${siteConfig.name} logo`}
+              className="h-11 w-11 rounded-full object-contain bg-white p-0.5"
+            />
+          </div>
           <div className="min-w-0">
-            <p className="text-base font-bold leading-tight text-slate-950 dark:text-white sm:text-lg">
+            <p className="text-base font-extrabold leading-tight text-slate-950 dark:text-white sm:text-lg tracking-tight">
               {siteConfig.name}
             </p>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-400">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-gradient">
               Empower people & change lives
             </p>
           </div>

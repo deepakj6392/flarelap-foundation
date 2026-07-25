@@ -106,20 +106,22 @@ export default function StudentLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#f8fafc_0%,#eefdf4_45%,#fffbeb_100%)] flex flex-col items-center justify-center p-5 font-sans">
+    <div className="min-h-screen bg-[linear-gradient(135deg,#f8fafc_0%,#f5f3ff_45%,#fff1f6_100%)] flex flex-col items-center justify-center p-5 font-sans">
       
       {/* Brand logo header */}
-      <Link href="/" className="flex items-center gap-2 mb-6">
-        <Image
-          src="/logo.png"
-          alt="Flarelap logo"
-          width={44}
-          height={44}
-          className="h-10 w-10 rounded-full object-contain"
-        />
+      <Link href="/" className="flex items-center gap-3 mb-6 group">
+        <div className="p-0.5 rounded-full bg-gradient-to-tr from-[#5d00e5] via-[#d60086] to-[#ff6427] shadow-sm">
+          <Image
+            src="/logo.png"
+            alt="Flarelap logo"
+            width={44}
+            height={44}
+            className="h-10 w-10 rounded-full object-contain bg-white p-0.5"
+          />
+        </div>
         <div>
           <h1 className="text-base font-black tracking-tight text-slate-900 leading-none">Flarelap</h1>
-          <p className="text-[9px] font-bold text-emerald-700 uppercase tracking-widest mt-0.5">Learning Portal</p>
+          <p className="text-[9px] font-bold text-brand-gradient uppercase tracking-widest mt-0.5">Learning Portal</p>
         </div>
       </Link>
 
@@ -138,8 +140,8 @@ export default function StudentLoginPage() {
         )}
 
         {success && (
-          <div className="flex items-center gap-2.5 rounded-xl border border-emerald-200 bg-emerald-50 p-3.5 text-xs text-emerald-805 font-bold">
-            <ShieldCheck className="h-4.5 w-4.5 shrink-0 text-emerald-600" />
+          <div className="flex items-center gap-2.5 rounded-xl border border-violet-200 bg-violet-50 p-3.5 text-xs text-violet-900 font-bold">
+            <ShieldCheck className="h-4.5 w-4.5 shrink-0 text-[#5d00e5]" />
             <p>{success}</p>
           </div>
         )}
@@ -162,7 +164,7 @@ export default function StudentLoginPage() {
                   value={loginId}
                   onChange={(e) => setLoginId(e.target.value)}
                   placeholder="Enter your email address"
-                  className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none text-xs transition font-semibold"
+                  className="block w-full rounded-xl border border-slate-200 pl-10 pr-4 py-2.5 bg-white text-slate-900 focus:border-[#5d00e5] focus:ring-1 focus:ring-[#5d00e5] outline-none text-xs transition font-semibold"
                   disabled={loading || otpSent}
                 />
               </div>
@@ -171,7 +173,7 @@ export default function StudentLoginPage() {
                   type="button"
                   onClick={handleSendOtp}
                   disabled={loading}
-                  className="px-4 bg-emerald-700 hover:bg-emerald-600 text-white rounded-xl text-xs font-bold transition active:scale-[0.98] border-none shrink-0 cursor-pointer flex items-center justify-center gap-1.5"
+                  className="px-4 bg-brand-gradient hover:opacity-95 text-white rounded-xl text-xs font-bold transition active:scale-[0.98] border-none shrink-0 cursor-pointer flex items-center justify-center gap-1.5 shadow-sm"
                 >
                   {loading ? (
                     <>

@@ -82,7 +82,7 @@ export default function ContactPage() {
 					<div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:px-8">
 						<div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
 							<div>
-								<p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Get in touch</p>
+								<p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-gradient">Get in touch</p>
 								<h1 className="mt-4 text-4xl font-black leading-tight text-slate-950 sm:text-5xl">Connect with us</h1>
 								<p className="mt-6 text-lg leading-8 text-slate-700">Whether you want to volunteer, partner, or learn more — send a note and we will reply.</p>
 
@@ -94,7 +94,7 @@ export default function ContactPage() {
 											onChange={(e) => setName(e.target.value)}
 											aria-label="Name"
 											placeholder="Full name"
-											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-[#5d00e5] focus:ring-1 focus:ring-[#5d00e5] outline-none"
 											disabled={status === "loading"}
 										/>
 										<input
@@ -104,7 +104,7 @@ export default function ContactPage() {
 											onChange={(e) => setEmail(e.target.value)}
 											aria-label="Email"
 											placeholder="Email address"
-											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-[#5d00e5] focus:ring-1 focus:ring-[#5d00e5] outline-none"
 											disabled={status === "loading"}
 										/>
 										<textarea
@@ -114,13 +114,13 @@ export default function ContactPage() {
 											aria-label="Message"
 											placeholder="How can we help?"
 											rows={5}
-											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none"
+											className="rounded-md border border-slate-200 px-4 py-3 bg-white text-slate-900 focus:border-[#5d00e5] focus:ring-1 focus:ring-[#5d00e5] outline-none"
 											disabled={status === "loading"}
 										/>
 										<button
 											type="submit"
 											disabled={status === "loading"}
-											className="mt-2 inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-800 transition disabled:opacity-50 gap-1.5"
+											className="mt-2 inline-flex items-center justify-center rounded-full bg-brand-gradient px-6 py-3 text-sm font-bold text-white shadow-md hover:opacity-95 transition disabled:opacity-50 gap-1.5 cursor-pointer"
 										>
 											{status === "loading" ? (
 												<>

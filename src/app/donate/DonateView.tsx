@@ -372,7 +372,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
             {/* Left Content */}
             <div className="space-y-6 text-sm text-slate-700 leading-relaxed font-medium">
               <p>
-                Education is the ultimate social equalizer. Yet, systemic barriers continue to exclude millions of vulnerable children from the classroom. At <strong className="text-emerald-700">Flarelap Foundation</strong>, we believe that quality education is a fundamental human right, not a privilege. Today, widespread economic disparities and institutional gaps force countless young minds out of school, trapping generations in a cycle of poverty. We refuse to accept this status quo. Through our strategic initiatives, we are dismantling these barriers to ensure that every child—regardless of socioeconomic background—gains access to transformative learning experiences.
+                Education is the ultimate social equalizer. Yet, systemic barriers continue to exclude millions of vulnerable children from the classroom. At <strong className="text-[#5d00e5]">Flarelap Foundation</strong>, we believe that quality education is a fundamental human right, not a privilege. Today, widespread economic disparities and institutional gaps force countless young minds out of school, trapping generations in a cycle of poverty. We refuse to accept this status quo. Through our strategic initiatives, we are dismantling these barriers to ensure that every child—regardless of socioeconomic background—gains access to transformative learning experiences.
               </p>
 
               <div className="space-y-2">
@@ -381,9 +381,9 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                   We implement a holistic development model designed to cultivate future-ready individuals. Our curriculum equips students to:
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><strong className="text-emerald-700">Navigate Complex Challenges:</strong> Developing critical thinking and analytical problem-solving skills.</li>
-                  <li><strong className="text-emerald-700">Drive Community Leadership:</strong> Instilling confidence to pioneer local civic and social solutions.</li>
-                  <li><strong className="text-emerald-700">Cultivate Long-Term Vision:</strong> Inspiring students to break generational cycles and pursue high-impact careers.</li>
+                  <li><strong className="text-[#5d00e5]">Navigate Complex Challenges:</strong> Developing critical thinking and analytical problem-solving skills.</li>
+                  <li><strong className="text-[#5d00e5]">Drive Community Leadership:</strong> Instilling confidence to pioneer local civic and social solutions.</li>
+                  <li><strong className="text-[#5d00e5]">Cultivate Long-Term Vision:</strong> Inspiring students to break generational cycles and pursue high-impact careers.</li>
                 </ul>
               </div>
 
@@ -393,13 +393,13 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                   When you partner with Flarelap Foundation, your contribution transitions from a simple donation to a high-yield social investment. Your capital directly funds:
                 </p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><strong className="text-emerald-700">Academic Infrastructure:</strong> Provision of essential learning materials, technology access, and foundational resources.</li>
-                  <li><strong className="text-emerald-700">Human Capital Development:</strong> Recruitment and continuous training of dedicated educators and mentors.</li>
-                  <li><strong className="text-emerald-700">Enriched Learning Environments:</strong> Creation of safe, inclusive, and highly motivating spaces optimized for student success.</li>
+                  <li><strong className="text-[#5d00e5]">Academic Infrastructure:</strong> Provision of essential learning materials, technology access, and foundational resources.</li>
+                  <li><strong className="text-[#5d00e5]">Human Capital Development:</strong> Recruitment and continuous training of dedicated educators and mentors.</li>
+                  <li><strong className="text-[#5d00e5]">Enriched Learning Environments:</strong> Creation of safe, inclusive, and highly motivating spaces optimized for student success.</li>
                 </ul>
               </div>
 
-              <p className="border-l-4 border-emerald-600 pl-4 text-slate-800 font-semibold italic">
+              <p className="border-l-4 border-[#5d00e5] pl-4 text-slate-800 font-semibold italic">
                 “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
               </p>
 
@@ -408,18 +408,18 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 <p>
                   Tomorrow’s innovators, executives, and community leaders are waiting for an opportunity to learn. Your strategic support is the missing link. Partner with Flarelap Foundation today to scale our impact and build an equitable future.
                 </p>
-                <p className="text-emerald-700 font-bold">
+                <p className="text-brand-gradient font-bold">
                   "Invest in a Child's Future" — Join Our Foundation Circle.
                 </p>
               </div>
             </div>
 
             {/* Right Form */}
-            <div className="bg-white border-2 rounded border-emerald-600 p-8 relative">
+            <div className="bg-white border-2 rounded-2xl border-[#5d00e5]/30 p-8 relative shadow-xl shadow-[#5d00e5]/10">
 
               {status === "success" ? (
                 <div className="text-center py-10 space-y-6">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-violet-50 text-[#5d00e5]">
                     <CheckCircle2 className="h-10 w-10" />
                   </div>
                   <div>
@@ -430,7 +430,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                   </div>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-4 px-6 py-2.5 rounded bg-emerald-600 text-white text-sm font-bold shadow-md hover:bg-emerald-700 transition"
+                    className="mt-4 px-6 py-2.5 rounded-full bg-brand-gradient text-white text-sm font-bold shadow-md hover:opacity-95 transition"
                   >
                     Make Another Donation
                   </button>
@@ -447,7 +447,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                     {/* Presets Grid */}
                     <div className="flex justify-center gap-6 mb-4">
                       {PRESET_AMOUNTS.map((val) => (
-                        <label key={val} className="flex items-center gap-2 cursor-pointer text-slate-500 font-medium text-sm hover:text-slate-900 transition">
+                        <label key={val} className="flex items-center gap-2 cursor-pointer text-slate-700 font-bold text-sm hover:text-[#5d00e5] transition">
                           <input
                             type="radio"
                             name="amount"
@@ -457,13 +457,13 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                               handlePresetClick(val);
                               setIsOtherAmount(false);
                             }}
-                            className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
+                            className="w-4 h-4 accent-[#5d00e5] border-slate-300"
                           />
-                          ₹ {val}
+                          ₹{val}
                         </label>
                       ))}
 
-                      <label key="more" className="flex items-center gap-2 cursor-pointer text-slate-500 font-medium text-sm hover:text-slate-900 transition">
+                      <label key="more" className="flex items-center gap-2 cursor-pointer text-slate-700 font-bold text-sm hover:text-[#5d00e5] transition">
                           <input
                             type="radio"
                             name="otherAmount"
@@ -474,14 +474,14 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                               setAmount("");
                               setIsOtherAmount(!isOtherAmount);
                             }}
-                            className="w-4 h-4 text-emerald-600 focus:ring-emerald-600 border-slate-300"
+                            className="w-4 h-4 accent-[#5d00e5] border-slate-300"
                           />
                            More
                         </label>
                     </div>
 
                     <div className="text-center mb-6">
-                      <p className="text-sm font-medium text-slate-700 uppercase">
+                      <p className="text-sm font-bold text-slate-700 uppercase tracking-wider">
                         YOUR DONATION WILL HELP FOR THE<br />EDUCATION & WELFARE.
                       </p>
                     </div>
@@ -493,7 +493,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={amount}
                         onChange={(e) => handleAmountChange(e.target.value)}
                         placeholder="Enter Donation Amount (₹2000+)"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         disabled={status === "loading"}
                         min="2001"
                     />)}
@@ -505,7 +505,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter Full Name"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={256}
                         minLength={3}
                       />
@@ -515,7 +515,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter Email ID"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={256}
                         minLength={3}
                       />
@@ -528,7 +528,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="Enter Mobile No"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={15}
                         minLength={10}
                       />
@@ -539,7 +539,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         onBlur={(e) => { if (!e.target.value) e.target.type = 'text'; }}
                         onChange={(e) => setDob(e.target.value)}
                         placeholder="Date of Birth"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={15}
                         minLength={8}
                       />
@@ -549,7 +549,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={pan}
                         onChange={(e) => setPan(e.target.value.toUpperCase())}
                         placeholder="Pan No"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition uppercase"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition uppercase"
                         maxLength={10}
                         pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$"
                         title="Please enter a valid PAN number"
@@ -559,14 +559,14 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={country}
                         onChange={(e) => setCountry(e.target.value)}
                         placeholder="Country"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={50}
                         minLength={3}
                       />
                       <select
                         value={state}
                         onChange={(e) => setStateName(e.target.value)}
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-650 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition appearance-none font-medium"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-650 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition appearance-none font-medium"
                       >
                         <option value="">Select State</option>
                         {INDIAN_STATES.map((s) => (
@@ -580,7 +580,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
                         placeholder="City"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                         maxLength={50}
                         minLength={3}
                       />
@@ -593,7 +593,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                       placeholder="Address"
                       maxLength={256}
                       minLength={50}
-                      className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                      className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                     />
 
                     <div className="grid grid-cols-1 gap-4">
@@ -603,24 +603,14 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                         value={pincode}
                         onChange={(e) => setPincode(e.target.value.replace(/\D/g, ""))}
                         placeholder="Pincode"
-                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-emerald-500 focus:bg-white outline-none text-sm transition"
+                        className="block w-full rounded-full border border-slate-400 px-6 py-2.5 bg-slate-100/50 text-slate-600 placeholder-slate-400 focus:border-[#5d00e5] focus:bg-white outline-none text-sm transition"
                       />
                     </div>
                     </>
                       )}
-                    {/* 
-                    <div className="text-[10px] text-slate-500 font-medium leading-relaxed px-2 mt-6 space-y-2">
-                      <p>
-                        *YOUR CONTRIBUTIONS ARE ELIGIBLE FOR UPTO 50% TAX BENEFIT UNDER SECTION 80G AS FLARELAP FOUNDATION IS REGISTERED AS NON PROFIT ORGANIZATION*<br />
-                        PAN: AACTS7973G | 80G NUMBER: AACTS7973GF20210
-                      </p>
-                      <p>
-                        Flarelap Foundation may get in touch with you through WhatsApp, email, SMS, or phone to share details about your donation, 80G receipt. <span className="text-emerald-600 cursor-pointer hover:underline">more..</span>
-                      </p>
-                    </div> */}
 
                     {statusMessage && (
-                      <div className={`p-3 rounded-md text-xs font-bold text-center ${status === 'error' ? 'bg-red-50 text-red-600' : 'bg-emerald-50 text-emerald-600'}`}>
+                      <div className={`p-3 rounded-md text-xs font-bold text-center ${status === 'error' ? 'bg-red-50 text-red-600' : 'bg-violet-50 text-[#5d00e5]'}`}>
                         {statusMessage}
                       </div>
                     )}
@@ -629,7 +619,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                       <button
                         type="submit"
                         disabled={status === "loading"}
-                        className="px-8 py-2.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-base font-bold shadow-sm transition disabled:opacity-50 flex items-center justify-center gap-1.5"
+                        className="w-full px-8 py-3 rounded-full bg-brand-gradient hover:opacity-95 text-white text-base font-bold shadow-md transition disabled:opacity-50 flex items-center justify-center gap-1.5 cursor-pointer"
                       >
                         {status === "loading" ? (
                           <>
@@ -637,7 +627,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                             Processing...
                           </>
                         ) : (
-                          "Pay"
+                          "Pay Now"
                         )}
                       </button>
                     </div>
@@ -649,7 +639,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
         </div>
 
         {/* Section 2: What will your donation support */}
-        <div className="bg-emerald-600 py-12 text-center text-white">
+        <div className="bg-brand-gradient py-12 text-center text-white shadow-lg">
           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-wide">WHAT WILL YOUR DONATION SUPPORT?</h2>
         </div>
 
@@ -667,7 +657,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 { icon: GraduationCap, title: "Merit-based scholarships to bright children flagged by Mission Education" }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-4 hover:shadow-md transition">
-                  <div className="h-16 w-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-800">
+                  <div className="h-16 w-16 bg-violet-50 rounded-full flex items-center justify-center text-[#5d00e5]">
                     <item.icon className="h-8 w-8" />
                   </div>
                   <p className="text-xs font-bold text-slate-700 px-2">{item.title}</p>
@@ -679,37 +669,35 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
         {/* Section 3: Impact Map */}
         <div className="max-w-5xl mx-auto px-5 py-20 sm:px-6 lg:px-8">
-          <div className="bg-slate-200 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+          <div className="bg-slate-100 rounded-2xl border border-slate-200 overflow-hidden flex flex-col md:flex-row relative shadow-md">
             {/* Stats Left */}
             <div className="md:w-1/2 p-10 flex flex-col justify-center space-y-8 z-10">
               <div>
-                <p className="text-4xl font-black text-emerald-600">1,85,000</p>
+                <p className="text-4xl font-black text-brand-gradient">1,85,000</p>
                 <p className="text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">Children Educated Last Year</p>
               </div>
               <div>
-                <p className="text-4xl font-black text-emerald-600">977</p>
+                <p className="text-4xl font-black text-brand-gradient">977</p>
                 <p className="text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">Mission Education Centres</p>
               </div>
               <div>
-                <p className="text-4xl font-black text-emerald-600">27</p>
+                <p className="text-4xl font-black text-brand-gradient">27</p>
                 <p className="text-sm font-bold text-slate-700 uppercase tracking-wider mt-1">States Across India</p>
               </div>
             </div>
 
-            {/* Map Right (Using a CSS shape or simple SVG outline since we don't have the exact image) */}
-            <div className="md:w-1/2 min-h-[300px] relative bg-slate-200 flex items-center justify-center p-8">
-              {/* Simple illustrative dot map representation */}
+            {/* Map Right */}
+            <div className="md:w-1/2 min-h-[300px] relative bg-slate-100 flex items-center justify-center p-8">
               <div className="w-full max-w-[300px] h-[400px] relative">
-                {/* Fallback to text if we can't draw the map nicely */}
-                <div className="absolute inset-0 border-[3px] border-dashed border-slate-300 rounded-3xl flex items-center justify-center text-slate-400 rotate-3">
-                  <span className="font-black text-2xl uppercase tracking-widest text-center px-4">Pan-India<br />Presence</span>
+                <div className="absolute inset-0 border-[3px] border-dashed border-[#5d00e5]/30 rounded-3xl flex items-center justify-center text-slate-400 rotate-3 bg-white/50">
+                  <span className="font-black text-2xl uppercase tracking-widest text-center px-4 text-brand-gradient">Pan-India<br />Presence</span>
                 </div>
-                {/* Decorative dots to simulate map locations */}
-                <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-emerald-600 rounded-full animate-ping"></div>
-                <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-emerald-600 rounded-full animate-ping delay-100"></div>
-                <div className="absolute bottom-1/3 left-1/2 w-3 h-3 bg-emerald-600 rounded-full animate-ping delay-300"></div>
-                <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-emerald-600 rounded-full"></div>
-                <div className="absolute bottom-1/4 right-1/2 w-2 h-2 bg-emerald-600 rounded-full"></div>
+                {/* Decorative dots */}
+                <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-[#5d00e5] rounded-full animate-ping"></div>
+                <div className="absolute top-1/2 right-1/4 w-3 h-3 bg-[#d60086] rounded-full animate-ping delay-100"></div>
+                <div className="absolute bottom-1/3 left-1/2 w-3 h-3 bg-[#ff6427] rounded-full animate-ping delay-300"></div>
+                <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#5d00e5] rounded-full"></div>
+                <div className="absolute bottom-1/4 right-1/2 w-2 h-2 bg-[#d60086] rounded-full"></div>
               </div>
             </div>
           </div>
@@ -730,7 +718,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white group-hover:bg-red-700 transition">
+                <div className="w-16 h-12 bg-[#df103f] rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition">
                   <Play className="h-6 w-6 fill-white" />
                 </div>
               </div>
@@ -749,7 +737,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
                 unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white group-hover:bg-red-700 transition">
+                <div className="w-16 h-12 bg-[#df103f] rounded-lg flex items-center justify-center text-white group-hover:scale-110 transition">
                   <Play className="h-6 w-6 fill-white" />
                 </div>
               </div>
@@ -786,13 +774,13 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
 
           <div className="space-y-4">
             {FAQS.map((faq, idx) => (
-              <div key={idx} className="border border-slate-200 rounded-xl bg-white shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-300">
+              <div key={idx} className="border border-slate-200 rounded-xl bg-white shadow-sm hover:shadow-md hover:border-[#5d00e5]/30 transition-all duration-300">
                 <button
                   onClick={() => toggleFaq(idx)}
                   className="w-full flex items-center justify-between p-5 text-left text-sm md:text-base font-bold text-slate-800 bg-white hover:bg-slate-50/50 transition rounded-xl"
                 >
                   <span className="pr-4">{faq.question}</span>
-                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-emerald-100 text-emerald-700' : 'bg-slate-100 text-slate-500'}`}>
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openFaq === idx ? 'bg-violet-100 text-[#5d00e5]' : 'bg-slate-100 text-slate-500'}`}>
                     {openFaq === idx ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
                   </div>
                 </button>

@@ -177,20 +177,20 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {/* Logo Section */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-500/20 to-teal-400/10 p-0.5 border border-emerald-500/30">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-tr from-[#5d00e5]/20 via-[#d60086]/20 to-[#ff6427]/20 p-0.5 border border-[#5d00e5]/30">
                 <Image
                   src="/logo.png"
                   alt="Logo"
                   width={38}
                   height={38}
-                  className="h-8 w-8 rounded-full object-contain"
+                  className="h-8 w-8 rounded-full object-contain bg-white p-0.5"
                 />
               </div>
               <div>
                 <h2 className={`text-sm font-black tracking-tight leading-none ${textHeading}`}>
                   Admin Panel
                 </h2>
-                <p className="text-[9px] font-bold text-emerald-500 uppercase tracking-widest mt-1">
+                <p className="text-[9px] font-bold text-brand-gradient uppercase tracking-widest mt-1">
                   Manage your platform
                 </p>
               </div>
