@@ -562,9 +562,9 @@ export default function AdminVolunteersPage() {
                   </div>
                 </div>
 
-                <div class="sig-row" style="margin-top: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;">
+                <div class="sig-row" style="margin-top: 10px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-end;">
                   <div>
-                    <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 38px; width: auto; max-width: 130px; object-fit: contain; filter: contrast(1.2); display: block; margin-bottom: 2px;" onerror="this.onerror=null; this.src='/signature.png';" />
+                    <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 52px; width: auto; max-width: 160px; object-fit: contain; filter: contrast(1.2); display: block; margin-bottom: 2px;" onerror="this.onerror=null; this.src='/signature.png';" />
                     <div class="sig-label">AUTHORIZED SIGNATURE</div>
                   </div>
                   <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 66px; height: 66px;" />
@@ -746,7 +746,7 @@ export default function AdminVolunteersPage() {
               <div class="cert-footer">
                 <img src="${qrUrl}" alt="QR" class="qr-img" />
                 <div class="sig-box">
-                  <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 48px; width: auto; max-width: 160px; object-fit: contain; filter: contrast(1.2); display: block; margin: 0 auto 2px auto;" onerror="this.onerror=null; this.src='/signature.png';" />
+                  <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 68px; width: auto; max-width: 220px; object-fit: contain; filter: contrast(1.2); display: block; margin: 0 auto 2px auto;" onerror="this.onerror=null; this.src='/signature.png';" />
                   <div class="sig-title" style="font-size: 11px; font-weight: 800; color: #1e293b;">Bharat Bhushan</div>
                   <div class="sig-title" style="font-size: 9px; font-weight: 700; color: #64748b;">Managing Director</div>
                 </div>
@@ -2680,7 +2680,7 @@ export default function AdminVolunteersPage() {
                               <img
                                 src={siteSignatureUrl || "/signature.png"}
                                 alt="Authorized Signature"
-                                className="h-11 w-auto max-w-[150px] object-contain filter contrast-125 mb-1"
+                                className="h-16 w-auto max-w-[220px] object-contain filter contrast-125 mb-1"
                                 onError={(e: any) => { e.currentTarget.src = "/signature.png"; }}
                               />
                               <p className="text-[11px] font-sans font-black text-slate-900 uppercase tracking-wider">
@@ -2846,7 +2846,7 @@ export default function AdminVolunteersPage() {
                                     <img
                                       src={siteSignatureUrl || "/signature.png"}
                                       alt="Authorized Signature"
-                                      className="h-9 w-auto max-w-[130px] object-contain mb-1 filter contrast-125"
+                                      className="h-14 w-auto max-w-[170px] object-contain mb-1 filter contrast-125"
                                       onError={(e: any) => { e.currentTarget.src = "/signature.png"; }}
                                     />
                                     <div className="text-[8px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
