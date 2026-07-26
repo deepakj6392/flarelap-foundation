@@ -110,6 +110,13 @@ export default function AdminVolunteersPage() {
   const [viewDesignation, setViewDesignation] = useState("Volunteer");
   const [savingDates, setSavingDates] = useState(false);
 
+  // Volunteer Selection & Email Modal State
+  const [selectedVolunteerIds, setSelectedVolunteerIds] = useState<number[]>([]);
+  const [isMailModalOpen, setIsMailModalOpen] = useState(false);
+  const [mailSubject, setMailSubject] = useState("");
+  const [mailBody, setMailBody] = useState("");
+  const [sendingMail, setSendingMail] = useState(false);
+
   // Safe Date Formatter helper
   const formatDateSafe = (dateVal: string | null | undefined, defaultDate: Date): string => {
     if (!dateVal) {
@@ -950,6 +957,82 @@ export default function AdminVolunteersPage() {
     }
   };
 
+  const handleSendVolunteerEmail = async () => {
+    if (selectedVolunteerIds.length === 0) {
+      Swal.fire({
+        icon: "warning",
+        title: "No Recipients Selected",
+        text: "Please select at least one volunteer from the list before sending email."
+      });
+      return;
+    }
+
+    if (!mailSubject.trim()) {
+      Swal.fire({
+        icon: "warning",
+        title: "Subject Required",
+        text: "Please enter a subject line for your email."
+      });
+      return;
+    }
+
+    if (!mailBody.trim()) {
+      Swal.fire({
+        icon: "warning",
+        title: "Message Body Required",
+        text: "Please enter the email message content."
+      });
+      return;
+    }
+
+    const storedToken = localStorage.getItem("admin_token");
+    if (!storedToken) return;
+
+    setSendingMail(true);
+    try {
+      const res = await fetch("/api/admin/volunteers/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}`
+        },
+        body: JSON.stringify({
+          volunteerIds: selectedVolunteerIds,
+          subject: mailSubject,
+          message: mailBody
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Failed to send email.");
+
+      const isDark = typeof document !== "undefined" && document.querySelector(".dark") !== null;
+      Swal.fire({
+        icon: "success",
+        title: "Email Sent Successfully! ✉️",
+        text: data.message || `Message dispatched to ${data.count} volunteer(s).`,
+        confirmButtonColor: "#10b981",
+        background: isDark ? "#0f172a" : "#ffffff",
+        color: isDark ? "#ffffff" : "#1e293b",
+        customClass: {
+          popup: "rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800"
+        }
+      });
+
+      setIsMailModalOpen(false);
+      setMailSubject("");
+      setMailBody("");
+    } catch (err: any) {
+      Swal.fire({
+        icon: "error",
+        title: "Email Sending Failed",
+        text: err.message || "Failed to dispatch email."
+      });
+    } finally {
+      setSendingMail(false);
+    }
+  };
+
   const handleSaveVolunteer = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !email.trim() || !phone.trim()) {
@@ -1135,10 +1218,24 @@ export default function AdminVolunteersPage() {
           </button>
           <button
             onClick={handleOpenAddModal}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-5 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md shadow-emerald-600/10 transition transform active:scale-95 cursor-pointer border-none"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md shadow-emerald-600/10 transition transform active:scale-95 cursor-pointer border-none"
           >
             <Plus className="h-4 w-4" />
             Add Volunteer
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setIsMailModalOpen(true)}
+            disabled={selectedVolunteerIds.length === 0}
+            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md transition transform active:scale-95 cursor-pointer border-none ${
+              selectedVolunteerIds.length > 0
+                ? "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-purple-600/20"
+                : "bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600 cursor-not-allowed shadow-none"
+            }`}
+          >
+            <Mail className="h-4 w-4" />
+            <span>Send Message {selectedVolunteerIds.length > 0 && `(${selectedVolunteerIds.length})`}</span>
           </button>
         </div>
       </div>
@@ -1233,12 +1330,24 @@ export default function AdminVolunteersPage() {
             <table className="w-full text-left text-xs text-slate-700 dark:text-slate-300">
               <thead className="bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 text-[11px] font-black uppercase text-slate-500 tracking-wider">
                 <tr>
+                  <th className="py-3.5 px-4 text-center w-10">
+                    <input
+                      type="checkbox"
+                      checked={filteredVolunteers.length > 0 && selectedVolunteerIds.length === filteredVolunteers.length}
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          setSelectedVolunteerIds(filteredVolunteers.map((v) => v.id));
+                        } else {
+                          setSelectedVolunteerIds([]);
+                        }
+                      }}
+                      className="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+                    />
+                  </th>
                   <th className="py-3.5 px-4">Member ID</th>
                   <th className="py-3.5 px-4">Volunteer</th>
                   <th className="py-3.5 px-4">Contact</th>
                   <th className="py-3.5 px-4">DOB / Age</th>
-                  <th className="py-3.5 px-4">Education</th>
-                  <th className="py-3.5 px-4">Address</th>
                   <th className="py-3.5 px-4">Aadhaar / UID</th>
                   <th className="py-3.5 px-4 text-center">Actions</th>
                 </tr>
@@ -1248,7 +1357,23 @@ export default function AdminVolunteersPage() {
                   const age = calculateAge(v.dob);
                   const displayMemberId = getMemberId(v);
                   return (
-                    <tr key={v.id} className="hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition">
+                    <tr key={v.id} className={`hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition ${selectedVolunteerIds.includes(v.id) ? "bg-purple-50/40 dark:bg-purple-950/20" : ""}`}>
+                      {/* Row Checkbox */}
+                      <td className="py-4 px-4 text-center whitespace-nowrap">
+                        <input
+                          type="checkbox"
+                          checked={selectedVolunteerIds.includes(v.id)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSelectedVolunteerIds((prev) => [...prev, v.id]);
+                            } else {
+                              setSelectedVolunteerIds((prev) => prev.filter((id) => id !== v.id));
+                            }
+                          }}
+                          className="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+                        />
+                      </td>
+
                       {/* Member ID Badge */}
                       <td className="py-4 px-4 whitespace-nowrap">
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/70 dark:border-indigo-800/60 text-[11px] font-mono font-black text-indigo-700 dark:text-indigo-300 shadow-2xs">
@@ -1306,32 +1431,6 @@ export default function AdminVolunteersPage() {
                               {age} Years
                             </span>
                           )}
-                        </div>
-                      </td>
-
-                      {/* Education & Specializations */}
-                      <td className="py-4 px-4">
-                        <div className="space-y-0.5">
-                          <span className="inline-block rounded-full bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-400 border border-purple-200/60 px-2.5 py-0.5 text-[10px] font-extrabold">
-                            {v.education}
-                          </span>
-                          {v.specializations && (
-                            <p className="text-[11px] text-slate-500 font-medium line-clamp-1">
-                              {v.specializations}
-                            </p>
-                          )}
-                        </div>
-                      </td>
-
-                      {/* Address */}
-                      <td className="py-4 px-4 text-xs">
-                        <div className="space-y-0.5 text-slate-600 dark:text-slate-400">
-                          <span className="block font-bold text-slate-800 dark:text-slate-200">
-                            {[v.villageCity, v.district].filter(Boolean).join(", ") || "N/A"}
-                          </span>
-                          <span className="text-[10px] text-slate-400">
-                            {[v.state, v.pincode].filter(Boolean).join(" - ")}
-                          </span>
                         </div>
                       </td>
 
@@ -2385,6 +2484,182 @@ export default function AdminVolunteersPage() {
             </div>
             <div className="flex items-center justify-center max-h-[75vh] overflow-hidden rounded-xl bg-black">
               <img src={viewDocImage.url} alt={viewDocImage.title} className="max-h-[75vh] w-auto object-contain" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* SEND MESSAGE EMAIL MODAL */}
+      {isMailModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="w-full max-w-2xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-black text-slate-900 dark:text-white">
+                    Send Email to Volunteers
+                  </h3>
+                  <p className="text-xs text-slate-500 font-medium">
+                    Compose & send custom HTML emails to {selectedVolunteerIds.length} selected recipient(s).
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setIsMailModalOpen(false)}
+                className="p-2 rounded-xl text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 space-y-4 overflow-y-auto">
+              {/* Selected Recipients Badges */}
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+                  Selected Recipients ({selectedVolunteerIds.length}):
+                </label>
+                <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+                  {volunteers
+                    .filter((v) => selectedVolunteerIds.includes(v.id))
+                    .map((v) => (
+                      <span
+                        key={v.id}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/60 border border-purple-200/80 dark:border-purple-800/60 text-[11px] font-bold text-purple-700 dark:text-purple-300"
+                      >
+                        <span>{v.fullName}</span>
+                        <span className="text-[10px] text-purple-400">({v.email})</span>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedVolunteerIds((prev) => prev.filter((id) => id !== v.id))}
+                          className="hover:text-red-500 ml-0.5 cursor-pointer"
+                        >
+                          <X className="h-3 w-3" />
+                        </button>
+                      </span>
+                    ))}
+                </div>
+              </div>
+
+              {/* Subject Input */}
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Subject *
+                </label>
+                <input
+                  type="text"
+                  value={mailSubject}
+                  onChange={(e) => setMailSubject(e.target.value)}
+                  placeholder="Enter email subject line..."
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-500/20 focus:border-purple-500 outline-none"
+                />
+              </div>
+
+              {/* Rich Text Format Toolbar & Message Body */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
+                    Message Content (Rich HTML Editor) *
+                  </label>
+                  <span className="text-[10px] text-slate-400">Click buttons to format text</span>
+                </div>
+
+                <div className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950">
+                  {/* Rich Text Editor Toolbar */}
+                  <div className="flex flex-wrap items-center gap-1 p-2 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<b>Bold Text</b>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-black text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Bold"
+                    >
+                      B
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<i>Italic Text</i>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-serif italic font-bold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Italic"
+                    >
+                      I
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<u>Underline Text</u>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs underline font-bold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Underline"
+                    >
+                      U
+                    </button>
+                    <div className="h-4 w-px bg-slate-300 dark:bg-slate-700 mx-1"></div>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<h3 style='color:#065f46; margin-bottom:8px;'>Heading Title</h3>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-extrabold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Heading 3"
+                    >
+                      H3
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<p style='font-size:14px; line-height:1.6;'>Paragraph content goes here...</p>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Paragraph"
+                    >
+                      P
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<ul style='padding-left:20px;'><li>Item 1</li><li>Item 2</li></ul>")}
+                      className="px-2.5 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Bullet List"
+                    >
+                      • List
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailBody((prev) => prev + "<br/>")}
+                      className="px-2 py-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-[11px] font-mono font-bold text-slate-800 dark:text-slate-200 cursor-pointer"
+                      title="Line Break"
+                    >
+                      &lt;br/&gt;
+                    </button>
+                  </div>
+
+                  <textarea
+                    rows={8}
+                    value={mailBody}
+                    onChange={(e) => setMailBody(e.target.value)}
+                    placeholder="Type email body message here... You can use HTML formatting tags."
+                    className="w-full p-3.5 text-xs font-mono text-slate-900 dark:text-white bg-transparent outline-none resize-y"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex items-center justify-end gap-3 p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80">
+              <button
+                type="button"
+                onClick={() => setIsMailModalOpen(false)}
+                className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleSendVolunteerEmail}
+                disabled={sendingMail || selectedVolunteerIds.length === 0}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider shadow-md shadow-purple-600/20 transition transform active:scale-95 cursor-pointer border-none disabled:opacity-50"
+              >
+                {sendingMail ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
+                Send Email ({selectedVolunteerIds.length})
+              </button>
             </div>
           </div>
         </div>

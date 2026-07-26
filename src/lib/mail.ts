@@ -391,3 +391,57 @@ export async function sendStudentWelcomeEmail(
     return false;
   }
 }
+
+export async function sendVolunteerEmail(
+  recipients: string[],
+  subject: string,
+  htmlMessage: string
+): Promise<{ success: boolean; count: number }> {
+  if (!recipients || recipients.length === 0) {
+    return { success: false, count: 0 };
+  }
+
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <style>
+          body { font-family: 'Outfit', -apple-system, sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; color: #334155; }
+          .container { max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 16px; padding: 32px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(15,23,42,0.04); }
+          .header { border-bottom: 2px solid #10b981; padding-bottom: 16px; margin-bottom: 24px; }
+          .header h2 { color: #065f46; margin: 0; font-size: 20px; font-weight: 800; }
+          .content { font-size: 14px; line-height: 1.7; color: #1e293b; }
+          .footer { margin-top: 32px; pt: 16px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #94a3b8; text-align: center; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h2>Flarelap Global Foundation</h2>
+          </div>
+          <div class="content">
+            ${htmlMessage}
+          </div>
+          <div class="footer">
+            Flarelap Global Foundation • Sirsal (38) Kaithal, Haryana, India - 136026<br/>
+            Official Portal: <a href="https://flarelap.org" style="color: #059669;">www.flarelap.org</a>
+          </div>
+        </div>
+      </body>
+    </html>
+  `;
+
+  try {
+    await transporter.sendMail({
+      from: '"Flarelap Global Foundation" <flarelap.org@gmail.com>',
+      to: recipients.join(", "),
+      subject: subject,
+      html: htmlContent,
+    });
+    return { success: true, count: recipients.length };
+  } catch (error) {
+    console.error("Failed to send volunteer custom email:", error);
+    return { success: false, count: 0 };
+  }
+}
