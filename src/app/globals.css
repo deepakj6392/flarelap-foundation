@@ -37,31 +37,39 @@
   --color-slate-950: #080f1f;
   --color-slate-955: #050b18;
 
-  --color-emerald-50: #eef2ff;
-  --color-emerald-100: #e0e7ff;
-  --color-emerald-200: #c7d2fe;
-  --color-emerald-300: #a5b4fc;
-  --color-emerald-400: #818cf8;
-  --color-emerald-500: #6366f1;
-  --color-emerald-600: #4f46e5;
-  --color-emerald-700: #4338ca;
-  --color-emerald-800: #3730a3;
-  --color-emerald-900: #312e81;
-  --color-emerald-950: #1e1b4b;
-  --color-emerald-605: #4338ca;
-  --color-emerald-650: #3730a3;
+  /* Flarelap Logo Theme Color Overrides (Electric Violet, Magenta & Flare Orange) */
+  --color-brand-violet: #5d00e5;
+  --color-brand-magenta: #d60086;
+  --color-brand-red: #df103f;
+  --color-brand-orange: #ff6427;
 
-  --color-teal-50: #faf5ff;
-  --color-teal-100: #f3e8ff;
-  --color-teal-200: #e9d5ff;
-  --color-teal-300: #d8b4fe;
-  --color-teal-400: #c084fc;
-  --color-teal-500: #a855f7;
-  --color-teal-600: #9333ea;
-  --color-teal-700: #7e22ce;
-  --color-teal-800: #6b21a8;
-  --color-teal-900: #581c87;
-  --color-teal-950: #3b0764;
+  /* Primary Brand Accent (Electric Violet #5D00E5 to #7C3AED) mapped to emerald tokens */
+  --color-emerald-50: #f5f3ff;
+  --color-emerald-100: #ede9fe;
+  --color-emerald-200: #ddd6fe;
+  --color-emerald-300: #c4b5fd;
+  --color-emerald-400: #9333ea;
+  --color-emerald-500: #7c3aed;
+  --color-emerald-600: #5d00e5;
+  --color-emerald-700: #4c00bc;
+  --color-emerald-800: #3b0093;
+  --color-emerald-900: #2a006b;
+  --color-emerald-950: #170040;
+  --color-emerald-605: #5000c8;
+  --color-emerald-650: #3b0093;
+
+  /* Flare Accent (Flare Magenta #D60086 / Red #DF103F to Orange #FF6427) mapped to teal tokens */
+  --color-teal-50: #fff1f6;
+  --color-teal-100: #ffe4e6;
+  --color-teal-200: #fecdd3;
+  --color-teal-300: #fda4af;
+  --color-teal-400: #fb7185;
+  --color-teal-500: #df103f;
+  --color-teal-600: #d60086;
+  --color-teal-700: #be123c;
+  --color-teal-800: #9f1239;
+  --color-teal-900: #881337;
+  --color-teal-950: #4c0519;
 }
 
 body {
@@ -85,8 +93,31 @@ textarea {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--color-emerald-500) 22%, transparent);
-  color: #080f1f;
+  background: rgba(93, 0, 229, 0.22);
+  color: #5d00e5;
+}
+
+/* Flarelap Logo Brand Gradient Utilities */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #5d00e5 0%, #d60086 50%, #ff6427 100%) !important;
+}
+
+.text-brand-gradient {
+  background: linear-gradient(135deg, #5d00e5 0%, #d60086 50%, #ff6427 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-brand-gradient {
+  border-image: linear-gradient(135deg, #5d00e5 0%, #d60086 50%, #ff6427 100%) 1;
+}
+
+.brand-glow {
+  box-shadow: 0 0 25px -5px rgba(93, 0, 229, 0.35);
+}
+
+.brand-glow-lg {
+  box-shadow: 0 0 40px -8px rgba(93, 0, 229, 0.45), 0 0 20px -5px rgba(214, 0, 134, 0.3);
 }
 
 .hexagon-clip {
@@ -108,5 +139,6 @@ textarea {
   border-color: #f87171 !important;
   color: #991b1b !important;
 }
+
 
 

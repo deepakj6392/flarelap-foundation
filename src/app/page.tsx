@@ -293,17 +293,17 @@ export default function Home() {
 
       <main>
         {/* 1. HERO SECTION */}
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#eefdf4_45%,#fffbeb_100%)] py-20 lg:py-28">
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#f5f3ff_45%,#fff1f6_100%)] py-20 lg:py-28">
           {/* Ambient Glow Blobs */}
-          <div className="absolute w-[350px] h-[350px] bg-emerald-500/10 rounded-full blur-3xl -top-12 -left-12 pointer-events-none" />
-          <div className="absolute w-[350px] h-[350px] bg-teal-500/10 rounded-full blur-3xl bottom-0 right-1/4 pointer-events-none" />
+          <div className="absolute w-[350px] h-[350px] bg-[#5d00e5]/10 rounded-full blur-3xl -top-12 -left-12 pointer-events-none" />
+          <div className="absolute w-[350px] h-[350px] bg-[#d60086]/10 rounded-full blur-3xl bottom-0 right-1/4 pointer-events-none" />
 
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.25]" />
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div className="max-w-3xl text-left">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-xs font-bold text-emerald-800 shadow-xs backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-emerald-600 animate-pulse" />
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-violet-200 bg-white/80 px-4 py-2 text-xs font-bold text-violet-900 shadow-xs backdrop-blur-md">
+                <span className="h-2 w-2 rounded-full bg-[#5d00e5] animate-pulse" />
                 Registered Social Impact Foundation
               </div>
 
@@ -311,10 +311,10 @@ export default function Home() {
               <h1 className="mt-8 text-4xl font-black leading-[1.12] text-slate-900 sm:text-6xl lg:text-7xl tracking-tight min-h-[96px] sm:min-h-[140px] md:min-h-[160px]">
                 <span>{line1}</span>
                 <br />
-                <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">
+                <span className="text-brand-gradient">
                   {line2}
                 </span>
-                <span className="inline-block w-[4px] h-[32px] sm:h-[48px] lg:h-[60px] ml-1 bg-emerald-600 animate-pulse align-middle" />
+                <span className="inline-block w-[4px] h-[32px] sm:h-[48px] lg:h-[60px] ml-1 bg-[#5d00e5] animate-pulse align-middle" />
               </h1>
 
               <p className="mt-6 max-w-xl text-base leading-8 text-slate-700 sm:text-lg">
@@ -323,14 +323,14 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
                 <Link
                   href="#programs"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-700/10 transition duration-300 hover:bg-emerald-800 hover:shadow-lg hover:shadow-emerald-700/20 hover:-translate-y-[1px] active:translate-y-0"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-gradient px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-violet-900/20 transition duration-300 hover:opacity-95 hover:shadow-lg hover:-translate-y-[1px] active:translate-y-0"
                 >
                   Explore Our Programs
                   <ArrowRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 shadow-xs transition duration-300 hover:border-emerald-600 hover:text-emerald-800 hover:shadow-md hover:shadow-slate-250/40 hover:-translate-y-[1px] active:translate-y-0"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 shadow-xs transition duration-300 hover:border-violet-600 hover:text-violet-900 hover:shadow-md hover:shadow-slate-250/40 hover:-translate-y-[1px] active:translate-y-0"
                 >
                   Partner With Us
                 </Link>

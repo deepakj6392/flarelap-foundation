@@ -34,7 +34,7 @@ export default function ProgramsPage() {
 			<main>
 				<section className="bg-white px-5 py-20 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-7xl">
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">
+						<p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-gradient">
 							Programs
 						</p>
 						<h1 className="mt-4 text-4xl font-black text-slate-950 sm:text-5xl">
@@ -50,7 +50,7 @@ export default function ProgramsPage() {
 									<div className="p-4">
 										<h3 className="font-semibold text-slate-900">{p.title}</h3>
 										<p className="mt-2 text-sm text-slate-700">{p.excerpt}</p>
-										<a href="#contact" className="mt-4 inline-block text-sm font-bold text-emerald-700">
+										<a href="#contact" className="mt-4 inline-block text-sm font-bold text-[#5d00e5] hover:text-[#df103f] transition">
 											Learn more →
 										</a>
 									</div>

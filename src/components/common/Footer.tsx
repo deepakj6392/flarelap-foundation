@@ -58,14 +58,16 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <img
-                src={settings.logoUrl}
-                alt="Flarelap Global Foundation logo"
-                className="h-12 w-12 rounded-full object-contain bg-white p-0.5"
-              />
+              <div className="p-0.5 rounded-full bg-gradient-to-tr from-[#5d00e5] via-[#d60086] to-[#ff6427] shadow-md">
+                <img
+                  src={settings.logoUrl}
+                  alt="Flarelap Global Foundation logo"
+                  className="h-11 w-11 rounded-full object-contain bg-white p-0.5"
+                />
+              </div>
               <div>
                 <p className="text-base font-black tracking-tight">{siteConfig.name}</p>
-                <p className="text-xs font-semibold text-emerald-400">Social Impact Foundation</p>
+                <p className="text-xs font-bold text-brand-gradient">Social Impact Foundation</p>
               </div>
             </div>
 

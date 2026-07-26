@@ -253,7 +253,7 @@ export default function AdminLoginPage() {
         <div className="absolute top-6 left-6">
           <Link
             href="/"
-            className="group flex items-center gap-2 text-xs font-semibold text-slate-400 transition hover:text-emerald-400"
+            className="group flex items-center gap-2 text-xs font-semibold text-slate-400 transition hover:text-[#ff6427]"
           >
             <ArrowLeft className="h-4 w-4 transition group-hover:-translate-x-1" />
             Back to Home
@@ -262,14 +262,14 @@ export default function AdminLoginPage() {
 
         {/* Logo and Header */}
         <div className="flex flex-col items-center text-center pt-4">
-          <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 p-0.5 shadow-lg shadow-emerald-500/20">
+          <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-tr from-[#5d00e5] via-[#d60086] to-[#ff6427] p-0.5 shadow-lg shadow-[#5d00e5]/20">
             <div className="flex h-full w-full items-center justify-center rounded-full bg-slate-950">
               <Image
                 src="/logo.png"
                 alt="Flarelap Global Foundation logo"
                 width={56}
                 height={56}
-                className="h-14 w-14 rounded-full object-contain"
+                className="h-14 w-14 rounded-full object-contain bg-white p-0.5"
                 priority
               />
             </div>

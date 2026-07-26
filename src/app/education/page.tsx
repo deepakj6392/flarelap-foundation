@@ -954,20 +954,20 @@ export default function EducationPage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#eef2ff_45%,#fffbeb_100%)] py-20 lg:py-24">
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#f8fafc_0%,#f5f3ff_45%,#fff1f6_100%)] py-20 lg:py-24">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.25]" />
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
             <div className="max-w-3xl text-left">
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/85 px-4 py-2 text-xs font-bold text-emerald-800 shadow-sm backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-emerald-600 animate-pulse" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/85 px-4 py-2 text-xs font-bold text-violet-900 shadow-sm backdrop-blur-md">
+                <span className="h-2 w-2 rounded-full bg-[#5d00e5] animate-pulse" />
                 Empowerment through Learning
               </span>
 
               <h1 className="mt-6 text-4xl font-black leading-[1.12] text-slate-900 sm:text-5xl lg:text-6xl tracking-tight">
                 Empowering Minds,
                 <br />
-                <span className="bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">
+                <span className="text-brand-gradient">
                   Shaping Brighter Futures.
                 </span>
               </h1>
@@ -979,13 +979,13 @@ export default function EducationPage() {
               <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
                 <Link
                   href="#get-involved"
-                  className="inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-emerald-700/10 transition hover:bg-emerald-800 hover:scale-[1.01] active:scale-100"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-gradient px-6 py-3.5 text-sm font-bold text-white shadow-md transition hover:opacity-95 hover:scale-[1.01] active:scale-100"
                 >
                   Sponsor a Child Now
                 </Link>
                 <Link
                   href="#exams-hub"
-                  className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 shadow-sm transition hover:border-emerald-600 hover:text-emerald-800 hover:scale-[1.01] active:scale-100"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-slate-900 shadow-sm transition hover:border-[#5d00e5] hover:text-[#5d00e5] hover:scale-[1.01] active:scale-100"
                 >
                   Explore Exam Prep Courses
                 </Link>
@@ -993,7 +993,7 @@ export default function EducationPage() {
             </div>
 
             <div className="relative">
-              <div className="relative mx-auto aspect-4/3 w-full max-w-[500px] overflow-hidden rounded-[2.5rem] border-4 border-white bg-white shadow-2xl shadow-emerald-900/5">
+              <div className="relative mx-auto aspect-4/3 w-full max-w-[500px] overflow-hidden rounded-[2.5rem] border-4 border-white bg-white shadow-2xl shadow-violet-900/10">
                 <Image
                   src={sampleImages.education}
                   alt="Students studying inside computer lab"
@@ -1010,7 +1010,7 @@ export default function EducationPage() {
         <section id="initiatives" className="bg-white px-5 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl text-left">
-              <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">What We Do</p>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-brand-gradient">What We Do</p>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
                 Strategic programs addressing key learning barriers.
               </h2>
