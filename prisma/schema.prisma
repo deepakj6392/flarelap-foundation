@@ -281,5 +281,17 @@ model Designation {
   @@map("designations")
 }
 
+model VolunteerMailLog {
+  id              Int      @id @default(autoincrement())
+  subject         String
+  message         String   @db.Text
+  recipients      String   @db.Text
+  recipientsCount Int      @default(1) @map("recipients_count")
+  status          String   @default("SENT")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@map("volunteer_mail_logs")
+}
+
 
 

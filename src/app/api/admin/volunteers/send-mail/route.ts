@@ -41,7 +41,8 @@ export async function POST(req: Request) {
       select: {
         id: true,
         fullName: true,
-        email: true
+        email: true,
+        designation: true
       }
     });
 
@@ -65,6 +66,17 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
+
+    // Create log record in database
+    await prisma.volunteerMailLog.create({
+      data: {
+        subject: subject.trim(),
+        message: message,
+        recipients: JSON.stringify(volunteers),
+        recipientsCount: result.count,
+        status: "SENT"
+      }
+    });
 
     return NextResponse.json({
       message: `Email sent successfully to ${result.count} volunteer(s).`,

@@ -31,7 +31,12 @@ import {
   Award,
   Printer,
   Download,
-  FileCheck
+  FileCheck,
+  ChevronLeft,
+  ChevronRight,
+  History,
+  Send,
+  MessageSquare
 } from "lucide-react";
 
 interface Volunteer {
@@ -58,6 +63,16 @@ interface Volunteer {
   designation?: string | null;
   memberSince?: string | null;
   expiryDate?: string | null;
+  createdAt: string;
+}
+
+interface MailLog {
+  id: number;
+  subject: string;
+  message: string;
+  recipients: string;
+  recipientsCount: number;
+  status: string;
   createdAt: string;
 }
 
@@ -94,6 +109,10 @@ export default function AdminVolunteersPage() {
   const [educationFilter, setEducationFilter] = useState("All");
   const [genderFilter, setGenderFilter] = useState("All");
 
+  // Pagination State for Volunteer Directory Table
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+
   // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
@@ -116,6 +135,11 @@ export default function AdminVolunteersPage() {
   const [mailSubject, setMailSubject] = useState("");
   const [mailBody, setMailBody] = useState("");
   const [sendingMail, setSendingMail] = useState(false);
+
+  // Mail Logs History State
+  const [mailLogs, setMailLogs] = useState<MailLog[]>([]);
+  const [loadingMailLogs, setLoadingMailLogs] = useState(false);
+  const [selectedMailLog, setSelectedMailLog] = useState<MailLog | null>(null);
 
   // Safe Date Formatter helper
   const formatDateSafe = (dateVal: string | null | undefined, defaultDate: Date): string => {
@@ -786,10 +810,34 @@ export default function AdminVolunteersPage() {
     }
   };
 
+  const fetchMailLogs = async () => {
+    const storedToken = localStorage.getItem("admin_token");
+    if (!storedToken) return;
+    setLoadingMailLogs(true);
+    try {
+      const res = await fetch("/api/admin/volunteers/mail-logs", {
+        headers: { Authorization: `Bearer ${storedToken}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setMailLogs(data.mailLogs || []);
+      }
+    } catch (err) {
+      console.error("Failed to fetch mail logs:", err);
+    } finally {
+      setLoadingMailLogs(false);
+    }
+  };
+
   useEffect(() => {
     fetchVolunteers();
     fetchDesignationsList();
+    fetchMailLogs();
   }, []);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, educationFilter, genderFilter]);
 
   // Image file reader helper with 3MB Limit (3 * 1024 * 1024 = 3,145,728 bytes)
   const handleImageUpload = (
@@ -1022,6 +1070,7 @@ export default function AdminVolunteersPage() {
       setIsMailModalOpen(false);
       setMailSubject("");
       setMailBody("");
+      fetchMailLogs();
     } catch (err: any) {
       Swal.fire({
         icon: "error",
@@ -1189,6 +1238,13 @@ export default function AdminVolunteersPage() {
 
     return matchesSearch && matchesEducation && matchesGender;
   });
+
+  // Calculate pagination
+  const totalEntries = filteredVolunteers.length;
+  const totalPages = Math.ceil(totalEntries / pageSize) || 1;
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = Math.min(startIndex + pageSize, totalEntries);
+  const paginatedVolunteers = filteredVolunteers.slice(startIndex, endIndex);
 
   return (
     <div className="space-y-6">
@@ -1362,7 +1418,7 @@ export default function AdminVolunteersPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 font-medium">
-                {filteredVolunteers.map((v) => {
+                {paginatedVolunteers.map((v) => {
                   const age = calculateAge(v.dob);
                   const displayMemberId = getMemberId(v);
                   return (
@@ -1528,7 +1584,308 @@ export default function AdminVolunteersPage() {
             </table>
           </div>
         )}
+
+        {/* DATATABLE PAGINATION FOOTER */}
+        {filteredVolunteers.length > 0 && (
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/70">
+            {/* Entries Info */}
+            <div className="text-xs text-slate-500 font-medium">
+              Showing <span className="font-bold text-slate-900 dark:text-white">{startIndex + 1}</span> to{" "}
+              <span className="font-bold text-slate-900 dark:text-white">{endIndex}</span> of{" "}
+              <span className="font-bold text-slate-900 dark:text-white">{totalEntries}</span> entries
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="flex items-center gap-4">
+              {/* Rows Per Page Selector */}
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-500">
+                <span>Per Page:</span>
+                <select
+                  value={pageSize}
+                  onChange={(e) => {
+                    setPageSize(Number(e.target.value));
+                    setCurrentPage(1);
+                  }}
+                  className="py-1 px-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-bold text-slate-800 dark:text-slate-200 outline-none cursor-pointer"
+                >
+                  <option value={10}>10</option>
+                  <option value={25}>25</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+              </div>
+
+              {/* Page Buttons */}
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                  disabled={currentPage === 1}
+                  className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
+                  title="Previous Page"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                  .filter((p) => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1)
+                  .map((p, idx, arr) => {
+                    const prevPage = arr[idx - 1];
+                    const showEllipsis = prevPage && p - prevPage > 1;
+                    return (
+                      <div key={p} className="flex items-center gap-1">
+                        {showEllipsis && <span className="px-1 text-slate-400 font-bold">...</span>}
+                        <button
+                          onClick={() => setCurrentPage(p)}
+                          className={`min-w-[32px] h-8 rounded-lg text-xs font-bold transition cursor-pointer border ${
+                            currentPage === p
+                              ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                              : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800"
+                          }`}
+                        >
+                          {p}
+                        </button>
+                      </div>
+                    );
+                  })}
+
+                <button
+                  onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+                  disabled={currentPage === totalPages || totalPages === 0}
+                  className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
+                  title="Next Page"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
+
+      {/* SENT EMAIL HISTORY LOGS TABLE SECTION */}
+      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs space-y-0 mt-8">
+        {/* Section Header */}
+        <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/50 dark:bg-slate-950/40">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+              <History className="h-5 w-5" />
+            </div>
+            <div>
+              <h2 className="text-base font-black text-slate-900 dark:text-white tracking-tight">
+                Sent Volunteer Email Logs & History
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Audit trail of all custom HTML emails sent to foundation volunteers with message content and recipient status.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={fetchMailLogs}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+          >
+            <RefreshCw className="h-3.5 w-3.5" />
+            Refresh Logs
+          </button>
+        </div>
+
+        {/* Mail Logs Table Body */}
+        {loadingMailLogs ? (
+          <div className="flex flex-col items-center justify-center p-12 gap-3 text-slate-400">
+            <Loader2 className="h-7 w-7 animate-spin text-indigo-500" />
+            <p className="text-xs font-bold">Loading Email Logs...</p>
+          </div>
+        ) : mailLogs.length === 0 ? (
+          <div className="flex flex-col items-center justify-center p-12 text-center text-slate-400 space-y-2">
+            <MessageSquare className="h-10 w-10 text-slate-300 dark:text-slate-700" />
+            <h4 className="text-xs font-bold text-slate-700 dark:text-slate-300">No Email History Found</h4>
+            <p className="text-xs text-slate-500 max-w-md">
+              Select volunteers from the table above and click "Send Message" to send custom emails. Sent logs will automatically appear here.
+            </p>
+          </div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs text-slate-700 dark:text-slate-300">
+              <thead className="bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 text-[11px] font-black uppercase text-slate-500 tracking-wider">
+                <tr>
+                  <th className="py-3.5 px-4">Log Ref</th>
+                  <th className="py-3.5 px-4">Subject</th>
+                  <th className="py-3.5 px-4">Recipients</th>
+                  <th className="py-3.5 px-4">Dispatch Date & Time</th>
+                  <th className="py-3.5 px-4">Status</th>
+                  <th className="py-3.5 px-4 text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 font-medium">
+                {mailLogs.map((log) => {
+                  let recipientList: any[] = [];
+                  try {
+                    recipientList = JSON.parse(log.recipients);
+                  } catch (e) {
+                    recipientList = [];
+                  }
+
+                  const firstRecipient = recipientList[0];
+                  const remainingCount = Math.max(0, recipientList.length - 1);
+
+                  return (
+                    <tr key={log.id} className="hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition">
+                      {/* Log Ref */}
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono font-black text-[11px]">
+                          #MAIL-{log.id}
+                        </span>
+                      </td>
+
+                      {/* Subject */}
+                      <td className="py-4 px-4">
+                        <span className="font-extrabold text-slate-900 dark:text-white block line-clamp-1 max-w-xs">
+                          {log.subject}
+                        </span>
+                      </td>
+
+                      {/* Recipients */}
+                      <td className="py-4 px-4">
+                        <div className="flex items-center gap-1.5">
+                          {firstRecipient ? (
+                            <span className="inline-flex items-center gap-1 bg-purple-50 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 px-2 py-0.5 rounded text-[11px] font-bold border border-purple-200/60">
+                              {firstRecipient.fullName || firstRecipient.name || firstRecipient.email}
+                            </span>
+                          ) : (
+                            <span className="text-slate-400">{log.recipientsCount} Recipient(s)</span>
+                          )}
+                          {remainingCount > 0 && (
+                            <span className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-1.5 py-0.5 rounded text-[10px] font-extrabold">
+                              +{remainingCount} more
+                            </span>
+                          )}
+                        </div>
+                      </td>
+
+                      {/* Dispatch Date & Time */}
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        <div className="space-y-0.5">
+                          <span className="block font-bold text-slate-800 dark:text-slate-200">
+                            {new Date(log.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })}
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-medium block">
+                            {new Date(log.createdAt).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true })}
+                          </span>
+                        </div>
+                      </td>
+
+                      {/* Status */}
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 text-[10.5px] font-black uppercase">
+                          <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                          {log.status}
+                        </span>
+                      </td>
+
+                      {/* Actions - View Message */}
+                      <td className="py-4 px-4 text-center whitespace-nowrap">
+                        <button
+                          onClick={() => setSelectedMailLog(log)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition cursor-pointer"
+                        >
+                          <Eye className="h-3.5 w-3.5" />
+                          View Message
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+
+      {/* VIEW SENT EMAIL LOG MODAL */}
+      {selectedMailLog && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="w-full max-w-2xl rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-black text-slate-900 dark:text-white">
+                    Sent Email Log Details (#MAIL-{selectedMailLog.id})
+                  </h3>
+                  <p className="text-xs text-slate-500 font-medium">
+                    Dispatched on {new Date(selectedMailLog.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })} at {new Date(selectedMailLog.createdAt).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true })}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setSelectedMailLog(null)}
+                className="p-2 rounded-xl text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-6 space-y-4 overflow-y-auto">
+              {/* Subject */}
+              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                <span className="text-[10px] font-extrabold uppercase text-slate-400 block mb-1">Subject Line</span>
+                <h4 className="text-sm font-black text-slate-900 dark:text-white">{selectedMailLog.subject}</h4>
+              </div>
+
+              {/* Recipients List */}
+              <div>
+                <span className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
+                  Recipients ({selectedMailLog.recipientsCount}):
+                </span>
+                <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+                  {(() => {
+                    try {
+                      const list = JSON.parse(selectedMailLog.recipients);
+                      return list.map((v: any, i: number) => (
+                        <span
+                          key={i}
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/60 border border-purple-200/80 dark:border-purple-800/60 text-[11px] font-bold text-purple-700 dark:text-purple-300"
+                        >
+                          <span>{v.fullName || v.name}</span>
+                          <span className="text-[10px] text-purple-400">({v.email})</span>
+                        </span>
+                      ));
+                    } catch (e) {
+                      return <span className="text-xs text-slate-400">{selectedMailLog.recipientsCount} Recipients</span>;
+                    }
+                  })()}
+                </div>
+              </div>
+
+              {/* HTML Message Content Render */}
+              <div>
+                <span className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1.5">
+                  Dispatched Email Message Content:
+                </span>
+                <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-serif text-slate-800 dark:text-slate-200 leading-relaxed overflow-x-auto max-h-60">
+                  <div dangerouslySetInnerHTML={{ __html: selectedMailLog.message }} />
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Footer */}
+            <div className="flex items-center justify-end p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80">
+              <button
+                type="button"
+                onClick={() => setSelectedMailLog(null)}
+                className="px-5 py-2 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-xl text-xs font-bold hover:opacity-90 transition cursor-pointer"
+              >
+                Close Log
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ADD / EDIT VOLUNTEER MODAL */}
       {isModalOpen && (
