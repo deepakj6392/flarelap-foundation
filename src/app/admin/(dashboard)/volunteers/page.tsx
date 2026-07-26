@@ -386,8 +386,8 @@ export default function AdminVolunteersPage() {
             margin-top: 8px;
           }
           .qr-card-img {
-            width: 52px;
-            height: 52px;
+            width: 66px;
+            height: 66px;
           }
           .holo-badge {
             background: linear-gradient(135deg, #0284c7, #818cf8, #f43f5e);
@@ -456,17 +456,17 @@ export default function AdminVolunteersPage() {
           .sig-text {
             font-family: 'Georgia', serif;
             font-style: italic;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 800;
             color: #0f172a;
             margin-bottom: 1px;
           }
           .sig-label {
-            font-size: 7.5px;
+            font-size: 8px;
             font-weight: 900;
             color: #64748b;
             text-transform: uppercase;
-            border-top: 1px solid #cbd5e1;
+            border-top: 1.5px solid #cbd5e1;
             padding-top: 2px;
             white-space: nowrap;
           }
@@ -562,12 +562,12 @@ export default function AdminVolunteersPage() {
                   </div>
                 </div>
 
-                <div class="sig-row" style="margin-top: 12px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: flex-end;">
+                <div class="sig-row" style="margin-top: 16px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;">
                   <div>
                     <div class="sig-text">Bharat Bhushan</div>
                     <div class="sig-label">AUTHORIZED SIGNATURE</div>
                   </div>
-                  <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 52px; height: 52px;" />
+                  <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 66px; height: 66px;" />
                 </div>
               </div>
 
@@ -2823,14 +2823,14 @@ export default function AdminVolunteersPage() {
                                 </div>
                               </div>
 
-                              <div className="flex items-end justify-between mt-3 mb-1 pt-1">
+                              <div className="flex items-end justify-between mt-4 mb-3.5 pt-1">
                                 <div>
-                                  <div className="font-serif italic text-base font-bold text-slate-900 leading-tight">Bharat Bhushan</div>
-                                  <div className="text-[7.5px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
+                                  <div className="font-serif italic text-xl font-bold text-slate-900 leading-tight">Bharat Bhushan</div>
+                                  <div className="text-[8px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
                                     AUTHORIZED SIGNATURE
                                   </div>
                                 </div>
-                                <img src={qrUrl} alt="QR" className="w-[52px] h-[52px] rounded-lg border border-slate-200 shadow-2xs" />
+                                <img src={qrUrl} alt="QR" className="w-[66px] h-[66px] rounded-lg border border-slate-200 shadow-2xs" />
                               </div>
                             </div>
 
