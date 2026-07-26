@@ -46,17 +46,17 @@ export function generateUniqueQuestions(
 
   // Determine domain/category from course or test name
   const name = (courseName + " " + testName).toLowerCase();
-  const isMedical = name.includes("neet") || name.includes("paramedical") || name.includes("nursing") || name.includes("biology") || name.includes("medical") || name.includes("aiims") || name.includes("ruhs") || name.includes("cpet") || name.includes("jenpas");
-  const isTeaching = name.includes("ctet") || name.includes("tet") || name.includes("net") || name.includes("teacher") || name.includes("kvs") || name.includes("nvs") || name.includes("dsssb") || name.includes("b.ed");
-  const isBanking = name.includes("rbi") || name.includes("sbi") || name.includes("ibps") || name.includes("bank") || name.includes("sebi") || name.includes("nabard") || name.includes("lic");
-  const isEngineering = name.includes("jee") || name.includes("gate") || name.includes("cs") || name.includes("web") || name.includes("computer") || name.includes("math");
+  const isMedical = name.includes("neet") || name.includes("paramedical") || name.includes("nursing") || name.includes("biology") || name.includes("medical") || name.includes("aiims") || name.includes("ruhs") || name.includes("cpet") || name.includes("jenpas") || name.includes("health");
+  const isTeaching = name.includes("ctet") || name.includes("tet") || name.includes("net") || name.includes("teacher") || name.includes("kvs") || name.includes("nvs") || name.includes("dsssb") || name.includes("b.ed") || name.includes("prt") || name.includes("tgt") || name.includes("pgt");
+  const isBanking = name.includes("rbi") || name.includes("sbi") || name.includes("ibps") || name.includes("bank") || name.includes("sebi") || name.includes("nabard") || name.includes("lic") || name.includes("finance");
+  const isEngineering = name.includes("jee") || name.includes("gate") || name.includes("cs") || name.includes("web") || name.includes("computer") || name.includes("math") || name.includes("tech");
 
   let counter = 1;
-  const seed = (courseName.length * 31 + testName.length * 17 + requiredCount) || 12345;
+  const baseSeed = (courseName.length * 31 + testName.length * 17 + requiredCount) || 12345;
 
   while (result.length < requiredCount) {
     const currentIndex = result.length + 1;
-    const qSeed = seed + currentIndex * 101 + counter++;
+    const qSeed = baseSeed + currentIndex * 137 + counter++;
 
     let generated: QuestionItem | null = null;
 
@@ -80,11 +80,14 @@ export function generateUniqueQuestions(
       }
     }
 
-    // Safety fallback to guarantee loop termination
-    if (counter > requiredCount * 15) {
-      const fallbackQ = createGeneralAptitudeQuestion(currentIndex, qSeed + counter);
-      fallbackQ.question = `[Section ${currentIndex}] ${fallbackQ.question}`;
-      result.push(fallbackQ);
+    // Safety fallback loop if static pool is exhausted: generate dynamic parameterized questions
+    if (counter > requiredCount * 20) {
+      const dynQ = createDynamicMathReasoningQuestion(currentIndex, qSeed + counter);
+      const clean = dynQ.question.trim().toLowerCase();
+      if (!seenTexts.has(clean)) {
+        seenTexts.add(clean);
+        result.push(dynQ);
+      }
     }
   }
 
@@ -183,22 +186,61 @@ function createMedicalQuestion(id: number, seed: number): QuestionItem {
       opts: ["IgA", "IgG", "IgM", "IgE"],
       ans: 0,
       hint: "Secretory IgA protects mucosal surfaces against mucosal pathogen entry."
+    },
+    {
+      q: "What is the pH level of human blood under normal physiological conditions?",
+      opts: ["7.35 to 7.45", "6.5 to 6.8", "7.8 to 8.2", "5.5 to 6.0"],
+      ans: 0,
+      hint: "Human blood is slightly alkaline, strictly maintained between 7.35 and 7.45."
+    },
+    {
+      q: "Which vitamin deficiency is primarily responsible for causing Rickets in children?",
+      opts: ["Vitamin D", "Vitamin C", "Vitamin B12", "Vitamin A"],
+      ans: 0,
+      hint: "Vitamin D deficiency leads to impaired bone mineralization (Rickets)."
+    },
+    {
+      q: "Which blood group is known as the Universal Donor for Red Blood Cell transfusions?",
+      opts: ["O Negative (O-)", "AB Positive (AB+)", "A Positive (A+)", "B Negative (B-)"],
+      ans: 0,
+      hint: "O Negative lacks A, B, and Rh antigens, avoiding transfusion reaction."
+    },
+    {
+      q: "During photosynthesis, the Light-Independent Reactions (Calvin Cycle) occur in the:",
+      opts: ["Stroma of Chloroplast", "Thylakoid Membrane", "Mitochondrial Matrix", "Cytoplasm"],
+      ans: 0,
+      hint: "Calvin cycle enzymatic reactions take place in the stroma fluid."
+    },
+    {
+      q: "What is the primary site of absorption for digested food nutrients in the human alimentary canal?",
+      opts: ["Small Intestine (Jejenum & Ileum)", "Stomach", "Large Intestine", "Esophagus"],
+      ans: 0,
+      hint: "Villi and microvilli in the small intestine maximize nutrient absorption area."
     }
   ];
 
-  const idx = Math.floor(seededRandom(seed) * topics.length);
-  const selected = topics[idx];
+  if (id <= topics.length) {
+    const selected = topics[id - 1];
+    return {
+      id,
+      question: selected.q,
+      options: selected.opts,
+      answer: selected.ans,
+      hint: selected.hint
+    };
+  }
 
-  const qText = id > topics.length 
-    ? `[Paramedical Practice Q${id}] ${selected.q}`
-    : selected.q;
+  // Dynamic parameterized medical chemistry/physics questions for extended IDs
+  const atomicNum = Math.floor(seededRandom(seed + 1) * 15) + 1;
+  const massNum = atomicNum * 2 + Math.floor(seededRandom(seed + 2) * 3);
+  const neutrons = massNum - atomicNum;
 
   return {
     id,
-    question: qText,
-    options: selected.opts,
-    answer: selected.ans,
-    hint: selected.hint
+    question: `In an atom with Atomic Number (Z) = ${atomicNum} and Mass Number (A) = ${massNum}, calculate the number of neutrons in its nucleus:`,
+    options: [`${neutrons}`, `${atomicNum}`, `${massNum}`, `${atomicNum + massNum}`],
+    answer: 0,
+    hint: `Number of neutrons = Mass Number (A) - Atomic Number (Z) = ${massNum} - ${atomicNum} = ${neutrons}.`
   };
 }
 
@@ -252,22 +294,45 @@ function createTeachingQuestion(id: number, seed: number): QuestionItem {
       opts: ["Variable Ratio Schedule", "Fixed Ratio Schedule", "Fixed Interval Schedule", "Continuous Reinforcement"],
       ans: 0,
       hint: "Variable ratio (e.g. slot machines) yields consistent high response rates."
+    },
+    {
+      q: "What is the primary role of a teacher in a student-centered classroom?",
+      opts: ["Facilitator and Guide of learning experiences", "Strict Dictator of classroom rules", "Sole source of factual information", "Passive observer without intervention"],
+      ans: 0,
+      hint: "Teachers act as facilitators to scaffold student-centered learning."
+    },
+    {
+      q: "Howard Gardner's Theory of Multiple Intelligences proposes that intelligence is:",
+      opts: ["Composed of distinct, independent modalities", "A single measurable General IQ factor (g)", "Fixed permanently at birth", "Solely dependent on mathematical ability"],
+      ans: 0,
+      hint: "Gardner proposed 8 distinct types of intelligence (e.g. spatial, musical, interpersonal)."
     }
   ];
 
-  const idx = Math.floor(seededRandom(seed) * topics.length);
-  const selected = topics[idx];
+  if (id <= topics.length) {
+    const selected = topics[id - 1];
+    return {
+      id,
+      question: selected.q,
+      options: selected.opts,
+      answer: selected.ans,
+      hint: selected.hint
+    };
+  }
 
-  const qText = id > topics.length 
-    ? `[Pedagogy Test Q${id}] ${selected.q}`
-    : selected.q;
-
+  // Dynamic scenario question for higher IDs
+  const age = Math.floor(seededRandom(seed + 1) * 6) + 6;
   return {
     id,
-    question: qText,
-    options: selected.opts,
-    answer: selected.ans,
-    hint: selected.hint
+    question: `A teacher observes a ${age}-year-old student struggling with multi-step instructions. According to child psychology, what is the best instructional strategy?`,
+    options: [
+      "Break instructions into smaller, visual step-by-step cues",
+      "Reprimand the student for lack of attention",
+      "Ignore the student and continue the lecture",
+      "Assign extra homework as penalty"
+    ],
+    answer: 0,
+    hint: "Scaffolding complex instructions into smaller visual chunks aids cognitive processing."
   };
 }
 
@@ -299,32 +364,36 @@ function createBankingQuestion(id: number, seed: number): QuestionItem {
       hint: "Under the Integrated Ombudsman Scheme, maximum compensation is ₹20 Lakhs."
     },
     {
-      q: "A train running at 72 km/h crosses a pole in 15 seconds. What is the length of the train?",
-      opts: ["300 meters", "250 meters", "360 meters", "200 meters"],
+      q: "What is the minimum capital adequacy ratio (CRAR) mandated by RBI for commercial banks in India?",
+      opts: ["9%", "12%", "6%", "15%"],
       ans: 0,
-      hint: "72 km/h = 72 * (5/18) = 20 m/s. Distance = Speed * Time = 20 * 15 = 300m."
-    },
-    {
-      q: "If A can complete a work in 12 days and B in 24 days, how many days will they take working together?",
-      opts: ["8 days", "6 days", "9 days", "10 days"],
-      ans: 0,
-      hint: "Combined rate = 1/12 + 1/24 = 3/24 = 1/8. Total time = 8 days."
+      hint: "RBI mandates a minimum CRAR of 9% for scheduled commercial banks."
     }
   ];
 
-  const idx = Math.floor(seededRandom(seed) * topics.length);
-  const selected = topics[idx];
+  if (id <= topics.length) {
+    const selected = topics[id - 1];
+    return {
+      id,
+      question: selected.q,
+      options: selected.opts,
+      answer: selected.ans,
+      hint: selected.hint
+    };
+  }
 
-  const qText = id > topics.length 
-    ? `[Banking Aptitude Q${id}] ${selected.q}`
-    : selected.q;
+  // Dynamic quantitative aptitude problem for extended IDs
+  const speedKmh = (Math.floor(seededRandom(seed + 1) * 6) + 3) * 18; // e.g. 54, 72, 90 km/h
+  const seconds = (Math.floor(seededRandom(seed + 2) * 4) + 2) * 5; // e.g. 10, 15, 20 secs
+  const speedMs = speedKmh * (5 / 18);
+  const trainLength = Math.round(speedMs * seconds);
 
   return {
     id,
-    question: qText,
-    options: selected.opts,
-    answer: selected.ans,
-    hint: selected.hint
+    question: `A train running at a speed of ${speedKmh} km/h crosses a telegraph post in ${seconds} seconds. What is the length of the train?`,
+    options: [`${trainLength} meters`, `${trainLength + 50} meters`, `${trainLength - 40} meters`, `${trainLength + 100} meters`],
+    answer: 0,
+    hint: `Speed = ${speedKmh} * (5/18) = ${speedMs} m/s. Length = Speed * Time = ${speedMs} * ${seconds} = ${trainLength}m.`
   };
 }
 
@@ -363,38 +432,88 @@ function createEngineeringQuestion(id: number, seed: number): QuestionItem {
     }
   ];
 
-  const idx = Math.floor(seededRandom(seed) * topics.length);
-  const selected = topics[idx];
+  if (id <= topics.length) {
+    const selected = topics[id - 1];
+    return {
+      id,
+      question: selected.q,
+      options: selected.opts,
+      answer: selected.ans,
+      hint: selected.hint
+    };
+  }
 
-  const qText = id > topics.length 
-    ? `[Technical Practice Q${id}] ${selected.q}`
-    : selected.q;
+  // Dynamic engineering math problem
+  const coef = Math.floor(seededRandom(seed + 1) * 8) + 2;
+  const power = Math.floor(seededRandom(seed + 2) * 3) + 2;
+  const derivCoef = coef * power;
+  const derivPower = power - 1;
 
   return {
     id,
-    question: qText,
-    options: selected.opts,
-    answer: selected.ans,
-    hint: selected.hint
+    question: `Find the derivative of the function f(x) = ${coef}x^${power} with respect to x:`,
+    options: [
+      `f'(x) = ${derivCoef}x^${derivPower}`,
+      `f'(x) = ${coef}x^${derivPower}`,
+      `f'(x) = ${derivCoef}x^${power}`,
+      `f'(x) = ${coef * 2}x^${power + 1}`
+    ],
+    answer: 0,
+    hint: `Applying power rule d/dx(a*x^n) = a*n*x^(n-1) yields ${derivCoef}x^${derivPower}.`
   };
 }
 
 // 5. General Reasoning & Aptitude Generator
 function createGeneralAptitudeQuestion(id: number, seed: number): QuestionItem {
-  const num1 = Math.floor(seededRandom(seed + 1) * 12) + 3;
-  const diff = Math.floor(seededRandom(seed + 2) * 5) + 2;
+  return createDynamicMathReasoningQuestion(id, seed);
+}
 
-  const s1 = num1;
-  const s2 = s1 + diff;
-  const s3 = s2 + diff;
-  const s4 = s3 + diff;
-  const ansVal = s4 + diff;
+// Dynamic Math & Reasoning Problem Generator for guaranteed uniqueness
+function createDynamicMathReasoningQuestion(id: number, seed: number): QuestionItem {
+  const qType = Math.floor(seededRandom(seed) * 3);
 
-  return {
-    id,
-    question: `Find the missing term in the number series: ${s1}, ${s2}, ${s3}, ${s4}, (?)`,
-    options: [`${ansVal}`, `${ansVal + 2}`, `${ansVal - 1}`, `${ansVal + 5}`],
-    answer: 0,
-    hint: `Common difference between consecutive terms is +${diff}.`
-  };
+  if (qType === 0) {
+    // Number series
+    const start = Math.floor(seededRandom(seed + 1) * 15) + 2;
+    const diff = Math.floor(seededRandom(seed + 2) * 6) + 3;
+    const s1 = start;
+    const s2 = s1 + diff;
+    const s3 = s2 + diff;
+    const s4 = s3 + diff;
+    const ansVal = s4 + diff;
+
+    return {
+      id,
+      question: `Find the missing number in the sequence: ${s1}, ${s2}, ${s3}, ${s4}, (?)`,
+      options: [`${ansVal}`, `${ansVal + 3}`, `${ansVal - 2}`, `${ansVal + 5}`],
+      answer: 0,
+      hint: `The common difference between consecutive numbers is +${diff}.`
+    };
+  } else if (qType === 1) {
+    // Work & Time problem
+    const daysA = (Math.floor(seededRandom(seed + 1) * 5) + 2) * 4; // 8, 12, 16, 20, 24
+    const daysB = daysA * 2;
+    const combinedDays = Math.round((daysA * daysB) / (daysA + daysB));
+
+    return {
+      id,
+      question: `Worker A can finish a project in ${daysA} days and Worker B can finish the same project in ${daysB} days. How many days will they take working together?`,
+      options: [`${combinedDays} days`, `${combinedDays + 3} days`, `${combinedDays - 2} days`, `${combinedDays + 5} days`],
+      answer: 0,
+      hint: `1/A + 1/B = 1/${daysA} + 1/${daysB} = 3/${daysB}. Total days = ${combinedDays}.`
+    };
+  } else {
+    // Percentage / Profit problem
+    const costPrice = (Math.floor(seededRandom(seed + 1) * 8) + 2) * 100; // 200 to 900
+    const profitPercent = (Math.floor(seededRandom(seed + 2) * 4) + 1) * 5; // 5%, 10%, 15%, 20%
+    const sellingPrice = costPrice + (costPrice * profitPercent) / 100;
+
+    return {
+      id,
+      question: `An article with Cost Price of ₹${costPrice} is sold at a profit of ${profitPercent}%. Calculate its Selling Price:`,
+      options: [`₹${sellingPrice}`, `₹${sellingPrice + 40}`, `₹${sellingPrice - 30}`, `₹${sellingPrice + 100}`],
+      answer: 0,
+      hint: `Selling Price = Cost Price + Profit = ${costPrice} + (${profitPercent}% of ${costPrice}) = ₹${sellingPrice}.`
+    };
+  }
 }
