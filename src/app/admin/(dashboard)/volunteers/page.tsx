@@ -844,10 +844,8 @@ export default function AdminVolunteersPage() {
       const res = await fetch("/api/admin/volunteers/mail-logs", {
         headers: { Authorization: `Bearer ${storedToken}` }
       });
-      if (res.ok) {
-        const data = await res.json();
-        setMailLogs(data.mailLogs || []);
-      }
+      const data = await res.json();
+      setMailLogs(data.mailLogs || []);
     } catch (err) {
       console.error("Failed to fetch mail logs:", err);
     } finally {
