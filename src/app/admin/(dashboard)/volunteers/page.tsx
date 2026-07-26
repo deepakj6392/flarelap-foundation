@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -121,9 +121,20 @@ export default function AdminVolunteersPage() {
     return d.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
   };
 
+  const getMemberId = (v: Volunteer) => {
+    if (v.memberId && v.memberId.startsWith("FGF-") && !v.memberId.startsWith("FGF-00")) {
+      return v.memberId;
+    }
+    const created = v.createdAt ? new Date(v.createdAt) : new Date();
+    const yearLast2 = created.getFullYear().toString().slice(-2);
+    const month2 = String(created.getMonth() + 1).padStart(2, "0");
+    const suffix = String(v.id || 1).padStart(2, "0").slice(-2);
+    return `FGF-${yearLast2}${month2}${suffix}`;
+  };
+
   // Print / Download ID Card Helper
   const handlePrintIdCard = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
-    const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+    const displayMemberId = getMemberId(v);
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
 
     const mSince = customMemberSince !== undefined && customMemberSince !== "" ? customMemberSince : v.memberSince;
@@ -424,7 +435,7 @@ export default function AdminVolunteersPage() {
 
               <!-- Circular Profile Photo (Below Header Banner) -->
               <div style="position: relative; margin-top: 4px; z-index: 5;">
-                <img src="${photoUrl}" alt="${v.fullName}" style="width: 96px; height: 96px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 4px 14px rgba(0,0,0,0.14); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
+                <img src="${photoUrl}" alt="${v.fullName}" style="width: 114px; height: 114px; border-radius: 50%; border: 3.5px solid #ffffff; box-shadow: 0 6px 18px rgba(0,0,0,0.16); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
               </div>
 
               <!-- Member Name & Designation Badge -->
@@ -523,7 +534,7 @@ export default function AdminVolunteersPage() {
 
   // Print / Download Certificate Helper
   const handlePrintCertificate = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
-    const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+    const displayMemberId = getMemberId(v);
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
 
     const mSince = customMemberSince !== undefined ? customMemberSince : v.memberSince;
@@ -1224,7 +1235,7 @@ export default function AdminVolunteersPage() {
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 font-medium">
                 {filteredVolunteers.map((v) => {
                   const age = calculateAge(v.dob);
-                  const displayMemberId = v.memberId || `FGF-00${v.phone ? v.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+                  const displayMemberId = getMemberId(v);
                   return (
                     <tr key={v.id} className="hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition">
                       {/* Member ID Badge */}
@@ -1828,7 +1839,7 @@ export default function AdminVolunteersPage() {
 
       {/* VIEW FULL DETAILS & CERTIFICATE MODAL */}
       {viewVolunteer && (() => {
-        const displayMemberId = viewVolunteer.memberId || `FGF-00${viewVolunteer.phone ? viewVolunteer.phone.replace(/\D/g, "").slice(-2) : "00"}26`;
+        const displayMemberId = getMemberId(viewVolunteer);
         const regDate = viewVolunteer.createdAt ? new Date(viewVolunteer.createdAt) : new Date();
 
         const mSince = memberSince !== undefined && memberSince !== "" ? memberSince : viewVolunteer.memberSince;
@@ -2220,7 +2231,7 @@ export default function AdminVolunteersPage() {
 
                             {/* Circular Profile Photo (Below Header Banner) */}
                             <div className="mt-1 relative z-10">
-                              <div className="w-[96px] h-[96px] rounded-full border-3 border-white shadow-md overflow-hidden bg-slate-100 mx-auto">
+                              <div className="w-[114px] h-[114px] rounded-full border-4 border-white shadow-lg overflow-hidden bg-slate-100 mx-auto">
                                 {viewVolunteer.profilePhoto ? (
                                   <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="w-full h-full object-cover" />
                                 ) : (

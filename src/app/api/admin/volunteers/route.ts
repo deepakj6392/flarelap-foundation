@@ -13,14 +13,15 @@ export async function GET(request: Request) {
       orderBy: { createdAt: "desc" }
     });
 
-    // Ensure all volunteers have a valid Member ID
+    // Ensure all volunteers have a valid Member ID in new format (FGF-YYMM01)
     const updatedVolunteers = await Promise.all(
       volunteers.map(async (v) => {
-        if (!v.memberId) {
-          const digitsOnly = (v.phone || "").replace(/\D/g, "");
-          const phoneLast2 = digitsOnly.length >= 2 ? digitsOnly.slice(-2) : "00";
-          const yearLast2 = (v.createdAt ? new Date(v.createdAt) : new Date()).getFullYear().toString().slice(-2);
-          const mId = `FGF-00${phoneLast2}${yearLast2}`;
+        if (!v.memberId || v.memberId.startsWith("FGF-00")) {
+          const created = v.createdAt ? new Date(v.createdAt) : new Date();
+          const yearLast2 = created.getFullYear().toString().slice(-2);
+          const month2 = String(created.getMonth() + 1).padStart(2, "0");
+          const suffix = String(v.id || 1).padStart(2, "0").slice(-2);
+          const mId = `FGF-${yearLast2}${month2}${suffix}`;
           try {
             await prisma.volunteer.update({
               where: { id: v.id },
@@ -126,21 +127,25 @@ export async function POST(request: Request) {
       }
     }
 
-    // Generate Unique Member ID: FGF-00 + (Last 2 digits of phone) + (Last 2 digits of current year)
-    const digitsOnly = phone.trim().replace(/\D/g, "");
-    const phoneLast2 = digitsOnly.length >= 2 ? digitsOnly.slice(-2) : "00";
-    const yearLast2 = new Date().getFullYear().toString().slice(-2);
-    let generatedMemberId = `FGF-00${phoneLast2}${yearLast2}`;
+    // Generate Unique Member ID: FGF- + (2 digit Year) + (2 digit Month) + (2 digit suffix) -> e.g. FGF-260701
+    const createdDate = new Date();
+    const yearLast2 = createdDate.getFullYear().toString().slice(-2);
+    const month2 = String(createdDate.getMonth() + 1).padStart(2, "0");
+    const monthPrefix = `FGF-${yearLast2}${month2}`;
+
+    const countInMonth = await prisma.volunteer.count({
+      where: { memberId: { startsWith: monthPrefix } }
+    });
+    const suffix = String(countInMonth + 1).padStart(2, "0");
+    let generatedMemberId = `${monthPrefix}${suffix}`;
 
     // Ensure uniqueness
     const existingMember = await prisma.volunteer.findFirst({
       where: { memberId: generatedMemberId }
     });
     if (existingMember) {
-      const count = await prisma.volunteer.count({
-        where: { memberId: { startsWith: generatedMemberId } }
-      });
-      generatedMemberId = `${generatedMemberId}-${count + 1}`;
+      const totalCount = await prisma.volunteer.count();
+      generatedMemberId = `${monthPrefix}${String(totalCount + 1).padStart(2, "0")}`;
     }
 
     const newVolunteer = await prisma.volunteer.create({
