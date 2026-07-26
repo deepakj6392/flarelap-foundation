@@ -587,6 +587,7 @@ export default function AdminVolunteersPage() {
             padding: 35px 45px;
             text-align: center;
             position: relative;
+            overflow: hidden;
           }
           .cert-header {
             font-size: 32px;
@@ -670,22 +671,27 @@ export default function AdminVolunteersPage() {
       <body>
         <div class="cert-outer">
           <div class="cert-inner">
-            <div class="cert-header">FLARELAP GLOBAL FOUNDATION</div>
-            <img src="/logo.png" alt="Logo" class="cert-logo" onerror="this.src='/favicon.ico'" />
-            <div class="cert-title">CERTIFICATE OF APPRECIATION</div>
-            <div class="cert-body">
-              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a <span class="highlight">${displayDesignation}</span> with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
-              <br/><br/>
-              We highly commend their invaluable contribution, passion, and spirit of service.
-            </div>
-            <div class="cert-meta">
-              ID: <span class="highlight">${displayMemberId}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Issued: <span class="highlight">${issueDateStr}</span>
-            </div>
-            <div class="cert-footer">
-              <img src="${qrUrl}" alt="QR" class="qr-img" />
-              <div class="sig-box">
-                <div class="sig-cursive">Bharat Bhushan</div>
-                <div class="sig-title">Managing Director</div>
+            <!-- Faint Watermark Logo Background for Certificate -->
+            <img src="/id-watermark.jpg" alt="Watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 440px; height: 440px; opacity: 0.07; pointer-events: none; z-index: 1; border-radius: 50%; object-fit: cover;" />
+
+            <div style="position: relative; z-index: 5;">
+              <div class="cert-header">FLARELAP GLOBAL FOUNDATION</div>
+              <img src="/logo.png" alt="Logo" class="cert-logo" onerror="this.src='/favicon.ico'" />
+              <div class="cert-title">CERTIFICATE OF APPRECIATION</div>
+              <div class="cert-body">
+                This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a <span class="highlight">${displayDesignation}</span> with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
+                <br/><br/>
+                We highly commend their invaluable contribution, passion, and spirit of service.
+              </div>
+              <div class="cert-meta">
+                ID: <span class="highlight">${displayMemberId}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Issued: <span class="highlight">${issueDateStr}</span>
+              </div>
+              <div class="cert-footer">
+                <img src="${qrUrl}" alt="QR" class="qr-img" />
+                <div class="sig-box">
+                  <div class="sig-cursive">Bharat Bhushan</div>
+                  <div class="sig-title">Managing Director</div>
+                </div>
               </div>
             </div>
           </div>
@@ -2112,14 +2118,21 @@ export default function AdminVolunteersPage() {
                     {/* Certificate Outer Frame */}
                     <div className="p-2 bg-slate-900 rounded-2xl shadow-xl border-4 border-slate-900 overflow-x-auto">
                       <div className="min-w-[700px] bg-white text-slate-900 p-2 border-4 border-slate-900 box-border">
-                        <div className="border-2 border-slate-800 p-8 sm:p-10 text-center relative font-serif">
+                        <div className="border-2 border-slate-800 p-8 sm:p-10 text-center relative overflow-hidden font-serif">
+                          {/* Faint Watermark Logo Background */}
+                          <img
+                            src="/id-watermark.jpg"
+                            alt="Watermark"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] opacity-[0.07] pointer-events-none z-0 rounded-full object-cover"
+                          />
+
                           {/* Header Title */}
-                          <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-wider uppercase mb-4 font-serif">
+                          <h2 className="text-2xl sm:text-3xl font-black text-blue-950 tracking-wider uppercase mb-4 font-serif relative z-10">
                             FLARELAP GLOBAL FOUNDATION
                           </h2>
 
                           {/* Center Logo */}
-                          <div className="my-3 flex justify-center">
+                          <div className="my-3 flex justify-center relative z-10">
                             <img
                               src="/logo.png"
                               alt="Flarelap Logo"
@@ -2131,12 +2144,12 @@ export default function AdminVolunteersPage() {
                           </div>
 
                           {/* Certificate Title */}
-                          <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-widest uppercase my-5 font-serif border-b-2 border-slate-100 pb-2 inline-block px-6">
+                          <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-widest uppercase my-5 font-serif border-b-2 border-slate-100 pb-2 inline-block px-6 relative z-10">
                             CERTIFICATE OF APPRECIATION
                           </h3>
 
                           {/* Certificate Body Paragraph */}
-                          <div className="text-xs sm:text-sm leading-relaxed text-slate-800 max-w-3xl mx-auto my-6 text-justify sm:text-center font-serif">
+                          <div className="text-xs sm:text-sm leading-relaxed text-slate-800 max-w-3xl mx-auto my-6 text-justify sm:text-center font-serif relative z-10">
                             This certificate is proudly presented to{" "}
                             <span className="text-red-600 font-extrabold underline decoration-red-200">
                               {viewVolunteer.fullName}
@@ -2151,7 +2164,7 @@ export default function AdminVolunteersPage() {
                           </div>
 
                           {/* ID & Date */}
-                          <div className="text-xs sm:text-sm font-bold text-slate-900 my-5 flex items-center justify-center gap-6 font-serif">
+                          <div className="text-xs sm:text-sm font-bold text-slate-900 my-5 flex items-center justify-center gap-6 font-serif relative z-10">
                             <span>
                               ID: <span className="text-red-600 font-extrabold font-mono">{displayMemberId}</span>
                             </span>
@@ -2161,7 +2174,7 @@ export default function AdminVolunteersPage() {
                           </div>
 
                           {/* Footer Row: QR Code & Signature */}
-                          <div className="mt-8 pt-4 border-t border-slate-100 flex items-end justify-between px-4">
+                          <div className="mt-8 pt-4 border-t border-slate-100 flex items-end justify-between px-4 relative z-10">
                             {/* QR Code */}
                             <div className="flex flex-col items-center">
                               <img
