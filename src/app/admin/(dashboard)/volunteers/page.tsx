@@ -528,7 +528,7 @@ export default function AdminVolunteersPage() {
                   <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
                   <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
                   <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
-                  <li>4. FOR EMERGENCIES, CONTACT SECURITY: +91 9729817600.</li>
+                  <li>4. FOR EMERGENCIES, CONTACT FOUNDATION EMAIL: CONTACT@FLARELAP.ORG.</li>
                   <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
                 </ul>
 
@@ -2785,7 +2785,7 @@ export default function AdminVolunteersPage() {
                                 <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
                                 <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
                                 <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
-                                <li>4. FOR EMERGENCIES, CONTACT SECURITY: +91 9729817600.</li>
+                                <li>4. FOR EMERGENCIES, CONTACT FOUNDATION EMAIL: CONTACT@FLARELAP.ORG.</li>
                                 <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
                               </ul>
 

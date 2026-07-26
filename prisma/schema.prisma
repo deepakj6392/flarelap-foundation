@@ -151,7 +151,7 @@ model Purchase {
 model SiteSetting {
   id        Int      @id @default(autoincrement())
   email     String   @default("contact@flarelap.org")
-  phone     String   @default("+919729817600")
+  phone     String   @default("")
   address   String   @default("Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.")
   location  String   @default("India")
   facebook  String   @default("https://www.facebook.com/flarelap.org")

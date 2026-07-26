@@ -602,7 +602,7 @@ export async function sendVolunteerEmail(
               <div class="footer-logo-text">FLARELAP GLOBAL FOUNDATION</div>
               <div class="footer-address">
                 Global Headquarters • Sirsal (38) Kaithal, Haryana, India - 136026<br/>
-                Helpline: +91 9729817600 | Email: contact@flarelap.org
+                Official Email: contact@flarelap.org
               </div>
 
               <a href="${appUrl}" target="_blank" class="footer-btn">Visit Official Portal &rarr;</a>
