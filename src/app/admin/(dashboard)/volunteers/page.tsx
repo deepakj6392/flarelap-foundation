@@ -1349,6 +1349,7 @@ export default function AdminVolunteersPage() {
                   <th className="py-3.5 px-4">Contact</th>
                   <th className="py-3.5 px-4">DOB / Age</th>
                   <th className="py-3.5 px-4">Aadhaar / UID</th>
+                  <th className="py-3.5 px-4">Registered On</th>
                   <th className="py-3.5 px-4 text-center">Actions</th>
                 </tr>
               </thead>
@@ -1465,6 +1466,18 @@ export default function AdminVolunteersPage() {
                         ) : (
                           <span className="text-[10px] text-slate-400">UID: N/A</span>
                         )}
+                      </td>
+
+                      {/* Registration Date & Time */}
+                      <td className="py-4 px-4 whitespace-nowrap">
+                        <div className="space-y-0.5">
+                          <span className="block font-bold text-slate-800 dark:text-slate-200">
+                            {v.createdAt ? new Date(v.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }) : "N/A"}
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-medium block">
+                            {v.createdAt ? new Date(v.createdAt).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true }) : ""}
+                          </span>
+                        </div>
                       </td>
 
                       {/* Actions */}
@@ -1687,32 +1700,6 @@ export default function AdminVolunteersPage() {
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="+91 9876543210"
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none"
-                    />
-                  </div>
-
-                  {/* Member Since (Start Date) */}
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                      Member Since (Start Date)
-                    </label>
-                    <input
-                      type="date"
-                      value={memberSince}
-                      onChange={(e) => setMemberSince(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
-                    />
-                  </div>
-
-                  {/* Expiry Date (Tenure End) */}
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                      Expiry Date (Tenure End)
-                    </label>
-                    <input
-                      type="date"
-                      value={expiryDate}
-                      onChange={(e) => setExpiryDate(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
                     />
                   </div>
                 </div>
