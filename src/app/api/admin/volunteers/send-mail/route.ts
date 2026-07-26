@@ -1,13 +1,13 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { verifyAuth } from "@/lib/auth";
+import { verifyAdmin } from "@/lib/auth";
 import { sendVolunteerEmail } from "@/lib/mail";
 
 export async function POST(req: Request) {
   try {
-    const authResult = await verifyAuth(req);
-    if (!authResult.valid) {
-      return NextResponse.json({ message: authResult.message }, { status: 401 });
+    const admin = verifyAdmin(req);
+    if (!admin) {
+      return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
     const { volunteerIds, subject, message } = await req.json();
