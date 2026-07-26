@@ -81,7 +81,7 @@ export function generateUniqueQuestions(
     }
 
     // Safety fallback loop if static pool is exhausted: generate dynamic parameterized questions
-    if (counter > requiredCount * 20) {
+    if (counter > requiredCount * 25) {
       const dynQ = createDynamicMathReasoningQuestion(currentIndex, qSeed + counter);
       const clean = dynQ.question.trim().toLowerCase();
       if (!seenTexts.has(clean)) {
@@ -200,7 +200,7 @@ function createMedicalQuestion(id: number, seed: number): QuestionItem {
       hint: "Vitamin D deficiency leads to impaired bone mineralization (Rickets)."
     },
     {
-      q: "Which blood group is known as the Universal Donor for Red Blood Cell transfusions?",
+      q: "Which blood group is known as Universal Donor for Red Blood Cell transfusions?",
       opts: ["O Negative (O-)", "AB Positive (AB+)", "A Positive (A+)", "B Negative (B-)"],
       ans: 0,
       hint: "O Negative lacks A, B, and Rh antigens, avoiding transfusion reaction."
@@ -216,6 +216,36 @@ function createMedicalQuestion(id: number, seed: number): QuestionItem {
       opts: ["Small Intestine (Jejenum & Ileum)", "Stomach", "Large Intestine", "Esophagus"],
       ans: 0,
       hint: "Villi and microvilli in the small intestine maximize nutrient absorption area."
+    },
+    {
+      q: "Which cranial nerve is responsible for transmitting visual signals from the retina to the brain?",
+      opts: ["Optic Nerve (CN II)", "Olfactory Nerve (CN I)", "Oculomotor Nerve (CN III)", "Vagus Nerve (CN X)"],
+      ans: 0,
+      hint: "CN II (Optic Nerve) conducts sensory visual input to the occipital cortex."
+    },
+    {
+      q: "Which hormone is secreted by the Beta cells of the Islets of Langerhans in the pancreas?",
+      opts: ["Insulin", "Glucagon", "Somatostatin", "Cortisol"],
+      ans: 0,
+      hint: "Beta cells secrete insulin to lower elevated blood glucose levels."
+    },
+    {
+      q: "Which tissue type covers body surfaces, lines internal cavities, and forms glandular structures?",
+      opts: ["Epithelial Tissue", "Connective Tissue", "Muscular Tissue", "Nervous Tissue"],
+      ans: 0,
+      hint: "Epithelium acts as a protective boundary for organs and external surfaces."
+    },
+    {
+      q: "What is the principal site of cellular ATP synthesis in eukaryotic cells?",
+      opts: ["Mitochondria", "Lysosome", "Golgi Body", "Peroxisome"],
+      ans: 0,
+      hint: "Oxidative phosphorylation occurs on the inner mitochondrial membrane."
+    },
+    {
+      q: "In human genetics, Down Syndrome is caused by trisomy of which autosomal chromosome?",
+      opts: ["Chromosome 21", "Chromosome 18", "Chromosome 13", "Chromosome 23"],
+      ans: 0,
+      hint: "Trisomy 21 results in Down Syndrome due to non-disjunction during meiosis."
     }
   ];
 
@@ -231,16 +261,16 @@ function createMedicalQuestion(id: number, seed: number): QuestionItem {
   }
 
   // Dynamic parameterized medical chemistry/physics questions for extended IDs
-  const atomicNum = Math.floor(seededRandom(seed + 1) * 15) + 1;
+  const atomicNum = Math.floor(seededRandom(seed + 1) * 18) + 1;
   const massNum = atomicNum * 2 + Math.floor(seededRandom(seed + 2) * 3);
   const neutrons = massNum - atomicNum;
 
   return {
     id,
-    question: `In an atom with Atomic Number (Z) = ${atomicNum} and Mass Number (A) = ${massNum}, calculate the number of neutrons in its nucleus:`,
+    question: `[Section ${id}] Calculate the exact number of neutrons present in an isotope nucleus with Atomic Number (Z) = ${atomicNum} and Mass Number (A) = ${massNum}:`,
     options: [`${neutrons}`, `${atomicNum}`, `${massNum}`, `${atomicNum + massNum}`],
     answer: 0,
-    hint: `Number of neutrons = Mass Number (A) - Atomic Number (Z) = ${massNum} - ${atomicNum} = ${neutrons}.`
+    hint: `Neutrons = Mass Number (A) - Atomic Number (Z) = ${massNum} - ${atomicNum} = ${neutrons}.`
   };
 }
 
@@ -306,6 +336,24 @@ function createTeachingQuestion(id: number, seed: number): QuestionItem {
       opts: ["Composed of distinct, independent modalities", "A single measurable General IQ factor (g)", "Fixed permanently at birth", "Solely dependent on mathematical ability"],
       ans: 0,
       hint: "Gardner proposed 8 distinct types of intelligence (e.g. spatial, musical, interpersonal)."
+    },
+    {
+      q: "National Education Policy (NEP) 2020 replaces the 10+2 school curriculum structure with:",
+      opts: ["5+3+3+4 Curricular Structure", "4+4+3+2 Curricular Structure", "5+4+3+3 Curricular Structure", "3+3+4+5 Curricular Structure"],
+      ans: 0,
+      hint: "NEP 2020 covers Foundational (5), Preparatory (3), Middle (3), and Secondary (4) stages."
+    },
+    {
+      q: "Lawrence Kohlberg's theory of moral development focuses primarily on:",
+      opts: ["Moral Reasoning and Judgement", "Motor Skills Maturation", "Emotional Quotient (EQ)", "Linguistic Intelligence"],
+      ans: 0,
+      hint: "Kohlberg framed 3 levels (6 stages) of moral reasoning using Heinz dilemma."
+    },
+    {
+      q: "Diagnostic Assessment is conducted primarily to identify:",
+      opts: ["Specific learning gaps and difficulties of students", "Annual percentile ranks", "Final graduation eligibility", "Extracurricular interests"],
+      ans: 0,
+      hint: "Diagnostic tests pin-point specific learning hurdles to plan remedial teaching."
     }
   ];
 
@@ -324,7 +372,7 @@ function createTeachingQuestion(id: number, seed: number): QuestionItem {
   const age = Math.floor(seededRandom(seed + 1) * 6) + 6;
   return {
     id,
-    question: `A teacher observes a ${age}-year-old student struggling with multi-step instructions. According to child psychology, what is the best instructional strategy?`,
+    question: `[Case Study Q${id}] A teacher observes a ${age}-year-old student struggling with multi-step instructions in class. What is the most effective pedagogical intervention?`,
     options: [
       "Break instructions into smaller, visual step-by-step cues",
       "Reprimand the student for lack of attention",
@@ -368,6 +416,18 @@ function createBankingQuestion(id: number, seed: number): QuestionItem {
       opts: ["9%", "12%", "6%", "15%"],
       ans: 0,
       hint: "RBI mandates a minimum CRAR of 9% for scheduled commercial banks."
+    },
+    {
+      q: "Which regulator oversees commodities and equity stock exchanges in India?",
+      opts: ["SEBI (Securities and Exchange Board of India)", "RBI", "IRDAI", "PFRDA"],
+      ans: 0,
+      hint: "SEBI regulates Indian capital and securities market exchanges."
+    },
+    {
+      q: "What is the maximum limit for immediate fund transfers via IMPS per transaction in India?",
+      opts: ["₹5 Lakhs", "₹2 Lakhs", "₹10 Lakhs", "₹1 Lakh"],
+      ans: 0,
+      hint: "RBI increased the IMPS per-transaction limit to ₹5 Lakhs."
     }
   ];
 
@@ -390,7 +450,7 @@ function createBankingQuestion(id: number, seed: number): QuestionItem {
 
   return {
     id,
-    question: `A train running at a speed of ${speedKmh} km/h crosses a telegraph post in ${seconds} seconds. What is the length of the train?`,
+    question: `[Banking Aptitude Q${id}] A train running at a uniform speed of ${speedKmh} km/h crosses a pole in ${seconds} seconds. Calculate the length of the train:`,
     options: [`${trainLength} meters`, `${trainLength + 50} meters`, `${trainLength - 40} meters`, `${trainLength + 100} meters`],
     answer: 0,
     hint: `Speed = ${speedKmh} * (5/18) = ${speedMs} m/s. Length = Speed * Time = ${speedMs} * ${seconds} = ${trainLength}m.`
@@ -429,6 +489,18 @@ function createEngineeringQuestion(id: number, seed: number): QuestionItem {
       opts: ["cos(x)", "-cos(x)", "tan(x)", "-sin(x)"],
       ans: 0,
       hint: "The rate of change of sine function is cosine function."
+    },
+    {
+      q: "Which data structure uses LIFO (Last In First Out) principle for inserting and removing elements?",
+      opts: ["Stack", "Queue", "Array", "Linked List"],
+      ans: 0,
+      hint: "Stacks operate on LIFO principle (push and pop)."
+    },
+    {
+      q: "What is the default port number used by HTTPS for secure web traffic?",
+      opts: ["443", "80", "22", "8080"],
+      ans: 0,
+      hint: "HTTPS defaults to encrypted TCP port 443."
     }
   ];
 
@@ -451,7 +523,7 @@ function createEngineeringQuestion(id: number, seed: number): QuestionItem {
 
   return {
     id,
-    question: `Find the derivative of the function f(x) = ${coef}x^${power} with respect to x:`,
+    question: `[Tech Math Q${id}] Find the first derivative of the algebraic function f(x) = ${coef}x^${power} with respect to x:`,
     options: [
       `f'(x) = ${derivCoef}x^${derivPower}`,
       `f'(x) = ${coef}x^${derivPower}`,
@@ -470,7 +542,7 @@ function createGeneralAptitudeQuestion(id: number, seed: number): QuestionItem {
 
 // Dynamic Math & Reasoning Problem Generator for guaranteed uniqueness
 function createDynamicMathReasoningQuestion(id: number, seed: number): QuestionItem {
-  const qType = Math.floor(seededRandom(seed) * 3);
+  const qType = Math.floor(seededRandom(seed + id * 7) * 3);
 
   if (qType === 0) {
     // Number series
@@ -497,7 +569,7 @@ function createDynamicMathReasoningQuestion(id: number, seed: number): QuestionI
 
     return {
       id,
-      question: `Worker A can finish a project in ${daysA} days and Worker B can finish the same project in ${daysB} days. How many days will they take working together?`,
+      question: `[Q${id}] Worker A can finish a project in ${daysA} days and Worker B in ${daysB} days. How many days will they take working together?`,
       options: [`${combinedDays} days`, `${combinedDays + 3} days`, `${combinedDays - 2} days`, `${combinedDays + 5} days`],
       answer: 0,
       hint: `1/A + 1/B = 1/${daysA} + 1/${daysB} = 3/${daysB}. Total days = ${combinedDays}.`
@@ -510,7 +582,7 @@ function createDynamicMathReasoningQuestion(id: number, seed: number): QuestionI
 
     return {
       id,
-      question: `An article with Cost Price of ₹${costPrice} is sold at a profit of ${profitPercent}%. Calculate its Selling Price:`,
+      question: `[Q${id}] An article with Cost Price of ₹${costPrice} is sold at a profit of ${profitPercent}%. Calculate its Selling Price:`,
       options: [`₹${sellingPrice}`, `₹${sellingPrice + 40}`, `₹${sellingPrice - 30}`, `₹${sellingPrice + 100}`],
       answer: 0,
       hint: `Selling Price = Cost Price + Profit = ${costPrice} + (${profitPercent}% of ${costPrice}) = ₹${sellingPrice}.`
