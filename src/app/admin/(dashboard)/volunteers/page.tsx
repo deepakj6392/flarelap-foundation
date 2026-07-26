@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -1332,11 +1332,10 @@ export default function AdminVolunteersPage() {
               setIsMailModalOpen(true);
             }}
             disabled={selectedVolunteerIds.length === 0}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md transition transform active:scale-95 cursor-pointer border-none ${
-              selectedVolunteerIds.length > 0
-                ? "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-purple-600/20"
-                : "bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600 cursor-not-allowed shadow-none"
-            }`}
+            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md transition transform active:scale-95 cursor-pointer border-none ${selectedVolunteerIds.length > 0
+              ? "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-purple-600/20"
+              : "bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-600 cursor-not-allowed shadow-none"
+              }`}
           >
             <Mail className="h-4 w-4" />
             <span>Send Message {selectedVolunteerIds.length > 0 && `(${selectedVolunteerIds.length})`}</span>
@@ -1676,11 +1675,10 @@ export default function AdminVolunteersPage() {
                         {showEllipsis && <span className="px-1 text-slate-400 font-bold">...</span>}
                         <button
                           onClick={() => setCurrentPage(p)}
-                          className={`min-w-[32px] h-8 rounded-lg text-xs font-bold transition cursor-pointer border ${
-                            currentPage === p
-                              ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
-                              : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800"
-                          }`}
+                          className={`min-w-[32px] h-8 rounded-lg text-xs font-bold transition cursor-pointer border ${currentPage === p
+                            ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                            : "bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800"
+                            }`}
                         >
                           {p}
                         </button>
@@ -1956,7 +1954,7 @@ export default function AdminVolunteersPage() {
 
             {/* Modal Body */}
             <form onSubmit={handleSaveVolunteer} className="p-6 overflow-y-auto space-y-6 flex-1">
-              
+
               {/* Profile Photo Upload */}
               <div className="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800">
                 <div className="relative h-24 w-24 rounded-full border-2 border-dashed border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 flex items-center justify-center overflow-hidden shrink-0 shadow-inner">
@@ -2379,33 +2377,30 @@ export default function AdminVolunteersPage() {
               <div className="flex border-b border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/50 px-6 pt-2 gap-2">
                 <button
                   onClick={() => setActiveViewTab("details")}
-                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
-                    activeViewTab === "details"
-                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
-                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
-                  }`}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${activeViewTab === "details"
+                    ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                    : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                    }`}
                 >
                   <User className="h-4 w-4" />
                   Overview & Aadhaar Docs
                 </button>
                 <button
                   onClick={() => setActiveViewTab("certificate")}
-                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
-                    activeViewTab === "certificate"
-                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
-                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
-                  }`}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${activeViewTab === "certificate"
+                    ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                    : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                    }`}
                 >
                   <Award className="h-4 w-4 text-amber-500" />
                   Certificate of Appreciation 🎖️
                 </button>
                 <button
                   onClick={() => setActiveViewTab("idcard")}
-                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${
-                    activeViewTab === "idcard"
-                      ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
-                      : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
-                  }`}
+                  className={`pb-2.5 px-4 text-xs font-extrabold flex items-center gap-2 border-b-2 transition cursor-pointer ${activeViewTab === "idcard"
+                    ? "border-emerald-500 text-emerald-600 dark:text-emerald-400"
+                    : "border-transparent text-slate-500 hover:text-slate-900 dark:hover:text-slate-200"
+                    }`}
                 >
                   <CreditCard className="h-4 w-4 text-indigo-500" />
                   Official ID Card 🪪
