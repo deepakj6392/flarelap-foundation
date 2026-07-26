@@ -104,9 +104,10 @@ export default function AdminVolunteersPage() {
   const [activeViewTab, setActiveViewTab] = useState<"details" | "certificate" | "idcard">("details");
   const [viewDocImage, setViewDocImage] = useState<{ title: string; url: string } | null>(null);
 
-  // Member Since & Expiry Date State
+  // Member Since, Expiry Date & Designation State (Custom Member Settings)
   const [memberSince, setMemberSince] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
+  const [viewDesignation, setViewDesignation] = useState("Volunteer");
   const [savingDates, setSavingDates] = useState(false);
 
   // Safe Date Formatter helper
@@ -133,12 +134,13 @@ export default function AdminVolunteersPage() {
   };
 
   // Print / Download ID Card Helper
-  const handlePrintIdCard = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
+  const handlePrintIdCard = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string, customDesignation?: string) => {
     const displayMemberId = getMemberId(v);
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
 
     const mSince = customMemberSince !== undefined && customMemberSince !== "" ? customMemberSince : v.memberSince;
     const mExp = customExpiryDate !== undefined && customExpiryDate !== "" ? customExpiryDate : v.expiryDate;
+    const displayDesignation = customDesignation !== undefined && customDesignation !== "" ? customDesignation : (v.designation || "Volunteer");
 
     const defaultStart = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate());
     const defaultEnd = regDate;
@@ -442,7 +444,7 @@ export default function AdminVolunteersPage() {
               <div style="margin-top: 4px; width: 100%;">
                 <div style="font-size: 16px; font-weight: 900; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2;">${v.fullName}</div>
                 <div style="display: inline-block; background: linear-gradient(135deg, #0f172a, #334155); color: #ffffff; padding: 2px 14px; border-radius: 20px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px;">
-                  ${v.designation || "Volunteer"}
+                  ${displayDesignation}
                 </div>
               </div>
 
@@ -454,7 +456,7 @@ export default function AdminVolunteersPage() {
                 </div>
                 <div class="info-row-item">
                   <span class="info-key">Designation</span>
-                  <span class="info-val-right">${v.designation || "Volunteer"}</span>
+                  <span class="info-val-right">${displayDesignation}</span>
                 </div>
                 <div class="info-row-item">
                   <span class="info-key">Member Since</span>
@@ -533,12 +535,13 @@ export default function AdminVolunteersPage() {
   };
 
   // Print / Download Certificate Helper
-  const handlePrintCertificate = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string) => {
+  const handlePrintCertificate = (v: Volunteer, customMemberSince?: string, customExpiryDate?: string, customDesignation?: string) => {
     const displayMemberId = getMemberId(v);
     const regDate = v.createdAt ? new Date(v.createdAt) : new Date();
 
     const mSince = customMemberSince !== undefined ? customMemberSince : v.memberSince;
     const mExp = customExpiryDate !== undefined ? customExpiryDate : v.expiryDate;
+    const displayDesignation = customDesignation !== undefined && customDesignation !== "" ? customDesignation : (v.designation || "Volunteer");
 
     const defaultStart = new Date(regDate.getFullYear() - 1, regDate.getMonth(), regDate.getDate());
     const defaultEnd = regDate;
@@ -671,7 +674,7 @@ export default function AdminVolunteersPage() {
             <img src="/logo.png" alt="Logo" class="cert-logo" onerror="this.src='/favicon.ico'" />
             <div class="cert-title">CERTIFICATE OF APPRECIATION</div>
             <div class="cert-body">
-              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a <span class="highlight">${v.designation || "Volunteer"}</span> with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
+              This certificate is proudly presented to <span class="highlight">${v.fullName}</span> in deep gratitude for their outstanding dedication and selfless service as a <span class="highlight">${displayDesignation}</span> with <span class="highlight">Flarelap Global Foundation</span> from <span class="highlight">${startDateStr}</span> to <span class="highlight">${endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
               <br/><br/>
               We highly commend their invaluable contribution, passion, and spirit of service.
             </div>
@@ -890,6 +893,7 @@ export default function AdminVolunteersPage() {
     setViewVolunteer(v);
     setMemberSince(v.memberSince || "");
     setExpiryDate(v.expiryDate || "");
+    setViewDesignation(v.designation || "Volunteer");
     setActiveViewTab("details");
   };
 
@@ -909,6 +913,7 @@ export default function AdminVolunteersPage() {
         body: JSON.stringify({
           memberSince,
           expiryDate,
+          designation: viewDesignation,
         }),
       });
 
@@ -920,19 +925,19 @@ export default function AdminVolunteersPage() {
         );
         Swal.fire({
           icon: "success",
-          title: "Dates Saved!",
-          text: "Member Since & Expiry Date updated successfully.",
+          title: "Settings Saved!",
+          text: "Member Since, Expiry Date & Designation updated successfully.",
           timer: 2000,
           showConfirmButton: false,
         });
       } else {
-        throw new Error(data.message || "Failed to update dates.");
+        throw new Error(data.message || "Failed to update settings.");
       }
     } catch (err: any) {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text: err.message || "Something went wrong while saving dates.",
+        text: err.message || "Something went wrong while saving settings.",
       });
     } finally {
       setSavingDates(false);
@@ -1550,24 +1555,6 @@ export default function AdminVolunteersPage() {
                     </select>
                   </div>
 
-                  {/* Designation */}
-                  <div>
-                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
-                      Member Designation *
-                    </label>
-                    <select
-                      value={designation}
-                      onChange={(e) => setDesignation(e.target.value)}
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 outline-none cursor-pointer"
-                    >
-                      {designationList.map((opt) => (
-                        <option key={opt} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
                   {/* Email */}
                   <div>
                     <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
@@ -1875,7 +1862,7 @@ export default function AdminVolunteersPage() {
 
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => handlePrintCertificate(viewVolunteer, memberSince, expiryDate)}
+                    onClick={() => handlePrintCertificate(viewVolunteer, memberSince, expiryDate, viewDesignation)}
                     className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold shadow-sm transition transform active:scale-95 cursor-pointer"
                     title="Print / Save Certificate as PDF"
                   >
@@ -1930,13 +1917,13 @@ export default function AdminVolunteersPage() {
 
               {/* Modal Body Content */}
               <div className="p-6 overflow-y-auto space-y-6">
-                {/* Member Since & Expiry Date Configuration Box */}
+                {/* Member Since, Expiry Date & Designation Configuration Box */}
                 <div className="p-4 rounded-xl bg-amber-500/10 dark:bg-amber-950/30 border border-amber-500/30 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <Calendar className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0" />
                       <h4 className="text-xs font-black uppercase text-amber-900 dark:text-amber-300 tracking-wider">
-                        Member Since & Expiry Date (Custom Certificate Dates)
+                        Member Since, Expiry Date & Designation (Custom Member Settings)
                       </h4>
                     </div>
                     <button
@@ -1946,11 +1933,11 @@ export default function AdminVolunteersPage() {
                       className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-xs transition transform active:scale-95 cursor-pointer disabled:opacity-50 border-none"
                     >
                       {savingDates ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <FileCheck className="h-3.5 w-3.5" />}
-                      Save Dates
+                      Save Settings
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
                         Member Since (Start Date)
@@ -1973,6 +1960,23 @@ export default function AdminVolunteersPage() {
                         onChange={(e) => setExpiryDate(e.target.value)}
                         className="w-full px-3 py-2 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-white dark:bg-slate-900 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500/30 outline-none cursor-pointer"
                       />
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1">
+                        Member Designation
+                      </label>
+                      <select
+                        value={viewDesignation}
+                        onChange={(e) => setViewDesignation(e.target.value)}
+                        className="w-full px-3 py-2 rounded-xl border border-amber-200 dark:border-amber-900/80 bg-white dark:bg-slate-900 text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500/30 outline-none cursor-pointer"
+                      >
+                        {designationList.map((opt) => (
+                          <option key={opt} value={opt}>
+                            {opt}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -2138,7 +2142,7 @@ export default function AdminVolunteersPage() {
                               {viewVolunteer.fullName}
                             </span>{" "}
                             in deep gratitude for their outstanding dedication and selfless service as a{" "}
-                            <span className="text-red-600 font-extrabold">{viewVolunteer.designation || "Volunteer"}</span>{" "}
+                            <span className="text-red-600 font-extrabold">{viewDesignation}</span>{" "}
                             with <span className="text-red-600 font-extrabold">Flarelap Global Foundation</span> from{" "}
                             <span className="text-red-600 font-extrabold">{startDateStr}</span> to{" "}
                             <span className="text-red-600 font-extrabold">{endDateStr}</span>. During their tenure, they demonstrated exceptional compassion, leadership, and a profound commitment to making a positive impact on our community. Their exemplary efforts and best work have significantly contributed to the success of initiative.
@@ -2196,7 +2200,7 @@ export default function AdminVolunteersPage() {
                         </p>
                       </div>
                       <button
-                        onClick={() => handlePrintIdCard(viewVolunteer, memberSince, expiryDate)}
+                        onClick={() => handlePrintIdCard(viewVolunteer, memberSince, expiryDate, viewDesignation)}
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider shadow-md shadow-purple-600/20 transition transform active:scale-95 cursor-pointer border-none"
                       >
                         <Printer className="h-4 w-4" />
@@ -2248,7 +2252,7 @@ export default function AdminVolunteersPage() {
                                 {viewVolunteer.fullName}
                               </h3>
                               <span className="inline-block bg-gradient-to-r from-slate-900 to-slate-800 text-white text-[9px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow-xs tracking-wider mt-1">
-                                {viewVolunteer.designation || "Volunteer"}
+                                {viewDesignation}
                               </span>
                             </div>
 
@@ -2260,7 +2264,7 @@ export default function AdminVolunteersPage() {
                               </div>
                               <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
                                 <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
-                                <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewVolunteer.designation || "Volunteer"}</span>
+                                <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewDesignation}</span>
                               </div>
                               <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
                                 <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
