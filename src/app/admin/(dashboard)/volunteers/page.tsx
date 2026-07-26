@@ -1226,7 +1226,15 @@ export default function AdminVolunteersPage() {
 
           <button
             type="button"
-            onClick={() => setIsMailModalOpen(true)}
+            onClick={() => {
+              if (!mailSubject) {
+                setMailSubject("Important Volunteer Notification - Flarelap Global Foundation");
+              }
+              if (!mailBody) {
+                setMailBody("<p>Dear Volunteer,</p>\n<p>Greetings from Flarelap Global Foundation!</p>\n<p>We are pleased to share an important update regarding our upcoming community initiatives and volunteer programs.</p>\n<br/>\n<p>Warm regards,<br/><b>Flarelap Global Foundation Team</b></p>");
+              }
+              setIsMailModalOpen(true);
+            }}
             disabled={selectedVolunteerIds.length === 0}
             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black uppercase tracking-wider shadow-md transition transform active:scale-95 cursor-pointer border-none ${
               selectedVolunteerIds.length > 0
