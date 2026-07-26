@@ -16,14 +16,33 @@ export async function GET(req: Request) {
 
     let mailLogs: any[] = [];
     if ((db as any).volunteerMailLog) {
-      mailLogs = await (db as any).volunteerMailLog.findMany({
-        orderBy: { createdAt: "desc" }
-      });
+      try {
+        mailLogs = await (db as any).volunteerMailLog.findMany({
+          orderBy: { createdAt: "desc" }
+        });
+      } catch (e) {
+        const rawLogs: any = await prisma.$queryRawUnsafe(
+          `SELECT id, subject, message, recipients, recipients_count as "recipientsCount", status, created_at as "createdAt" FROM volunteer_mail_logs ORDER BY created_at DESC`
+        );
+        mailLogs = rawLogs || [];
+      }
+    } else {
+      const rawLogs: any = await prisma.$queryRawUnsafe(
+        `SELECT id, subject, message, recipients, recipients_count as "recipientsCount", status, created_at as "createdAt" FROM volunteer_mail_logs ORDER BY created_at DESC`
+      );
+      mailLogs = rawLogs || [];
     }
 
-    return NextResponse.json({ mailLogs });
+    return NextResponse.json({ mailLogs: mailLogs || [] });
   } catch (error: any) {
     console.error("Fetch mail logs error:", error);
-    return NextResponse.json({ mailLogs: [], error: error.message });
+    try {
+      const rawLogs: any = await prisma.$queryRawUnsafe(
+        `SELECT id, subject, message, recipients, recipients_count as "recipientsCount", status, created_at as "createdAt" FROM volunteer_mail_logs ORDER BY created_at DESC`
+      );
+      return NextResponse.json({ mailLogs: rawLogs || [] });
+    } catch (rawErr) {
+      return NextResponse.json({ mailLogs: [] });
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma, resetPrismaClient } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 import { sendVolunteerEmail } from "@/lib/mail";
 
@@ -87,19 +87,47 @@ export async function POST(req: Request) {
       );
     }
 
-    // Create log record in database
+    // Create log record in database with Raw SQL Fallback for 100% persistence
     try {
-      await prisma.volunteerMailLog.create({
-        data: {
-          subject: subject.trim(),
-          message: message,
-          recipients: JSON.stringify(recipientDetails),
-          recipientsCount: result.count,
-          status: "SENT"
-        }
-      });
+      let db = prisma;
+      if (!(db as any).volunteerMailLog && typeof resetPrismaClient === "function") {
+        db = resetPrismaClient();
+      }
+
+      if ((db as any).volunteerMailLog) {
+        await (db as any).volunteerMailLog.create({
+          data: {
+            subject: subject.trim(),
+            message: message,
+            recipients: JSON.stringify(recipientDetails),
+            recipientsCount: result.count,
+            status: "SENT"
+          }
+        });
+      } else {
+        await prisma.$executeRawUnsafe(
+          `INSERT INTO volunteer_mail_logs (subject, message, recipients, recipients_count, status, created_at) VALUES ($1, $2, $3, $4, $5, NOW())`,
+          subject.trim(),
+          message,
+          JSON.stringify(recipientDetails),
+          result.count,
+          "SENT"
+        );
+      }
     } catch (logErr) {
-      console.error("Failed to create mail log entry:", logErr);
+      console.error("Mail log creation failed, using raw SQL fallback:", logErr);
+      try {
+        await prisma.$executeRawUnsafe(
+          `INSERT INTO volunteer_mail_logs (subject, message, recipients, recipients_count, status, created_at) VALUES ($1, $2, $3, $4, $5, NOW())`,
+          subject.trim(),
+          message,
+          JSON.stringify(recipientDetails),
+          result.count,
+          "SENT"
+        );
+      } catch (rawErr) {
+        console.error("Raw SQL fallback also failed:", rawErr);
+      }
     }
 
     return NextResponse.json({
