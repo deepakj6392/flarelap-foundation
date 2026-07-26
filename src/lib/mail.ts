@@ -392,8 +392,16 @@ export async function sendStudentWelcomeEmail(
   }
 }
 
+export interface VolunteerEmailRecipient {
+  fullName: string;
+  email: string;
+  phone?: string | null;
+  memberId?: string | null;
+  designation?: string | null;
+}
+
 export async function sendVolunteerEmail(
-  recipients: string[],
+  recipients: (string | VolunteerEmailRecipient)[],
   subject: string,
   htmlMessage: string
 ): Promise<{ success: boolean; count: number }> {
@@ -401,178 +409,226 @@ export async function sendVolunteerEmail(
     return { success: false, count: 0 };
   }
 
-  const htmlContent = `
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${subject}</title>
-        <style>
-          body {
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f1f5f9;
-            margin: 0;
-            padding: 0;
-            color: #1e293b;
-          }
-          .email-wrapper {
-            max-width: 620px;
-            margin: 30px auto;
-            background-color: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-            border: 1px solid #e2e8f0;
-          }
-          .email-header {
-            background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0d9488 100%);
-            padding: 36px 32px 28px 32px;
-            text-align: center;
-          }
-          .header-logo {
-            width: 68px;
-            height: 68px;
-            border-radius: 16px;
-            background: #ffffff;
-            padding: 6px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            margin: 0 auto 14px auto;
-            display: block;
-          }
-          .header-title {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 0.8px;
-            margin: 0 0 4px 0;
-            text-transform: uppercase;
-          }
-          .header-subtitle {
-            color: #a7f3d0;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin: 0 0 14px 0;
-            text-transform: uppercase;
-          }
-          .header-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #ffffff;
-            font-size: 10.5px;
-            font-weight: 800;
-            padding: 4px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
-          }
-          .email-body {
-            padding: 36px 32px;
-            font-size: 14.5px;
-            line-height: 1.75;
-            color: #334155;
-            background-color: #ffffff;
-          }
-          .message-box {
-            background-color: #ffffff;
-          }
-          .message-box p {
-            margin-top: 0;
-            margin-bottom: 16px;
-          }
-          .message-box h1, .message-box h2, .message-box h3 {
-            color: #065f46;
-            font-weight: 800;
-          }
-          .email-footer {
-            background-color: #0f172a;
-            padding: 30px 24px;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 12px;
-            line-height: 1.6;
-          }
-          .footer-logo-text {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-          }
-          .footer-address {
-            color: #cbd5e1;
-            font-size: 11.5px;
-            margin-bottom: 16px;
-          }
-          .footer-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: #ffffff !important;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 12px;
-            padding: 10px 24px;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
-          }
-          .footer-disclaimer {
-            font-size: 10.5px;
-            color: #64748b;
-            border-top: 1px solid #1e293b;
-            padding-top: 14px;
-            margin-top: 14px;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="email-wrapper">
-          <!-- HEADER -->
-          <div class="email-header">
-            <img src="${appUrl}/logo.png" alt="Flarelap Logo" class="header-logo" />
-            <h1 class="header-title">Flarelap Global Foundation</h1>
-            <p class="header-subtitle">Empowering Communities & Inspiring Change</p>
-            <div class="header-badge">★ OFFICIAL VOLUNTEER COMMUNICATION</div>
-          </div>
+  let sentCount = 0;
 
-          <!-- BODY CONTENT -->
-          <div class="email-body">
-            <div class="message-box">
-              ${htmlMessage}
-            </div>
-          </div>
+  for (const item of recipients) {
+    const isObject = typeof item !== "string" && item !== null;
+    const recipientEmail = isObject ? (item as VolunteerEmailRecipient).email : (item as string);
 
-          <!-- FOOTER -->
-          <div class="email-footer">
-            <div class="footer-logo-text">FLARELAP GLOBAL FOUNDATION</div>
-            <div class="footer-address">
-              Global Headquarters • Sirsal (38) Kaithal, Haryana, India - 136026<br/>
-              Helpline: +91 9729817600 | Email: contact@flarelap.org
+    if (!recipientEmail || !recipientEmail.includes("@")) continue;
+
+    const displayFullName = isObject ? ((item as VolunteerEmailRecipient).fullName || "Valued Volunteer") : "Valued Volunteer";
+    const displayMemberId = isObject ? ((item as VolunteerEmailRecipient).memberId || "FGF-VOLUNTEER") : "FGF-VOLUNTEER";
+    const displayDesignation = isObject ? ((item as VolunteerEmailRecipient).designation || "Volunteer") : "Volunteer";
+    const displayPhone = isObject ? ((item as VolunteerEmailRecipient).phone || "N/A") : "N/A";
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>${subject}</title>
+          <style>
+            body {
+              font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+              background-color: #f1f5f9;
+              margin: 0;
+              padding: 0;
+              color: #1e293b;
+            }
+            .email-wrapper {
+              max-width: 620px;
+              margin: 30px auto;
+              background-color: #ffffff;
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+              border: 1px solid #e2e8f0;
+            }
+            .email-header {
+              background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0d9488 100%);
+              padding: 36px 32px 28px 32px;
+              text-align: center;
+            }
+            .header-logo {
+              width: 68px;
+              height: 68px;
+              border-radius: 16px;
+              background: #ffffff;
+              padding: 6px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+              margin: 0 auto 14px auto;
+              display: block;
+            }
+            .header-title {
+              color: #ffffff;
+              font-size: 22px;
+              font-weight: 800;
+              letter-spacing: 0.8px;
+              margin: 0 0 4px 0;
+              text-transform: uppercase;
+            }
+            .header-subtitle {
+              color: #a7f3d0;
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 1.5px;
+              margin: 0 0 14px 0;
+              text-transform: uppercase;
+            }
+            .header-badge {
+              display: inline-block;
+              background: rgba(255, 255, 255, 0.18);
+              border: 1px solid rgba(255, 255, 255, 0.3);
+              color: #ffffff;
+              font-size: 10.5px;
+              font-weight: 800;
+              padding: 4px 14px;
+              border-radius: 20px;
+              letter-spacing: 0.5px;
+            }
+            .email-body {
+              padding: 36px 32px;
+              font-size: 14.5px;
+              line-height: 1.75;
+              color: #334155;
+              background-color: #ffffff;
+            }
+            .message-box {
+              background-color: #ffffff;
+            }
+            .message-box p {
+              margin-top: 0;
+              margin-bottom: 16px;
+            }
+            .message-box h1, .message-box h2, .message-box h3 {
+              color: #065f46;
+              font-weight: 800;
+            }
+            .email-footer {
+              background-color: #0f172a;
+              padding: 30px 24px;
+              text-align: center;
+              color: #94a3b8;
+              font-size: 12px;
+              line-height: 1.6;
+            }
+            .footer-logo-text {
+              color: #ffffff;
+              font-size: 14px;
+              font-weight: 800;
+              letter-spacing: 0.5px;
+              margin-bottom: 6px;
+            }
+            .footer-address {
+              color: #cbd5e1;
+              font-size: 11.5px;
+              margin-bottom: 16px;
+            }
+            .footer-btn {
+              display: inline-block;
+              background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+              color: #ffffff !important;
+              text-decoration: none;
+              font-weight: 800;
+              font-size: 12px;
+              padding: 10px 24px;
+              border-radius: 10px;
+              margin-bottom: 16px;
+              box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+            }
+            .footer-disclaimer {
+              font-size: 10.5px;
+              color: #64748b;
+              border-top: 1px solid #1e293b;
+              padding-top: 14px;
+              margin-top: 14px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="email-wrapper">
+            <!-- HEADER -->
+            <div class="email-header">
+              <img src="${appUrl}/logo.png" alt="Flarelap Logo" class="header-logo" />
+              <h1 class="header-title">Flarelap Global Foundation</h1>
+              <p class="header-subtitle">Empowering Communities & Inspiring Change</p>
+              <div class="header-badge">★ OFFICIAL VOLUNTEER COMMUNICATION</div>
             </div>
 
-            <a href="${appUrl}" target="_blank" class="footer-btn">Visit Official Portal &rarr;</a>
+            <!-- BODY CONTENT -->
+            <div class="email-body">
+              <!-- VOLUNTEER IDENTITY BADGE CARD -->
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; margin-bottom: 24px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="vertical-align: top;">
+                      <span style="font-size: 9.5px; font-weight: 800; color: #047857; text-transform: uppercase; letter-spacing: 0.5px;">MEMBER ID</span><br/>
+                      <strong style="font-size: 15px; font-family: monospace; color: #1e1b4b; letter-spacing: 0.5px;">${displayMemberId}</strong>
+                    </td>
+                    <td align="right" style="vertical-align: top;">
+                      <span style="font-size: 9.5px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">DESIGNATION</span><br/>
+                      <span style="background: #dbeafe; color: #1e40af; font-size: 10.5px; font-weight: 800; padding: 3px 10px; border-radius: 6px; text-transform: uppercase; display: inline-block; margin-top: 2px;">${displayDesignation}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="padding-top: 14px; border-top: 1px solid #e2e8f0; margin-top: 14px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td style="vertical-align: top;">
+                            <span style="font-size: 10.5px; font-weight: 700; color: #64748b; text-transform: uppercase;">Volunteer Name:</span><br/>
+                            <strong style="font-size: 14px; color: #0f172a;">${displayFullName}</strong>
+                          </td>
+                          <td align="right" style="vertical-align: top;">
+                            <span style="font-size: 10.5px; font-weight: 700; color: #64748b; text-transform: uppercase;">Contact Email:</span><br/>
+                            <strong style="font-size: 12px; color: #334155;">${recipientEmail}</strong><br/>
+                            <span style="font-size: 11px; color: #64748b;">Phone: ${displayPhone}</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
-            <div class="footer-disclaimer">
-              This is an official notification sent to registered volunteers of Flarelap Global Foundation.<br/>
-              © ${new Date().getFullYear()} Flarelap Global Foundation. All rights reserved.
+              <div class="message-box">
+                ${htmlMessage}
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="email-footer">
+              <div class="footer-logo-text">FLARELAP GLOBAL FOUNDATION</div>
+              <div class="footer-address">
+                Global Headquarters • Sirsal (38) Kaithal, Haryana, India - 136026<br/>
+                Helpline: +91 9729817600 | Email: contact@flarelap.org
+              </div>
+
+              <a href="${appUrl}" target="_blank" class="footer-btn">Visit Official Portal &rarr;</a>
+
+              <div class="footer-disclaimer">
+                This is an official notification sent to registered volunteers of Flarelap Global Foundation.<br/>
+                © ${new Date().getFullYear()} Flarelap Global Foundation. All rights reserved.
+              </div>
             </div>
           </div>
-        </div>
-      </body>
-    </html>
-  `;
+        </body>
+      </html>
+    `;
 
-  try {
-    await transporter.sendMail({
-      from: '"Flarelap Global Foundation" <flarelap.org@gmail.com>',
-      to: recipients.join(", "),
-      subject: subject,
-      html: htmlContent,
-    });
-    return { success: true, count: recipients.length };
-  } catch (error) {
-    console.error("Failed to send volunteer custom email:", error);
-    return { success: false, count: 0 };
+    try {
+      await transporter.sendMail({
+        from: '"Flarelap Global Foundation" <flarelap.org@gmail.com>',
+        to: recipientEmail,
+        subject: subject,
+        html: htmlContent,
+      });
+      sentCount++;
+    } catch (error) {
+      console.error(`Failed to send email to ${recipientEmail}:`, error);
+    }
   }
+
+  return { success: sentCount > 0, count: sentCount };
 }

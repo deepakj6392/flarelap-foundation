@@ -53,6 +53,15 @@ export const prisma: PrismaClient = new Proxy({} as PrismaClient, {
   get(_target, prop, receiver) {
     let instance = getPrismaInstance();
 
+    if (
+      typeof prop === "string" &&
+      !prop.startsWith("$") &&
+      prop !== "then" &&
+      !(instance as any)[prop]
+    ) {
+      instance = resetPrismaClient();
+    }
+
     const value = (instance as any)[prop];
     if (typeof value === "function") {
       return value.bind(instance);

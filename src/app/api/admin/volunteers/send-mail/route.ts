@@ -42,23 +42,43 @@ export async function POST(req: Request) {
         id: true,
         fullName: true,
         email: true,
-        designation: true
+        phone: true,
+        designation: true,
+        memberId: true,
+        createdAt: true
       }
     });
 
-    const recipientEmails = Array.from(
-      new Set(volunteers.map((v) => v.email.trim()).filter((e) => e && e.includes("@")))
-    );
+    const validVolunteers = volunteers.filter((v) => v.email && v.email.includes("@"));
 
-    if (recipientEmails.length === 0) {
+    if (validVolunteers.length === 0) {
       return NextResponse.json(
         { message: "No valid email addresses found for the selected volunteers." },
         { status: 400 }
       );
     }
 
+    // Format member ID for each recipient
+    const recipientDetails = validVolunteers.map((v) => {
+      let mId = v.memberId;
+      if (!mId || mId.startsWith("FGF-00")) {
+        const created = v.createdAt ? new Date(v.createdAt) : new Date();
+        const yearLast2 = created.getFullYear().toString().slice(-2);
+        const month2 = String(created.getMonth() + 1).padStart(2, "0");
+        const suffix = String(v.id || 1).padStart(2, "0").slice(-2);
+        mId = `FGF-${yearLast2}${month2}${suffix}`;
+      }
+      return {
+        fullName: v.fullName,
+        email: v.email.trim(),
+        phone: v.phone || "N/A",
+        memberId: mId,
+        designation: v.designation || "Volunteer"
+      };
+    });
+
     // Send email using Nodemailer helper
-    const result = await sendVolunteerEmail(recipientEmails, subject.trim(), message);
+    const result = await sendVolunteerEmail(recipientDetails, subject.trim(), message);
 
     if (!result.success) {
       return NextResponse.json(
@@ -68,15 +88,19 @@ export async function POST(req: Request) {
     }
 
     // Create log record in database
-    await prisma.volunteerMailLog.create({
-      data: {
-        subject: subject.trim(),
-        message: message,
-        recipients: JSON.stringify(volunteers),
-        recipientsCount: result.count,
-        status: "SENT"
-      }
-    });
+    try {
+      await prisma.volunteerMailLog.create({
+        data: {
+          subject: subject.trim(),
+          message: message,
+          recipients: JSON.stringify(recipientDetails),
+          recipientsCount: result.count,
+          status: "SENT"
+        }
+      });
+    } catch (logErr) {
+      console.error("Failed to create mail log entry:", logErr);
+    }
 
     return NextResponse.json({
       message: `Email sent successfully to ${result.count} volunteer(s).`,
