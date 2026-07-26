@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { translateTextToHindi, translateOptionToHindi } from "@/lib/translator";
+import { generateUniqueQuestions } from "@/lib/questionGenerator";
 
 
 interface MCQQuestion {
@@ -201,48 +202,9 @@ export default function CBTTestAttemptPage() {
           }
         ];
 
-        const baseQuestions = dbMcqs.length > 0 ? dbMcqs : fallbackMcqs;
-
-        // Deterministically shuffle questions and options based on details.id (test ID)
-        const seed = details.id || 12345;
-        const rng = createPRNG(seed);
-
-        // Shuffle base questions first
-        const shuffledBase = [...baseQuestions];
-        for (let i = shuffledBase.length - 1; i > 0; i--) {
-          const j = Math.floor(rng() * (i + 1));
-          const temp = shuffledBase[i];
-          shuffledBase[i] = shuffledBase[j];
-          shuffledBase[j] = temp;
-        }
-
-        const paddedQuestions: MCQQuestion[] = [];
-        for (let i = 0; i < details.qs; i++) {
-          const baseQ = shuffledBase[i % shuffledBase.length];
-          
-          // Pair options with their original index to trace correct answer
-          const mappedOpts = baseQ.options.map((opt, idx) => ({ opt, originalIdx: idx }));
-          
-          // Shuffle options using rng
-          for (let j = mappedOpts.length - 1; j > 0; j--) {
-            const k = Math.floor(rng() * (j + 1));
-            const temp = mappedOpts[j];
-            mappedOpts[j] = mappedOpts[k];
-            mappedOpts[k] = temp;
-          }
-
-          const newOptions = mappedOpts.map(x => x.opt);
-          const newAnswer = mappedOpts.findIndex(x => x.originalIdx === baseQ.answer);
-
-          paddedQuestions.push({
-            id: i + 1,
-            question: baseQ.question,
-            options: newOptions,
-            answer: newAnswer >= 0 ? newAnswer : baseQ.answer,
-            hint: baseQ.hint || ""
-          });
-        }
-        setQuestions(paddedQuestions);
+        const courseTitle = courseData.course?.name || "Mock Test Series";
+        const uniqueQuestions = generateUniqueQuestions(courseTitle, details.name, details.qs, dbMcqs);
+        setQuestions(uniqueQuestions);
       } catch (err: any) {
         console.error(err);
         setError(err.message || "An error occurred while loading exam data.");
@@ -407,7 +369,9 @@ export default function CBTTestAttemptPage() {
           answered: stats.answered,
           correct: stats.correct,
           wrong: stats.wrong,
-          duration: stats.duration
+          duration: stats.duration,
+          userAnswers: JSON.stringify(answers),
+          questionData: JSON.stringify(questions)
         })
       });
 

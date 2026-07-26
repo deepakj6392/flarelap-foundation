@@ -19,6 +19,7 @@ import {
 import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
 import { MCQ_BANKS, MCQQuestion } from "../data";
+import { generateUniqueQuestions } from "@/lib/questionGenerator";
 
 export default function MockExamsPage() {
   const { student, isDark, saveActivity } = useDashboard();
@@ -94,30 +95,8 @@ export default function MockExamsPage() {
           ? courseQuestions 
           : (MCQ_BANKS[courseId] || MCQ_BANKS[1] || []));
     
-    if (baseQuestions.length === 0) {
-      Swal.fire({
-        title: "No Questions",
-        text: "There are currently no mock questions available for this exam.",
-        icon: "info",
-        confirmButtonColor: "#4f46e5"
-      });
-      return;
-    }
-
-    const list: MCQQuestion[] = [];
-    for (let i = 0; i < size; i++) {
-      const actualIdx = examType === "reasoning"
-        ? (startIndex + i) % baseQuestions.length
-        : i % baseQuestions.length;
-      const baseQ = baseQuestions[actualIdx];
-      list.push({
-        id: i + 1,
-        question: baseQ.question,
-        options: [...baseQ.options],
-        answer: baseQ.answer,
-        hint: baseQ.hint || ""
-      });
-    }
+    const courseNameStr = student?.course_name || (examType === "reasoning" ? "Reasoning & Aptitude" : "Mock Exam");
+    const list = generateUniqueQuestions(courseNameStr, `${examType} Practice Quiz`, size, baseQuestions);
     
     setActiveExamType(examType);
     setActiveBundleSize(size);

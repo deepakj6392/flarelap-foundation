@@ -10,7 +10,12 @@ import {
   ShieldCheck,
   History,
   Sparkles,
-  Loader2
+  Loader2,
+  Eye,
+  CheckCircle2,
+  XCircle,
+  X,
+  Lightbulb
 } from "lucide-react";
 import { useDashboard } from "./layout";
 import { STUDY_MATERIALS } from "./data";
@@ -31,6 +36,10 @@ export default function StudentDashboardPage() {
   const [lastBundleSize, setLastBundleSize] = useState<number | null>(null);
   const [attempts, setAttempts] = useState<any[]>([]);
   const [attemptsLoading, setAttemptsLoading] = useState<boolean>(true);
+
+  // Solution Review Modal states
+  const [reviewAttempt, setReviewAttempt] = useState<any | null>(null);
+  const [reviewFilter, setReviewFilter] = useState<"ALL" | "CORRECT" | "INCORRECT" | "UNANSWERED">("ALL");
 
   useEffect(() => {
     if (student) {
@@ -297,7 +306,8 @@ export default function StudentDashboardPage() {
                       <th className="py-2.5 px-3">Date Taken</th>
                       <th className="py-2.5 px-3">Pattern</th>
                       <th className="py-2.5 px-3">Score (Marks)</th>
-                      <th className="py-2.5 px-3 text-right">Result</th>
+                      <th className="py-2.5 px-3">Result</th>
+                      <th className="py-2.5 px-3 text-right">Action</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-50 dark:divide-slate-850 font-semibold text-slate-650 dark:text-slate-350">
@@ -326,7 +336,7 @@ export default function StudentDashboardPage() {
                             </span>
                             <span className="text-slate-400 dark:text-slate-500"> / {attempt.totalQs * 2}</span>
                           </td>
-                          <td className="py-3 px-3 text-right">
+                          <td className="py-3 px-3">
                             <span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider ${
                               isPass 
                                 ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-900/30" 
@@ -334,6 +344,18 @@ export default function StudentDashboardPage() {
                             }`}>
                               {isPass ? "PASS" : "FAIL"}
                             </span>
+                          </td>
+                          <td className="py-3 px-3 text-right">
+                            <button
+                              onClick={() => {
+                                setReviewAttempt(attempt);
+                                setReviewFilter("ALL");
+                              }}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/60 dark:text-indigo-300 font-bold text-xs transition-colors border border-indigo-200/60 dark:border-indigo-800/40 shadow-2xs"
+                            >
+                              <Eye className="h-3.5 w-3.5" />
+                              <span>Review Answers</span>
+                            </button>
                           </td>
                         </tr>
                       );
@@ -435,6 +457,227 @@ export default function StudentDashboardPage() {
 
       </div>
 
+      {/* SOLUTION REVIEW MODAL */}
+      {reviewAttempt && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs overflow-y-auto">
+          <div className={`relative w-full max-w-4xl max-h-[90vh] rounded-2xl border flex flex-col overflow-hidden shadow-2xl ${
+            isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white border-slate-200 text-slate-900"
+          }`}>
+            {/* Modal Header */}
+            <div className="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-950/30">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                  <CheckCircle2 className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-base font-black tracking-tight">{reviewAttempt.test?.name || "Mock Test Results"}</h3>
+                  <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-semibold mt-0.5">
+                    <span>{reviewAttempt.course?.name}</span>
+                    <span>•</span>
+                    <span>{new Date(reviewAttempt.createdAt).toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                onClick={() => setReviewAttempt(null)}
+                className="p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Performance Summary Banner */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 bg-slate-100/50 dark:bg-slate-950/50 border-b border-slate-100 dark:border-slate-800 text-xs font-bold text-center">
+              <div className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <span className="text-slate-400 text-[10px] uppercase block">Total Questions</span>
+                <span className="text-base font-black text-slate-800 dark:text-slate-200">{reviewAttempt.totalQs}</span>
+              </div>
+              <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/40 text-emerald-800 dark:text-emerald-300">
+                <span className="text-emerald-600 dark:text-emerald-400 text-[10px] uppercase block">Correct</span>
+                <span className="text-base font-black">{reviewAttempt.correct} (+{reviewAttempt.correct * 2} Marks)</span>
+              </div>
+              <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-900/40 text-rose-800 dark:text-rose-300">
+                <span className="text-rose-600 dark:text-rose-400 text-[10px] uppercase block">Wrong</span>
+                <span className="text-base font-black">{reviewAttempt.wrong} (-{reviewAttempt.wrong * 0.5} Marks)</span>
+              </div>
+              <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900/40 text-indigo-800 dark:text-indigo-300">
+                <span className="text-indigo-600 dark:text-indigo-400 text-[10px] uppercase block">Final Score</span>
+                <span className="text-base font-black">{Number(reviewAttempt.score).toFixed(1)} / {reviewAttempt.totalQs * 2}</span>
+              </div>
+            </div>
+
+            {/* Question Filter Tabs */}
+            <div className="flex items-center gap-2 p-4 border-b border-slate-100 dark:border-slate-800 overflow-x-auto text-xs font-bold">
+              <button
+                onClick={() => setReviewFilter("ALL")}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  reviewFilter === "ALL"
+                    ? "bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white"
+                    : "bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700"
+                }`}
+              >
+                All Questions ({reviewAttempt.totalQs})
+              </button>
+              <button
+                onClick={() => setReviewFilter("CORRECT")}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  reviewFilter === "CORRECT"
+                    ? "bg-emerald-600 text-white border-emerald-600"
+                    : "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/40"
+                }`}
+              >
+                Correct ({reviewAttempt.correct})
+              </button>
+              <button
+                onClick={() => setReviewFilter("INCORRECT")}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  reviewFilter === "INCORRECT"
+                    ? "bg-rose-600 text-white border-rose-600"
+                    : "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-400 dark:border-rose-900/40"
+                }`}
+              >
+                Incorrect ({reviewAttempt.wrong})
+              </button>
+              <button
+                onClick={() => setReviewFilter("UNANSWERED")}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  reviewFilter === "UNANSWERED"
+                    ? "bg-amber-600 text-white border-amber-600"
+                    : "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-900/40"
+                }`}
+              >
+                Unanswered ({reviewAttempt.totalQs - reviewAttempt.answered})
+              </button>
+            </div>
+
+            {/* Questions Detailed Solution List */}
+            <div className="p-5 overflow-y-auto space-y-6 flex-1 max-h-[60vh]">
+              {(() => {
+                const parsedQs: any[] = reviewAttempt.questionData ? JSON.parse(reviewAttempt.questionData) : [];
+                const userAnsMap: Record<number, number> = reviewAttempt.userAnswers ? JSON.parse(reviewAttempt.userAnswers) : {};
+
+                if (parsedQs.length === 0) {
+                  return (
+                    <div className="text-center py-10 text-slate-500 font-semibold">
+                      <HelpCircle className="h-10 w-10 mx-auto mb-2 text-slate-400 opacity-60" />
+                      <p className="text-sm">Detailed question-by-question solution breakdown is recorded for new test attempts.</p>
+                      <p className="text-xs text-slate-400 mt-1">Please attempt a test to view full question solutions.</p>
+                    </div>
+                  );
+                }
+
+                const filtered = parsedQs.filter((q, idx) => {
+                  const picked = userAnsMap[idx];
+                  if (reviewFilter === "CORRECT") return picked === q.answer;
+                  if (reviewFilter === "INCORRECT") return picked !== undefined && picked !== q.answer;
+                  if (reviewFilter === "UNANSWERED") return picked === undefined;
+                  return true;
+                });
+
+                if (filtered.length === 0) {
+                  return (
+                    <div className="text-center py-8 text-slate-400 font-semibold text-xs">
+                      No questions match the selected filter.
+                    </div>
+                  );
+                }
+
+                return filtered.map((q, idx) => {
+                  const originalIdx = parsedQs.findIndex((item) => item.id === q.id || item.question === q.question);
+                  const qNum = originalIdx >= 0 ? originalIdx + 1 : idx + 1;
+                  const userChoice = userAnsMap[originalIdx >= 0 ? originalIdx : idx];
+                  const isCorrectChoice = userChoice === q.answer;
+                  const isUnanswered = userChoice === undefined;
+
+                  return (
+                    <div
+                      key={q.id || idx}
+                      className={`p-4 rounded-xl border space-y-3 ${
+                        isCorrectChoice
+                          ? "bg-emerald-50/20 border-emerald-200 dark:border-emerald-900/40"
+                          : isUnanswered
+                          ? "bg-slate-50/50 border-slate-200 dark:border-slate-800"
+                          : "bg-rose-50/20 border-rose-200 dark:border-rose-900/40"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start gap-2.5">
+                          <span className={`px-2.5 py-1 rounded-lg text-xs font-black shrink-0 ${
+                            isCorrectChoice
+                              ? "bg-emerald-500 text-white"
+                              : isUnanswered
+                              ? "bg-slate-400 text-white"
+                              : "bg-rose-500 text-white"
+                          }`}>
+                            Q{qNum}
+                          </span>
+                          <h4 className="text-xs sm:text-sm font-black leading-snug text-slate-900 dark:text-white mt-0.5">
+                            {q.question}
+                          </h4>
+                        </div>
+                        <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full shrink-0 ${
+                          isCorrectChoice
+                            ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
+                            : isUnanswered
+                            ? "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-400"
+                            : "bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300"
+                        }`}>
+                          {isCorrectChoice ? "Correct" : isUnanswered ? "Not Attempted" : "Incorrect"}
+                        </span>
+                      </div>
+
+                      {/* Options Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
+                        {q.options.map((opt: string, optIdx: number) => {
+                          const isPicked = userChoice === optIdx;
+                          const isRightAns = q.answer === optIdx;
+
+                          let style = "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300";
+                          let icon = null;
+
+                          if (isRightAns) {
+                            style = "bg-emerald-50 text-emerald-950 border-emerald-300 dark:bg-emerald-950/50 dark:border-emerald-800 dark:text-emerald-200 font-extrabold";
+                            icon = <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 ml-auto" />;
+                          } else if (isPicked && !isRightAns) {
+                            style = "bg-rose-50 text-rose-950 border-rose-300 dark:bg-rose-950/50 dark:border-rose-800 dark:text-rose-200 font-extrabold line-through";
+                            icon = <XCircle className="h-4 w-4 text-rose-600 shrink-0 ml-auto" />;
+                          }
+
+                          return (
+                            <div
+                              key={optIdx}
+                              className={`p-2.5 rounded-lg border flex items-center justify-between ${style}`}
+                            >
+                              <div className="flex items-center gap-2">
+                                <span className="font-mono text-[10px] font-black opacity-60">
+                                  {String.fromCharCode(65 + optIdx)}.
+                                </span>
+                                <span>{opt}</span>
+                              </div>
+                              {icon}
+                            </div>
+                          );
+                        })}
+                      </div>
+
+                      {/* Solution / Explanation Box */}
+                      {q.hint && (
+                        <div className="p-3 rounded-xl bg-indigo-50/70 dark:bg-indigo-950/30 border border-indigo-200/80 dark:border-indigo-900/40 text-xs text-indigo-950 dark:text-indigo-200 flex items-start gap-2">
+                          <Lightbulb className="h-4 w-4 text-indigo-600 shrink-0 mt-0.5" />
+                          <div>
+                            <span className="font-black block text-[10px] text-indigo-600 uppercase tracking-wider mb-0.5">Solution & Explanation</span>
+                            <p className="font-medium leading-relaxed">{q.hint}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                });
+              })()}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

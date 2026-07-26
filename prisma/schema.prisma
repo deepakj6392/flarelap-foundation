@@ -194,6 +194,8 @@ model TestAttempt {
   correct     Int
   wrong       Int
   duration    Int        // Time taken in seconds
+  userAnswers String?    @map("user_answers") @db.Text
+  questionData String?   @map("question_data") @db.Text
   createdAt   DateTime   @default(now()) @map("created_at")
 
   @@map("test_attempts")
