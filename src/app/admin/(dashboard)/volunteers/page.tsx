@@ -386,27 +386,28 @@ export default function AdminVolunteersPage() {
             margin-top: 8px;
           }
           .qr-card-img {
-            width: 50px;
-            height: 50px;
+            width: 64px;
+            height: 64px;
           }
           .holo-badge {
             background: linear-gradient(135deg, #0284c7, #818cf8, #f43f5e);
             color: #ffffff;
-            font-size: 8.5px;
+            font-size: 9.5px;
             font-weight: 900;
-            padding: 4px 8px;
+            padding: 5px 12px;
             border-radius: 6px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.2);
             letter-spacing: 1px;
+            text-transform: uppercase;
           }
           .card-footer-front {
             background: #0f172a;
             color: #ffffff;
             text-align: center;
-            padding: 6px 10px;
-            font-size: 7.5px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
+            padding: 8px 10px;
+            font-size: 8.5px;
+            font-weight: 900;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
           }
           .back-content {
@@ -414,37 +415,60 @@ export default function AdminVolunteersPage() {
             width: 100%;
             position: relative;
             z-index: 5;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
           }
           .rules-title {
-            font-size: 9.5px;
+            font-size: 11px;
             font-weight: 900;
             color: #0f172a;
             text-transform: uppercase;
-            margin-bottom: 6px;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 2px;
+            margin-bottom: 8px;
+            border-bottom: 1.5px solid #e2e8f0;
+            padding-bottom: 3px;
+            letter-spacing: 0.5px;
           }
           .rules-list {
-            font-size: 8px;
-            color: #334155;
-            line-height: 1.45;
+            font-size: 9.5px;
+            color: #1e293b;
+            line-height: 1.55;
             padding-left: 0;
             list-style: none;
             margin: 0;
+            font-weight: 600;
           }
           .rules-list li {
-            margin-bottom: 4px;
+            margin-bottom: 5px;
           }
           .validity-box {
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 5px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 7px;
             text-align: center;
-            font-size: 8.5px;
+            font-size: 9.5px;
+            font-weight: 900;
+            color: #0f172a;
+            margin-top: 10px;
+          }
+          .sig-text {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 18px;
             font-weight: 800;
             color: #0f172a;
-            margin-top: 8px;
+            margin-bottom: 2px;
+          }
+          .sig-label {
+            font-size: 8px;
+            font-weight: 900;
+            color: #64748b;
+            text-transform: uppercase;
+            border-top: 1px solid #cbd5e1;
+            padding-top: 2px;
+            white-space: nowrap;
           }
           @media print {
             body { padding: 0; background: white; }
@@ -462,46 +486,46 @@ export default function AdminVolunteersPage() {
             </div>
             <div class="accent-strip"></div>
 
-            <div class="card-body-front" style="padding: 6px 14px 10px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; position: relative; overflow: hidden;">
+            <div class="card-body-front" style="padding: 8px 14px 12px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; position: relative; overflow: hidden; flex: 1;">
               <!-- Faint Watermark Logo Background -->
               <img src="/id-watermark.jpg" alt="Watermark" style="position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; opacity: 0.08; pointer-events: none; z-index: 1; border-radius: 50%; object-fit: cover;" />
 
-              <!-- Circular Profile Photo (Below Header Banner) -->
+              <!-- Circular Profile Photo -->
               <div style="position: relative; margin-top: 4px; z-index: 5;">
-                <img src="${photoUrl}" alt="${v.fullName}" style="width: 114px; height: 114px; border-radius: 50%; border: 3.5px solid #ffffff; box-shadow: 0 6px 18px rgba(0,0,0,0.16); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
+                <img src="${photoUrl}" alt="${v.fullName}" style="width: 124px; height: 124px; border-radius: 50%; border: 4px solid #ffffff; box-shadow: 0 8px 22px rgba(0,0,0,0.18); object-fit: cover; background: #e2e8f0; display: block; margin: 0 auto;" onerror="this.src='/favicon.ico'" />
               </div>
 
               <!-- Member Name & Designation Badge -->
-              <div style="margin-top: 4px; width: 100%;">
-                <div style="font-size: 16px; font-weight: 900; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2;">${v.fullName}</div>
-                <div style="display: inline-block; background: linear-gradient(135deg, #0f172a, #334155); color: #ffffff; padding: 2px 14px; border-radius: 20px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px;">
+              <div style="margin-top: 6px; width: 100%;">
+                <div style="font-size: 18px; font-weight: 900; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2;">${v.fullName}</div>
+                <div style="display: inline-block; background: linear-gradient(135deg, #0f172a, #334155); color: #ffffff; padding: 3px 16px; border-radius: 20px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 5px;">
                   ${displayDesignation}
                 </div>
               </div>
 
               <!-- Centered Key Details Card Box -->
-              <div style="width: 100%; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 8px 12px; margin-top: 6px; box-sizing: border-box;">
-                <div class="info-row-item">
-                  <span class="info-key">Member ID</span>
-                  <span class="info-val-right info-val-blue">${displayMemberId}</span>
+              <div style="width: 100%; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 10px 14px; margin-top: 8px; box-sizing: border-box;">
+                <div class="info-row-item" style="display: flex; justify-content: space-between; padding-bottom: 4px; border-bottom: 1px solid #e2e8f0;">
+                  <span style="font-size: 10.5px; font-weight: 900; color: #64748b; text-transform: uppercase;">Member ID</span>
+                  <span style="font-size: 13.5px; font-family: monospace; font-weight: 900; color: #2563eb;">${displayMemberId}</span>
                 </div>
-                <div class="info-row-item">
-                  <span class="info-key">Designation</span>
-                  <span class="info-val-right">${displayDesignation}</span>
+                <div class="info-row-item" style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #e2e8f0;">
+                  <span style="font-size: 10.5px; font-weight: 900; color: #64748b; text-transform: uppercase;">Designation</span>
+                  <span style="font-size: 12px; font-weight: 800; color: #0f172a;">${displayDesignation}</span>
                 </div>
-                <div class="info-row-item">
-                  <span class="info-key">Member Since</span>
-                  <span class="info-val-right">${startDateStr}</span>
+                <div class="info-row-item" style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #e2e8f0;">
+                  <span style="font-size: 10.5px; font-weight: 900; color: #64748b; text-transform: uppercase;">Member Since</span>
+                  <span style="font-size: 11.5px; font-weight: 800; color: #1e293b;">${startDateStr}</span>
                 </div>
-                <div class="info-row-item" style="border-bottom: none; padding-bottom: 0;">
-                  <span class="info-key">Expiry Date</span>
-                  <span class="info-val-right">${endDateStr}</span>
+                <div class="info-row-item" style="display: flex; justify-content: space-between; padding-top: 4px;">
+                  <span style="font-size: 10.5px; font-weight: 900; color: #64748b; text-transform: uppercase;">Expiry Date</span>
+                  <span style="font-size: 11.5px; font-weight: 800; color: #1e293b;">${endDateStr}</span>
                 </div>
               </div>
 
-              <!-- Hologram Official Badge -->
-              <div style="margin-top: 6px;">
-                <div class="holo-badge" style="display: inline-block;">★ OFFICIAL MEMBER</div>
+              <!-- Official Badge (No Star, OFFICIAL APPROVED) -->
+              <div style="margin-top: 8px;">
+                <div class="holo-badge" style="display: inline-block;">OFFICIAL APPROVED</div>
               </div>
             </div>
 
@@ -518,35 +542,37 @@ export default function AdminVolunteersPage() {
             </div>
             <div class="accent-strip"></div>
 
-            <div class="card-body-front" style="position: relative; overflow: hidden; padding: 14px;">
+            <div class="card-body-front" style="position: relative; overflow: hidden; padding: 16px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
               <!-- Faint Watermark Logo Background for Back Side -->
               <img src="/id-watermark.jpg" alt="Watermark" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; opacity: 0.08; pointer-events: none; z-index: 1; border-radius: 50%; object-fit: cover;" />
 
               <div class="back-content">
-                <div class="rules-title">CARDHOLDER RULES & CONTACT</div>
-                <ul class="rules-list">
-                  <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
-                  <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
-                  <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
-                  <li>4. FOR EMERGENCIES, CONTACT FOUNDATION EMAIL: CONTACT@FLARELAP.ORG.</li>
-                  <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
-                </ul>
+                <div>
+                  <div class="rules-title">CARDHOLDER RULES & CONTACT</div>
+                  <ul class="rules-list">
+                    <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
+                    <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
+                    <li>3. FOUND CARDS SHOULD BE RETURNED TO: FLARELAP GLOBAL FOUNDATION, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
+                    <li>4. FOR EMERGENCIES, CONTACT: CONTACT@FLARELAP.ORG.</li>
+                    <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
+                  </ul>
 
-                <div class="validity-box">
-                  ISSUE DATE: ${startDateStr} &nbsp;|&nbsp; VALID UNTIL: ${endDateStr}
+                  <div class="validity-box">
+                    ISSUE DATE: ${startDateStr} &nbsp;|&nbsp; VALID UNTIL: ${endDateStr}
+                  </div>
                 </div>
 
-                <div class="sig-row" style="margin-top: 14px;">
+                <div class="sig-row" style="margin-top: 24px; display: flex; justify-content: space-between; align-items: flex-end;">
                   <div>
                     <div class="sig-text">Bharat Bhushan</div>
-                    <div class="sig-label">AUTHORIZED SIGNATORY</div>
+                    <div class="sig-label">AUTHORIZED SIGNATURE</div>
                   </div>
-                  <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 44px; height: 44px;" />
+                  <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 64px; height: 64px;" />
                 </div>
               </div>
 
-              <div class="card-footer-front" style="margin-top: auto; margin-left: -14px; margin-right: -14px; margin-bottom: -14px; position: relative; z-index: 5;">
-                FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
+              <div class="card-footer-front" style="margin-top: auto; margin-left: -16px; margin-right: -16px; margin-bottom: -16px; position: relative; z-index: 5;">
+                OFFICIAL EMAIL: CONTACT@FLARELAP.ORG
               </div>
             </div>
           </div>
@@ -2697,14 +2723,14 @@ export default function AdminVolunteersPage() {
                               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] opacity-[0.08] pointer-events-none z-0 rounded-full object-cover"
                             />
 
-                            {/* Circular Profile Photo (Below Header Banner) */}
+                            {/* Circular Profile Photo */}
                             <div className="mt-1 relative z-10">
-                              <div className="w-[114px] h-[114px] rounded-full border-4 border-white shadow-lg overflow-hidden bg-slate-100 mx-auto">
+                              <div className="w-[124px] h-[124px] rounded-full border-4 border-white shadow-lg overflow-hidden bg-slate-100 mx-auto">
                                 {viewVolunteer.profilePhoto ? (
                                   <img src={viewVolunteer.profilePhoto} alt={viewVolunteer.fullName} className="w-full h-full object-cover" />
                                 ) : (
                                   <div className="w-full h-full flex items-center justify-center bg-slate-200 text-slate-500">
-                                    <User className="h-10 w-10" />
+                                    <User className="h-12 w-12" />
                                   </div>
                                 )}
                               </div>
@@ -2712,43 +2738,43 @@ export default function AdminVolunteersPage() {
 
                             {/* Member Name & Designation Badge */}
                             <div className="w-full mt-1">
-                              <h3 className="text-base font-black text-slate-900 uppercase tracking-wide leading-tight">
+                              <h3 className="text-lg font-black text-slate-900 uppercase tracking-wide leading-tight">
                                 {viewVolunteer.fullName}
                               </h3>
-                              <span className="inline-block bg-gradient-to-r from-slate-900 to-slate-800 text-white text-[9px] font-extrabold uppercase px-3 py-0.5 rounded-full shadow-xs tracking-wider mt-1">
+                              <span className="inline-block bg-gradient-to-r from-slate-900 to-slate-800 text-white text-[10px] font-extrabold uppercase px-3.5 py-0.5 rounded-full shadow-xs tracking-wider mt-1">
                                 {viewDesignation}
                               </span>
                             </div>
 
                             {/* Centered Key Details Card Container */}
-                            <div className="w-full bg-slate-50/80 border border-slate-200/80 rounded-xl p-2.5 space-y-1.5 mt-2">
-                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
-                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member ID</span>
-                                <span className="font-mono font-black text-[13px] text-blue-600 tracking-tight">{displayMemberId}</span>
+                            <div className="w-full bg-slate-50/90 border border-slate-200 rounded-xl p-2.5 space-y-1.5 mt-2">
+                              <div className="flex items-center justify-between border-b border-slate-200/80 pb-1">
+                                <span className="text-[10.5px] font-black text-slate-500 uppercase tracking-wider shrink-0">Member ID</span>
+                                <span className="font-mono font-black text-[13.5px] text-blue-600 tracking-tight">{displayMemberId}</span>
                               </div>
-                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
-                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Designation</span>
-                                <span className="font-extrabold text-[11px] text-slate-900 truncate max-w-[100px] text-right">{viewDesignation}</span>
+                              <div className="flex items-center justify-between border-b border-slate-200/80 pb-1">
+                                <span className="text-[10.5px] font-black text-slate-500 uppercase tracking-wider shrink-0">Designation</span>
+                                <span className="font-extrabold text-[12px] text-slate-900 truncate max-w-[120px] text-right">{viewDesignation}</span>
                               </div>
-                              <div className="flex items-center justify-between border-b border-slate-200/60 pb-1">
-                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Member Since</span>
-                                <span className="font-bold text-[10.5px] text-slate-800">{startDateStr}</span>
+                              <div className="flex items-center justify-between border-b border-slate-200/80 pb-1">
+                                <span className="text-[10.5px] font-black text-slate-500 uppercase tracking-wider shrink-0">Member Since</span>
+                                <span className="font-bold text-[11px] text-slate-800">{startDateStr}</span>
                               </div>
                               <div className="flex items-center justify-between">
-                                <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider shrink-0">Expiry Date</span>
-                                <span className="font-bold text-[10.5px] text-slate-800">{endDateStr}</span>
+                                <span className="text-[10.5px] font-black text-slate-500 uppercase tracking-wider shrink-0">Expiry Date</span>
+                                <span className="font-bold text-[11px] text-slate-800">{endDateStr}</span>
                               </div>
                             </div>
 
-                            {/* Hologram Official Badge */}
+                            {/* Hologram Official Badge (No Star, OFFICIAL APPROVED) */}
                             <div className="mt-2">
-                              <span className="bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 text-white text-[8.5px] font-black px-2.5 py-1 rounded-md shadow-xs tracking-wider inline-block">
-                                ★ OFFICIAL MEMBER
+                              <span className="bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 text-white text-[9.5px] font-black px-3 py-1 rounded-md shadow-xs tracking-wider uppercase inline-block">
+                                OFFICIAL APPROVED
                               </span>
                             </div>
                           </div>
 
-                          <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider">
+                          <div className="bg-slate-900 text-white text-center py-2 text-[8.5px] font-black uppercase tracking-wider">
                             VALIDATED MEMBER ID CARD • WWW.FLARELAP.ORG
                           </div>
                         </div>
@@ -2759,7 +2785,7 @@ export default function AdminVolunteersPage() {
                         <span className="text-xs font-black uppercase text-indigo-600 dark:text-indigo-400 tracking-wider">
                           Back Side
                         </span>
-                        <div className="w-[310px] h-[490px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
+                        <div className="w-[320px] h-[500px] rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white text-slate-900 shadow-2xl overflow-hidden flex flex-col justify-between relative select-none">
                           {/* Back Header */}
                           <div className="relative h-[102px] w-full overflow-hidden bg-[#0038a8]">
                             {/* Lanyard Hole Cutout */}
@@ -2769,7 +2795,7 @@ export default function AdminVolunteersPage() {
                           <div className="h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400"></div>
 
                           {/* Back Content */}
-                          <div className="p-3.5 flex-1 flex flex-col justify-between relative bg-white overflow-hidden">
+                          <div className="p-4 flex-1 flex flex-col justify-between relative bg-white overflow-hidden">
                             {/* Faint Watermark Logo Background */}
                             <img
                               src="/id-watermark.jpg"
@@ -2777,37 +2803,39 @@ export default function AdminVolunteersPage() {
                               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] opacity-[0.08] pointer-events-none z-0 rounded-full object-cover"
                             />
 
-                            <div className="text-left relative z-10">
-                              <div className="text-[9.5px] font-black text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2">
-                                CARDHOLDER RULES & CONTACT
-                              </div>
-                              <ul className="text-[8px] text-slate-700 space-y-1.5 font-medium leading-tight">
-                                <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
-                                <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
-                                <li>3. FOUND CARDS SHOULD BE RETURNED TO: GLOBAL HEADQUARTERS, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
-                                <li>4. FOR EMERGENCIES, CONTACT FOUNDATION EMAIL: CONTACT@FLARELAP.ORG.</li>
-                                <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
-                              </ul>
+                            <div className="text-left relative z-10 flex-1 flex flex-col justify-between">
+                              <div>
+                                <div className="text-[11px] font-black text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-2">
+                                  CARDHOLDER RULES & CONTACT
+                                </div>
+                                <ul className="text-[9.5px] text-slate-800 space-y-1.5 font-semibold leading-relaxed">
+                                  <li>1. THIS CARD IS PROPERTY OF FLARELAP GLOBAL FOUNDATION.</li>
+                                  <li>2. IT MUST BE PRODUCED UPON REQUEST BY AUTHORIZED PERSONNEL.</li>
+                                  <li>3. FOUND CARDS SHOULD BE RETURNED TO: FLARELAP GLOBAL FOUNDATION, SIRSAL (38) KAITHAL, HARYANA, INDIA. PIN- 136026.</li>
+                                  <li>4. FOR EMERGENCIES, CONTACT: CONTACT@FLARELAP.ORG.</li>
+                                  <li>5. MISUSE SUBJECT TO DISCIPLINARY ACTION.</li>
+                                </ul>
 
-                              <div className="bg-slate-50/90 border border-slate-200 rounded-lg p-2 text-center mt-4">
-                                <span className="text-[8.5px] font-black text-slate-900">
-                                  ISSUE DATE: {startDateStr} &nbsp;|&nbsp; VALID UNTIL: {endDateStr}
-                                </span>
+                                <div className="bg-slate-50/90 border border-slate-200 rounded-xl p-2.5 text-center mt-3">
+                                  <span className="text-[9.5px] font-black text-slate-900">
+                                    ISSUE DATE: {startDateStr} &nbsp;|&nbsp; VALID UNTIL: {endDateStr}
+                                  </span>
+                                </div>
                               </div>
 
-                              <div className="flex items-center justify-between mt-4 pt-2">
+                              <div className="flex items-end justify-between mt-6 pt-2">
                                 <div>
-                                  <div className="font-serif italic text-base font-bold text-slate-900">Bharat Bhushan</div>
-                                  <div className="text-[7.5px] font-extrabold text-slate-400 uppercase border-t border-slate-300 pt-0.5 w-24">
-                                    AUTHORIZED SIGNATORY
+                                  <div className="font-serif italic text-lg font-bold text-slate-900 leading-tight">Bharat Bhushan</div>
+                                  <div className="text-[8px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
+                                    AUTHORIZED SIGNATURE
                                   </div>
                                 </div>
-                                <img src={qrUrl} alt="QR" className="w-10 h-10" />
+                                <img src={qrUrl} alt="QR" className="w-[64px] h-[64px] rounded-lg border border-slate-200 shadow-2xs" />
                               </div>
                             </div>
 
-                            <div className="bg-slate-900 text-white text-center py-1.5 text-[7.5px] font-black uppercase tracking-wider -mx-3.5 -mb-3.5 relative z-10">
-                              FOUNDATION HEADQUARTERS • KAITHAL, HARYANA, INDIA
+                            <div className="bg-slate-900 text-white text-center py-2 text-[8.5px] font-black uppercase tracking-wider -mx-4 -mb-4 relative z-10">
+                              OFFICIAL EMAIL: CONTACT@FLARELAP.ORG
                             </div>
                           </div>
                         </div>
