@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { email, phone, address, location, facebook, instagram, xLink, youtube, logoUrl } = body;
+    const { email, phone, address, location, facebook, instagram, xLink, youtube, logoUrl, signatureUrl } = body;
 
     let setting = await prisma.siteSetting.findFirst();
     if (setting) {
@@ -44,6 +44,7 @@ export async function POST(request: Request) {
           xLink: xLink !== undefined ? xLink.trim() : setting.xLink,
           youtube: youtube !== undefined ? youtube.trim() : setting.youtube,
           ...(logoUrl !== undefined && { logoUrl }),
+          ...(signatureUrl !== undefined && { signatureUrl }),
         }
       });
     } else {
@@ -58,6 +59,7 @@ export async function POST(request: Request) {
           xLink: xLink ? xLink.trim() : undefined,
           youtube: youtube ? youtube.trim() : undefined,
           logoUrl: logoUrl || "/logo.png",
+          signatureUrl: signatureUrl || "/signature.png",
         }
       });
     }

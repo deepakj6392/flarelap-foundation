@@ -149,17 +149,18 @@ model Purchase {
 }
 
 model SiteSetting {
-  id        Int      @id @default(autoincrement())
-  email     String   @default("contact@flarelap.org")
-  phone     String   @default("")
-  address   String   @default("Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.")
-  location  String   @default("India")
-  facebook  String   @default("https://www.facebook.com/flarelap.org")
-  instagram String   @default("https://www.instagram.com/flarelap_org")
-  xLink     String   @default("https://x.com/Flarelap_Org") @map("x_link")
-  youtube   String   @default("https://www.youtube.com/@flarelap_org")
-  logoUrl   String?  @default("/logo.png") @map("logo_url") @db.Text
-  updatedAt DateTime @updatedAt @map("updated_at")
+  id           Int      @id @default(autoincrement())
+  email        String   @default("contact@flarelap.org")
+  phone        String   @default("")
+  address      String   @default("Flarelap Global Foundation\nSirsal (38) Kaithal, Haryana, India. PIN- 136026.")
+  location     String   @default("India")
+  facebook     String   @default("https://www.facebook.com/flarelap.org")
+  instagram    String   @default("https://www.instagram.com/flarelap_org")
+  xLink        String   @default("https://x.com/Flarelap_Org") @map("x_link")
+  youtube      String   @default("https://www.youtube.com/@flarelap_org")
+  logoUrl      String?  @default("/logo.png") @map("logo_url") @db.Text
+  signatureUrl String?  @default("/signature.png") @map("signature_url") @db.Text
+  updatedAt    DateTime @updatedAt @map("updated_at")
 
   @@map("site_settings")
 }

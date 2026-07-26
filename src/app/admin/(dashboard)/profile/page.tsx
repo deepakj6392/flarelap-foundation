@@ -50,6 +50,9 @@ export default function ProfilePage() {
   const [logoUrl, setLogoUrl] = useState<string>("/logo.png");
   const [logoError, setLogoError] = useState<string | null>(null);
 
+  const [signatureUrl, setSignatureUrl] = useState<string>("/signature.png");
+  const [signatureError, setSignatureError] = useState<string | null>(null);
+
   // UI states
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -113,6 +116,9 @@ export default function ProfilePage() {
         if (data.setting.logoUrl) {
           setLogoUrl(data.setting.logoUrl);
         }
+        if (data.setting.signatureUrl) {
+          setSignatureUrl(data.setting.signatureUrl);
+        }
       }
     } catch (err: any) {
       console.error("Error loading site settings:", err);
@@ -133,6 +139,24 @@ export default function ProfilePage() {
     };
     reader.onerror = () => {
       setLogoError("Failed to read logo image file.");
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleSignatureUpload = (file: File) => {
+    setSignatureError(null);
+    const maxSizeBytes = 3 * 1024 * 1024; // 3MB limit
+    if (file.size > maxSizeBytes) {
+      setSignatureError(`Signature image size exceeds 3MB limit! (${(file.size / (1024 * 1024)).toFixed(2)}MB)`);
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setSignatureUrl(reader.result as string);
+    };
+    reader.onerror = () => {
+      setSignatureError("Failed to read signature image file.");
     };
     reader.readAsDataURL(file);
   };
@@ -220,7 +244,8 @@ export default function ProfilePage() {
           instagram,
           xLink,
           youtube,
-          logoUrl
+          logoUrl,
+          signatureUrl
         }),
       });
 
@@ -230,7 +255,7 @@ export default function ProfilePage() {
         throw new Error(data.message || "Failed to save site configurations.");
       }
 
-      setSuccess("Site settings and Logo updated successfully.");
+      setSuccess("Site settings, Logo & Authorized Signature updated successfully.");
     } catch (err: any) {
       setError(err.message || "An error occurred while saving site configurations.");
     } finally {
@@ -491,6 +516,55 @@ export default function ProfilePage() {
               </div>
             </div>
 
+            {/* Official Signature Upload */}
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 flex flex-col sm:flex-row items-center gap-6">
+              {/* Signature Preview */}
+              <div className="relative h-28 w-48 rounded-2xl border-2 border-dashed border-indigo-500/40 bg-white dark:bg-slate-900 flex items-center justify-center p-2 shrink-0 shadow-sm overflow-hidden">
+                {signatureUrl ? (
+                  <img src={signatureUrl} alt="Authorized Signature" className="h-full w-full object-contain filter contrast-125" />
+                ) : (
+                  <ImageIcon className="h-10 w-10 text-slate-400" />
+                )}
+              </div>
+
+              <div className="space-y-2 text-center sm:text-left flex-1">
+                <h4 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-wider">
+                  Official Authorized Signature (Bharat Bhushan) (Max 3MB)
+                </h4>
+                <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                  Upload official digital signature of Bharat Bhushan (PNG/JPG). Updating this signature dynamically updates it across all Volunteer ID Cards, Member Identity Badges, and Official Certificates automatically!
+                </p>
+
+                <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start pt-1">
+                  <label className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl text-xs font-extrabold cursor-pointer transition shadow-sm">
+                    <Upload className="h-4 w-4" />
+                    Choose New Signature Image
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(e) => {
+                        if (e.target.files?.[0]) {
+                          handleSignatureUpload(e.target.files[0]);
+                        }
+                      }}
+                      className="hidden"
+                    />
+                  </label>
+
+                  {signatureUrl && signatureUrl !== "/signature.png" && (
+                    <button
+                      type="button"
+                      onClick={() => setSignatureUrl("/signature.png")}
+                      className="text-xs text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-bold underline cursor-pointer"
+                    >
+                      Reset to Default Signature
+                    </button>
+                  )}
+                </div>
+                {signatureError && <p className="text-xs text-red-500 font-bold mt-1">{signatureError}</p>}
+              </div>
+            </div>
+
             <div className="pt-2 flex justify-end">
               <button
                 type="submit"
@@ -500,12 +574,12 @@ export default function ProfilePage() {
                 {settingsSaving ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    Saving Logo...
+                    Saving Settings...
                   </>
                 ) : (
                   <>
                     <CheckCircle2 className="h-4 w-4" />
-                    Save Logo & Branding Settings
+                    Save Logo & Signature Settings
                   </>
                 )}
               </button>

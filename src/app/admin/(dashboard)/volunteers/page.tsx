@@ -562,9 +562,9 @@ export default function AdminVolunteersPage() {
                   </div>
                 </div>
 
-                <div class="sig-row" style="margin-top: 16px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;">
+                <div class="sig-row" style="margin-top: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end;">
                   <div>
-                    <div class="sig-text">Bharat Bhushan</div>
+                    <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 38px; width: auto; max-width: 130px; object-fit: contain; filter: contrast(1.2); display: block; margin-bottom: 2px;" onerror="this.onerror=null; this.src='/signature.png';" />
                     <div class="sig-label">AUTHORIZED SIGNATURE</div>
                   </div>
                   <img src="${qrUrl}" alt="QR" class="qr-card-img" style="width: 66px; height: 66px;" />
@@ -746,8 +746,9 @@ export default function AdminVolunteersPage() {
               <div class="cert-footer">
                 <img src="${qrUrl}" alt="QR" class="qr-img" />
                 <div class="sig-box">
-                  <div class="sig-cursive">Bharat Bhushan</div>
-                  <div class="sig-title">Managing Director</div>
+                  <img src="${siteSignatureUrl || '/signature.png'}" alt="Signature" style="height: 48px; width: auto; max-width: 160px; object-fit: contain; filter: contrast(1.2); display: block; margin: 0 auto 2px auto;" onerror="this.onerror=null; this.src='/signature.png';" />
+                  <div class="sig-title" style="font-size: 11px; font-weight: 800; color: #1e293b;">Bharat Bhushan</div>
+                  <div class="sig-title" style="font-size: 9px; font-weight: 700; color: #64748b;">Managing Director</div>
                 </div>
               </div>
             </div>
@@ -853,10 +854,25 @@ export default function AdminVolunteersPage() {
     }
   };
 
+  const [siteSignatureUrl, setSiteSignatureUrl] = useState<string>("/signature.png");
+
+  const fetchSiteSignature = async () => {
+    try {
+      const res = await fetch("/api/site-settings");
+      const data = await res.json();
+      if (res.ok && data.setting?.signatureUrl) {
+        setSiteSignatureUrl(data.setting.signatureUrl);
+      }
+    } catch (err) {
+      console.error("Failed to fetch signature settings:", err);
+    }
+  };
+
   useEffect(() => {
     fetchVolunteers();
     fetchDesignationsList();
     fetchMailLogs();
+    fetchSiteSignature();
   }, []);
 
   useEffect(() => {
@@ -2660,11 +2676,17 @@ export default function AdminVolunteersPage() {
                             </div>
 
                             {/* Signature Box */}
-                            <div className="border-1.5 border-emerald-300 rounded-2xl px-8 py-2.5 bg-slate-50/80 text-center">
-                              <p className="font-serif italic text-2xl font-black text-slate-900 tracking-wide">
+                            <div className="border-1.5 border-emerald-300 rounded-2xl px-6 py-2 bg-slate-50/80 text-center flex flex-col items-center">
+                              <img
+                                src={siteSignatureUrl || "/signature.png"}
+                                alt="Authorized Signature"
+                                className="h-11 w-auto max-w-[150px] object-contain filter contrast-125 mb-1"
+                                onError={(e: any) => { e.currentTarget.src = "/signature.png"; }}
+                              />
+                              <p className="text-[11px] font-sans font-black text-slate-900 uppercase tracking-wider">
                                 Bharat Bhushan
                               </p>
-                              <p className="text-[11px] font-sans font-bold text-slate-800 uppercase tracking-wider mt-0.5">
+                              <p className="text-[9px] font-sans font-bold text-slate-500 uppercase tracking-wider">
                                 Managing Director
                               </p>
                             </div>
@@ -2819,16 +2841,20 @@ export default function AdminVolunteersPage() {
                                     ISSUE DATE: {startDateStr} &nbsp;|&nbsp; VALID UNTIL: {endDateStr}
                                   </span>
                                 </div>
-                              </div>
-
-                              <div className="flex items-end justify-between mt-4 mb-3.5 pt-1">
-                                <div>
-                                  <div className="font-serif italic text-xl font-bold text-slate-900 leading-tight">Bharat Bhushan</div>
-                                  <div className="text-[8px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
-                                    AUTHORIZED SIGNATURE
+                                <div className="flex items-end justify-between mt-3 mb-3.5 pt-1">
+                                  <div>
+                                    <img
+                                      src={siteSignatureUrl || "/signature.png"}
+                                      alt="Authorized Signature"
+                                      className="h-9 w-auto max-w-[130px] object-contain mb-1 filter contrast-125"
+                                      onError={(e: any) => { e.currentTarget.src = "/signature.png"; }}
+                                    />
+                                    <div className="text-[8px] font-black text-slate-500 uppercase border-t border-slate-300 pt-0.5 whitespace-nowrap">
+                                      AUTHORIZED SIGNATURE
+                                    </div>
                                   </div>
+                                  <img src={qrUrl} alt="QR" className="w-[66px] h-[66px] rounded-lg border border-slate-200 shadow-2xs" />
                                 </div>
-                                <img src={qrUrl} alt="QR" className="w-[66px] h-[66px] rounded-lg border border-slate-200 shadow-2xs" />
                               </div>
                             </div>
 
