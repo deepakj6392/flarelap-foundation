@@ -25,7 +25,8 @@ import {
   Images,
   HeartHandshake,
   History,
-  Briefcase
+  Briefcase,
+  CreditCard
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -141,6 +142,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Manage Categories";
       case "/admin/donations":
         return "Donation Records";
+      case "/admin/student-payments":
+        return "Student Plan Payments";
       case "/admin/students":
         return "Student Directory";
       case "/admin/volunteers":
@@ -220,6 +223,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/donations" className={getMenuBtnClass("/admin/donations")}>
               <Heart className={`h-5 w-5 ${pathname === '/admin/donations' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
               Donations
+            </Link>
+            <Link href="/admin/student-payments" className={getMenuBtnClass("/admin/student-payments")}>
+              <CreditCard className={`h-5 w-5 ${pathname === '/admin/student-payments' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />
+              Student Payments
             </Link>
             <Link href="/admin/students" className={getMenuBtnClass("/admin/students")}>
               <GraduationCap className={`h-5 w-5 ${pathname === '/admin/students' ? 'text-emerald-500' : 'text-slate-500 dark:text-slate-400'}`} />

@@ -20,7 +20,9 @@ import {
   LayoutDashboard,
   Loader2,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  History,
+  FileCheck
 } from "lucide-react";
 import { StudentProfile, StudentLog, Activity } from "./data";
 
@@ -250,6 +252,7 @@ export default function StudentDashboardLayout({
     if (pathname === "/student/dashboard/materials") return "Study Course Materials";
     if (pathname === "/student/dashboard/quiz") return "Interactive Mock Exam";
     if (pathname === "/student/dashboard/test-series") return "My Test Series & Passes";
+    if (pathname === "/student/dashboard/history") return "Mock Test History & Question Review";
     if (pathname === "/student/dashboard/profile") return "Student Security Settings";
     return "Student Dashboard";
   };
@@ -357,6 +360,13 @@ export default function StudentDashboardLayout({
                       className={getSubMenuBtnClass("/student/dashboard/test-series")}
                     >
                       Test Series
+                    </Link>
+                    <Link
+                      href="/student/dashboard/history"
+                      onClick={() => setSidebarOpen(false)}
+                      className={getSubMenuBtnClass("/student/dashboard/history")}
+                    >
+                      Test History & Review
                     </Link>
                   </div>
                 )}
