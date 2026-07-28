@@ -152,30 +152,6 @@ export const STUDY_MATERIALS: StudyMaterial[] = [
     content: "Blood accounts for ~8% of total body weight, consisting of 55% liquid Plasma and 45% Formed Elements (Erythrocytes/RBCs, Leukocytes/WBCs, and Thrombocytes/Platelets). RBCs transport oxygen via Hemoglobin (normal range: 12-16 g/dL). WBCs defend against pathogens (Neutrophils, Lymphocytes, Monocytes, Eosinophils, Basophils). Platelets are essential for blood clotting via the coagulation cascade.",
   },
 
-  // --- WEB DEVELOPMENT & IT CATEGORY ---
-  {
-    id: 1,
-    courseId: 1,
-    courseName: "Web Development Basics",
-    categoryId: 1,
-    categoryName: "Web Development & IT",
-    subject: "Web Development",
-    title: "Introduction to HTML5 & Semantic Web",
-    readTime: "8 mins read",
-    content: "HTML5 is the latest version of Hypertext Markup Language, the code that describes web pages. It consists of semantic elements like <header>, <nav>, <main>, <section>, <article>, and <footer>. Using semantic tags improves SEO, document accessibility for screen readers, and layout readability for developer teams. In HTML5, you also have modern APIs like LocalStorage, SessionStorage, Canvas drawing, and Geolocation tags directly in the browser.",
-  },
-  {
-    id: 2,
-    courseId: 1,
-    courseName: "Web Development Basics",
-    categoryId: 1,
-    categoryName: "Web Development & IT",
-    subject: "Web Development",
-    title: "CSS3 Flexbox and Layout Systems",
-    readTime: "10 mins read",
-    content: "CSS Flexible Box Layout (Flexbox) is a 1-dimensional layout model for arranging items in rows or columns. By setting display: flex on a parent element, it becomes a flex container. Children elements automatically become flex items. Flexbox allows items to grow to fill unused space or shrink to prevent overflow. Key properties include justify-content (aligns items along the main axis) and align-items (aligns items along the cross axis).",
-  },
-
   // --- COMPUTER SCIENCE CATEGORY ---
   {
     id: 3,

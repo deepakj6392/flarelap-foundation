@@ -91,9 +91,9 @@ export default function StudyMaterialsPage() {
     // 2. Category Tab Filter
     if (selectedCategoryTab === "MY_CATEGORY") {
       const isMyMatch = matchesStudentCategory(material);
-      // Fallback: if student enrolled in Web Dev (courseId: 1) or has no specific match, show course 1 or matching
-      if (!isMyMatch && (!studentCourseId || Number(studentCourseId) === 1)) {
-        return material.courseId === 1 || material.categoryName?.includes("Web Development");
+      // Default fallback if student has general course or no specific match: show SSC & Government Exams notes
+      if (!isMyMatch && (!studentCourseId || Number(studentCourseId) === 1 || !studentCategoryName || studentCategoryName === "None")) {
+        return material.categoryName === "SSC & Government Exams";
       }
       return isMyMatch;
     }
@@ -227,14 +227,14 @@ export default function StudyMaterialsPage() {
           </button>
 
           <button
-            onClick={() => setSelectedCategoryTab("Web Development")}
+            onClick={() => setSelectedCategoryTab("Computer Science")}
             className={`px-3 py-2 rounded-xl transition whitespace-nowrap cursor-pointer ${
-              selectedCategoryTab === "Web Development"
+              selectedCategoryTab === "Computer Science"
                 ? "bg-emerald-600 text-white font-black"
                 : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200"
             }`}
           >
-            Web Dev & CS
+            Computer Science
           </button>
         </div>
 
