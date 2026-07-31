@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed": "node seed-team.js"
+    "seed": "node seed-team.js",
+    "seed:mcqs": "node prisma/seed-mcqs.js",
+    "clear:mcqs": "node clear-mock-questions.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

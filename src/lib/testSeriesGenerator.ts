@@ -842,171 +842,171 @@ const SPECIAL_COURSE_SPECS: Record<string, {
   "nra cet 12th level mock test": {
     users: "53.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
   },
   "nra cet higher secondary 12th level mock test": {
     users: "53.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
   },
   "nra cet graduates mock test": {
     users: "54.2k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
   },
   "nra cet graduation level mock test": {
     users: "54.2k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "40 Total Tests Available", "Comprehensive Syllabus Cover"]
   },
   "aiims cre ldc/udc/steno/deo/jaa/sa mock test": {
     users: "57.7k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "nbe junior assistant 2024 mock tests series": {
     users: "9.2k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "5 PYP"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "5 PYP"]
   },
   "isro assistant mock test 2022": {
     users: "34.1k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "5 Previous Year Papers"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "5 Previous Year Papers"]
   },
   "isro junior personal assistant mock test 2022": {
     users: "29.1k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "ccras udc/ldc/steno/assistant mock test": {
     users: "32.7k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "nbe junior assistant mock test": {
     users: "38.0k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "cwc (central warehousing corporation) superintendent mock test": {
     users: "6.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "fci manager phase i & ii mock test 2022": {
     users: "205.4k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "fci stenographer mock test 2022": {
     users: "233.8k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "csir junior secretariat assistant (jsa) 2025 mock test": {
     users: "39.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "csir aso/so mock test 2023": {
     users: "133.9k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "upsc epfo personal assistant mock test": {
     users: "31.7k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "csir junior stenographer 2025 mock test": {
     users: "13.0k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "aai junior executive (common cadre) mock test": {
     users: "117.1k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "supreme court junior court assistant mock test": {
     users: "68.7k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "ccras mts 2025 mock test series": {
     users: "18.4k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "cbse junior assistant mock test 2025 (old)": {
     users: "65.1k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "jci junior assistant mock test series": {
     users: "5.8k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "cbse assistant/superintendent & all other post(tier i) mock test": {
     users: "10.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "npcil stipendiary trainee (category ii) prelims 2026 mock test": {
     users: "6.2k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "5 Previous Year Papers"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "5 Previous Year Papers"]
   },
   "india post postman & mail guard mock test": {
     users: "75.7k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "epfo stenographer (group c) mock test 2023": {
     users: "113.1k Users",
     totalTests: 40,
-    freeTests: 3,
+    freeTests: 4,
     languages: "Hindi, English",
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "sgpgi stenographer mock test series 2025": {
     users: "22.6k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   },
   "npcil scientific assistant physics mock test": {
     users: "17.5k Users",
     totalTests: 40,
-    freeTests: 3,
-    bullets: ["3 Full Mock Tests (Free)", "37 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
+    freeTests: 4,
+    bullets: ["4 Full Mock Tests (Free)", "36 Premium Pass Tests", "15 Subject Tests", "10 Chapter Tests"]
   }
 };
 
@@ -1038,18 +1038,18 @@ export const getCourseMetadata = (
   const userCount = spec ? spec.users : ((hash % 400) + 400).toFixed(1) + "k";
 
   let totalTests = 0;
-  let freeTests = 3;
+  let freeTests = 4;
 
   if (spec) {
     totalTests = spec.totalTests;
     freeTests = spec.freeTests;
   } else if (dbTestSeries && Array.isArray(dbTestSeries) && dbTestSeries.length > 0) {
     totalTests = dbTestSeries.length;
-    freeTests = Math.min(totalTests, dbTestSeries.filter((t: any) => t.isFree).length || 3);
+    freeTests = Math.min(totalTests, dbTestSeries.filter((t: any) => t.isFree).length || 4);
   } else {
     const subTests = generateSubTestsList(courseName, isPremium);
     totalTests = subTests.length;
-    freeTests = Math.min(totalTests, subTests.filter((t) => t.isFree).length || 3);
+    freeTests = Math.min(totalTests, subTests.filter((t) => t.isFree).length || 4);
   }
 
   if (!isPremium) {

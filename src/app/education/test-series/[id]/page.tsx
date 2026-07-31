@@ -905,10 +905,11 @@ export default function TestSeriesDetailsPage() {
       });
       if (res.ok) {
         const data = await res.json();
-        const ids = (data.purchases || []).map((p: any) => p.courseId);
+        const activePurchases = (data.purchases || []).filter((p: any) => p.isActive);
+        const ids = activePurchases.map((p: any) => p.courseId);
         setPurchasedCourseIds(ids);
 
-        const catIds = (data.purchases || [])
+        const catIds = activePurchases
           .map((p: any) => p.course?.categoryId)
           .filter((catId: any) => catId !== null && catId !== undefined);
         setPurchasedCategoryIds(catIds);
@@ -1280,7 +1281,7 @@ export default function TestSeriesDetailsPage() {
                     Practice Tests in this Series
                   </h2>
                   <div className="flex items-center gap-1 text-[11px] bg-slate-100 border border-slate-200 rounded-full px-3 py-1 text-slate-600 font-bold">
-                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "First 3 Tests Free" : "All Free Tests Included")}</span>
+                    <span>{isCoursePassActive ? "All Free Tests Included" : (course.premium ? "First 4 Tests Free" : "All Free Tests Included")}</span>
                   </div>
                 </div>
 
@@ -1461,7 +1462,7 @@ export default function TestSeriesDetailsPage() {
                   {!studentToken 
                     ? "Continue to Register" 
                     : (course.premium && !purchasedCourseIds.includes(course.id) && Number(studentProfile?.course_id) !== course.id) 
-                      ? `Buy Premium Pass - ₹${parseFloat(course.price?.toString() || "59")}` 
+                      ? `Pay for Next Month - ₹${parseFloat(course.price?.toString() || "59")}` 
                       : "Start Mock Test"}
                 </button>
 

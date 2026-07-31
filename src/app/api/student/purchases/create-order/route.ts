@@ -89,16 +89,20 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Course not found." }, { status: 404 });
     }
 
-    // Verify if already purchased
-    const alreadyPurchased = await prisma.purchase.findFirst({
+    // Check for an active 30-day subscription
+    const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+    const activePurchase = await prisma.purchase.findFirst({
       where: {
         userId: decoded.id,
         courseId: numericCourseId,
-        status: "COMPLETED"
+        status: "COMPLETED",
+        createdAt: {
+          gte: thirtyDaysAgo
+        }
       }
     });
-    if (alreadyPurchased) {
-      return NextResponse.json({ message: "You have already purchased this test series." }, { status: 400 });
+    if (activePurchase) {
+      return NextResponse.json({ message: "You already have an active 30-day subscription for this course." }, { status: 400 });
     }
 
     const keyId = process.env.RAZORPAY_API_KEY;

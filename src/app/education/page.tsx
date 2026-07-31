@@ -1168,7 +1168,7 @@ export default function EducationPage() {
                                 {course.name}
                               </h3>
                               <p className="mt-2 text-[11px] font-semibold text-slate-600">
-                                {meta.totalTests} Total Tests <span className="text-slate-300 mx-1">|</span> <span className="text-emerald-500">{course.premium ? "3 Free Tests" : "All Free Tests"}</span>
+                                {meta.totalTests} Total Tests <span className="text-slate-300 mx-1">|</span> <span className="text-emerald-500">{course.premium ? "4 Free Tests" : "All Free Tests"}</span>
                               </p>
                               <div className="flex items-center gap-1.5 mt-2 pb-4 border-b border-slate-200/60">
                                 <Globe className="h-3.5 w-3.5 text-[#00c2ff]" />
