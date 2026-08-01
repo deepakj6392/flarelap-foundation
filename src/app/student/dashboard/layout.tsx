@@ -5,15 +5,15 @@ import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/constants/site";
-import { 
-  BookOpen, 
-  HelpCircle, 
-  User, 
-  LogOut, 
-  Clock, 
-  ChevronRight, 
-  CheckCircle2, 
-  X, 
+import {
+  BookOpen,
+  HelpCircle,
+  User,
+  LogOut,
+  Clock,
+  ChevronRight,
+  CheckCircle2,
+  X,
   Menu,
   Sun,
   Moon,
@@ -79,7 +79,7 @@ export default function StudentDashboardLayout({
   // Set mounted and load localStorage values
   useEffect(() => {
     setMounted(true);
-    
+
     const storedUser = localStorage.getItem("student_user");
     if (storedUser) {
       try {
@@ -231,7 +231,7 @@ export default function StudentDashboardLayout({
     const base = "flex w-full items-center gap-3.5 rounded-xl px-4 py-3.5 text-xs font-bold tracking-wide transition-all duration-200 outline-none cursor-pointer";
     const isActive = pathname === route;
     if (isActive) {
-      return isDark 
+      return isDark
         ? `${base} bg-gradient-to-r from-emerald-950/40 to-emerald-900/20 text-emerald-400 border border-emerald-800/40 shadow-sm shadow-emerald-950/20`
         : `${base} bg-emerald-50 text-emerald-700 border border-emerald-100/70 shadow-sm shadow-emerald-100/20`;
     }
@@ -270,14 +270,12 @@ export default function StudentDashboardLayout({
       formatTimelineDate
     }}>
       <div className={`flex min-h-screen font-sans transition-colors duration-300 ${isDark ? "dark" : ""} ${bgMain}`}>
-        
+
         {/* LEFT COLLAPSIBLE SIDEBAR */}
-        <aside 
-          className={`fixed inset-y-0 left-0 z-50 flex shrink-0 flex-col justify-between border-r p-6 transition-all duration-300 ${bgSidebar} ${
-            sidebarOpen ? "translate-x-0 w-72" : "-translate-x-full w-72"
-          } lg:static lg:translate-x-0 ${
-            sidebarCollapsed ? "lg:w-0 lg:p-0 lg:border-r-0 lg:overflow-hidden lg:opacity-0" : "lg:w-72"
-          }`}
+        <aside
+          className={`fixed inset-y-0 left-0 z-50 flex shrink-0 flex-col justify-between border-r p-6 transition-all duration-300 ${bgSidebar} ${sidebarOpen ? "translate-x-0 w-72" : "-translate-x-full w-72"
+            } lg:static lg:translate-x-0 ${sidebarCollapsed ? "lg:w-0 lg:p-0 lg:border-r-0 lg:overflow-hidden lg:opacity-0" : "lg:w-72"
+            }`}
         >
           <div className="space-y-8">
             {/* Logo Section */}
@@ -301,7 +299,7 @@ export default function StudentDashboardLayout({
                   </p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setSidebarOpen(false)}
                 className={`rounded-lg p-1.5 border border-transparent transition lg:hidden ${isDark ? 'hover:bg-slate-800 text-slate-400' : 'hover:bg-slate-100 text-slate-500'}`}
               >
@@ -312,9 +310,9 @@ export default function StudentDashboardLayout({
             {/* Nav Links */}
             <nav className="space-y-3" aria-label="Sidebar navigation">
               {/* Overview Link */}
-              <Link 
+              <Link
                 href="/student/dashboard"
-                onClick={() => setSidebarOpen(false)} 
+                onClick={() => setSidebarOpen(false)}
                 className={getSidebarBtnClass("/student/dashboard")}
               >
                 <LayoutDashboard className={`h-4.5 w-4.5 ${pathname === '/student/dashboard' ? 'text-emerald-500' : 'text-slate-505 dark:text-slate-400'}`} />
@@ -337,16 +335,16 @@ export default function StudentDashboardLayout({
                     <ChevronDown className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
                   )}
                 </button>
-                
+
                 {studyPortalOpen && (
                   <div className="mt-1.5 ml-8 space-y-1.5 border-l border-slate-200 dark:border-slate-800 pl-3">
-                    <Link
+                    {/* <Link
                       href="/student/dashboard/materials"
                       onClick={() => setSidebarOpen(false)}
                       className={getSubMenuBtnClass("/student/dashboard/materials")}
                     >
                       Study Materials
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/student/dashboard/quiz"
                       onClick={() => setSidebarOpen(false)}
@@ -354,13 +352,13 @@ export default function StudentDashboardLayout({
                     >
                       Practice Mock Exams
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/student/dashboard/test-series"
                       onClick={() => setSidebarOpen(false)}
                       className={getSubMenuBtnClass("/student/dashboard/test-series")}
                     >
                       Test Series
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/student/dashboard/history"
                       onClick={() => setSidebarOpen(false)}
@@ -388,7 +386,7 @@ export default function StudentDashboardLayout({
                     <ChevronDown className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
                   )}
                 </button>
-                
+
                 {accountOpen && (
                   <div className="mt-1.5 ml-8 space-y-1.5 border-l border-slate-200 dark:border-slate-800 pl-3">
                     <Link
@@ -408,11 +406,10 @@ export default function StudentDashboardLayout({
           <div className="pt-6">
             <button
               onClick={handleLogout}
-              className={`flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-xs font-bold transition duration-200 cursor-pointer ${
-                isDark 
-                  ? "border-red-900/40 bg-red-955/20 dark:bg-red-950/20 text-red-400 hover:bg-red-900/25"
-                  : "border-red-200 bg-red-50 text-red-655 hover:bg-red-100"
-              }`}
+              className={`flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-xs font-bold transition duration-200 cursor-pointer ${isDark
+                ? "border-red-900/40 bg-red-955/20 dark:bg-red-950/20 text-red-400 hover:bg-red-900/25"
+                : "border-red-200 bg-red-50 text-red-655 hover:bg-red-100"
+                }`}
             >
               <LogOut className="h-4.5 w-4.5" />
               Sign Out
@@ -422,7 +419,7 @@ export default function StudentDashboardLayout({
 
         {/* Backdrop overlay for mobile sidebar */}
         {sidebarOpen && (
-          <div 
+          <div
             onClick={() => setSidebarOpen(false)}
             className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-xs lg:hidden"
           />
@@ -430,11 +427,11 @@ export default function StudentDashboardLayout({
 
         {/* MAIN CORE CONTENT WRAPPER */}
         <div className="flex flex-1 flex-col min-w-0 font-sans">
-          
+
           {/* Top Header Bar */}
           <header className={`sticky top-0 z-30 flex h-14 items-center justify-between px-6 py-2 backdrop-blur-md border-b transition ${bgHeader}`}>
             <div className="flex items-center gap-4">
-              <button 
+              <button
                 onClick={() => {
                   if (window.innerWidth < 1024) {
                     setSidebarOpen(true);
@@ -465,9 +462,8 @@ export default function StudentDashboardLayout({
               <span className={`h-6 w-px ${isDark ? 'bg-slate-800' : 'bg-slate-200'}`} />
 
               {/* User Profile Badge */}
-              <div className={`flex items-center gap-3 border rounded-xl pl-3 pr-4 py-1.5 shadow-sm max-w-[200px] sm:max-w-xs transition ${
-                isDark ? 'bg-slate-900 border-slate-800/80' : 'bg-white border-slate-200'
-              }`}>
+              <div className={`flex items-center gap-3 border rounded-xl pl-3 pr-4 py-1.5 shadow-sm max-w-[200px] sm:max-w-xs transition ${isDark ? 'bg-slate-900 border-slate-800/80' : 'bg-white border-slate-200'
+                }`}>
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-500/10 to-teal-400/5 border border-emerald-500/25 text-emerald-500 shadow-xs font-black text-sm">
                   {student.name.substring(0, 2).toUpperCase()}
                 </div>
@@ -492,9 +488,8 @@ export default function StudentDashboardLayout({
           </main>
 
           {/* FOOTER */}
-          <footer className={`border-t py-6 text-center text-xs font-semibold text-slate-400 mt-auto transition ${
-            isDark ? "bg-slate-950 border-slate-900" : "bg-white border-slate-200"
-          }`}>
+          <footer className={`border-t py-6 text-center text-xs font-semibold text-slate-400 mt-auto transition ${isDark ? "bg-slate-950 border-slate-900" : "bg-white border-slate-200"
+            }`}>
             <div className="max-w-7xl mx-auto px-6">
               © {new Date().getFullYear()} {siteConfig.name}. Empowering student minds globally.
             </div>
