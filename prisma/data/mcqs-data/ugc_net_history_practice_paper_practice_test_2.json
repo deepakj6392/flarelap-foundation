@@ -1,0 +1,177 @@
+{
+  "name": "UGC NET History Practice Paper - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "UGC NET History Practice Paper",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "ugc_net_history_practice_paper",
+  "questions": [
+    {
+      "question": "Who was the founder of the ancient Maurya Empire?",
+      "options": [
+        "Chandragupta Maurya",
+        "Ashoka the Great",
+        "Bindusara",
+        "Chandragupta II"
+      ],
+      "answer": 0,
+      "hint": "Chandragupta Maurya founded the dynasty in 322 BCE with Chanakya's guidance."
+    },
+    {
+      "question": "The famous Indus Valley site Harappa is situated on the banks of which river?",
+      "options": [
+        "Indus",
+        "Ravi",
+        "Ghaggar",
+        "Sutlej"
+      ],
+      "answer": 1,
+      "hint": "Harappa is located in Punjab, Pakistan on the old bank of the Ravi river."
+    },
+    {
+      "question": "Which Buddhist council was held during the reign of Emperor Ashoka?",
+      "options": [
+        "First council",
+        "Second council",
+        "Third council",
+        "Fourth council"
+      ],
+      "answer": 2,
+      "hint": "The Third Buddhist Council was held at Pataliputra under Ashoka's patronage."
+    },
+    {
+      "question": "Who wrote the famous book 'Indica', describing Mauryan administration?",
+      "options": [
+        "Chanakya",
+        "Megasthenes",
+        "Fa-Hien",
+        "Hiuen Tsang"
+      ],
+      "answer": 1,
+      "hint": "Megasthenes was a Greek ambassador sent by Seleucus I to Chandragupta's court."
+    },
+    {
+      "question": "The battle of Tarain (1191 AD) was fought between Prithviraj Chauhan and:",
+      "options": [
+        "Mahmud of Ghazni",
+        "Muhammad Ghori",
+        "Babur",
+        "Alauddin Khalji"
+      ],
+      "answer": 1,
+      "hint": "Prithviraj Chauhan defeated Ghori in the first battle but lost the second in 1192."
+    },
+    {
+      "question": "Who was the first ruler and founder of the Slave Dynasty in India?",
+      "options": [
+        "Iltutmish",
+        "Qutb-ud-din Aibak",
+        "Balban",
+        "Razia Sultana"
+      ],
+      "answer": 1,
+      "hint": "Aibak established the Mamluk/Slave dynasty in 1206."
+    },
+    {
+      "question": "The famous monument Taj Mahal was built by which Mughal Emperor?",
+      "options": [
+        "Akbar",
+        "Jahangir",
+        "Shah Jahan",
+        "Aurangzeb"
+      ],
+      "answer": 2,
+      "hint": "Shah Jahan built it in memory of his wife Mumtaz Mahal."
+    },
+    {
+      "question": "In which year did the East India Company acquire the Diwani rights over Bengal?",
+      "options": [
+        "1757",
+        "1764",
+        "1765",
+        "1773"
+      ],
+      "answer": 2,
+      "hint": "The Treaty of Allahabad in 1765 granted Diwani rights following the Battle of Buxar."
+    },
+    {
+      "question": "Who was the founder of the Arya Samaj organization?",
+      "options": [
+        "Raja Ram Mohan Roy",
+        "Swami Dayanand Saraswati",
+        "Swami Vivekananda",
+        "Keshab Chandra Sen"
+      ],
+      "answer": 1,
+      "hint": "Swami Dayanand Saraswati founded the Vedic reform movement in 1875."
+    },
+    {
+      "question": "The famous Partition of Bengal took place in which year?",
+      "options": [
+        "1905",
+        "1911",
+        "1919",
+        "1925"
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon partitioned Bengal in 1905, leading to the Swadeshi movement."
+    },
+    {
+      "question": "Who was the first President of the Indian National Congress in 1885?",
+      "options": [
+        "A.O. Hume",
+        "W.C. Bonnerjee",
+        "Dadabhai Naoroji",
+        "Gopal Krishna Gokhale"
+      ],
+      "answer": 1,
+      "hint": "Womesh Chandra Bonnerjee presided over the first session in Bombay."
+    },
+    {
+      "question": "In which year did Mahatma Gandhi lead the Salt Satyagraha (Dandi March)?",
+      "options": [
+        "1920",
+        "1930",
+        "1942",
+        "1947"
+      ],
+      "answer": 1,
+      "hint": "The Dandi March started on March 12, 1930 and marked the Civil Disobedience launch."
+    },
+    {
+      "question": "The Quit India Movement was launched in which year?",
+      "options": [
+        "1940",
+        "1942",
+        "1945",
+        "1946"
+      ],
+      "answer": 1,
+      "hint": "Gandhi gave the call \"Do or Die\" in August 1942 at Bombay."
+    },
+    {
+      "question": "Who was the first Governor-General of independent India?",
+      "options": [
+        "C. Rajagopalachari",
+        "Lord Mountbatten",
+        "Dr. Rajendra Prasad",
+        "Jawaharlal Nehru"
+      ],
+      "answer": 1,
+      "hint": "Lord Mountbatten served as Governor-General until Rajagopalachari succeeded him in 1948."
+    },
+    {
+      "question": "Which ancient inscription provides details about Ashoka's Kalinga war?",
+      "options": [
+        "Rummindei Pillar Inscription",
+        "Allahabad Pillar Inscription",
+        "Major Rock Edict XIII",
+        "Junagarh Inscription"
+      ],
+      "answer": 2,
+      "hint": "Rock Edict 13 describes the slaughter and Ashoka's transition to Dhamma."
+    }
+  ]
+}

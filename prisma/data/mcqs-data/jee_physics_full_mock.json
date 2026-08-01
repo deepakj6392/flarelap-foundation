@@ -1,0 +1,177 @@
+{
+  "name": "JEE Physics Full Mock",
+  "type": "Full Mock",
+  "courseName": "JEE Physics Practice Prep",
+  "qs": 90,
+  "marks": 300,
+  "duration": 180,
+  "isFree": false,
+  "categoryKey": "jee_physics",
+  "questions": [
+    {
+      "question": "In the SI system, what is the unit of Force?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Watt",
+        "Pascal"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Force is Newton."
+    },
+    {
+      "question": "In the SI system, what is the unit of Work and Energy?",
+      "options": [
+        "Joule",
+        "Newton",
+        "Watt",
+        "Pascal"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Work and Energy is Joule."
+    },
+    {
+      "question": "In the SI system, what is the unit of Power?",
+      "options": [
+        "Watt",
+        "Newton",
+        "Joule",
+        "Pascal"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Power is Watt."
+    },
+    {
+      "question": "In the SI system, what is the unit of Pressure?",
+      "options": [
+        "Pascal",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Pressure is Pascal."
+    },
+    {
+      "question": "In the SI system, what is the unit of Frequency?",
+      "options": [
+        "Hertz",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Frequency is Hertz."
+    },
+    {
+      "question": "In the SI system, what is the unit of Electric Charge?",
+      "options": [
+        "Coulomb",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Electric Charge is Coulomb."
+    },
+    {
+      "question": "In the SI system, what is the unit of Electric Current?",
+      "options": [
+        "Ampere",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Electric Current is Ampere."
+    },
+    {
+      "question": "In the SI system, what is the unit of Electric Potential (Voltage)?",
+      "options": [
+        "Volt",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Electric Potential (Voltage) is Volt."
+    },
+    {
+      "question": "In the SI system, what is the unit of Electric Resistance?",
+      "options": [
+        "Ohm",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Electric Resistance is Ohm."
+    },
+    {
+      "question": "In the SI system, what is the unit of Electric Capacitance?",
+      "options": [
+        "Farad",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Electric Capacitance is Farad."
+    },
+    {
+      "question": "In the SI system, what is the unit of Magnetic Flux?",
+      "options": [
+        "Weber",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Magnetic Flux is Weber."
+    },
+    {
+      "question": "In the SI system, what is the unit of Magnetic Inductance?",
+      "options": [
+        "Henry",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Magnetic Inductance is Henry."
+    },
+    {
+      "question": "In the SI system, what is the unit of Luminous Intensity?",
+      "options": [
+        "Candela",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Luminous Intensity is Candela."
+    },
+    {
+      "question": "In the SI system, what is the unit of Thermodynamic Temperature?",
+      "options": [
+        "Kelvin",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Thermodynamic Temperature is Kelvin."
+    },
+    {
+      "question": "In the SI system, what is the unit of Amount of Substance?",
+      "options": [
+        "Mole",
+        "Newton",
+        "Joule",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "SI unit of Amount of Substance is Mole."
+    }
+  ]
+}

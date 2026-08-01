@@ -1,0 +1,177 @@
+{
+  "name": "Government Organizations Officer Mock - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "Government Organizations Officer Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "government_organizations_officer_mock",
+  "questions": [
+    {
+      "question": "Which body acts as the supreme audit authority in India?",
+      "options": [
+        "CAG (Comptroller and Auditor General)",
+        "Finance Commission",
+        "RBI",
+        "Supreme Court"
+      ],
+      "answer": 0,
+      "hint": "Article 148 mandates CAG to audit receipts and expenditures of government."
+    },
+    {
+      "question": "In administrative terminology, what is a circular?",
+      "options": [
+        "Information sent to multiple recipients",
+        "A private note",
+        "An audit report",
+        "A salary slip"
+      ],
+      "answer": 0,
+      "hint": "Circulars broadcast standard policies or notices to broad employee lists."
+    },
+    {
+      "question": "The right to information (RTI) in India was enacted in:",
+      "options": [
+        "2005",
+        "2000",
+        "2010",
+        "2015"
+      ],
+      "answer": 0,
+      "hint": "RTI Act of 2005 replaced the older Freedom of Information Act."
+    },
+    {
+      "question": "Who is the head of the civil services board in India?",
+      "options": [
+        "Cabinet Secretary",
+        "Prime Minister",
+        "Home Minister",
+        "President"
+      ],
+      "answer": 0,
+      "hint": "Cabinet Secretary heads the Civil Services Board and civil administrations."
+    },
+    {
+      "question": "Central Vigilance Commission (CVC) was established on recommendations of:",
+      "options": [
+        "Santhanam Committee",
+        "Sarkaria Commission",
+        "Kothari Commission",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Santhanam Committee recommended CVC in 1964 to combat corruption."
+    },
+    {
+      "question": "What is the term of office for a member of UPSC?",
+      "options": [
+        "6 years or 65 years of age",
+        "5 years",
+        "62 years of age",
+        "3 years"
+      ],
+      "answer": 0,
+      "hint": "UPSC members hold office for 6 years or until reaching 65 years of age."
+    },
+    {
+      "question": "Official secrets act in India was first enacted in:",
+      "options": [
+        "1923",
+        "1947",
+        "1950",
+        "1920"
+      ],
+      "answer": 0,
+      "hint": "The OSA was passed in 1923 during British rule to secure official files."
+    },
+    {
+      "question": "In government offices, CCS Rules stand for:",
+      "options": [
+        "Central Civil Services Rules",
+        "Common Civil Service Rules",
+        "Central Conduct Service Rules",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "CCS (Conduct) Rules outline the code of conduct for central bureaucrats."
+    },
+    {
+      "question": "The budget is presented in the Parliament by:",
+      "options": [
+        "Finance Minister",
+        "Prime Minister",
+        "Speaker of Lok Sabha",
+        "President"
+      ],
+      "answer": 0,
+      "hint": "Ministry of Finance drafts the annual budget, presented by the minister."
+    },
+    {
+      "question": "What does NITI in NITI Aayog stand for?",
+      "options": [
+        "National Institution for Transforming India",
+        "National Integration and Trade Institution",
+        "National Investment Trust of India",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "NITI stands for National Institution for Transforming India, replacing the Planning Commission."
+    },
+    {
+      "question": "The supreme command of defence forces is vested in:",
+      "options": [
+        "President of India",
+        "Prime Minister",
+        "Defence Minister",
+        "Chief of Defence Staff"
+      ],
+      "answer": 0,
+      "hint": "Article 53(2) gives supreme command of Defence Forces to the President."
+    },
+    {
+      "question": "Who administers oath to the Governor of a state?",
+      "options": [
+        "Chief Justice of the State High Court",
+        "President",
+        "Chief Minister",
+        "Vice President"
+      ],
+      "answer": 0,
+      "hint": "Article 159 dictates that the Chief Justice of State High Court administers the oath."
+    },
+    {
+      "question": "The national human rights commission (NHRC) is a:",
+      "options": [
+        "Statutory body",
+        "Constitutional body",
+        "Private NGO",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "NHRC was set up under Protection of Human Rights Act, 1993, making it statutory."
+    },
+    {
+      "question": "Which schedules of Indian Constitution contain list of languages?",
+      "options": [
+        "8th Schedule",
+        "7th Schedule",
+        "9th Schedule",
+        "10th Schedule"
+      ],
+      "answer": 0,
+      "hint": "The 8th Schedule lists 22 officially recognized languages."
+    },
+    {
+      "question": "What is the minimum age to become member of Rajya Sabha?",
+      "options": [
+        "30 years",
+        "25 years",
+        "35 years",
+        "21 years"
+      ],
+      "answer": 0,
+      "hint": "Article 84 requires a minimum age of 30 for Rajya Sabha, and 25 for Lok Sabha."
+    }
+  ]
+}

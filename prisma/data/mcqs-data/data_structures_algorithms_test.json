@@ -1,0 +1,342 @@
+{
+  "name": "Data Structures & Algorithms Test",
+  "type": "Chapter Test",
+  "courseName": "Computer Science",
+  "qs": 30,
+  "marks": 30,
+  "duration": 30,
+  "isFree": true,
+  "categoryKey": "cs",
+  "questions": [
+    {
+      "question": "What is the best-case time complexity of Bubble Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Bubble Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Bubble Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Bubble Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Bubble Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Bubble Sort."
+    },
+    {
+      "question": "What is the best-case time complexity of Insertion Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Insertion Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Insertion Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Insertion Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Insertion Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Insertion Sort."
+    },
+    {
+      "question": "What is the best-case time complexity of Selection Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Selection Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Selection Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Selection Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Selection Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Selection Sort."
+    },
+    {
+      "question": "What is the best-case time complexity of Merge Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Merge Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Merge Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Merge Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Merge Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Merge Sort."
+    },
+    {
+      "question": "What is the best-case time complexity of Quick Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Quick Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Quick Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Quick Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Quick Sort?",
+      "options": [
+        "O(n^2)",
+        "O(n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Quick Sort."
+    },
+    {
+      "question": "What is the best-case time complexity of Heap Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Check standard documentation for Heap Sort."
+    },
+    {
+      "question": "What is the average-case time complexity of Heap Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Average case for Heap Sort."
+    },
+    {
+      "question": "What is the worst-case time complexity of Heap Sort?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(n^2)",
+        "O(1)"
+      ],
+      "answer": 0,
+      "hint": "Worst case for Heap Sort."
+    },
+    {
+      "question": "Which SQL command is used to retrieve data from one or more tables?",
+      "options": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is SELECT."
+    },
+    {
+      "question": "Which SQL command is used to add new rows of data into a table?",
+      "options": [
+        "INSERT",
+        "SELECT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is INSERT."
+    },
+    {
+      "question": "Which SQL command is used to modify existing records within a table?",
+      "options": [
+        "UPDATE",
+        "SELECT",
+        "INSERT",
+        "DELETE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is UPDATE."
+    },
+    {
+      "question": "Which SQL command is used to remove existing rows from a table?",
+      "options": [
+        "DELETE",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is DELETE."
+    },
+    {
+      "question": "Which SQL command is used to define and create a new table schema?",
+      "options": [
+        "CREATE TABLE",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is CREATE TABLE."
+    },
+    {
+      "question": "Which SQL command is used to delete a table definition along with all its data?",
+      "options": [
+        "DROP TABLE",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is DROP TABLE."
+    },
+    {
+      "question": "Which SQL command is used to add, delete, or modify columns in an existing table?",
+      "options": [
+        "ALTER TABLE",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is ALTER TABLE."
+    },
+    {
+      "question": "Which SQL command is used to remove all rows from a table quickly without logging individual row deletions?",
+      "options": [
+        "TRUNCATE TABLE",
+        "SELECT",
+        "INSERT",
+        "UPDATE"
+      ],
+      "answer": 0,
+      "hint": "The SQL command is TRUNCATE TABLE."
+    },
+    {
+      "question": "What does the abbreviation \"CPU\" stand for in computing?",
+      "options": [
+        "Central Processing Unit",
+        "Random Access Memory",
+        "Read Only Memory",
+        "Domain Name System"
+      ],
+      "answer": 0,
+      "hint": "CPU stands for Central Processing Unit."
+    },
+    {
+      "question": "What does the abbreviation \"RAM\" stand for in computing?",
+      "options": [
+        "Random Access Memory",
+        "Central Processing Unit",
+        "Read Only Memory",
+        "Domain Name System"
+      ],
+      "answer": 0,
+      "hint": "RAM stands for Random Access Memory."
+    },
+    {
+      "question": "What does the abbreviation \"ROM\" stand for in computing?",
+      "options": [
+        "Read Only Memory",
+        "Central Processing Unit",
+        "Random Access Memory",
+        "Domain Name System"
+      ],
+      "answer": 0,
+      "hint": "ROM stands for Read Only Memory."
+    },
+    {
+      "question": "What does the abbreviation \"DNS\" stand for in computing?",
+      "options": [
+        "Domain Name System",
+        "Central Processing Unit",
+        "Random Access Memory",
+        "Read Only Memory"
+      ],
+      "answer": 0,
+      "hint": "DNS stands for Domain Name System."
+    }
+  ]
+}

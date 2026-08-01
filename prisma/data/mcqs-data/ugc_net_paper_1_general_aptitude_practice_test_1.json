@@ -1,0 +1,177 @@
+{
+  "name": "UGC NET Paper 1 General Aptitude - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "UGC NET Paper 1 General Aptitude",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "ugc_net_paper_1_general_aptitude",
+  "questions": [
+    {
+      "question": "Which of the following is the primary objective of teaching?",
+      "options": [
+        "To dictate notes",
+        "To facilitate student learning & behavioral change",
+        "To prepare for exams only",
+        "To maintain classroom silence"
+      ],
+      "answer": 1,
+      "hint": "Teaching focuses on guiding students towards self-learning and permanent positive behavioral change."
+    },
+    {
+      "question": "What is the main purpose of formative evaluation?",
+      "options": [
+        "Grade students at the end",
+        "Monitor learning progress and provide ongoing feedback",
+        "Certify course completion",
+        "Select students for admission"
+      ],
+      "answer": 1,
+      "hint": "Formative evaluation is diagnostic and conducted during instruction to improve learning."
+    },
+    {
+      "question": "The research method that investigates cause-and-effect relationships is:",
+      "options": [
+        "Historical research",
+        "Descriptive survey",
+        "Experimental research",
+        "Phenomenology"
+      ],
+      "answer": 2,
+      "hint": "Experimental research manipulates independent variables to measure effects on dependent variables."
+    },
+    {
+      "question": "Which of the following is considered a primary source of historical data?",
+      "options": [
+        "Personal diaries and original letters",
+        "Textbooks published in 2020",
+        "Biographies written by secondary historians",
+        "Encyclopedia articles"
+      ],
+      "answer": 0,
+      "hint": "Primary sources are first-hand, direct records created during the event period."
+    },
+    {
+      "question": "In communication, the process of translating thoughts into signals is called:",
+      "options": [
+        "Decoding",
+        "Encoding",
+        "Feedback",
+        "Medium selection"
+      ],
+      "answer": 1,
+      "hint": "Encoding is converting message ideas into transmittable verbal/non-verbal symbols."
+    },
+    {
+      "question": "Which of the following is a barrier to effective classroom communication?",
+      "options": [
+        "Clear pronunciation",
+        "Semantic noise (ambiguous language)",
+        "Active student listening",
+        "Visual aids usage"
+      ],
+      "answer": 1,
+      "hint": "Semantic barriers arise when sender and receiver interpret words differently."
+    },
+    {
+      "question": "What does ICT stand for?",
+      "options": [
+        "Information and Communication Technology",
+        "Inter-network Computer Transfer",
+        "Integrated Communication Terminal",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "ICT refers to technologies used to manage, transmit, and process information."
+    },
+    {
+      "question": "Which protocol is used for sending emails over the internet?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "POP3"
+      ],
+      "answer": 2,
+      "hint": "SMTP (Simple Mail Transfer Protocol) is used to push mail messages to servers."
+    },
+    {
+      "question": "The main greenhouse gas responsible for global warming is:",
+      "options": [
+        "Nitrogen",
+        "Oxygen",
+        "Carbon dioxide",
+        "Argon"
+      ],
+      "answer": 2,
+      "hint": "CO2 traps infrared radiation, contributing heavily to the greenhouse effect."
+    },
+    {
+      "question": "Which regulatory body governs higher education policies and funding in India?",
+      "options": [
+        "NCERT",
+        "CBSE",
+        "University Grants Commission (UGC)",
+        "NCTE"
+      ],
+      "answer": 2,
+      "hint": "UGC coordinates, determines, and maintains standards of university education."
+    },
+    {
+      "question": "What is the value of 2 + 2 * 2 according to BODMAS rules?",
+      "options": [
+        "8",
+        "6",
+        "4",
+        "0"
+      ],
+      "answer": 1,
+      "hint": "Multiplication is performed first: 2 * 2 = 4. Then addition: 2 + 4 = 6."
+    },
+    {
+      "question": "A series is given: 2, 4, 8, 16, ... What is the next term?",
+      "options": [
+        "20",
+        "24",
+        "32",
+        "64"
+      ],
+      "answer": 2,
+      "hint": "Each term is multiplied by 2 (geometric progression). 16 * 2 = 32."
+    },
+    {
+      "question": "Which of the following is a non-probability sampling method?",
+      "options": [
+        "Simple Random Sampling",
+        "Stratified Sampling",
+        "Purposive/Judgmental Sampling",
+        "Cluster Sampling"
+      ],
+      "answer": 2,
+      "hint": "Purposive sampling selects subjects based on researcher judgment, not random chance."
+    },
+    {
+      "question": "What is the name of the portal launched by the Ministry of Education for online MOOC courses?",
+      "options": [
+        "Swayam",
+        "Diksha",
+        "Shodhganga",
+        "Swayam Prabha"
+      ],
+      "answer": 0,
+      "hint": "SWAYAM (Study Webs of Active-Learning for Young Aspiring Minds) hosts online courses."
+    },
+    {
+      "question": "Which type of memory is volatile and loses data when power is turned off?",
+      "options": [
+        "ROM",
+        "Hard Disk",
+        "RAM",
+        "Flash Drive"
+      ],
+      "answer": 2,
+      "hint": "RAM (Random Access Memory) is temporary volatile working storage."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "LIC AAO General Insurance Mock Exam - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "LIC AAO General Insurance Mock Exam",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "lic_aao_general_insurance_mock_exam",
+  "questions": [
+    {
+      "question": "Insurance premium is paid to:",
+      "options": [
+        "Transfer the risk",
+        "Increase the profit",
+        "Reduce the liability",
+        "Avoid taxation"
+      ],
+      "answer": 0,
+      "hint": "Premium is paid by the insured to transfer the financial risk of loss to the insurer."
+    },
+    {
+      "question": "What does IRDAI stand for?",
+      "options": [
+        "Insurance Regulatory and Development Authority of India",
+        "Indian Regulatory and Development Association of Insurance",
+        "Insurance Rights and Development Association of India",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "IRDAI is the statutory body that regulates and promotes the insurance and re-insurance industries in India."
+    },
+    {
+      "question": "The principle of utmost good faith in insurance is known as:",
+      "options": [
+        "Uberrimae Fidei",
+        "Caveat Emptor",
+        "Quid Pro Quo",
+        "Consensus ad idem"
+      ],
+      "answer": 0,
+      "hint": "Uberrimae Fidei is a Latin phrase meaning utmost good faith, a core principle in all insurance contracts."
+    },
+    {
+      "question": "A policy which covers loss of profit due to business interruption is:",
+      "options": [
+        "Consequential Loss Policy",
+        "Marine Cargo Policy",
+        "Public Liability Policy",
+        "Reinsurance Policy"
+      ],
+      "answer": 0,
+      "hint": "Consequential Loss Policy (or Business Interruption Insurance) covers profits lost during a shutdown."
+    },
+    {
+      "question": "Which index represents inflation in retail price in India?",
+      "options": [
+        "CPI",
+        "WPI",
+        "GDP Deflator",
+        "Sensex"
+      ],
+      "answer": 0,
+      "hint": "Consumer Price Index (CPI) measures the retail price inflation of goods and services."
+    },
+    {
+      "question": "What is the minimum capital required to set up an insurance company in India?",
+      "options": [
+        "Rs 100 Crore",
+        "Rs 50 Crore",
+        "Rs 200 Crore",
+        "Rs 500 Crore"
+      ],
+      "answer": 0,
+      "hint": "The Insurance Act, 1938 stipulates a minimum paid-up capital of Rs 100 Crore for direct insurers."
+    },
+    {
+      "question": "Double insurance is common in:",
+      "options": [
+        "Life Insurance",
+        "Marine Insurance",
+        "Fire Insurance",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Double insurance occurs when the same subject matter is insured with two or more insurers."
+    },
+    {
+      "question": "The person who assesses the value of property at the time of loss is called:",
+      "options": [
+        "Surveyor/Loss Assessor",
+        "Actuary",
+        "Underwriter",
+        "Agent"
+      ],
+      "answer": 0,
+      "hint": "Surveyors and Loss Assessors investigate, manage, and calculate the financial impact of claims."
+    },
+    {
+      "question": "Reinsurance is done by:",
+      "options": [
+        "An insurance company with another insurance company",
+        "An individual with multiple companies",
+        "A company with a bank",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Reinsurance is insurance that is purchased by an insurance company from another insurance company."
+    },
+    {
+      "question": "If an insured commits suicide within one year of taking life insurance, the company:",
+      "options": [
+        "Might not pay the claim",
+        "Must pay the full claim",
+        "Pays double the claim",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Standard suicide clauses in life insurance restrict or void coverage within the first 12 months."
+    },
+    {
+      "question": "Third-party insurance is compulsory for:",
+      "options": [
+        "Motor vehicles",
+        "Houses",
+        "Factories",
+        "Life"
+      ],
+      "answer": 0,
+      "hint": "Motor Vehicles Act makes third-party liability insurance mandatory for all on-road vehicles."
+    },
+    {
+      "question": "The pool of money collected from premiums is managed by:",
+      "options": [
+        "Fund managers of insurance company",
+        "The government",
+        "IRDAI directly",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Asset and liability management is handled by the insurance company's investment division."
+    },
+    {
+      "question": "Which committee recommended the opening up of the insurance sector in India?",
+      "options": [
+        "Malhotra Committee",
+        "Narasimham Committee",
+        "Raghuram Rajan Committee",
+        "Kelkar Committee"
+      ],
+      "answer": 0,
+      "hint": "Malhotra Committee (1994) recommended reforms and opening up to private and foreign entries."
+    },
+    {
+      "question": "Standard policy term for a health insurance policy is usually:",
+      "options": [
+        "1 year",
+        "5 years",
+        "10 years",
+        "Whole life"
+      ],
+      "answer": 0,
+      "hint": "Most health policies are issued for a 1-year term and renewed annually."
+    },
+    {
+      "question": "Bancassurance refers to:",
+      "options": [
+        "Selling insurance products through bank branches",
+        "Banks taking loans from insurance companies",
+        "Merging banks with insurance firms",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Bancassurance is an arrangement where banks and insurance companies partner to sell insurance."
+    }
+  ]
+}

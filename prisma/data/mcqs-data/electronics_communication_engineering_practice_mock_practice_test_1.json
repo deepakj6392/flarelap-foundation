@@ -1,0 +1,177 @@
+{
+  "name": "Electronics & Communication Engineering Practice Mock - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "Electronics & Communication Engineering Practice Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "electronics_communication_engineering_practice_mock",
+  "questions": [
+    {
+      "question": "The forward voltage drop across a Silicon PN junction diode is approximately:",
+      "options": [
+        "0.7 V",
+        "0.3 V",
+        "1.1 V",
+        "2.0 V"
+      ],
+      "answer": 0,
+      "hint": "Silicon barrier potential requires 0.7 V bias to trigger current conduction."
+    },
+    {
+      "question": "What is the main application of a Zener diode?",
+      "options": [
+        "Voltage regulation",
+        "Rectification",
+        "Amplification",
+        "Oscillation"
+      ],
+      "answer": 0,
+      "hint": "Operated in reverse breakdown, Zener diodes maintain a stable voltage."
+    },
+    {
+      "question": "Which transistor configuration is used for impedance matching?",
+      "options": [
+        "Common Collector",
+        "Common Emitter",
+        "Common Base",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Common Collector (emitter follower) has high input and low output impedance."
+    },
+    {
+      "question": "An OP-AMP is basically a high-gain:",
+      "options": [
+        "Differential amplifier",
+        "Power amplifier",
+        "Audio amplifier",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "OP-AMPs amplify the difference between their non-inverting and inverting inputs."
+    },
+    {
+      "question": "The number of select lines for a 16-to-1 multiplexer is:",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "8"
+      ],
+      "answer": 0,
+      "hint": "Multiplexers use n select lines to choose between 2^n inputs; 2^4 = 16."
+    },
+    {
+      "question": "The Nyquist sampling rate for a signal with maximum frequency fm is:",
+      "options": [
+        "2 * fm",
+        "fm",
+        "1.5 * fm",
+        "3 * fm"
+      ],
+      "answer": 0,
+      "hint": "To prevent aliasing, sampling rate must satisfy fs >= 2*fm."
+    },
+    {
+      "question": "Which digital modulation scheme is most bandwidth efficient?",
+      "options": [
+        "QAM",
+        "ASK",
+        "FSK",
+        "PSK"
+      ],
+      "answer": 0,
+      "hint": "Quadrature Amplitude Modulation encodes multiple bits per symbol, maximizing efficiency."
+    },
+    {
+      "question": "Carson's rule defines the bandwidth of:",
+      "options": [
+        "FM wave",
+        "AM wave",
+        "PM wave",
+        "PCM wave"
+      ],
+      "answer": 0,
+      "hint": "FM Bandwidth = 2 * (delta_f + fm)."
+    },
+    {
+      "question": "The speed of electromagnetic waves in a vacuum is:",
+      "options": [
+        "3 * 10^8 m/s",
+        "3 * 10^6 m/s",
+        "1.5 * 10^8 m/s",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "EM waves propagate at speed of light (3x10^8 m/s) in free space."
+    },
+    {
+      "question": "The characteristic impedance of a lossless transmission line is:",
+      "options": [
+        "sqrt(L/C)",
+        "sqrt(L*C)",
+        "L/C",
+        "C/L"
+      ],
+      "answer": 0,
+      "hint": "Lossless line equations reduce Z0 to real ratio sqrt(L/C)."
+    },
+    {
+      "question": "The Z-transform is used for the analysis of:",
+      "options": [
+        "Discrete-time systems",
+        "Continuous-time systems",
+        "Both",
+        "None"
+      ],
+      "answer": 0,
+      "hint": "Z-transform maps discrete differences to frequency domains."
+    },
+    {
+      "question": "What is the function of a PLL (Phase Locked Loop)?",
+      "options": [
+        "Frequency tracking and demodulation",
+        "Voltage amplification",
+        "Power conversion",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "PLL locks phase to follow and recover input signal carrier frequencies."
+    },
+    {
+      "question": "Which logic gate performs addition of two binary bits without carry?",
+      "options": [
+        "XOR gate",
+        "AND gate",
+        "OR gate",
+        "NAND gate"
+      ],
+      "answer": 0,
+      "hint": "XOR gate logic outputs sum bit: 0+0=0, 0+1=1, 1+0=1, 1+1=0."
+    },
+    {
+      "question": "The dominant mode in a rectangular waveguide is:",
+      "options": [
+        "TE10",
+        "TE11",
+        "TM11",
+        "TM01"
+      ],
+      "answer": 0,
+      "hint": "TE10 has the longest cutoff wavelength and is the lowest mode."
+    },
+    {
+      "question": "Which tool translates assembly code into machine language?",
+      "options": [
+        "Assembler",
+        "Linker",
+        "Interpreter",
+        "Debugger"
+      ],
+      "answer": 0,
+      "hint": "Assembler maps mnemonic opcodes to numeric hardware codes."
+    }
+  ]
+}

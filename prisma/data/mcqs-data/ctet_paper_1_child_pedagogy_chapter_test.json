@@ -1,0 +1,177 @@
+{
+  "name": "CTET Paper 1 Child Pedagogy - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "CTET Paper 1 Child Pedagogy",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "ctet_paper_1_child_pedagogy",
+  "questions": [
+    {
+      "question": "Who formulated the Theory of Multiple Intelligences?",
+      "options": [
+        "Jean Piaget",
+        "Howard Gardner",
+        "Lev Vygotsky",
+        "B.F. Skinner"
+      ],
+      "answer": 1,
+      "hint": "Howard Gardner proposed the Theory of Multiple Intelligences in 1983."
+    },
+    {
+      "question": "According to Piaget, the stage of cognitive development for age 2-7 is:",
+      "options": [
+        "Sensori-motor",
+        "Pre-operational",
+        "Concrete operational",
+        "Formal operational"
+      ],
+      "answer": 1,
+      "hint": "The Pre-operational stage lasts from age 2 to approximately 7."
+    },
+    {
+      "question": "What is the primary factor in Lev Vygotsky's theory of learning?",
+      "options": [
+        "Social interaction",
+        "Reinforcement",
+        "Equilibrium",
+        "Adaptation"
+      ],
+      "answer": 0,
+      "hint": "Vygotsky's sociocultural theory emphasizes social interaction in cognitive development."
+    },
+    {
+      "question": "Dyslexia is primarily associated with difficulty in:",
+      "options": [
+        "Writing",
+        "Reading",
+        "Speaking",
+        "Calculating"
+      ],
+      "answer": 1,
+      "hint": "Dyslexia is a learning disability characterized by difficulty in reading."
+    },
+    {
+      "question": "Inclusive Education refers to:",
+      "options": [
+        "Providing education to disabled children only",
+        "Including all children regardless of background in the same school",
+        "Special classrooms for intelligent students",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "Inclusive education means all students, regardless of challenges, are placed in age-appropriate general education classes."
+    },
+    {
+      "question": "Which psychologist is associated with Operant Conditioning?",
+      "options": [
+        "Ivan Pavlov",
+        "B.F. Skinner",
+        "Albert Bandura",
+        "Edward Thorndike"
+      ],
+      "answer": 1,
+      "hint": "B.F. Skinner developed the theory of operant conditioning using rewards and punishments."
+    },
+    {
+      "question": "What is the correct formula to calculate Intelligence Quotient (IQ)?",
+      "options": [
+        "Mental Age / Chronological Age * 100",
+        "Chronological Age / Mental Age * 100",
+        "Mental Age + Chronological Age",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "IQ = (MA / CA) * 100."
+    },
+    {
+      "question": "The concept of \"scaffolding\" in learning was proposed by which theorist?",
+      "options": [
+        "Jean Piaget",
+        "Lev Vygotsky",
+        "Jerome Bruner",
+        "Lawrence Kohlberg"
+      ],
+      "answer": 1,
+      "hint": "While Jerome Bruner coined the term, it is heavily linked to Lev Vygotsky's Zone of Proximal Development (ZPD)."
+    },
+    {
+      "question": "Who proposed the \"Trial and Error\" theory of learning?",
+      "options": [
+        "Edward Thorndike",
+        "Wolfgang Kohler",
+        "Clark Hull",
+        "Kurt Lewin"
+      ],
+      "answer": 0,
+      "hint": "Edward Thorndike proposed the Connectionism theory based on trial and error learning."
+    },
+    {
+      "question": "The sequence of motor development is from:",
+      "options": [
+        "Proximodistal to Cephalocaudal",
+        "Cephalocaudal to Proximodistal",
+        "General to Specific",
+        "Specific to General"
+      ],
+      "answer": 1,
+      "hint": "Development goes from head-to-toe (cephalocaudal) and center-outwards (proximodistal)."
+    },
+    {
+      "question": "Which term is associated with Noam Chomsky's theory of language acquisition?",
+      "options": [
+        "Language Acquisition Device",
+        "Imitative learning",
+        "Reinforcement",
+        "Conditioning"
+      ],
+      "answer": 0,
+      "hint": "Chomsky proposed that children are born with an innate Language Acquisition Device (LAD)."
+    },
+    {
+      "question": "Lawrence Kohlberg is known for his research in which development domain?",
+      "options": [
+        "Moral Development",
+        "Cognitive Development",
+        "Physical Development",
+        "Social Development"
+      ],
+      "answer": 0,
+      "hint": "Kohlberg formulated the stages of Moral Development."
+    },
+    {
+      "question": "What is the total duration of the micro-teaching cycle in India?",
+      "options": [
+        "30 minutes",
+        "36 minutes",
+        "40 minutes",
+        "45 minutes"
+      ],
+      "answer": 1,
+      "hint": "The standard NCERT micro-teaching cycle duration in India is 36 minutes."
+    },
+    {
+      "question": "In which year was the Right to Education (RTE) Act enacted by the Indian Parliament?",
+      "options": [
+        "2005",
+        "2009",
+        "2010",
+        "2012"
+      ],
+      "answer": 1,
+      "hint": "The RTE Act was enacted on August 4, 2009, making education a fundamental right for children aged 6 to 14."
+    },
+    {
+      "question": "The project method of teaching is based on which educational philosophy?",
+      "options": [
+        "Realism",
+        "Pragmatism",
+        "Naturalism",
+        "Idealism"
+      ],
+      "answer": 1,
+      "hint": "The project method is founded on John Dewey's pragmatic learning-by-doing principles."
+    }
+  ]
+}

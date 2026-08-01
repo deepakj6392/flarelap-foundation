@@ -1,0 +1,177 @@
+{
+  "name": "UGC NET Commerce Exam Booster - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "UGC NET Commerce Exam Booster",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "ugc_net_commerce_exam_booster",
+  "questions": [
+    {
+      "question": "Which accounting concept states that a business will continue to operate indefinitely?",
+      "options": [
+        "Money measurement concept",
+        "Going concern concept",
+        "Business entity concept",
+        "Dual aspect concept"
+      ],
+      "answer": 1,
+      "hint": "The going concern assumption assumes the firm will not liquidate in the foreseeable future."
+    },
+    {
+      "question": "The difference between total assets and total liabilities is known as:",
+      "options": [
+        "Net profit",
+        "Working capital",
+        "Owner's equity (Capital)",
+        "Gross margin"
+      ],
+      "answer": 2,
+      "hint": "Assets = Liabilities + Owner's Equity."
+    },
+    {
+      "question": "What is the primary function of marketing management?",
+      "options": [
+        "Cost control",
+        "Satisfying customer needs and creating value",
+        "Product packaging only",
+        "Share price inflation"
+      ],
+      "answer": 1,
+      "hint": "Modern marketing focuses on identifying and delivering customer satisfaction."
+    },
+    {
+      "question": "Under which market structure is there a single seller of a product with no close substitutes?",
+      "options": [
+        "Perfect competition",
+        "Monopoly",
+        "Oligopoly",
+        "Monopolistic competition"
+      ],
+      "answer": 1,
+      "hint": "A monopoly has total market power with a single supplier."
+    },
+    {
+      "question": "Which index is primarily used to measure the change in average price level of consumer goods?",
+      "options": [
+        "WPI",
+        "CPI",
+        "GDP deflator",
+        "BSE Sensex"
+      ],
+      "answer": 1,
+      "hint": "The Consumer Price Index (CPI) tracks household cost changes."
+    },
+    {
+      "question": "What does WTO stand for in global trade?",
+      "options": [
+        "World Trade Organization",
+        "Western Tariff Office",
+        "World Transport Order",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "WTO is the global body regulating rules of trade between nations."
+    },
+    {
+      "question": "The process of attracting suitable candidates to apply for a vacancy is called:",
+      "options": [
+        "Selection",
+        "Recruitment",
+        "Orientation",
+        "Appraisal"
+      ],
+      "answer": 1,
+      "hint": "Recruitment is positive search for prospective employees; selection is filtering them."
+    },
+    {
+      "question": "Which institution regulates the monetary policy and credit controls in India?",
+      "options": [
+        "State Bank of India",
+        "Reserve Bank of India",
+        "SEBI",
+        "Ministry of Finance"
+      ],
+      "answer": 1,
+      "hint": "The RBI administers interest rates, repo rates, and reserves to control liquidity."
+    },
+    {
+      "question": "The formula for break-even point in units is:",
+      "options": [
+        "Fixed Costs / Contribution per unit",
+        "Variable Costs / Sales",
+        "Fixed Costs / Profit Margin",
+        "Sales / Fixed Costs"
+      ],
+      "answer": 0,
+      "hint": "Break-even point occurs when total contribution equals total fixed costs."
+    },
+    {
+      "question": "What is the main objective of corporate financial management?",
+      "options": [
+        "Maximizing sales revenue",
+        "Maximizing shareholder wealth",
+        "Minimizing tax payments",
+        "Maximizing employee count"
+      ],
+      "answer": 1,
+      "hint": "Wealth maximization (market price of shares) is the primary goal."
+    },
+    {
+      "question": "Which theory explains international trade based on differences in opportunity costs?",
+      "options": [
+        "Absolute advantage theory",
+        "Comparative advantage theory",
+        "Mercantilism",
+        "Factor endowment theory"
+      ],
+      "answer": 1,
+      "hint": "David Ricardo proposed comparative advantage based on relative efficiency ratios."
+    },
+    {
+      "question": "What is the maximum number of partners in a general partnership firm under Companies Rules 2014?",
+      "options": [
+        "10 partners",
+        "20 partners",
+        "50 partners",
+        "100 partners"
+      ],
+      "answer": 2,
+      "hint": "The limit is set at 50 partners for general partnerships."
+    },
+    {
+      "question": "Which audit is conducted continuously throughout the financial year at regular intervals?",
+      "options": [
+        "Statutory audit",
+        "Internal audit",
+        "Continuous audit",
+        "Balance sheet audit"
+      ],
+      "answer": 2,
+      "hint": "Continuous audits help in immediate detection of accounting errors."
+    },
+    {
+      "question": "What is the base slab structure of GST (Goods and Services Tax) in India?",
+      "options": [
+        "Single flat rate",
+        "Five primary tiers (0%, 5%, 12%, 18%, 28%)",
+        "Ten different percentage categories",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "GST India divides products into 4 active brackets plus exempt items."
+    },
+    {
+      "question": "The concept of the \"Double Entry System\" of bookkeeping was first published by:",
+      "options": [
+        "Adam Smith",
+        "Luca Pacioli",
+        "Alfred Marshall",
+        "F.W. Taylor"
+      ],
+      "answer": 1,
+      "hint": "Luca Pacioli published Summa de Arithmetica in Venice in 1494."
+    }
+  ]
+}

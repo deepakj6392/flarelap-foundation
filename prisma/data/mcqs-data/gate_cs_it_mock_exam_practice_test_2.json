@@ -1,0 +1,177 @@
+{
+  "name": "GATE CS & IT Mock Exam - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "GATE CS & IT Mock Exam",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "gate_cs_it_mock_exam",
+  "questions": [
+    {
+      "question": "What is the time complexity of searching in a balanced Binary Search Tree (BST)?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "answer": 1,
+      "hint": "A balanced BST has a height of O(log n), so searching takes O(log n) time."
+    },
+    {
+      "question": "Which layer in the OSI model is responsible for routing packets?",
+      "options": [
+        "Physical Layer",
+        "Data Link Layer",
+        "Network Layer",
+        "Transport Layer"
+      ],
+      "answer": 2,
+      "hint": "The Network Layer is responsible for routing packets across network boundaries."
+    },
+    {
+      "question": "Which of the following is not a transaction property in DBMS?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Concurrency"
+      ],
+      "answer": 3,
+      "hint": "The ACID properties are Atomicity, Consistency, Isolation, and Durability."
+    },
+    {
+      "question": "What is the binary equivalent of decimal number 25?",
+      "options": [
+        "11001",
+        "11010",
+        "10101",
+        "11100"
+      ],
+      "answer": 0,
+      "hint": "25 in binary is 16 + 8 + 1, which corresponds to 11001."
+    },
+    {
+      "question": "Which scheduling algorithm can result in starvation?",
+      "options": [
+        "First Come First Served",
+        "Round Robin",
+        "Shortest Job First",
+        "None of these"
+      ],
+      "answer": 2,
+      "hint": "Shortest Job First can starve longer jobs if short jobs keep arriving."
+    },
+    {
+      "question": "A page fault occurs when:",
+      "options": [
+        "The page is in main memory",
+        "The page is not in main memory",
+        "An error occurs in page table",
+        "The page is corrupted"
+      ],
+      "answer": 1,
+      "hint": "A page fault occurs when an active program requests a memory page that is not currently loaded in the RAM."
+    },
+    {
+      "question": "Which logic gate is equivalent to Boolean multiplication?",
+      "options": [
+        "OR gate",
+        "AND gate",
+        "NOT gate",
+        "XOR gate"
+      ],
+      "answer": 1,
+      "hint": "The AND gate performs Boolean multiplication (Y = A . B)."
+    },
+    {
+      "question": "How many states are required in a minimal DFA that accepts all binary strings of even length?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "hint": "A minimal DFA requires 2 states: an accepting state for even length and a non-accepting state for odd length."
+    },
+    {
+      "question": "Which SQL command is used to remove a table structure along with its data?",
+      "options": [
+        "DELETE",
+        "TRUNCATE",
+        "REMOVE",
+        "DROP"
+      ],
+      "answer": 3,
+      "hint": "DROP TABLE removes the table definition and all its rows, indices, and constraints."
+    },
+    {
+      "question": "What is the default TCP port number for HTTP?",
+      "options": [
+        "21",
+        "22",
+        "80",
+        "443"
+      ],
+      "answer": 2,
+      "hint": "HTTP defaults to port 80, while HTTPS uses port 443."
+    },
+    {
+      "question": "Which protocol translates a logical IP address into a physical MAC address?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "ARP",
+        "ICMP"
+      ],
+      "answer": 2,
+      "hint": "ARP (Address Resolution Protocol) maps dynamic IP addresses to physical hardware MAC addresses on a local network."
+    },
+    {
+      "question": "Which of the following is NOT a linear data structure?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Linked List",
+        "Tree"
+      ],
+      "answer": 3,
+      "hint": "Trees and Graphs are non-linear hierarchical data structures."
+    },
+    {
+      "question": "What is the postfix expression of the infix string: A + B?",
+      "options": [
+        "+AB",
+        "AB+",
+        "A+B",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "The postfix notation places operators after their operands (AB+)."
+    },
+    {
+      "question": "Virtual memory is primarily based on which hardware/software concept?",
+      "options": [
+        "Paging",
+        "Spooling",
+        "Caching",
+        "Segmentation only"
+      ],
+      "answer": 0,
+      "hint": "Virtual memory is commonly implemented using demand paging."
+    },
+    {
+      "question": "Which sorting algorithm has a best-case time complexity of O(n log n) and is non-recursive?",
+      "options": [
+        "Quick Sort",
+        "Bubble Sort",
+        "Insertion Sort",
+        "Merge Sort"
+      ],
+      "answer": 3,
+      "hint": "Merge Sort uses a divide-and-conquer strategy guaranteeing O(n log n) comparisons in all cases."
+    }
+  ]
+}

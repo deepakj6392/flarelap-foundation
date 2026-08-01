@@ -1,0 +1,177 @@
+{
+  "name": "Civil Engineering Core Practice Mock - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "Civil Engineering Core Practice Mock",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "civil_engineering_core_practice_mock",
+  "questions": [
+    {
+      "question": "What is the main raw material used for manufacturing Portland cement?",
+      "options": [
+        "Limestone",
+        "Clay",
+        "Gypsum",
+        "Silica"
+      ],
+      "answer": 0,
+      "hint": "Calcareous raw materials (limestone/chalk) provide lime (CaO) for clinker."
+    },
+    {
+      "question": "The modular brick size is:",
+      "options": [
+        "19 cm x 9 cm x 9 cm",
+        "20 cm x 10 cm x 10 cm",
+        "22.8 cm x 11.2 cm x 7 cm",
+        "20 cm x 20 cm x 10 cm"
+      ],
+      "answer": 0,
+      "hint": "Nominal brick size is 20x10x10 cm, while standard size is 19x9x9 cm."
+    },
+    {
+      "question": "The slump test is used to measure concrete's:",
+      "options": [
+        "Workability",
+        "Compressive strength",
+        "Tensile strength",
+        "Soundness"
+      ],
+      "answer": 0,
+      "hint": "The distance concrete drops measures mix workability and ease of placement."
+    },
+    {
+      "question": "Poisson's ratio for concrete is approximately:",
+      "options": [
+        "0.15 to 0.20",
+        "0.35 to 0.40",
+        "0.45 to 0.50",
+        "0.05 to 0.08"
+      ],
+      "answer": 0,
+      "hint": "Standard structural concrete has a Poisson's ratio in the range of 0.15-0.2."
+    },
+    {
+      "question": "A beam supported on more than two supports is called:",
+      "options": [
+        "Continuous beam",
+        "Simply supported beam",
+        "Cantilever beam",
+        "Fixed beam"
+      ],
+      "answer": 0,
+      "hint": "Continuous beams span over multiple intermediate column supports."
+    },
+    {
+      "question": "The maximum shear stress in a rectangular beam cross-section occurs at:",
+      "options": [
+        "Neutral axis",
+        "Top fiber",
+        "Bottom fiber",
+        "Mid-depth of top half"
+      ],
+      "answer": 0,
+      "hint": "Shear stress distribution is parabolic, peaking at the neutral axis layer."
+    },
+    {
+      "question": "According to Terzaghi, the bearing capacity of soil depends on:",
+      "options": [
+        "Cohesion, angle of internal friction, unit weight",
+        "Cohesion only",
+        "Friction angle only",
+        "Soil color"
+      ],
+      "answer": 0,
+      "hint": "The capacity factors Nc, Nq, and Ngamma reflect soil shear and weight parameters."
+    },
+    {
+      "question": "Liquid limit and plastic limit tests are performed on:",
+      "options": [
+        "Fine-grained soils",
+        "Coarse-grained soils",
+        "Gravels",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Atterberg limits evaluate the plasticity index of silts and clays."
+    },
+    {
+      "question": "The unit of dynamic viscosity is:",
+      "options": [
+        "Pascal-second (Pa.s)",
+        "m2/s",
+        "Poise only",
+        "Stoke"
+      ],
+      "answer": 0,
+      "hint": "SI unit of dynamic viscosity is Pa.s, equivalent to N.s/m2."
+    },
+    {
+      "question": "The fundamental principle of surveying is:",
+      "options": [
+        "Working from whole to part",
+        "Working from part to whole",
+        "Measuring local coordinates first",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Whole-to-part principles prevent local mapping errors from expanding."
+    },
+    {
+      "question": "Which instrument is used to measure discharge in a pipe?",
+      "options": [
+        "Venturimeter",
+        "Pitot tube",
+        "Anemometer",
+        "Barometer"
+      ],
+      "answer": 0,
+      "hint": "A venturimeter creates a pressure differential to calculate fluid flow rates."
+    },
+    {
+      "question": "The process of adjusting the line of sight of a level is called:",
+      "options": [
+        "Collimation adjustment",
+        "Focusing",
+        "Centering, Levelling",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Temporary or permanent adjustments align the bubble tube axis and telescope sight line."
+    },
+    {
+      "question": "The main chemical compound responsible for early strength of cement is:",
+      "options": [
+        "Tricalcium Silicate (C3S)",
+        "Dicalcium Silicate (C2S)",
+        "Tricalcium Aluminate (C3A)",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "C3S hydrates rapidly to govern strength development within first 7 days."
+    },
+    {
+      "question": "The coefficient of curvature (Cc) for a well-graded soil lies between:",
+      "options": [
+        "1 and 3",
+        "3 and 6",
+        "0 and 1",
+        "Greater than 6"
+      ],
+      "answer": 0,
+      "hint": "For well-graded sand or gravel, Cc must be in the range [1, 3]."
+    },
+    {
+      "question": "If the pH of water is less than 7, the water is:",
+      "options": [
+        "Acidic",
+        "Basic",
+        "Neutral",
+        "Saline"
+      ],
+      "answer": 0,
+      "hint": "pH scales from 0 to 14; values under 7 signify acid levels."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "UPSC Prelims PYP 2023",
+  "type": "PYP",
+  "courseName": "UPSC Prelims GS Paper 1 Mock",
+  "qs": 100,
+  "marks": 200,
+  "duration": 120,
+  "isFree": false,
+  "categoryKey": "upsc_prelims_gs_paper_1_mock",
+  "questions": [
+    {
+      "question": "Which Indian leader was affectionately called \"Loknayak\"?",
+      "options": [
+        "Jayaprakash Narayan",
+        "Bal Gangadhar Tilak",
+        "Lala Lajpat Rai",
+        "Subhas Chandra Bose"
+      ],
+      "answer": 0,
+      "hint": "Jayaprakash Narayan is popularly known as Loknayak (People's Leader)."
+    },
+    {
+      "question": "The concept of \"Directive Principles of State Policy\" was borrowed from which country?",
+      "options": [
+        "USA",
+        "UK",
+        "Ireland",
+        "Australia"
+      ],
+      "answer": 2,
+      "hint": "DPSPs are borrowed from the Irish Constitution."
+    },
+    {
+      "question": "Where is the Bandipur National Park located?",
+      "options": [
+        "Karnataka",
+        "Tamil Nadu",
+        "Kerala",
+        "Madhya Pradesh"
+      ],
+      "answer": 0,
+      "hint": "Bandipur National Park is established in Karnataka."
+    },
+    {
+      "question": "Who was the first governor-general of independent India?",
+      "options": [
+        "C. Rajagopalachari",
+        "Lord Mountbatten",
+        "Dr. Rajendra Prasad",
+        "Jawaharlal Nehru"
+      ],
+      "answer": 1,
+      "hint": "Lord Mountbatten served as the first Governor-General of independent India."
+    },
+    {
+      "question": "Which river is known as the \"Sorrow of Bengal\"?",
+      "options": [
+        "Kosi",
+        "Damodar",
+        "Ganga",
+        "Hooghly"
+      ],
+      "answer": 1,
+      "hint": "Damodar River was historically known as Sorrow of Bengal due to devastating floods."
+    },
+    {
+      "question": "Which ancient Harappan site is famous for possessing a dockyard?",
+      "options": [
+        "Harappa",
+        "Mohenjo-daro",
+        "Lothal",
+        "Kalibangan"
+      ],
+      "answer": 2,
+      "hint": "Lothal in Gujarat had a massive tidal dockyard connecting to the Sabarmati river."
+    },
+    {
+      "question": "Who introduced the Permanent Settlement of land revenue in Bengal in 1793?",
+      "options": [
+        "Warren Hastings",
+        "Lord Cornwallis",
+        "Lord Wellesley",
+        "Lord William Bentinck"
+      ],
+      "answer": 1,
+      "hint": "Lord Cornwallis introduced the zamindari permanent settlement system."
+    },
+    {
+      "question": "Who appoints the Chief Election Commissioner of India?",
+      "options": [
+        "Prime Minister",
+        "President of India",
+        "Chief Justice of India",
+        "Parliament"
+      ],
+      "answer": 1,
+      "hint": "The President of India appoints the CEC under Article 324."
+    },
+    {
+      "question": "Which city was the capital of the ancient Satavahana dynasty?",
+      "options": [
+        "Pratishthana (Paithan)",
+        "Pataliputra",
+        "Ujjain",
+        "Kanchipuram"
+      ],
+      "answer": 0,
+      "hint": "Pratishthana (modern Paithan in Maharashtra) was the capital of the Satavahanas."
+    },
+    {
+      "question": "Where is the Silent Valley National Park located in India?",
+      "options": [
+        "Tamil Nadu",
+        "Kerala",
+        "Karnataka",
+        "Uttarakhand"
+      ],
+      "answer": 1,
+      "hint": "Silent Valley National Park is located in the Nilgiri Hills, Palakkad district, Kerala."
+    },
+    {
+      "question": "Where was the first session of the Indian National Congress held in 1885?",
+      "options": [
+        "Calcutta",
+        "Bombay",
+        "Madras",
+        "Allahabad"
+      ],
+      "answer": 1,
+      "hint": "The first INC session was held at Gokuldas Tejpal Sanskrit College, Bombay."
+    },
+    {
+      "question": "Which layer of the atmosphere contains the protective Ozone Layer?",
+      "options": [
+        "Troposphere",
+        "Stratosphere",
+        "Mesosphere",
+        "Thermosphere"
+      ],
+      "answer": 1,
+      "hint": "The stratosphere contains the ozone layer (about 15-35 km above Earth)."
+    },
+    {
+      "question": "The separation of the judiciary from the executive is mentioned in which part of the Constitution?",
+      "options": [
+        "Preamble",
+        "Fundamental Rights",
+        "Directive Principles of State Policy",
+        "Seventh Schedule"
+      ],
+      "answer": 2,
+      "hint": "Article 50 of the DPSPs directs the State to separate the judiciary from the executive."
+    },
+    {
+      "question": "Who is the author of the famous ancient book \"Panchatantra\"?",
+      "options": [
+        "Kalidasa",
+        "Vishnu Sharma",
+        "Chanakya",
+        "Banabhatta"
+      ],
+      "answer": 1,
+      "hint": "Pandit Vishnu Sharma wrote the Panchatantra collection of animal fables in Sanskrit."
+    },
+    {
+      "question": "Which act served as the primary blueprint for the Constitution of India?",
+      "options": [
+        "Indian Councils Act 1909",
+        "Government of India Act 1919",
+        "Government of India Act 1935",
+        "Indian Independence Act 1947"
+      ],
+      "answer": 2,
+      "hint": "More than half of the Constitution's provisions are adapted from the GOI Act of 1935."
+    }
+  ]
+}

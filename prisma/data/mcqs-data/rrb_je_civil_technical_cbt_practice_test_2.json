@@ -1,0 +1,177 @@
+{
+  "name": "RRB JE Civil Technical CBT - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "RRB JE Civil Technical CBT",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "rrb_je_civil_technical_cbt",
+  "questions": [
+    {
+      "question": "What is the standard size of a modular brick?",
+      "options": [
+        "19cm x 9cm x 9cm",
+        "20cm x 10cm x 10cm",
+        "22.8cm x 11.2cm x 7cm",
+        "19cm x 19cm x 9cm"
+      ],
+      "answer": 0,
+      "hint": "The standard size of a modular brick is 19cm x 9cm x 9cm."
+    },
+    {
+      "question": "Which cement test is used to check its soundness?",
+      "options": [
+        "Le-Chatelier test",
+        "Vicat needle test",
+        "Slump test",
+        "Fineness test"
+      ],
+      "answer": 0,
+      "hint": "The Le-Chatelier test is used to detect soundness due to free lime."
+    },
+    {
+      "question": "What is the pH value of drinking water?",
+      "options": [
+        "Between 6.5 and 8.5",
+        "Exactly 7",
+        "Less than 6",
+        "More than 9"
+      ],
+      "answer": 0,
+      "hint": "Drinking water pH should ideally be in the range of 6.5 to 8.5."
+    },
+    {
+      "question": "The ratio of lateral strain to linear strain is called:",
+      "options": [
+        "Young's Modulus",
+        "Bulk Modulus",
+        "Poisson's Ratio",
+        "Rigidity Modulus"
+      ],
+      "answer": 2,
+      "hint": "Poisson's Ratio is the ratio of lateral strain to longitudinal/linear strain."
+    },
+    {
+      "question": "Which instrument is used to measure high temperature in kilns?",
+      "options": [
+        "Thermometer",
+        "Pyrometer",
+        "Barometer",
+        "Anemometer"
+      ],
+      "answer": 1,
+      "hint": "A pyrometer measures very high temperatures by sensing radiation."
+    },
+    {
+      "question": "The slump test of concrete is used to measure its:",
+      "options": [
+        "Compressive strength",
+        "Tensile strength",
+        "Workability",
+        "Durability"
+      ],
+      "answer": 2,
+      "hint": "The slump test evaluates the workability and consistency of fresh concrete mixes."
+    },
+    {
+      "question": "What is the primary chemical constituent of limestone?",
+      "options": [
+        "Calcium carbonate",
+        "Silica",
+        "Alumina",
+        "Iron oxide"
+      ],
+      "answer": 0,
+      "hint": "Limestone is a sedimentary rock composed largely of calcium carbonate (CaCO3)."
+    },
+    {
+      "question": "What is the hardness of a diamond on the Mohs scale?",
+      "options": [
+        "1",
+        "5",
+        "8",
+        "10"
+      ],
+      "answer": 3,
+      "hint": "Diamond is the hardest natural substance, rated 10 on the Mohs scale."
+    },
+    {
+      "question": "What is the maximum aggregate impact value allowed for concrete used in road wearing surfaces?",
+      "options": [
+        "15%",
+        "20%",
+        "30%",
+        "45%"
+      ],
+      "answer": 2,
+      "hint": "For wearing courses, the aggregate impact value should not exceed 30%."
+    },
+    {
+      "question": "Which instrument is used for measuring both horizontal and vertical angles in surveying?",
+      "options": [
+        "Compass",
+        "Level",
+        "Theodolite",
+        "Planimeter"
+      ],
+      "answer": 2,
+      "hint": "A theodolite is a precision optical instrument for measuring horizontal and vertical angles."
+    },
+    {
+      "question": "What is the SI unit of dynamic viscosity?",
+      "options": [
+        "Pascal-second (Pa.s)",
+        "Poise",
+        "Stokes",
+        "m2/s"
+      ],
+      "answer": 0,
+      "hint": "The SI unit of dynamic viscosity is Pascal-second (Pa.s), where 1 Pa.s = 10 Poise."
+    },
+    {
+      "question": "Which type of cement is recommended for underwater concrete construction?",
+      "options": [
+        "Low heat cement",
+        "Rapid hardening cement",
+        "Quick setting cement",
+        "Portland pozzolana cement"
+      ],
+      "answer": 2,
+      "hint": "Quick setting cement starts setting within 5 minutes and hardens in 30 minutes, ideal for running water."
+    },
+    {
+      "question": "What is the fundamental working principle of surveying?",
+      "options": [
+        "Work from part to whole",
+        "Work from whole to part",
+        "Measuring local points only",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "Surveying works from whole to part to control and localize errors."
+    },
+    {
+      "question": "The contour interval on a map depends on which factors?",
+      "options": [
+        "Scale of map & nature of ground",
+        "Color of map",
+        "Size of paper",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Contour interval depends on topography and map scale detail requirements."
+    },
+    {
+      "question": "Concrete gains strength primarily due to which chemical reaction?",
+      "options": [
+        "Carbonation",
+        "Evaporation of water",
+        "Hydration of cement",
+        "Siltation"
+      ],
+      "answer": 2,
+      "hint": "The hydration of calcium silicate compounds in cement creates the binding gel."
+    }
+  ]
+}

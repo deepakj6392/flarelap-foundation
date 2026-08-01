@@ -1,0 +1,177 @@
+{
+  "name": "CSIR NET Life Sciences Prep - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "CSIR NET Life Sciences Prep",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "csir_net_life_sciences_prep",
+  "questions": [
+    {
+      "question": "Which organelle is responsible for cellular respiration and ATP production?",
+      "options": [
+        "Lysosome",
+        "Mitochondria",
+        "Golgi apparatus",
+        "Endoplasmic reticulum"
+      ],
+      "answer": 1,
+      "hint": "Mitochondria are the powerhouses containing enzymes for TCA cycle and ETC."
+    },
+    {
+      "question": "What is the primary site of protein translation inside a cell?",
+      "options": [
+        "Nucleolus",
+        "Ribosome",
+        "Peroxisome",
+        "Lysosome"
+      ],
+      "answer": 1,
+      "hint": "Ribosomes read mRNA and link amino acids to synthesize polypeptide chains."
+    },
+    {
+      "question": "The genetic material of retroviruses (like HIV) is:",
+      "options": [
+        "Double-stranded DNA",
+        "Single-stranded RNA",
+        "Circular DNA",
+        "Z-DNA"
+      ],
+      "answer": 1,
+      "hint": "Retroviruses store genomes as RNA and use reverse transcriptase to build DNA inside host cells."
+    },
+    {
+      "question": "Which molecule serves as the primary chemical energy currency of the cell?",
+      "options": [
+        "ADP",
+        "ATP",
+        "NADH",
+        "Glucose"
+      ],
+      "answer": 1,
+      "hint": "Adenosine Triphosphate (ATP) stores energy in phosphoanhydride bonds."
+    },
+    {
+      "question": "What is the process of copying DNA sequence into RNA called?",
+      "options": [
+        "Replication",
+        "Translation",
+        "Transcription",
+        "Transduction"
+      ],
+      "answer": 2,
+      "hint": "Transcription is carried out by RNA polymerase enzymes."
+    },
+    {
+      "question": "The double helix structure of DNA was proposed by whom in 1953?",
+      "options": [
+        "Gregor Mendel",
+        "Watson and Crick",
+        "Robert Hooke",
+        "Louis Pasteur"
+      ],
+      "answer": 1,
+      "hint": "James Watson and Francis Crick described the B-DNA structure using Rosalind Franklin's X-ray data."
+    },
+    {
+      "question": "Which hormone is primarily responsible for lowering blood glucose levels?",
+      "options": [
+        "Glucagon",
+        "Adrenaline",
+        "Insulin",
+        "Thyroxine"
+      ],
+      "answer": 2,
+      "hint": "Insulin promotes cellular glucose uptake and glycogen synthesis."
+    },
+    {
+      "question": "What is the main function of red blood cells (erythrocytes)?",
+      "options": [
+        "Phagocytosis",
+        "Oxygen transport",
+        "Blood clotting",
+        "Antibody synthesis"
+      ],
+      "answer": 1,
+      "hint": "Hemoglobin in red cells binds oxygen reversibly to transport it from lungs to tissues."
+    },
+    {
+      "question": "The process of programmed cell death is called:",
+      "options": [
+        "Necrosis",
+        "Apoptosis",
+        "Autophagy",
+        "Senescence"
+      ],
+      "answer": 1,
+      "hint": "Apoptosis is a clean, regulated self-destruction pathway in multicellular organisms."
+    },
+    {
+      "question": "Which vitamin is synthesized in the human skin in the presence of sunlight?",
+      "options": [
+        "Vitamin A",
+        "Vitamin B12",
+        "Vitamin C",
+        "Vitamin D"
+      ],
+      "answer": 3,
+      "hint": "UV radiation converts 7-dehydrocholesterol in skin to cholecalciferol (Vitamin D3)."
+    },
+    {
+      "question": "What is the division of cytoplasm called during cell division?",
+      "options": [
+        "Karyokinesis",
+        "Mitosis",
+        "Cytokinesis",
+        "Meiosis"
+      ],
+      "answer": 2,
+      "hint": "Cytokinesis physically splits the parent cell into two daughter cells."
+    },
+    {
+      "question": "Which ecosystem generally exhibits the highest rate of primary productivity per unit area?",
+      "options": [
+        "Desert",
+        "Open Ocean",
+        "Tropical Rainforest",
+        "Tundra"
+      ],
+      "answer": 2,
+      "hint": "Warm temperatures, high rainfall, and dense foliage maximize photosynthesis rates."
+    },
+    {
+      "question": "The study of interactions between organisms and their physical environment is:",
+      "options": [
+        "Taxonomy",
+        "Ecology",
+        "Genetics",
+        "Evolution"
+      ],
+      "answer": 1,
+      "hint": "Ecology studies distribution, abundance, and interactions of organisms."
+    },
+    {
+      "question": "What is the primary antibody class produced during secondary immune responses?",
+      "options": [
+        "IgM",
+        "IgG",
+        "IgA",
+        "IgE"
+      ],
+      "answer": 1,
+      "hint": "IgG is the most abundant serum antibody class and dominates secondary memory responses."
+    },
+    {
+      "question": "Which molecule acts as the terminal electron acceptor in aerobic cellular respiration?",
+      "options": [
+        "Water",
+        "Carbon dioxide",
+        "Oxygen",
+        "NAD+"
+      ],
+      "answer": 2,
+      "hint": "Oxygen binds protons and electrons at the end of the ETC to form water."
+    }
+  ]
+}

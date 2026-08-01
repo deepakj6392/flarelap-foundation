@@ -1,0 +1,177 @@
+{
+  "name": "Instrumentation Engineering Practice Mock - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "Instrumentation Engineering Practice Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "instrumentation_engineering_practice_mock",
+  "questions": [
+    {
+      "question": "Which sensor is commonly used to measure temperature?",
+      "options": [
+        "RTD / Thermocouple",
+        "LVDT",
+        "Piezoelectric crystal",
+        "Strain gauge"
+      ],
+      "answer": 0,
+      "hint": "Resistance Temperature Detectors (RTD) change resistance predictably with temperature."
+    },
+    {
+      "question": "What is the working principle of LVDT?",
+      "options": [
+        "Variable Inductance",
+        "Variable Capacitance",
+        "Piezoelectric effect",
+        "Photoelectric effect"
+      ],
+      "answer": 0,
+      "hint": "Linear Variable Differential Transformer uses mutual induction changes from core displacements."
+    },
+    {
+      "question": "Strain gauge is used to measure:",
+      "options": [
+        "Strain and force",
+        "Temperature",
+        "Velocity",
+        "pH"
+      ],
+      "answer": 0,
+      "hint": "Resistance of foil strain gauge changes when subject to mechanical tension/compression."
+    },
+    {
+      "question": "A pH sensor measures the concentration of:",
+      "options": [
+        "Hydrogen ions",
+        "Oxygen ions",
+        "Sodium ions",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "pH is defined as the negative log of Hydrogen ion activity."
+    },
+    {
+      "question": "What does PLC stand for in process control?",
+      "options": [
+        "Programmable Logic Controller",
+        "Process Line Computer",
+        "Programmed Loop Control",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "PLCs are ruggedized digital computers used for industrial automation."
+    },
+    {
+      "question": "The gauge factor of a strain gauge is defined as the ratio of:",
+      "options": [
+        "Fractional change in resistance to strain",
+        "Stress to strain",
+        "Voltage to current",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "GF = (delta_R / Rg) / strain."
+    },
+    {
+      "question": "A thermocouple works on:",
+      "options": [
+        "Seebeck effect",
+        "Peltier effect",
+        "Thomson effect",
+        "Hall effect"
+      ],
+      "answer": 0,
+      "hint": "Seebeck effect generates voltage proportional to the junction temperature differences."
+    },
+    {
+      "question": "Which instrument is used to measure fluid flow velocity using magnetic field?",
+      "options": [
+        "Electromagnetic flowmeter",
+        "Venturimeter",
+        "Rotameter",
+        "Pitot tube"
+      ],
+      "answer": 0,
+      "hint": "Magnetic flowmeters use Faraday's law of induction on conductive fluids."
+    },
+    {
+      "question": "In a control system, feedback is used to:",
+      "options": [
+        "Reduce error and stabilize",
+        "Increase gain",
+        "Remove sensors",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Negative feedback tracks setpoints and rejects external system disturbances."
+    },
+    {
+      "question": "What is the unit of pressure?",
+      "options": [
+        "Pascal",
+        "Joule",
+        "Newton",
+        "Watt"
+      ],
+      "answer": 0,
+      "hint": "Pascal (Pa) is equivalent to one Newton of force per square meter."
+    },
+    {
+      "question": "An instrumentation amplifier has:",
+      "options": [
+        "High CMRR and high input impedance",
+        "Low CMRR",
+        "Low input impedance",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Differential layout guarantees high Common Mode Rejection Ratio (CMRR) and high impedance."
+    },
+    {
+      "question": "The device used to convert physical variables into electrical signals is:",
+      "options": [
+        "Transducer",
+        "Actuator",
+        "Amplifier",
+        "Rectifier"
+      ],
+      "answer": 0,
+      "hint": "Transducers act as energy converters for signal conditioning circuits."
+    },
+    {
+      "question": "Which sensor works on change in distance between plates?",
+      "options": [
+        "Capacitive sensor",
+        "Inductive sensor",
+        "Hall effect sensor",
+        "Optoelectronic sensor"
+      ],
+      "answer": 0,
+      "hint": "Capacitance C is proportional to area A divided by distance d."
+    },
+    {
+      "question": "A PID controller stands for:",
+      "options": [
+        "Proportional-Integral-Derivative",
+        "Process-Integrated-Data",
+        "Programmed-Index-Diagnostic",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "PID loops use current error (P), past accumulative error (I), and rate of change (D)."
+    },
+    {
+      "question": "The damping ratio for an underdamped system is:",
+      "options": [
+        "Between 0 and 1",
+        "Exactly 1",
+        "Greater than 1",
+        "Zero"
+      ],
+      "answer": 0,
+      "hint": "Underdamped systems decay with oscillations (damping ratio zeta < 1)."
+    }
+  ]
+}

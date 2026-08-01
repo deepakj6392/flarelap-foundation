@@ -1,0 +1,177 @@
+{
+  "name": "CSIR NET Chemical Sciences Mock - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "CSIR NET Chemical Sciences Mock",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "csir_net_chemical_sciences_mock",
+  "questions": [
+    {
+      "question": "What is the geometric shape of a water molecule (H2O)?",
+      "options": [
+        "Linear",
+        "Bent / V-shaped",
+        "Tetrahedral",
+        "Trigonal planar"
+      ],
+      "answer": 1,
+      "hint": "Oxygen has 2 bonding pairs and 2 lone pairs, resulting in a bent shape (104.5 degrees)."
+    },
+    {
+      "question": "Which block of the periodic table contains the transition metal elements?",
+      "options": [
+        "s-block",
+        "p-block",
+        "d-block",
+        "f-block"
+      ],
+      "answer": 2,
+      "hint": "Transition metals are characterized by partially filled d subshells."
+    },
+    {
+      "question": "What is the pH value of a neutral aqueous solution at 25 degrees C?",
+      "options": [
+        "0",
+        "7",
+        "14",
+        "1"
+      ],
+      "answer": 1,
+      "hint": "At neutral pH, [H+] = [OH-] = 10^-7 M, so pH = 7."
+    },
+    {
+      "question": "Which law states that pressure is inversely proportional to volume at constant temperature?",
+      "options": [
+        "Charles's Law",
+        "Boyle's Law",
+        "Gay-Lussac's Law",
+        "Avogadro's Law"
+      ],
+      "answer": 1,
+      "hint": "Boyle's Law states P1 * V1 = P2 * V2."
+    },
+    {
+      "question": "The hybridisation of the carbon atom in methane (CH4) is:",
+      "options": [
+        "sp",
+        "sp2",
+        "sp3",
+        "dsp2"
+      ],
+      "answer": 2,
+      "hint": "Methane carbon forms 4 single sigma bonds in a tetrahedral arrangement (sp3)."
+    },
+    {
+      "question": "What is the primary catalyst used in the industrial Haber process for ammonia synthesis?",
+      "options": [
+        "Nickel (Ni)",
+        "Platinum (Pt)",
+        "Iron (Fe)",
+        "Palladium (Pd)"
+      ],
+      "answer": 2,
+      "hint": "Finely divided iron with molybdenum promoter is traditionally used."
+    },
+    {
+      "question": "Which gas is released when an active metal (like Zinc) reacts with dilute hydrochloric acid?",
+      "options": [
+        "Oxygen",
+        "Hydrogen",
+        "Chlorine",
+        "Carbon dioxide"
+      ],
+      "answer": 1,
+      "hint": "Zn + 2HCl -> ZnCl2 + H2 (hydrogen gas displacement)."
+    },
+    {
+      "question": "What is the unit of the rate constant (k) for a first-order chemical reaction?",
+      "options": [
+        "M / s",
+        "1 / M.s",
+        "1 / s (s^-1)",
+        "1 / M^2.s"
+      ],
+      "answer": 2,
+      "hint": "For first order, rate = k[A]. Units of k are 1 / time."
+    },
+    {
+      "question": "The process of heating ore in excess of air below its melting point is called:",
+      "options": [
+        "Calcination",
+        "Roasting",
+        "Smelting",
+        "Bessemerisation"
+      ],
+      "answer": 1,
+      "hint": "Roasting converts sulfide ores into metal oxides by heating in air."
+    },
+    {
+      "question": "Which isomerism arises due to different spatial arrangements of ligands around a metal center?",
+      "options": [
+        "Linkage isomerism",
+        "Geometrical isomerism",
+        "Coordination isomerism",
+        "Ionisation isomerism"
+      ],
+      "answer": 1,
+      "hint": "Geometrical isomerism (cis/trans, fac/mer) arises from spatial layouts."
+    },
+    {
+      "question": "What is the chemical formula of ozone gas?",
+      "options": [
+        "O2",
+        "O3",
+        "O4",
+        "H2O2"
+      ],
+      "answer": 1,
+      "hint": "Ozone is a triatomic allotrope of oxygen (O3)."
+    },
+    {
+      "question": "Which acid is present in gastric juice of human stomach to aid digestion?",
+      "options": [
+        "Sulphuric acid",
+        "Nitric acid",
+        "Hydrochloric acid (HCl)",
+        "Citric acid"
+      ],
+      "answer": 2,
+      "hint": "The stomach lining secretes dilute hydrochloric acid (around pH 1.5-2.0)."
+    },
+    {
+      "question": "Which molecule possesses a permanent dipole moment?",
+      "options": [
+        "Carbon dioxide (CO2)",
+        "Ammonia (NH3)",
+        "Methane (CH4)",
+        "Boron trifluoride (BF3)"
+      ],
+      "answer": 1,
+      "hint": "Ammonia has a trigonal pyramidal shape with net molecular dipole, unlike symmetric molecules."
+    },
+    {
+      "question": "What is the oxidation state of iron in rust (Fe2O3)?",
+      "options": [
+        "+2",
+        "+3",
+        "0",
+        "+6"
+      ],
+      "answer": 1,
+      "hint": "Each oxygen is -2, so 2 * Fe + 3 * (-2) = 0 -> Fe = +3."
+    },
+    {
+      "question": "Which spectroscopic method is most commonly used to identify functional groups in organic molecules?",
+      "options": [
+        "UV-Vis Spectroscopy",
+        "Infrared (IR) Spectroscopy",
+        "Mass Spectrometry",
+        "Flame Photometry"
+      ],
+      "answer": 1,
+      "hint": "IR spectroscopy detects vibrational transitions unique to functional groups."
+    }
+  ]
+}

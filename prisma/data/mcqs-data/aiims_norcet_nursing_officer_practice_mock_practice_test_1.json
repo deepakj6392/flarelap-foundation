@@ -1,0 +1,177 @@
+{
+  "name": "AIIMS NORCET Nursing Officer Practice Mock - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "AIIMS NORCET Nursing Officer Practice Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "aiims_norcet_nursing_officer_practice_mock",
+  "questions": [
+    {
+      "question": "What is the normal pulse rate of a healthy adult?",
+      "options": [
+        "60-100 bpm",
+        "50-60 bpm",
+        "100-120 bpm",
+        "40-50 bpm"
+      ],
+      "answer": 0,
+      "hint": "The normal range of adult heart beats is 60 to 100 beats per minute."
+    },
+    {
+      "question": "Which route of drug administration provides the fastest absorption?",
+      "options": [
+        "Intravenous (IV)",
+        "Oral",
+        "Intramuscular (IM)",
+        "Subcutaneous"
+      ],
+      "answer": 0,
+      "hint": "IV delivery injects drugs directly into systemic circulation."
+    },
+    {
+      "question": "The infection acquired by a patient during hospital stay is called:",
+      "options": [
+        "Nosocomial infection",
+        "Idiopathic infection",
+        "Latent infection",
+        "Iatrogenic infection"
+      ],
+      "answer": 0,
+      "hint": "Hospital-acquired infections are referred to as nosocomial."
+    },
+    {
+      "question": "What is the size of an IV cannula used for blood transfusion in adults?",
+      "options": [
+        "18 G (Green)",
+        "22 G (Blue)",
+        "24 G (Yellow)",
+        "26 G (Purple)"
+      ],
+      "answer": 0,
+      "hint": "A larger bore (18 Gauge) is required to prevent hemolysis during rapid blood infusions."
+    },
+    {
+      "question": "Which position is recommended for a patient who is short of breath?",
+      "options": [
+        "Fowler's position",
+        "Supine position",
+        "Prone position",
+        "Trendelenburg position"
+      ],
+      "answer": 0,
+      "hint": "Fowler's (semi-sitting) allows maximal lung chest expansion."
+    },
+    {
+      "question": "What is the primary cause of bedsores (decubitus ulcers)?",
+      "options": [
+        "Prolonged pressure on bony prominences",
+        "Excess nutrition",
+        "Frequent bathing",
+        "High blood pressure"
+      ],
+      "answer": 0,
+      "hint": "Ischemia due to local tissue compression cuts off local circulation."
+    },
+    {
+      "question": "What is the normal pH of arterial blood?",
+      "options": [
+        "7.35 - 7.45",
+        "6.80 - 7.00",
+        "7.00 - 7.15",
+        "7.50 - 7.60"
+      ],
+      "answer": 0,
+      "hint": "Tight blood pH buffers must remain within 7.35 to 7.45 for metabolic enzymes."
+    },
+    {
+      "question": "The instrument used to check the lungs and heart sounds is:",
+      "options": [
+        "Stethoscope",
+        "Sphygmomanometer",
+        "Otoscope",
+        "Laryngoscope"
+      ],
+      "answer": 0,
+      "hint": "A stethoscope amplifies internal body acoustic sounds."
+    },
+    {
+      "question": "Which electrolyte imbalance is majorly associated with cardiac arrhythmias?",
+      "options": [
+        "Potassium (K+)",
+        "Sodium (Na+)",
+        "Calcium (Ca2+)",
+        "Magnesium (Mg2+)"
+      ],
+      "answer": 0,
+      "hint": "Potassium drives cardiac cell repolarization; hyper/hypokalemia causes dysrhythmias."
+    },
+    {
+      "question": "The first milk produced by the mother after childbirth is called:",
+      "options": [
+        "Colostrum",
+        "Fore-milk",
+        "Hind-milk",
+        "Transitional milk"
+      ],
+      "answer": 0,
+      "hint": "Colostrum is thick, yellowish, and rich in maternal immunoglobulins."
+    },
+    {
+      "question": "Which vitamin deficiency causes night blindness?",
+      "options": [
+        "Vitamin A",
+        "Vitamin B12",
+        "Vitamin C",
+        "Vitamin D"
+      ],
+      "answer": 0,
+      "hint": "Vitamin A (retinol) is required to form visual purple rhodopsin."
+    },
+    {
+      "question": "The method used to open the airway of a suspected spinal injury patient is:",
+      "options": [
+        "Jaw-thrust maneuver",
+        "Head-tilt chin-lift",
+        "Heimlich maneuver",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Jaw-thrust opens the airway without hyperextending the cervical neck."
+    },
+    {
+      "question": "Which hormone increases water reabsorption in the kidneys?",
+      "options": [
+        "Antidiuretic hormone (ADH)",
+        "Aldosterone",
+        "Insulin",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "ADH inserts aquaporins in collecting ducts to retain blood water."
+    },
+    {
+      "question": "What is the color code of a bio-medical waste bag for discarding anatomical waste?",
+      "options": [
+        "Yellow",
+        "Red",
+        "Blue",
+        "Black"
+      ],
+      "answer": 0,
+      "hint": "Placenta, organs, and tissue waste go in yellow incinerator bags."
+    },
+    {
+      "question": "What is the standard sterilization temperature and pressure in an autoclave?",
+      "options": [
+        "121°C at 15 psi for 15-20 mins",
+        "100°C at 10 psi for 30 mins",
+        "134°C at 30 psi for 5 mins",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Pressurized steam reaches 121°C to kill heat-resistant bacterial spores."
+    }
+  ]
+}

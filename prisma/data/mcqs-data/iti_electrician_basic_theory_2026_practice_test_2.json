@@ -1,0 +1,177 @@
+{
+  "name": "ITI Electrician Basic Theory 2026 - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "ITI Electrician Basic Theory 2026",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "iti_electrician_basic_theory_2026",
+  "questions": [
+    {
+      "question": "What is the unit of electrical resistance?",
+      "options": [
+        "Volt",
+        "Ampere",
+        "Ohm",
+        "Watt"
+      ],
+      "answer": 2,
+      "hint": "Ohm is the SI unit of electrical resistance."
+    },
+    {
+      "question": "According to Ohm's Law, current (I) is equal to:",
+      "options": [
+        "V * R",
+        "V / R",
+        "R / V",
+        "V + R"
+      ],
+      "answer": 1,
+      "hint": "I = V / R, where V is voltage and R is resistance."
+    },
+    {
+      "question": "Which instrument is used to measure electric current?",
+      "options": [
+        "Voltmeter",
+        "Ammeter",
+        "Galvanometer",
+        "Multimeter"
+      ],
+      "answer": 1,
+      "hint": "An ammeter is used to measure electric current."
+    },
+    {
+      "question": "Which of the following is an insulator?",
+      "options": [
+        "Copper",
+        "Aluminium",
+        "Rubber",
+        "Iron"
+      ],
+      "answer": 2,
+      "hint": "Rubber is an insulator, meaning it does not conduct electricity."
+    },
+    {
+      "question": "What is the standard household AC frequency in India?",
+      "options": [
+        "50 Hz",
+        "60 Hz",
+        "100 Hz",
+        "120 Hz"
+      ],
+      "answer": 0,
+      "hint": "India uses a standard grid frequency of 50 Hz."
+    },
+    {
+      "question": "Which acid is used as an electrolyte in a lead-acid battery?",
+      "options": [
+        "Hydrochloric acid",
+        "Nitric acid",
+        "Sulphuric acid",
+        "Acetic acid"
+      ],
+      "answer": 2,
+      "hint": "Dilute Sulphuric Acid (H2SO4) is used as an electrolyte in lead-acid accumulator cells."
+    },
+    {
+      "question": "Which device is used to convert AC voltage to DC voltage?",
+      "options": [
+        "Inverter",
+        "Transformer",
+        "Rectifier",
+        "Alternator"
+      ],
+      "answer": 2,
+      "hint": "A rectifier converts Alternating Current (AC) into Direct Current (DC)."
+    },
+    {
+      "question": "A transformer works on which type of electrical supply?",
+      "options": [
+        "DC only",
+        "AC only",
+        "Both AC and DC",
+        "Pulsating DC only"
+      ],
+      "answer": 1,
+      "hint": "Transformers rely on electromagnetic induction which requires a changing magnetic field produced by AC."
+    },
+    {
+      "question": "What is the unit of electrical capacitance?",
+      "options": [
+        "Henry",
+        "Farad",
+        "Tesla",
+        "Weber"
+      ],
+      "answer": 1,
+      "hint": "The Farad (F) is the standard unit of capacitance."
+    },
+    {
+      "question": "Which semiconductor element is most commonly used in manufacturing electronic components?",
+      "options": [
+        "Copper",
+        "Carbon",
+        "Silicon",
+        "Mica"
+      ],
+      "answer": 2,
+      "hint": "Silicon is the most popular semiconductor material due to its temperature stability."
+    },
+    {
+      "question": "Which law states that induced electromotive force is proportional to the rate of change of magnetic flux?",
+      "options": [
+        "Ohm's Law",
+        "Lenz's Law",
+        "Faraday's Law of Induction",
+        "Kirchhoff's Law"
+      ],
+      "answer": 2,
+      "hint": "Faraday's Law describes the generation of EMF by changing magnetic fields."
+    },
+    {
+      "question": "Which instrument is used to test the insulation resistance of wiring installations?",
+      "options": [
+        "Growler",
+        "Megger",
+        "Wattmeter",
+        "Earth Tester"
+      ],
+      "answer": 1,
+      "hint": "A Megger is a high-resistance megohmmeter used to test insulation cables."
+    },
+    {
+      "question": "What is the color of the earth/ground wire in standard 3-core cables in India?",
+      "options": [
+        "Red",
+        "Black",
+        "Green or Green/Yellow",
+        "Blue"
+      ],
+      "answer": 2,
+      "hint": "Green (or green-yellow stripes) denotes the safety earth connection."
+    },
+    {
+      "question": "Which instrument is used to measure the specific gravity of battery electrolyte?",
+      "options": [
+        "Hydrometer",
+        "Barometer",
+        "Lactometer",
+        "Thermometer"
+      ],
+      "answer": 0,
+      "hint": "A hydrometer measures the density of liquids relative to water, testing battery charge levels."
+    },
+    {
+      "question": "What is the function of a choke in a traditional fluorescent tube light circuit?",
+      "options": [
+        "Increase power factor",
+        "Limit current and induce starting strike voltage",
+        "Stabilize heater filaments",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "The choke limits running current and induces a high voltage kick to strike the gas discharge."
+    }
+  ]
+}

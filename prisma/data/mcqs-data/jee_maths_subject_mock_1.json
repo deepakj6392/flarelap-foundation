@@ -1,0 +1,342 @@
+{
+  "name": "JEE Maths Subject Mock 1",
+  "type": "Subject Test",
+  "courseName": "JEE Mathematics Practice Prep",
+  "qs": 30,
+  "marks": 120,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "jee_math",
+  "questions": [
+    {
+      "question": "Calculate: 2^2 = ?",
+      "options": [
+        "4",
+        "6",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "hint": "2^2 = 4."
+    },
+    {
+      "question": "Calculate: 2^3 = ?",
+      "options": [
+        "8",
+        "10",
+        "7",
+        "16"
+      ],
+      "answer": 0,
+      "hint": "2^3 = 8."
+    },
+    {
+      "question": "Calculate: 2^4 = ?",
+      "options": [
+        "16",
+        "18",
+        "15",
+        "32"
+      ],
+      "answer": 0,
+      "hint": "2^4 = 16."
+    },
+    {
+      "question": "Calculate: 2^5 = ?",
+      "options": [
+        "32",
+        "34",
+        "31",
+        "64"
+      ],
+      "answer": 0,
+      "hint": "2^5 = 32."
+    },
+    {
+      "question": "Calculate: 2^6 = ?",
+      "options": [
+        "64",
+        "66",
+        "63",
+        "128"
+      ],
+      "answer": 0,
+      "hint": "2^6 = 64."
+    },
+    {
+      "question": "Calculate: 3^2 = ?",
+      "options": [
+        "9",
+        "11",
+        "8",
+        "18"
+      ],
+      "answer": 0,
+      "hint": "3^2 = 9."
+    },
+    {
+      "question": "Calculate: 3^3 = ?",
+      "options": [
+        "27",
+        "29",
+        "26",
+        "54"
+      ],
+      "answer": 0,
+      "hint": "3^3 = 27."
+    },
+    {
+      "question": "Calculate: 3^4 = ?",
+      "options": [
+        "81",
+        "83",
+        "80",
+        "162"
+      ],
+      "answer": 0,
+      "hint": "3^4 = 81."
+    },
+    {
+      "question": "Calculate: 3^5 = ?",
+      "options": [
+        "243",
+        "245",
+        "242",
+        "486"
+      ],
+      "answer": 0,
+      "hint": "3^5 = 243."
+    },
+    {
+      "question": "Calculate: 5^2 = ?",
+      "options": [
+        "25",
+        "27",
+        "24",
+        "50"
+      ],
+      "answer": 0,
+      "hint": "5^2 = 25."
+    },
+    {
+      "question": "Calculate: 5^3 = ?",
+      "options": [
+        "125",
+        "127",
+        "124",
+        "250"
+      ],
+      "answer": 0,
+      "hint": "5^3 = 125."
+    },
+    {
+      "question": "Calculate: 5^4 = ?",
+      "options": [
+        "625",
+        "627",
+        "624",
+        "1250"
+      ],
+      "answer": 0,
+      "hint": "5^4 = 625."
+    },
+    {
+      "question": "Calculate: 10^1 = ?",
+      "options": [
+        "10",
+        "12",
+        "9",
+        "20"
+      ],
+      "answer": 0,
+      "hint": "10^1 = 10."
+    },
+    {
+      "question": "Calculate: 10^2 = ?",
+      "options": [
+        "100",
+        "102",
+        "99",
+        "200"
+      ],
+      "answer": 0,
+      "hint": "10^2 = 100."
+    },
+    {
+      "question": "Calculate: 10^3 = ?",
+      "options": [
+        "1000",
+        "1002",
+        "999",
+        "2000"
+      ],
+      "answer": 0,
+      "hint": "10^3 = 1000."
+    },
+    {
+      "question": "Calculate: 10^4 = ?",
+      "options": [
+        "10000",
+        "10002",
+        "9999",
+        "20000"
+      ],
+      "answer": 0,
+      "hint": "10^4 = 10000."
+    },
+    {
+      "question": "Calculate: 4^2 = ?",
+      "options": [
+        "16",
+        "18",
+        "15",
+        "32"
+      ],
+      "answer": 0,
+      "hint": "4^2 = 16."
+    },
+    {
+      "question": "Calculate: 4^3 = ?",
+      "options": [
+        "64",
+        "66",
+        "63",
+        "128"
+      ],
+      "answer": 0,
+      "hint": "4^3 = 64."
+    },
+    {
+      "question": "Calculate: 6^2 = ?",
+      "options": [
+        "36",
+        "38",
+        "35",
+        "72"
+      ],
+      "answer": 0,
+      "hint": "6^2 = 36."
+    },
+    {
+      "question": "Calculate: 7^2 = ?",
+      "options": [
+        "49",
+        "51",
+        "48",
+        "98"
+      ],
+      "answer": 0,
+      "hint": "7^2 = 49."
+    },
+    {
+      "question": "Convert binary 0000 to decimal:",
+      "options": [
+        "0",
+        "3",
+        "-2",
+        "5"
+      ],
+      "answer": 0,
+      "hint": "Binary 0000 = 0."
+    },
+    {
+      "question": "Convert binary 0001 to decimal:",
+      "options": [
+        "1",
+        "4",
+        "-1",
+        "6"
+      ],
+      "answer": 0,
+      "hint": "Binary 0001 = 1."
+    },
+    {
+      "question": "Convert binary 0010 to decimal:",
+      "options": [
+        "2",
+        "5",
+        "0",
+        "7"
+      ],
+      "answer": 0,
+      "hint": "Binary 0010 = 2."
+    },
+    {
+      "question": "Convert binary 0011 to decimal:",
+      "options": [
+        "3",
+        "6",
+        "1",
+        "8"
+      ],
+      "answer": 0,
+      "hint": "Binary 0011 = 3."
+    },
+    {
+      "question": "Convert binary 0100 to decimal:",
+      "options": [
+        "4",
+        "7",
+        "2",
+        "9"
+      ],
+      "answer": 0,
+      "hint": "Binary 0100 = 4."
+    },
+    {
+      "question": "Convert binary 0101 to decimal:",
+      "options": [
+        "5",
+        "8",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "hint": "Binary 0101 = 5."
+    },
+    {
+      "question": "Convert binary 0110 to decimal:",
+      "options": [
+        "6",
+        "9",
+        "4",
+        "11"
+      ],
+      "answer": 0,
+      "hint": "Binary 0110 = 6."
+    },
+    {
+      "question": "Convert binary 0111 to decimal:",
+      "options": [
+        "7",
+        "10",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "hint": "Binary 0111 = 7."
+    },
+    {
+      "question": "Convert binary 1000 to decimal:",
+      "options": [
+        "8",
+        "11",
+        "6",
+        "13"
+      ],
+      "answer": 0,
+      "hint": "Binary 1000 = 8."
+    },
+    {
+      "question": "Convert binary 1001 to decimal:",
+      "options": [
+        "9",
+        "12",
+        "7",
+        "14"
+      ],
+      "answer": 0,
+      "hint": "Binary 1001 = 9."
+    }
+  ]
+}

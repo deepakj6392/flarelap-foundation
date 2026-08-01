@@ -1,0 +1,507 @@
+{
+  "name": "NEET Biology Chapter Test - Genetics",
+  "type": "Chapter Test",
+  "courseName": "NEET Biology Advanced Prep",
+  "qs": 45,
+  "marks": 180,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "neet_biology",
+  "questions": [
+    {
+      "question": "Which cell organelle is primarily responsible for cellular respiration and ATP generation?",
+      "options": [
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast",
+        "Lysosome"
+      ],
+      "answer": 0,
+      "hint": "Mitochondria is responsible for cellular respiration and ATP generation."
+    },
+    {
+      "question": "What is the primary role of the Mitochondria?",
+      "options": [
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis",
+        "cellular waste disposal and digestion"
+      ],
+      "answer": 0,
+      "hint": "The Mitochondria is responsible for generating ATP (cellular energy)."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for synthesis of proteins?",
+      "options": [
+        "Ribosome",
+        "Mitochondria",
+        "Chloroplast",
+        "Lysosome"
+      ],
+      "answer": 0,
+      "hint": "Ribosome is responsible for synthesis of proteins."
+    },
+    {
+      "question": "What is the primary role of the Ribosome?",
+      "options": [
+        "protein synthesis",
+        "generating ATP (cellular energy)",
+        "performing photosynthesis",
+        "cellular waste disposal and digestion"
+      ],
+      "answer": 0,
+      "hint": "The Ribosome is responsible for protein synthesis."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for photosynthesis and sugar synthesis?",
+      "options": [
+        "Chloroplast",
+        "Mitochondria",
+        "Ribosome",
+        "Lysosome"
+      ],
+      "answer": 0,
+      "hint": "Chloroplast is responsible for photosynthesis and sugar synthesis."
+    },
+    {
+      "question": "What is the primary role of the Chloroplast?",
+      "options": [
+        "performing photosynthesis",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "cellular waste disposal and digestion"
+      ],
+      "answer": 0,
+      "hint": "The Chloroplast is responsible for performing photosynthesis."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for intracellular digestion and waste disposal?",
+      "options": [
+        "Lysosome",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Lysosome is responsible for intracellular digestion and waste disposal."
+    },
+    {
+      "question": "What is the primary role of the Lysosome?",
+      "options": [
+        "cellular waste disposal and digestion",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Lysosome is responsible for cellular waste disposal and digestion."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for sorting and packaging of proteins for secretion?",
+      "options": [
+        "Golgi Apparatus",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Golgi Apparatus is responsible for sorting and packaging of proteins for secretion."
+    },
+    {
+      "question": "What is the primary role of the Golgi Apparatus?",
+      "options": [
+        "modifying, sorting, and packaging proteins",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Golgi Apparatus is responsible for modifying, sorting, and packaging proteins."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for synthesis of lipids and detoxification?",
+      "options": [
+        "Smooth Endoplasmic Reticulum",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Smooth Endoplasmic Reticulum is responsible for synthesis of lipids and detoxification."
+    },
+    {
+      "question": "What is the primary role of the Smooth Endoplasmic Reticulum?",
+      "options": [
+        "lipid synthesis and detoxification",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Smooth Endoplasmic Reticulum is responsible for lipid synthesis and detoxification."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for synthesis and folding of proteins?",
+      "options": [
+        "Rough Endoplasmic Reticulum",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Rough Endoplasmic Reticulum is responsible for synthesis and folding of proteins."
+    },
+    {
+      "question": "What is the primary role of the Rough Endoplasmic Reticulum?",
+      "options": [
+        "synthesis and folding of proteins",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Rough Endoplasmic Reticulum is responsible for synthesis and folding of proteins."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for storing genetic material and transcription?",
+      "options": [
+        "Nucleus",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Nucleus is responsible for storing genetic material and transcription."
+    },
+    {
+      "question": "What is the primary role of the Nucleus?",
+      "options": [
+        "storing the cell's hereditary material (DNA)",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Nucleus is responsible for storing the cell's hereditary material (DNA)."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for storage of water, ions, and maintaining turgor pressure?",
+      "options": [
+        "Vacuole",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Vacuole is responsible for storage of water, ions, and maintaining turgor pressure."
+    },
+    {
+      "question": "What is the primary role of the Vacuole?",
+      "options": [
+        "maintaining turgor pressure and storing water and nutrients",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Vacuole is responsible for maintaining turgor pressure and storing water and nutrients."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for organizing microtubules and helping in cell division?",
+      "options": [
+        "Centrosome",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Centrosome is responsible for organizing microtubules and helping in cell division."
+    },
+    {
+      "question": "What is the primary role of the Centrosome?",
+      "options": [
+        "organizing microtubules and helping in cell division",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Centrosome is responsible for organizing microtubules and helping in cell division."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for ribosome assembly and RNA synthesis?",
+      "options": [
+        "Nucleolus",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Nucleolus is responsible for ribosome assembly and RNA synthesis."
+    },
+    {
+      "question": "What is the primary role of the Nucleolus?",
+      "options": [
+        "ribosome assembly and RNA synthesis",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Nucleolus is responsible for ribosome assembly and RNA synthesis."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for regulating entry and exit of substances in the cell?",
+      "options": [
+        "Cell Membrane",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Cell Membrane is responsible for regulating entry and exit of substances in the cell."
+    },
+    {
+      "question": "What is the primary role of the Cell Membrane?",
+      "options": [
+        "regulating entry and exit of substances in the cell",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Cell Membrane is responsible for regulating entry and exit of substances in the cell."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for breaking down fatty acids and producing hydrogen peroxide?",
+      "options": [
+        "Peroxisome",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Peroxisome is responsible for breaking down fatty acids and producing hydrogen peroxide."
+    },
+    {
+      "question": "What is the primary role of the Peroxisome?",
+      "options": [
+        "breaking down fatty acids and producing hydrogen peroxide",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Peroxisome is responsible for breaking down fatty acids and producing hydrogen peroxide."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for storing starch inside plant cells?",
+      "options": [
+        "Amyloplast",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Amyloplast is responsible for storing starch inside plant cells."
+    },
+    {
+      "question": "What is the primary role of the Amyloplast?",
+      "options": [
+        "storing starch inside plant cells",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Amyloplast is responsible for storing starch inside plant cells."
+    },
+    {
+      "question": "Which cell organelle is primarily responsible for storing pigments that give color to fruits and flowers?",
+      "options": [
+        "Chromoplast",
+        "Mitochondria",
+        "Ribosome",
+        "Chloroplast"
+      ],
+      "answer": 0,
+      "hint": "Chromoplast is responsible for storing pigments that give color to fruits and flowers."
+    },
+    {
+      "question": "What is the primary role of the Chromoplast?",
+      "options": [
+        "storing pigments that give color to fruits and flowers",
+        "generating ATP (cellular energy)",
+        "protein synthesis",
+        "performing photosynthesis"
+      ],
+      "answer": 0,
+      "hint": "The Chromoplast is responsible for storing pigments that give color to fruits and flowers."
+    },
+    {
+      "question": "Which hormone is responsible for lowering blood sugar level by promoting glucose absorption?",
+      "options": [
+        "Insulin",
+        "Glucagon",
+        "Thyroxine",
+        "Adrenaline"
+      ],
+      "answer": 0,
+      "hint": "Insulin is responsible for lowering blood sugar level by promoting glucose absorption."
+    },
+    {
+      "question": "Which hormone is responsible for raising blood sugar level by stimulating glycogen breakdown?",
+      "options": [
+        "Glucagon",
+        "Insulin",
+        "Thyroxine",
+        "Adrenaline"
+      ],
+      "answer": 0,
+      "hint": "Glucagon is responsible for raising blood sugar level by stimulating glycogen breakdown."
+    },
+    {
+      "question": "Which hormone is responsible for regulating basal metabolic rate (BMR) and development?",
+      "options": [
+        "Thyroxine",
+        "Insulin",
+        "Glucagon",
+        "Adrenaline"
+      ],
+      "answer": 0,
+      "hint": "Thyroxine is responsible for regulating basal metabolic rate (BMR) and development."
+    },
+    {
+      "question": "Which hormone is responsible for triggering the body's fight-or-flight response under stress?",
+      "options": [
+        "Adrenaline",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Adrenaline is responsible for triggering the body's fight-or-flight response under stress."
+    },
+    {
+      "question": "Which hormone is responsible for stimulating growth, cell reproduction, and regeneration?",
+      "options": [
+        "Growth Hormone",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Growth Hormone is responsible for stimulating growth, cell reproduction, and regeneration."
+    },
+    {
+      "question": "Which hormone is responsible for regulating the sleep-wake cycle (circadian rhythm)?",
+      "options": [
+        "Melatonin",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Melatonin is responsible for regulating the sleep-wake cycle (circadian rhythm)."
+    },
+    {
+      "question": "Which hormone is responsible for developing and maintaining female secondary sexual characteristics?",
+      "options": [
+        "Estrogen",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Estrogen is responsible for developing and maintaining female secondary sexual characteristics."
+    },
+    {
+      "question": "Which hormone is responsible for developing and maintaining male secondary sexual characteristics?",
+      "options": [
+        "Testosterone",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Testosterone is responsible for developing and maintaining male secondary sexual characteristics."
+    },
+    {
+      "question": "Which hormone is responsible for stimulating uterine contractions during childbirth and milk ejection?",
+      "options": [
+        "Oxytocin",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Oxytocin is responsible for stimulating uterine contractions during childbirth and milk ejection."
+    },
+    {
+      "question": "Which hormone is responsible for stimulating milk production in mammary glands?",
+      "options": [
+        "Prolactin",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Prolactin is responsible for stimulating milk production in mammary glands."
+    },
+    {
+      "question": "Which hormone is responsible for regulating water balance by stimulating water reabsorption in kidneys?",
+      "options": [
+        "Antidiuretic Hormone (ADH)",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Antidiuretic Hormone (ADH) is responsible for regulating water balance by stimulating water reabsorption in kidneys."
+    },
+    {
+      "question": "Which hormone is responsible for regulating sodium and potassium levels in the blood?",
+      "options": [
+        "Aldosterone",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Aldosterone is responsible for regulating sodium and potassium levels in the blood."
+    },
+    {
+      "question": "Which hormone is responsible for reducing blood calcium level by inhibiting bone resorption?",
+      "options": [
+        "Calcitonin",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Calcitonin is responsible for reducing blood calcium level by inhibiting bone resorption."
+    },
+    {
+      "question": "Which hormone is responsible for increasing blood calcium level by stimulating bone resorption?",
+      "options": [
+        "Parathyroid Hormone (PTH)",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Parathyroid Hormone (PTH) is responsible for increasing blood calcium level by stimulating bone resorption."
+    },
+    {
+      "question": "Which hormone is responsible for stimulating red blood cell production in bone marrow?",
+      "options": [
+        "Erythropoietin",
+        "Insulin",
+        "Glucagon",
+        "Thyroxine"
+      ],
+      "answer": 0,
+      "hint": "Erythropoietin is responsible for stimulating red blood cell production in bone marrow."
+    }
+  ]
+}

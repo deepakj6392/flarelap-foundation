@@ -1,0 +1,177 @@
+{
+  "name": "RRB NTPC CBT 1 Full Mock Test - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "RRB NTPC CBT 1 Full Mock Test",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "rrb_ntpc_cbt_1_full_mock_test",
+  "questions": [
+    {
+      "question": "Where is the headquarters of the Indian Railways located?",
+      "options": [
+        "New Delhi",
+        "Mumbai",
+        "Kolkata",
+        "Chennai"
+      ],
+      "answer": 0,
+      "hint": "The headquarters of Indian Railways is in New Delhi."
+    },
+    {
+      "question": "Which state has the longest railway route in India?",
+      "options": [
+        "Uttar Pradesh",
+        "Rajasthan",
+        "Madhya Pradesh",
+        "Maharashtra"
+      ],
+      "answer": 0,
+      "hint": "Uttar Pradesh has the largest route kilometer coverage in India."
+    },
+    {
+      "question": "The first train in India ran between Mumbai and:",
+      "options": [
+        "Pune",
+        "Thane",
+        "Surat",
+        "Dadri"
+      ],
+      "answer": 1,
+      "hint": "The first passenger train ran between Bori Bunder (Mumbai) and Thane on April 16, 1853."
+    },
+    {
+      "question": "Who was the first Railway Minister of independent India?",
+      "options": [
+        "John Mathai",
+        "Lal Bahadur Shastri",
+        "Jawaharlal Nehru",
+        "Jagjivan Ram"
+      ],
+      "answer": 0,
+      "hint": "John Mathai was the first Railway Minister of independent India."
+    },
+    {
+      "question": "What is the width of a broad gauge railway track in India?",
+      "options": [
+        "1.0 m",
+        "1.676 m",
+        "0.762 m",
+        "1.435 m"
+      ],
+      "answer": 1,
+      "hint": "Broad gauge in India is 5 feet 6 inches (1.676 m)."
+    },
+    {
+      "question": "In which year was the capital of India officially shifted from Calcutta to Delhi?",
+      "options": [
+        "1905",
+        "1911",
+        "1919",
+        "1927"
+      ],
+      "answer": 1,
+      "hint": "The shift was announced by King George V during the Delhi Durbar of 1911."
+    },
+    {
+      "question": "Who was the first Governor-General of British India?",
+      "options": [
+        "Warren Hastings",
+        "Lord William Bentinck",
+        "Lord Dalhousie",
+        "Lord Canning"
+      ],
+      "answer": 1,
+      "hint": "Lord William Bentinck became the first official Governor-General of India under the Charter Act of 1833."
+    },
+    {
+      "question": "Which is the largest freshwater lake in India?",
+      "options": [
+        "Chilika Lake",
+        "Wular Lake",
+        "Dal Lake",
+        "Loktak Lake"
+      ],
+      "answer": 1,
+      "hint": "Wular Lake in Jammu and Kashmir is the largest freshwater lake in India."
+    },
+    {
+      "question": "Who was the founder of the ancient Buddhist religion?",
+      "options": [
+        "Mahavira",
+        "Gautama Buddha",
+        "Guru Nanak",
+        "Ashoka"
+      ],
+      "answer": 1,
+      "hint": "Siddhartha Gautama (Buddha) founded Buddhism in the 6th-5th centuries BCE."
+    },
+    {
+      "question": "National Sports Day of India is celebrated on which date?",
+      "options": [
+        "August 29",
+        "July 11",
+        "October 2",
+        "January 12"
+      ],
+      "answer": 0,
+      "hint": "National Sports Day is celebrated on August 29 to honor hockey legend Major Dhyan Chand's birthday."
+    },
+    {
+      "question": "Which is the largest and deepest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "answer": 3,
+      "hint": "The Pacific Ocean is the largest, covering more than 30% of the Earth's surface."
+    },
+    {
+      "question": "Who was the author of the famous classical book \"Geet Govind\"?",
+      "options": [
+        "Jayadeva",
+        "Kalidasa",
+        "Tulsidas",
+        "Kabir"
+      ],
+      "answer": 0,
+      "hint": "Jayadeva was a 12th-century Sanskrit poet who wrote Gita Govinda."
+    },
+    {
+      "question": "What is the chemical formula of common table salt?",
+      "options": [
+        "NaHCO3",
+        "NaCl",
+        "NaOH",
+        "KCl"
+      ],
+      "answer": 1,
+      "hint": "NaCl stands for Sodium Chloride."
+    },
+    {
+      "question": "A light-year is a standard unit of measurement for:",
+      "options": [
+        "Time",
+        "Speed",
+        "Distance",
+        "Light intensity"
+      ],
+      "answer": 2,
+      "hint": "A light-year is the distance that light travels in a vacuum in one Julian year (approx. 9.46 trillion km)."
+    },
+    {
+      "question": "Which organelle is known as the powerhouse of the cell?",
+      "options": [
+        "Nucleus",
+        "Mitochondria",
+        "Ribosome",
+        "Lysosome"
+      ],
+      "answer": 1,
+      "hint": "Mitochondria generate most of the cell's supply of adenosine triphosphate (ATP), used as chemical energy."
+    }
+  ]
+}

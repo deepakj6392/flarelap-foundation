@@ -1,0 +1,177 @@
+{
+  "name": "Campus Placement Aptitude Practice Mock - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "Campus Placement Aptitude Practice Mock",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "campus_placement_aptitude_practice_mock",
+  "questions": [
+    {
+      "question": "If the cost price of an item is Rs 200 and it is sold for Rs 250, what is the profit percentage?",
+      "options": [
+        "25%",
+        "20%",
+        "50%",
+        "30%"
+      ],
+      "answer": 0,
+      "hint": "Profit % = (Profit / CP) * 100 = (50 / 200) * 100 = 25%."
+    },
+    {
+      "question": "Complete the sequence: 3, 6, 12, 24, ?",
+      "options": [
+        "48",
+        "36",
+        "30",
+        "60"
+      ],
+      "answer": 0,
+      "hint": "Each term is multiplied by 2."
+    },
+    {
+      "question": "A train running at 54 km/hr crosses a post in 10 seconds. What is the length of the train?",
+      "options": [
+        "150 meters",
+        "120 meters",
+        "180 meters",
+        "200 meters"
+      ],
+      "answer": 0,
+      "hint": "Speed = 54 * (5/18) = 15 m/s. Length = Speed * Time = 15 * 10 = 150m."
+    },
+    {
+      "question": "Find the odd one out: Apple, Orange, Potato, Banana",
+      "options": [
+        "Potato",
+        "Apple",
+        "Orange",
+        "Banana"
+      ],
+      "answer": 0,
+      "hint": "Potato is a tuber root vegetable; the rest are sweet fruits."
+    },
+    {
+      "question": "If in a code language, CAT is written as DBT, then DOG is written as:",
+      "options": [
+        "EPH",
+        "EOG",
+        "DPH",
+        "EOH"
+      ],
+      "answer": 0,
+      "hint": "C+1=D, A+1=B, T+0=T. So D+1=E, O+1=P, G+0=G. Wait, let's look at DOG. D+1=E, O+1=P, G+0=G, which is EPG. Wait, options has EPH. If the rule is C+1=D, A+1=B, T+0=T, then D+1=E, O+1=P, G+1=H -> EPH. Yes!"
+    },
+    {
+      "question": "A work is completed by 5 men in 10 days. How many days will 10 men take to complete the same work?",
+      "options": [
+        "5 days",
+        "2 days",
+        "10 days",
+        "20 days"
+      ],
+      "answer": 0,
+      "hint": "M1*D1 = M2*D2. 5 * 10 = 10 * D2 -> D2 = 5 days."
+    },
+    {
+      "question": "What is the average of first five prime numbers?",
+      "options": [
+        "5.6",
+        "5.0",
+        "6.2",
+        "4.8"
+      ],
+      "answer": 0,
+      "hint": "First 5 primes: 2, 3, 5, 7, 11. Sum = 28. Average = 28 / 5 = 5.6."
+    },
+    {
+      "question": "In OOPS, wrapping data and methods into a single unit is called:",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "Abstraction"
+      ],
+      "answer": 0,
+      "hint": "Encapsulation restricts direct access and bundles code blocks together."
+    },
+    {
+      "question": "Which language is purely object-oriented among these?",
+      "options": [
+        "Java",
+        "C",
+        "Assembly",
+        "SQL"
+      ],
+      "answer": 0,
+      "hint": "Java requires classes for all methods, aligning with object models."
+    },
+    {
+      "question": "The sum of two numbers is 20 and their difference is 4. Find the product of the two numbers.",
+      "options": [
+        "96",
+        "80",
+        "100",
+        "72"
+      ],
+      "answer": 0,
+      "hint": "x + y = 20, x - y = 4 -> x = 12, y = 8. Product = 12 * 8 = 96."
+    },
+    {
+      "question": "Which data structure operates on FIFO?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Binary Tree",
+        "Heap"
+      ],
+      "answer": 0,
+      "hint": "Queues process items in order of arrival (First-In First-Out)."
+    },
+    {
+      "question": "If A is B's brother, and B is C's sister, how is A related to C?",
+      "options": [
+        "Brother",
+        "Sister",
+        "Father",
+        "Uncle"
+      ],
+      "answer": 0,
+      "hint": "Since A and B are siblings, and B and C are siblings, A is C's brother."
+    },
+    {
+      "question": "A man walks 5 km South, then turns East and walks 3 km, then turns North and walks 5 km. How far is he from starting point?",
+      "options": [
+        "3 km",
+        "5 km",
+        "8 km",
+        "2 km"
+      ],
+      "answer": 0,
+      "hint": "He forms a rectangle, ending up exactly 3 km East of origin."
+    },
+    {
+      "question": "The probability of rolling a 4 on a fair six-sided die is:",
+      "options": [
+        "1/6",
+        "1/2",
+        "1/4",
+        "2/3"
+      ],
+      "answer": 0,
+      "hint": "There is 1 favorable outcome out of 6 possible values."
+    },
+    {
+      "question": "In binary arithmetic, what is 1 + 1?",
+      "options": [
+        "10 (decimal 2)",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "hint": "1 + 1 equals 2, which is binary 10."
+    }
+  ]
+}

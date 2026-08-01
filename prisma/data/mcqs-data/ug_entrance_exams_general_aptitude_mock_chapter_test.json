@@ -1,0 +1,177 @@
+{
+  "name": "UG Entrance Exams General Aptitude Mock - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "UG Entrance Exams General Aptitude Mock",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "ug_entrance_exams_general_aptitude_mock",
+  "questions": [
+    {
+      "question": "Choose the correctly spelt word:",
+      "options": [
+        "Accommodation",
+        "Acomodation",
+        "Accomodation",
+        "Acommodacion"
+      ],
+      "answer": 0,
+      "hint": "Accommodation is spelt with double c and double m."
+    },
+    {
+      "question": "What is the next number in sequence: 5, 10, 17, 26, ?",
+      "options": [
+        "37",
+        "35",
+        "40",
+        "36"
+      ],
+      "answer": 0,
+      "hint": "The terms are n^2 + 1: 2^2+1=5, 3^2+1=10, 4^2+1=17, 5^2+1=26, 6^2+1=37."
+    },
+    {
+      "question": "If A is taller than B, and B is taller than C, who is the shortest?",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "Cannot be determined"
+      ],
+      "answer": 0,
+      "hint": "A > B > C. Therefore, C is the shortest."
+    },
+    {
+      "question": "The synonym of 'Elated' is:",
+      "options": [
+        "Happy",
+        "Sad",
+        "Angry",
+        "Tired"
+      ],
+      "answer": 0,
+      "hint": "Elated means ecstatic, overjoyed, or very happy."
+    },
+    {
+      "question": "A shopkeeper offers 10% discount on a product marked at Rs 1000. Sale price is:",
+      "options": [
+        "Rs 900",
+        "Rs 950",
+        "Rs 800",
+        "Rs 850"
+      ],
+      "answer": 0,
+      "hint": "Discount = 10% of 1000 = Rs 100. Sale price = 1000 - 100 = Rs 900."
+    },
+    {
+      "question": "If a triangle has sides 3cm, 4cm, 5cm, what is its area?",
+      "options": [
+        "6 sq cm",
+        "12 sq cm",
+        "10 sq cm",
+        "7.5 sq cm"
+      ],
+      "answer": 0,
+      "hint": "This is a right-angled triangle. Area = 0.5 * Base * Height = 0.5 * 3 * 4 = 6 sq cm."
+    },
+    {
+      "question": "Choose the antonym of 'Rigid':",
+      "options": [
+        "Flexible",
+        "Stiff",
+        "Hard",
+        "Solid"
+      ],
+      "answer": 0,
+      "hint": "Flexible is the opposite of rigid (stiff/unbending)."
+    },
+    {
+      "question": "In a certain code, ROAD is written as WTFI, then BEAT is written as:",
+      "options": [
+        "GJFY",
+        "GIFY",
+        "GIDY",
+        "FJFY"
+      ],
+      "answer": 0,
+      "hint": "Shift value is +5: R+5=W, O+5=T, A+5=F, D+5=I. So B+5=G, E+5=J, A+5=F, T+5=Y."
+    },
+    {
+      "question": "What is the value of 15% of 200?",
+      "options": [
+        "30",
+        "20",
+        "15",
+        "40"
+      ],
+      "answer": 0,
+      "hint": "Value = 15/100 * 200 = 15 * 2 = 30."
+    },
+    {
+      "question": "The sum of interior angles of a quadrilateral is:",
+      "options": [
+        "360 degrees",
+        "180 degrees",
+        "270 degrees",
+        "540 degrees"
+      ],
+      "answer": 0,
+      "hint": "Any four-sided polygon has interior angles totaling 360 degrees."
+    },
+    {
+      "question": "If 3x + 5 = 20, what is the value of x?",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "hint": "3x = 15 -> x = 5."
+    },
+    {
+      "question": "Find the average of 10, 20, 30, 40:",
+      "options": [
+        "25",
+        "20",
+        "30",
+        "35"
+      ],
+      "answer": 0,
+      "hint": "Average = (10+20+30+40)/4 = 100/4 = 25."
+    },
+    {
+      "question": "Which planet is closest to the Sun?",
+      "options": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Mars"
+      ],
+      "answer": 0,
+      "hint": "Mercury has the smallest orbital radius around the Sun."
+    },
+    {
+      "question": "A person who writes the story of their own life writes an:",
+      "options": [
+        "Autobiography",
+        "Biography",
+        "Novel",
+        "Diary"
+      ],
+      "answer": 0,
+      "hint": "Autobiographical texts are written by the subjects themselves."
+    },
+    {
+      "question": "If a coin is tossed, what is the probability of getting a head?",
+      "options": [
+        "0.5",
+        "1",
+        "0.25",
+        "0"
+      ],
+      "answer": 0,
+      "hint": "There is 1 head out of 2 equally likely outcomes (0.5)."
+    }
+  ]
+}

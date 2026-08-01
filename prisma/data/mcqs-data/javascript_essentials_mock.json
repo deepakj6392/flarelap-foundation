@@ -1,0 +1,452 @@
+{
+  "name": "JavaScript Essentials Mock",
+  "type": "Subject Test",
+  "courseName": "Web Development Basics",
+  "qs": 40,
+  "marks": 40,
+  "duration": 45,
+  "isFree": false,
+  "categoryKey": "webdev",
+  "questions": [
+    {
+      "question": "Which HTML5 tag is used to specify a container for introductory content or a set of navigational links?",
+      "options": [
+        "<header>",
+        "<nav>",
+        "<main>",
+        "<section>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <header>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a set of navigation links?",
+      "options": [
+        "<nav>",
+        "<header>",
+        "<main>",
+        "<section>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <nav>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify the dominant content of the body of a document?",
+      "options": [
+        "<main>",
+        "<header>",
+        "<nav>",
+        "<section>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <main>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a thematic grouping of content, typically with a heading?",
+      "options": [
+        "<section>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <section>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a self-contained composition in a document, page, application, or site?",
+      "options": [
+        "<article>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <article>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify content aside from the content it is placed in (like a sidebar)?",
+      "options": [
+        "<aside>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <aside>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a footer for its nearest ancestor sectioning content or sectioning root element?",
+      "options": [
+        "<footer>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <footer>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify self-contained content, like illustrations, diagrams, photos, code listings, etc.?",
+      "options": [
+        "<figure>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <figure>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a caption or legend for a figure element?",
+      "options": [
+        "<figcaption>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <figcaption>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify additional details that the user can view or hide on demand?",
+      "options": [
+        "<details>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <details>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a visible heading for a details element?",
+      "options": [
+        "<summary>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <summary>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify text that should be highlighted or marked for reference?",
+      "options": [
+        "<mark>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <mark>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a specific period in time or a date/time?",
+      "options": [
+        "<time>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <time>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify the completion progress of a task?",
+      "options": [
+        "<progress>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <progress>."
+    },
+    {
+      "question": "Which HTML5 tag is used to specify a scalar measurement within a known range, or a fractional value?",
+      "options": [
+        "<meter>",
+        "<header>",
+        "<nav>",
+        "<main>"
+      ],
+      "answer": 0,
+      "hint": "It is written as <meter>."
+    },
+    {
+      "question": "Which CSS property is used to set the color of text?",
+      "options": [
+        "color",
+        "background-color",
+        "font-size",
+        "margin"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'color' property."
+    },
+    {
+      "question": "Which CSS property is used to set the background color of an element?",
+      "options": [
+        "background-color",
+        "color",
+        "font-size",
+        "margin"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'background-color' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the size of the font?",
+      "options": [
+        "font-size",
+        "color",
+        "background-color",
+        "margin"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'font-size' property."
+    },
+    {
+      "question": "Which CSS property is used to create space around elements, outside of any defined borders?",
+      "options": [
+        "margin",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'margin' property."
+    },
+    {
+      "question": "Which CSS property is used to create space around an element's content, inside of any defined borders?",
+      "options": [
+        "padding",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'padding' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the style, width, and color of an element's border?",
+      "options": [
+        "border",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'border' property."
+    },
+    {
+      "question": "Which CSS property is used to set the width of an element?",
+      "options": [
+        "width",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'width' property."
+    },
+    {
+      "question": "Which CSS property is used to set the height of an element?",
+      "options": [
+        "height",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'height' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the display behavior of an element?",
+      "options": [
+        "display",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'display' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the type of positioning method used for an element?",
+      "options": [
+        "position",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'position' property."
+    },
+    {
+      "question": "Which CSS property is used to affect the vertical position of a positioned element?",
+      "options": [
+        "top",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'top' property."
+    },
+    {
+      "question": "Which CSS property is used to affect the horizontal position of a positioned element?",
+      "options": [
+        "left",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'left' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the stack order of an element?",
+      "options": [
+        "z-index",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'z-index' property."
+    },
+    {
+      "question": "Which CSS property is used to specify what happens if content overflows an element's box?",
+      "options": [
+        "overflow",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'overflow' property."
+    },
+    {
+      "question": "Which CSS property is used to specify whether an element should float to the left, right, or not at all?",
+      "options": [
+        "float",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'float' property."
+    },
+    {
+      "question": "Which CSS property is used to align flex items along the cross axis inside a flex container?",
+      "options": [
+        "align-items",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'align-items' property."
+    },
+    {
+      "question": "Which CSS property is used to align flex items along the main axis inside a flex container?",
+      "options": [
+        "justify-content",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'justify-content' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the direction of the flexible items?",
+      "options": [
+        "flex-direction",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'flex-direction' property."
+    },
+    {
+      "question": "Which CSS property is used to specify the number and size of columns in a grid layout?",
+      "options": [
+        "grid-template-columns",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'grid-template-columns' property."
+    },
+    {
+      "question": "Which CSS property is used to attach one or more shadows to an element?",
+      "options": [
+        "box-shadow",
+        "color",
+        "background-color",
+        "font-size"
+      ],
+      "answer": 0,
+      "hint": "Look for the 'box-shadow' property."
+    },
+    {
+      "question": "What is the default display value of the HTML element <div>?",
+      "options": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "answer": 0,
+      "hint": "Most container tags are block, while inline formatting tags are inline."
+    },
+    {
+      "question": "What is the default display value of the HTML element <p>?",
+      "options": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "answer": 0,
+      "hint": "Most container tags are block, while inline formatting tags are inline."
+    },
+    {
+      "question": "What is the default display value of the HTML element <h1>?",
+      "options": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "answer": 0,
+      "hint": "Most container tags are block, while inline formatting tags are inline."
+    },
+    {
+      "question": "What is the default display value of the HTML element <h2>?",
+      "options": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "answer": 0,
+      "hint": "Most container tags are block, while inline formatting tags are inline."
+    },
+    {
+      "question": "What is the default display value of the HTML element <ul>?",
+      "options": [
+        "block",
+        "inline",
+        "inline-block",
+        "none"
+      ],
+      "answer": 0,
+      "hint": "Most container tags are block, while inline formatting tags are inline."
+    }
+  ]
+}

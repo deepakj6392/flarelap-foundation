@@ -1,0 +1,177 @@
+{
+  "name": "NEET Physics Practice Prep - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "NEET Physics Practice Prep",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "neet_physics_practice_prep",
+  "questions": [
+    {
+      "question": "What is the dimensional formula for gravitational constant (G)?",
+      "options": [
+        "[M^-1 L^3 T^-2]",
+        "[M L^3 T^-2]",
+        "[M^-2 L^3 T^-1]",
+        "[M^-1 L^2 T^-2]"
+      ],
+      "answer": 0,
+      "hint": "G = F*r^2/m^2. Dimensions: [M L T^-2] * [L^2] / [M^2] = [M^-1 L^3 T^-2]."
+    },
+    {
+      "question": "A body is projected vertically upwards with a velocity of 20 m/s. Maximum height reached is (g = 10 m/s^2):",
+      "options": [
+        "10 m",
+        "20 m",
+        "15 m",
+        "40 m"
+      ],
+      "answer": 1,
+      "hint": "H = u^2 / 2g = 400 / 20 = 20 m."
+    },
+    {
+      "question": "What is the SI unit of magnetic flux?",
+      "options": [
+        "Tesla",
+        "Weber",
+        "Gauss",
+        "Henry"
+      ],
+      "answer": 1,
+      "hint": "Weber is the SI unit of magnetic flux."
+    },
+    {
+      "question": "Which electromagnetic wave has the shortest wavelength?",
+      "options": [
+        "X-Rays",
+        "Gamma-Rays",
+        "UV-Rays",
+        "Radio Waves"
+      ],
+      "answer": 1,
+      "hint": "Gamma-rays have the highest frequency and shortest wavelength in the EM spectrum."
+    },
+    {
+      "question": "A convex lens has a focal length of 20 cm. Its power is:",
+      "options": [
+        "+5 D",
+        "-5 D",
+        "+2 D",
+        "-2 D"
+      ],
+      "answer": 0,
+      "hint": "Power P = 100 / f (in cm) = 100 / 20 = +5 D."
+    },
+    {
+      "question": "What is the value of escape velocity from the surface of Earth?",
+      "options": [
+        "8.0 km/s",
+        "11.2 km/s",
+        "42.0 km/s",
+        "1.5 km/s"
+      ],
+      "answer": 1,
+      "hint": "Escape velocity from Earth is approximately 11.2 km/s."
+    },
+    {
+      "question": "The acceleration due to gravity (g) is maximum at which location?",
+      "options": [
+        "Equator",
+        "Poles",
+        "Center of Earth",
+        "Mount Everest"
+      ],
+      "answer": 1,
+      "hint": "g is maximum at the poles because Earth is an oblate spheroid and polar radius is minimum."
+    },
+    {
+      "question": "Sound waves traveling through air are classified as which type of wave?",
+      "options": [
+        "Transverse electromagnetic",
+        "Longitudinal mechanical",
+        "Transverse mechanical",
+        "Torsional waves"
+      ],
+      "answer": 1,
+      "hint": "Sound in air travels as pressure waves (rarefactions and compressions), which are longitudinal mechanical waves."
+    },
+    {
+      "question": "What is the SI unit of electrical conductivity?",
+      "options": [
+        "Ohm-meter",
+        "Siemens per meter (S/m)",
+        "Siemens",
+        "Volt per meter"
+      ],
+      "answer": 1,
+      "hint": "Siemens per meter (S/m) is the standard unit of electrical conductivity."
+    },
+    {
+      "question": "The working of optical fiber is based on which optical phenomenon?",
+      "options": [
+        "Refraction",
+        "Total Internal Reflection",
+        "Scattering",
+        "Interference"
+      ],
+      "answer": 1,
+      "hint": "Optical fibers guide light signals using continuous Total Internal Reflection (TIR) inside the core cladding."
+    },
+    {
+      "question": "What is the angle of contact for pure water and clean glass?",
+      "options": [
+        "0 degrees",
+        "45 degrees",
+        "90 degrees",
+        "135 degrees"
+      ],
+      "answer": 0,
+      "hint": "Pure water completely wets clean glass, resulting in a contact angle of 0 degrees."
+    },
+    {
+      "question": "Which instrument is specifically used to measure solar radiation?",
+      "options": [
+        "Barometer",
+        "Pyrheliometer",
+        "Anemometer",
+        "Lactometer"
+      ],
+      "answer": 1,
+      "hint": "A pyrheliometer is designed to measure direct beam solar irradiance."
+    },
+    {
+      "question": "Absolute zero temperature corresponds to what value in Celsius?",
+      "options": [
+        "0 °C",
+        "-100 °C",
+        "-273.15 °C",
+        "-300 °C"
+      ],
+      "answer": 2,
+      "hint": "Absolute zero is 0 K, which equals -273.15 °C."
+    },
+    {
+      "question": "What is the weight of a body at the center of the Earth?",
+      "options": [
+        "Zero",
+        "Double its surface weight",
+        "Same as surface weight",
+        "Infinite"
+      ],
+      "answer": 0,
+      "hint": "At the center of the Earth, acceleration due to gravity (g) is zero, so the weight (m * g) is also zero."
+    },
+    {
+      "question": "Light waves exhibit transverse nature because they can be:",
+      "options": [
+        "Reflected",
+        "Refracted",
+        "Diffracted",
+        "Polarized"
+      ],
+      "answer": 3,
+      "hint": "Only transverse waves can be polarized; longitudinal waves cannot."
+    }
+  ]
+}

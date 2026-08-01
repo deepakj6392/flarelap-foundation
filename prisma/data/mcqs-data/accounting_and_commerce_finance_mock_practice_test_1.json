@@ -1,0 +1,177 @@
+{
+  "name": "Accounting and Commerce Finance Mock - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "Accounting and Commerce Finance Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "accounting_and_commerce_finance_mock",
+  "questions": [
+    {
+      "question": "The double entry system of bookkeeping was introduced by:",
+      "options": [
+        "Luca Pacioli",
+        "Adam Smith",
+        "Alfred Marshall",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Pacioli documented Venetian double-entry ledger bookkeeping systems in 1494."
+    },
+    {
+      "question": "What is the fundamental accounting equation?",
+      "options": [
+        "Assets = Liabilities + Capital",
+        "Assets = Liabilities - Capital",
+        "Liabilities = Assets + Capital",
+        "Capital = Assets + Liabilities"
+      ],
+      "answer": 0,
+      "hint": "All business assets are funded by either creditor liabilities or owner capital."
+    },
+    {
+      "question": "The recording of transactions in journal is done in:",
+      "options": [
+        "Chronological order",
+        "Alphabetical order",
+        "Value-wise order",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Transactions are recorded sequentially as they occur day-by-day."
+    },
+    {
+      "question": "Which account is a real account?",
+      "options": [
+        "Cash Account",
+        "Salary Account",
+        "Ram's Account",
+        "Bank Account"
+      ],
+      "answer": 0,
+      "hint": "Real accounts track tangible assets/properties like cash, land, and machinery."
+    },
+    {
+      "question": "Depreciation is defined as:",
+      "options": [
+        "Gradual decrease in value of fixed assets",
+        "Increase in value of assets",
+        "Maintenance cost",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Depreciation allocates fixed asset wear-and-tear costs over useful lifetimes."
+    },
+    {
+      "question": "Trial balance is prepared to check:",
+      "options": [
+        "Arithmetical accuracy of ledger accounts",
+        "Net profit",
+        "Financial position",
+        "Cash balance"
+      ],
+      "answer": 0,
+      "hint": "Trial balance checks if total debits equal total credits."
+    },
+    {
+      "question": "Goodwill is an:",
+      "options": [
+        "Intangible asset",
+        "Tangible asset",
+        "Current asset",
+        "Fictitious asset"
+      ],
+      "answer": 0,
+      "hint": "Goodwill represents reputational premiums, classified as intangible fixed assets."
+    },
+    {
+      "question": "In banking, what does NPA stand for?",
+      "options": [
+        "Non-Performing Asset",
+        "Net Profit Account",
+        "National Payment Association",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Non-performing assets are loans in default where interest/principal remains unpaid over 90 days."
+    },
+    {
+      "question": "GST was introduced in India in the year:",
+      "options": [
+        "2017",
+        "2015",
+        "2016",
+        "2018"
+      ],
+      "answer": 0,
+      "hint": "GST came into effect across India on July 1, 2017."
+    },
+    {
+      "question": "The main objective of financial accounting is to prepare:",
+      "options": [
+        "Profit & Loss A/c and Balance Sheet",
+        "Cash book only",
+        "Cost sheet",
+        "Budget report"
+      ],
+      "answer": 0,
+      "hint": "Financial accounting reports company profitability and balances to external stakeholders."
+    },
+    {
+      "question": "Which audit is mandatory for public listed companies in India?",
+      "options": [
+        "Statutory Audit",
+        "Internal Audit",
+        "Management Audit",
+        "Social Audit"
+      ],
+      "answer": 0,
+      "hint": "Companies Act mandates annual independent statutory audits."
+    },
+    {
+      "question": "Working capital is calculated as:",
+      "options": [
+        "Current Assets - Current Liabilities",
+        "Fixed Assets - Current Liabilities",
+        "Current Assets + Current Liabilities",
+        "Total Assets - Total Liabilities"
+      ],
+      "answer": 0,
+      "hint": "Net working capital shows short-term operational cash buffers."
+    },
+    {
+      "question": "The cost of goods sold is:",
+      "options": [
+        "Opening Stock + Purchases - Closing Stock",
+        "Sales - Gross Profit",
+        "Both of these",
+        "None of these"
+      ],
+      "answer": 2,
+      "hint": "Both formulas yield COGS by adjusting stock changes or subtracting profit."
+    },
+    {
+      "question": "What does ROI stand for in business finance?",
+      "options": [
+        "Return on Investment",
+        "Rate of Interest",
+        "Revenue on Income",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "ROI measures efficiency of investments by dividing net return by capital cost."
+    },
+    {
+      "question": "The ledger is also known as:",
+      "options": [
+        "Principal book of accounts",
+        "Secondary book",
+        "Day book",
+        "Memo book"
+      ],
+      "answer": 0,
+      "hint": "Ledger contains the final consolidated records of all individual T-accounts."
+    }
+  ]
+}

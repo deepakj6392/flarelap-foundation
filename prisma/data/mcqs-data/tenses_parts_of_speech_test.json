@@ -1,0 +1,287 @@
+{
+  "name": "Tenses & Parts of Speech Test",
+  "type": "Chapter Test",
+  "courseName": "English Grammar Mastery",
+  "qs": 25,
+  "marks": 25,
+  "duration": 25,
+  "isFree": true,
+  "categoryKey": "english",
+  "questions": [
+    {
+      "question": "Which of the following is the closest synonym of the word \"Abundant\"?",
+      "options": [
+        "Plentiful",
+        "Kind",
+        "Frank",
+        "Hardworking"
+      ],
+      "answer": 0,
+      "hint": "Abundant means Plentiful."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Abundant\"?",
+      "options": [
+        "Scarce",
+        "Malevolent",
+        "Insincere",
+        "Lazy"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Abundant is Scarce."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Benevolent\"?",
+      "options": [
+        "Kind",
+        "Plentiful",
+        "Frank",
+        "Hardworking"
+      ],
+      "answer": 0,
+      "hint": "Benevolent means Kind."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Benevolent\"?",
+      "options": [
+        "Malevolent",
+        "Scarce",
+        "Insincere",
+        "Lazy"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Benevolent is Malevolent."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Candid\"?",
+      "options": [
+        "Frank",
+        "Plentiful",
+        "Kind",
+        "Hardworking"
+      ],
+      "answer": 0,
+      "hint": "Candid means Frank."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Candid\"?",
+      "options": [
+        "Insincere",
+        "Scarce",
+        "Malevolent",
+        "Lazy"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Candid is Insincere."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Diligent\"?",
+      "options": [
+        "Hardworking",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Diligent means Hardworking."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Diligent\"?",
+      "options": [
+        "Lazy",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Diligent is Lazy."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Eloquent\"?",
+      "options": [
+        "Silver-tongued",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Eloquent means Silver-tongued."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Eloquent\"?",
+      "options": [
+        "Inarticulate",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Eloquent is Inarticulate."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Fragile\"?",
+      "options": [
+        "Delicate",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Fragile means Delicate."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Fragile\"?",
+      "options": [
+        "Sturdy",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Fragile is Sturdy."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Gargantuan\"?",
+      "options": [
+        "Huge",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Gargantuan means Huge."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Gargantuan\"?",
+      "options": [
+        "Tiny",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Gargantuan is Tiny."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Hypocrisy\"?",
+      "options": [
+        "Insincerity",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Hypocrisy means Insincerity."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Hypocrisy\"?",
+      "options": [
+        "Sincerity",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Hypocrisy is Sincerity."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Immaculate\"?",
+      "options": [
+        "Spotless",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Immaculate means Spotless."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Immaculate\"?",
+      "options": [
+        "Dirty",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Immaculate is Dirty."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Jubilant\"?",
+      "options": [
+        "Joyful",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Jubilant means Joyful."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Jubilant\"?",
+      "options": [
+        "Melancholy",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Jubilant is Melancholy."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Lethargic\"?",
+      "options": [
+        "Sluggish",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Lethargic means Sluggish."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Lethargic\"?",
+      "options": [
+        "Energetic",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Lethargic is Energetic."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Meticulous\"?",
+      "options": [
+        "Precise",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Meticulous means Precise."
+    },
+    {
+      "question": "Which of the following is the antonym of the word \"Meticulous\"?",
+      "options": [
+        "Careless",
+        "Scarce",
+        "Malevolent",
+        "Insincere"
+      ],
+      "answer": 0,
+      "hint": "The opposite of Meticulous is Careless."
+    },
+    {
+      "question": "Which of the following is the closest synonym of the word \"Nefarious\"?",
+      "options": [
+        "Wicked",
+        "Plentiful",
+        "Kind",
+        "Frank"
+      ],
+      "answer": 0,
+      "hint": "Nefarious means Wicked."
+    }
+  ]
+}

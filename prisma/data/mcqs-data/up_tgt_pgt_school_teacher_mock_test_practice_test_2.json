@@ -1,0 +1,177 @@
+{
+  "name": "UP TGT/PGT School Teacher Mock Test - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "UP TGT/PGT School Teacher Mock Test",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "up_tgt_pgt_school_teacher_mock_test",
+  "questions": [
+    {
+      "question": "According to Piaget's stages of cognitive development, the stage of formal operations begins at age:",
+      "options": [
+        "11-15 years",
+        "2-7 years",
+        "7-11 years",
+        "0-2 years"
+      ],
+      "answer": 0,
+      "hint": "Formal operational stage starts around age 11/12 and involves abstract logic thinking."
+    },
+    {
+      "question": "What is the full form of NCERT?",
+      "options": [
+        "National Council of Educational Research and Training",
+        "National Committee of Education, Research and Teaching",
+        "National Council of Elementary Research and Training",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "NCERT is an autonomous organisation advising the central and state governments on school education."
+    },
+    {
+      "question": "Which teaching method is most suitable for developing creative thinking?",
+      "options": [
+        "Brainstorming",
+        "Lecture method",
+        "Textbook reading",
+        "Memorization"
+      ],
+      "answer": 0,
+      "hint": "Brainstorming encourages pupils to generate diverse ideas without premature criticism."
+    },
+    {
+      "question": "The term Pedagogy refers to:",
+      "options": [
+        "Theory and practice of teaching",
+        "Study of children's physical growth",
+        "Educational administration",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Pedagogy covers the methods, theories, and instructional design used in education."
+    },
+    {
+      "question": "Diagnostic evaluation in classroom teaching is used to:",
+      "options": [
+        "Identify learning difficulties of students",
+        "Assign grades at the end of term",
+        "Select students for scholarships",
+        "Compare performance with other schools"
+      ],
+      "answer": 0,
+      "hint": "Diagnostic tests check prior gaps and pinpoint specific concept difficulties."
+    },
+    {
+      "question": "Who is known as the father of modern behaviorism?",
+      "options": [
+        "John B. Watson",
+        "Sigmund Freud",
+        "Jean Piaget",
+        "B.F. Skinner"
+      ],
+      "answer": 0,
+      "hint": "Watson published behaviorist principles first, advocating objective observations of actions."
+    },
+    {
+      "question": "What is the primary purpose of homework given to school students?",
+      "options": [
+        "Reinforce and practice classroom learning",
+        "Keep students busy at home",
+        "Reduce teacher workload",
+        "Evaluate parents' knowledge"
+      ],
+      "answer": 0,
+      "hint": "Homework consolidates the skills introduced during direct class instructions."
+    },
+    {
+      "question": "Micro-teaching is used by teachers to practice:",
+      "options": [
+        "Specific teaching skills",
+        "Complete classroom lessons",
+        "Preparing exam papers",
+        "Maintaining class discipline"
+      ],
+      "answer": 0,
+      "hint": "Micro-teaching scales down class size and time to master specific instructional methods."
+    },
+    {
+      "question": "According to NEP 2020, the current 10+2 system is replaced by:",
+      "options": [
+        "5+3+3+4 system",
+        "5+3+2+2 system",
+        "3+4+4+5 system",
+        "4+3+3+5 system"
+      ],
+      "answer": 0,
+      "hint": "NEP replaces 10+2 with Foundational (5), Preparatory (3), Middle (3), and Secondary (4) stages."
+    },
+    {
+      "question": "Cognitive domain in Bloom's Taxonomy deals with:",
+      "options": [
+        "Knowledge and intellectual skills",
+        "Emotions and values",
+        "Physical and motor skills",
+        "Social skills"
+      ],
+      "answer": 0,
+      "hint": "Cognitive covers memory, comprehension, application, analysis, synthesis, and evaluation."
+    },
+    {
+      "question": "The teacher is considered a:",
+      "options": [
+        "Facilitator of learning",
+        "Authoritarian ruler",
+        "Passive observer",
+        "Information dispenser"
+      ],
+      "answer": 0,
+      "hint": "Modern child-centric education positions the teacher as a guide/facilitator."
+    },
+    {
+      "question": "Inclusive education means:",
+      "options": [
+        "Providing equal learning opportunities to all children",
+        "Separating disabled kids",
+        "Special curriculum for bright children",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Inclusive classes integrate special needs kids in general educational classrooms."
+    },
+    {
+      "question": "Educational psychology is the study of:",
+      "options": [
+        "How people learn in educational settings",
+        "School management systems",
+        "Teacher recruitment processes",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "It focuses on student development, learning theories, motivation, and instruction."
+    },
+    {
+      "question": "Which agency is responsible for curriculum design for school education in India?",
+      "options": [
+        "NCERT",
+        "UGC",
+        "AICTE",
+        "NCTE"
+      ],
+      "answer": 0,
+      "hint": "NCERT frames the National Curriculum Framework (NCF) for school boards."
+    },
+    {
+      "question": "What is the main objective of formative assessment?",
+      "options": [
+        "Monitor student learning to provide ongoing feedback",
+        "Rank students",
+        "Certify final grades",
+        "Pass or fail students"
+      ],
+      "answer": 0,
+      "hint": "Formative assessments occur mid-course to identify gaps and adjust active learning."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Paramedical Nursing Theory Exam - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "Paramedical Nursing Theory Exam",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "paramedical_nursing_theory_exam",
+  "questions": [
+    {
+      "question": "Which of the following is the normal body temperature in Celsius?",
+      "options": [
+        "35°C",
+        "37°C",
+        "38°C",
+        "36.5°C"
+      ],
+      "answer": 1,
+      "hint": "Normal human body temperature is around 37°C (98.6°F)."
+    },
+    {
+      "question": "What is the primary function of white blood cells (WBC)?",
+      "options": [
+        "Carrying oxygen",
+        "Fighting infections",
+        "Clotting blood",
+        "Regulating temperature"
+      ],
+      "answer": 1,
+      "hint": "WBCs are an essential part of the immune system and fight infections."
+    },
+    {
+      "question": "Which vitamin is essential for blood clotting?",
+      "options": [
+        "Vitamin A",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin K"
+      ],
+      "answer": 3,
+      "hint": "Vitamin K is required for the synthesis of proteins involved in blood clotting."
+    },
+    {
+      "question": "Which organ is primarily responsible for filtering wastes from blood?",
+      "options": [
+        "Heart",
+        "Lungs",
+        "Kidneys",
+        "Liver"
+      ],
+      "answer": 2,
+      "hint": "Kidneys filter wastes and excess fluids from the blood."
+    },
+    {
+      "question": "What is the average human heart rate per minute?",
+      "options": [
+        "60-100 bpm",
+        "50-60 bpm",
+        "100-120 bpm",
+        "72-80 bpm"
+      ],
+      "answer": 0,
+      "hint": "Normal resting heart rate for adults ranges from 60 to 100 beats per minute."
+    },
+    {
+      "question": "Which medical instrument is used to measure arterial blood pressure?",
+      "options": [
+        "Stethoscope",
+        "Thermometer",
+        "Sphygmomanometer",
+        "Otoscope"
+      ],
+      "answer": 2,
+      "hint": "A sphygmomanometer consists of an inflatable cuff and pressure gauge."
+    },
+    {
+      "question": "What is considered a normal adult resting blood pressure?",
+      "options": [
+        "120/80 mmHg",
+        "140/90 mmHg",
+        "90/60 mmHg",
+        "100/100 mmHg"
+      ],
+      "answer": 0,
+      "hint": "120/80 mmHg is the textbook normal standard blood pressure."
+    },
+    {
+      "question": "Which organ is the primary site of nutrient absorption in the digestive tract?",
+      "options": [
+        "Stomach",
+        "Small Intestine",
+        "Large Intestine",
+        "Esophagus"
+      ],
+      "answer": 1,
+      "hint": "The small intestine absorbs over 90% of nutrients from digested food."
+    },
+    {
+      "question": "Which blood group is known as the universal donor?",
+      "options": [
+        "A positive",
+        "B negative",
+        "AB positive",
+        "O negative"
+      ],
+      "answer": 3,
+      "hint": "O negative blood has no antigens on red cells, making it safe for any recipient."
+    },
+    {
+      "question": "Which hormone is secreted by the pancreas to lower blood sugar levels?",
+      "options": [
+        "Glucagon",
+        "Thyroxine",
+        "Insulin",
+        "Adrenaline"
+      ],
+      "answer": 2,
+      "hint": "Insulin facilitates glucose uptake by cells, lowering systemic blood sugar."
+    },
+    {
+      "question": "What is the normal respiratory rate for a healthy resting adult?",
+      "options": [
+        "8-12 breaths/min",
+        "12-20 breaths/min",
+        "20-30 breaths/min",
+        "30-40 breaths/min"
+      ],
+      "answer": 1,
+      "hint": "The normal adult respiratory rate is between 12 and 20 breaths per minute."
+    },
+    {
+      "question": "Deficiency of Vitamin D in children leads to which skeletal condition?",
+      "options": [
+        "Scurvy",
+        "Osteoporosis",
+        "Rickets",
+        "Beriberi"
+      ],
+      "answer": 2,
+      "hint": "Rickets is a bone-softening condition in growing children caused by lack of Vitamin D."
+    },
+    {
+      "question": "Generally, after surgical procedures, when are skin sutures removed?",
+      "options": [
+        "2 days",
+        "5 to 10 days",
+        "20 days",
+        "1 month"
+      ],
+      "answer": 1,
+      "hint": "Sutures are typically removed between 5 to 10 days depending on body site tension."
+    },
+    {
+      "question": "Which is the largest organ in the human body?",
+      "options": [
+        "Liver",
+        "Brain",
+        "Skin",
+        "Large Intestine"
+      ],
+      "answer": 2,
+      "hint": "The skin is the largest organ by surface area and weight."
+    },
+    {
+      "question": "What is the compression-to-ventilation ratio for adult CPR by a single rescuer?",
+      "options": [
+        "15:2",
+        "30:2",
+        "5:1",
+        "30:5"
+      ],
+      "answer": 1,
+      "hint": "Standard guidelines specify 30 chest compressions followed by 2 rescue breaths."
+    }
+  ]
+}

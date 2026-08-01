@@ -1,0 +1,177 @@
+{
+  "name": "SSC CGL Tier 1 Mock Test 2026 - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "SSC CGL Tier 1 Mock Test 2026",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "ssc_cgl_tier_1_mock_test_2026",
+  "questions": [
+    {
+      "question": "Who among the following wrote the book \"Hind Swaraj\"?",
+      "options": [
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru",
+        "Subhas Chandra Bose",
+        "Bal Gangadhar Tilak"
+      ],
+      "answer": 0,
+      "hint": "Hind Swaraj or Indian Home Rule is a book written by Mohandas K. Gandhi in 1909."
+    },
+    {
+      "question": "Which article of the Indian Constitution is related to the Equality before law?",
+      "options": [
+        "Article 14",
+        "Article 15",
+        "Article 16",
+        "Article 17"
+      ],
+      "answer": 0,
+      "hint": "Article 14 of the Constitution of India provides for equality before law or the equal protection of the laws."
+    },
+    {
+      "question": "The value of cos 0° + sin 90° is:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "0.5"
+      ],
+      "answer": 2,
+      "hint": "cos 0° = 1 and sin 90° = 1. Therefore, 1 + 1 = 2."
+    },
+    {
+      "question": "Which is the largest gland in the human body?",
+      "options": [
+        "Thyroid",
+        "Liver",
+        "Pancreas",
+        "Pituitary"
+      ],
+      "answer": 1,
+      "hint": "The liver is the largest gland in the human body."
+    },
+    {
+      "question": "In which year did the Battle of Plassey take place?",
+      "options": [
+        "1757",
+        "1764",
+        "1789",
+        "1857"
+      ],
+      "answer": 0,
+      "hint": "The Battle of Plassey was fought on June 23, 1757."
+    },
+    {
+      "question": "Who was the first Governor-General of Bengal?",
+      "options": [
+        "Robert Clive",
+        "Warren Hastings",
+        "Lord William Bentinck",
+        "Lord Cornwallis"
+      ],
+      "answer": 1,
+      "hint": "Warren Hastings became the first Governor-General of Bengal in 1773."
+    },
+    {
+      "question": "What is the SI unit of pressure?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Pascal",
+        "Watt"
+      ],
+      "answer": 2,
+      "hint": "Pascal (Pa) is the SI unit of pressure, equivalent to one newton per square meter."
+    },
+    {
+      "question": "Which acid is primarily present in vinegar?",
+      "options": [
+        "Citric acid",
+        "Acetic acid",
+        "Lactic acid",
+        "Tartaric acid"
+      ],
+      "answer": 1,
+      "hint": "Vinegar is a liquid consisting of about 5–20% acetic acid."
+    },
+    {
+      "question": "Sound waves cannot travel through which of the following media?",
+      "options": [
+        "Solids",
+        "Liquids",
+        "Gases",
+        "Vacuum"
+      ],
+      "answer": 3,
+      "hint": "Sound is a mechanical wave and requires a physical medium to propagate; it cannot travel through a vacuum."
+    },
+    {
+      "question": "What is the official currency of Japan?",
+      "options": [
+        "Yuan",
+        "Yen",
+        "Won",
+        "Ringgit"
+      ],
+      "answer": 1,
+      "hint": "The Yen is the official currency of Japan."
+    },
+    {
+      "question": "Fundamental Duties were added to the Indian Constitution by which amendment?",
+      "options": [
+        "42nd Amendment",
+        "44th Amendment",
+        "86th Amendment",
+        "52nd Amendment"
+      ],
+      "answer": 0,
+      "hint": "Fundamental Duties were incorporated into Part IV-A by the 42nd Constitutional Amendment Act of 1976."
+    },
+    {
+      "question": "On which date is World Environment Day celebrated globally?",
+      "options": [
+        "April 22",
+        "June 5",
+        "September 16",
+        "December 10"
+      ],
+      "answer": 1,
+      "hint": "World Environment Day is celebrated annually on June 5 to raise global awareness of environmental issues."
+    },
+    {
+      "question": "The deficiency of Vitamin C in the human body leads to which disease?",
+      "options": [
+        "Rickets",
+        "Beriberi",
+        "Scurvy",
+        "Night blindness"
+      ],
+      "answer": 2,
+      "hint": "Scurvy is caused by a lack of Vitamin C (ascorbic acid) in the diet."
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "options": [
+        "Sydney",
+        "Melbourne",
+        "Brisbane",
+        "Canberra"
+      ],
+      "answer": 3,
+      "hint": "Canberra is the federal capital of Australia."
+    },
+    {
+      "question": "What is the compound interest on Rs 1,000 for 2 years at 10% per annum?",
+      "options": [
+        "Rs 100",
+        "Rs 200",
+        "Rs 210",
+        "Rs 220"
+      ],
+      "answer": 2,
+      "hint": "A = P(1 + r/100)^t = 1000 * (1.1)^2 = 1210. CI = 1210 - 1000 = Rs 210."
+    }
+  ]
+}

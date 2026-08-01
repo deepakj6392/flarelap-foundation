@@ -1,0 +1,177 @@
+{
+  "name": "GATE CE Structural Engineering Practice - Chapter Test",
+  "type": "Chapter Test",
+  "courseName": "GATE CE Structural Engineering Practice",
+  "qs": 15,
+  "marks": 15,
+  "duration": 20,
+  "isFree": false,
+  "categoryKey": "gate_ce_structural_engineering_practice",
+  "questions": [
+    {
+      "question": "What is the standard dynamic modulus of elasticity of concrete according to IS 456?",
+      "options": [
+        "Ec = 5000 * sqrt(fck)",
+        "Ec = 5700 * sqrt(fck)",
+        "Ec = 1000 * fck",
+        "Ec = 0.7 * sqrt(fck)"
+      ],
+      "answer": 0,
+      "hint": "IS 456:2000 specifies the short term static modulus as 5000 * sqrt(fck)."
+    },
+    {
+      "question": "In surveying, the curvature of the earth is taken into account in:",
+      "options": [
+        "Plane surveying",
+        "Geodetic surveying",
+        "Topographical surveying",
+        "Cadastral surveying"
+      ],
+      "answer": 1,
+      "hint": "Geodetic surveying covers large areas where earth curvature cannot be ignored."
+    },
+    {
+      "question": "Which test is performed to determine the bearing capacity of soil in the field?",
+      "options": [
+        "Vane shear test",
+        "Plate load test",
+        "Standard proctor test",
+        "Consolidation test"
+      ],
+      "answer": 1,
+      "hint": "The plate load test determines ultimate bearing capacity and settlement behavior."
+    },
+    {
+      "question": "The maximum bulking of sand occurs at a moisture content of about:",
+      "options": [
+        "1-2%",
+        "4-6%",
+        "10-12%",
+        "15-18%"
+      ],
+      "answer": 1,
+      "hint": "Moisture of 4-6% forms film surface tension around sand grains, maximizing volume bulking."
+    },
+    {
+      "question": "The dynamic viscosity of water is:",
+      "options": [
+        "Higher than air",
+        "Lower than air",
+        "Equal to air",
+        "Zero"
+      ],
+      "answer": 0,
+      "hint": "Water is much more resistant to shear forces than air at room temperature."
+    },
+    {
+      "question": "A soil having a uniformity coefficient less than 2 is called:",
+      "options": [
+        "Well graded",
+        "Uniformly graded",
+        "Gap graded",
+        "Coarse graded"
+      ],
+      "answer": 1,
+      "hint": "Cu less than 2 implies a narrow range of grain sizes (uniformly graded)."
+    },
+    {
+      "question": "What is the primary objective of primary sewage treatment?",
+      "options": [
+        "Biological decomposition",
+        "Removal of large suspended organic & inorganic solids",
+        "Chemical disinfection",
+        "Nutrient removal"
+      ],
+      "answer": 1,
+      "hint": "Primary treatment uses screens and sedimentation basins to settle solids."
+    },
+    {
+      "question": "The maximum bending moment in a simply supported beam with UDL occurs at:",
+      "options": [
+        "Supports",
+        "One-third points",
+        "Mid-span",
+        "Quarter points"
+      ],
+      "answer": 2,
+      "hint": "For a beam with UDL w, max bending moment is wL^2 / 8 at mid-span."
+    },
+    {
+      "question": "Which structure is specifically designed to resist lateral earth pressure?",
+      "options": [
+        "Column footing",
+        "Retaining wall",
+        "Suspension bridge cable",
+        "Piles under tension"
+      ],
+      "answer": 1,
+      "hint": "Retaining walls hold back soil and resist lateral thrust pressures."
+    },
+    {
+      "question": "In prestressed concrete, the loss due to elastic shortening is zero in:",
+      "options": [
+        "Pre-tensioned members",
+        "Post-tensioned members if tensioned simultaneously",
+        "Both of these",
+        "None of these"
+      ],
+      "answer": 1,
+      "hint": "Post-tensioning wires tensioned all at once do not experience progressive shortening losses."
+    },
+    {
+      "question": "What is the main chemical constituent of OPC cement?",
+      "options": [
+        "Silica",
+        "Alumina",
+        "Lime (CaO)",
+        "Iron oxide"
+      ],
+      "answer": 2,
+      "hint": "Lime (Calcium Oxide) forms about 60-67% of Portland cement composition."
+    },
+    {
+      "question": "Which instrument is used to measure turbidity in drinking water?",
+      "options": [
+        "Nephelometer",
+        "Colorimeter",
+        "pH meter",
+        "Imhoff cone"
+      ],
+      "answer": 0,
+      "hint": "Nephelometers measure light scattered at 90 degrees by suspended particles."
+    },
+    {
+      "question": "The critical path in project scheduling has a total float of:",
+      "options": [
+        "Zero",
+        "Maximum",
+        "Negative",
+        "Infinite"
+      ],
+      "answer": 0,
+      "hint": "Critical path activities cannot be delayed without delaying the project, meaning float is zero."
+    },
+    {
+      "question": "What is the relationship between degree of saturation, void ratio, water content, and specific gravity?",
+      "options": [
+        "Se = wG",
+        "S / e = w / G",
+        "S * w = e * G",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "The fundamental relation is S * e = w * G."
+    },
+    {
+      "question": "In a column, the slenderness ratio is the ratio of effective length to:",
+      "options": [
+        "Least lateral dimension",
+        "Least radius of gyration",
+        "Cross-sectional area",
+        "Total height"
+      ],
+      "answer": 1,
+      "hint": "Slenderness ratio lambda = Leff / r_min."
+    }
+  ]
+}

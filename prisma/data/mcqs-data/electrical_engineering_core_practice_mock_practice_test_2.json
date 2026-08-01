@@ -1,0 +1,177 @@
+{
+  "name": "Electrical Engineering Core Practice Mock - Practice Test 2",
+  "type": "Full Mock",
+  "courseName": "Electrical Engineering Core Practice Mock",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": false,
+  "categoryKey": "electrical_engineering_core_practice_mock",
+  "questions": [
+    {
+      "question": "What is the unit of magnetic flux density?",
+      "options": [
+        "Tesla",
+        "Weber",
+        "Henry",
+        "Ampere-turn"
+      ],
+      "answer": 0,
+      "hint": "Tesla (T) measures magnetic induction flux lines per square meter."
+    },
+    {
+      "question": "According to Kirchhoff's Current Law (KCL), the algebraic sum of currents at a node is:",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "Infinite"
+      ],
+      "answer": 0,
+      "hint": "Charge conservation dictates that sum of entering currents equals sum of leaving currents."
+    },
+    {
+      "question": "The power factor of a purely capacitive circuit is:",
+      "options": [
+        "Zero leading",
+        "Zero lagging",
+        "Unity",
+        "0.8 lagging"
+      ],
+      "answer": 0,
+      "hint": "Current leads voltage by 90 degrees in ideal capacitors, making cos 90 = 0 leading."
+    },
+    {
+      "question": "A transformer does not change which of the following parameters?",
+      "options": [
+        "Frequency",
+        "Voltage",
+        "Current",
+        "All of these"
+      ],
+      "answer": 0,
+      "hint": "Transformers change AC voltage/current levels but keep frequency constant."
+    },
+    {
+      "question": "Speed of a DC shunt motor can be controlled by:",
+      "options": [
+        "Armature voltage control",
+        "Field current control",
+        "Both of these",
+        "None of these"
+      ],
+      "answer": 2,
+      "hint": "DC motor speed is proportional to Eb and inversely proportional to flux."
+    },
+    {
+      "question": "In a synchronous machine, the armature winding is placed on:",
+      "options": [
+        "Stator",
+        "Rotor",
+        "Yoke",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Placing the high-power armature on stator is mechanically easier than on rotor."
+    },
+    {
+      "question": "What is the function of a moderator in a nuclear power plant?",
+      "options": [
+        "Slow down fast neutrons",
+        "Absorb neutrons",
+        "Cool the reactor",
+        "Control steam flow"
+      ],
+      "answer": 0,
+      "hint": "Light water/graphite slows down neutrons to maximize thermal fission probabilities."
+    },
+    {
+      "question": "Which relay is used for the protection of transformers against internal faults?",
+      "options": [
+        "Buchholz relay",
+        "Impedance relay",
+        "Mho relay",
+        "Thermal relay"
+      ],
+      "answer": 0,
+      "hint": "Buchholz is a gas-actuated relay installed in oil-filled transformer pipes."
+    },
+    {
+      "question": "The skin effect in a transmission line conductor:",
+      "options": [
+        "Increases effective resistance",
+        "Decreases effective resistance",
+        "Has no effect",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "AC current concentrates on conductor surfaces, reducing effective cross-sectional area."
+    },
+    {
+      "question": "The semiconductor device which can conduct current in both directions is:",
+      "options": [
+        "TRIAC",
+        "DIAC",
+        "SCR",
+        "MOSFET"
+      ],
+      "answer": 0,
+      "hint": "TRIAC is equivalent to two antiparallel thyristors sharing a gate control."
+    },
+    {
+      "question": "A buck-boost converter is used to:",
+      "options": [
+        "Step up or step down DC voltage",
+        "Convert AC to DC",
+        "Invert DC to AC",
+        "Stabilize grid frequency"
+      ],
+      "answer": 0,
+      "hint": "Buck-boost outputs magnitude that is either greater or less than input."
+    },
+    {
+      "question": "The unit of electrical conductivity is:",
+      "options": [
+        "Siemens per meter (S/m)",
+        "Ohm-meter",
+        "Farad",
+        "Henry"
+      ],
+      "answer": 0,
+      "hint": "Conductivity is the inverse of resistivity, measured in S/m."
+    },
+    {
+      "question": "Which instrument is used to measure insulation resistance?",
+      "options": [
+        "Megger",
+        "Ammeter",
+        "Voltmeter",
+        "Wattmeter"
+      ],
+      "answer": 0,
+      "hint": "Megger is a portable generator producing high voltage to test insulators."
+    },
+    {
+      "question": "In star connection, line current is:",
+      "options": [
+        "Equal to phase current",
+        "sqrt(3) times phase current",
+        "Phase current divided by sqrt(3)",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "Star topology links line wires in series with phase windings."
+    },
+    {
+      "question": "What is the main cause of corona discharge in high-voltage transmission lines?",
+      "options": [
+        "Ionization of air around conductors",
+        "High resistance of conductors",
+        "Low voltage",
+        "High frequency"
+      ],
+      "answer": 0,
+      "hint": "Strong electrostatic fields break down and ionize nearby air atoms."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Electronic Mechanic Semester 1 Prep - Practice Test 1",
+  "type": "Full Mock",
+  "courseName": "Electronic Mechanic Semester 1 Prep",
+  "qs": 15,
+  "marks": 30,
+  "duration": 60,
+  "isFree": true,
+  "categoryKey": "electronic_mechanic_semester_1_prep",
+  "questions": [
+    {
+      "question": "Which semiconductor material is most commonly used in electronic chips?",
+      "options": [
+        "Silicon",
+        "Germanium",
+        "Copper",
+        "Carbon"
+      ],
+      "answer": 0,
+      "hint": "Silicon is the most popular semiconductor due to abundance and performance."
+    },
+    {
+      "question": "What is the main function of a diode?",
+      "options": [
+        "Amplifying signals",
+        "Allowing current in one direction only",
+        "Storing charge",
+        "Regulating frequency"
+      ],
+      "answer": 1,
+      "hint": "A diode acts as a one-way valve for electric current."
+    },
+    {
+      "question": "What is the colour code for a 1k Ohm resistor with 5% tolerance?",
+      "options": [
+        "Brown, Black, Red, Gold",
+        "Brown, Black, Orange, Silver",
+        "Red, Red, Red, Gold",
+        "Brown, Green, Red, Gold"
+      ],
+      "answer": 0,
+      "hint": "1k = 1, 0, 10^2. Brown(1), Black(0), Red(multiplier 100), Gold(5%)."
+    },
+    {
+      "question": "Which component stores electrical energy in an electric field?",
+      "options": [
+        "Resistor",
+        "Inductor",
+        "Capacitor",
+        "Transistor"
+      ],
+      "answer": 2,
+      "hint": "A capacitor stores energy in its electric field."
+    },
+    {
+      "question": "What does \"IC\" stand for in electronics?",
+      "options": [
+        "Internal Conductor",
+        "Integrated Circuit",
+        "Internet Connection",
+        "Integrated Cable"
+      ],
+      "answer": 1,
+      "hint": "IC stands for Integrated Circuit."
+    },
+    {
+      "question": "Which instrument is used to view electrical signal waveforms in real time?",
+      "options": [
+        "Multimeter",
+        "Wattmeter",
+        "Oscilloscope",
+        "Signal Generator"
+      ],
+      "answer": 2,
+      "hint": "An oscilloscope (CRO/DSO) plots voltage signals over time."
+    },
+    {
+      "question": "Which logic gate gives a high output (1) only when all inputs are low (0)?",
+      "options": [
+        "AND gate",
+        "NAND gate",
+        "NOR gate",
+        "OR gate"
+      ],
+      "answer": 2,
+      "hint": "A NOR gate yields 1 only when A and B are 0 (NOT OR)."
+    },
+    {
+      "question": "Common electronics solder is an alloy composed of which metals?",
+      "options": [
+        "Copper and Zinc",
+        "Tin and Lead",
+        "Silver and Copper",
+        "Gold and Nickel"
+      ],
+      "answer": 1,
+      "hint": "Standard solder is composed of Tin (Sn) and Lead (Pb) in ratios like 60/40."
+    },
+    {
+      "question": "What is the frequency of pure Direct Current (DC)?",
+      "options": [
+        "0 Hz",
+        "50 Hz",
+        "60 Hz",
+        "Infinity"
+      ],
+      "answer": 0,
+      "hint": "DC flows constantly in one direction and does not alternate, meaning its frequency is 0."
+    },
+    {
+      "question": "Which component is primarily used to amplify weak electronic signals?",
+      "options": [
+        "Diode",
+        "Resistor",
+        "Transistor",
+        "Capacitor"
+      ],
+      "answer": 2,
+      "hint": "Transistors act as amplifiers and electronic switches."
+    },
+    {
+      "question": "What does BJT stand for in transistor electronics?",
+      "options": [
+        "Bipolar Junction Transistor",
+        "Base Junction Triode",
+        "Binary Junction Terminal",
+        "None of these"
+      ],
+      "answer": 0,
+      "hint": "BJT stands for Bipolar Junction Transistor."
+    },
+    {
+      "question": "What is the approximate forward voltage drop of a standard Silicon diode?",
+      "options": [
+        "0.3 V",
+        "0.7 V",
+        "1.1 V",
+        "2.0 V"
+      ],
+      "answer": 1,
+      "hint": "Silicon PN junctions require about 0.7 V forward bias to conduct, while Germanium drops about 0.3 V."
+    },
+    {
+      "question": "What is the unit of electrical inductance?",
+      "options": [
+        "Farad",
+        "Henry",
+        "Siemens",
+        "Ohm"
+      ],
+      "answer": 1,
+      "hint": "The Henry (H) is the SI unit of self and mutual inductance."
+    },
+    {
+      "question": "Which instrument can measure voltage, current, and resistance?",
+      "options": [
+        "Ammeter",
+        "Voltmeter",
+        "Megger",
+        "Multimeter"
+      ],
+      "answer": 3,
+      "hint": "A multimeter combines multiple measurement functions in one unit."
+    },
+    {
+      "question": "What is the main application of a Zener diode?",
+      "options": [
+        "Rectification",
+        "Voltage regulation",
+        "Signal detection",
+        "Filter smoothing"
+      ],
+      "answer": 1,
+      "hint": "Zener diodes are operated in reverse breakdown to maintain stable reference voltages."
+    }
+  ]
+}
