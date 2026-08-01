@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Web Development Basics",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "Computer Science",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "English Grammar Mastery",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "Math & Algebra Essentials",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "NEET Exam Preparation",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "JEE Physics Practice Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "JEE Chemistry Practice Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "JEE Mathematics Practice Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "NEET Biology Advanced Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "NEET Physics Advanced Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "NEET Chemistry Advanced Prep",
+    "active": true,
+    "premium": false
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 2026",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE CS & IT Mock Exam",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SEBI Grade A Officer Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CTET Paper 1 Child Pedagogy",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS PO Prelims Practice Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Paper 1 Research Aptitude",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CDS General Knowledge Paper",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NDA Mathematics Full Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB NTPC General Awareness Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UPSC Prelims GS Paper 1 Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Fitter Theory Semester 1 & 2",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electrician Basic Theory 2026",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Civil Technical CBT",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Judiciary Mains Mock Law Paper",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Paramedical Nursing Theory Exam",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Electronic Mechanic Semester 1 Prep",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB NTPC CBT 1 Full Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SBI PO Prelims Full Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Physics Practice Prep",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NDA General Ability Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UP Police Constable Practice Sets",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UP B.Ed Joint Entrance Exam Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE ECE Practice Exam",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE EE Power Systems Prep",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE ME Mechanical Engineering Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE CE Structural Engineering Practice",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Paper 1 General Aptitude",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Commerce Exam Booster",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET History Practice Paper",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR NET Life Sciences Prep",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR NET Chemical Sciences Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "LIC AAO General Insurance Mock Exam",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "EMRS Non-Teaching Staff Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UP TGT/PGT School Teacher Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Super TET Primary School Teacher Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "FSSAI Food Technology Officer Mock Exam",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "AIIMS NORCET Nursing Officer Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Civil Engineering Core Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Electrical Engineering Core Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Electronics & Communication Engineering Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Computer Science & Engineering Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Other Engineering Exams Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Semester Exams Trade Theory Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Accounting and Commerce Finance Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Campus Placement Aptitude Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NRA CET Common Eligibility Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Instrumentation Engineering Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Government Organizations Officer Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UG Entrance Exams General Aptitude Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CUET General Test Practice Mock",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "MBA Entrance Exam CAT Practice Mock",
+    "active": true,
+    "premium": true
+  }
+]

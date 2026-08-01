@@ -7,9 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed": "node seed-team.js",
-    "seed:mcqs": "node prisma/seed-mcqs.js",
-    "clear:mcqs": "node clear-mock-questions.js"
+    "seed:gallery": "node prisma/seeds/gallery.seed.js",
+    "seed:teams": "node prisma/seeds/teams.seed.js",
+    "seed:blogs": "node prisma/seeds/blogs.seed.js",
+    "seed:categories": "node prisma/seeds/categories.seed.js",
+    "seed:courses": "node prisma/seeds/courses.seed.js",
+    "seed:test-series": "node prisma/seeds/test-series.seed.js",
+    "seed:mcqs": "node prisma/seeds/mcqs.seed.js",
+    "seed:settings": "node prisma/seeds/settings.seed.js",
+    "seed:all": "npm run seed:settings && npm run seed:gallery && npm run seed:teams && npm run seed:blogs && npm run seed:categories && npm run seed:courses && npm run seed:test-series && npm run seed:mcqs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

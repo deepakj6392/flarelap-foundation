@@ -1,0 +1,1838 @@
+[
+  {
+    "name": "HTML & CSS Fundamentals Test",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 30,
+    "duration": 30,
+    "isFree": true,
+    "courseName": "Web Development Basics"
+  },
+  {
+    "name": "JavaScript Essentials Mock",
+    "type": "Subject Test",
+    "qs": 40,
+    "marks": 40,
+    "duration": 45,
+    "isFree": false,
+    "courseName": "Web Development Basics"
+  },
+  {
+    "name": "Full Stack Web Dev Full Mock",
+    "type": "Full Mock",
+    "qs": 60,
+    "marks": 60,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Web Development Basics"
+  },
+  {
+    "name": "Data Structures & Algorithms Test",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 30,
+    "duration": 30,
+    "isFree": true,
+    "courseName": "Computer Science"
+  },
+  {
+    "name": "Operating Systems Mock",
+    "type": "Subject Test",
+    "qs": 40,
+    "marks": 40,
+    "duration": 45,
+    "isFree": false,
+    "courseName": "Computer Science"
+  },
+  {
+    "name": "Computer Science Full Mock",
+    "type": "Full Mock",
+    "qs": 75,
+    "marks": 75,
+    "duration": 90,
+    "isFree": false,
+    "courseName": "Computer Science"
+  },
+  {
+    "name": "Tenses & Parts of Speech Test",
+    "type": "Chapter Test",
+    "qs": 25,
+    "marks": 25,
+    "duration": 25,
+    "isFree": true,
+    "courseName": "English Grammar Mastery"
+  },
+  {
+    "name": "Reading Comprehension Mock",
+    "type": "Subject Test",
+    "qs": 40,
+    "marks": 40,
+    "duration": 40,
+    "isFree": false,
+    "courseName": "English Grammar Mastery"
+  },
+  {
+    "name": "English Full Mock Test",
+    "type": "Full Mock",
+    "qs": 80,
+    "marks": 80,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "English Grammar Mastery"
+  },
+  {
+    "name": "Algebra Basics Chapter Test",
+    "type": "Chapter Test",
+    "qs": 25,
+    "marks": 25,
+    "duration": 30,
+    "isFree": true,
+    "courseName": "Math & Algebra Essentials"
+  },
+  {
+    "name": "Geometry & Mensuration Mock",
+    "type": "Subject Test",
+    "qs": 35,
+    "marks": 35,
+    "duration": 40,
+    "isFree": false,
+    "courseName": "Math & Algebra Essentials"
+  },
+  {
+    "name": "Mathematics Full Mock",
+    "type": "Full Mock",
+    "qs": 80,
+    "marks": 80,
+    "duration": 90,
+    "isFree": false,
+    "courseName": "Math & Algebra Essentials"
+  },
+  {
+    "name": "NEET Biology Chapter Test",
+    "type": "Chapter Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NEET Exam Preparation"
+  },
+  {
+    "name": "NEET Physics Mock",
+    "type": "Subject Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NEET Exam Preparation"
+  },
+  {
+    "name": "NEET Full Mock Test 1",
+    "type": "Full Mock",
+    "qs": 180,
+    "marks": 720,
+    "duration": 200,
+    "isFree": false,
+    "courseName": "NEET Exam Preparation"
+  },
+  {
+    "name": "NEET Full Mock Test 2",
+    "type": "Full Mock",
+    "qs": 180,
+    "marks": 720,
+    "duration": 200,
+    "isFree": false,
+    "courseName": "NEET Exam Preparation"
+  },
+  {
+    "name": "NEET PYP 2023",
+    "type": "PYP",
+    "qs": 180,
+    "marks": 720,
+    "duration": 200,
+    "isFree": false,
+    "courseName": "NEET Exam Preparation"
+  },
+  {
+    "name": "JEE Physics Chapter Test - Mechanics",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "JEE Physics Practice Prep"
+  },
+  {
+    "name": "JEE Physics Subject Mock 1",
+    "type": "Subject Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Physics Practice Prep"
+  },
+  {
+    "name": "JEE Physics Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 300,
+    "duration": 180,
+    "isFree": false,
+    "courseName": "JEE Physics Practice Prep"
+  },
+  {
+    "name": "JEE Physics PYP 2024",
+    "type": "PYP",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Physics Practice Prep"
+  },
+  {
+    "name": "JEE Chemistry Chapter Test - Organic",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "JEE Chemistry Practice Prep"
+  },
+  {
+    "name": "JEE Chemistry Subject Mock 1",
+    "type": "Subject Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Chemistry Practice Prep"
+  },
+  {
+    "name": "JEE Chemistry Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 300,
+    "duration": 180,
+    "isFree": false,
+    "courseName": "JEE Chemistry Practice Prep"
+  },
+  {
+    "name": "JEE Chemistry PYP 2024",
+    "type": "PYP",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Chemistry Practice Prep"
+  },
+  {
+    "name": "JEE Maths Chapter Test - Calculus",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "JEE Mathematics Practice Prep"
+  },
+  {
+    "name": "JEE Maths Subject Mock 1",
+    "type": "Subject Test",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Mathematics Practice Prep"
+  },
+  {
+    "name": "JEE Mathematics Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 300,
+    "duration": 180,
+    "isFree": false,
+    "courseName": "JEE Mathematics Practice Prep"
+  },
+  {
+    "name": "JEE Maths PYP 2024",
+    "type": "PYP",
+    "qs": 30,
+    "marks": 120,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "JEE Mathematics Practice Prep"
+  },
+  {
+    "name": "NEET Biology Chapter Test - Genetics",
+    "type": "Chapter Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NEET Biology Advanced Prep"
+  },
+  {
+    "name": "NEET Biology Advanced Mock 1",
+    "type": "Subject Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NEET Biology Advanced Prep"
+  },
+  {
+    "name": "NEET Biology Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 360,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "NEET Biology Advanced Prep"
+  },
+  {
+    "name": "NEET Physics Chapter Test - Optics",
+    "type": "Chapter Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NEET Physics Advanced Prep"
+  },
+  {
+    "name": "NEET Physics Advanced Mock 1",
+    "type": "Subject Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NEET Physics Advanced Prep"
+  },
+  {
+    "name": "NEET Physics Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 360,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "NEET Physics Advanced Prep"
+  },
+  {
+    "name": "NEET Chemistry Chapter Test - Equilibrium",
+    "type": "Chapter Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NEET Chemistry Advanced Prep"
+  },
+  {
+    "name": "NEET Chemistry Advanced Mock 1",
+    "type": "Subject Test",
+    "qs": 45,
+    "marks": 180,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NEET Chemistry Advanced Prep"
+  },
+  {
+    "name": "NEET Chemistry Full Mock",
+    "type": "Full Mock",
+    "qs": 90,
+    "marks": 360,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "NEET Chemistry Advanced Prep"
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 1",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 200,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 2",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 200,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "SSC CGL GK Chapter Test",
+    "type": "Chapter Test",
+    "qs": 25,
+    "marks": 50,
+    "duration": 15,
+    "isFree": false,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "SSC CGL PYP 2023",
+    "type": "PYP",
+    "qs": 100,
+    "marks": 200,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "GATE CS Mock Test 1",
+    "type": "Full Mock",
+    "qs": 65,
+    "marks": 100,
+    "duration": 180,
+    "isFree": true,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "GATE CS Mock Test 2",
+    "type": "Full Mock",
+    "qs": 65,
+    "marks": 100,
+    "duration": 180,
+    "isFree": false,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "GATE CS PYP 2024",
+    "type": "PYP",
+    "qs": 65,
+    "marks": 100,
+    "duration": 180,
+    "isFree": false,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "SEBI Grade A Phase 1 Mock 1",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 100,
+    "duration": 120,
+    "isFree": true,
+    "courseName": "SEBI Grade A Officer Practice Mock"
+  },
+  {
+    "name": "SEBI Finance Subject Test",
+    "type": "Subject Test",
+    "qs": 50,
+    "marks": 50,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SEBI Grade A Officer Practice Mock"
+  },
+  {
+    "name": "CTET Paper 1 Full Mock 1",
+    "type": "Full Mock",
+    "qs": 150,
+    "marks": 150,
+    "duration": 150,
+    "isFree": true,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "CTET Paper 1 Full Mock 2",
+    "type": "Full Mock",
+    "qs": 150,
+    "marks": 150,
+    "duration": 150,
+    "isFree": false,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "CTET Pedagogy Chapter Test",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 30,
+    "duration": 30,
+    "isFree": false,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "IBPS PO Prelims Full Mock 1",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 100,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "IBPS PO Prelims Practice Test"
+  },
+  {
+    "name": "IBPS PO Prelims Full Mock 2",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 100,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "IBPS PO Prelims Practice Test"
+  },
+  {
+    "name": "IBPS PO PYP 2023",
+    "type": "PYP",
+    "qs": 100,
+    "marks": 100,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "IBPS PO Prelims Practice Test"
+  },
+  {
+    "name": "UGC NET Paper 1 Mock 1",
+    "type": "Full Mock",
+    "qs": 50,
+    "marks": 100,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UGC NET Paper 1 Research Aptitude"
+  },
+  {
+    "name": "UGC NET Paper 1 Mock 2",
+    "type": "Full Mock",
+    "qs": 50,
+    "marks": 100,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UGC NET Paper 1 Research Aptitude"
+  },
+  {
+    "name": "CDS GK Full Mock 1",
+    "type": "Full Mock",
+    "qs": 120,
+    "marks": 100,
+    "duration": 120,
+    "isFree": true,
+    "courseName": "CDS General Knowledge Paper"
+  },
+  {
+    "name": "CDS GK Full Mock 2",
+    "type": "Full Mock",
+    "qs": 120,
+    "marks": 100,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "CDS General Knowledge Paper"
+  },
+  {
+    "name": "NDA Mathematics Mock 1",
+    "type": "Full Mock",
+    "qs": 120,
+    "marks": 300,
+    "duration": 150,
+    "isFree": true,
+    "courseName": "NDA Mathematics Full Mock"
+  },
+  {
+    "name": "NDA Mathematics Mock 2",
+    "type": "Full Mock",
+    "qs": 120,
+    "marks": 300,
+    "duration": 150,
+    "isFree": false,
+    "courseName": "NDA Mathematics Full Mock"
+  },
+  {
+    "name": "NDA Maths PYP 2024",
+    "type": "PYP",
+    "qs": 120,
+    "marks": 300,
+    "duration": 150,
+    "isFree": false,
+    "courseName": "NDA Mathematics Full Mock"
+  },
+  {
+    "name": "RRB NTPC GA Mock 1",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 100,
+    "duration": 90,
+    "isFree": true,
+    "courseName": "RRB NTPC General Awareness Mock"
+  },
+  {
+    "name": "RRB NTPC GA Mock 2",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 100,
+    "duration": 90,
+    "isFree": false,
+    "courseName": "RRB NTPC General Awareness Mock"
+  },
+  {
+    "name": "RRB NTPC GK Chapter Test",
+    "type": "Chapter Test",
+    "qs": 30,
+    "marks": 30,
+    "duration": 30,
+    "isFree": false,
+    "courseName": "RRB NTPC General Awareness Mock"
+  },
+  {
+    "name": "UPSC Prelims GS 1 Mock Test 1",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 200,
+    "duration": 120,
+    "isFree": true,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "UPSC Prelims GS 1 Mock Test 2",
+    "type": "Full Mock",
+    "qs": 100,
+    "marks": 200,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "UPSC Prelims PYP 2023",
+    "type": "PYP",
+    "qs": 100,
+    "marks": 200,
+    "duration": 120,
+    "isFree": false,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 2026 - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 2026 - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "SSC CGL Tier 1 Mock Test 2026 - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "SSC CGL Tier 1 Mock Test 2026"
+  },
+  {
+    "name": "GATE CS & IT Mock Exam - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "GATE CS & IT Mock Exam - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "GATE CS & IT Mock Exam - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "GATE CS & IT Mock Exam"
+  },
+  {
+    "name": "SEBI Grade A Officer Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "SEBI Grade A Officer Practice Mock"
+  },
+  {
+    "name": "SEBI Grade A Officer Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SEBI Grade A Officer Practice Mock"
+  },
+  {
+    "name": "SEBI Grade A Officer Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "SEBI Grade A Officer Practice Mock"
+  },
+  {
+    "name": "CTET Paper 1 Child Pedagogy - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "CTET Paper 1 Child Pedagogy - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "CTET Paper 1 Child Pedagogy - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "CTET Paper 1 Child Pedagogy"
+  },
+  {
+    "name": "ITI Fitter Theory Semester 1 & 2 - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "ITI Fitter Theory Semester 1 & 2"
+  },
+  {
+    "name": "ITI Fitter Theory Semester 1 & 2 - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "ITI Fitter Theory Semester 1 & 2"
+  },
+  {
+    "name": "ITI Fitter Theory Semester 1 & 2 - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "ITI Fitter Theory Semester 1 & 2"
+  },
+  {
+    "name": "ITI Electrician Basic Theory 2026 - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "ITI Electrician Basic Theory 2026"
+  },
+  {
+    "name": "ITI Electrician Basic Theory 2026 - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "ITI Electrician Basic Theory 2026"
+  },
+  {
+    "name": "ITI Electrician Basic Theory 2026 - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "ITI Electrician Basic Theory 2026"
+  },
+  {
+    "name": "RRB JE Civil Technical CBT - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "RRB JE Civil Technical CBT"
+  },
+  {
+    "name": "RRB JE Civil Technical CBT - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "RRB JE Civil Technical CBT"
+  },
+  {
+    "name": "RRB JE Civil Technical CBT - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "RRB JE Civil Technical CBT"
+  },
+  {
+    "name": "State Judiciary Mains Mock Law Paper - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "State Judiciary Mains Mock Law Paper"
+  },
+  {
+    "name": "State Judiciary Mains Mock Law Paper - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "State Judiciary Mains Mock Law Paper"
+  },
+  {
+    "name": "State Judiciary Mains Mock Law Paper - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "State Judiciary Mains Mock Law Paper"
+  },
+  {
+    "name": "Paramedical Nursing Theory Exam - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Paramedical Nursing Theory Exam"
+  },
+  {
+    "name": "Paramedical Nursing Theory Exam - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Paramedical Nursing Theory Exam"
+  },
+  {
+    "name": "Paramedical Nursing Theory Exam - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Paramedical Nursing Theory Exam"
+  },
+  {
+    "name": "Electronic Mechanic Semester 1 Prep - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Electronic Mechanic Semester 1 Prep"
+  },
+  {
+    "name": "Electronic Mechanic Semester 1 Prep - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Electronic Mechanic Semester 1 Prep"
+  },
+  {
+    "name": "Electronic Mechanic Semester 1 Prep - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Electronic Mechanic Semester 1 Prep"
+  },
+  {
+    "name": "RRB NTPC CBT 1 Full Mock Test - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "RRB NTPC CBT 1 Full Mock Test"
+  },
+  {
+    "name": "RRB NTPC CBT 1 Full Mock Test - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "RRB NTPC CBT 1 Full Mock Test"
+  },
+  {
+    "name": "RRB NTPC CBT 1 Full Mock Test - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "RRB NTPC CBT 1 Full Mock Test"
+  },
+  {
+    "name": "SBI PO Prelims Full Mock Test - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "SBI PO Prelims Full Mock Test"
+  },
+  {
+    "name": "SBI PO Prelims Full Mock Test - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "SBI PO Prelims Full Mock Test"
+  },
+  {
+    "name": "SBI PO Prelims Full Mock Test - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "SBI PO Prelims Full Mock Test"
+  },
+  {
+    "name": "NEET Physics Practice Prep - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NEET Physics Practice Prep"
+  },
+  {
+    "name": "NEET Physics Practice Prep - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NEET Physics Practice Prep"
+  },
+  {
+    "name": "NEET Physics Practice Prep - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "NEET Physics Practice Prep"
+  },
+  {
+    "name": "NDA General Ability Mock Test - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NDA General Ability Mock Test"
+  },
+  {
+    "name": "NDA General Ability Mock Test - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NDA General Ability Mock Test"
+  },
+  {
+    "name": "NDA General Ability Mock Test - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "NDA General Ability Mock Test"
+  },
+  {
+    "name": "UPSC Prelims GS Paper 1 Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "UPSC Prelims GS Paper 1 Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "UPSC Prelims GS Paper 1 Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UPSC Prelims GS Paper 1 Mock"
+  },
+  {
+    "name": "UP Police Constable Practice Sets - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UP Police Constable Practice Sets"
+  },
+  {
+    "name": "UP Police Constable Practice Sets - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UP Police Constable Practice Sets"
+  },
+  {
+    "name": "UP Police Constable Practice Sets - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UP Police Constable Practice Sets"
+  },
+  {
+    "name": "UP B.Ed Joint Entrance Exam Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UP B.Ed Joint Entrance Exam Mock"
+  },
+  {
+    "name": "UP B.Ed Joint Entrance Exam Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UP B.Ed Joint Entrance Exam Mock"
+  },
+  {
+    "name": "UP B.Ed Joint Entrance Exam Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UP B.Ed Joint Entrance Exam Mock"
+  },
+  {
+    "name": "GATE ECE Practice Exam - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "GATE ECE Practice Exam"
+  },
+  {
+    "name": "GATE ECE Practice Exam - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "GATE ECE Practice Exam"
+  },
+  {
+    "name": "GATE ECE Practice Exam - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "GATE ECE Practice Exam"
+  },
+  {
+    "name": "GATE EE Power Systems Prep - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "GATE EE Power Systems Prep"
+  },
+  {
+    "name": "GATE EE Power Systems Prep - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "GATE EE Power Systems Prep"
+  },
+  {
+    "name": "GATE EE Power Systems Prep - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "GATE EE Power Systems Prep"
+  },
+  {
+    "name": "GATE ME Mechanical Engineering Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "GATE ME Mechanical Engineering Mock"
+  },
+  {
+    "name": "GATE ME Mechanical Engineering Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "GATE ME Mechanical Engineering Mock"
+  },
+  {
+    "name": "GATE ME Mechanical Engineering Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "GATE ME Mechanical Engineering Mock"
+  },
+  {
+    "name": "GATE CE Structural Engineering Practice - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "GATE CE Structural Engineering Practice"
+  },
+  {
+    "name": "GATE CE Structural Engineering Practice - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "GATE CE Structural Engineering Practice"
+  },
+  {
+    "name": "GATE CE Structural Engineering Practice - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "GATE CE Structural Engineering Practice"
+  },
+  {
+    "name": "UGC NET Paper 1 General Aptitude - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UGC NET Paper 1 General Aptitude"
+  },
+  {
+    "name": "UGC NET Paper 1 General Aptitude - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UGC NET Paper 1 General Aptitude"
+  },
+  {
+    "name": "UGC NET Paper 1 General Aptitude - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UGC NET Paper 1 General Aptitude"
+  },
+  {
+    "name": "UGC NET Commerce Exam Booster - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UGC NET Commerce Exam Booster"
+  },
+  {
+    "name": "UGC NET Commerce Exam Booster - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UGC NET Commerce Exam Booster"
+  },
+  {
+    "name": "UGC NET Commerce Exam Booster - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UGC NET Commerce Exam Booster"
+  },
+  {
+    "name": "UGC NET History Practice Paper - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UGC NET History Practice Paper"
+  },
+  {
+    "name": "UGC NET History Practice Paper - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UGC NET History Practice Paper"
+  },
+  {
+    "name": "UGC NET History Practice Paper - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UGC NET History Practice Paper"
+  },
+  {
+    "name": "CSIR NET Life Sciences Prep - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "CSIR NET Life Sciences Prep"
+  },
+  {
+    "name": "CSIR NET Life Sciences Prep - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "CSIR NET Life Sciences Prep"
+  },
+  {
+    "name": "CSIR NET Life Sciences Prep - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "CSIR NET Life Sciences Prep"
+  },
+  {
+    "name": "CSIR NET Chemical Sciences Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "CSIR NET Chemical Sciences Mock"
+  },
+  {
+    "name": "CSIR NET Chemical Sciences Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "CSIR NET Chemical Sciences Mock"
+  },
+  {
+    "name": "CSIR NET Chemical Sciences Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "CSIR NET Chemical Sciences Mock"
+  },
+  {
+    "name": "LIC AAO General Insurance Mock Exam - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "LIC AAO General Insurance Mock Exam"
+  },
+  {
+    "name": "LIC AAO General Insurance Mock Exam - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "LIC AAO General Insurance Mock Exam"
+  },
+  {
+    "name": "LIC AAO General Insurance Mock Exam - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "LIC AAO General Insurance Mock Exam"
+  },
+  {
+    "name": "EMRS Non-Teaching Staff Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "EMRS Non-Teaching Staff Practice Mock"
+  },
+  {
+    "name": "EMRS Non-Teaching Staff Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "EMRS Non-Teaching Staff Practice Mock"
+  },
+  {
+    "name": "EMRS Non-Teaching Staff Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "EMRS Non-Teaching Staff Practice Mock"
+  },
+  {
+    "name": "UP TGT/PGT School Teacher Mock Test - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UP TGT/PGT School Teacher Mock Test"
+  },
+  {
+    "name": "UP TGT/PGT School Teacher Mock Test - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UP TGT/PGT School Teacher Mock Test"
+  },
+  {
+    "name": "UP TGT/PGT School Teacher Mock Test - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UP TGT/PGT School Teacher Mock Test"
+  },
+  {
+    "name": "Super TET Primary School Teacher Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Super TET Primary School Teacher Practice Mock"
+  },
+  {
+    "name": "Super TET Primary School Teacher Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Super TET Primary School Teacher Practice Mock"
+  },
+  {
+    "name": "Super TET Primary School Teacher Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Super TET Primary School Teacher Practice Mock"
+  },
+  {
+    "name": "FSSAI Food Technology Officer Mock Exam - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "FSSAI Food Technology Officer Mock Exam"
+  },
+  {
+    "name": "FSSAI Food Technology Officer Mock Exam - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "FSSAI Food Technology Officer Mock Exam"
+  },
+  {
+    "name": "FSSAI Food Technology Officer Mock Exam - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "FSSAI Food Technology Officer Mock Exam"
+  },
+  {
+    "name": "AIIMS NORCET Nursing Officer Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "AIIMS NORCET Nursing Officer Practice Mock"
+  },
+  {
+    "name": "AIIMS NORCET Nursing Officer Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "AIIMS NORCET Nursing Officer Practice Mock"
+  },
+  {
+    "name": "AIIMS NORCET Nursing Officer Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "AIIMS NORCET Nursing Officer Practice Mock"
+  },
+  {
+    "name": "Civil Engineering Core Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Civil Engineering Core Practice Mock"
+  },
+  {
+    "name": "Civil Engineering Core Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Civil Engineering Core Practice Mock"
+  },
+  {
+    "name": "Civil Engineering Core Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Civil Engineering Core Practice Mock"
+  },
+  {
+    "name": "Electrical Engineering Core Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Electrical Engineering Core Practice Mock"
+  },
+  {
+    "name": "Electrical Engineering Core Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Electrical Engineering Core Practice Mock"
+  },
+  {
+    "name": "Electrical Engineering Core Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Electrical Engineering Core Practice Mock"
+  },
+  {
+    "name": "Electronics & Communication Engineering Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Electronics & Communication Engineering Practice Mock"
+  },
+  {
+    "name": "Electronics & Communication Engineering Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Electronics & Communication Engineering Practice Mock"
+  },
+  {
+    "name": "Electronics & Communication Engineering Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Electronics & Communication Engineering Practice Mock"
+  },
+  {
+    "name": "Computer Science & Engineering Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Computer Science & Engineering Practice Mock"
+  },
+  {
+    "name": "Computer Science & Engineering Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Computer Science & Engineering Practice Mock"
+  },
+  {
+    "name": "Computer Science & Engineering Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Computer Science & Engineering Practice Mock"
+  },
+  {
+    "name": "Other Engineering Exams Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Other Engineering Exams Practice Mock"
+  },
+  {
+    "name": "Other Engineering Exams Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Other Engineering Exams Practice Mock"
+  },
+  {
+    "name": "Other Engineering Exams Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Other Engineering Exams Practice Mock"
+  },
+  {
+    "name": "ITI Semester Exams Trade Theory Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "ITI Semester Exams Trade Theory Mock"
+  },
+  {
+    "name": "ITI Semester Exams Trade Theory Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "ITI Semester Exams Trade Theory Mock"
+  },
+  {
+    "name": "ITI Semester Exams Trade Theory Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "ITI Semester Exams Trade Theory Mock"
+  },
+  {
+    "name": "Accounting and Commerce Finance Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Accounting and Commerce Finance Mock"
+  },
+  {
+    "name": "Accounting and Commerce Finance Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Accounting and Commerce Finance Mock"
+  },
+  {
+    "name": "Accounting and Commerce Finance Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Accounting and Commerce Finance Mock"
+  },
+  {
+    "name": "Campus Placement Aptitude Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Campus Placement Aptitude Practice Mock"
+  },
+  {
+    "name": "Campus Placement Aptitude Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Campus Placement Aptitude Practice Mock"
+  },
+  {
+    "name": "Campus Placement Aptitude Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Campus Placement Aptitude Practice Mock"
+  },
+  {
+    "name": "NRA CET Common Eligibility Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "NRA CET Common Eligibility Practice Mock"
+  },
+  {
+    "name": "NRA CET Common Eligibility Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "NRA CET Common Eligibility Practice Mock"
+  },
+  {
+    "name": "NRA CET Common Eligibility Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "NRA CET Common Eligibility Practice Mock"
+  },
+  {
+    "name": "Instrumentation Engineering Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Instrumentation Engineering Practice Mock"
+  },
+  {
+    "name": "Instrumentation Engineering Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Instrumentation Engineering Practice Mock"
+  },
+  {
+    "name": "Instrumentation Engineering Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Instrumentation Engineering Practice Mock"
+  },
+  {
+    "name": "Government Organizations Officer Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "Government Organizations Officer Mock"
+  },
+  {
+    "name": "Government Organizations Officer Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "Government Organizations Officer Mock"
+  },
+  {
+    "name": "Government Organizations Officer Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "Government Organizations Officer Mock"
+  },
+  {
+    "name": "UG Entrance Exams General Aptitude Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "UG Entrance Exams General Aptitude Mock"
+  },
+  {
+    "name": "UG Entrance Exams General Aptitude Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "UG Entrance Exams General Aptitude Mock"
+  },
+  {
+    "name": "UG Entrance Exams General Aptitude Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "UG Entrance Exams General Aptitude Mock"
+  },
+  {
+    "name": "CUET General Test Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "CUET General Test Practice Mock"
+  },
+  {
+    "name": "CUET General Test Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "CUET General Test Practice Mock"
+  },
+  {
+    "name": "CUET General Test Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "CUET General Test Practice Mock"
+  },
+  {
+    "name": "MBA Entrance Exam CAT Practice Mock - Practice Test 1",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": true,
+    "courseName": "MBA Entrance Exam CAT Practice Mock"
+  },
+  {
+    "name": "MBA Entrance Exam CAT Practice Mock - Practice Test 2",
+    "type": "Full Mock",
+    "qs": 15,
+    "marks": 30,
+    "duration": 60,
+    "isFree": false,
+    "courseName": "MBA Entrance Exam CAT Practice Mock"
+  },
+  {
+    "name": "MBA Entrance Exam CAT Practice Mock - Chapter Test",
+    "type": "Chapter Test",
+    "qs": 15,
+    "marks": 15,
+    "duration": 20,
+    "isFree": false,
+    "courseName": "MBA Entrance Exam CAT Practice Mock"
+  }
+]
