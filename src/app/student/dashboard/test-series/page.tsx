@@ -13,7 +13,8 @@ import {
   ShieldCheck,
   Lock,
   ArrowRight,
-  Loader2
+  Loader2,
+  Clock
 } from "lucide-react";
 import { useDashboard } from "../layout";
 import { getCourseTestCount } from "@/lib/testSeriesGenerator";
@@ -30,6 +31,11 @@ interface PurchaseRecord {
   id: number;
   courseId: number;
   status: string;
+  createdAt?: string | Date;
+  expiresAt?: string;
+  daysLeft?: number;
+  isExpired?: boolean;
+  isActive?: boolean;
   course?: {
     name: string;
     premium: boolean;
@@ -89,7 +95,7 @@ export default function StudentTestSeriesPage() {
     return purchases.find(p => {
       if (p.status !== "COMPLETED") return false;
       const isMatch = p.courseId === course.id || (course.categoryId && p.course?.categoryId === course.categoryId);
-      const createdTime = new Date(p.createdAt).getTime();
+      const createdTime = p.createdAt ? new Date(p.createdAt).getTime() : 0;
       const isActive = (Date.now() - createdTime) <= thirtyDaysMs;
       return isMatch && isActive;
     });
@@ -99,7 +105,7 @@ export default function StudentTestSeriesPage() {
     return purchases.find(p => {
       if (p.status !== "COMPLETED") return false;
       const isMatch = p.courseId === course.id || (course.categoryId && p.course?.categoryId === course.categoryId);
-      const createdTime = new Date(p.createdAt).getTime();
+      const createdTime = p.createdAt ? new Date(p.createdAt).getTime() : 0;
       const isExpired = (Date.now() - createdTime) > thirtyDaysMs;
       return isMatch && isExpired;
     });
@@ -161,7 +167,7 @@ export default function StudentTestSeriesPage() {
                   const activeP = getActivePurchase(course);
                   let daysRemaining = 30;
                   if (activeP) {
-                    const createdTime = new Date(activeP.createdAt).getTime();
+                    const createdTime = activeP.createdAt ? new Date(activeP.createdAt).getTime() : 0;
                     const msRemaining = (createdTime + thirtyDaysMs) - Date.now();
                     daysRemaining = Math.max(0, Math.ceil(msRemaining / (1000 * 60 * 60 * 24)));
                   }
