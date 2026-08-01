@@ -114,6 +114,7 @@ model MCQQuestion {
   hint      String?  @default("")
   createdAt DateTime @default(now()) @map("created_at")
 
+  @@unique([courseId, question])
   @@map("mcq_questions")
 }
 
