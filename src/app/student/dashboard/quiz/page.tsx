@@ -55,7 +55,7 @@ export default function MockExamsPage() {
           return;
         }
 
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
         const res = await fetch(`${apiUrl}/api/student/mcqs`, {
           headers: {
             "Authorization": `Bearer ${token}`

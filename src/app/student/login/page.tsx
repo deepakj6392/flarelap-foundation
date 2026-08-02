@@ -26,7 +26,7 @@ export default function StudentLoginPage() {
     setLoading(true);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/student/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -62,7 +62,7 @@ export default function StudentLoginPage() {
     setLoading(true);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/student/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

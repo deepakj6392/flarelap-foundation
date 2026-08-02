@@ -138,7 +138,7 @@ export default function StudentDashboardLayout({
     try {
       setDbLogsLoading(true);
       const token = localStorage.getItem("student_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/student/logs`, {
         headers: {
           "Authorization": `Bearer ${token}`
@@ -170,7 +170,7 @@ export default function StudentDashboardLayout({
   const handleLogout = async () => {
     try {
       const token = localStorage.getItem("student_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       if (token) {
         await fetch(`${apiUrl}/api/auth/student/logout`, {
           method: "POST",

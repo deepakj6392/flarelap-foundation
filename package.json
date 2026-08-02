@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:local": "cross-env DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/flarelap_db?sslmode=disable\" next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "db:push:local": "cross-env DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/flarelap_db?sslmode=disable\" prisma db push",
     "seed:gallery": "node prisma/seeds/gallery.seed.js",
     "seed:teams": "node prisma/seeds/teams.seed.js",
     "seed:blogs": "node prisma/seeds/blogs.seed.js",
@@ -15,7 +17,8 @@
     "seed:test-series": "node prisma/seeds/test-series.seed.js",
     "seed:mcqs": "node prisma/seeds/mcqs.seed.js",
     "seed:settings": "node prisma/seeds/settings.seed.js",
-    "seed:all": "npm run seed:settings && npm run seed:gallery && npm run seed:teams && npm run seed:blogs && npm run seed:categories && npm run seed:courses && npm run seed:test-series && npm run seed:mcqs"
+    "seed:all": "npm run seed:settings && npm run seed:gallery && npm run seed:teams && npm run seed:blogs && npm run seed:categories && npm run seed:courses && npm run seed:test-series && npm run seed:mcqs",
+    "seed:all:local": "cross-env DATABASE_URL=\"postgresql://postgres:postgres@localhost:5432/flarelap_db?sslmode=disable\" npm run seed:all"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
@@ -44,6 +47,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/ws": "^8.18.1",
+    "cross-env": "^10.1.0",
     "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",

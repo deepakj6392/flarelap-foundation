@@ -52,7 +52,7 @@ export default function CoursesAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/categories`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -72,7 +72,7 @@ export default function CoursesAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/courses`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -106,7 +106,7 @@ export default function CoursesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       let res;
       if (isEditMode) {
@@ -164,7 +164,7 @@ export default function CoursesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/courses/${id}`, {
         method: "PUT",
         headers: { 
@@ -197,7 +197,7 @@ export default function CoursesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/courses/${id}`, {
         method: "PUT",
         headers: { 
@@ -246,7 +246,7 @@ export default function CoursesAdminPage() {
     setSuccessMsg(null);
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/courses/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

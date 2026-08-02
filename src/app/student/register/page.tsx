@@ -22,7 +22,7 @@ export default function StudentRegisterPage() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
         const res = await fetch(`${apiUrl}/api/categories`);
         const data = await res.json();
         if (res.ok && data.categories && data.categories.length > 0) {
@@ -62,7 +62,7 @@ export default function StudentRegisterPage() {
     setLoading(true);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/student/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

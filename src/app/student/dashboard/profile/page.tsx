@@ -44,7 +44,7 @@ export default function SecuritySettingsPage() {
     setProfileLoading(true);
     try {
       const token = localStorage.getItem("student_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       const res = await fetch(`${apiUrl}/api/auth/student/update-password`, {
         method: "POST",

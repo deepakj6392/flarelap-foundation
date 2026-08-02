@@ -254,7 +254,7 @@ export default function DonateView({ galleryImages }: { galleryImages: any[] }) 
     } else {
       // Manual bank transfer (offline)
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
         const res = await fetch(`${apiUrl}/api/foundation/donations`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },

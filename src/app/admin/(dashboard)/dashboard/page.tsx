@@ -88,7 +88,7 @@ export default function OverviewPage() {
         } catch (_) {}
       }
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       // Fetch stats
       const statsRes = await fetch(`${apiUrl}/api/foundation/admin/stats`, {

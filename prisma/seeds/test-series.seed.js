@@ -10,7 +10,10 @@ if (!connectionString) {
   process.exit(1);
 }
 
-const pool = new Pool({ connectionString, ssl: { rejectUnauthorized: false } });
+const pool = new Pool({
+  connectionString,
+  ssl: connectionString.includes("neon") ? { rejectUnauthorized: false } : false,
+});
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
@@ -27,44 +30,40 @@ async function main() {
   }
 
   const courseMap = new Map(courses.map((c) => [c.name, c.id]));
-  let inserted = 0;
-  let skipped = 0;
 
+  const records = [];
   for (const series of data) {
     const courseId = courseMap.get(series.courseName);
+    if (!courseId) continue;
 
-    if (!courseId) {
-      console.warn(`  ⚠ Course not found: "${series.courseName}" — skipping "${series.name}"`);
-      skipped++;
-      continue;
-    }
-
-    // Check for duplicate (same name + courseId)
-    const existing = await prisma.testSeries.findFirst({
-      where: { name: series.name, courseId },
+    records.push({
+      name: series.name,
+      type: series.type,
+      qs: series.qs,
+      marks: series.marks,
+      duration: series.duration,
+      isFree: series.isFree ?? false,
+      courseId,
     });
-
-    if (!existing) {
-      await prisma.testSeries.create({
-        data: {
-          name: series.name,
-          type: series.type,
-          qs: series.qs,
-          marks: series.marks,
-          duration: series.duration,
-          isFree: series.isFree ?? false,
-          courseId,
-        },
-      });
-      console.log(`  ✓ Created: "${series.name}" → ${series.courseName}`);
-      inserted++;
-    } else {
-      console.log(`  → Exists:  "${series.name}" (skipped)`);
-      skipped++;
-    }
   }
 
-  console.log(`✅ Test series seeding complete! (${inserted} created, ${skipped} skipped)`);
+  // Clear existing test series for clean seed
+  const deleted = await prisma.testSeries.deleteMany();
+  console.log(`  ✓ Cleared ${deleted.count} existing test series entries`);
+
+  // Batch insert 500 records at a time
+  const batchSize = 500;
+  let inserted = 0;
+  for (let i = 0; i < records.length; i += batchSize) {
+    const batch = records.slice(i, i + batchSize);
+    await prisma.testSeries.createMany({
+      data: batch,
+      skipDuplicates: true,
+    });
+    inserted += batch.length;
+  }
+
+  console.log(`✅ Test series seeding complete! (${inserted} test series seeded across ${courses.length} courses)`);
 }
 
 main()

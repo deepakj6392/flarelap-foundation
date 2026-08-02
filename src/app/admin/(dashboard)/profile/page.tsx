@@ -81,7 +81,7 @@ export default function ProfilePage() {
     setError(null);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/profile/status`, {
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -101,7 +101,7 @@ export default function ProfilePage() {
 
   const fetchSiteSettings = async () => {
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/site-settings`);
       const data = await res.json();
       if (res.ok && data.setting) {
@@ -186,7 +186,7 @@ export default function ProfilePage() {
     setProfileSaving(true);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/profile/update`, {
         method: "POST",
         headers: {
@@ -228,7 +228,7 @@ export default function ProfilePage() {
 
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/site-settings`, {
         method: "POST",
         headers: {
@@ -270,7 +270,7 @@ export default function ProfilePage() {
     setModalError(null);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/tfa/request`, {
         method: "POST",
         headers: {
@@ -305,7 +305,7 @@ export default function ProfilePage() {
     setTfaLoading(true);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/tfa/enable`, {
         method: "POST",
         headers: {
@@ -355,7 +355,7 @@ export default function ProfilePage() {
     setSuccess(null);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/tfa/disable`, {
         method: "POST",
         headers: {

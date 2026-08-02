@@ -1,0 +1,232 @@
+{
+  "name": "GATE Biotechnology Mock Test - Full Length Mock Test 34",
+  "type": "Full Mock",
+  "courseName": "GATE Biotechnology Mock Test",
+  "qs": 65,
+  "marks": 100,
+  "duration": 180,
+  "isFree": false,
+  "categoryKey": "engineering",
+  "questions": [
+    {
+      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "options": [
+        "Transitive functional dependencies",
+        "Partial functional dependencies",
+        "Multivalued dependencies",
+        "Join dependencies"
+      ],
+      "answer": 0,
+      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+    },
+    {
+      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "options": [
+        "255.255.0.0",
+        "255.0.0.0",
+        "255.255.255.0",
+        "255.255.255.255"
+      ],
+      "answer": 0,
+      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+    },
+    {
+      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 34)?",
+      "options": [
+        "O(N^2)",
+        "O(N log N)",
+        "O(N)",
+        "O(log N)"
+      ],
+      "answer": 0,
+      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+    },
+    {
+      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "options": [
+        "Shortest Remaining Time First (SRTF)",
+        "Round Robin (RR)",
+        "First Come First Served (FCFS)",
+        "Multilevel Queue"
+      ],
+      "answer": 0,
+      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+    },
+    {
+      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "options": [
+        "Breadth-First Search (BFS)",
+        "Depth-First Search (DFS)",
+        "Topological Sort",
+        "Tarjan's Algorithm"
+      ],
+      "answer": 0,
+      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+    },
+    {
+      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "options": [
+        "Transitive functional dependencies",
+        "Partial functional dependencies",
+        "Multivalued dependencies",
+        "Join dependencies"
+      ],
+      "answer": 0,
+      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+    },
+    {
+      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "options": [
+        "255.255.0.0",
+        "255.0.0.0",
+        "255.255.255.0",
+        "255.255.255.255"
+      ],
+      "answer": 0,
+      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+    },
+    {
+      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 34)?",
+      "options": [
+        "O(N^2)",
+        "O(N log N)",
+        "O(N)",
+        "O(log N)"
+      ],
+      "answer": 0,
+      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+    },
+    {
+      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "options": [
+        "Shortest Remaining Time First (SRTF)",
+        "Round Robin (RR)",
+        "First Come First Served (FCFS)",
+        "Multilevel Queue"
+      ],
+      "answer": 0,
+      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+    },
+    {
+      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "options": [
+        "Breadth-First Search (BFS)",
+        "Depth-First Search (DFS)",
+        "Topological Sort",
+        "Tarjan's Algorithm"
+      ],
+      "answer": 0,
+      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+    },
+    {
+      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "options": [
+        "Transitive functional dependencies",
+        "Partial functional dependencies",
+        "Multivalued dependencies",
+        "Join dependencies"
+      ],
+      "answer": 0,
+      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+    },
+    {
+      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "options": [
+        "255.255.0.0",
+        "255.0.0.0",
+        "255.255.255.0",
+        "255.255.255.255"
+      ],
+      "answer": 0,
+      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+    },
+    {
+      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 34)?",
+      "options": [
+        "O(N^2)",
+        "O(N log N)",
+        "O(N)",
+        "O(log N)"
+      ],
+      "answer": 0,
+      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+    },
+    {
+      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "options": [
+        "Shortest Remaining Time First (SRTF)",
+        "Round Robin (RR)",
+        "First Come First Served (FCFS)",
+        "Multilevel Queue"
+      ],
+      "answer": 0,
+      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+    },
+    {
+      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "options": [
+        "Breadth-First Search (BFS)",
+        "Depth-First Search (DFS)",
+        "Topological Sort",
+        "Tarjan's Algorithm"
+      ],
+      "answer": 0,
+      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+    },
+    {
+      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "options": [
+        "Transitive functional dependencies",
+        "Partial functional dependencies",
+        "Multivalued dependencies",
+        "Join dependencies"
+      ],
+      "answer": 0,
+      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+    },
+    {
+      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "options": [
+        "255.255.0.0",
+        "255.0.0.0",
+        "255.255.255.0",
+        "255.255.255.255"
+      ],
+      "answer": 0,
+      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+    },
+    {
+      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 34)?",
+      "options": [
+        "O(N^2)",
+        "O(N log N)",
+        "O(N)",
+        "O(log N)"
+      ],
+      "answer": 0,
+      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+    },
+    {
+      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "options": [
+        "Shortest Remaining Time First (SRTF)",
+        "Round Robin (RR)",
+        "First Come First Served (FCFS)",
+        "Multilevel Queue"
+      ],
+      "answer": 0,
+      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+    },
+    {
+      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "options": [
+        "Breadth-First Search (BFS)",
+        "Depth-First Search (DFS)",
+        "Topological Sort",
+        "Tarjan's Algorithm"
+      ],
+      "answer": 0,
+      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+    }
+  ]
+}

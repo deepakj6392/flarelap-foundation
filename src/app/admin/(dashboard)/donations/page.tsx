@@ -56,7 +56,7 @@ export default function DonationsAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/foundation/admin/donations`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -102,7 +102,7 @@ export default function DonationsAdminPage() {
     setSuccessMsg(null);
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/foundation/admin/donations/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

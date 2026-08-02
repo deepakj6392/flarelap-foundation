@@ -268,7 +268,7 @@ export default function Home() {
 
     setNewsletterStatus("loading");
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/foundation/newsletter`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

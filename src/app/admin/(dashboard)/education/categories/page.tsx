@@ -44,7 +44,7 @@ export default function CategoriesAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/categories`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -77,7 +77,7 @@ export default function CategoriesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       let res;
       if (isEditMode) {
@@ -146,7 +146,7 @@ export default function CategoriesAdminPage() {
 
     setActionLoading(`delete-${id}`);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/categories/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

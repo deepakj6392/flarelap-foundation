@@ -3,6 +3,7 @@ const { PrismaPg } = require("@prisma/adapter-pg");
 const { Pool } = require("pg");
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../../.env.local") });
 require("dotenv").config({ path: path.resolve(__dirname, "../../.env") });
 
 const connectionString = process.env.DATABASE_URL;
@@ -11,159 +12,156 @@ if (!connectionString) {
   process.exit(1);
 }
 
-const pool = new Pool({ connectionString, ssl: { rejectUnauthorized: false } });
+const pool = new Pool({
+  connectionString,
+  ssl: connectionString.includes("neon") ? { rejectUnauthorized: false } : false,
+});
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
-// Load MCQs dynamically from individual files in prisma/data/mcqs-data/ directory
-const mcqsDataDir = path.resolve(__dirname, "../data/mcqs-data");
-const mcqMap = {};
-
-if (fs.existsSync(mcqsDataDir)) {
-  const files = fs.readdirSync(mcqsDataDir).filter((f) => f.endsWith(".json"));
-  files.forEach((file) => {
-    try {
-      const filePath = path.join(mcqsDataDir, file);
-      const content = JSON.parse(fs.readFileSync(filePath, "utf8"));
-      
-      const fileKey = file.replace(".json", "");
-      
-      if (Array.isArray(content)) {
-        mcqMap[fileKey] = content;
-      } else if (content && Array.isArray(content.questions)) {
-        mcqMap[fileKey] = content.questions;
-        if (content.categoryKey) {
-          mcqMap[content.categoryKey] = content.questions;
-        }
-        if (content.courseName) {
-          const courseKey = content.courseName
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "_")
-            .replace(/^_+|_+$/g, "");
-          if (!mcqMap[courseKey]) {
-            mcqMap[courseKey] = content.questions;
-          }
-        }
-      }
-    } catch (e) {
-      console.warn(`  ⚠ Failed to parse ${file}:`, e.message);
+function getAllJsonFiles(dir) {
+  let results = [];
+  if (!fs.existsSync(dir)) return results;
+  const list = fs.readdirSync(dir);
+  list.forEach((file) => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getAllJsonFiles(fullPath));
+    } else if (file.endsWith(".json")) {
+      results.push(fullPath);
     }
   });
-}
-
-// Fallback to master mcqs.json if available
-const masterMcqPath = path.resolve(__dirname, "../data/mcqs.json");
-if (fs.existsSync(masterMcqPath)) {
-  try {
-    const masterMap = JSON.parse(fs.readFileSync(masterMcqPath, "utf8"));
-    Object.assign(mcqMap, masterMap);
-  } catch (e) {
-    // ignore if master not present
-  }
-}
-
-/**
- * Maps a course name to its MCQ category key
- */
-function getCategoryKey(courseName) {
-  const sanitizedKey = courseName
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "");
-
-  if (mcqMap[sanitizedKey]) return sanitizedKey;
-
-  const name = courseName.toLowerCase();
-  if (name.includes("jee")) {
-    if (name.includes("physics")) return "jee_physics";
-    if (name.includes("chemistry")) return "jee_chemistry";
-    if (name.includes("math") || name.includes("mathematics")) return "jee_math";
-  }
-  if (name.includes("neet")) {
-    if (name.includes("biology")) return "neet_biology";
-    if (name.includes("physics")) return "neet_physics";
-    if (name.includes("chemistry")) return "neet_chemistry";
-    return "neet_biology";
-  }
-  if (
-    name.includes("web") || name.includes("html") ||
-    name.includes("css") || name.includes("javascript") ||
-    name.includes("development")
-  ) {
-    return "webdev";
-  }
-  if (
-    name.includes("computer") || name.includes("gate") ||
-    name.includes("database") || name.includes("sql")
-  ) {
-    return "cs";
-  }
-  if (name.includes("english") || name.includes("grammar") || name.includes("ctet")) {
-    return "english";
-  }
-  if (
-    name.includes("math") || name.includes("algebra") ||
-    name.includes("nda") || name.includes("geometry")
-  ) {
-    return "math";
-  }
-  return "generic";
+  return results;
 }
 
 async function main() {
-  console.log("🌱 Seeding MCQ questions from prisma/data/mcqs-data/ files...");
+  console.log("🌱 Seeding MCQ questions from prisma/data/mcqs-data/ course folders...");
 
-  // Load all courses once
-  const courses = await prisma.course.findMany();
-  if (courses.length === 0) {
-    console.error("❌ No courses found. Run courses.seed.js first.");
+  const dbCourses = await prisma.course.findMany();
+  if (dbCourses.length === 0) {
+    console.error("❌ No courses found in database. Run courses.seed.js first.");
     process.exit(1);
   }
 
-  // Clear all existing MCQs for a clean seed
+  // Create lookup maps for dbCourses
+  const exactMap = new Map(dbCourses.map((c) => [c.name.trim(), c.id]));
+  const normMap = new Map(dbCourses.map((c) => [c.name.toLowerCase().replace(/[^a-z0-9]/g, ""), c.id]));
+
+  const mcqsDataDir = path.resolve(__dirname, "../data/mcqs-data");
+  if (!fs.existsSync(mcqsDataDir)) {
+    console.error("❌ mcqs-data directory not found at:", mcqsDataDir);
+    process.exit(1);
+  }
+
+  const filePaths = getAllJsonFiles(mcqsDataDir);
+  console.log(`📁 Found ${filePaths.length} MCQ JSON files across course folders to process.`);
+
+  // Map of courseId -> Array of questions
+  const courseQuestionsMap = new Map();
+  dbCourses.forEach((c) => courseQuestionsMap.set(c.id, []));
+
+  let matchedFiles = 0;
+
+  filePaths.forEach((filePath) => {
+    try {
+      const content = JSON.parse(fs.readFileSync(filePath, "utf8"));
+      const questions = Array.isArray(content) ? content : content.questions || [];
+
+      if (!questions || questions.length === 0) return;
+
+      let targetCourseId = null;
+
+      // 1. Check exact courseName
+      if (content.courseName && exactMap.has(content.courseName.trim())) {
+        targetCourseId = exactMap.get(content.courseName.trim());
+      }
+      // 2. Check normalized courseName
+      if (!targetCourseId && content.courseName) {
+        const norm = content.courseName.toLowerCase().replace(/[^a-z0-9]/g, "");
+        if (normMap.has(norm)) {
+          targetCourseId = normMap.get(norm);
+        }
+      }
+      // 3. Fallback: match by parent folder name
+      if (!targetCourseId) {
+        const parentFolderNorm = path.basename(path.dirname(filePath)).replace(/[^a-z0-9]/g, "");
+        if (normMap.has(parentFolderNorm)) {
+          targetCourseId = normMap.get(parentFolderNorm);
+        }
+      }
+
+      if (targetCourseId) {
+        courseQuestionsMap.get(targetCourseId).push(...questions);
+        matchedFiles++;
+      }
+    } catch (e) {
+      console.warn(`  ⚠ Failed to parse ${filePath}:`, e.message);
+    }
+  });
+
+  console.log(`  ✓ Successfully mapped ${matchedFiles}/${filePaths.length} JSON files to database courses`);
+
+  // Clear existing questions for clean seed
   const deleted = await prisma.mCQQuestion.deleteMany();
-  console.log(`  ✓ Cleared ${deleted.count} existing MCQ questions`);
+  console.log(`  ✓ Cleared ${deleted.count} existing MCQ questions from DB`);
 
   let totalSeeded = 0;
+  let activeCourseCount = 0;
 
-  for (const course of courses) {
-    const categoryKey = getCategoryKey(course.name);
-    const questions = mcqMap[categoryKey] || mcqMap["generic"];
-
-    if (!questions || questions.length === 0) {
-      console.warn(`  ⚠ No questions for category "${categoryKey}" (course: "${course.name}") — skipping`);
+  for (const course of dbCourses) {
+    const questions = courseQuestionsMap.get(course.id) || [];
+    if (questions.length === 0) {
       continue;
     }
 
-    console.log(
-      `  → Seeding ${questions.length} questions for "${course.name}" [${categoryKey}]...`
-    );
+    // Deduplicate questions by question text within the same course
+    const uniqueQuestionsMap = new Map();
+    for (const q of questions) {
+      if (q && q.question) {
+        const qStr = String(q.question).trim();
+        if (!uniqueQuestionsMap.has(qStr)) {
+          const options = Array.isArray(q.options)
+            ? q.options.map((opt) => String(opt))
+            : [];
+          const answer =
+            typeof q.answer === "number"
+              ? q.answer
+              : parseInt(String(q.answer), 10) || 0;
+          const hint = q.hint ? String(q.hint) : "";
 
-    // Insert in batches of 20
-    const batchSize = 20;
-    for (let i = 0; i < questions.length; i += batchSize) {
-      const batch = questions.slice(i, i + batchSize);
-      await Promise.all(
-        batch.map((q) =>
-          prisma.mCQQuestion.create({
-            data: {
-              courseId: course.id,
-              question: q.question,
-              options: q.options,
-              answer: q.answer,
-              hint: q.hint || "",
-            },
-          })
-        )
-      );
+          uniqueQuestionsMap.set(qStr, {
+            courseId: course.id,
+            question: qStr,
+            options,
+            answer,
+            hint,
+          });
+        }
+      }
     }
 
-    console.log(`  ✓ Done: "${course.name}" (${questions.length} questions)`);
-    totalSeeded += questions.length;
+    const mcqRecords = Array.from(uniqueQuestionsMap.values());
+    if (mcqRecords.length === 0) continue;
+
+    activeCourseCount++;
+
+    // Use createMany in batches of 200 for maximum performance
+    const batchSize = 200;
+    for (let i = 0; i < mcqRecords.length; i += batchSize) {
+      const batch = mcqRecords.slice(i, i + batchSize);
+      await prisma.mCQQuestion.createMany({
+        data: batch,
+        skipDuplicates: true,
+      });
+    }
+
+    console.log(`  ✓ Seeded ${mcqRecords.length} questions for "${course.name}"`);
+    totalSeeded += mcqRecords.length;
   }
 
   console.log(
-    `✅ MCQ seeding complete! (${totalSeeded} questions seeded across ${courses.length} courses)`
+    `\n✅ MCQ seeding complete! (${totalSeeded} questions seeded across ${activeCourseCount} courses)`
   );
 }
 

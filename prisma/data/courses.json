@@ -1,5 +1,1830 @@
 [
   {
+    "name": "SSC CGL Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC CHSL Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC MTS Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC GD Constable Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC CPO Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC Stenographer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC Jht (Junior Hindi Translator) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC Selection Post Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC Departmental Exams Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Pg Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Iit Jam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE (Pg/m.tech) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Pg (Medical) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GPAT (Pharmacy) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CLAT Pg (Law) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tiss Cuet Pg Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nimcet (Mca) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jnu Pg Entrance (Cuet Pg Route) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "University Specific Pg Entrance Exams Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RBI Grade B Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RBI Assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SEBI Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NABARD Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IRDAI Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "PFRDA Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SIDBI Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IFSCA Grade A Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBBI Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CTET Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Tet (Htet, Uptet, Reet, Btet, Etc.) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR NET Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "KVS Teacher Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NVS Teacher Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "DSSSB Teacher Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "TGT Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "PGT Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "PRT Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "B.ed Entrance Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "M.ed Entrance Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SET (State Eligibility Test) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up TGT School Teacher Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up PGT School Teacher Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "DSSSB TGT Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "KVS PGT Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up B.ed Joint Entrance Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bihar B.ed CET Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Delhi University B.ed Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CTET Paper 1 Child Pedagogy",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CTET Paper 2 Child Pedagogy",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UPTET Paper 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Super Tet Primary Teacher Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Fitter Semester 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Fitter Semester 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Fitter Yearly Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electrician Semester 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electrician Semester 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electrician Yearly Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electronic Mechanic Semester 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electronic Mechanic Semester 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electronic Mechanic Yearly Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Fitter Trade Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electrician Trade Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ITI Electronic Mechanic Trade Theory Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Civil Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Electrical Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Mechanical Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Civil Technical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Electrical Technical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Mechanical Technical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Psc Ae Civil Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Psc JE Electrical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Mechanical Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Mechanical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Mechanical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Mechanical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Civil Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Civil Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Civil Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Civil Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Electrical Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SSC JE Electrical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Electrical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Electrical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Electronics & Comm Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Electronics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "BARC Electronics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Computer Science & It Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Computer Science Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nielit Scientist B Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Chemical Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Biotechnology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Aerospace Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "GATE Instrumentation Engineering Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Instrumentation Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Delhi Judiciary Service Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up Civil Judge Junior Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bihar Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mp Judiciary Service Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Rajasthan Judiciary Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Haryana Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Punjab Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Gujarat Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Maharashtra Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "West Bengal Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Himachal Pradesh Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jharkhand Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Chhattisgarh Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uttarakhand Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Odisha Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Karnataka Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tamil Nadu Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Andhra Pradesh Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Telangana Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Kerala Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Assam Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jammu & Kashmir Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Goa Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tripura Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Manipur Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Meghalaya Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nagaland Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Arunachal Pradesh Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Sikkim Judiciary Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Aiims Paramedical Entrance Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Pgimer Paramedical Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jipmer Paramedical Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Ug (Paramedical Courses) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug (Some Allied Health Courses) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up Cpet (Abvmu Paramedical) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ruhs Paramedical Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jenpas Ug (West Bengal) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Smfwbee Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uttarakhand Paramedical Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bihar Dcece Paramedical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ipu CET (Paramedical Courses) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB Ntpc Cbt 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB Ntpc Cbt 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB Alp Stage 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB Alp Stage 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB Group D Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "RRB JE Cbt 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SBI Po Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SBI Clerk Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS Po Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS Clerk Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS RRB Po Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Lic Aao Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Lic Ado Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Niacl Ao Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SBI Po Preliminary Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SBI Clerk Preliminary Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS Po Preliminary Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "IBPS Clerk Preliminary Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uppsc PCS Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bpsc PCS Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mppsc PCS Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ras Rajasthan PCS Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mpsc Maharashtra PCS Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Psc Gs Paper 1 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Psc Gs Paper 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State PCS Gs Practice",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NDA General Ability Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CDS Elementary Mathematics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CDS General Knowledge Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "AFCAT Entry Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CAPF Assistant Commandant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Airforce X/y Group Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UPSC Civil Services Prelims Gs Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UPSC Civil Services Csat Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uppsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bpsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mppsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ras Rajasthan Civil Services Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mpsc Maharashtra Civil Services Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Hppsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ukpsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Gpsc Civil Services Prelims Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up Police Constable Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Up Police Si Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Delhi Police Constable Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Delhi Police Si Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bihar Police Constable Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Emrs Non-teaching Staff Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "DSSSB Non-teaching Assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "KVS Non-teaching Clerk Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Paper 1 General Aptitude",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Commerce Paper 2 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Computer Science Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR NET Life Sciences Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Paper 1 Mock Test Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Economics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Political Science Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Philosophy Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Psychology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Sociology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET History Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Anthropology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Commerce Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Education Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Social Work Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Defence Studies Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Home Science Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Public Administration Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Population Studies Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UGC NET Music Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "FSSAI Central Food Safety Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "FSSAI Technical Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Food Safety Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Aiims Norcet Nursing Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ESIC Staff Nurse Recruitment Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "DSSSB Nursing Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Ug General Test Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Ug Section Iii General Test Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Ia English Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cuet Physics & Chemistry Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Complete Practice Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Mock Test Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Full Syllabus Mock Test 1",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Full Syllabus Mock Test 2",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Full Syllabus Mock Test 3",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Full Syllabus Mock Test 4",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Full Syllabus Mock Test 5",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Physics Chapter-wise Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Chemistry Chapter-wise Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Biology Botany Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Biology Zoology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Previous Year Paper 2025",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Previous Year Paper 2024",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Previous Year Paper 2023",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Section-a Physics Speed Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Section-b Chemistry Speed Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Organic Chemistry Target Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Inorganic Chemistry Target Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Mechanics Physics Target Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NEET Ug Electrodynamics Physics Target Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Physics & Chemistry Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Mathematics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Mock Test Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Full Syllabus Mock Test 1",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Full Syllabus Mock Test 2",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Full Syllabus Mock Test 3",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Full Syllabus Mock Test 4",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Full Syllabus Mock Test 5",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Physics Section-a Speed Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Chemistry Section-a Speed Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Mathematics Section-a Speed Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Mathematics Algebra Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Mathematics Calculus Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Physics Mechanics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Physics Electromagnetism Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Chemistry Organic Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Chemistry Inorganic Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Chemistry Physical Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Previous Year Paper 2025",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Previous Year Paper 2024",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JEE Main Previous Year Paper 2023",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "TCS NQT Cognitive Skills Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Infosys Specialist Programmer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Wipro Elite Talent Hunt Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cognizant Genc Quantitative Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Accenture Green Channel Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Capgemini Excelerator Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Hcl Tech Bee Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Lti Mindtree Aptitude Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Deloitte Nla Aptitude Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Dxc Technology Placement Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tech Mahindra Technical & Aptitude Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Campus Placement General Aptitude Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ca Foundation Principles of Accounting",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cma Foundation Financial Accounting",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ca Intermediate Group 1 Accounting Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ca Intermediate Group 2 Advanced Accounting Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cma Intermediate Financial Accounting Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cs Executive Corporate and Management Accounting Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uppcl Assistant Accountant Accounts Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "State Accountant and Auditor Exam Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tally Erp 9 & Gst Professional Practice Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ca Foundation Business Laws Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CAT (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CMAT (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "XAT (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "MAT (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Snap (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nmat (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mah CET (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ibsat (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tancet (Mba) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "General Mba Entrance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Rajasthan GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uttar Pradesh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Bihar GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Madhya Pradesh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Maharashtra GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Haryana GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Punjab GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Gujarat GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "West Bengal GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Karnataka GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tamil Nadu GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Andhra Pradesh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Kerala GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Telangana GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Odisha GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Assam GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jharkhand GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Chhattisgarh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Uttarakhand GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Himachal Pradesh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Jammu & Kashmir GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Goa GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Tripura GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Manipur GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Meghalaya GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nagaland GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Arunachal Pradesh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Mizoram GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Sikkim GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Delhi GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Puducherry GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ladakh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Andaman & Nicobar GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Chandigarh GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Dadra & Nagar Haveli & Daman & Diu GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Lakshadweep GK Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian History Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Geography Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Polity & Constitution Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Economy Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Environment & Ecology Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Administration & Governance Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Sports & Culture Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Socialism & Social Welfare Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Indian Freedom Movement Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NRA CET 12th Level Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NRA CET Graduates Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NRA CET 10th Level Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Aiims Cre Ldc/udc/steno/deo/jaa/sa Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nbe Junior Assistant 2024 Mock Tests Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Assistant Mock Test 2022",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Junior Personal Assistant Mock Test 2022",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ccras Udc/ldc/steno/assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Nbe Junior Assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Cwc (Central Warehousing Corporation) Superintendent Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "FCI Manager Phase I & Ii Mock Test 2022",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "FCI Stenographer Mock Test 2022",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR Junior Secretariat Assistant (Jsa) 2025 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR Aso/so Mock Test 2023",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "UPSC EPFO Personal Assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CSIR Junior Stenographer 2025 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "AAI Junior Executive (Common Cadre) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Supreme Court Junior Court Assistant Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "Ccras MTS 2025 Mock Test Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CBSE Junior Assistant Mock Test 2025 (Old)",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "JCI Junior Assistant Mock Test Series",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "CBSE Assistant/superintendent & All Other Post(tier I) Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NPCIL Stipendiary Trainee (Category Ii) Prelims 2026 Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "India Post Postman & Mail Guard Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "EPFO Stenographer (Group C) Mock Test 2023",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "SGPGI Stenographer Mock Test Series 2025",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "NPCIL Scientific Assistant Physics Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "ISRO Scientist Recruitment Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "BARC Scientific Officer Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
+    "name": "DRDO Scientist B Mock Test",
+    "active": true,
+    "premium": true
+  },
+  {
     "name": "Web Development Basics",
     "active": true,
     "premium": false
@@ -18,295 +1843,5 @@
     "name": "Math & Algebra Essentials",
     "active": true,
     "premium": false
-  },
-  {
-    "name": "NEET Exam Preparation",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "JEE Physics Practice Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "JEE Chemistry Practice Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "JEE Mathematics Practice Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "NEET Biology Advanced Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "NEET Physics Advanced Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "NEET Chemistry Advanced Prep",
-    "active": true,
-    "premium": false
-  },
-  {
-    "name": "SSC CGL Tier 1 Mock Test 2026",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "GATE CS & IT Mock Exam",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "SEBI Grade A Officer Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "CTET Paper 1 Child Pedagogy",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "IBPS PO Prelims Practice Test",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UGC NET Paper 1 Research Aptitude",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "CDS General Knowledge Paper",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "NDA Mathematics Full Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "RRB NTPC General Awareness Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UPSC Prelims GS Paper 1 Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "ITI Fitter Theory Semester 1 & 2",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "ITI Electrician Basic Theory 2026",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "RRB JE Civil Technical CBT",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "State Judiciary Mains Mock Law Paper",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Paramedical Nursing Theory Exam",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Electronic Mechanic Semester 1 Prep",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "RRB NTPC CBT 1 Full Mock Test",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "SBI PO Prelims Full Mock Test",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "NEET Physics Practice Prep",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "NDA General Ability Mock Test",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UP Police Constable Practice Sets",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UP B.Ed Joint Entrance Exam Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "GATE ECE Practice Exam",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "GATE EE Power Systems Prep",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "GATE ME Mechanical Engineering Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "GATE CE Structural Engineering Practice",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UGC NET Paper 1 General Aptitude",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UGC NET Commerce Exam Booster",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UGC NET History Practice Paper",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "CSIR NET Life Sciences Prep",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "CSIR NET Chemical Sciences Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "LIC AAO General Insurance Mock Exam",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "EMRS Non-Teaching Staff Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UP TGT/PGT School Teacher Mock Test",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Super TET Primary School Teacher Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "FSSAI Food Technology Officer Mock Exam",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "AIIMS NORCET Nursing Officer Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Civil Engineering Core Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Electrical Engineering Core Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Electronics & Communication Engineering Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Computer Science & Engineering Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Other Engineering Exams Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "ITI Semester Exams Trade Theory Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Accounting and Commerce Finance Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Campus Placement Aptitude Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "NRA CET Common Eligibility Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Instrumentation Engineering Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "Government Organizations Officer Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "UG Entrance Exams General Aptitude Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "CUET General Test Practice Mock",
-    "active": true,
-    "premium": true
-  },
-  {
-    "name": "MBA Entrance Exam CAT Practice Mock",
-    "active": true,
-    "premium": true
   }
 ]

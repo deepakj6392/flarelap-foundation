@@ -26,7 +26,7 @@ export default function Footer() {
   useEffect(() => {
     async function loadSettings() {
       try {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
         const res = await fetch(`${apiUrl}/api/site-settings`);
         const data = await res.json();
         if (res.ok && data.setting) {

@@ -56,7 +56,7 @@ export default function AdminLoginPage() {
     }
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/login`, {
         method: "POST",
         headers: {
@@ -107,7 +107,7 @@ export default function AdminLoginPage() {
 
     setLoading(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/login`, {
         method: "POST",
         headers: {
@@ -151,7 +151,7 @@ export default function AdminLoginPage() {
     }
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/forgot-password`, {
         method: "POST",
         headers: {
@@ -202,7 +202,7 @@ export default function AdminLoginPage() {
     setLoading(true);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/auth/reset-password`, {
         method: "POST",
         headers: {

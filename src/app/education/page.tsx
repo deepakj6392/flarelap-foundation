@@ -585,65 +585,45 @@ const courseToCategory: { [key: string]: string } = {
   "drdo scientist b mock test": "Government Organizations"
 };
 
-
 const getCategoryForCourse = (courseName: string): string => {
   const name = courseName.toLowerCase();
-  if (courseToCategory[name]) {
-    return courseToCategory[name];
-  }
-  if (name.includes("nra cet") || name.includes("nra")) {
-    return "NRA CET";
-  }
+  if (courseToCategory[name]) return courseToCategory[name];
+
+  if (name.includes("ssc")) return "SSC";
+  if (name.includes("judiciary") || name.includes("civil judge") || name.includes("law paper") || name.includes("law entrance")) return "Judiciary Exam";
+  if (name.includes("police") || name.includes("constable") || name.includes("sub inspector")) return "Police Exams";
+  if (name.includes("non-teaching")) return "Non - Teaching Exams";
+  if (name.includes("fssai") || name.includes("food safety") || name.includes("food technology")) return "Food Technology";
+  if (name.includes("norcet") || name.includes("staff nurse") || name.includes("nursing officer")) return "Nursing Recruitment Exams";
+  if (name.includes("rrb") || name.includes("railway") || name.includes("ntpc") || name.includes("alp") || name.includes("group d")) return "Railways";
+  if (name.includes("sbi") || name.includes("ibps") || name.includes("bank") || name.includes("lic") || name.includes("insurance")) return "Banking & Insurance";
+  if (name.includes("sebi") || name.includes("rbi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) return "Regulatory Body Exams";
+  if (name.includes("nda") || name.includes("cds") || name.includes("afcat") || name.includes("capf") || name.includes("defence")) return "Defence Exams";
+  if (name.includes("upsc") || name.includes("civil services")) return "Civil Services";
+  if (name.includes("pcs") || name.includes("state psc")) return "State Exam";
+  if (name.includes("nra cet") || name.includes("nra")) return "NRA CET";
   if (
     name.includes("government organization") || name.includes("government org") || name.includes("gov org") ||
-    name.includes("aiims cre") || name.includes("nbe junior assistant") || name.includes("isro") ||
+    name.includes("aiims cre") || name.includes("nbe") || name.includes("isro") ||
     name.includes("ccras") || name.includes("cwc") || name.includes("fci") ||
-    name.includes("csir") || name.includes("epfo") || name.includes("aai junior") ||
-    name.includes("supreme court") || name.includes("cbse") || name.includes("jci") ||
-    name.includes("npcil") || name.includes("india post") || name.includes("sgpgi") ||
-    name.includes("barc") || name.includes("drdo")
-  ) {
-    return "Government Organizations";
-  }
-  if (name.includes("neet pg")) {
-    return "PG Entrance Exam";
-  }
-  if (name.includes("neet")) {
-    return "NEET";
-  }
-  if (name.includes("jee")) {
-    return "JEE";
-  }
-  if (name.includes("state gk") || name.includes("gk")) {
-    return "State GK";
-  }
-  if (name.includes("indian history") || name.includes("indian geography") || name.includes("indian polity") || name.includes("indian economy") || name.includes("indian environment") || name.includes("indian admin") || name.includes("indian sports") || name.includes("indian socialism") || name.includes("indian freedom")) {
-    return "Indian Studies";
-  }
-  if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) {
-    return "Paramedical Exams";
-  }
-  if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("m.ed")) {
-    return "Teaching Exam";
-  }
-  if (name.includes("rbi") || name.includes("sebi") || name.includes("nabard") || name.includes("irdai") || name.includes("pfrda") || name.includes("sidbi") || name.includes("ifsca") || name.includes("ibbi")) {
-    return "Regulatory Body Exams";
-  }
-  if (name.includes("mba") || name.includes("cat (mba)") || name.includes("cmat (mba)") || name.includes("xat (mba)") || name.includes("mat (mba)") || name.includes("snap") || name.includes("nmat") || name.includes("ibsat") || name.includes("tancet mba")) {
-    return "MBA Entrance Exam";
-  }
-  if (name.includes("cuet pg") || name.includes("iit jam") || name.includes("gate") || name.includes("cat") || name.includes("cmat") || name.includes("xat") || name.includes("mat") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet")) {
-    return "PG Entrance Exam";
-  }
-  if (name.includes("fitter") || name.includes("electrician") || name.includes("electronic mechanic") || name.includes("iti")) {
-    return "ITI Exam";
-  }
-  if (name.includes("mechanical") || name.includes("civil engineering") || name.includes("electrical engineering") || name.includes("electronics &") || name.includes("computer science &") || name.includes("instrumentation")) {
-    return "Engineering Test";
-  }
-  if (name.includes("net") || name.includes("set")) {
-    return "NET/SET";
-  }
+    name.includes("epfo") || name.includes("cbse") || name.includes("jci") ||
+    name.includes("npcil") || name.includes("india post") || name.includes("barc") || name.includes("drdo")
+  ) return "Government Organizations";
+  if (name.includes("neet pg") || name.includes("cuet pg") || name.includes("jam") || name.includes("gpat") || name.includes("clat pg") || name.includes("nimcet") || name.includes("pg entrance")) return "PG Entrance Exam";
+  if (name.includes("neet")) return "NEET";
+  if (name.includes("jee")) return "JEE";
+  if (name.includes("state gk") || name.includes("gk mock test") || name.includes("gk practice") || name.includes(" gk")) return "State GK";
+  if (name.includes("indian history") || name.includes("indian geography") || name.includes("indian polity") || name.includes("indian economy") || name.includes("indian environment") || name.includes("indian studies")) return "Indian Studies";
+  if (name.includes("aiims paramedical") || name.includes("pgimer paramedical") || name.includes("jipmer paramedical") || name.includes("cpet") || name.includes("jenpas") || name.includes("smfwbee") || name.includes("dcece") || name.includes("paramedical")) return "Paramedical Exams";
+  if (name.includes("teaching") || name.includes("ctet") || name.includes("pedagogy") || name.includes("tet") || name.includes("prt") || name.includes("pgt") || name.includes("tgt") || name.includes("b.ed") || name.includes("m.ed") || name.includes("school teacher")) return "Teaching Exam";
+  if (name.includes("mba") || name.includes("cat ") || name.includes("cmat") || name.includes("xat") || name.includes("mat ")) return "MBA Entrance Exam";
+  if (name.includes("cuet") || name.includes("ug entrance")) return "UG Entrance Exam";
+  if (name.includes("fitter") || name.includes("electrician") || name.includes("electronic mechanic") || name.includes("trade theory") || name.includes("iti")) return "ITI Exam";
+  if (name.includes("mechanical") || name.includes("civil") || name.includes("electrical") || name.includes("electronics") || name.includes("computer science") || name.includes("engineering") || name.includes("gate") || name.includes("instrumentation")) return "Engineering Test";
+  if (name.includes("accounting") || name.includes("commerce") || name.includes("finance") || name.includes("ca ") || name.includes("cma") || name.includes("cs executive")) return "Accounting and Commerce";
+  if (name.includes("campus placement") || name.includes("placement") || name.includes("nqt") || name.includes("tcs") || name.includes("wipro") || name.includes("infosys") || name.includes("accenture")) return "Campus Placements";
+  if (name.includes("net") || name.includes("set")) return "NET/SET";
+
   return "State Exam";
 };
 

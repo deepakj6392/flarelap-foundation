@@ -69,7 +69,7 @@ export default function TestSeriesAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       // Fetch test series
       const testRes = await fetch(`${apiUrl}/api/admin/test-series`, {
@@ -113,7 +113,7 @@ export default function TestSeriesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       const payload = {
         name: name.trim(),
@@ -176,7 +176,7 @@ export default function TestSeriesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/test-series/${id}`, {
         method: "PUT",
         headers: { 
@@ -221,7 +221,7 @@ export default function TestSeriesAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/test-series/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

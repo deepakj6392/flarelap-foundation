@@ -63,7 +63,7 @@ export default function UserLogsPage() {
     setError(null);
     try {
       const token = localStorage.getItem("admin_token");
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       
       const queryParams = new URLSearchParams({
         query: searchQuery,

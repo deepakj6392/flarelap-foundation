@@ -144,7 +144,7 @@ export default function MCQsAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/courses`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -170,7 +170,7 @@ export default function MCQsAdminPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/mcqs`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -225,7 +225,7 @@ export default function MCQsAdminPage() {
     const optionsArray = [option1.trim(), option2.trim(), option3.trim(), option4.trim()];
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/mcqs`, {
         method: "POST",
         headers: { 
@@ -361,7 +361,7 @@ export default function MCQsAdminPage() {
     setUploadError(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/mcqs/bulk`, {
         method: "POST",
         headers: {
@@ -416,7 +416,7 @@ export default function MCQsAdminPage() {
     setSuccessMsg(null);
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/admin/mcqs/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },

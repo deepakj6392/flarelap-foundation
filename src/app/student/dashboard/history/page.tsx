@@ -79,7 +79,7 @@ export default function StudentTestHistoryPage() {
       const token = localStorage.getItem("student_token");
       if (!token) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/student/attempts`, {
         headers: { Authorization: `Bearer ${token}` }
       });

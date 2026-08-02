@@ -45,7 +45,7 @@ export default function NewsletterPage() {
       const storedToken = localStorage.getItem("admin_token");
       if (!storedToken) return;
 
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/foundation/admin/newsletter`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       });
@@ -91,7 +91,7 @@ export default function NewsletterPage() {
     setSuccessMsg(null);
     
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
       const res = await fetch(`${apiUrl}/api/foundation/admin/newsletter/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${storedToken}` },
