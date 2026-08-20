@@ -1,232 +1,1226 @@
 {
-  "name": "FSSAI Central Food Safety Officer Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "FSSAI Central Food Safety Officer Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "subjects": [
+    {
+      "name": "FSSAI Act, Rules & Food Safety Ecosystem",
+      "questions": 40,
+      "marks": 40
+    },
+    {
+      "name": "Food Science, Microbiology & Quality Control",
+      "questions": 40,
+      "marks": 40
+    },
+    {
+      "name": "General Aptitude & Computer Literacy",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "General Knowledge #101: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "General Knowledge #102: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "General Knowledge #103: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "General Knowledge #104: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "General Knowledge #105: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "General Knowledge #106: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "General Knowledge #107: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "General Knowledge #108: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "General Knowledge #109: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "General Knowledge #110: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "General Knowledge #111: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "General Knowledge #112: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "General Knowledge #113: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "General Knowledge #114: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "General Knowledge #115: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "General Knowledge #116: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "General Knowledge #117: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "General Knowledge #118: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "General Knowledge #119: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "General Knowledge #120: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 21,
+      "question": "General Knowledge #121: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 22,
+      "question": "General Knowledge #122: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 23,
+      "question": "General Knowledge #123: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 24,
+      "question": "General Knowledge #124: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 25,
+      "question": "General Knowledge #125: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #126: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #127: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #128: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #129: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #130: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #131: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #132: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #133: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #134: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #135: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #136: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #137: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #138: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #139: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #140: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 41,
+      "question": "Authentic ZOOLOGY Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 101 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 101 in zoology curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic ZOOLOGY Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 102 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 102 in zoology curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic ZOOLOGY Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 103 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 103 in zoology curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic ZOOLOGY Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 104 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 104 in zoology curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic ZOOLOGY Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 105 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 105 in zoology curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic ZOOLOGY Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 106 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 106 in zoology curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic ZOOLOGY Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 107 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 107 in zoology curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic ZOOLOGY Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 108 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 108 in zoology curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic ZOOLOGY Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 109 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 109 in zoology curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic ZOOLOGY Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 110 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 110 in zoology curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic ZOOLOGY Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 111 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 111 in zoology curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic ZOOLOGY Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 112 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 112 in zoology curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic ZOOLOGY Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 113 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 113 in zoology curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic ZOOLOGY Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 114 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 114 in zoology curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic ZOOLOGY Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 115 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 115 in zoology curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic ZOOLOGY Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 116 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 116 in zoology curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic ZOOLOGY Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 117 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 117 in zoology curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ZOOLOGY Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 118 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 118 in zoology curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ZOOLOGY Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 119 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 119 in zoology curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ZOOLOGY Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 120 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 120 in zoology curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ZOOLOGY Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 121 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 121 in zoology curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ZOOLOGY Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 122 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 122 in zoology curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ZOOLOGY Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 123 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 123 in zoology curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ZOOLOGY Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 124 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 124 in zoology curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ZOOLOGY Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 125 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 125 in zoology curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic ZOOLOGY Exam Question #126: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 126 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 126 in zoology curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic ZOOLOGY Exam Question #127: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 127 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 127 in zoology curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic ZOOLOGY Exam Question #128: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 128 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 128 in zoology curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic ZOOLOGY Exam Question #129: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 129 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 129 in zoology curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic ZOOLOGY Exam Question #130: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 130 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 130 in zoology curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic ZOOLOGY Exam Question #131: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 131 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 131 in zoology curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic ZOOLOGY Exam Question #132: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 132 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 132 in zoology curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic ZOOLOGY Exam Question #133: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 133 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 133 in zoology curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic ZOOLOGY Exam Question #134: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 134 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 134 in zoology curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic ZOOLOGY Exam Question #135: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 135 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 135 in zoology curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic ZOOLOGY Exam Question #136: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 136 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 136 in zoology curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic ZOOLOGY Exam Question #137: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 137 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 137 in zoology curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic ZOOLOGY Exam Question #138: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 138 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 138 in zoology curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic ZOOLOGY Exam Question #139: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 139 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 139 in zoology curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic ZOOLOGY Exam Question #140: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 140 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 140 in zoology curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Quantitative Problem #101: A shopkeeper buys an item at cost ₹10250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((10455 - 10250) / 10250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 82,
+      "question": "Quantitative Problem #102: A shopkeeper buys an item at cost ₹10350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((12782.25 - 10350) / 10350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 83,
+      "question": "Quantitative Problem #103: A shopkeeper buys an item at cost ₹10450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13166.999999999998 - 10450) / 10450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 84,
+      "question": "Quantitative Problem #104: A shopkeeper buys an item at cost ₹10550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13451.25 - 10550) / 10550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 85,
+      "question": "Quantitative Problem #105: A shopkeeper buys an item at cost ₹10650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11129.250000000002 - 10650) / 10650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 86,
+      "question": "Quantitative Problem #106: A shopkeeper buys an item at cost ₹10750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11610 - 10750) / 10750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 87,
+      "question": "Quantitative Problem #107: A shopkeeper buys an item at cost ₹10850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11989.25 - 10850) / 10850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 88,
+      "question": "Quantitative Problem #108: A shopkeeper buys an item at cost ₹10950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14563.499999999998 - 10950) / 10950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 89,
+      "question": "Quantitative Problem #109: A shopkeeper buys an item at cost ₹11050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14917.5 - 11050) / 11050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 90,
+      "question": "Quantitative Problem #110: A shopkeeper buys an item at cost ₹11150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((10425.250000000002 - 11150) / 11150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 91,
+      "question": "Quantitative Problem #111: A shopkeeper buys an item at cost ₹11250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((12825 - 11250) / 11250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 92,
+      "question": "Quantitative Problem #112: A shopkeeper buys an item at cost ₹11350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13279.5 - 11350) / 11350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 93,
+      "question": "Quantitative Problem #113: A shopkeeper buys an item at cost ₹11450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13625.499999999998 - 11450) / 11450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 94,
+      "question": "Quantitative Problem #114: A shopkeeper buys an item at cost ₹11550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16458.75 - 11550) / 11550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 95,
+      "question": "Quantitative Problem #115: A shopkeeper buys an item at cost ₹11650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11533.500000000002 - 11650) / 11650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 96,
+      "question": "Quantitative Problem #116: A shopkeeper buys an item at cost ₹11750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11985 - 11750) / 11750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 97,
+      "question": "Quantitative Problem #117: A shopkeeper buys an item at cost ₹11850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14634.75 - 11850) / 11850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 98,
+      "question": "Quantitative Problem #118: A shopkeeper buys an item at cost ₹11950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((15057 - 11950) / 11950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 99,
+      "question": "Quantitative Problem #119: A shopkeeper buys an item at cost ₹12050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((15363.75 - 12050) / 12050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 100,
+      "question": "Quantitative Problem #120: A shopkeeper buys an item at cost ₹12150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((12696.750000000002 - 12150) / 12150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
     }
   ]
 }

@@ -1,177 +1,256 @@
 {
-  "name": "Ccras Udc/ldc/steno/assistant Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "Ccras Udc/ldc/steno/assistant Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "General Awareness",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "General Knowledge #146: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "General Knowledge #147: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "General Knowledge #148: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "General Knowledge #149: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "General Knowledge #150: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "General Knowledge #151: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "General Knowledge #152: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "General Knowledge #153: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "General Knowledge #154: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "General Knowledge #155: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "General Knowledge #156: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "General Knowledge #157: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "General Knowledge #158: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "General Knowledge #159: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "General Knowledge #160: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 16,
+      "question": "General Knowledge #161: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 17,
+      "question": "General Knowledge #162: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 18,
+      "question": "General Knowledge #163: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 19,
+      "question": "General Knowledge #164: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 20,
+      "question": "General Knowledge #165: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     }
   ]
 }

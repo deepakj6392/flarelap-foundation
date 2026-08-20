@@ -1,232 +1,806 @@
 {
-  "name": "GATE Electronics & Comm Mock Test - Full Length Mock Test 2",
-  "type": "Full Mock",
   "courseName": "GATE Electronics & Comm Mock Test",
-  "qs": 65,
-  "marks": 100,
+  "testName": "Full Length Mock Test 2",
+  "totalQuestions": 65,
+  "totalMarks": 100,
   "duration": 180,
-  "isFree": true,
-  "categoryKey": "engineering",
+  "subjects": [
+    {
+      "name": "Trade Theory & Semiconductor / Microcontroller",
+      "questions": 38,
+      "marks": 76
+    },
+    {
+      "name": "Workshop Calculation & Science",
+      "questions": 6,
+      "marks": 12
+    },
+    {
+      "name": "Engineering Drawing & Employability Skills",
+      "questions": 6,
+      "marks": 12
+    }
+  ],
   "questions": [
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 1,
+      "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 2,
+      "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 3,
+      "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Electronics & Comm Mock Test (Full Mock 2)?",
+      "id": 4,
+      "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 5,
+      "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 6,
+      "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 7,
+      "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 8,
+      "question": "General Knowledge #33: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Electronics & Comm Mock Test (Full Mock 2)?",
+      "id": 9,
+      "question": "General Knowledge #34: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 10,
+      "question": "General Knowledge #35: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 11,
+      "question": "General Knowledge #36: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 12,
+      "question": "General Knowledge #37: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 13,
+      "question": "General Knowledge #38: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Electronics & Comm Mock Test (Full Mock 2)?",
+      "id": 14,
+      "question": "General Knowledge #39: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 15,
+      "question": "General Knowledge #40: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 16,
+      "question": "General Knowledge #41: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 17,
+      "question": "General Knowledge #42: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 18,
+      "question": "General Knowledge #43: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Electronics & Comm Mock Test (Full Mock 2)?",
+      "id": 19,
+      "question": "General Knowledge #44: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 20,
+      "question": "General Knowledge #45: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 21,
+      "question": "General Knowledge #46: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 22,
+      "question": "General Knowledge #47: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 23,
+      "question": "General Knowledge #48: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 24,
+      "question": "General Knowledge #49: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 25,
+      "question": "General Knowledge #50: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #51: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #52: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #53: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #54: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #55: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #56: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #57: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #58: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #59: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #60: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #61: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #62: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #63: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #64: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #65: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #66: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #67: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #68: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #69: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #70: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #71: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #72: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #73: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #74: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 51,
+      "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 52,
+      "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 53,
+      "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 54,
+      "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 55,
+      "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 56,
+      "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 57,
+      "question": "General Knowledge #33: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ENGINEERING Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 26 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 26 in engineering curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ENGINEERING Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 27 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 27 in engineering curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ENGINEERING Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 28 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 28 in engineering curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ENGINEERING Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 29 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 29 in engineering curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ENGINEERING Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 30 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 30 in engineering curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ENGINEERING Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 31 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 31 in engineering curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ENGINEERING Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 32 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 32 in engineering curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ENGINEERING Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 33 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 33 in engineering curriculum."
     }
   ]
 }

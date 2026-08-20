@@ -1,232 +1,2431 @@
 {
-  "name": "RBI Grade B Mock Test - Full Length Mock Test 1",
-  "type": "Full Mock",
   "courseName": "RBI Grade B Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 1",
+  "totalQuestions": 200,
+  "totalMarks": 200,
+  "duration": 120,
+  "subjects": [
+    {
+      "name": "General Awareness",
+      "questions": 80,
+      "marks": 80
+    },
+    {
+      "name": "Reasoning",
+      "questions": 60,
+      "marks": 60
+    },
+    {
+      "name": "English Language",
+      "questions": 30,
+      "marks": 30
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": 30,
+      "marks": 30
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 21,
+      "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 22,
+      "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 23,
+      "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 24,
+      "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 25,
+      "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #33: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #34: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #35: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #36: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #37: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #38: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #39: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #40: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #41: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #42: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #43: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #44: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #45: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #46: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #47: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #48: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #49: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #50: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 51,
+      "question": "General Knowledge #51: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 52,
+      "question": "General Knowledge #52: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 53,
+      "question": "General Knowledge #53: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 54,
+      "question": "General Knowledge #54: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 55,
+      "question": "General Knowledge #55: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 56,
+      "question": "General Knowledge #56: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 57,
+      "question": "General Knowledge #57: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 58,
+      "question": "General Knowledge #58: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 59,
+      "question": "General Knowledge #59: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 60,
+      "question": "General Knowledge #60: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 61,
+      "question": "General Knowledge #61: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 62,
+      "question": "General Knowledge #62: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 63,
+      "question": "General Knowledge #63: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 64,
+      "question": "General Knowledge #64: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 65,
+      "question": "General Knowledge #65: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 66,
+      "question": "General Knowledge #66: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 67,
+      "question": "General Knowledge #67: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 68,
+      "question": "General Knowledge #68: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 69,
+      "question": "General Knowledge #69: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 70,
+      "question": "General Knowledge #70: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 71,
+      "question": "General Knowledge #71: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 72,
+      "question": "General Knowledge #72: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 73,
+      "question": "General Knowledge #73: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 74,
+      "question": "General Knowledge #74: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 75,
+      "question": "General Knowledge #75: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 76,
+      "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 77,
+      "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 78,
+      "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 79,
+      "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 80,
+      "question": "General Knowledge #80: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 81,
+      "question": "Coding-Decoding: In a specific coding system, 'TEACHER' is written as 'VGCEJGT'. Following the logic (Each letter shifted +2), how is 'STUDENT' written?",
+      "options": [
+        "UVWFGPV",
+        "VWFGPVU",
+        "UWWFGPW",
+        "VPGFWVU"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter shifted +2. 'STUDENT' becomes 'UVWFGPV'."
+    },
+    {
+      "id": 82,
+      "question": "Coding-Decoding: In a specific coding system, 'COMPUTER' is written as 'RFUVQNPC'. Following the logic (Reverse order with +1 shift), how is 'MEDICINE' written?",
+      "options": [
+        "EOJDJEFM",
+        "OJDJEFME",
+        "FOJDJFFM",
+        "MFEJDJOE"
+      ],
+      "answer": 0,
+      "hint": "Rule: Reverse order with +1 shift. 'MEDICINE' becomes 'EOJDJEFM'."
+    },
+    {
+      "id": 83,
+      "question": "Coding-Decoding: In a specific coding system, 'TRIANGLE' is written as 'SUJBMHKF'. Following the logic (Alternate +1 and -1 shift), how is 'POLYGON' written?",
+      "options": [
+        "QPMZHPO",
+        "PMZHPOQ",
+        "QPMZHPO",
+        "OPHZMPQ"
+      ],
+      "answer": 0,
+      "hint": "Rule: Alternate +1 and -1 shift. 'POLYGON' becomes 'QPMZHPO'."
+    },
+    {
+      "id": 84,
+      "question": "Coding-Decoding: In a specific coding system, 'MONKEY' is written as 'XDJMNL'. Following the logic (Reverse position minus 1), how is 'TIGER' written?",
+      "options": [
+        "QDFHS",
+        "DFHSQ",
+        "QDFHS",
+        "SHFDQ"
+      ],
+      "answer": 0,
+      "hint": "Rule: Reverse position minus 1. 'TIGER' becomes 'QDFHS'."
+    },
+    {
+      "id": 85,
+      "question": "Coding-Decoding: In a specific coding system, 'DIAGNOSIS' is written as 'EJBHOPTJT'. Following the logic (Vowels +1, Consonants +1), how is 'PATIENT' written?",
+      "options": [
+        "QBUJFOU",
+        "BUJFOUQ",
+        "QBUJFOU",
+        "UOFJUBQ"
+      ],
+      "answer": 0,
+      "hint": "Rule: Vowels +1, Consonants +1. 'PATIENT' becomes 'QBUJFOU'."
+    },
+    {
+      "id": 86,
+      "question": "Coding-Decoding: In a specific coding system, 'ALPHABET' is written as 'ZKOYZYSG'. Following the logic (Opposite letter alphabet pair (A-Z, B-Y)), how is 'SENTENCE' written?",
+      "options": [
+        "HVMGVMXV",
+        "VMGVMXVH",
+        "HWMGWMXW",
+        "VXMVGMVH"
+      ],
+      "answer": 0,
+      "hint": "Rule: Opposite letter alphabet pair (A-Z, B-Y). 'SENTENCE' becomes 'HVMGVMXV'."
+    },
+    {
+      "id": 87,
+      "question": "Coding-Decoding: In a specific coding system, 'FRACTION' is written as 'MNAETCIO'. Following the logic (First and second half split and reversed), how is 'NUMERATOR' written?",
+      "options": [
+        "RTOANERUM",
+        "TOANERUMR",
+        "RTOANFRUM",
+        "MURENAOTR"
+      ],
+      "answer": 0,
+      "hint": "Rule: First and second half split and reversed. 'NUMERATOR' becomes 'RTOANERUM'."
+    },
+    {
+      "id": 88,
+      "question": "Coding-Decoding: In a specific coding system, 'SYMBOL' is written as 'TZOCPM'. Following the logic (Shift +1 on consonants and +2 on vowels), how is 'NUMBER' written?",
+      "options": [
+        "OVOCFS",
+        "VOCFSO",
+        "OWOCFS",
+        "SFCOVO"
+      ],
+      "answer": 0,
+      "hint": "Rule: Shift +1 on consonants and +2 on vowels. 'NUMBER' becomes 'OVOCFS'."
+    },
+    {
+      "id": 89,
+      "question": "Coding-Decoding: In a specific coding system, 'ORANGE' is written as 'PUBOHF'. Following the logic (First letter +1, vowels shifted to next vowel), how is 'BANANA' written?",
+      "options": [
+        "CBOBOB",
+        "BOBOBC",
+        "CBOBOB",
+        "BOBOBC"
+      ],
+      "answer": 0,
+      "hint": "Rule: First letter +1, vowels shifted to next vowel. 'BANANA' becomes 'CBOBOB'."
+    },
+    {
+      "id": 90,
+      "question": "Coding-Decoding: In a specific coding system, 'KNOWLEDGE' is written as 'LOMXMFDHF'. Following the logic (Alternating +1 and -1 on positions), how is 'WISDOM' written?",
+      "options": [
+        "XJTETN",
+        "JTETNX",
+        "XJTFTN",
+        "NTETJX"
+      ],
+      "answer": 0,
+      "hint": "Rule: Alternating +1 and -1 on positions. 'WISDOM' becomes 'XJTETN'."
+    },
+    {
+      "id": 91,
+      "question": "Coding-Decoding: In a specific coding system, 'SYSTEM' is written as 'SYSMET'. Following the logic (First 3 letters reversed, last 3 reversed), how is 'FRACTION' written?",
+      "options": [
+        "CARFTNOI",
+        "ARFTNOIC",
+        "CARFTNOI",
+        "IONTFRAC"
+      ],
+      "answer": 0,
+      "hint": "Rule: First 3 letters reversed, last 3 reversed. 'FRACTION' becomes 'CARFTNOI'."
+    },
+    {
+      "id": 92,
+      "question": "Coding-Decoding: In a specific coding system, 'CALENDAR' is written as 'CLANAEDR'. Following the logic (Vowels swapped with adjacent consonants), how is 'CIRCULAR' written?",
+      "options": [
+        "CRIUCLRA",
+        "RIUCLRAC",
+        "CRIUCLRA",
+        "ARLCUIRC"
+      ],
+      "answer": 0,
+      "hint": "Rule: Vowels swapped with adjacent consonants. 'CIRCULAR' becomes 'CRIUCLRA'."
+    },
+    {
+      "id": 93,
+      "question": "Coding-Decoding: In a specific coding system, 'BOMBAIL' is written as 'BOMBMLI'. Following the logic (Vowels replaced by next alphabetical vowel), how is 'HARBOUR' written?",
+      "options": [
+        "HARBROU",
+        "ARBROUH",
+        "HARBROU",
+        "UORBRAH"
+      ],
+      "answer": 0,
+      "hint": "Rule: Vowels replaced by next alphabetical vowel. 'HARBOUR' becomes 'HARBROU'."
+    },
+    {
+      "id": 94,
+      "question": "Coding-Decoding: In a specific coding system, 'DISTANT' is written as 'TNASITD'. Following the logic (Reverse entire word), how is 'DISPLAY' written?",
+      "options": [
+        "YALPSID",
+        "ALPSIDY",
+        "YALPSID",
+        "DISPLAY"
+      ],
+      "answer": 0,
+      "hint": "Rule: Reverse entire word. 'DISPLAY' becomes 'YALPSID'."
+    },
+    {
+      "id": 95,
+      "question": "Coding-Decoding: In a specific coding system, 'EXAM' is written as 'FYBN'. Following the logic (Each letter +1), how is 'TEST' written?",
+      "options": [
+        "UFTU",
+        "FTUU",
+        "UFTU",
+        "UTFU"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'TEST' becomes 'UFTU'."
+    },
+    {
+      "id": 96,
+      "question": "Coding-Decoding: In a specific coding system, 'LOGIC' is written as 'JMEGE'. Following the logic (Shift +1 on each letter), how is 'BRAIN' written?",
+      "options": [
+        "CSBJO",
+        "SBJOC",
+        "CSBJO",
+        "OJBSC"
+      ],
+      "answer": 0,
+      "hint": "Rule: Shift +1 on each letter. 'BRAIN' becomes 'CSBJO'."
+    },
+    {
+      "id": 97,
+      "question": "Coding-Decoding: In a specific coding system, 'MATRIX' is written as 'NZGIRC'. Following the logic (First two swap, last two swap), how is 'VECTOR' written?",
+      "options": [
+        "EVCTRO",
+        "VCTROE",
+        "FWCTRO",
+        "ORTCVE"
+      ],
+      "answer": 0,
+      "hint": "Rule: First two swap, last two swap. 'VECTOR' becomes 'EVCTRO'."
+    },
+    {
+      "id": 98,
+      "question": "Coding-Decoding: In a specific coding system, 'NETWORK' is written as 'OEUXPSL'. Following the logic (Each letter +1 and reversed), how is 'ROUTER' written?",
+      "options": [
+        "SPVGFS",
+        "PVGFSS",
+        "SPWGFS",
+        "SFGVPS"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1 and reversed. 'ROUTER' becomes 'SPVGFS'."
+    },
+    {
+      "id": 99,
+      "question": "Coding-Decoding: In a specific coding system, 'DESIGN' is written as 'EFTJHO'. Following the logic (Each letter +1), how is 'SKETCH' written?",
+      "options": [
+        "TLFUDI",
+        "LFUDIT",
+        "TLFUDI",
+        "IDUFLT"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'SKETCH' becomes 'TLFUDI'."
+    },
+    {
+      "id": 100,
+      "question": "Coding-Decoding: In a specific coding system, 'BINARY' is written as 'CJOBSZ'. Following the logic (Each letter +1), how is 'CODING' written?",
+      "options": [
+        "DPEJOH",
+        "PEJOHD",
+        "DPFJOH",
+        "HOJEPD"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'CODING' becomes 'DPEJOH'."
+    },
+    {
+      "id": 101,
+      "question": "Coding-Decoding: In a specific coding system, 'SEARCH' is written as 'TFBSDI'. Following the logic (Each letter +1), how is 'ENGINE' written?",
+      "options": [
+        "FOHJOF",
+        "OHJOFF",
+        "FOHJOF",
+        "FOJHOF"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'ENGINE' becomes 'FOHJOF'."
+    },
+    {
+      "id": 102,
+      "question": "Coding-Decoding: In a specific coding system, 'FLARE' is written as 'GMBSF'. Following the logic (Each letter +1), how is 'LAP' written?",
+      "options": [
+        "MBQ",
+        "BQM",
+        "MBQ",
+        "QBM"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'LAP' becomes 'MBQ'."
+    },
+    {
+      "id": 103,
+      "question": "Coding-Decoding: In a specific coding system, 'FOUND' is written as 'GPEOE'. Following the logic (Each letter +1), how is 'NATION' written?",
+      "options": [
+        "OBUJPO",
+        "BUJPOO",
+        "OBUJPO",
+        "OPJUBO"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'NATION' becomes 'OBUJPO'."
+    },
+    {
+      "id": 104,
+      "question": "Coding-Decoding: In a specific coding system, 'POWER' is written as 'QPXFS'. Following the logic (Each letter +1), how is 'ENERGY' written?",
+      "options": [
+        "FOFSHZ",
+        "OFSHZF",
+        "FOFSHZ",
+        "ZHSFOF"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'ENERGY' becomes 'FOFSHZ'."
+    },
+    {
+      "id": 105,
+      "question": "Coding-Decoding: In a specific coding system, 'SMART' is written as 'TNBUS'. Following the logic (Each letter +1), how is 'CLEVER' written?",
+      "options": [
+        "DMFWFS",
+        "MFWFSD",
+        "DMFWFS",
+        "SFWFMD"
+      ],
+      "answer": 0,
+      "hint": "Rule: Each letter +1. 'CLEVER' becomes 'DMFWFS'."
+    },
+    {
+      "id": 106,
+      "question": "Blood Relations: His father is the only son of my father-in-law. How are they related?",
+      "options": [
+        "Son",
+        "Husband",
+        "Nephew",
+        "Brother-in-law"
+      ],
+      "answer": 0,
+      "hint": "Only son of father-in-law is husband. Husband's son is her son."
+    },
+    {
+      "id": 107,
+      "question": "Blood Relations: She is the daughter of the only son of my grandfather. How are they related?",
+      "options": [
+        "Sister",
+        "Cousin",
+        "Aunt",
+        "Mother"
+      ],
+      "answer": 0,
+      "hint": "Only son of grandfather is father. Father's daughter is sister."
+    },
+    {
+      "id": 108,
+      "question": "Blood Relations: A + B means A is father of B; A - B means A is sister of B; A * B means A is son of B. What does P + Q - R * S imply?. How are they related?",
+      "options": [
+        "P is married to S",
+        "P is brother of S",
+        "P is son of S",
+        "P is uncle of S"
+      ],
+      "answer": 0,
+      "hint": "P is father of Q & R, S is mother of R => P & S married."
+    },
+    {
+      "id": 109,
+      "question": "Blood Relations: Pointing to a man, a woman said: 'His mother is the only daughter of my mother.'. How are they related?",
+      "options": [
+        "Son",
+        "Brother",
+        "Husband",
+        "Father"
+      ],
+      "answer": 0,
+      "hint": "Only daughter of mother is self. She is his mother."
+    },
+    {
+      "id": 110,
+      "question": "Blood Relations: X is brother of Y. Y is wife of Z. Z is son of W. How is X related to Z?. How are they related?",
+      "options": [
+        "Brother-in-law",
+        "Brother",
+        "Cousin",
+        "Uncle"
+      ],
+      "answer": 0,
+      "hint": "X is wife's brother => Brother-in-law."
+    },
+    {
+      "id": 111,
+      "question": "Blood Relations: If P is father of Q, R is son of S, T is brother of P, and Q is sister of R, how is S related to T?. How are they related?",
+      "options": [
+        "Sister-in-law",
+        "Sister",
+        "Mother",
+        "Daughter-in-law"
+      ],
+      "answer": 0,
+      "hint": "S is mother of Q & R (P's wife). T is P's brother => Sister-in-law."
+    },
+    {
+      "id": 112,
+      "question": "Blood Relations: Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.'. How are they related?",
+      "options": [
+        "Cousin",
+        "Brother",
+        "Nephew",
+        "Son"
+      ],
+      "answer": 0,
+      "hint": "Father of uncle is grandfather. Grandfather's daughter is aunt/mother. Her son is cousin."
+    },
+    {
+      "id": 113,
+      "question": "Blood Relations: A's mother is sister of B and daughter of C. D is daughter of B and sister of E. How is C related to E?. How are they related?",
+      "options": [
+        "Grandparent",
+        "Mother",
+        "Aunt",
+        "Daughter"
+      ],
+      "answer": 0,
+      "hint": "C is parent of B, B is parent of E => C is grandparent."
+    },
+    {
+      "id": 114,
+      "question": "Blood Relations: Showing a picture of an old man, Amit said, 'His son is my son's uncle.' How is the old man related to Amit?. How are they related?",
+      "options": [
+        "Father",
+        "Grandfather",
+        "Brother",
+        "Uncle"
+      ],
+      "answer": 0,
+      "hint": "Amit's son's uncle is Amit's brother. Old man is his father."
+    },
+    {
+      "id": 115,
+      "question": "Blood Relations: M is sister of N. N is father of O. P is wife of M. How is O related to M?. How are they related?",
+      "options": [
+        "Niece or Nephew",
+        "Son",
+        "Daughter",
+        "Brother"
+      ],
+      "answer": 0,
+      "hint": "M is aunt of O."
+    },
+    {
+      "id": 116,
+      "question": "Blood Relations: A is father of B, but B is not his son. How is B related to A?. How are they related?",
+      "options": [
+        "Daughter",
+        "Son",
+        "Brother",
+        "Sister"
+      ],
+      "answer": 0,
+      "hint": "B is A's daughter."
+    },
+    {
+      "id": 117,
+      "question": "Blood Relations: Pointing to a photograph, Rakesh said, 'She is the mother of my son's wife.' How is Rakesh related to the woman?. How are they related?",
+      "options": [
+        "In-law",
+        "Husband",
+        "Brother",
+        "Son"
+      ],
+      "answer": 0,
+      "hint": "Son's wife is daughter-in-law. Her mother is co-in-law."
+    },
+    {
+      "id": 118,
+      "question": "Blood Relations: If A is B's sister, C is B's mother, D is C's father, E is D's mother, how is A related to D?. How are they related?",
+      "options": [
+        "Granddaughter",
+        "Daughter",
+        "Sister",
+        "Mother"
+      ],
+      "answer": 0,
+      "hint": "D is C's father, C is A's mother => A is granddaughter."
+    },
+    {
+      "id": 119,
+      "question": "Blood Relations: B is the brother of A, whose mother is C. D is the father of C. How is B related to D?. How are they related?",
+      "options": [
+        "Grandson",
+        "Son",
+        "Nephew",
+        "Grandfather"
+      ],
+      "answer": 0,
+      "hint": "C is mother of B, D is father of C => B is grandson."
+    },
+    {
+      "id": 120,
+      "question": "Blood Relations: E is brother of B, A is sister of B. How is A related to E?. How are they related?",
+      "options": [
+        "Sister",
+        "Brother",
+        "Mother",
+        "Aunt"
+      ],
+      "answer": 0,
+      "hint": "A and E are siblings."
+    },
+    {
+      "id": 121,
+      "question": "Blood Relations: K is brother of T. T is wife of M. M is son of R. How is K related to R?. How are they related?",
+      "options": [
+        "Son-in-law's brother",
+        "Son",
+        "Brother",
+        "Nephew"
+      ],
+      "answer": 0,
+      "hint": "K is brother of R's daughter-in-law."
+    },
+    {
+      "id": 122,
+      "question": "Blood Relations: P is brother of Q. R is mother of Q. S is father of R. T is mother of S. How is P related to S?. How are they related?",
+      "options": [
+        "Grandson",
+        "Son",
+        "Great-grandson",
+        "Father"
+      ],
+      "answer": 0,
+      "hint": "R is mother of P, S is father of R => P is grandson."
+    },
+    {
+      "id": 123,
+      "question": "Blood Relations: A and B are married couple. X and Y are brothers. X is brother of A. How is Y related to B?. How are they related?",
+      "options": [
+        "Brother-in-law",
+        "Brother",
+        "Son",
+        "Cousin"
+      ],
+      "answer": 0,
+      "hint": "Y is A's brother => B's brother-in-law."
+    },
+    {
+      "id": 124,
+      "question": "Blood Relations: Rahul told Anand, 'Yesterday I defeated the only brother of the daughter of my grandmother.' Who did Rahul defeat?. How are they related?",
+      "options": [
+        "Father",
+        "Uncle",
+        "Brother",
+        "Son"
+      ],
+      "answer": 0,
+      "hint": "Daughter of grandmother is aunt. Her only brother is father."
+    },
+    {
+      "id": 125,
+      "question": "Blood Relations: Deepak has a brother Anil. Deepak is the son of Prem. Vimal is Prem's father. In terms of relationship, how is Anil related to Vimal?. How are they related?",
+      "options": [
+        "Grandson",
+        "Son",
+        "Brother",
+        "Nephew"
+      ],
+      "answer": 0,
+      "hint": "Prem is father of Anil, Vimal is father of Prem => Anil is grandson."
+    },
+    {
+      "id": 126,
+      "question": "Blood Relations: If 'A $ B' means A is father of B, 'A # B' means A is mother of B, what does P $ Q # R mean?. How are they related?",
+      "options": [
+        "P is maternal grandfather of R",
+        "P is father of R",
+        "P is uncle of R",
+        "P is brother of R"
+      ],
+      "answer": 0,
+      "hint": "P is father of Q, Q is mother of R => P is maternal grandfather."
+    },
+    {
+      "id": 127,
+      "question": "Blood Relations: Looking at a portrait, a man said, 'I have no brother or sister, but that man's father is my father's son.' Whose portrait is it?. How are they related?",
+      "options": [
+        "His son's",
+        "His father's",
+        "His nephew's",
+        "His own"
+      ],
+      "answer": 0,
+      "hint": "Father's son is himself. 'That man's father is me' => His son."
+    },
+    {
+      "id": 128,
+      "question": "Blood Relations: A is B's brother. C is A's mother. D is C's father. F is A's son. How is F related to D?. How are they related?",
+      "options": [
+        "Great-grandson",
+        "Grandson",
+        "Son",
+        "Nephew"
+      ],
+      "answer": 0,
+      "hint": "D is grandfather of A. F is son of A => Great-grandson."
+    },
+    {
+      "id": 129,
+      "question": "Blood Relations: M is father of N, L is brother of M, P is mother of L. How is N related to P?. How are they related?",
+      "options": [
+        "Grandchild",
+        "Son",
+        "Daughter",
+        "Brother"
+      ],
+      "answer": 0,
+      "hint": "P is mother of M, N is child of M => Grandchild."
+    },
+    {
+      "id": 130,
+      "question": "Blood Relations: Q is mother of P. P is wife of R. S is brother of R. How is S related to Q?. How are they related?",
+      "options": [
+        "Son-in-law's brother",
+        "Son",
+        "Nephew",
+        "Brother"
+      ],
+      "answer": 0,
+      "hint": "P is Q's daughter. R is P's husband. S is R's brother."
+    },
+    {
+      "id": 131,
+      "question": "Syllogisms: All cars are trucks. All trucks are vehicles.. Which conclusion logically follows?",
+      "options": [
+        "Both Conclusion I and II follow",
+        "Only Conclusion I follows",
+        "Only Conclusion II follows",
+        "Neither follows"
+      ],
+      "answer": 0,
+      "hint": "Conclusion I: All cars are vehicles. Conclusion II: Some vehicles are trucks."
+    },
+    {
+      "id": 132,
+      "question": "Syllogisms: Some pens are books. All books are pencils.. Which conclusion logically follows?",
+      "options": [
+        "Some pens are pencils",
+        "All pens are pencils",
+        "No pen is pencil",
+        "All pencils are books"
+      ],
+      "answer": 0,
+      "hint": "Intersection of pens and books falls inside pencils."
+    },
+    {
+      "id": 133,
+      "question": "Syllogisms: No cat is dog. All dogs are lions.. Which conclusion logically follows?",
+      "options": [
+        "Some lions are not cats",
+        "All lions are cats",
+        "No lion is cat",
+        "All cats are lions"
+      ],
+      "answer": 0,
+      "hint": "Dogs are inside lions and outside cats."
+    },
+    {
+      "id": 134,
+      "question": "Syllogisms: All apples are fruits. Some fruits are sweet.. Which conclusion logically follows?",
+      "options": [
+        "Neither Conclusion I nor II follows conclusively",
+        "All apples are sweet",
+        "No sweet is apple",
+        "Some sweet are fruits"
+      ],
+      "answer": 0,
+      "hint": "No direct link between apples and sweet."
+    },
+    {
+      "id": 135,
+      "question": "Syllogisms: Only a few doors are windows. All windows are walls.. Which conclusion logically follows?",
+      "options": [
+        "Some doors are not windows",
+        "All doors are windows",
+        "No wall is door",
+        "All walls are windows"
+      ],
+      "answer": 0,
+      "hint": "'Only a few' implies both some are and some are not."
+    },
+    {
+      "id": 136,
+      "question": "Syllogisms: Some doctors are engineers. All engineers are scientists. No scientist is pilot.. Which conclusion logically follows?",
+      "options": [
+        "No doctor is pilot is a possibility",
+        "All doctors are pilots",
+        "Some pilots are engineers",
+        "All scientists are doctors"
+      ],
+      "answer": 0,
+      "hint": "No engineer is pilot, but doctors can overlap."
+    },
+    {
+      "id": 137,
+      "question": "Syllogisms: Statements: All A are B. No B is C. All C are D.. Which conclusion logically follows?",
+      "options": [
+        "Some D are not B",
+        "All A are C",
+        "Some B are D",
+        "No A is D"
+      ],
+      "answer": 0,
+      "hint": "C ⊂ D and C ∩ B = Ø."
+    },
+    {
+      "id": 138,
+      "question": "Syllogisms: Statements: Some red are blue. Some blue are green. Some green are yellow.. Which conclusion logically follows?",
+      "options": [
+        "None of the universal conclusions follow",
+        "All red are yellow",
+        "All green are red",
+        "No yellow is red"
+      ],
+      "answer": 0,
+      "hint": "Chain of 'Some' yields no universal relation."
+    },
+    {
+      "id": 139,
+      "question": "Syllogisms: Statements: All rain is water. No water is fire. Some fire is smoke.. Which conclusion logically follows?",
+      "options": [
+        "Some smoke are not water",
+        "All smoke is water",
+        "No rain is smoke",
+        "All fire is rain"
+      ],
+      "answer": 0,
+      "hint": "Smoke that is fire cannot be water."
+    },
+    {
+      "id": 140,
+      "question": "Syllogisms: Statements: Only a few books are papers. No paper is pen.. Which conclusion logically follows?",
+      "options": [
+        "Some books are not pens",
+        "All books are pens",
+        "All papers are books",
+        "No book is paper"
+      ],
+      "answer": 0,
+      "hint": "Books that are papers cannot be pens."
+    },
+    {
+      "id": 141,
+      "question": "English Vocabulary #1: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Scrupulous & Thorough",
+        "Careless",
+        "Hasty",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 142,
+      "question": "English Vocabulary #2: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Transitory",
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 143,
+      "question": "English Vocabulary #3: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Assertive & Domineering",
+        "Servile",
+        "Fawning",
+        "Flattering"
+      ],
+      "answer": 0,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 144,
+      "question": "English Vocabulary #4: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Deceptive",
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 145,
+      "question": "English Vocabulary #5: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Malevolent & Malicious",
+        "Kind",
+        "Generous",
+        "Helpful"
+      ],
+      "answer": 0,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 146,
+      "question": "English Vocabulary #6: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Idealistic",
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 147,
+      "question": "English Vocabulary #7: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Passionate & Enthusiastic",
+        "Apathetic",
+        "Lethargic",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 148,
+      "question": "English Vocabulary #8: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Talkative",
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 149,
+      "question": "English Vocabulary #9: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Omnipresent & Everywhere",
+        "Rare",
+        "Scarce",
+        "Hidden"
+      ],
+      "answer": 0,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 150,
+      "question": "English Vocabulary #10: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Careless",
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 151,
+      "question": "English Vocabulary #11: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Eagerness & Speed",
+        "Sluggishness",
+        "Reluctance",
+        "Apathy"
+      ],
+      "answer": 0,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 152,
+      "question": "English Vocabulary #12: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Silent",
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 153,
+      "question": "English Vocabulary #13: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Solitary",
+        "Introverted"
+      ],
+      "answer": 0,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 154,
+      "question": "English Vocabulary #14: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Generous",
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 155,
+      "question": "English Vocabulary #15: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Harmful & Destructive",
+        "Beneficial",
+        "Harmless",
+        "Wholesome"
+      ],
+      "answer": 0,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 156,
+      "question": "English Vocabulary #16: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Essential",
+        "Unnecessary & Extra",
+        "Vital",
+        "Required"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 157,
+      "question": "English Vocabulary #17: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Different & Distinct",
+        "Identical",
+        "Similar",
+        "Uniform"
+      ],
+      "answer": 0,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 158,
+      "question": "English Vocabulary #18: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Agitation",
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 159,
+      "question": "English Vocabulary #19: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Penetrable & Vulnerable",
+        "Impenetrable",
+        "Proof",
+        "Resistant"
+      ],
+      "answer": 0,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 160,
+      "question": "English Vocabulary #20: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Common",
+        "Obscure & Arcane",
+        "Familiar",
+        "Public"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 161,
+      "question": "English Vocabulary #21: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Scrupulous & Thorough",
+        "Careless",
+        "Hasty",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 162,
+      "question": "English Vocabulary #22: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Transitory",
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 163,
+      "question": "English Vocabulary #23: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Assertive & Domineering",
+        "Servile",
+        "Fawning",
+        "Flattering"
+      ],
+      "answer": 0,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 164,
+      "question": "English Vocabulary #24: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Deceptive",
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 165,
+      "question": "English Vocabulary #25: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Malevolent & Malicious",
+        "Kind",
+        "Generous",
+        "Helpful"
+      ],
+      "answer": 0,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 166,
+      "question": "English Vocabulary #26: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Idealistic",
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 167,
+      "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Passionate & Enthusiastic",
+        "Apathetic",
+        "Lethargic",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 168,
+      "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Talkative",
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 169,
+      "question": "English Vocabulary #29: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Omnipresent & Everywhere",
+        "Rare",
+        "Scarce",
+        "Hidden"
+      ],
+      "answer": 0,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 170,
+      "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Careless",
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 171,
+      "question": "Quantitative Problem #1: A shopkeeper buys an item at cost ₹250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((270 - 250) / 250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 172,
+      "question": "Quantitative Problem #2: A shopkeeper buys an item at cost ₹350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((386.75 - 350) / 350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 173,
+      "question": "Quantitative Problem #3: A shopkeeper buys an item at cost ₹450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((598.5 - 450) / 450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 174,
+      "question": "Quantitative Problem #4: A shopkeeper buys an item at cost ₹550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((742.5 - 550) / 550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 175,
+      "question": "Quantitative Problem #5: A shopkeeper buys an item at cost ₹650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((607.7500000000001 - 650) / 650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 176,
+      "question": "Quantitative Problem #6: A shopkeeper buys an item at cost ₹750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((855 - 750) / 750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 177,
+      "question": "Quantitative Problem #7: A shopkeeper buys an item at cost ₹850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((994.5 - 850) / 850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 178,
+      "question": "Quantitative Problem #8: A shopkeeper buys an item at cost ₹950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1130.5 - 950) / 950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 179,
+      "question": "Quantitative Problem #9: A shopkeeper buys an item at cost ₹1050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1496.25 - 1050) / 1050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 180,
+      "question": "Quantitative Problem #10: A shopkeeper buys an item at cost ₹1150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1138.5 - 1150) / 1150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 181,
+      "question": "Quantitative Problem #11: A shopkeeper buys an item at cost ₹1250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1275 - 1250) / 1250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 182,
+      "question": "Quantitative Problem #12: A shopkeeper buys an item at cost ₹1350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1667.25 - 1350) / 1350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 183,
+      "question": "Quantitative Problem #13: A shopkeeper buys an item at cost ₹1450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1826.9999999999998 - 1450) / 1450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 184,
+      "question": "Quantitative Problem #14: A shopkeeper buys an item at cost ₹1550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1976.25 - 1550) / 1550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 185,
+      "question": "Quantitative Problem #15: A shopkeeper buys an item at cost ₹1650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1724.2500000000002 - 1650) / 1650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 186,
+      "question": "Quantitative Problem #16: A shopkeeper buys an item at cost ₹1750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((1890 - 1750) / 1750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 187,
+      "question": "Quantitative Problem #17: A shopkeeper buys an item at cost ₹1850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2044.25 - 1850) / 1850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 188,
+      "question": "Quantitative Problem #18: A shopkeeper buys an item at cost ₹1950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2593.5 - 1950) / 1950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 189,
+      "question": "Quantitative Problem #19: A shopkeeper buys an item at cost ₹2050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2767.5 - 2050) / 2050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
+    },
+    {
+      "id": 190,
+      "question": "Quantitative Problem #20: A shopkeeper buys an item at cost ₹2150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2010.25 - 2150) / 2150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
+    },
+    {
+      "id": 191,
+      "question": "Quantitative Problem #21: A shopkeeper buys an item at cost ₹2250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2565 - 2250) / 2250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
+    },
+    {
+      "id": 192,
+      "question": "Quantitative Problem #22: A shopkeeper buys an item at cost ₹2350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2749.5 - 2350) / 2350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
+    },
+    {
+      "id": 193,
+      "question": "Quantitative Problem #23: A shopkeeper buys an item at cost ₹2450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2915.5 - 2450) / 2450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
+    },
+    {
+      "id": 194,
+      "question": "Quantitative Problem #24: A shopkeeper buys an item at cost ₹2550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((3633.75 - 2550) / 2550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
+    },
+    {
+      "id": 195,
+      "question": "Quantitative Problem #25: A shopkeeper buys an item at cost ₹2650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2623.5000000000005 - 2650) / 2650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
+    },
+    {
+      "id": 196,
+      "question": "Quantitative Problem #26: A shopkeeper buys an item at cost ₹2750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 5%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((2805 - 2750) / 2750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
+    },
+    {
+      "id": 197,
+      "question": "Quantitative Problem #27: A shopkeeper buys an item at cost ₹2850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 25%, Joint Work = 40 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((3519.75 - 2850) / 2850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
+    },
+    {
+      "id": 198,
+      "question": "Quantitative Problem #28: A shopkeeper buys an item at cost ₹2950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 30%, Joint Work = 42 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((3717 - 2950) / 2950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
+    },
+    {
+      "id": 199,
+      "question": "Quantitative Problem #29: A shopkeeper buys an item at cost ₹3050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 35%, Joint Work = 44 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((3888.75 - 3050) / 3050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
+    },
+    {
+      "id": 200,
+      "question": "Quantitative Problem #30: A shopkeeper buys an item at cost ₹3150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 5%, Joint Work = 31 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((3291.7500000000005 - 3150) / 3150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
     }
   ]
 }

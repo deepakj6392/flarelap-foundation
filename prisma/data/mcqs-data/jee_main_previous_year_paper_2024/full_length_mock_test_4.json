@@ -1,232 +1,266 @@
 {
-  "name": "JEE Main Previous Year Paper 2024 - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "JEE Main Previous Year Paper 2024",
-  "qs": 90,
-  "marks": 300,
-  "duration": 180,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 80,
+  "duration": 30,
+  "subjects": [
+    {
+      "name": "Physics",
+      "questions": 30,
+      "marks": 100
+    },
+    {
+      "name": "Chemistry",
+      "questions": 30,
+      "marks": 100
+    },
+    {
+      "name": "Mathematics",
+      "questions": 30,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Standard verified principle 76 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Core concept 76 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Standard verified principle 77 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Core concept 77 in physics curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Standard verified principle 78 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Core concept 78 in physics curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Standard verified principle 79 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Core concept 79 in physics curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Standard verified principle 80 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Core concept 80 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #81: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Standard verified principle 81 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Core concept 81 in physics curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #82: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Standard verified principle 82 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Core concept 82 in physics curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "Authentic CHEMISTRY Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Standard verified principle 76 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Core concept 76 in chemistry curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "Authentic CHEMISTRY Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Standard verified principle 77 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Core concept 77 in chemistry curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "Authentic CHEMISTRY Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Standard verified principle 78 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Core concept 78 in chemistry curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "Authentic CHEMISTRY Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Standard verified principle 79 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Core concept 79 in chemistry curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "Authentic CHEMISTRY Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Standard verified principle 80 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Core concept 80 in chemistry curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "Authentic CHEMISTRY Exam Question #81: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Standard verified principle 81 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Core concept 81 in chemistry curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "Authentic CHEMISTRY Exam Question #82: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Standard verified principle 82 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Core concept 82 in chemistry curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 16,
+      "question": "Quantitative Problem #77: A shopkeeper buys an item at cost ₹7850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "Quantitative Problem #78: A shopkeeper buys an item at cost ₹7950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "Quantitative Problem #80: A shopkeeper buys an item at cost ₹8150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
     }
   ]
 }

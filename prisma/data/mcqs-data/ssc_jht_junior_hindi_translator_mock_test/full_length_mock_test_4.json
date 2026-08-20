@@ -1,232 +1,1221 @@
 {
-  "name": "SSC Jht (Junior Hindi Translator) Mock Test - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "SSC Jht (Junior Hindi Translator) Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "ssc",
+  "subjects": [
+    {
+      "name": "General Hindi",
+      "questions": 100,
+      "marks": 100
+    },
+    {
+      "name": "General English",
+      "questions": 100,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "General Knowledge #80: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "General Knowledge #81: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "General Knowledge #82: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "General Knowledge #83: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "General Knowledge #84: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "General Knowledge #85: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "General Knowledge #86: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "General Knowledge #87: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "General Knowledge #88: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "General Knowledge #89: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "General Knowledge #90: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 16,
+      "question": "General Knowledge #91: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "General Knowledge #92: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "General Knowledge #93: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "General Knowledge #94: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "General Knowledge #95: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 21,
+      "question": "General Knowledge #96: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 22,
+      "question": "General Knowledge #97: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 23,
+      "question": "General Knowledge #98: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 24,
+      "question": "General Knowledge #99: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 25,
+      "question": "General Knowledge #100: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #101: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #102: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #103: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #104: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #105: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #106: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #107: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #108: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #109: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #110: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #111: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #112: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #113: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #114: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #115: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #116: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #117: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #118: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #119: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #120: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #121: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #122: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #123: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #124: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #125: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 51,
+      "question": "English Vocabulary #76: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Essential",
+        "Unnecessary & Extra",
+        "Vital",
+        "Required"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 52,
+      "question": "English Vocabulary #77: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Different & Distinct",
+        "Identical",
+        "Similar",
+        "Uniform"
+      ],
+      "answer": 0,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 53,
+      "question": "English Vocabulary #78: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Agitation",
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 54,
+      "question": "English Vocabulary #79: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Penetrable & Vulnerable",
+        "Impenetrable",
+        "Proof",
+        "Resistant"
+      ],
+      "answer": 0,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 55,
+      "question": "English Vocabulary #80: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Common",
+        "Obscure & Arcane",
+        "Familiar",
+        "Public"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 56,
+      "question": "English Vocabulary #81: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Scrupulous & Thorough",
+        "Careless",
+        "Hasty",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 57,
+      "question": "English Vocabulary #82: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Transitory",
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 58,
+      "question": "English Vocabulary #83: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Assertive & Domineering",
+        "Servile",
+        "Fawning",
+        "Flattering"
+      ],
+      "answer": 0,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 59,
+      "question": "English Vocabulary #84: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Deceptive",
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 60,
+      "question": "English Vocabulary #85: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Malevolent & Malicious",
+        "Kind",
+        "Generous",
+        "Helpful"
+      ],
+      "answer": 0,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 61,
+      "question": "English Vocabulary #86: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Idealistic",
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 62,
+      "question": "English Vocabulary #87: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Passionate & Enthusiastic",
+        "Apathetic",
+        "Lethargic",
+        "Indifferent"
+      ],
+      "answer": 0,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 63,
+      "question": "English Vocabulary #88: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Talkative",
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 64,
+      "question": "English Vocabulary #89: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Omnipresent & Everywhere",
+        "Rare",
+        "Scarce",
+        "Hidden"
+      ],
+      "answer": 0,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 65,
+      "question": "English Vocabulary #90: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Careless",
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 66,
+      "question": "English Vocabulary #91: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Eagerness & Speed",
+        "Sluggishness",
+        "Reluctance",
+        "Apathy"
+      ],
+      "answer": 0,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 67,
+      "question": "English Vocabulary #92: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Silent",
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 68,
+      "question": "English Vocabulary #93: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Solitary",
+        "Introverted"
+      ],
+      "answer": 0,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 69,
+      "question": "English Vocabulary #94: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Generous",
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 70,
+      "question": "English Vocabulary #95: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Harmful & Destructive",
+        "Beneficial",
+        "Harmless",
+        "Wholesome"
+      ],
+      "answer": 0,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 71,
+      "question": "English Vocabulary #96: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Essential",
+        "Unnecessary & Extra",
+        "Vital",
+        "Required"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 72,
+      "question": "English Vocabulary #97: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Different & Distinct",
+        "Identical",
+        "Similar",
+        "Uniform"
+      ],
+      "answer": 0,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 73,
+      "question": "English Vocabulary #98: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Agitation",
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 74,
+      "question": "English Vocabulary #99: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Penetrable & Vulnerable",
+        "Impenetrable",
+        "Proof",
+        "Resistant"
+      ],
+      "answer": 0,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 75,
+      "question": "English Vocabulary #100: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Common",
+        "Obscure & Arcane",
+        "Familiar",
+        "Public"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 76,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 77,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 78,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 79,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 80,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 81,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To state something with exact accuracy",
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake"
+      ],
+      "answer": 0,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 82,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To avoid discussing the main topic directly",
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly"
+      ],
+      "answer": 0,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 83,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early"
+      ],
+      "answer": 0,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 84,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Very rarely or seldom",
+        "Every month",
+        "During full moon",
+        "Frequently"
+      ],
+      "answer": 0,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 85,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Under all circumstances, good and bad",
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests"
+      ],
+      "answer": 0,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 86,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 87,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 88,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 89,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 90,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 91,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To state something with exact accuracy",
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake"
+      ],
+      "answer": 0,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 92,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To avoid discussing the main topic directly",
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly"
+      ],
+      "answer": 0,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 93,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early"
+      ],
+      "answer": 0,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 94,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Very rarely or seldom",
+        "Every month",
+        "During full moon",
+        "Frequently"
+      ],
+      "answer": 0,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 95,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Under all circumstances, good and bad",
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests"
+      ],
+      "answer": 0,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 96,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 97,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 98,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 99,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 100,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
     }
   ]
 }

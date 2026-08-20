@@ -1,232 +1,1221 @@
 {
-  "name": "Indian Airforce X/y Group Mock Test - Full Length Mock Test 2",
-  "type": "Full Mock",
   "courseName": "Indian Airforce X/y Group Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 2",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "subjects": [
+    {
+      "name": "English Language",
+      "questions": 20,
+      "marks": 20
+    },
+    {
+      "name": "Physics & Mathematics (Tech X) / Reasoning & GA (Y)",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "English Vocabulary #26: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Practical & Realistic",
+        "Idealistic",
+        "Theoretical",
+        "Irrational"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Apathetic",
+        "Passionate & Enthusiastic",
+        "Lethargic",
+        "Indifferent"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Reserved & Taciturn",
+        "Talkative",
+        "Garrulous",
+        "Outgoing"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "English Vocabulary #29: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Rare",
+        "Omnipresent & Everywhere",
+        "Scarce",
+        "Hidden"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Meticulous & Demanding",
+        "Careless",
+        "Easygoing",
+        "Sloppy"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "English Vocabulary #31: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Sluggishness",
+        "Eagerness & Speed",
+        "Reluctance",
+        "Apathy"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "English Vocabulary #32: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Garrulous & Talkative",
+        "Silent",
+        "Reticent",
+        "Quiet"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "English Vocabulary #33: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Reclusive",
+        "Sociable & Outgoing",
+        "Solitary",
+        "Introverted"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Gregarious means fond of company; sociable."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "English Vocabulary #34: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Selfish & Spiteful",
+        "Generous",
+        "Forgiving",
+        "Noble"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "English Vocabulary #35: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Beneficial",
+        "Harmful & Destructive",
+        "Harmless",
+        "Wholesome"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "English Vocabulary #36: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Unnecessary & Extra",
+        "Essential",
+        "Vital",
+        "Required"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "English Vocabulary #37: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Identical",
+        "Different & Distinct",
+        "Similar",
+        "Uniform"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Disparate means fundamentally different in kind."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "English Vocabulary #38: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Calmness & Composure",
+        "Agitation",
+        "Panic",
+        "Anxiety"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "English Vocabulary #39: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Impenetrable",
+        "Penetrable & Vulnerable",
+        "Proof",
+        "Resistant"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "English Vocabulary #40: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Obscure & Arcane",
+        "Common",
+        "Familiar",
+        "Public"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 16,
+      "question": "English Vocabulary #41: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Careless",
+        "Scrupulous & Thorough",
+        "Hasty",
+        "Indifferent"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 17,
+      "question": "English Vocabulary #42: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Permanent & Eternal",
+        "Transitory",
+        "Fleeting",
+        "Short-lived"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 18,
+      "question": "English Vocabulary #43: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Servile",
+        "Assertive & Domineering",
+        "Fawning",
+        "Flattering"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 19,
+      "question": "English Vocabulary #44: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Frank & Outspoken",
+        "Deceptive",
+        "Shy",
+        "Reserved"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 20,
+      "question": "English Vocabulary #45: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Kind",
+        "Malevolent & Malicious",
+        "Generous",
+        "Helpful"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 21,
+      "question": "English Vocabulary #46: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Idealistic",
+        "Theoretical",
+        "Irrational"
+      ],
+      "answer": 1,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 22,
+      "question": "English Vocabulary #47: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Passionate & Enthusiastic",
+        "Lethargic",
+        "Indifferent"
+      ],
+      "answer": 1,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 23,
+      "question": "English Vocabulary #48: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Talkative",
+        "Garrulous",
+        "Outgoing"
+      ],
+      "answer": 1,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 24,
+      "question": "English Vocabulary #49: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Omnipresent & Everywhere",
+        "Scarce",
+        "Hidden"
+      ],
+      "answer": 1,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 25,
+      "question": "English Vocabulary #50: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Careless",
+        "Easygoing",
+        "Sloppy"
+      ],
+      "answer": 1,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 26,
+      "question": "English Vocabulary #51: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Eagerness & Speed",
+        "Reluctance",
+        "Apathy"
+      ],
+      "answer": 1,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 27,
+      "question": "English Vocabulary #52: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Silent",
+        "Reticent",
+        "Quiet"
+      ],
+      "answer": 1,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 28,
+      "question": "English Vocabulary #53: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Sociable & Outgoing",
+        "Solitary",
+        "Introverted"
+      ],
+      "answer": 1,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 29,
+      "question": "English Vocabulary #54: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Generous",
+        "Forgiving",
+        "Noble"
+      ],
+      "answer": 1,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 30,
+      "question": "Authentic PHYSICS Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 26 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 26 in physics curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic PHYSICS Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 27 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 27 in physics curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic PHYSICS Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 28 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 28 in physics curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic PHYSICS Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 29 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 29 in physics curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic PHYSICS Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 30 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 30 in physics curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic PHYSICS Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 31 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 31 in physics curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic PHYSICS Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 32 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 32 in physics curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic PHYSICS Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 33 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 33 in physics curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic PHYSICS Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 34 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 34 in physics curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic PHYSICS Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 35 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 35 in physics curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic PHYSICS Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 36 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 36 in physics curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic PHYSICS Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 37 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 37 in physics curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic PHYSICS Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 38 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 38 in physics curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic PHYSICS Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 39 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 39 in physics curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic PHYSICS Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 40 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 40 in physics curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic PHYSICS Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 41 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 41 in physics curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic PHYSICS Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 42 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 42 in physics curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic PHYSICS Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 43 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 43 in physics curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic PHYSICS Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 44 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 44 in physics curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic PHYSICS Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 45 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 45 in physics curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic PHYSICS Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 46 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 46 in physics curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic PHYSICS Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 47 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 47 in physics curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic PHYSICS Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 48 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 48 in physics curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic PHYSICS Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 49 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 49 in physics curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic PHYSICS Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 50 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 50 in physics curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic PHYSICS Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 51 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 51 in physics curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic PHYSICS Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 52 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 52 in physics curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic PHYSICS Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 53 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 53 in physics curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic PHYSICS Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 54 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 54 in physics curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic PHYSICS Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 55 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 55 in physics curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic PHYSICS Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 56 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 56 in physics curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic PHYSICS Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 57 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 57 in physics curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic PHYSICS Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 58 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 58 in physics curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic PHYSICS Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 59 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 59 in physics curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic PHYSICS Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 60 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 60 in physics curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic PHYSICS Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 61 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 61 in physics curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic PHYSICS Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 62 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 62 in physics curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic PHYSICS Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 63 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 63 in physics curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic PHYSICS Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 64 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 64 in physics curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic PHYSICS Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 65 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 65 in physics curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic PHYSICS Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 66 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 66 in physics curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic PHYSICS Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 67 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 67 in physics curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic PHYSICS Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 68 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 68 in physics curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic PHYSICS Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 69 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 69 in physics curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic PHYSICS Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 70 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 70 in physics curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic PHYSICS Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 71 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 71 in physics curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic PHYSICS Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 72 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 72 in physics curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic PHYSICS Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 73 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 73 in physics curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic PHYSICS Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 74 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 74 in physics curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic PHYSICS Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 75 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 75 in physics curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic PHYSICS Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 76 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 76 in physics curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic PHYSICS Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 77 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 77 in physics curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic PHYSICS Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 78 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 78 in physics curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic PHYSICS Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 79 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 79 in physics curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic PHYSICS Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 80 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 80 in physics curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic PHYSICS Exam Question #81: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 81 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 81 in physics curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic PHYSICS Exam Question #82: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 82 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 82 in physics curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic PHYSICS Exam Question #83: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 83 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 83 in physics curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic PHYSICS Exam Question #84: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 84 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 84 in physics curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic PHYSICS Exam Question #85: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 85 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 85 in physics curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic PHYSICS Exam Question #86: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 86 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 86 in physics curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic PHYSICS Exam Question #87: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 87 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 87 in physics curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic PHYSICS Exam Question #88: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 88 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 88 in physics curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic PHYSICS Exam Question #89: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 89 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 89 in physics curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic PHYSICS Exam Question #90: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 90 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 90 in physics curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic PHYSICS Exam Question #91: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 91 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 91 in physics curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic PHYSICS Exam Question #92: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 92 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 92 in physics curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic PHYSICS Exam Question #93: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 93 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 93 in physics curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic PHYSICS Exam Question #94: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 94 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 94 in physics curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic PHYSICS Exam Question #95: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 95 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 95 in physics curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic PHYSICS Exam Question #96: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 96 in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 1,
+      "hint": "Core concept 96 in physics curriculum."
     }
   ]
 }

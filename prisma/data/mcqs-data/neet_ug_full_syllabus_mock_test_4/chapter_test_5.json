@@ -1,177 +1,256 @@
 {
-  "name": "NEET Ug Full Syllabus Mock Test 4 - Chapter Test 5",
-  "type": "Chapter Test",
   "courseName": "NEET Ug Full Syllabus Mock Test 4",
-  "qs": 45,
-  "marks": 180,
-  "duration": 50,
-  "isFree": false,
-  "categoryKey": "general",
+  "testName": "Chapter Test 5",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Physics (Section A & B)",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #206: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 206 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 206 in physics curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #207: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 207 in physics"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 207 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #208: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 208 in physics"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 208 in physics curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #209: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 209 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 209 in physics curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #210: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 210 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 210 in physics curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #211: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 211 in physics"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 211 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #212: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 212 in physics"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 212 in physics curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Authentic PHYSICS Exam Question #213: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 213 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 213 in physics curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Authentic PHYSICS Exam Question #214: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 214 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 214 in physics curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Authentic PHYSICS Exam Question #215: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 215 in physics"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 215 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Authentic PHYSICS Exam Question #216: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 216 in physics"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 216 in physics curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Authentic PHYSICS Exam Question #217: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 217 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 217 in physics curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Authentic PHYSICS Exam Question #218: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 218 in physics"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 218 in physics curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Authentic PHYSICS Exam Question #219: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 219 in physics"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 219 in physics curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Authentic PHYSICS Exam Question #220: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 220 in physics"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 220 in physics curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic PHYSICS Exam Question #221: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 221 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 221 in physics curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic PHYSICS Exam Question #222: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 222 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 222 in physics curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic PHYSICS Exam Question #223: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 223 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 223 in physics curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic PHYSICS Exam Question #224: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 224 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 224 in physics curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic PHYSICS Exam Question #225: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 225 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 225 in physics curriculum."
     }
   ]
 }

@@ -1,232 +1,261 @@
 {
-  "name": "JEE Main Mathematics Mock Test - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "JEE Main Mathematics Mock Test",
-  "qs": 90,
-  "marks": 300,
-  "duration": 180,
-  "isFree": true,
-  "categoryKey": "math",
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 80,
+  "duration": 30,
+  "subjects": [
+    {
+      "name": "Algebra & Coordinate Geometry",
+      "questions": 15,
+      "marks": 50
+    },
+    {
+      "name": "Calculus, Vectors & Trigonometry",
+      "questions": 15,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "What is the derivative of f(x) = 9x^3 + 2x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 1,
+      "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "27x^2 + 4x",
-        "18x^2 + 2x",
-        "27x^3 + 4x^2",
-        "9x^2 + 4x"
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days",
+        "Profit = 8%, Joint Work = 7.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 27x^2 + 4x."
+      "answer": 3,
+      "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 2x^3 + 7x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 2,
+      "question": "Quantitative Problem #77: A shopkeeper buys an item at cost ₹7850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "6x^2 + 14x",
-        "4x^2 + 7x",
-        "6x^3 + 14x^2",
-        "2x^2 + 14x"
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days",
+        "Profit = 10.5%, Joint Work = 7.97 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 6x^2 + 14x."
+      "answer": 3,
+      "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
-      "question": "What is the derivative of f(x) = 5x^3 + 4x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 3,
+      "question": "Quantitative Problem #78: A shopkeeper buys an item at cost ₹7950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "15x^2 + 8x",
-        "10x^2 + 4x",
-        "15x^3 + 8x^2",
-        "5x^2 + 8x"
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days",
+        "Profit = 33%, Joint Work = 8.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 15x^2 + 8x."
+      "answer": 3,
+      "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 8x^3 + 1x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 4,
+      "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "24x^2 + 2x",
-        "16x^2 + 1x",
-        "24x^3 + 2x^2",
-        "8x^2 + 2x"
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days",
+        "Profit = 35%, Joint Work = 8.97 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 24x^2 + 2x."
+      "answer": 3,
+      "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
-      "question": "What is the derivative of f(x) = 11x^3 + 6x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 5,
+      "question": "Quantitative Problem #80: A shopkeeper buys an item at cost ₹8150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "33x^2 + 12x",
-        "22x^2 + 6x",
-        "33x^3 + 12x^2",
-        "11x^2 + 12x"
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days",
+        "Profit = -6.5%, Joint Work = 9.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 33x^2 + 12x."
+      "answer": 3,
+      "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 4x^3 + 3x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 6,
+      "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "12x^2 + 6x",
-        "8x^2 + 3x",
-        "12x^3 + 6x^2",
-        "4x^2 + 6x"
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days",
+        "Profit = 14%, Joint Work = 9.98 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 12x^2 + 6x."
+      "answer": 3,
+      "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
     },
     {
-      "question": "What is the derivative of f(x) = 7x^3 + 8x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 7,
+      "question": "Quantitative Problem #82: A shopkeeper buys an item at cost ₹8350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "21x^2 + 16x",
-        "14x^2 + 8x",
-        "21x^3 + 16x^2",
-        "7x^2 + 16x"
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days",
+        "Profit = 17%, Joint Work = 10.48 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 21x^2 + 16x."
+      "answer": 3,
+      "hint": "Profit % = ((9769.5 - 8350) / 8350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
     },
     {
-      "question": "What is the derivative of f(x) = 10x^3 + 5x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 8,
+      "question": "Quantitative Problem #83: A shopkeeper buys an item at cost ₹8450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "30x^2 + 10x",
-        "20x^2 + 5x",
-        "30x^3 + 10x^2",
-        "10x^2 + 10x"
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days",
+        "Profit = 19%, Joint Work = 10.98 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 30x^2 + 10x."
+      "answer": 3,
+      "hint": "Profit % = ((10055.5 - 8450) / 8450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
     },
     {
-      "question": "What is the derivative of f(x) = 3x^3 + 2x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 9,
+      "question": "Quantitative Problem #84: A shopkeeper buys an item at cost ₹8550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "9x^2 + 4x",
-        "6x^2 + 2x",
-        "9x^3 + 4x^2",
-        "3x^2 + 4x"
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days",
+        "Profit = 42.5%, Joint Work = 7.06 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 9x^2 + 4x."
+      "answer": 3,
+      "hint": "Profit % = ((12183.75 - 8550) / 8550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
     },
     {
-      "question": "What is the derivative of f(x) = 6x^3 + 7x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 10,
+      "question": "Quantitative Problem #85: A shopkeeper buys an item at cost ₹8650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "18x^2 + 14x",
-        "12x^2 + 7x",
-        "18x^3 + 14x^2",
-        "6x^2 + 14x"
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days",
+        "Profit = -1%, Joint Work = 7.64 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 18x^2 + 14x."
+      "answer": 3,
+      "hint": "Profit % = ((8563.5 - 8650) / 8650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
     },
     {
-      "question": "What is the derivative of f(x) = 9x^3 + 4x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 11,
+      "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "27x^2 + 8x",
-        "18x^2 + 4x",
-        "27x^3 + 8x^2",
-        "9x^2 + 8x"
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days",
+        "Profit = 8%, Joint Work = 7.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 27x^2 + 8x."
+      "answer": 3,
+      "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 2x^3 + 1x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 12,
+      "question": "Quantitative Problem #77: A shopkeeper buys an item at cost ₹7850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "6x^2 + 2x",
-        "4x^2 + 1x",
-        "6x^3 + 2x^2",
-        "2x^2 + 2x"
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days",
+        "Profit = 10.5%, Joint Work = 7.97 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 6x^2 + 2x."
+      "answer": 3,
+      "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
-      "question": "What is the derivative of f(x) = 5x^3 + 6x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 13,
+      "question": "Quantitative Problem #78: A shopkeeper buys an item at cost ₹7950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "15x^2 + 12x",
-        "10x^2 + 6x",
-        "15x^3 + 12x^2",
-        "5x^2 + 12x"
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days",
+        "Profit = 33%, Joint Work = 8.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 15x^2 + 12x."
+      "answer": 3,
+      "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 8x^3 + 3x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 14,
+      "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "24x^2 + 6x",
-        "16x^2 + 3x",
-        "24x^3 + 6x^2",
-        "8x^2 + 6x"
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days",
+        "Profit = 35%, Joint Work = 8.97 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 24x^2 + 6x."
+      "answer": 3,
+      "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
-      "question": "What is the derivative of f(x) = 11x^3 + 8x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 15,
+      "question": "Quantitative Problem #80: A shopkeeper buys an item at cost ₹8150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "33x^2 + 16x",
-        "22x^2 + 8x",
-        "33x^3 + 16x^2",
-        "11x^2 + 16x"
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days",
+        "Profit = -6.5%, Joint Work = 9.47 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 33x^2 + 16x."
+      "answer": 3,
+      "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     },
     {
-      "question": "What is the derivative of f(x) = 4x^3 + 5x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 16,
+      "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "12x^2 + 10x",
-        "8x^2 + 5x",
-        "12x^3 + 10x^2",
-        "4x^2 + 10x"
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days",
+        "Profit = 14%, Joint Work = 9.98 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 12x^2 + 10x."
+      "answer": 3,
+      "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
     },
     {
-      "question": "What is the derivative of f(x) = 7x^3 + 2x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 17,
+      "question": "Quantitative Problem #82: A shopkeeper buys an item at cost ₹8350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "21x^2 + 4x",
-        "14x^2 + 2x",
-        "21x^3 + 4x^2",
-        "7x^2 + 4x"
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days",
+        "Profit = 17%, Joint Work = 10.48 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 21x^2 + 4x."
+      "answer": 3,
+      "hint": "Profit % = ((9769.5 - 8350) / 8350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
     },
     {
-      "question": "What is the derivative of f(x) = 10x^3 + 7x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 18,
+      "question": "Quantitative Problem #83: A shopkeeper buys an item at cost ₹8450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "30x^2 + 14x",
-        "20x^2 + 7x",
-        "30x^3 + 14x^2",
-        "10x^2 + 14x"
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days",
+        "Profit = 19%, Joint Work = 10.98 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 30x^2 + 14x."
+      "answer": 3,
+      "hint": "Profit % = ((10055.5 - 8450) / 8450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
     },
     {
-      "question": "What is the derivative of f(x) = 3x^3 + 4x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 19,
+      "question": "Quantitative Problem #84: A shopkeeper buys an item at cost ₹8550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "9x^2 + 8x",
-        "6x^2 + 4x",
-        "9x^3 + 8x^2",
-        "3x^2 + 8x"
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days",
+        "Profit = 42.5%, Joint Work = 7.06 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 9x^2 + 8x."
+      "answer": 3,
+      "hint": "Profit % = ((12183.75 - 8550) / 8550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
     },
     {
-      "question": "What is the derivative of f(x) = 6x^3 + 1x^2 with respect to x in JEE Main Mathematics Mock Test (Full Mock 4)?",
+      "id": 20,
+      "question": "Quantitative Problem #85: A shopkeeper buys an item at cost ₹8650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "18x^2 + 2x",
-        "12x^2 + 1x",
-        "18x^3 + 2x^2",
-        "6x^2 + 2x"
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days",
+        "Profit = -1%, Joint Work = 7.64 days"
       ],
-      "answer": 0,
-      "hint": "d/dx [ax^n] = n*a*x^(n-1). Applying power rule gives 18x^2 + 2x."
+      "answer": 3,
+      "hint": "Profit % = ((8563.5 - 8650) / 8650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
     }
   ]
 }

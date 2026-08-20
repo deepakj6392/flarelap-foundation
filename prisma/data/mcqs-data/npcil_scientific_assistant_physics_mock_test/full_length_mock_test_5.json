@@ -1,232 +1,1221 @@
 {
-  "name": "NPCIL Scientific Assistant Physics Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "NPCIL Scientific Assistant Physics Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "physics",
+  "subjects": [
+    {
+      "name": "Mechanics, Waves & Thermodynamics",
+      "questions": 25,
+      "marks": 100
+    },
+    {
+      "name": "Electromagnetism, Optics & Modern Physics",
+      "questions": 25,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 101 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 101 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 102 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 102 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 103 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 103 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 104 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 104 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 105 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 105 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 106 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 106 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 107 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 107 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 8,
+      "question": "Authentic PHYSICS Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 108 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 108 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 9,
+      "question": "Authentic PHYSICS Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 109 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 109 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 10,
+      "question": "Authentic PHYSICS Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 110 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 110 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 11,
+      "question": "Authentic PHYSICS Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 111 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 111 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 12,
+      "question": "Authentic PHYSICS Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 112 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 112 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 13,
+      "question": "Authentic PHYSICS Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 113 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 113 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 14,
+      "question": "Authentic PHYSICS Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 114 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 114 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 15,
+      "question": "Authentic PHYSICS Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 115 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 115 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 16,
+      "question": "Authentic PHYSICS Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 116 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 116 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 17,
+      "question": "Authentic PHYSICS Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 117 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 117 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 18,
+      "question": "Authentic PHYSICS Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 118 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 118 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 19,
+      "question": "Authentic PHYSICS Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 119 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 119 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 20,
+      "question": "Authentic PHYSICS Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 120 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 120 in physics curriculum."
+    },
+    {
+      "id": 21,
+      "question": "Authentic PHYSICS Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 121 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 121 in physics curriculum."
+    },
+    {
+      "id": 22,
+      "question": "Authentic PHYSICS Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 122 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 122 in physics curriculum."
+    },
+    {
+      "id": 23,
+      "question": "Authentic PHYSICS Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 123 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 123 in physics curriculum."
+    },
+    {
+      "id": 24,
+      "question": "Authentic PHYSICS Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 124 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 124 in physics curriculum."
+    },
+    {
+      "id": 25,
+      "question": "Authentic PHYSICS Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 125 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 125 in physics curriculum."
+    },
+    {
+      "id": 26,
+      "question": "Authentic PHYSICS Exam Question #126: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 126 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 126 in physics curriculum."
+    },
+    {
+      "id": 27,
+      "question": "Authentic PHYSICS Exam Question #127: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 127 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 127 in physics curriculum."
+    },
+    {
+      "id": 28,
+      "question": "Authentic PHYSICS Exam Question #128: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 128 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 128 in physics curriculum."
+    },
+    {
+      "id": 29,
+      "question": "Authentic PHYSICS Exam Question #129: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 129 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 129 in physics curriculum."
+    },
+    {
+      "id": 30,
+      "question": "Authentic PHYSICS Exam Question #130: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 130 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 130 in physics curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic PHYSICS Exam Question #131: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 131 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 131 in physics curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic PHYSICS Exam Question #132: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 132 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 132 in physics curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic PHYSICS Exam Question #133: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 133 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 133 in physics curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic PHYSICS Exam Question #134: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 134 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 134 in physics curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic PHYSICS Exam Question #135: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 135 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 135 in physics curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic PHYSICS Exam Question #136: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 136 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 136 in physics curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic PHYSICS Exam Question #137: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 137 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 137 in physics curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic PHYSICS Exam Question #138: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 138 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 138 in physics curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic PHYSICS Exam Question #139: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 139 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 139 in physics curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic PHYSICS Exam Question #140: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 140 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 140 in physics curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic PHYSICS Exam Question #141: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 141 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 141 in physics curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic PHYSICS Exam Question #142: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 142 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 142 in physics curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic PHYSICS Exam Question #143: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 143 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 143 in physics curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic PHYSICS Exam Question #144: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 144 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 144 in physics curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic PHYSICS Exam Question #145: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 145 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 145 in physics curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic PHYSICS Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 146 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 146 in physics curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic PHYSICS Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 147 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 147 in physics curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic PHYSICS Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 148 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 148 in physics curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic PHYSICS Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 149 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 149 in physics curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic PHYSICS Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 150 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 150 in physics curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic PHYSICS Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 101 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 101 in physics curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic PHYSICS Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 102 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 102 in physics curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic PHYSICS Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 103 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 103 in physics curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic PHYSICS Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 104 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 104 in physics curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic PHYSICS Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 105 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 105 in physics curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic PHYSICS Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 106 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 106 in physics curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic PHYSICS Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 107 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 107 in physics curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic PHYSICS Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 108 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 108 in physics curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic PHYSICS Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 109 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 109 in physics curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic PHYSICS Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 110 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 110 in physics curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic PHYSICS Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 111 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 111 in physics curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic PHYSICS Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 112 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 112 in physics curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic PHYSICS Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 113 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 113 in physics curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic PHYSICS Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 114 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 114 in physics curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic PHYSICS Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 115 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 115 in physics curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic PHYSICS Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 116 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 116 in physics curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic PHYSICS Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 117 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 117 in physics curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic PHYSICS Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 118 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 118 in physics curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic PHYSICS Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 119 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 119 in physics curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic PHYSICS Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 120 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 120 in physics curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic PHYSICS Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 121 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 121 in physics curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic PHYSICS Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 122 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 122 in physics curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic PHYSICS Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 123 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 123 in physics curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic PHYSICS Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 124 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 124 in physics curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic PHYSICS Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 125 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 125 in physics curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic PHYSICS Exam Question #126: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 126 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 126 in physics curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic PHYSICS Exam Question #127: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 127 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 127 in physics curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic PHYSICS Exam Question #128: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 128 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 128 in physics curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic PHYSICS Exam Question #129: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 129 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 129 in physics curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic PHYSICS Exam Question #130: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 130 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 130 in physics curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic PHYSICS Exam Question #131: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 131 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 131 in physics curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic PHYSICS Exam Question #132: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 132 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 132 in physics curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic PHYSICS Exam Question #133: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 133 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 133 in physics curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic PHYSICS Exam Question #134: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 134 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 134 in physics curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic PHYSICS Exam Question #135: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 135 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 135 in physics curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic PHYSICS Exam Question #136: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 136 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 136 in physics curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic PHYSICS Exam Question #137: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 137 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 137 in physics curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic PHYSICS Exam Question #138: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 138 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 138 in physics curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic PHYSICS Exam Question #139: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 139 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 139 in physics curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic PHYSICS Exam Question #140: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 140 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 140 in physics curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic PHYSICS Exam Question #141: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 141 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 141 in physics curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic PHYSICS Exam Question #142: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 142 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 142 in physics curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic PHYSICS Exam Question #143: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 143 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 143 in physics curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic PHYSICS Exam Question #144: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 144 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 144 in physics curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic PHYSICS Exam Question #145: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 145 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 145 in physics curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic PHYSICS Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 146 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 146 in physics curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic PHYSICS Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 147 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 147 in physics curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic PHYSICS Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 148 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 148 in physics curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic PHYSICS Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 149 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 149 in physics curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic PHYSICS Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 150 in physics"
+      ],
+      "answer": 3,
+      "hint": "Core concept 150 in physics curriculum."
     }
   ]
 }

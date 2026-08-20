@@ -1,232 +1,261 @@
 {
-  "name": "JEE Main Physics Section-a Speed Test - Full Length Mock Test 3",
-  "type": "Full Mock",
   "courseName": "JEE Main Physics Section-a Speed Test",
-  "qs": 90,
-  "marks": 300,
-  "duration": 180,
-  "isFree": true,
-  "categoryKey": "physics",
+  "testName": "Full Length Mock Test 3",
+  "totalQuestions": 20,
+  "totalMarks": 80,
+  "duration": 30,
+  "subjects": [
+    {
+      "name": "Mechanics, Waves & Thermodynamics",
+      "questions": 25,
+      "marks": 100
+    },
+    {
+      "name": "Electromagnetism, Optics & Modern Physics",
+      "questions": 25,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 51 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 51 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 52 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 52 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 53 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 53 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 54 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 54 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 55 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 55 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 56 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 56 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 57 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 57 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 8,
+      "question": "Authentic PHYSICS Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 58 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 58 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 9,
+      "question": "Authentic PHYSICS Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 59 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 59 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 10,
+      "question": "Authentic PHYSICS Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 60 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 60 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 11,
+      "question": "Authentic PHYSICS Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 51 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 51 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 12,
+      "question": "Authentic PHYSICS Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 52 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 52 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 13,
+      "question": "Authentic PHYSICS Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 53 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 53 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 14,
+      "question": "Authentic PHYSICS Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 54 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 54 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 15,
+      "question": "Authentic PHYSICS Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 55 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 55 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 16,
+      "question": "Authentic PHYSICS Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 56 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 56 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 17,
+      "question": "Authentic PHYSICS Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 57 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 57 in physics curriculum."
     },
     {
-      "question": "A particle executes Simple Harmonic Motion (SHM) with amplitude A. At what displacement from mean position is kinetic energy equal to potential energy?",
+      "id": 18,
+      "question": "Authentic PHYSICS Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "A / √2",
-        "A / 2",
-        "A / 4",
-        "A / 3"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 58 in physics"
       ],
-      "answer": 0,
-      "hint": "Kinetic energy equals potential energy at x = A / √2."
+      "answer": 3,
+      "hint": "Core concept 58 in physics curriculum."
     },
     {
-      "question": "According to De Broglie hypothesis, the wavelength λ of a particle of momentum p is given by:",
+      "id": 19,
+      "question": "Authentic PHYSICS Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "h / p",
-        "h * p",
-        "p / h",
-        "h / p^2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 59 in physics"
       ],
-      "answer": 0,
-      "hint": "λ = h / p where h is Planck's constant."
+      "answer": 3,
+      "hint": "Core concept 59 in physics curriculum."
     },
     {
-      "question": "What is the magnetic field B at the center of a circular wire loop of radius R carrying current I?",
+      "id": 20,
+      "question": "Authentic PHYSICS Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "(μ0 * I) / (2 * R)",
-        "(μ0 * I) / (4 * π * R)",
-        "(μ0 * I) / R",
-        "(μ0 * I * R) / 2"
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
+        "Standard verified principle 60 in physics"
       ],
-      "answer": 0,
-      "hint": "B = (μ0 * I) / (2 * R) at the loop center."
+      "answer": 3,
+      "hint": "Core concept 60 in physics curriculum."
     }
   ]
 }

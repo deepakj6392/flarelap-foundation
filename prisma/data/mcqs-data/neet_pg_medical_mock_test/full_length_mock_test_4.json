@@ -1,232 +1,261 @@
 {
-  "name": "NEET Pg (Medical) Mock Test - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "NEET Pg (Medical) Mock Test",
-  "qs": 180,
-  "marks": 720,
-  "duration": 200,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 80,
+  "duration": 30,
+  "subjects": [
+    {
+      "name": "Pre & Para-Clinical Medical Sciences",
+      "questions": 100,
+      "marks": 400
+    },
+    {
+      "name": "Clinical Medicine, Surgery & Obstetrics",
+      "questions": 100,
+      "marks": 400
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "General Knowledge #80: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "General Knowledge #81: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "General Knowledge #82: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "General Knowledge #83: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "General Knowledge #84: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "General Knowledge #85: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "General Knowledge #80: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 16,
+      "question": "General Knowledge #81: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "General Knowledge #82: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "General Knowledge #83: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "General Knowledge #84: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "General Knowledge #85: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     }
   ]
 }

@@ -1,232 +1,1221 @@
 {
-  "name": "English Grammar Mastery - Full Length Mock Test 1",
-  "type": "Full Mock",
   "courseName": "English Grammar Mastery",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 1",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "english",
+  "subjects": [
+    {
+      "name": "Grammar, Parts of Speech & Syntax",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "Vocabulary, Idioms & Reading Comprehension",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "English Vocabulary #1: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "English Vocabulary #2: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "English Vocabulary #3: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "English Vocabulary #4: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "English Vocabulary #5: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "English Vocabulary #6: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "English Vocabulary #7: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "English Vocabulary #8: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "English Vocabulary #9: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "English Vocabulary #10: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "English Vocabulary #11: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Sluggishness",
+        "Reluctance",
+        "Apathy",
+        "Eagerness & Speed"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "English Vocabulary #12: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet",
+        "Silent"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "English Vocabulary #13: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Reclusive",
+        "Solitary",
+        "Introverted",
+        "Sociable & Outgoing"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Gregarious means fond of company; sociable."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "English Vocabulary #14: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble",
+        "Generous"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "English Vocabulary #15: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Beneficial",
+        "Harmless",
+        "Wholesome",
+        "Harmful & Destructive"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "English Vocabulary #16: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Unnecessary & Extra",
+        "Vital",
+        "Required",
+        "Essential"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "English Vocabulary #17: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Identical",
+        "Similar",
+        "Uniform",
+        "Different & Distinct"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Disparate means fundamentally different in kind."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "English Vocabulary #18: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety",
+        "Agitation"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "English Vocabulary #19: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Impenetrable",
+        "Proof",
+        "Resistant",
+        "Penetrable & Vulnerable"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "English Vocabulary #20: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Obscure & Arcane",
+        "Familiar",
+        "Public",
+        "Common"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 21,
+      "question": "English Vocabulary #21: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
+      ],
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 22,
+      "question": "English Vocabulary #22: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 23,
+      "question": "English Vocabulary #23: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
+      ],
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 24,
+      "question": "English Vocabulary #24: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 25,
+      "question": "English Vocabulary #25: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
+      ],
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 26,
+      "question": "English Vocabulary #26: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 27,
+      "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
+      ],
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 28,
+      "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 29,
+      "question": "English Vocabulary #29: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
+      ],
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 30,
+      "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 31,
+      "question": "English Vocabulary #31: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Apathy",
+        "Eagerness & Speed"
+      ],
+      "answer": 3,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 32,
+      "question": "English Vocabulary #32: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet",
+        "Silent"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 33,
+      "question": "English Vocabulary #33: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Introverted",
+        "Sociable & Outgoing"
+      ],
+      "answer": 3,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 34,
+      "question": "English Vocabulary #34: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble",
+        "Generous"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 35,
+      "question": "English Vocabulary #35: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Wholesome",
+        "Harmful & Destructive"
+      ],
+      "answer": 3,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 36,
+      "question": "English Vocabulary #36: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Required",
+        "Essential"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 37,
+      "question": "English Vocabulary #37: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Uniform",
+        "Different & Distinct"
+      ],
+      "answer": 3,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 38,
+      "question": "English Vocabulary #38: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety",
+        "Agitation"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 39,
+      "question": "English Vocabulary #39: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Resistant",
+        "Penetrable & Vulnerable"
+      ],
+      "answer": 3,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 40,
+      "question": "English Vocabulary #40: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Public",
+        "Common"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 41,
+      "question": "English Vocabulary #41: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
+      ],
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 42,
+      "question": "English Vocabulary #42: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 43,
+      "question": "English Vocabulary #43: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
+      ],
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 44,
+      "question": "English Vocabulary #44: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 45,
+      "question": "English Vocabulary #45: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
+      ],
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 46,
+      "question": "English Vocabulary #46: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 47,
+      "question": "English Vocabulary #47: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
+      ],
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 48,
+      "question": "English Vocabulary #48: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 49,
+      "question": "English Vocabulary #49: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
+      ],
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 50,
+      "question": "English Vocabulary #50: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 51,
+      "question": "English Vocabulary #1: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
+      ],
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 52,
+      "question": "English Vocabulary #2: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 53,
+      "question": "English Vocabulary #3: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
+      ],
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 54,
+      "question": "English Vocabulary #4: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 55,
+      "question": "English Vocabulary #5: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
+      ],
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 56,
+      "question": "English Vocabulary #6: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 57,
+      "question": "English Vocabulary #7: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
+      ],
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 58,
+      "question": "English Vocabulary #8: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 59,
+      "question": "English Vocabulary #9: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
+      ],
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 60,
+      "question": "English Vocabulary #10: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 61,
+      "question": "English Vocabulary #11: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Apathy",
+        "Eagerness & Speed"
+      ],
+      "answer": 3,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 62,
+      "question": "English Vocabulary #12: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet",
+        "Silent"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 63,
+      "question": "English Vocabulary #13: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Introverted",
+        "Sociable & Outgoing"
+      ],
+      "answer": 3,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 64,
+      "question": "English Vocabulary #14: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble",
+        "Generous"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 65,
+      "question": "English Vocabulary #15: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Wholesome",
+        "Harmful & Destructive"
+      ],
+      "answer": 3,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 66,
+      "question": "English Vocabulary #16: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Required",
+        "Essential"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 67,
+      "question": "English Vocabulary #17: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Uniform",
+        "Different & Distinct"
+      ],
+      "answer": 3,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 68,
+      "question": "English Vocabulary #18: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety",
+        "Agitation"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 69,
+      "question": "English Vocabulary #19: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Resistant",
+        "Penetrable & Vulnerable"
+      ],
+      "answer": 3,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 70,
+      "question": "English Vocabulary #20: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Public",
+        "Common"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 71,
+      "question": "English Vocabulary #21: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
+      ],
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 72,
+      "question": "English Vocabulary #22: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 73,
+      "question": "English Vocabulary #23: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
+      ],
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 74,
+      "question": "English Vocabulary #24: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 75,
+      "question": "English Vocabulary #25: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
+      ],
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 76,
+      "question": "English Vocabulary #26: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 77,
+      "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
+      ],
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 78,
+      "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 79,
+      "question": "English Vocabulary #29: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
+      ],
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 80,
+      "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 81,
+      "question": "English Vocabulary #31: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Apathy",
+        "Eagerness & Speed"
+      ],
+      "answer": 3,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 82,
+      "question": "English Vocabulary #32: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet",
+        "Silent"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 83,
+      "question": "English Vocabulary #33: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Introverted",
+        "Sociable & Outgoing"
+      ],
+      "answer": 3,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 84,
+      "question": "English Vocabulary #34: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble",
+        "Generous"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 85,
+      "question": "English Vocabulary #35: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Wholesome",
+        "Harmful & Destructive"
+      ],
+      "answer": 3,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 86,
+      "question": "English Vocabulary #36: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Required",
+        "Essential"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 87,
+      "question": "English Vocabulary #37: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Uniform",
+        "Different & Distinct"
+      ],
+      "answer": 3,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 88,
+      "question": "English Vocabulary #38: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety",
+        "Agitation"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 89,
+      "question": "English Vocabulary #39: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Resistant",
+        "Penetrable & Vulnerable"
+      ],
+      "answer": 3,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 90,
+      "question": "English Vocabulary #40: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Public",
+        "Common"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 91,
+      "question": "English Vocabulary #41: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Indifferent",
+        "Scrupulous & Thorough"
+      ],
+      "answer": 3,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 92,
+      "question": "English Vocabulary #42: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived",
+        "Transitory"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 93,
+      "question": "English Vocabulary #43: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Flattering",
+        "Assertive & Domineering"
+      ],
+      "answer": 3,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 94,
+      "question": "English Vocabulary #44: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved",
+        "Deceptive"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 95,
+      "question": "English Vocabulary #45: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Helpful",
+        "Malevolent & Malicious"
+      ],
+      "answer": 3,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 96,
+      "question": "English Vocabulary #46: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational",
+        "Idealistic"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 97,
+      "question": "English Vocabulary #47: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Indifferent",
+        "Passionate & Enthusiastic"
+      ],
+      "answer": 3,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 98,
+      "question": "English Vocabulary #48: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing",
+        "Talkative"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 99,
+      "question": "English Vocabulary #49: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Hidden",
+        "Omnipresent & Everywhere"
+      ],
+      "answer": 3,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 100,
+      "question": "English Vocabulary #50: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy",
+        "Careless"
+      ],
+      "answer": 3,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     }
   ]
 }

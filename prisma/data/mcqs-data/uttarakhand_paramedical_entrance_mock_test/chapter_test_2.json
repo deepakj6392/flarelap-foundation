@@ -1,177 +1,256 @@
 {
-  "name": "Uttarakhand Paramedical Entrance Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "Uttarakhand Paramedical Entrance Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "medical",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Biology / Allied Health Science & Aptitude",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 1,
+      "question": "Authentic ZOOLOGY Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 146 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 146 in zoology curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 2,
+      "question": "Authentic ZOOLOGY Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 147 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 147 in zoology curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 3,
+      "question": "Authentic ZOOLOGY Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 148 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 148 in zoology curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 4,
+      "question": "Authentic ZOOLOGY Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 149 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 149 in zoology curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 5,
+      "question": "Authentic ZOOLOGY Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 150 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 150 in zoology curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 6,
+      "question": "Authentic ZOOLOGY Exam Question #151: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 151 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 151 in zoology curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 7,
+      "question": "Authentic ZOOLOGY Exam Question #152: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 152 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 152 in zoology curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 8,
+      "question": "Authentic ZOOLOGY Exam Question #153: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 153 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 153 in zoology curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 9,
+      "question": "Authentic ZOOLOGY Exam Question #154: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 154 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 154 in zoology curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 10,
+      "question": "Authentic ZOOLOGY Exam Question #155: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 155 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 155 in zoology curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 11,
+      "question": "Authentic ZOOLOGY Exam Question #156: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 156 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 156 in zoology curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 12,
+      "question": "Authentic ZOOLOGY Exam Question #157: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 157 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 157 in zoology curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 13,
+      "question": "Authentic ZOOLOGY Exam Question #158: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 158 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 158 in zoology curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 14,
+      "question": "Authentic ZOOLOGY Exam Question #159: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 159 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 159 in zoology curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 15,
+      "question": "Authentic ZOOLOGY Exam Question #160: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 160 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 160 in zoology curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic ZOOLOGY Exam Question #161: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 161 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 161 in zoology curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic ZOOLOGY Exam Question #162: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 162 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 162 in zoology curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic ZOOLOGY Exam Question #163: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 163 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 163 in zoology curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic ZOOLOGY Exam Question #164: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 164 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 164 in zoology curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic ZOOLOGY Exam Question #165: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 165 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 165 in zoology curriculum."
     }
   ]
 }

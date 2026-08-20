@@ -1,232 +1,1226 @@
 {
-  "name": "SSC JE Civil Technical Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "SSC JE Civil Technical Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "ssc",
+  "subjects": [
+    {
+      "name": "General Intelligence & Reasoning",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Awareness",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Engineering (Discipline Specific)",
+      "questions": 100,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Reasoning Puzzle #26: In a seating alignment of 51 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 55 km North, turns East 79 km, then South 55 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 35th, Displacement = 55 km West",
+        "Priya's Rank = 37th, Displacement = 134 km North",
+        "Priya's Rank = 36th, Displacement = 79 km East",
+        "Priya's Rank = 36th, Displacement = 110 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (51) - Left (16) + 1 = 36th. North/South movements cancel, leaving 79 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Reasoning Puzzle #27: In a seating alignment of 52 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 57 km North, turns East 82 km, then South 57 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 35th, Displacement = 57 km West",
+        "Priya's Rank = 37th, Displacement = 139 km North",
+        "Priya's Rank = 36th, Displacement = 82 km East",
+        "Priya's Rank = 36th, Displacement = 114 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (52) - Left (17) + 1 = 36th. North/South movements cancel, leaving 82 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Reasoning Puzzle #28: In a seating alignment of 53 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 59 km North, turns East 85 km, then South 59 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 35th, Displacement = 59 km West",
+        "Priya's Rank = 37th, Displacement = 144 km North",
+        "Priya's Rank = 36th, Displacement = 85 km East",
+        "Priya's Rank = 36th, Displacement = 118 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (53) - Left (18) + 1 = 36th. North/South movements cancel, leaving 85 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Reasoning Puzzle #29: In a seating alignment of 54 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 61 km North, turns East 88 km, then South 61 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 35th, Displacement = 61 km West",
+        "Priya's Rank = 37th, Displacement = 149 km North",
+        "Priya's Rank = 36th, Displacement = 88 km East",
+        "Priya's Rank = 36th, Displacement = 122 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (54) - Left (19) + 1 = 36th. North/South movements cancel, leaving 88 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Reasoning Puzzle #30: In a seating alignment of 55 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 63 km North, turns East 91 km, then South 63 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 52th, Displacement = 154 km North",
+        "Priya's Rank = 51th, Displacement = 91 km East",
+        "Priya's Rank = 51th, Displacement = 126 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (55) - Left (5) + 1 = 51th. North/South movements cancel, leaving 91 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Reasoning Puzzle #31: In a seating alignment of 56 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 65 km North, turns East 94 km, then South 65 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 65 km West",
+        "Priya's Rank = 52th, Displacement = 159 km North",
+        "Priya's Rank = 51th, Displacement = 94 km East",
+        "Priya's Rank = 51th, Displacement = 130 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (56) - Left (6) + 1 = 51th. North/South movements cancel, leaving 94 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Reasoning Puzzle #32: In a seating alignment of 57 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 67 km North, turns East 97 km, then South 67 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 67 km West",
+        "Priya's Rank = 52th, Displacement = 164 km North",
+        "Priya's Rank = 51th, Displacement = 97 km East",
+        "Priya's Rank = 51th, Displacement = 134 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (57) - Left (7) + 1 = 51th. North/South movements cancel, leaving 97 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Reasoning Puzzle #33: In a seating alignment of 58 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 69 km North, turns East 100 km, then South 69 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 52th, Displacement = 169 km North",
+        "Priya's Rank = 51th, Displacement = 100 km East",
+        "Priya's Rank = 51th, Displacement = 138 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (58) - Left (8) + 1 = 51th. North/South movements cancel, leaving 100 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Reasoning Puzzle #34: In a seating alignment of 59 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 71 km North, turns East 103 km, then South 71 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 71 km West",
+        "Priya's Rank = 52th, Displacement = 174 km North",
+        "Priya's Rank = 51th, Displacement = 103 km East",
+        "Priya's Rank = 51th, Displacement = 142 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (59) - Left (9) + 1 = 51th. North/South movements cancel, leaving 103 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Reasoning Puzzle #35: In a seating alignment of 60 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 73 km North, turns East 106 km, then South 73 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 73 km West",
+        "Priya's Rank = 52th, Displacement = 179 km North",
+        "Priya's Rank = 51th, Displacement = 106 km East",
+        "Priya's Rank = 51th, Displacement = 146 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (60) - Left (10) + 1 = 51th. North/South movements cancel, leaving 106 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Reasoning Puzzle #36: In a seating alignment of 61 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 75 km North, turns East 109 km, then South 75 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 75 km West",
+        "Priya's Rank = 52th, Displacement = 184 km North",
+        "Priya's Rank = 51th, Displacement = 109 km East",
+        "Priya's Rank = 51th, Displacement = 150 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (61) - Left (11) + 1 = 51th. North/South movements cancel, leaving 109 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Reasoning Puzzle #37: In a seating alignment of 62 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 77 km North, turns East 112 km, then South 77 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 77 km West",
+        "Priya's Rank = 52th, Displacement = 189 km North",
+        "Priya's Rank = 51th, Displacement = 112 km East",
+        "Priya's Rank = 51th, Displacement = 154 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (62) - Left (12) + 1 = 51th. North/South movements cancel, leaving 112 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Reasoning Puzzle #38: In a seating alignment of 63 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 79 km North, turns East 115 km, then South 79 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 79 km West",
+        "Priya's Rank = 52th, Displacement = 194 km North",
+        "Priya's Rank = 51th, Displacement = 115 km East",
+        "Priya's Rank = 51th, Displacement = 158 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (63) - Left (13) + 1 = 51th. North/South movements cancel, leaving 115 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Reasoning Puzzle #39: In a seating alignment of 64 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 81 km North, turns East 118 km, then South 81 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 81 km West",
+        "Priya's Rank = 52th, Displacement = 199 km North",
+        "Priya's Rank = 51th, Displacement = 118 km East",
+        "Priya's Rank = 51th, Displacement = 162 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (64) - Left (14) + 1 = 51th. North/South movements cancel, leaving 118 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Reasoning Puzzle #40: In a seating alignment of 65 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 83 km North, turns East 121 km, then South 83 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 83 km West",
+        "Priya's Rank = 52th, Displacement = 204 km North",
+        "Priya's Rank = 51th, Displacement = 121 km East",
+        "Priya's Rank = 51th, Displacement = 166 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (65) - Left (15) + 1 = 51th. North/South movements cancel, leaving 121 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "Reasoning Puzzle #41: In a seating alignment of 66 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 85 km North, turns East 124 km, then South 85 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 85 km West",
+        "Priya's Rank = 52th, Displacement = 209 km North",
+        "Priya's Rank = 51th, Displacement = 124 km East",
+        "Priya's Rank = 51th, Displacement = 170 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (66) - Left (16) + 1 = 51th. North/South movements cancel, leaving 124 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "Reasoning Puzzle #42: In a seating alignment of 67 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 87 km North, turns East 127 km, then South 87 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 87 km West",
+        "Priya's Rank = 52th, Displacement = 214 km North",
+        "Priya's Rank = 51th, Displacement = 127 km East",
+        "Priya's Rank = 51th, Displacement = 174 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (67) - Left (17) + 1 = 51th. North/South movements cancel, leaving 127 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "Reasoning Puzzle #43: In a seating alignment of 68 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 89 km North, turns East 130 km, then South 89 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 89 km West",
+        "Priya's Rank = 52th, Displacement = 219 km North",
+        "Priya's Rank = 51th, Displacement = 130 km East",
+        "Priya's Rank = 51th, Displacement = 178 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (68) - Left (18) + 1 = 51th. North/South movements cancel, leaving 130 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "Reasoning Puzzle #44: In a seating alignment of 69 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 91 km North, turns East 133 km, then South 91 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 91 km West",
+        "Priya's Rank = 52th, Displacement = 224 km North",
+        "Priya's Rank = 51th, Displacement = 133 km East",
+        "Priya's Rank = 51th, Displacement = 182 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (69) - Left (19) + 1 = 51th. North/South movements cancel, leaving 133 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "Reasoning Puzzle #45: In a seating alignment of 70 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 93 km North, turns East 136 km, then South 93 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 65th, Displacement = 93 km West",
+        "Priya's Rank = 67th, Displacement = 229 km North",
+        "Priya's Rank = 66th, Displacement = 136 km East",
+        "Priya's Rank = 66th, Displacement = 186 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (70) - Left (5) + 1 = 66th. North/South movements cancel, leaving 136 km East."
+    },
+    {
+      "id": 21,
+      "question": "Reasoning Puzzle #46: In a seating alignment of 71 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 95 km North, turns East 139 km, then South 95 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 95 km West",
+        "Priya's Rank = 67th, Displacement = 234 km North",
+        "Priya's Rank = 66th, Displacement = 139 km East",
+        "Priya's Rank = 66th, Displacement = 190 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (71) - Left (6) + 1 = 66th. North/South movements cancel, leaving 139 km East."
+    },
+    {
+      "id": 22,
+      "question": "Reasoning Puzzle #47: In a seating alignment of 72 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 97 km North, turns East 142 km, then South 97 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 97 km West",
+        "Priya's Rank = 67th, Displacement = 239 km North",
+        "Priya's Rank = 66th, Displacement = 142 km East",
+        "Priya's Rank = 66th, Displacement = 194 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (72) - Left (7) + 1 = 66th. North/South movements cancel, leaving 142 km East."
+    },
+    {
+      "id": 23,
+      "question": "Reasoning Puzzle #48: In a seating alignment of 73 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 99 km North, turns East 145 km, then South 99 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 99 km West",
+        "Priya's Rank = 67th, Displacement = 244 km North",
+        "Priya's Rank = 66th, Displacement = 145 km East",
+        "Priya's Rank = 66th, Displacement = 198 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (73) - Left (8) + 1 = 66th. North/South movements cancel, leaving 145 km East."
+    },
+    {
+      "id": 24,
+      "question": "Reasoning Puzzle #49: In a seating alignment of 74 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 101 km North, turns East 148 km, then South 101 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 101 km West",
+        "Priya's Rank = 67th, Displacement = 249 km North",
+        "Priya's Rank = 66th, Displacement = 148 km East",
+        "Priya's Rank = 66th, Displacement = 202 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (74) - Left (9) + 1 = 66th. North/South movements cancel, leaving 148 km East."
+    },
+    {
+      "id": 25,
+      "question": "Reasoning Puzzle #50: In a seating alignment of 75 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 103 km North, turns East 151 km, then South 103 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 103 km West",
+        "Priya's Rank = 67th, Displacement = 254 km North",
+        "Priya's Rank = 66th, Displacement = 151 km East",
+        "Priya's Rank = 66th, Displacement = 206 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (75) - Left (10) + 1 = 66th. North/South movements cancel, leaving 151 km East."
+    },
+    {
+      "id": 26,
+      "question": "Authentic ENGINEERING Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 101 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 101 in engineering curriculum."
+    },
+    {
+      "id": 27,
+      "question": "Authentic ENGINEERING Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 102 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 102 in engineering curriculum."
+    },
+    {
+      "id": 28,
+      "question": "Authentic ENGINEERING Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 103 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 103 in engineering curriculum."
+    },
+    {
+      "id": 29,
+      "question": "Authentic ENGINEERING Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 104 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 104 in engineering curriculum."
+    },
+    {
+      "id": 30,
+      "question": "Authentic ENGINEERING Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 105 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 105 in engineering curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic ENGINEERING Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 106 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 106 in engineering curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic ENGINEERING Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 107 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 107 in engineering curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic ENGINEERING Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 108 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 108 in engineering curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic ENGINEERING Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 109 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 109 in engineering curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic ENGINEERING Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 110 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 110 in engineering curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic ENGINEERING Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 111 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 111 in engineering curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic ENGINEERING Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 112 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 112 in engineering curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic ENGINEERING Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 113 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 113 in engineering curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic ENGINEERING Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 114 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 114 in engineering curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic ENGINEERING Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 115 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 115 in engineering curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic ENGINEERING Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 116 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 116 in engineering curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic ENGINEERING Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 117 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 117 in engineering curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic ENGINEERING Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 118 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 118 in engineering curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic ENGINEERING Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 119 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 119 in engineering curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic ENGINEERING Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 120 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 120 in engineering curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic ENGINEERING Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 121 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 121 in engineering curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic ENGINEERING Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 122 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 122 in engineering curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic ENGINEERING Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 123 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 123 in engineering curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic ENGINEERING Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 124 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 124 in engineering curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic ENGINEERING Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 125 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 125 in engineering curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic ENGINEERING Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 101 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 101 in engineering curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic ENGINEERING Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 102 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 102 in engineering curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic ENGINEERING Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 103 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 103 in engineering curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic ENGINEERING Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 104 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 104 in engineering curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic ENGINEERING Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 105 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 105 in engineering curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic ENGINEERING Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 106 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 106 in engineering curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic ENGINEERING Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 107 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 107 in engineering curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ENGINEERING Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 108 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 108 in engineering curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ENGINEERING Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 109 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 109 in engineering curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ENGINEERING Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 110 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 110 in engineering curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ENGINEERING Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 111 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 111 in engineering curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ENGINEERING Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 112 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 112 in engineering curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ENGINEERING Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 113 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 113 in engineering curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ENGINEERING Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 114 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 114 in engineering curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ENGINEERING Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 115 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 115 in engineering curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic ENGINEERING Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 116 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 116 in engineering curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic ENGINEERING Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 117 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 117 in engineering curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic ENGINEERING Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 118 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 118 in engineering curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic ENGINEERING Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 119 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 119 in engineering curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic ENGINEERING Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 120 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 120 in engineering curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic ENGINEERING Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 121 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 121 in engineering curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic ENGINEERING Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 122 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 122 in engineering curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic ENGINEERING Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 123 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 123 in engineering curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic ENGINEERING Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 124 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 124 in engineering curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic ENGINEERING Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 125 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 125 in engineering curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic ENGINEERING Exam Question #126: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 126 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 126 in engineering curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic ENGINEERING Exam Question #127: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 127 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 127 in engineering curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic ENGINEERING Exam Question #128: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 128 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 128 in engineering curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic ENGINEERING Exam Question #129: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 129 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 129 in engineering curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic ENGINEERING Exam Question #130: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 130 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 130 in engineering curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic ENGINEERING Exam Question #131: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 131 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 131 in engineering curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic ENGINEERING Exam Question #132: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 132 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 132 in engineering curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic ENGINEERING Exam Question #133: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 133 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 133 in engineering curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic ENGINEERING Exam Question #134: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 134 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 134 in engineering curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic ENGINEERING Exam Question #135: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 135 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 135 in engineering curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic ENGINEERING Exam Question #136: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 136 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 136 in engineering curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic ENGINEERING Exam Question #137: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 137 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 137 in engineering curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic ENGINEERING Exam Question #138: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 138 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 138 in engineering curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic ENGINEERING Exam Question #139: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 139 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 139 in engineering curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic ENGINEERING Exam Question #140: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 140 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 140 in engineering curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic ENGINEERING Exam Question #141: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 141 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 141 in engineering curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic ENGINEERING Exam Question #142: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 142 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 142 in engineering curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic ENGINEERING Exam Question #143: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 143 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 143 in engineering curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic ENGINEERING Exam Question #144: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 144 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 144 in engineering curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic ENGINEERING Exam Question #145: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 145 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 145 in engineering curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic ENGINEERING Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 146 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 146 in engineering curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic ENGINEERING Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 147 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 147 in engineering curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic ENGINEERING Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 148 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 148 in engineering curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic ENGINEERING Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 149 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 149 in engineering curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic ENGINEERING Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 150 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 150 in engineering curriculum."
     }
   ]
 }

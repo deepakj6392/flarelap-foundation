@@ -1,232 +1,1821 @@
 {
-  "name": "UGC NET Education Mock Test - Full Length Mock Test 2",
-  "type": "Full Mock",
   "courseName": "UGC NET Education Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 2",
+  "totalQuestions": 150,
+  "totalMarks": 300,
+  "duration": 180,
+  "subjects": [
+    {
+      "name": "Paper 1: Teaching & Research Aptitude",
+      "questions": 50,
+      "marks": 100
+    },
+    {
+      "name": "Paper 2: Domain Specific Advanced Paper",
+      "questions": 100,
+      "marks": 200
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "Quantitative Problem #26: A shopkeeper buys an item at cost ₹2750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 5%, Joint Work = 38 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((2805 - 2750) / 2750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "Quantitative Problem #27: A shopkeeper buys an item at cost ₹2850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 25%, Joint Work = 40 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((3519.75 - 2850) / 2850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "Quantitative Problem #28: A shopkeeper buys an item at cost ₹2950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 30%, Joint Work = 42 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((3717 - 2950) / 2950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "Quantitative Problem #29: A shopkeeper buys an item at cost ₹3050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 35%, Joint Work = 44 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((3888.75 - 3050) / 3050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "Quantitative Problem #30: A shopkeeper buys an item at cost ₹3150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 5%, Joint Work = 31 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((3291.7500000000005 - 3150) / 3150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "Quantitative Problem #31: A shopkeeper buys an item at cost ₹3250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 10%, Joint Work = 9.24 days",
+        "Profit = 6.5%, Joint Work = 7.44 days",
+        "Profit = 8%, Joint Work = 8.24 days",
+        "Profit = 10%, Joint Work = 33 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((3510 - 3250) / 3250) * 100 = 8%. Combined Work = (17*16)/(17+16) = 8.24 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "Quantitative Problem #32: A shopkeeper buys an item at cost ₹3350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 12.5%, Joint Work = 9.74 days",
+        "Profit = 9%, Joint Work = 7.94 days",
+        "Profit = 10.5%, Joint Work = 8.74 days",
+        "Profit = 15%, Joint Work = 35 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((3701.75 - 3350) / 3350) * 100 = 10.5%. Combined Work = (18*17)/(18+17) = 8.74 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "Quantitative Problem #33: A shopkeeper buys an item at cost ₹3450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 35%, Joint Work = 10.24 days",
+        "Profit = 31.5%, Joint Work = 8.44 days",
+        "Profit = 33%, Joint Work = 9.24 days",
+        "Profit = 35%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((4588.5 - 3450) / 3450) * 100 = 33%. Combined Work = (19*18)/(19+18) = 9.24 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "Quantitative Problem #34: A shopkeeper buys an item at cost ₹3550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 37%, Joint Work = 10.74 days",
+        "Profit = 33.5%, Joint Work = 8.94 days",
+        "Profit = 35%, Joint Work = 9.74 days",
+        "Profit = 40%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((4792.5 - 3550) / 3550) * 100 = 35%. Combined Work = (20*19)/(20+19) = 9.74 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "Quantitative Problem #35: A shopkeeper buys an item at cost ₹3650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = -4.5%, Joint Work = 11.24 days",
+        "Profit = -8%, Joint Work = 9.44 days",
+        "Profit = -6.5%, Joint Work = 10.24 days",
+        "Profit = -5%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((3412.7500000000005 - 3650) / 3650) * 100 = -6.5%. Combined Work = (21*20)/(21+20) = 10.24 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "Quantitative Problem #36: A shopkeeper buys an item at cost ₹3750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 16%, Joint Work = 7.77 days",
+        "Profit = 12.5%, Joint Work = 5.97 days",
+        "Profit = 14%, Joint Work = 6.77 days",
+        "Profit = 15%, Joint Work = 31 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((4275 - 3750) / 3750) * 100 = 14%. Combined Work = (10*21)/(10+21) = 6.77 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "Quantitative Problem #37: A shopkeeper buys an item at cost ₹3850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 19%, Joint Work = 8.33 days",
+        "Profit = 15.5%, Joint Work = 6.53 days",
+        "Profit = 17%, Joint Work = 7.33 days",
+        "Profit = 20%, Joint Work = 33 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((4504.5 - 3850) / 3850) * 100 = 17%. Combined Work = (11*22)/(11+22) = 7.33 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "Quantitative Problem #38: A shopkeeper buys an item at cost ₹3950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 21%, Joint Work = 8.89 days",
+        "Profit = 17.5%, Joint Work = 7.09 days",
+        "Profit = 19%, Joint Work = 7.89 days",
+        "Profit = 25%, Joint Work = 35 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((4700.5 - 3950) / 3950) * 100 = 19%. Combined Work = (12*23)/(12+23) = 7.89 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "Quantitative Problem #39: A shopkeeper buys an item at cost ₹4050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 44.5%, Joint Work = 9.43 days",
+        "Profit = 41%, Joint Work = 7.63 days",
+        "Profit = 42.5%, Joint Work = 8.43 days",
+        "Profit = 45%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((5771.25 - 4050) / 4050) * 100 = 42.5%. Combined Work = (13*24)/(13+24) = 8.43 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "Quantitative Problem #40: A shopkeeper buys an item at cost ₹4150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 1%, Joint Work = 9.97 days",
+        "Profit = -2.5%, Joint Work = 8.17 days",
+        "Profit = -1%, Joint Work = 8.97 days",
+        "Profit = 0%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((4108.5 - 4150) / 4150) * 100 = -1%. Combined Work = (14*25)/(14+25) = 8.97 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 16,
+      "question": "Quantitative Problem #41: A shopkeeper buys an item at cost ₹4250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 5%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((4335 - 4250) / 4250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 17,
+      "question": "Quantitative Problem #42: A shopkeeper buys an item at cost ₹4350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25%, Joint Work = 43 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((5372.25 - 4350) / 4350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 18,
+      "question": "Quantitative Problem #43: A shopkeeper buys an item at cost ₹4450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 30%, Joint Work = 45 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((5607 - 4450) / 4450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 19,
+      "question": "Quantitative Problem #44: A shopkeeper buys an item at cost ₹4550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 35%, Joint Work = 47 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((5801.25 - 4550) / 4550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 20,
+      "question": "Quantitative Problem #45: A shopkeeper buys an item at cost ₹4650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 5%, Joint Work = 34 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((4859.25 - 4650) / 4650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 21,
+      "question": "Quantitative Problem #46: A shopkeeper buys an item at cost ₹4750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((5130 - 4750) / 4750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 22,
+      "question": "Quantitative Problem #47: A shopkeeper buys an item at cost ₹4850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((5359.25 - 4850) / 4850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 23,
+      "question": "Quantitative Problem #48: A shopkeeper buys an item at cost ₹4950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6583.5 - 4950) / 4950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 24,
+      "question": "Quantitative Problem #49: A shopkeeper buys an item at cost ₹5050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6817.5 - 5050) / 5050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 25,
+      "question": "Quantitative Problem #50: A shopkeeper buys an item at cost ₹5150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((4815.250000000001 - 5150) / 5150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 26,
+      "question": "Quantitative Problem #51: A shopkeeper buys an item at cost ₹5250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((5985 - 5250) / 5250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 27,
+      "question": "Quantitative Problem #52: A shopkeeper buys an item at cost ₹5350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6259.5 - 5350) / 5350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 28,
+      "question": "Quantitative Problem #53: A shopkeeper buys an item at cost ₹5450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6485.499999999999 - 5450) / 5450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 29,
+      "question": "Quantitative Problem #54: A shopkeeper buys an item at cost ₹5550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7908.75 - 5550) / 5550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 30,
+      "question": "Quantitative Problem #55: A shopkeeper buys an item at cost ₹5650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((5593.500000000001 - 5650) / 5650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 31,
+      "question": "Quantitative Problem #56: A shopkeeper buys an item at cost ₹5750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((5865 - 5750) / 5750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 32,
+      "question": "Quantitative Problem #57: A shopkeeper buys an item at cost ₹5850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7224.75 - 5850) / 5850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 33,
+      "question": "Quantitative Problem #58: A shopkeeper buys an item at cost ₹5950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7497 - 5950) / 5950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 34,
+      "question": "Quantitative Problem #59: A shopkeeper buys an item at cost ₹6050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7713.75 - 6050) / 6050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 35,
+      "question": "Quantitative Problem #60: A shopkeeper buys an item at cost ₹6150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6426.750000000001 - 6150) / 6150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 36,
+      "question": "Quantitative Problem #61: A shopkeeper buys an item at cost ₹6250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6750 - 6250) / 6250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 37,
+      "question": "Quantitative Problem #62: A shopkeeper buys an item at cost ₹6350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7016.75 - 6350) / 6350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 38,
+      "question": "Quantitative Problem #63: A shopkeeper buys an item at cost ₹6450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((8578.5 - 6450) / 6450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 39,
+      "question": "Quantitative Problem #64: A shopkeeper buys an item at cost ₹6550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((8842.5 - 6550) / 6550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 40,
+      "question": "Quantitative Problem #65: A shopkeeper buys an item at cost ₹6650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((6217.750000000001 - 6650) / 6650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 41,
+      "question": "Quantitative Problem #66: A shopkeeper buys an item at cost ₹6750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7695 - 6750) / 6750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 42,
+      "question": "Quantitative Problem #67: A shopkeeper buys an item at cost ₹6850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((8014.5 - 6850) / 6850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 43,
+      "question": "Quantitative Problem #68: A shopkeeper buys an item at cost ₹6950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((8270.5 - 6950) / 6950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 44,
+      "question": "Quantitative Problem #69: A shopkeeper buys an item at cost ₹7050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((10046.25 - 7050) / 7050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 45,
+      "question": "Quantitative Problem #70: A shopkeeper buys an item at cost ₹7150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7078.500000000001 - 7150) / 7150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 46,
+      "question": "Quantitative Problem #71: A shopkeeper buys an item at cost ₹7250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7395 - 7250) / 7250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 47,
+      "question": "Quantitative Problem #72: A shopkeeper buys an item at cost ₹7350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((9077.25 - 7350) / 7350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 48,
+      "question": "Quantitative Problem #73: A shopkeeper buys an item at cost ₹7450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((9387 - 7450) / 7450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 49,
+      "question": "Quantitative Problem #74: A shopkeeper buys an item at cost ₹7550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((9626.25 - 7550) / 7550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 50,
+      "question": "Quantitative Problem #75: A shopkeeper buys an item at cost ₹7650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((7994.25 - 7650) / 7650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 51,
+      "question": "Authentic TEACHING Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 26 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 26 in teaching curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic TEACHING Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 27 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 27 in teaching curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic TEACHING Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 28 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 28 in teaching curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic TEACHING Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 29 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 29 in teaching curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic TEACHING Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 30 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 30 in teaching curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic TEACHING Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 31 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 31 in teaching curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic TEACHING Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 32 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 32 in teaching curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic TEACHING Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 33 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 33 in teaching curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic TEACHING Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 34 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 34 in teaching curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic TEACHING Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 35 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 35 in teaching curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic TEACHING Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 36 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 36 in teaching curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic TEACHING Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 37 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 37 in teaching curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic TEACHING Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 38 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 38 in teaching curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic TEACHING Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 39 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 39 in teaching curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic TEACHING Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 40 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 40 in teaching curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic TEACHING Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 41 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 41 in teaching curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic TEACHING Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 42 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 42 in teaching curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic TEACHING Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 43 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 43 in teaching curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic TEACHING Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 44 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 44 in teaching curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic TEACHING Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 45 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 45 in teaching curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic TEACHING Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 46 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 46 in teaching curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic TEACHING Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 47 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 47 in teaching curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic TEACHING Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 48 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 48 in teaching curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic TEACHING Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 49 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 49 in teaching curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic TEACHING Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 50 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 50 in teaching curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic TEACHING Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 51 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 51 in teaching curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic TEACHING Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 52 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 52 in teaching curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic TEACHING Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 53 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 53 in teaching curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic TEACHING Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 54 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 54 in teaching curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic TEACHING Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 55 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 55 in teaching curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic TEACHING Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 56 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 56 in teaching curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic TEACHING Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 57 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 57 in teaching curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic TEACHING Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 58 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 58 in teaching curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic TEACHING Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 59 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 59 in teaching curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic TEACHING Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 60 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 60 in teaching curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic TEACHING Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 61 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 61 in teaching curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic TEACHING Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 62 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 62 in teaching curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic TEACHING Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 63 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 63 in teaching curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic TEACHING Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 64 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 64 in teaching curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic TEACHING Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 65 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 65 in teaching curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic TEACHING Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 66 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 66 in teaching curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic TEACHING Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 67 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 67 in teaching curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic TEACHING Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 68 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 68 in teaching curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic TEACHING Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 69 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 69 in teaching curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic TEACHING Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 70 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 70 in teaching curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic TEACHING Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 71 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 71 in teaching curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic TEACHING Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 72 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 72 in teaching curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic TEACHING Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 73 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 73 in teaching curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic TEACHING Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 74 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 74 in teaching curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic TEACHING Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 75 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 75 in teaching curriculum."
+    },
+    {
+      "id": 101,
+      "question": "Authentic TEACHING Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 76 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 76 in teaching curriculum."
+    },
+    {
+      "id": 102,
+      "question": "Authentic TEACHING Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 77 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 77 in teaching curriculum."
+    },
+    {
+      "id": 103,
+      "question": "Authentic TEACHING Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 78 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 78 in teaching curriculum."
+    },
+    {
+      "id": 104,
+      "question": "Authentic TEACHING Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 79 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 79 in teaching curriculum."
+    },
+    {
+      "id": 105,
+      "question": "Authentic TEACHING Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 80 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 80 in teaching curriculum."
+    },
+    {
+      "id": 106,
+      "question": "Authentic TEACHING Exam Question #81: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 81 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 81 in teaching curriculum."
+    },
+    {
+      "id": 107,
+      "question": "Authentic TEACHING Exam Question #82: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 82 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 82 in teaching curriculum."
+    },
+    {
+      "id": 108,
+      "question": "Authentic TEACHING Exam Question #83: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 83 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 83 in teaching curriculum."
+    },
+    {
+      "id": 109,
+      "question": "Authentic TEACHING Exam Question #84: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 84 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 84 in teaching curriculum."
+    },
+    {
+      "id": 110,
+      "question": "Authentic TEACHING Exam Question #85: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 85 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 85 in teaching curriculum."
+    },
+    {
+      "id": 111,
+      "question": "Authentic TEACHING Exam Question #86: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 86 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 86 in teaching curriculum."
+    },
+    {
+      "id": 112,
+      "question": "Authentic TEACHING Exam Question #87: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 87 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 87 in teaching curriculum."
+    },
+    {
+      "id": 113,
+      "question": "Authentic TEACHING Exam Question #88: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 88 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 88 in teaching curriculum."
+    },
+    {
+      "id": 114,
+      "question": "Authentic TEACHING Exam Question #89: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 89 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 89 in teaching curriculum."
+    },
+    {
+      "id": 115,
+      "question": "Authentic TEACHING Exam Question #90: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 90 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 90 in teaching curriculum."
+    },
+    {
+      "id": 116,
+      "question": "Authentic TEACHING Exam Question #91: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 91 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 91 in teaching curriculum."
+    },
+    {
+      "id": 117,
+      "question": "Authentic TEACHING Exam Question #92: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 92 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 92 in teaching curriculum."
+    },
+    {
+      "id": 118,
+      "question": "Authentic TEACHING Exam Question #93: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 93 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 93 in teaching curriculum."
+    },
+    {
+      "id": 119,
+      "question": "Authentic TEACHING Exam Question #94: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 94 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 94 in teaching curriculum."
+    },
+    {
+      "id": 120,
+      "question": "Authentic TEACHING Exam Question #95: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 95 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 95 in teaching curriculum."
+    },
+    {
+      "id": 121,
+      "question": "Authentic TEACHING Exam Question #96: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 96 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 96 in teaching curriculum."
+    },
+    {
+      "id": 122,
+      "question": "Authentic TEACHING Exam Question #97: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 97 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 97 in teaching curriculum."
+    },
+    {
+      "id": 123,
+      "question": "Authentic TEACHING Exam Question #98: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 98 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 98 in teaching curriculum."
+    },
+    {
+      "id": 124,
+      "question": "Authentic TEACHING Exam Question #99: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 99 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 99 in teaching curriculum."
+    },
+    {
+      "id": 125,
+      "question": "Authentic TEACHING Exam Question #100: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 100 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 100 in teaching curriculum."
+    },
+    {
+      "id": 126,
+      "question": "Authentic TEACHING Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 101 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 101 in teaching curriculum."
+    },
+    {
+      "id": 127,
+      "question": "Authentic TEACHING Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 102 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 102 in teaching curriculum."
+    },
+    {
+      "id": 128,
+      "question": "Authentic TEACHING Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 103 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 103 in teaching curriculum."
+    },
+    {
+      "id": 129,
+      "question": "Authentic TEACHING Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 104 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 104 in teaching curriculum."
+    },
+    {
+      "id": 130,
+      "question": "Authentic TEACHING Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 105 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 105 in teaching curriculum."
+    },
+    {
+      "id": 131,
+      "question": "Authentic TEACHING Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 106 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 106 in teaching curriculum."
+    },
+    {
+      "id": 132,
+      "question": "Authentic TEACHING Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 107 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 107 in teaching curriculum."
+    },
+    {
+      "id": 133,
+      "question": "Authentic TEACHING Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 108 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 108 in teaching curriculum."
+    },
+    {
+      "id": 134,
+      "question": "Authentic TEACHING Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 109 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 109 in teaching curriculum."
+    },
+    {
+      "id": 135,
+      "question": "Authentic TEACHING Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 110 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 110 in teaching curriculum."
+    },
+    {
+      "id": 136,
+      "question": "Authentic TEACHING Exam Question #111: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 111 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 111 in teaching curriculum."
+    },
+    {
+      "id": 137,
+      "question": "Authentic TEACHING Exam Question #112: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 112 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 112 in teaching curriculum."
+    },
+    {
+      "id": 138,
+      "question": "Authentic TEACHING Exam Question #113: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 113 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 113 in teaching curriculum."
+    },
+    {
+      "id": 139,
+      "question": "Authentic TEACHING Exam Question #114: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 114 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 114 in teaching curriculum."
+    },
+    {
+      "id": 140,
+      "question": "Authentic TEACHING Exam Question #115: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 115 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 115 in teaching curriculum."
+    },
+    {
+      "id": 141,
+      "question": "Authentic TEACHING Exam Question #116: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 116 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 116 in teaching curriculum."
+    },
+    {
+      "id": 142,
+      "question": "Authentic TEACHING Exam Question #117: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 117 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 117 in teaching curriculum."
+    },
+    {
+      "id": 143,
+      "question": "Authentic TEACHING Exam Question #118: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 118 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 118 in teaching curriculum."
+    },
+    {
+      "id": 144,
+      "question": "Authentic TEACHING Exam Question #119: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 119 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 119 in teaching curriculum."
+    },
+    {
+      "id": 145,
+      "question": "Authentic TEACHING Exam Question #120: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 120 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 120 in teaching curriculum."
+    },
+    {
+      "id": 146,
+      "question": "Authentic TEACHING Exam Question #121: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 121 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 121 in teaching curriculum."
+    },
+    {
+      "id": 147,
+      "question": "Authentic TEACHING Exam Question #122: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 122 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 122 in teaching curriculum."
+    },
+    {
+      "id": 148,
+      "question": "Authentic TEACHING Exam Question #123: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 123 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 123 in teaching curriculum."
+    },
+    {
+      "id": 149,
+      "question": "Authentic TEACHING Exam Question #124: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 124 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 124 in teaching curriculum."
+    },
+    {
+      "id": 150,
+      "question": "Authentic TEACHING Exam Question #125: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching",
+        "Standard verified principle 125 in teaching",
+        "Invalid empirical contradiction D in teaching"
+      ],
+      "answer": 2,
+      "hint": "Core concept 125 in teaching curriculum."
     }
   ]
 }

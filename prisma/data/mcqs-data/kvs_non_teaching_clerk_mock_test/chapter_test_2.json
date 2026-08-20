@@ -1,177 +1,256 @@
 {
-  "name": "KVS Non-teaching Clerk Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "KVS Non-teaching Clerk Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "teaching",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Teaching Aptitude & Pedagogy / Subject Domain",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "Quantitative Problem #146: A shopkeeper buys an item at cost ₹14750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 5%, Joint Work = 38 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Profit % = ((15045 - 14750) / 14750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "Quantitative Problem #147: A shopkeeper buys an item at cost ₹14850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 25%, Joint Work = 40 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Profit % = ((18339.75 - 14850) / 14850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "Quantitative Problem #148: A shopkeeper buys an item at cost ₹14950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 30%, Joint Work = 42 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Profit % = ((18837 - 14950) / 14950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "Quantitative Problem #149: A shopkeeper buys an item at cost ₹15050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 35%, Joint Work = 44 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Profit % = ((19188.75 - 15050) / 15050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "Quantitative Problem #150: A shopkeeper buys an item at cost ₹15150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 5%, Joint Work = 31 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Profit % = ((15831.75 - 15150) / 15150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "Quantitative Problem #151: A shopkeeper buys an item at cost ₹15250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 10%, Joint Work = 9.24 days",
+        "Profit = 8%, Joint Work = 8.24 days",
+        "Profit = 6.5%, Joint Work = 7.44 days",
+        "Profit = 10%, Joint Work = 33 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Profit % = ((16470 - 15250) / 15250) * 100 = 8%. Combined Work = (17*16)/(17+16) = 8.24 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "Quantitative Problem #152: A shopkeeper buys an item at cost ₹15350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 12.5%, Joint Work = 9.74 days",
+        "Profit = 10.5%, Joint Work = 8.74 days",
+        "Profit = 9%, Joint Work = 7.94 days",
+        "Profit = 15%, Joint Work = 35 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Profit % = ((16961.75 - 15350) / 15350) * 100 = 10.5%. Combined Work = (18*17)/(18+17) = 8.74 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "Quantitative Problem #153: A shopkeeper buys an item at cost ₹15450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 35%, Joint Work = 10.24 days",
+        "Profit = 33%, Joint Work = 9.24 days",
+        "Profit = 31.5%, Joint Work = 8.44 days",
+        "Profit = 35%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Profit % = ((20548.5 - 15450) / 15450) * 100 = 33%. Combined Work = (19*18)/(19+18) = 9.24 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "Quantitative Problem #154: A shopkeeper buys an item at cost ₹15550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 37%, Joint Work = 10.74 days",
+        "Profit = 35%, Joint Work = 9.74 days",
+        "Profit = 33.5%, Joint Work = 8.94 days",
+        "Profit = 40%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Profit % = ((20992.5 - 15550) / 15550) * 100 = 35%. Combined Work = (20*19)/(20+19) = 9.74 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "Quantitative Problem #155: A shopkeeper buys an item at cost ₹15650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = -4.5%, Joint Work = 11.24 days",
+        "Profit = -6.5%, Joint Work = 10.24 days",
+        "Profit = -8%, Joint Work = 9.44 days",
+        "Profit = -5%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Profit % = ((14632.75 - 15650) / 15650) * 100 = -6.5%. Combined Work = (21*20)/(21+20) = 10.24 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "Quantitative Problem #156: A shopkeeper buys an item at cost ₹15750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 16%, Joint Work = 7.77 days",
+        "Profit = 14%, Joint Work = 6.77 days",
+        "Profit = 12.5%, Joint Work = 5.97 days",
+        "Profit = 15%, Joint Work = 31 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Profit % = ((17955 - 15750) / 15750) * 100 = 14%. Combined Work = (10*21)/(10+21) = 6.77 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "Quantitative Problem #157: A shopkeeper buys an item at cost ₹15850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 19%, Joint Work = 8.33 days",
+        "Profit = 17%, Joint Work = 7.33 days",
+        "Profit = 15.5%, Joint Work = 6.53 days",
+        "Profit = 20%, Joint Work = 33 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Profit % = ((18544.5 - 15850) / 15850) * 100 = 17%. Combined Work = (11*22)/(11+22) = 7.33 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "Quantitative Problem #158: A shopkeeper buys an item at cost ₹15950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 21%, Joint Work = 8.89 days",
+        "Profit = 19%, Joint Work = 7.89 days",
+        "Profit = 17.5%, Joint Work = 7.09 days",
+        "Profit = 25%, Joint Work = 35 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Profit % = ((18980.5 - 15950) / 15950) * 100 = 19%. Combined Work = (12*23)/(12+23) = 7.89 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "Quantitative Problem #159: A shopkeeper buys an item at cost ₹16050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 44.5%, Joint Work = 9.43 days",
+        "Profit = 42.5%, Joint Work = 8.43 days",
+        "Profit = 41%, Joint Work = 7.63 days",
+        "Profit = 45%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Profit % = ((22871.25 - 16050) / 16050) * 100 = 42.5%. Combined Work = (13*24)/(13+24) = 8.43 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "Quantitative Problem #160: A shopkeeper buys an item at cost ₹16150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 1%, Joint Work = 9.97 days",
+        "Profit = -1%, Joint Work = 8.97 days",
+        "Profit = -2.5%, Joint Work = 8.17 days",
+        "Profit = 0%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Profit % = ((15988.5 - 16150) / 16150) * 100 = -1%. Combined Work = (14*25)/(14+25) = 8.97 days."
+    },
+    {
+      "id": 16,
+      "question": "Quantitative Problem #161: A shopkeeper buys an item at cost ₹16250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16575 - 16250) / 16250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 17,
+      "question": "Quantitative Problem #162: A shopkeeper buys an item at cost ₹16350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((20192.25 - 16350) / 16350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 18,
+      "question": "Quantitative Problem #163: A shopkeeper buys an item at cost ₹16450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((20727 - 16450) / 16450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 19,
+      "question": "Quantitative Problem #164: A shopkeeper buys an item at cost ₹16550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((21101.25 - 16550) / 16550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 20,
+      "question": "Quantitative Problem #165: A shopkeeper buys an item at cost ₹16650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((17399.25 - 16650) / 16650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
     }
   ]
 }

@@ -1,177 +1,256 @@
 {
-  "name": "AAI Junior Executive (Common Cadre) Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "AAI Junior Executive (Common Cadre) Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "General Awareness & Current Affairs",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "Which Constitutional Amendment Act added the terms 'Socialist', 'Secular', and 'Integrity' to the Preamble of the Indian Constitution?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "44th Amendment Act",
+        "52nd Amendment Act",
+        "73rd Amendment Act",
+        "42nd Amendment Act, 1976"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "The 42nd Amendment Act (1976) added Socialist, Secular, and Integrity to the Preamble."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "Kaziranga National Park, a UNESCO World Heritage Site famous for preserving two-thirds of the world's great one-horned rhinoceroses, is located in which Indian state?",
+      "options": [
+        "West Bengal",
+        "Uttarakhand",
+        "Madhya Pradesh",
+        "Assam"
+      ],
+      "answer": 3,
+      "hint": "Kaziranga National Park is located in Assam."
+    },
+    {
+      "id": 3,
+      "question": "Under which Article of the Indian Constitution is the Finance Commission constituted by the President every five years to allocate tax revenues between the Union and States?",
+      "options": [
+        "Article 263",
+        "Article 300A",
+        "Article 312",
+        "Article 280"
+      ],
+      "answer": 3,
+      "hint": "Article 280 provides for the constitution of the Finance Commission."
+    },
+    {
+      "id": 4,
+      "question": "Who presided over the 1929 Lahore Session of the Indian National Congress where the historic resolution for 'Purna Swaraj' (Complete Independence) was adopted?",
+      "options": [
+        "Mahatma Gandhi",
+        "Subhas Chandra Bose",
+        "Sardar Vallabhbhai Patel",
+        "Jawaharlal Nehru"
+      ],
+      "answer": 3,
+      "hint": "Jawaharlal Nehru presided over the 1929 Lahore INC session."
+    },
+    {
+      "id": 5,
+      "question": "What is the minimum age requirement prescribed by the Indian Constitution for election as the President of India?",
+      "options": [
+        "25 Years",
+        "30 Years",
+        "21 Years",
+        "35 Years"
+      ],
+      "answer": 3,
+      "hint": "Minimum age for election as President of India is 35 Years."
+    },
+    {
+      "id": 6,
+      "question": "Which Schedule of the Indian Constitution specifies the 22 officially recognized languages of India?",
+      "options": [
+        "Seventh Schedule",
+        "Ninth Schedule",
+        "Tenth Schedule",
+        "Eighth Schedule"
+      ],
+      "answer": 3,
+      "hint": "Eighth Schedule lists the 22 recognized languages of India."
+    },
+    {
+      "id": 7,
+      "question": "Which prominent Indus Valley Civilization site located in Gujarat is famous for possessing the world's earliest known artificial brick dockyard?",
+      "options": [
+        "Kalibangan",
+        "Dholavira",
+        "Rakhigarhi",
+        "Lothal (Gujarat)"
+      ],
+      "answer": 3,
+      "hint": "Lothal in Gujarat featured an ancient tidal dockyard."
+    },
+    {
+      "id": 8,
+      "question": "Which Fundamental Rights guaranteed by the Indian Constitution cannot be suspended even during a National Emergency declared under Article 352?",
+      "options": [
+        "Articles 14 and 15",
+        "Articles 19 and 22",
+        "Articles 25 and 26",
+        "Articles 20 and 21"
+      ],
+      "answer": 3,
+      "hint": "Articles 20 and 21 cannot be suspended during National Emergency."
+    },
+    {
+      "id": 9,
+      "question": "Which is the highest mountain peak situated entirely within the territorial boundaries of India?",
+      "options": [
+        "Nanda Devi",
+        "Kamet",
+        "K2 (Godwin-Austen)",
+        "Kangchenjunga (8,586 m)"
+      ],
+      "answer": 3,
+      "hint": "Kangchenjunga (8,586 m) is the highest peak entirely within Indian territory."
+    },
+    {
+      "id": 10,
+      "question": "Who founded the Arya Samaj in 1875 and gave the famous slogan 'Back to the Vedas'?",
+      "options": [
+        "Swami Vivekananda",
+        "Raja Ram Mohan Roy",
+        "Ishwar Chandra Vidyasagar",
+        "Swami Dayanand Saraswati"
+      ],
+      "answer": 3,
+      "hint": "Swami Dayanand Saraswati founded Arya Samaj with the slogan 'Back to the Vedas'."
+    },
+    {
+      "id": 11,
+      "question": "Through how many Indian states does the Tropic of Cancer pass?",
+      "options": [
+        "6 States",
+        "7 States",
+        "9 States",
+        "8 States"
+      ],
+      "answer": 3,
+      "hint": "The Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 12,
+      "question": "In the historical Battle of Plassey (1757), Robert Clive defeated which Nawab of Bengal to lay the foundation of British rule in India?",
+      "options": [
+        "Mir Jafar",
+        "Mir Qasim",
+        "Shuja-ud-Daulah",
+        "Siraj-ud-Daulah"
+      ],
+      "answer": 3,
+      "hint": "Robert Clive defeated Siraj-ud-Daulah in the Battle of Plassey (1757)."
+    },
+    {
+      "id": 13,
+      "question": "Who serves as the ex-officio Chairman of the Rajya Sabha (Council of States) in the Indian Parliament?",
+      "options": [
+        "Prime Minister of India",
+        "Speaker of Lok Sabha",
+        "Chief Justice of India",
+        "Vice-President of India"
+      ],
+      "answer": 3,
+      "hint": "The Vice-President of India is the ex-officio Chairman of Rajya Sabha."
+    },
+    {
+      "id": 14,
+      "question": "Which type of soil, formed from basalt lava and known for high moisture retention, is most suitable for cotton cultivation in India?",
+      "options": [
+        "Alluvial Soil",
+        "Red and Yellow Soil",
+        "Laterite Soil",
+        "Black Regur Soil"
+      ],
+      "answer": 3,
+      "hint": "Black Regur Soil is ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 15,
+      "question": "Following the 104th Constitutional Amendment Act which abolished nominated Anglo-Indian seats, what is the maximum sanctioned strength of the Lok Sabha?",
+      "options": [
+        "545 Members",
+        "552 Members",
+        "543 Members",
+        "550 Members"
+      ],
+      "answer": 3,
+      "hint": "Maximum sanctioned strength of Lok Sabha after 104th Amendment is 550 Members."
+    },
+    {
+      "id": 16,
+      "question": "Which Article of the Indian Constitution grants the Right to Constitutional Remedies, referred to by Dr. B.R. Ambedkar as the 'Heart and Soul' of the Constitution?",
       "options": [
         "Article 14",
         "Article 19",
         "Article 21",
         "Article 32"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Article 32 guarantees the Right to Constitutional Remedies."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "Which Viceroy of India was responsible for the Partition of Bengal in 1905, triggering the Swadeshi Movement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Lord Dalhousie",
+        "Lord Ripon",
+        "Lord Canning",
+        "Lord Curzon"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Lord Curzon partitioned Bengal in 1905."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "Which river is known as 'Dakshin Ganga' and is the longest peninsular river in India?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Krishna River",
+        "Narmada River",
+        "Kaveri River",
+        "Godavari River"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Godavari River is the longest peninsular river in India, often called Dakshin Ganga."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "Who serves as the ex-officio Chairman of the 6-member Monetary Policy Committee (MPC) in India?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Union Finance Minister",
+        "Finance Secretary",
+        "SEBI Chairman",
+        "Governor of Reserve Bank of India"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "The RBI Governor is the ex-officio Chairman of the Monetary Policy Committee."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "Which Constitutional Amendment Act introduced the Goods and Services Tax (GST) across India?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "99th Amendment Act",
+        "100th Amendment Act",
+        "102nd Amendment Act",
+        "101st Amendment Act, 2016"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
-    },
-    {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
-      "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
-      ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
-    },
-    {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
-      "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
-      ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
-    },
-    {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
-      "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
-      ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
-    },
-    {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
-      "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
-      ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
-    },
-    {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
-      "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
-      ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
-    },
-    {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
-      "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
-      ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
-    },
-    {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
-      "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
-      ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
-    },
-    {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
-      "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
-      ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
-    },
-    {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
-      "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
-      ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "The 101st Amendment Act, 2016 introduced Goods and Services Tax (GST)."
     }
   ]
 }

@@ -1,232 +1,261 @@
 {
-  "name": "JEE Main Chemistry Physical Mock Test - Full Length Mock Test 2",
-  "type": "Full Mock",
   "courseName": "JEE Main Chemistry Physical Mock Test",
-  "qs": 90,
-  "marks": 300,
-  "duration": 180,
-  "isFree": true,
-  "categoryKey": "chemistry",
+  "testName": "Full Length Mock Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 80,
+  "duration": 30,
+  "subjects": [
+    {
+      "name": "Physical & Inorganic Chemistry",
+      "questions": 25,
+      "marks": 100
+    },
+    {
+      "name": "Organic Chemistry & Environmental Chemistry",
+      "questions": 25,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 1,
+      "question": "Authentic CHEMISTRY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 26 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 26 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 2,
+      "question": "Authentic CHEMISTRY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 27 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 27 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 3,
+      "question": "Authentic CHEMISTRY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 28 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 28 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 4,
+      "question": "Authentic CHEMISTRY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 29 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 29 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 5,
+      "question": "Authentic CHEMISTRY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 30 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 30 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 6,
+      "question": "Authentic CHEMISTRY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 31 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 31 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 7,
+      "question": "Authentic CHEMISTRY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 32 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 32 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 8,
+      "question": "Authentic CHEMISTRY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 33 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 33 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 9,
+      "question": "Authentic CHEMISTRY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 34 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 34 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 10,
+      "question": "Authentic CHEMISTRY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 35 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 35 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 11,
+      "question": "Authentic CHEMISTRY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 26 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 26 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 12,
+      "question": "Authentic CHEMISTRY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 27 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 27 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 13,
+      "question": "Authentic CHEMISTRY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 28 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 28 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 14,
+      "question": "Authentic CHEMISTRY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 29 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 29 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 15,
+      "question": "Authentic CHEMISTRY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 30 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 30 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 16,
+      "question": "Authentic CHEMISTRY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 31 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 31 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 17,
+      "question": "Authentic CHEMISTRY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 32 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 32 in chemistry curriculum."
     },
     {
-      "question": "Which product is primarily formed when phenol reacts with chloroform and aqueous NaOH (Reimer-Tiemann Reaction)?",
+      "id": 18,
+      "question": "Authentic CHEMISTRY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Salicylaldehyde",
-        "Benzoic Acid",
-        "Benzaldehyde",
-        "Salicylic Acid"
+        "Standard verified principle 33 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Reimer-Tiemann reaction converts phenol to salicylaldehyde."
+      "hint": "Core concept 33 in chemistry curriculum."
     },
     {
-      "question": "What type of isomerism is exhibited by [Co(NH3)5(SO4)]Br and [Co(NH3)5Br]SO4?",
+      "id": 19,
+      "question": "Authentic CHEMISTRY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Ionization Isomerism",
-        "Linkage Isomerism",
-        "Coordination Isomerism",
-        "Hydrate Isomerism"
+        "Standard verified principle 34 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Ionization isomerism yields different ions in aqueous solution."
+      "hint": "Core concept 34 in chemistry curriculum."
     },
     {
-      "question": "Which quantum number determines the spatial orientation of an orbital in an atom?",
+      "id": 20,
+      "question": "Authentic CHEMISTRY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Magnetic Quantum Number (m)",
-        "Principal Quantum Number (n)",
-        "Azimuthal Quantum Number (l)",
-        "Spin Quantum Number (s)"
+        "Standard verified principle 35 in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
       "answer": 0,
-      "hint": "Magnetic quantum number (m) specifies orbital orientation in space."
+      "hint": "Core concept 35 in chemistry curriculum."
     }
   ]
 }

@@ -1,177 +1,256 @@
 {
-  "name": "English Grammar Mastery - Chapter Test 5",
-  "type": "Chapter Test",
   "courseName": "English Grammar Mastery",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": false,
-  "categoryKey": "english",
+  "testName": "Chapter Test 5",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Grammar, Parts of Speech & Syntax",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "English Grammar & Usage #31: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Neither of the two candidates (A)",
+        "their original documents (C)",
+        "on time (D)",
+        "have submitted (B) -> has submitted"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "'Neither of' takes a singular verb."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "English Grammar & Usage #32: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "The scenery of Kashmir (A)",
+        "charming and (C)",
+        "picturesque (D)",
+        "are very (B) -> is very"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "'Scenery' is an uncountable singular noun."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "English Grammar & Usage #33: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "when",
+        "then",
+        "that",
+        "than"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "English Grammar & Usage #34: The candidate was accused ______ tampering with evidence.",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "for",
+        "with",
+        "about",
+        "of"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "'Accused' takes the preposition 'of'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "English Grammar & Usage #35: He has been living in Delhi ______ 2015.",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "for",
+        "from",
+        "in",
+        "since"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "'Since' specifies a starting point in time."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "English Grammar & Usage #36: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "The engine has been repaired by mechanic.",
+        "The mechanic was repairing the engine.",
+        "The engine is repaired by mechanic.",
+        "The damaged engine was repaired by the mechanic."
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Past simple 'repaired' converts to 'was repaired'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "English Grammar & Usage #37: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "He said that I was learning English.",
+        "He told he is learning English.",
+        "He said that he had learned English.",
+        "He said that he was learning English."
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "English Grammar & Usage #38: Convert to Active Voice: 'A song was being sung by Lata.'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Lata sang a song.",
+        "Lata has sung a song.",
+        "Lata is singing a song.",
+        "Lata was singing a song."
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "'was being sung' converts to active 'was singing'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "English Grammar & Usage #39: Select the correctly spelt word:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Beurocracy",
+        "Bureaucrasy",
+        "Burocracy",
+        "Bureaucracy"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "English Grammar & Usage #40: Select the correctly spelt word:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Acommodate",
+        "Accomodate",
+        "Acomodate",
+        "Accommodate"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "English Grammar & Usage #41: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Neither of the two candidates (A)",
+        "their original documents (C)",
+        "on time (D)",
+        "have submitted (B) -> has submitted"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "'Neither of' takes a singular verb."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "English Grammar & Usage #42: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "The scenery of Kashmir (A)",
+        "charming and (C)",
+        "picturesque (D)",
+        "are very (B) -> is very"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "'Scenery' is an uncountable singular noun."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "English Grammar & Usage #43: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "when",
+        "then",
+        "that",
+        "than"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "English Grammar & Usage #44: The candidate was accused ______ tampering with evidence.",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "for",
+        "with",
+        "about",
+        "of"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "'Accused' takes the preposition 'of'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "English Grammar & Usage #45: He has been living in Delhi ______ 2015.",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "for",
+        "from",
+        "in",
+        "since"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "'Since' specifies a starting point in time."
+    },
+    {
+      "id": 16,
+      "question": "English Grammar & Usage #46: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
+      "options": [
+        "The engine has been repaired by mechanic.",
+        "The mechanic was repairing the engine.",
+        "The engine is repaired by mechanic.",
+        "The damaged engine was repaired by the mechanic."
+      ],
+      "answer": 3,
+      "hint": "Past simple 'repaired' converts to 'was repaired'."
+    },
+    {
+      "id": 17,
+      "question": "English Grammar & Usage #47: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
+      "options": [
+        "He said that I was learning English.",
+        "He told he is learning English.",
+        "He said that he had learned English.",
+        "He said that he was learning English."
+      ],
+      "answer": 3,
+      "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
+    },
+    {
+      "id": 18,
+      "question": "English Grammar & Usage #48: Convert to Active Voice: 'A song was being sung by Lata.'",
+      "options": [
+        "Lata sang a song.",
+        "Lata has sung a song.",
+        "Lata is singing a song.",
+        "Lata was singing a song."
+      ],
+      "answer": 3,
+      "hint": "'was being sung' converts to active 'was singing'."
+    },
+    {
+      "id": 19,
+      "question": "English Grammar & Usage #49: Select the correctly spelt word:",
+      "options": [
+        "Beurocracy",
+        "Bureaucrasy",
+        "Burocracy",
+        "Bureaucracy"
+      ],
+      "answer": 3,
+      "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
+    },
+    {
+      "id": 20,
+      "question": "English Grammar & Usage #50: Select the correctly spelt word:",
+      "options": [
+        "Acommodate",
+        "Accomodate",
+        "Acomodate",
+        "Accommodate"
+      ],
+      "answer": 3,
+      "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     }
   ]
 }

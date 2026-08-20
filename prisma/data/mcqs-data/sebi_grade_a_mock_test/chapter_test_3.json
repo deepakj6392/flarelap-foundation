@@ -1,177 +1,256 @@
 {
-  "name": "SEBI Grade A Mock Test - Chapter Test 3",
-  "type": "Chapter Test",
   "courseName": "SEBI Grade A Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Chapter Test 3",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Reasoning Ability & Computer Knowledge",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 1,
+      "question": "Reasoning Puzzle #91: In a seating alignment of 116 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 185 km North, turns East 274 km, then South 185 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 111th, Displacement = 274 km East",
+        "Priya's Rank = 110th, Displacement = 185 km West",
+        "Priya's Rank = 112th, Displacement = 459 km North",
+        "Priya's Rank = 111th, Displacement = 370 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (116) - Left (6) + 1 = 111th. North/South movements cancel, leaving 274 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 2,
+      "question": "Reasoning Puzzle #92: In a seating alignment of 117 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 187 km North, turns East 277 km, then South 187 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 111th, Displacement = 277 km East",
+        "Priya's Rank = 110th, Displacement = 187 km West",
+        "Priya's Rank = 112th, Displacement = 464 km North",
+        "Priya's Rank = 111th, Displacement = 374 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (117) - Left (7) + 1 = 111th. North/South movements cancel, leaving 277 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 3,
+      "question": "Reasoning Puzzle #93: In a seating alignment of 118 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 189 km North, turns East 280 km, then South 189 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 111th, Displacement = 280 km East",
+        "Priya's Rank = 110th, Displacement = 189 km West",
+        "Priya's Rank = 112th, Displacement = 469 km North",
+        "Priya's Rank = 111th, Displacement = 378 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (118) - Left (8) + 1 = 111th. North/South movements cancel, leaving 280 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 4,
+      "question": "Reasoning Puzzle #94: In a seating alignment of 119 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 191 km North, turns East 283 km, then South 191 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 111th, Displacement = 283 km East",
+        "Priya's Rank = 110th, Displacement = 191 km West",
+        "Priya's Rank = 112th, Displacement = 474 km North",
+        "Priya's Rank = 111th, Displacement = 382 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (119) - Left (9) + 1 = 111th. North/South movements cancel, leaving 283 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 5,
+      "question": "Reasoning Puzzle #95: In a seating alignment of 120 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 193 km North, turns East 286 km, then South 193 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 111th, Displacement = 286 km East",
+        "Priya's Rank = 110th, Displacement = 193 km West",
+        "Priya's Rank = 112th, Displacement = 479 km North",
+        "Priya's Rank = 111th, Displacement = 386 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (120) - Left (10) + 1 = 111th. North/South movements cancel, leaving 286 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 6,
+      "question": "Reasoning Puzzle #96: In a seating alignment of 121 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 195 km North, turns East 289 km, then South 195 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 111th, Displacement = 289 km East",
+        "Priya's Rank = 110th, Displacement = 195 km West",
+        "Priya's Rank = 112th, Displacement = 484 km North",
+        "Priya's Rank = 111th, Displacement = 390 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (121) - Left (11) + 1 = 111th. North/South movements cancel, leaving 289 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 7,
+      "question": "Reasoning Puzzle #97: In a seating alignment of 122 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 197 km North, turns East 292 km, then South 197 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 111th, Displacement = 292 km East",
+        "Priya's Rank = 110th, Displacement = 197 km West",
+        "Priya's Rank = 112th, Displacement = 489 km North",
+        "Priya's Rank = 111th, Displacement = 394 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (122) - Left (12) + 1 = 111th. North/South movements cancel, leaving 292 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 8,
+      "question": "Reasoning Puzzle #98: In a seating alignment of 123 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 199 km North, turns East 295 km, then South 199 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 111th, Displacement = 295 km East",
+        "Priya's Rank = 110th, Displacement = 199 km West",
+        "Priya's Rank = 112th, Displacement = 494 km North",
+        "Priya's Rank = 111th, Displacement = 398 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (123) - Left (13) + 1 = 111th. North/South movements cancel, leaving 295 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 9,
+      "question": "Reasoning Puzzle #99: In a seating alignment of 124 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 201 km North, turns East 298 km, then South 201 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 111th, Displacement = 298 km East",
+        "Priya's Rank = 110th, Displacement = 201 km West",
+        "Priya's Rank = 112th, Displacement = 499 km North",
+        "Priya's Rank = 111th, Displacement = 402 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (124) - Left (14) + 1 = 111th. North/South movements cancel, leaving 298 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 10,
+      "question": "Reasoning Puzzle #100: In a seating alignment of 125 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 203 km North, turns East 301 km, then South 203 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 111th, Displacement = 301 km East",
+        "Priya's Rank = 110th, Displacement = 203 km West",
+        "Priya's Rank = 112th, Displacement = 504 km North",
+        "Priya's Rank = 111th, Displacement = 406 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (125) - Left (15) + 1 = 111th. North/South movements cancel, leaving 301 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 11,
+      "question": "Reasoning Puzzle #101: In a seating alignment of 126 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 205 km North, turns East 304 km, then South 205 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 111th, Displacement = 304 km East",
+        "Priya's Rank = 110th, Displacement = 205 km West",
+        "Priya's Rank = 112th, Displacement = 509 km North",
+        "Priya's Rank = 111th, Displacement = 410 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (126) - Left (16) + 1 = 111th. North/South movements cancel, leaving 304 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 12,
+      "question": "Reasoning Puzzle #102: In a seating alignment of 127 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 207 km North, turns East 307 km, then South 207 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 111th, Displacement = 307 km East",
+        "Priya's Rank = 110th, Displacement = 207 km West",
+        "Priya's Rank = 112th, Displacement = 514 km North",
+        "Priya's Rank = 111th, Displacement = 414 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (127) - Left (17) + 1 = 111th. North/South movements cancel, leaving 307 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 13,
+      "question": "Reasoning Puzzle #103: In a seating alignment of 128 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 209 km North, turns East 310 km, then South 209 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 111th, Displacement = 310 km East",
+        "Priya's Rank = 110th, Displacement = 209 km West",
+        "Priya's Rank = 112th, Displacement = 519 km North",
+        "Priya's Rank = 111th, Displacement = 418 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (128) - Left (18) + 1 = 111th. North/South movements cancel, leaving 310 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 14,
+      "question": "Reasoning Puzzle #104: In a seating alignment of 129 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 211 km North, turns East 313 km, then South 211 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 111th, Displacement = 313 km East",
+        "Priya's Rank = 110th, Displacement = 211 km West",
+        "Priya's Rank = 112th, Displacement = 524 km North",
+        "Priya's Rank = 111th, Displacement = 422 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (129) - Left (19) + 1 = 111th. North/South movements cancel, leaving 313 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 15,
+      "question": "Reasoning Puzzle #105: In a seating alignment of 130 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 213 km North, turns East 316 km, then South 213 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 126th, Displacement = 316 km East",
+        "Priya's Rank = 125th, Displacement = 213 km West",
+        "Priya's Rank = 127th, Displacement = 529 km North",
+        "Priya's Rank = 126th, Displacement = 426 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (130) - Left (5) + 1 = 126th. North/South movements cancel, leaving 316 km East."
+    },
+    {
+      "id": 16,
+      "question": "Reasoning Puzzle #106: In a seating alignment of 131 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 215 km North, turns East 319 km, then South 215 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 126th, Displacement = 319 km East",
+        "Priya's Rank = 125th, Displacement = 215 km West",
+        "Priya's Rank = 127th, Displacement = 534 km North",
+        "Priya's Rank = 126th, Displacement = 430 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (131) - Left (6) + 1 = 126th. North/South movements cancel, leaving 319 km East."
+    },
+    {
+      "id": 17,
+      "question": "Reasoning Puzzle #107: In a seating alignment of 132 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 217 km North, turns East 322 km, then South 217 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 126th, Displacement = 322 km East",
+        "Priya's Rank = 125th, Displacement = 217 km West",
+        "Priya's Rank = 127th, Displacement = 539 km North",
+        "Priya's Rank = 126th, Displacement = 434 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (132) - Left (7) + 1 = 126th. North/South movements cancel, leaving 322 km East."
+    },
+    {
+      "id": 18,
+      "question": "Reasoning Puzzle #108: In a seating alignment of 133 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 219 km North, turns East 325 km, then South 219 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 126th, Displacement = 325 km East",
+        "Priya's Rank = 125th, Displacement = 219 km West",
+        "Priya's Rank = 127th, Displacement = 544 km North",
+        "Priya's Rank = 126th, Displacement = 438 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (133) - Left (8) + 1 = 126th. North/South movements cancel, leaving 325 km East."
+    },
+    {
+      "id": 19,
+      "question": "Reasoning Puzzle #109: In a seating alignment of 134 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 221 km North, turns East 328 km, then South 221 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 126th, Displacement = 328 km East",
+        "Priya's Rank = 125th, Displacement = 221 km West",
+        "Priya's Rank = 127th, Displacement = 549 km North",
+        "Priya's Rank = 126th, Displacement = 442 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (134) - Left (9) + 1 = 126th. North/South movements cancel, leaving 328 km East."
+    },
+    {
+      "id": 20,
+      "question": "Reasoning Puzzle #110: In a seating alignment of 135 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 223 km North, turns East 331 km, then South 223 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 126th, Displacement = 331 km East",
+        "Priya's Rank = 125th, Displacement = 223 km West",
+        "Priya's Rank = 127th, Displacement = 554 km North",
+        "Priya's Rank = 126th, Displacement = 446 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (135) - Left (10) + 1 = 126th. North/South movements cancel, leaving 331 km East."
     }
   ]
 }

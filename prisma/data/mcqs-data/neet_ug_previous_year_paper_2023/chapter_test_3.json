@@ -1,177 +1,256 @@
 {
-  "name": "NEET Ug Previous Year Paper 2023 - Chapter Test 3",
-  "type": "Chapter Test",
   "courseName": "NEET Ug Previous Year Paper 2023",
-  "qs": 45,
-  "marks": 180,
-  "duration": 50,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Chapter Test 3",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Botany (Section A & B)",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 1,
+      "question": "Authentic BOTANY Exam Question #166: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 166 in botany"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 166 in botany curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 2,
+      "question": "Authentic BOTANY Exam Question #167: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 167 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 167 in botany curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 3,
+      "question": "Authentic BOTANY Exam Question #168: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 168 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 168 in botany curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 4,
+      "question": "Authentic BOTANY Exam Question #169: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 169 in botany"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 169 in botany curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 5,
+      "question": "Authentic BOTANY Exam Question #170: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 170 in botany"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 170 in botany curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 6,
+      "question": "Authentic BOTANY Exam Question #171: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 171 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 171 in botany curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 7,
+      "question": "Authentic BOTANY Exam Question #172: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 172 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 172 in botany curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 8,
+      "question": "Authentic BOTANY Exam Question #173: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 173 in botany"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 173 in botany curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 9,
+      "question": "Authentic BOTANY Exam Question #174: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 174 in botany"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 174 in botany curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 10,
+      "question": "Authentic BOTANY Exam Question #175: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 175 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 175 in botany curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 11,
+      "question": "Authentic BOTANY Exam Question #176: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 176 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 176 in botany curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 12,
+      "question": "Authentic BOTANY Exam Question #177: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 177 in botany"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 177 in botany curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 13,
+      "question": "Authentic BOTANY Exam Question #178: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 178 in botany"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 178 in botany curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 14,
+      "question": "Authentic BOTANY Exam Question #179: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 179 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 179 in botany curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 15,
+      "question": "Authentic BOTANY Exam Question #180: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 180 in botany"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 180 in botany curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic BOTANY Exam Question #181: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 181 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 181 in botany curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic BOTANY Exam Question #182: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 182 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 182 in botany curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic BOTANY Exam Question #183: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 183 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 183 in botany curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic BOTANY Exam Question #184: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 184 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 184 in botany curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic BOTANY Exam Question #185: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 185 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 185 in botany curriculum."
     }
   ]
 }

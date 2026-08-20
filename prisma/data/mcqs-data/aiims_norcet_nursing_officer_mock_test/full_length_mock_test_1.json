@@ -1,232 +1,1226 @@
 {
-  "name": "Aiims Norcet Nursing Officer Mock Test - Full Length Mock Test 1",
-  "type": "Full Mock",
   "courseName": "Aiims Norcet Nursing Officer Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "medical",
+  "testName": "Full Length Mock Test 1",
+  "totalQuestions": 100,
+  "totalMarks": 100,
+  "duration": 120,
+  "subjects": [
+    {
+      "name": "Anatomy, Physiology & Medical Surgical Nursing",
+      "questions": 40,
+      "marks": 40
+    },
+    {
+      "name": "Pharmacology, Community Health & Obstetrics",
+      "questions": 40,
+      "marks": 40
+    },
+    {
+      "name": "General Aptitude & General Knowledge",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 1,
+      "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 2,
+      "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 3,
+      "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 4,
+      "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 5,
+      "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 6,
+      "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 7,
+      "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 8,
+      "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 9,
+      "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 10,
+      "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 11,
+      "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 12,
+      "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 13,
+      "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 14,
+      "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 15,
+      "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 16,
+      "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 17,
+      "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 18,
+      "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 19,
+      "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 20,
+      "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 21,
+      "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 22,
+      "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 23,
+      "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 24,
+      "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 25,
+      "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #33: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #34: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #35: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #36: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #37: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #38: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #39: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #40: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 51,
+      "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 52,
+      "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 53,
+      "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 54,
+      "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 55,
+      "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 56,
+      "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 57,
+      "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 58,
+      "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 59,
+      "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 60,
+      "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 61,
+      "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 62,
+      "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 63,
+      "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 64,
+      "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 65,
+      "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 66,
+      "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 67,
+      "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 68,
+      "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 69,
+      "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 70,
+      "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 71,
+      "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 72,
+      "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 73,
+      "question": "General Knowledge #33: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 74,
+      "question": "General Knowledge #34: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 75,
+      "question": "General Knowledge #35: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 76,
+      "question": "General Knowledge #36: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 77,
+      "question": "General Knowledge #37: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 78,
+      "question": "General Knowledge #38: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 79,
+      "question": "General Knowledge #39: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 80,
+      "question": "General Knowledge #40: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 81,
+      "question": "Quantitative Problem #1: A shopkeeper buys an item at cost ₹250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((270 - 250) / 250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 82,
+      "question": "Quantitative Problem #2: A shopkeeper buys an item at cost ₹350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((386.75 - 350) / 350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 83,
+      "question": "Quantitative Problem #3: A shopkeeper buys an item at cost ₹450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((598.5 - 450) / 450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 84,
+      "question": "Quantitative Problem #4: A shopkeeper buys an item at cost ₹550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((742.5 - 550) / 550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 85,
+      "question": "Quantitative Problem #5: A shopkeeper buys an item at cost ₹650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((607.7500000000001 - 650) / 650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 86,
+      "question": "Quantitative Problem #6: A shopkeeper buys an item at cost ₹750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((855 - 750) / 750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 87,
+      "question": "Quantitative Problem #7: A shopkeeper buys an item at cost ₹850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((994.5 - 850) / 850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 88,
+      "question": "Quantitative Problem #8: A shopkeeper buys an item at cost ₹950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1130.5 - 950) / 950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 89,
+      "question": "Quantitative Problem #9: A shopkeeper buys an item at cost ₹1050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1496.25 - 1050) / 1050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 90,
+      "question": "Quantitative Problem #10: A shopkeeper buys an item at cost ₹1150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1138.5 - 1150) / 1150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 91,
+      "question": "Quantitative Problem #11: A shopkeeper buys an item at cost ₹1250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1275 - 1250) / 1250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 92,
+      "question": "Quantitative Problem #12: A shopkeeper buys an item at cost ₹1350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1667.25 - 1350) / 1350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 93,
+      "question": "Quantitative Problem #13: A shopkeeper buys an item at cost ₹1450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1826.9999999999998 - 1450) / 1450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 94,
+      "question": "Quantitative Problem #14: A shopkeeper buys an item at cost ₹1550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1976.25 - 1550) / 1550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 95,
+      "question": "Quantitative Problem #15: A shopkeeper buys an item at cost ₹1650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1724.2500000000002 - 1650) / 1650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 96,
+      "question": "Quantitative Problem #16: A shopkeeper buys an item at cost ₹1750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((1890 - 1750) / 1750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 97,
+      "question": "Quantitative Problem #17: A shopkeeper buys an item at cost ₹1850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((2044.25 - 1850) / 1850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 98,
+      "question": "Quantitative Problem #18: A shopkeeper buys an item at cost ₹1950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((2593.5 - 1950) / 1950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 99,
+      "question": "Quantitative Problem #19: A shopkeeper buys an item at cost ₹2050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 40%, Joint Work = 36 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((2767.5 - 2050) / 2050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
+    },
+    {
+      "id": 100,
+      "question": "Quantitative Problem #20: A shopkeeper buys an item at cost ₹2150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -5%, Joint Work = 38 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((2010.25 - 2150) / 2150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     }
   ]
 }

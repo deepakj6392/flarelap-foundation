@@ -1,232 +1,1821 @@
 {
-  "name": "NVS Teacher Exam Mock Test - Full Length Mock Test 1",
-  "type": "Full Mock",
   "courseName": "NVS Teacher Exam Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 1",
+  "totalQuestions": 150,
+  "totalMarks": 150,
+  "duration": 180,
+  "subjects": [
+    {
+      "name": "General Knowledge, Reasoning & Language",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "Teaching Aptitude & Pedagogy / Subject Domain",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Coding-Decoding: In a specific coding system, 'TEACHER' is written as 'VGCEJGT'. Following the logic (Each letter shifted +2), how is 'STUDENT' written?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "VWFGPVU",
+        "UVWFGPV",
+        "UWWFGPW",
+        "VPGFWVU"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rule: Each letter shifted +2. 'STUDENT' becomes 'UVWFGPV'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Coding-Decoding: In a specific coding system, 'COMPUTER' is written as 'RFUVQNPC'. Following the logic (Reverse order with +1 shift), how is 'MEDICINE' written?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "OJDJEFME",
+        "EOJDJEFM",
+        "FOJDJFFM",
+        "MFEJDJOE"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rule: Reverse order with +1 shift. 'MEDICINE' becomes 'EOJDJEFM'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Coding-Decoding: In a specific coding system, 'TRIANGLE' is written as 'SUJBMHKF'. Following the logic (Alternate +1 and -1 shift), how is 'POLYGON' written?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "PMZHPOQ",
+        "QPMZHPO",
+        "QPMZHPO",
+        "OPHZMPQ"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rule: Alternate +1 and -1 shift. 'POLYGON' becomes 'QPMZHPO'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Coding-Decoding: In a specific coding system, 'MONKEY' is written as 'XDJMNL'. Following the logic (Reverse position minus 1), how is 'TIGER' written?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "DFHSQ",
+        "QDFHS",
+        "QDFHS",
+        "SHFDQ"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rule: Reverse position minus 1. 'TIGER' becomes 'QDFHS'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Coding-Decoding: In a specific coding system, 'DIAGNOSIS' is written as 'EJBHOPTJT'. Following the logic (Vowels +1, Consonants +1), how is 'PATIENT' written?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "BUJFOUQ",
+        "QBUJFOU",
+        "QBUJFOU",
+        "UOFJUBQ"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rule: Vowels +1, Consonants +1. 'PATIENT' becomes 'QBUJFOU'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Coding-Decoding: In a specific coding system, 'ALPHABET' is written as 'ZKOYZYSG'. Following the logic (Opposite letter alphabet pair (A-Z, B-Y)), how is 'SENTENCE' written?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "VMGVMXVH",
+        "HVMGVMXV",
+        "HWMGWMXW",
+        "VXMVGMVH"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rule: Opposite letter alphabet pair (A-Z, B-Y). 'SENTENCE' becomes 'HVMGVMXV'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Coding-Decoding: In a specific coding system, 'FRACTION' is written as 'MNAETCIO'. Following the logic (First and second half split and reversed), how is 'NUMERATOR' written?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "TOANERUMR",
+        "RTOANERUM",
+        "RTOANFRUM",
+        "MURENAOTR"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rule: First and second half split and reversed. 'NUMERATOR' becomes 'RTOANERUM'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Coding-Decoding: In a specific coding system, 'SYMBOL' is written as 'TZOCPM'. Following the logic (Shift +1 on consonants and +2 on vowels), how is 'NUMBER' written?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "VOCFSO",
+        "OVOCFS",
+        "OWOCFS",
+        "SFCOVO"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rule: Shift +1 on consonants and +2 on vowels. 'NUMBER' becomes 'OVOCFS'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Coding-Decoding: In a specific coding system, 'ORANGE' is written as 'PUBOHF'. Following the logic (First letter +1, vowels shifted to next vowel), how is 'BANANA' written?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "BOBOBC",
+        "CBOBOB",
+        "CBOBOB",
+        "BOBOBC"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rule: First letter +1, vowels shifted to next vowel. 'BANANA' becomes 'CBOBOB'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Coding-Decoding: In a specific coding system, 'KNOWLEDGE' is written as 'LOMXMFDHF'. Following the logic (Alternating +1 and -1 on positions), how is 'WISDOM' written?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "JTETNX",
+        "XJTETN",
+        "XJTFTN",
+        "NTETJX"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rule: Alternating +1 and -1 on positions. 'WISDOM' becomes 'XJTETN'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Coding-Decoding: In a specific coding system, 'SYSTEM' is written as 'SYSMET'. Following the logic (First 3 letters reversed, last 3 reversed), how is 'FRACTION' written?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "ARFTNOIC",
+        "CARFTNOI",
+        "CARFTNOI",
+        "IONTFRAC"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rule: First 3 letters reversed, last 3 reversed. 'FRACTION' becomes 'CARFTNOI'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Coding-Decoding: In a specific coding system, 'CALENDAR' is written as 'CLANAEDR'. Following the logic (Vowels swapped with adjacent consonants), how is 'CIRCULAR' written?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "RIUCLRAC",
+        "CRIUCLRA",
+        "CRIUCLRA",
+        "ARLCUIRC"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rule: Vowels swapped with adjacent consonants. 'CIRCULAR' becomes 'CRIUCLRA'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Coding-Decoding: In a specific coding system, 'BOMBAIL' is written as 'BOMBMLI'. Following the logic (Vowels replaced by next alphabetical vowel), how is 'HARBOUR' written?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "ARBROUH",
+        "HARBROU",
+        "HARBROU",
+        "UORBRAH"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rule: Vowels replaced by next alphabetical vowel. 'HARBOUR' becomes 'HARBROU'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Coding-Decoding: In a specific coding system, 'DISTANT' is written as 'TNASITD'. Following the logic (Reverse entire word), how is 'DISPLAY' written?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "ALPSIDY",
+        "YALPSID",
+        "YALPSID",
+        "DISPLAY"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rule: Reverse entire word. 'DISPLAY' becomes 'YALPSID'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Coding-Decoding: In a specific coding system, 'EXAM' is written as 'FYBN'. Following the logic (Each letter +1), how is 'TEST' written?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "FTUU",
+        "UFTU",
+        "UFTU",
+        "UTFU"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'TEST' becomes 'UFTU'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "Coding-Decoding: In a specific coding system, 'LOGIC' is written as 'JMEGE'. Following the logic (Shift +1 on each letter), how is 'BRAIN' written?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "SBJOC",
+        "CSBJO",
+        "CSBJO",
+        "OJBSC"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rule: Shift +1 on each letter. 'BRAIN' becomes 'CSBJO'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "Coding-Decoding: In a specific coding system, 'MATRIX' is written as 'NZGIRC'. Following the logic (First two swap, last two swap), how is 'VECTOR' written?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "VCTROE",
+        "EVCTRO",
+        "FWCTRO",
+        "ORTCVE"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rule: First two swap, last two swap. 'VECTOR' becomes 'EVCTRO'."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "Coding-Decoding: In a specific coding system, 'NETWORK' is written as 'OEUXPSL'. Following the logic (Each letter +1 and reversed), how is 'ROUTER' written?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "PVGFSS",
+        "SPVGFS",
+        "SPWGFS",
+        "SFGVPS"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rule: Each letter +1 and reversed. 'ROUTER' becomes 'SPVGFS'."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "Coding-Decoding: In a specific coding system, 'DESIGN' is written as 'EFTJHO'. Following the logic (Each letter +1), how is 'SKETCH' written?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "LFUDIT",
+        "TLFUDI",
+        "TLFUDI",
+        "IDUFLT"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'SKETCH' becomes 'TLFUDI'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "Coding-Decoding: In a specific coding system, 'BINARY' is written as 'CJOBSZ'. Following the logic (Each letter +1), how is 'CODING' written?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "PEJOHD",
+        "DPEJOH",
+        "DPFJOH",
+        "HOJEPD"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'CODING' becomes 'DPEJOH'."
+    },
+    {
+      "id": 21,
+      "question": "Coding-Decoding: In a specific coding system, 'SEARCH' is written as 'TFBSDI'. Following the logic (Each letter +1), how is 'ENGINE' written?",
+      "options": [
+        "OHJOFF",
+        "FOHJOF",
+        "FOHJOF",
+        "FOJHOF"
+      ],
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'ENGINE' becomes 'FOHJOF'."
+    },
+    {
+      "id": 22,
+      "question": "Coding-Decoding: In a specific coding system, 'FLARE' is written as 'GMBSF'. Following the logic (Each letter +1), how is 'LAP' written?",
+      "options": [
+        "BQM",
+        "MBQ",
+        "MBQ",
+        "QBM"
+      ],
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'LAP' becomes 'MBQ'."
+    },
+    {
+      "id": 23,
+      "question": "Coding-Decoding: In a specific coding system, 'FOUND' is written as 'GPEOE'. Following the logic (Each letter +1), how is 'NATION' written?",
+      "options": [
+        "BUJPOO",
+        "OBUJPO",
+        "OBUJPO",
+        "OPJUBO"
+      ],
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'NATION' becomes 'OBUJPO'."
+    },
+    {
+      "id": 24,
+      "question": "Coding-Decoding: In a specific coding system, 'POWER' is written as 'QPXFS'. Following the logic (Each letter +1), how is 'ENERGY' written?",
+      "options": [
+        "OFSHZF",
+        "FOFSHZ",
+        "FOFSHZ",
+        "ZHSFOF"
+      ],
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'ENERGY' becomes 'FOFSHZ'."
+    },
+    {
+      "id": 25,
+      "question": "Coding-Decoding: In a specific coding system, 'SMART' is written as 'TNBUS'. Following the logic (Each letter +1), how is 'CLEVER' written?",
+      "options": [
+        "MFWFSD",
+        "DMFWFS",
+        "DMFWFS",
+        "SFWFMD"
+      ],
+      "answer": 1,
+      "hint": "Rule: Each letter +1. 'CLEVER' becomes 'DMFWFS'."
+    },
+    {
+      "id": 26,
+      "question": "Blood Relations: His father is the only son of my father-in-law. How are they related?",
+      "options": [
+        "Husband",
+        "Son",
+        "Nephew",
+        "Brother-in-law"
+      ],
+      "answer": 1,
+      "hint": "Only son of father-in-law is husband. Husband's son is her son."
+    },
+    {
+      "id": 27,
+      "question": "Blood Relations: She is the daughter of the only son of my grandfather. How are they related?",
+      "options": [
+        "Cousin",
+        "Sister",
+        "Aunt",
+        "Mother"
+      ],
+      "answer": 1,
+      "hint": "Only son of grandfather is father. Father's daughter is sister."
+    },
+    {
+      "id": 28,
+      "question": "Blood Relations: A + B means A is father of B; A - B means A is sister of B; A * B means A is son of B. What does P + Q - R * S imply?. How are they related?",
+      "options": [
+        "P is brother of S",
+        "P is married to S",
+        "P is son of S",
+        "P is uncle of S"
+      ],
+      "answer": 1,
+      "hint": "P is father of Q & R, S is mother of R => P & S married."
+    },
+    {
+      "id": 29,
+      "question": "Blood Relations: Pointing to a man, a woman said: 'His mother is the only daughter of my mother.'. How are they related?",
+      "options": [
+        "Brother",
+        "Son",
+        "Husband",
+        "Father"
+      ],
+      "answer": 1,
+      "hint": "Only daughter of mother is self. She is his mother."
+    },
+    {
+      "id": 30,
+      "question": "Blood Relations: X is brother of Y. Y is wife of Z. Z is son of W. How is X related to Z?. How are they related?",
+      "options": [
+        "Brother",
+        "Brother-in-law",
+        "Cousin",
+        "Uncle"
+      ],
+      "answer": 1,
+      "hint": "X is wife's brother => Brother-in-law."
+    },
+    {
+      "id": 31,
+      "question": "Blood Relations: If P is father of Q, R is son of S, T is brother of P, and Q is sister of R, how is S related to T?. How are they related?",
+      "options": [
+        "Sister",
+        "Sister-in-law",
+        "Mother",
+        "Daughter-in-law"
+      ],
+      "answer": 1,
+      "hint": "S is mother of Q & R (P's wife). T is P's brother => Sister-in-law."
+    },
+    {
+      "id": 32,
+      "question": "Blood Relations: Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.'. How are they related?",
+      "options": [
+        "Brother",
+        "Cousin",
+        "Nephew",
+        "Son"
+      ],
+      "answer": 1,
+      "hint": "Father of uncle is grandfather. Grandfather's daughter is aunt/mother. Her son is cousin."
+    },
+    {
+      "id": 33,
+      "question": "Blood Relations: A's mother is sister of B and daughter of C. D is daughter of B and sister of E. How is C related to E?. How are they related?",
+      "options": [
+        "Mother",
+        "Grandparent",
+        "Aunt",
+        "Daughter"
+      ],
+      "answer": 1,
+      "hint": "C is parent of B, B is parent of E => C is grandparent."
+    },
+    {
+      "id": 34,
+      "question": "Blood Relations: Showing a picture of an old man, Amit said, 'His son is my son's uncle.' How is the old man related to Amit?. How are they related?",
+      "options": [
+        "Grandfather",
+        "Father",
+        "Brother",
+        "Uncle"
+      ],
+      "answer": 1,
+      "hint": "Amit's son's uncle is Amit's brother. Old man is his father."
+    },
+    {
+      "id": 35,
+      "question": "Blood Relations: M is sister of N. N is father of O. P is wife of M. How is O related to M?. How are they related?",
+      "options": [
+        "Son",
+        "Niece or Nephew",
+        "Daughter",
+        "Brother"
+      ],
+      "answer": 1,
+      "hint": "M is aunt of O."
+    },
+    {
+      "id": 36,
+      "question": "Blood Relations: A is father of B, but B is not his son. How is B related to A?. How are they related?",
+      "options": [
+        "Son",
+        "Daughter",
+        "Brother",
+        "Sister"
+      ],
+      "answer": 1,
+      "hint": "B is A's daughter."
+    },
+    {
+      "id": 37,
+      "question": "Blood Relations: Pointing to a photograph, Rakesh said, 'She is the mother of my son's wife.' How is Rakesh related to the woman?. How are they related?",
+      "options": [
+        "Husband",
+        "In-law",
+        "Brother",
+        "Son"
+      ],
+      "answer": 1,
+      "hint": "Son's wife is daughter-in-law. Her mother is co-in-law."
+    },
+    {
+      "id": 38,
+      "question": "Blood Relations: If A is B's sister, C is B's mother, D is C's father, E is D's mother, how is A related to D?. How are they related?",
+      "options": [
+        "Daughter",
+        "Granddaughter",
+        "Sister",
+        "Mother"
+      ],
+      "answer": 1,
+      "hint": "D is C's father, C is A's mother => A is granddaughter."
+    },
+    {
+      "id": 39,
+      "question": "Blood Relations: B is the brother of A, whose mother is C. D is the father of C. How is B related to D?. How are they related?",
+      "options": [
+        "Son",
+        "Grandson",
+        "Nephew",
+        "Grandfather"
+      ],
+      "answer": 1,
+      "hint": "C is mother of B, D is father of C => B is grandson."
+    },
+    {
+      "id": 40,
+      "question": "Blood Relations: E is brother of B, A is sister of B. How is A related to E?. How are they related?",
+      "options": [
+        "Brother",
+        "Sister",
+        "Mother",
+        "Aunt"
+      ],
+      "answer": 1,
+      "hint": "A and E are siblings."
+    },
+    {
+      "id": 41,
+      "question": "Blood Relations: K is brother of T. T is wife of M. M is son of R. How is K related to R?. How are they related?",
+      "options": [
+        "Son",
+        "Son-in-law's brother",
+        "Brother",
+        "Nephew"
+      ],
+      "answer": 1,
+      "hint": "K is brother of R's daughter-in-law."
+    },
+    {
+      "id": 42,
+      "question": "Blood Relations: P is brother of Q. R is mother of Q. S is father of R. T is mother of S. How is P related to S?. How are they related?",
+      "options": [
+        "Son",
+        "Grandson",
+        "Great-grandson",
+        "Father"
+      ],
+      "answer": 1,
+      "hint": "R is mother of P, S is father of R => P is grandson."
+    },
+    {
+      "id": 43,
+      "question": "Blood Relations: A and B are married couple. X and Y are brothers. X is brother of A. How is Y related to B?. How are they related?",
+      "options": [
+        "Brother",
+        "Brother-in-law",
+        "Son",
+        "Cousin"
+      ],
+      "answer": 1,
+      "hint": "Y is A's brother => B's brother-in-law."
+    },
+    {
+      "id": 44,
+      "question": "Blood Relations: Rahul told Anand, 'Yesterday I defeated the only brother of the daughter of my grandmother.' Who did Rahul defeat?. How are they related?",
+      "options": [
+        "Uncle",
+        "Father",
+        "Brother",
+        "Son"
+      ],
+      "answer": 1,
+      "hint": "Daughter of grandmother is aunt. Her only brother is father."
+    },
+    {
+      "id": 45,
+      "question": "Blood Relations: Deepak has a brother Anil. Deepak is the son of Prem. Vimal is Prem's father. In terms of relationship, how is Anil related to Vimal?. How are they related?",
+      "options": [
+        "Son",
+        "Grandson",
+        "Brother",
+        "Nephew"
+      ],
+      "answer": 1,
+      "hint": "Prem is father of Anil, Vimal is father of Prem => Anil is grandson."
+    },
+    {
+      "id": 46,
+      "question": "Blood Relations: If 'A $ B' means A is father of B, 'A # B' means A is mother of B, what does P $ Q # R mean?. How are they related?",
+      "options": [
+        "P is father of R",
+        "P is maternal grandfather of R",
+        "P is uncle of R",
+        "P is brother of R"
+      ],
+      "answer": 1,
+      "hint": "P is father of Q, Q is mother of R => P is maternal grandfather."
+    },
+    {
+      "id": 47,
+      "question": "Blood Relations: Looking at a portrait, a man said, 'I have no brother or sister, but that man's father is my father's son.' Whose portrait is it?. How are they related?",
+      "options": [
+        "His father's",
+        "His son's",
+        "His nephew's",
+        "His own"
+      ],
+      "answer": 1,
+      "hint": "Father's son is himself. 'That man's father is me' => His son."
+    },
+    {
+      "id": 48,
+      "question": "Blood Relations: A is B's brother. C is A's mother. D is C's father. F is A's son. How is F related to D?. How are they related?",
+      "options": [
+        "Grandson",
+        "Great-grandson",
+        "Son",
+        "Nephew"
+      ],
+      "answer": 1,
+      "hint": "D is grandfather of A. F is son of A => Great-grandson."
+    },
+    {
+      "id": 49,
+      "question": "Blood Relations: M is father of N, L is brother of M, P is mother of L. How is N related to P?. How are they related?",
+      "options": [
+        "Son",
+        "Grandchild",
+        "Daughter",
+        "Brother"
+      ],
+      "answer": 1,
+      "hint": "P is mother of M, N is child of M => Grandchild."
+    },
+    {
+      "id": 50,
+      "question": "Blood Relations: Q is mother of P. P is wife of R. S is brother of R. How is S related to Q?. How are they related?",
+      "options": [
+        "Son",
+        "Son-in-law's brother",
+        "Nephew",
+        "Brother"
+      ],
+      "answer": 1,
+      "hint": "P is Q's daughter. R is P's husband. S is R's brother."
+    },
+    {
+      "id": 51,
+      "question": "Syllogisms: All cars are trucks. All trucks are vehicles.. Which conclusion logically follows?",
+      "options": [
+        "Only Conclusion I follows",
+        "Both Conclusion I and II follow",
+        "Only Conclusion II follows",
+        "Neither follows"
+      ],
+      "answer": 1,
+      "hint": "Conclusion I: All cars are vehicles. Conclusion II: Some vehicles are trucks."
+    },
+    {
+      "id": 52,
+      "question": "Syllogisms: Some pens are books. All books are pencils.. Which conclusion logically follows?",
+      "options": [
+        "All pens are pencils",
+        "Some pens are pencils",
+        "No pen is pencil",
+        "All pencils are books"
+      ],
+      "answer": 1,
+      "hint": "Intersection of pens and books falls inside pencils."
+    },
+    {
+      "id": 53,
+      "question": "Syllogisms: No cat is dog. All dogs are lions.. Which conclusion logically follows?",
+      "options": [
+        "All lions are cats",
+        "Some lions are not cats",
+        "No lion is cat",
+        "All cats are lions"
+      ],
+      "answer": 1,
+      "hint": "Dogs are inside lions and outside cats."
+    },
+    {
+      "id": 54,
+      "question": "Syllogisms: All apples are fruits. Some fruits are sweet.. Which conclusion logically follows?",
+      "options": [
+        "All apples are sweet",
+        "Neither Conclusion I nor II follows conclusively",
+        "No sweet is apple",
+        "Some sweet are fruits"
+      ],
+      "answer": 1,
+      "hint": "No direct link between apples and sweet."
+    },
+    {
+      "id": 55,
+      "question": "Syllogisms: Only a few doors are windows. All windows are walls.. Which conclusion logically follows?",
+      "options": [
+        "All doors are windows",
+        "Some doors are not windows",
+        "No wall is door",
+        "All walls are windows"
+      ],
+      "answer": 1,
+      "hint": "'Only a few' implies both some are and some are not."
+    },
+    {
+      "id": 56,
+      "question": "Syllogisms: Some doctors are engineers. All engineers are scientists. No scientist is pilot.. Which conclusion logically follows?",
+      "options": [
+        "All doctors are pilots",
+        "No doctor is pilot is a possibility",
+        "Some pilots are engineers",
+        "All scientists are doctors"
+      ],
+      "answer": 1,
+      "hint": "No engineer is pilot, but doctors can overlap."
+    },
+    {
+      "id": 57,
+      "question": "Syllogisms: Statements: All A are B. No B is C. All C are D.. Which conclusion logically follows?",
+      "options": [
+        "All A are C",
+        "Some D are not B",
+        "Some B are D",
+        "No A is D"
+      ],
+      "answer": 1,
+      "hint": "C ⊂ D and C ∩ B = Ø."
+    },
+    {
+      "id": 58,
+      "question": "Syllogisms: Statements: Some red are blue. Some blue are green. Some green are yellow.. Which conclusion logically follows?",
+      "options": [
+        "All red are yellow",
+        "None of the universal conclusions follow",
+        "All green are red",
+        "No yellow is red"
+      ],
+      "answer": 1,
+      "hint": "Chain of 'Some' yields no universal relation."
+    },
+    {
+      "id": 59,
+      "question": "Syllogisms: Statements: All rain is water. No water is fire. Some fire is smoke.. Which conclusion logically follows?",
+      "options": [
+        "All smoke is water",
+        "Some smoke are not water",
+        "No rain is smoke",
+        "All fire is rain"
+      ],
+      "answer": 1,
+      "hint": "Smoke that is fire cannot be water."
+    },
+    {
+      "id": 60,
+      "question": "Syllogisms: Statements: Only a few books are papers. No paper is pen.. Which conclusion logically follows?",
+      "options": [
+        "All books are pens",
+        "Some books are not pens",
+        "All papers are books",
+        "No book is paper"
+      ],
+      "answer": 1,
+      "hint": "Books that are papers cannot be pens."
+    },
+    {
+      "id": 61,
+      "question": "Syllogisms: All shirts are pants. All pants are shoes.. Which conclusion logically follows?",
+      "options": [
+        "No shirt is shoe",
+        "All shirts are shoes",
+        "Some shoes are not pants",
+        "All shoes are shirts"
+      ],
+      "answer": 1,
+      "hint": "Transitive relation."
+    },
+    {
+      "id": 62,
+      "question": "Syllogisms: Some birds are insects. All insects are butterflies.. Which conclusion logically follows?",
+      "options": [
+        "All birds are butterflies",
+        "Some birds are butterflies",
+        "No butterfly is bird",
+        "All butterflies are insects"
+      ],
+      "answer": 1,
+      "hint": "Overlap extends to butterflies."
+    },
+    {
+      "id": 63,
+      "question": "Syllogisms: No river is ocean. All oceans are seas.. Which conclusion logically follows?",
+      "options": [
+        "All seas are rivers",
+        "Some seas are not rivers",
+        "No sea is river",
+        "All rivers are seas"
+      ],
+      "answer": 1,
+      "hint": "Oceans are inside seas and outside rivers."
+    },
+    {
+      "id": 64,
+      "question": "Syllogisms: All men are mortal. Socrates is a man.. Which conclusion logically follows?",
+      "options": [
+        "Socrates is immortal",
+        "Socrates is mortal",
+        "All mortals are Socrates",
+        "No man is mortal"
+      ],
+      "answer": 1,
+      "hint": "Classic Aristotelian syllogism."
+    },
+    {
+      "id": 65,
+      "question": "Syllogisms: Some stars are planets. No planet is moon.. Which conclusion logically follows?",
+      "options": [
+        "All stars are moons",
+        "Some stars are not moons",
+        "No star is moon",
+        "All moons are stars"
+      ],
+      "answer": 1,
+      "hint": "Stars that are planets cannot be moons."
+    },
+    {
+      "id": 66,
+      "question": "Syllogisms: Only a few mobile are laptop. All laptop are computer.. Which conclusion logically follows?",
+      "options": [
+        "All mobile are computer",
+        "Some mobile are computer",
+        "No computer is mobile",
+        "All computer are laptop"
+      ],
+      "answer": 1,
+      "hint": "'Only a few' guarantees intersection."
+    },
+    {
+      "id": 67,
+      "question": "Syllogisms: All metals are solids. All solids are hard.. Which conclusion logically follows?",
+      "options": [
+        "Some metals are soft",
+        "All metals are hard",
+        "No hard is solid",
+        "All hard are metals"
+      ],
+      "answer": 1,
+      "hint": "Transitive."
+    },
+    {
+      "id": 68,
+      "question": "Syllogisms: Some teachers are scholars. Some scholars are authors.. Which conclusion logically follows?",
+      "options": [
+        "All teachers are authors",
+        "Neither conclusion follows",
+        "No author is teacher",
+        "All scholars are teachers"
+      ],
+      "answer": 1,
+      "hint": "Two 'Some' statements yield no universal link."
+    },
+    {
+      "id": 69,
+      "question": "Syllogisms: No student is lazy. All lazy are failing.. Which conclusion logically follows?",
+      "options": [
+        "All students are failing",
+        "Some failing are not students",
+        "No failing is student",
+        "All lazy are students"
+      ],
+      "answer": 1,
+      "hint": "Lazy individuals are outside students."
+    },
+    {
+      "id": 70,
+      "question": "Syllogisms: All trees are plants. No plant is animal.. Which conclusion logically follows?",
+      "options": [
+        "Some trees are animals",
+        "No tree is animal",
+        "All animals are plants",
+        "All trees are animals"
+      ],
+      "answer": 1,
+      "hint": "Trees are inside plants, plants disjoint from animals."
+    },
+    {
+      "id": 71,
+      "question": "Syllogisms: Some dogs are friendly. All friendly creatures are loyal.. Which conclusion logically follows?",
+      "options": [
+        "All dogs are loyal",
+        "Some dogs are loyal",
+        "No dog is loyal",
+        "All loyal creatures are dogs"
+      ],
+      "answer": 1,
+      "hint": "Overlap."
+    },
+    {
+      "id": 72,
+      "question": "Syllogisms: Only a few chairs are tables. No table is desk.. Which conclusion logically follows?",
+      "options": [
+        "All chairs are desks",
+        "Some chairs are not desks",
+        "All desks are chairs",
+        "No chair is table"
+      ],
+      "answer": 1,
+      "hint": "Chairs that are tables cannot be desks."
+    },
+    {
+      "id": 73,
+      "question": "Syllogisms: All fruits are healthy. All healthy foods are organic.. Which conclusion logically follows?",
+      "options": [
+        "No fruit is organic",
+        "All fruits are organic",
+        "Some organic foods are unhealthy",
+        "All organic foods are fruits"
+      ],
+      "answer": 1,
+      "hint": "Transitive."
+    },
+    {
+      "id": 74,
+      "question": "Syllogisms: Some books are novels. No novel is comic.. Which conclusion logically follows?",
+      "options": [
+        "All books are comics",
+        "Some books are not comics",
+        "No comic is book",
+        "All comics are novels"
+      ],
+      "answer": 1,
+      "hint": "Books that are novels cannot be comics."
+    },
+    {
+      "id": 75,
+      "question": "Syllogisms: All rivers are water bodies. All water bodies contain water.. Which conclusion logically follows?",
+      "options": [
+        "No river contains water",
+        "All rivers contain water",
+        "All water contains rivers",
+        "Some rivers do not contain water"
+      ],
+      "answer": 1,
+      "hint": "Transitive."
+    },
+    {
+      "id": 76,
+      "question": "Quantitative Problem #1: A shopkeeper buys an item at cost ₹250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((270 - 250) / 250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 77,
+      "question": "Quantitative Problem #2: A shopkeeper buys an item at cost ₹350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((386.75 - 350) / 350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 78,
+      "question": "Quantitative Problem #3: A shopkeeper buys an item at cost ₹450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((598.5 - 450) / 450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 79,
+      "question": "Quantitative Problem #4: A shopkeeper buys an item at cost ₹550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((742.5 - 550) / 550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 80,
+      "question": "Quantitative Problem #5: A shopkeeper buys an item at cost ₹650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((607.7500000000001 - 650) / 650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 81,
+      "question": "Quantitative Problem #6: A shopkeeper buys an item at cost ₹750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((855 - 750) / 750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 82,
+      "question": "Quantitative Problem #7: A shopkeeper buys an item at cost ₹850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((994.5 - 850) / 850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 83,
+      "question": "Quantitative Problem #8: A shopkeeper buys an item at cost ₹950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1130.5 - 950) / 950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 84,
+      "question": "Quantitative Problem #9: A shopkeeper buys an item at cost ₹1050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1496.25 - 1050) / 1050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 85,
+      "question": "Quantitative Problem #10: A shopkeeper buys an item at cost ₹1150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1138.5 - 1150) / 1150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 86,
+      "question": "Quantitative Problem #11: A shopkeeper buys an item at cost ₹1250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1275 - 1250) / 1250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 87,
+      "question": "Quantitative Problem #12: A shopkeeper buys an item at cost ₹1350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1667.25 - 1350) / 1350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 88,
+      "question": "Quantitative Problem #13: A shopkeeper buys an item at cost ₹1450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1826.9999999999998 - 1450) / 1450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 89,
+      "question": "Quantitative Problem #14: A shopkeeper buys an item at cost ₹1550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1976.25 - 1550) / 1550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 90,
+      "question": "Quantitative Problem #15: A shopkeeper buys an item at cost ₹1650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1724.2500000000002 - 1650) / 1650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 91,
+      "question": "Quantitative Problem #16: A shopkeeper buys an item at cost ₹1750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((1890 - 1750) / 1750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 92,
+      "question": "Quantitative Problem #17: A shopkeeper buys an item at cost ₹1850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2044.25 - 1850) / 1850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 93,
+      "question": "Quantitative Problem #18: A shopkeeper buys an item at cost ₹1950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2593.5 - 1950) / 1950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 94,
+      "question": "Quantitative Problem #19: A shopkeeper buys an item at cost ₹2050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2767.5 - 2050) / 2050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
+    },
+    {
+      "id": 95,
+      "question": "Quantitative Problem #20: A shopkeeper buys an item at cost ₹2150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2010.25 - 2150) / 2150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
+    },
+    {
+      "id": 96,
+      "question": "Quantitative Problem #21: A shopkeeper buys an item at cost ₹2250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2565 - 2250) / 2250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
+    },
+    {
+      "id": 97,
+      "question": "Quantitative Problem #22: A shopkeeper buys an item at cost ₹2350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2749.5 - 2350) / 2350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
+    },
+    {
+      "id": 98,
+      "question": "Quantitative Problem #23: A shopkeeper buys an item at cost ₹2450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2915.5 - 2450) / 2450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
+    },
+    {
+      "id": 99,
+      "question": "Quantitative Problem #24: A shopkeeper buys an item at cost ₹2550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3633.75 - 2550) / 2550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
+    },
+    {
+      "id": 100,
+      "question": "Quantitative Problem #25: A shopkeeper buys an item at cost ₹2650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2623.5000000000005 - 2650) / 2650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
+    },
+    {
+      "id": 101,
+      "question": "Quantitative Problem #26: A shopkeeper buys an item at cost ₹2750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 5%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((2805 - 2750) / 2750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
+    },
+    {
+      "id": 102,
+      "question": "Quantitative Problem #27: A shopkeeper buys an item at cost ₹2850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 25%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3519.75 - 2850) / 2850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
+    },
+    {
+      "id": 103,
+      "question": "Quantitative Problem #28: A shopkeeper buys an item at cost ₹2950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 30%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3717 - 2950) / 2950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
+    },
+    {
+      "id": 104,
+      "question": "Quantitative Problem #29: A shopkeeper buys an item at cost ₹3050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 35%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3888.75 - 3050) / 3050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
+    },
+    {
+      "id": 105,
+      "question": "Quantitative Problem #30: A shopkeeper buys an item at cost ₹3150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 5%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3291.7500000000005 - 3150) / 3150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
+    },
+    {
+      "id": 106,
+      "question": "Quantitative Problem #31: A shopkeeper buys an item at cost ₹3250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.24 days",
+        "Profit = 8%, Joint Work = 8.24 days",
+        "Profit = 6.5%, Joint Work = 7.44 days",
+        "Profit = 10%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3510 - 3250) / 3250) * 100 = 8%. Combined Work = (17*16)/(17+16) = 8.24 days."
+    },
+    {
+      "id": 107,
+      "question": "Quantitative Problem #32: A shopkeeper buys an item at cost ₹3350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 9.74 days",
+        "Profit = 10.5%, Joint Work = 8.74 days",
+        "Profit = 9%, Joint Work = 7.94 days",
+        "Profit = 15%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3701.75 - 3350) / 3350) * 100 = 10.5%. Combined Work = (18*17)/(18+17) = 8.74 days."
+    },
+    {
+      "id": 108,
+      "question": "Quantitative Problem #33: A shopkeeper buys an item at cost ₹3450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 10.24 days",
+        "Profit = 33%, Joint Work = 9.24 days",
+        "Profit = 31.5%, Joint Work = 8.44 days",
+        "Profit = 35%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4588.5 - 3450) / 3450) * 100 = 33%. Combined Work = (19*18)/(19+18) = 9.24 days."
+    },
+    {
+      "id": 109,
+      "question": "Quantitative Problem #34: A shopkeeper buys an item at cost ₹3550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 10.74 days",
+        "Profit = 35%, Joint Work = 9.74 days",
+        "Profit = 33.5%, Joint Work = 8.94 days",
+        "Profit = 40%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4792.5 - 3550) / 3550) * 100 = 35%. Combined Work = (20*19)/(20+19) = 9.74 days."
+    },
+    {
+      "id": 110,
+      "question": "Quantitative Problem #35: A shopkeeper buys an item at cost ₹3650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 11.24 days",
+        "Profit = -6.5%, Joint Work = 10.24 days",
+        "Profit = -8%, Joint Work = 9.44 days",
+        "Profit = -5%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((3412.7500000000005 - 3650) / 3650) * 100 = -6.5%. Combined Work = (21*20)/(21+20) = 10.24 days."
+    },
+    {
+      "id": 111,
+      "question": "Quantitative Problem #36: A shopkeeper buys an item at cost ₹3750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 7.77 days",
+        "Profit = 14%, Joint Work = 6.77 days",
+        "Profit = 12.5%, Joint Work = 5.97 days",
+        "Profit = 15%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4275 - 3750) / 3750) * 100 = 14%. Combined Work = (10*21)/(10+21) = 6.77 days."
+    },
+    {
+      "id": 112,
+      "question": "Quantitative Problem #37: A shopkeeper buys an item at cost ₹3850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 8.33 days",
+        "Profit = 17%, Joint Work = 7.33 days",
+        "Profit = 15.5%, Joint Work = 6.53 days",
+        "Profit = 20%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4504.5 - 3850) / 3850) * 100 = 17%. Combined Work = (11*22)/(11+22) = 7.33 days."
+    },
+    {
+      "id": 113,
+      "question": "Quantitative Problem #38: A shopkeeper buys an item at cost ₹3950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 8.89 days",
+        "Profit = 19%, Joint Work = 7.89 days",
+        "Profit = 17.5%, Joint Work = 7.09 days",
+        "Profit = 25%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4700.5 - 3950) / 3950) * 100 = 19%. Combined Work = (12*23)/(12+23) = 7.89 days."
+    },
+    {
+      "id": 114,
+      "question": "Quantitative Problem #39: A shopkeeper buys an item at cost ₹4050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 9.43 days",
+        "Profit = 42.5%, Joint Work = 8.43 days",
+        "Profit = 41%, Joint Work = 7.63 days",
+        "Profit = 45%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5771.25 - 4050) / 4050) * 100 = 42.5%. Combined Work = (13*24)/(13+24) = 8.43 days."
+    },
+    {
+      "id": 115,
+      "question": "Quantitative Problem #40: A shopkeeper buys an item at cost ₹4150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 9.97 days",
+        "Profit = -1%, Joint Work = 8.97 days",
+        "Profit = -2.5%, Joint Work = 8.17 days",
+        "Profit = 0%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4108.5 - 4150) / 4150) * 100 = -1%. Combined Work = (14*25)/(14+25) = 8.97 days."
+    },
+    {
+      "id": 116,
+      "question": "Quantitative Problem #41: A shopkeeper buys an item at cost ₹4250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4335 - 4250) / 4250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 117,
+      "question": "Quantitative Problem #42: A shopkeeper buys an item at cost ₹4350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5372.25 - 4350) / 4350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 118,
+      "question": "Quantitative Problem #43: A shopkeeper buys an item at cost ₹4450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5607 - 4450) / 4450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 119,
+      "question": "Quantitative Problem #44: A shopkeeper buys an item at cost ₹4550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5801.25 - 4550) / 4550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 120,
+      "question": "Quantitative Problem #45: A shopkeeper buys an item at cost ₹4650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4859.25 - 4650) / 4650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 121,
+      "question": "Quantitative Problem #46: A shopkeeper buys an item at cost ₹4750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5130 - 4750) / 4750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 122,
+      "question": "Quantitative Problem #47: A shopkeeper buys an item at cost ₹4850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5359.25 - 4850) / 4850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 123,
+      "question": "Quantitative Problem #48: A shopkeeper buys an item at cost ₹4950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6583.5 - 4950) / 4950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 124,
+      "question": "Quantitative Problem #49: A shopkeeper buys an item at cost ₹5050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6817.5 - 5050) / 5050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 125,
+      "question": "Quantitative Problem #50: A shopkeeper buys an item at cost ₹5150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((4815.250000000001 - 5150) / 5150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 126,
+      "question": "Quantitative Problem #51: A shopkeeper buys an item at cost ₹5250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5985 - 5250) / 5250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 127,
+      "question": "Quantitative Problem #52: A shopkeeper buys an item at cost ₹5350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6259.5 - 5350) / 5350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 128,
+      "question": "Quantitative Problem #53: A shopkeeper buys an item at cost ₹5450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6485.499999999999 - 5450) / 5450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 129,
+      "question": "Quantitative Problem #54: A shopkeeper buys an item at cost ₹5550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7908.75 - 5550) / 5550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 130,
+      "question": "Quantitative Problem #55: A shopkeeper buys an item at cost ₹5650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5593.500000000001 - 5650) / 5650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 131,
+      "question": "Quantitative Problem #56: A shopkeeper buys an item at cost ₹5750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((5865 - 5750) / 5750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 132,
+      "question": "Quantitative Problem #57: A shopkeeper buys an item at cost ₹5850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7224.75 - 5850) / 5850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 133,
+      "question": "Quantitative Problem #58: A shopkeeper buys an item at cost ₹5950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7497 - 5950) / 5950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 134,
+      "question": "Quantitative Problem #59: A shopkeeper buys an item at cost ₹6050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7713.75 - 6050) / 6050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 135,
+      "question": "Quantitative Problem #60: A shopkeeper buys an item at cost ₹6150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6426.750000000001 - 6150) / 6150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 136,
+      "question": "Quantitative Problem #61: A shopkeeper buys an item at cost ₹6250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6750 - 6250) / 6250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 137,
+      "question": "Quantitative Problem #62: A shopkeeper buys an item at cost ₹6350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7016.75 - 6350) / 6350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 138,
+      "question": "Quantitative Problem #63: A shopkeeper buys an item at cost ₹6450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((8578.5 - 6450) / 6450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 139,
+      "question": "Quantitative Problem #64: A shopkeeper buys an item at cost ₹6550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((8842.5 - 6550) / 6550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 140,
+      "question": "Quantitative Problem #65: A shopkeeper buys an item at cost ₹6650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((6217.750000000001 - 6650) / 6650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 141,
+      "question": "Quantitative Problem #66: A shopkeeper buys an item at cost ₹6750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7695 - 6750) / 6750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 142,
+      "question": "Quantitative Problem #67: A shopkeeper buys an item at cost ₹6850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((8014.5 - 6850) / 6850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 143,
+      "question": "Quantitative Problem #68: A shopkeeper buys an item at cost ₹6950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((8270.5 - 6950) / 6950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 144,
+      "question": "Quantitative Problem #69: A shopkeeper buys an item at cost ₹7050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((10046.25 - 7050) / 7050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 145,
+      "question": "Quantitative Problem #70: A shopkeeper buys an item at cost ₹7150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7078.500000000001 - 7150) / 7150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 146,
+      "question": "Quantitative Problem #71: A shopkeeper buys an item at cost ₹7250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7395 - 7250) / 7250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 147,
+      "question": "Quantitative Problem #72: A shopkeeper buys an item at cost ₹7350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((9077.25 - 7350) / 7350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 148,
+      "question": "Quantitative Problem #73: A shopkeeper buys an item at cost ₹7450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((9387 - 7450) / 7450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 149,
+      "question": "Quantitative Problem #74: A shopkeeper buys an item at cost ₹7550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((9626.25 - 7550) / 7550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 150,
+      "question": "Quantitative Problem #75: A shopkeeper buys an item at cost ₹7650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((7994.25 - 7650) / 7650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
     }
   ]
 }

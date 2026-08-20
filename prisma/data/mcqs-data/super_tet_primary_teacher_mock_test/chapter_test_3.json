@@ -1,177 +1,256 @@
 {
-  "name": "Super Tet Primary Teacher Mock Test - Chapter Test 3",
-  "type": "Chapter Test",
   "courseName": "Super Tet Primary Teacher Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "teaching",
+  "testName": "Chapter Test 3",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Language II (English)",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 1,
+      "question": "English Idioms & Phrases #66: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To injure one's finger",
+        "To state something with exact accuracy",
+        "To build a wooden structure",
+        "To make a mistake"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "To describe exactly what is causing a situation."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 2,
+      "question": "English Idioms & Phrases #67: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
+        "To hunt animals",
+        "To talk loudly"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "To speak evasively without coming to the point."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 3,
+      "question": "English Idioms & Phrases #68: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To name a date",
+        "To stop working on something for the rest of the day",
+        "To celebrate a birthday",
+        "To wake up early"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "To decide to stop working."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 4,
+      "question": "English Idioms & Phrases #69: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Every month",
+        "Very rarely or seldom",
+        "During full moon",
+        "Frequently"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "An event that happens very rarely."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 5,
+      "question": "English Idioms & Phrases #70: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "In heavy fog",
+        "Through dense forests"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Supporting someone through all difficulties."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 6,
+      "question": "English Idioms & Phrases #71: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To waste precious food",
+        "To disclose a confidential secret",
+        "To make a big blunder",
+        "To start a brawl"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "'Spill the beans' means to reveal secret information."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 7,
+      "question": "English Idioms & Phrases #72: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To get injured in a fight",
+        "To face a difficult situation with courage",
+        "To eat voraciously",
+        "To surrender unconditionally"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 8,
+      "question": "English Idioms & Phrases #73: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A magical gift",
+        "A curse on enemies"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Something that seems bad at first but turns out good."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 9,
+      "question": "English Idioms & Phrases #74: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To waste electricity",
+        "To work or study late into the night",
+        "To set fire to property",
+        "To celebrate lavishly"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "To study or work until late at night."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 10,
+      "question": "English Idioms & Phrases #75: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To clean up a mess",
+        "To admit defeat and surrender",
+        "To start a swimming match",
+        "To ignore advice"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "To give up or accept defeat."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 11,
+      "question": "English Grammar & Usage #1: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Neither of the two candidates (A)",
+        "have submitted (B) -> has submitted",
+        "their original documents (C)",
+        "on time (D)"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "'Neither of' takes a singular verb."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 12,
+      "question": "English Grammar & Usage #2: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "The scenery of Kashmir (A)",
+        "are very (B) -> is very",
+        "charming and (C)",
+        "picturesque (D)"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "'Scenery' is an uncountable singular noun."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 13,
+      "question": "English Grammar & Usage #3: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "when",
+        "than",
+        "then",
+        "that"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 14,
+      "question": "English Grammar & Usage #4: The candidate was accused ______ tampering with evidence.",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "for",
+        "of",
+        "with",
+        "about"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "'Accused' takes the preposition 'of'."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 15,
+      "question": "English Grammar & Usage #5: He has been living in Delhi ______ 2015.",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "for",
+        "since",
+        "from",
+        "in"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "'Since' specifies a starting point in time."
+    },
+    {
+      "id": 16,
+      "question": "English Grammar & Usage #6: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
+      "options": [
+        "The engine has been repaired by mechanic.",
+        "The damaged engine was repaired by the mechanic.",
+        "The mechanic was repairing the engine.",
+        "The engine is repaired by mechanic."
+      ],
+      "answer": 1,
+      "hint": "Past simple 'repaired' converts to 'was repaired'."
+    },
+    {
+      "id": 17,
+      "question": "English Grammar & Usage #7: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
+      "options": [
+        "He said that I was learning English.",
+        "He said that he was learning English.",
+        "He told he is learning English.",
+        "He said that he had learned English."
+      ],
+      "answer": 1,
+      "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
+    },
+    {
+      "id": 18,
+      "question": "English Grammar & Usage #8: Convert to Active Voice: 'A song was being sung by Lata.'",
+      "options": [
+        "Lata sang a song.",
+        "Lata was singing a song.",
+        "Lata has sung a song.",
+        "Lata is singing a song."
+      ],
+      "answer": 1,
+      "hint": "'was being sung' converts to active 'was singing'."
+    },
+    {
+      "id": 19,
+      "question": "English Grammar & Usage #9: Select the correctly spelt word:",
+      "options": [
+        "Beurocracy",
+        "Bureaucracy",
+        "Bureaucrasy",
+        "Burocracy"
+      ],
+      "answer": 1,
+      "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
+    },
+    {
+      "id": 20,
+      "question": "English Grammar & Usage #10: Select the correctly spelt word:",
+      "options": [
+        "Acommodate",
+        "Accommodate",
+        "Accomodate",
+        "Acomodate"
+      ],
+      "answer": 1,
+      "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     }
   ]
 }

@@ -1,232 +1,1221 @@
 {
-  "name": "English Grammar Mastery - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "English Grammar Mastery",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "english",
+  "subjects": [
+    {
+      "name": "Grammar, Parts of Speech & Syntax",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "Vocabulary, Idioms & Reading Comprehension",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "To study or work until late at night."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "To give up or accept defeat."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "To decide to stop working."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "An event that happens very rarely."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "To study or work until late at night."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "To give up or accept defeat."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "To decide to stop working."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "An event that happens very rarely."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 21,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 22,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 23,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 24,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 25,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 26,
+      "question": "English Idioms & Phrases #26: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 27,
+      "question": "English Idioms & Phrases #27: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 28,
+      "question": "English Idioms & Phrases #28: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 29,
+      "question": "English Idioms & Phrases #29: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 30,
+      "question": "English Idioms & Phrases #30: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 31,
+      "question": "English Idioms & Phrases #31: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 32,
+      "question": "English Idioms & Phrases #32: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 33,
+      "question": "English Idioms & Phrases #33: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 34,
+      "question": "English Idioms & Phrases #34: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 35,
+      "question": "English Idioms & Phrases #35: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 36,
+      "question": "English Idioms & Phrases #36: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 37,
+      "question": "English Idioms & Phrases #37: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 38,
+      "question": "English Idioms & Phrases #38: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 39,
+      "question": "English Idioms & Phrases #39: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 40,
+      "question": "English Idioms & Phrases #40: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 41,
+      "question": "English Idioms & Phrases #41: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 42,
+      "question": "English Idioms & Phrases #42: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 43,
+      "question": "English Idioms & Phrases #43: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 44,
+      "question": "English Idioms & Phrases #44: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 45,
+      "question": "English Idioms & Phrases #45: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 46,
+      "question": "English Idioms & Phrases #46: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 47,
+      "question": "English Idioms & Phrases #47: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 48,
+      "question": "English Idioms & Phrases #48: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 49,
+      "question": "English Idioms & Phrases #49: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 50,
+      "question": "English Idioms & Phrases #50: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 51,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 52,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 53,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 54,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 55,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 56,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 57,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 58,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 59,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 60,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 61,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 62,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 63,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 64,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 65,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 66,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 67,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 68,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 69,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 70,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 71,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 72,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 73,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 74,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 75,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 76,
+      "question": "English Idioms & Phrases #26: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 77,
+      "question": "English Idioms & Phrases #27: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 78,
+      "question": "English Idioms & Phrases #28: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 79,
+      "question": "English Idioms & Phrases #29: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 80,
+      "question": "English Idioms & Phrases #30: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 81,
+      "question": "English Idioms & Phrases #31: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 82,
+      "question": "English Idioms & Phrases #32: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 83,
+      "question": "English Idioms & Phrases #33: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 84,
+      "question": "English Idioms & Phrases #34: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 85,
+      "question": "English Idioms & Phrases #35: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 86,
+      "question": "English Idioms & Phrases #36: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 87,
+      "question": "English Idioms & Phrases #37: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 88,
+      "question": "English Idioms & Phrases #38: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 89,
+      "question": "English Idioms & Phrases #39: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 90,
+      "question": "English Idioms & Phrases #40: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 91,
+      "question": "English Idioms & Phrases #41: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl",
+        "To disclose a confidential secret"
+      ],
+      "answer": 3,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 92,
+      "question": "English Idioms & Phrases #42: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally",
+        "To face a difficult situation with courage"
+      ],
+      "answer": 3,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 93,
+      "question": "English Idioms & Phrases #43: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies",
+        "An apparent misfortune that yields unexpected good results"
+      ],
+      "answer": 3,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 94,
+      "question": "English Idioms & Phrases #44: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly",
+        "To work or study late into the night"
+      ],
+      "answer": 3,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 95,
+      "question": "English Idioms & Phrases #45: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice",
+        "To admit defeat and surrender"
+      ],
+      "answer": 3,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 96,
+      "question": "English Idioms & Phrases #46: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake",
+        "To state something with exact accuracy"
+      ],
+      "answer": 3,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 97,
+      "question": "English Idioms & Phrases #47: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly",
+        "To avoid discussing the main topic directly"
+      ],
+      "answer": 3,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 98,
+      "question": "English Idioms & Phrases #48: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early",
+        "To stop working on something for the rest of the day"
+      ],
+      "answer": 3,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 99,
+      "question": "English Idioms & Phrases #49: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Frequently",
+        "Very rarely or seldom"
+      ],
+      "answer": 3,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 100,
+      "question": "English Idioms & Phrases #50: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests",
+        "Under all circumstances, good and bad"
+      ],
+      "answer": 3,
+      "hint": "Supporting someone through all difficulties."
     }
   ]
 }

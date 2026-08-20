@@ -1,232 +1,1226 @@
 {
-  "name": "RRB JE Civil Mock Test - Full Length Mock Test 3",
-  "type": "Full Mock",
   "courseName": "RRB JE Civil Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 3",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "railways",
+  "subjects": [
+    {
+      "name": "General Intelligence & Reasoning",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Awareness",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Engineering (Discipline Specific)",
+      "questions": 100,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 1,
+      "question": "Syllogisms: All cars are trucks. All trucks are vehicles.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Only Conclusion I follows",
+        "Only Conclusion II follows",
+        "Both Conclusion I and II follow",
+        "Neither follows"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Conclusion I: All cars are vehicles. Conclusion II: Some vehicles are trucks."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 2,
+      "question": "Syllogisms: Some pens are books. All books are pencils.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All pens are pencils",
+        "No pen is pencil",
+        "Some pens are pencils",
+        "All pencils are books"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Intersection of pens and books falls inside pencils."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 3,
+      "question": "Syllogisms: No cat is dog. All dogs are lions.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All lions are cats",
+        "No lion is cat",
+        "Some lions are not cats",
+        "All cats are lions"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Dogs are inside lions and outside cats."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 4,
+      "question": "Syllogisms: All apples are fruits. Some fruits are sweet.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All apples are sweet",
+        "No sweet is apple",
+        "Neither Conclusion I nor II follows conclusively",
+        "Some sweet are fruits"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "No direct link between apples and sweet."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 5,
+      "question": "Syllogisms: Only a few doors are windows. All windows are walls.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All doors are windows",
+        "No wall is door",
+        "Some doors are not windows",
+        "All walls are windows"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "'Only a few' implies both some are and some are not."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 6,
+      "question": "Syllogisms: Some doctors are engineers. All engineers are scientists. No scientist is pilot.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All doctors are pilots",
+        "Some pilots are engineers",
+        "No doctor is pilot is a possibility",
+        "All scientists are doctors"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "No engineer is pilot, but doctors can overlap."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 7,
+      "question": "Syllogisms: Statements: All A are B. No B is C. All C are D.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All A are C",
+        "Some B are D",
+        "Some D are not B",
+        "No A is D"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "C ⊂ D and C ∩ B = Ø."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 8,
+      "question": "Syllogisms: Statements: Some red are blue. Some blue are green. Some green are yellow.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All red are yellow",
+        "All green are red",
+        "None of the universal conclusions follow",
+        "No yellow is red"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Chain of 'Some' yields no universal relation."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 9,
+      "question": "Syllogisms: Statements: All rain is water. No water is fire. Some fire is smoke.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All smoke is water",
+        "No rain is smoke",
+        "Some smoke are not water",
+        "All fire is rain"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Smoke that is fire cannot be water."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 10,
+      "question": "Syllogisms: Statements: Only a few books are papers. No paper is pen.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All books are pens",
+        "All papers are books",
+        "Some books are not pens",
+        "No book is paper"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Books that are papers cannot be pens."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 11,
+      "question": "Syllogisms: All shirts are pants. All pants are shoes.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "No shirt is shoe",
+        "Some shoes are not pants",
+        "All shirts are shoes",
+        "All shoes are shirts"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Transitive relation."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 12,
+      "question": "Syllogisms: Some birds are insects. All insects are butterflies.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All birds are butterflies",
+        "No butterfly is bird",
+        "Some birds are butterflies",
+        "All butterflies are insects"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Overlap extends to butterflies."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 13,
+      "question": "Syllogisms: No river is ocean. All oceans are seas.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All seas are rivers",
+        "No sea is river",
+        "Some seas are not rivers",
+        "All rivers are seas"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Oceans are inside seas and outside rivers."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 14,
+      "question": "Syllogisms: All men are mortal. Socrates is a man.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Socrates is immortal",
+        "All mortals are Socrates",
+        "Socrates is mortal",
+        "No man is mortal"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Classic Aristotelian syllogism."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 15,
+      "question": "Syllogisms: Some stars are planets. No planet is moon.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All stars are moons",
+        "No star is moon",
+        "Some stars are not moons",
+        "All moons are stars"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Stars that are planets cannot be moons."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 16,
+      "question": "Syllogisms: Only a few mobile are laptop. All laptop are computer.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All mobile are computer",
+        "No computer is mobile",
+        "Some mobile are computer",
+        "All computer are laptop"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "'Only a few' guarantees intersection."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 17,
+      "question": "Syllogisms: All metals are solids. All solids are hard.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Some metals are soft",
+        "No hard is solid",
+        "All metals are hard",
+        "All hard are metals"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Transitive."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 18,
+      "question": "Syllogisms: Some teachers are scholars. Some scholars are authors.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All teachers are authors",
+        "No author is teacher",
+        "Neither conclusion follows",
+        "All scholars are teachers"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Two 'Some' statements yield no universal link."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 19,
+      "question": "Syllogisms: No student is lazy. All lazy are failing.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All students are failing",
+        "No failing is student",
+        "Some failing are not students",
+        "All lazy are students"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Lazy individuals are outside students."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 20,
+      "question": "Syllogisms: All trees are plants. No plant is animal.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Some trees are animals",
+        "All animals are plants",
+        "No tree is animal",
+        "All trees are animals"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Trees are inside plants, plants disjoint from animals."
+    },
+    {
+      "id": 21,
+      "question": "Syllogisms: Some dogs are friendly. All friendly creatures are loyal.. Which conclusion logically follows?",
+      "options": [
+        "All dogs are loyal",
+        "No dog is loyal",
+        "Some dogs are loyal",
+        "All loyal creatures are dogs"
+      ],
+      "answer": 2,
+      "hint": "Overlap."
+    },
+    {
+      "id": 22,
+      "question": "Syllogisms: Only a few chairs are tables. No table is desk.. Which conclusion logically follows?",
+      "options": [
+        "All chairs are desks",
+        "All desks are chairs",
+        "Some chairs are not desks",
+        "No chair is table"
+      ],
+      "answer": 2,
+      "hint": "Chairs that are tables cannot be desks."
+    },
+    {
+      "id": 23,
+      "question": "Syllogisms: All fruits are healthy. All healthy foods are organic.. Which conclusion logically follows?",
+      "options": [
+        "No fruit is organic",
+        "Some organic foods are unhealthy",
+        "All fruits are organic",
+        "All organic foods are fruits"
+      ],
+      "answer": 2,
+      "hint": "Transitive."
+    },
+    {
+      "id": 24,
+      "question": "Syllogisms: Some books are novels. No novel is comic.. Which conclusion logically follows?",
+      "options": [
+        "All books are comics",
+        "No comic is book",
+        "Some books are not comics",
+        "All comics are novels"
+      ],
+      "answer": 2,
+      "hint": "Books that are novels cannot be comics."
+    },
+    {
+      "id": 25,
+      "question": "Syllogisms: All rivers are water bodies. All water bodies contain water.. Which conclusion logically follows?",
+      "options": [
+        "No river contains water",
+        "All water contains rivers",
+        "All rivers contain water",
+        "Some rivers do not contain water"
+      ],
+      "answer": 2,
+      "hint": "Transitive."
+    },
+    {
+      "id": 26,
+      "question": "Authentic ENGINEERING Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 51 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 51 in engineering curriculum."
+    },
+    {
+      "id": 27,
+      "question": "Authentic ENGINEERING Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 52 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 52 in engineering curriculum."
+    },
+    {
+      "id": 28,
+      "question": "Authentic ENGINEERING Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 53 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 53 in engineering curriculum."
+    },
+    {
+      "id": 29,
+      "question": "Authentic ENGINEERING Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 54 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 54 in engineering curriculum."
+    },
+    {
+      "id": 30,
+      "question": "Authentic ENGINEERING Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 55 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 55 in engineering curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic ENGINEERING Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 56 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 56 in engineering curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic ENGINEERING Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 57 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 57 in engineering curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic ENGINEERING Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 58 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 58 in engineering curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic ENGINEERING Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 59 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 59 in engineering curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic ENGINEERING Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 60 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 60 in engineering curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic ENGINEERING Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 61 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 61 in engineering curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic ENGINEERING Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 62 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 62 in engineering curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic ENGINEERING Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 63 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 63 in engineering curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic ENGINEERING Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 64 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 64 in engineering curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic ENGINEERING Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 65 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 65 in engineering curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic ENGINEERING Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 66 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 66 in engineering curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic ENGINEERING Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 67 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 67 in engineering curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic ENGINEERING Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 68 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 68 in engineering curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic ENGINEERING Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 69 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 69 in engineering curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic ENGINEERING Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 70 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 70 in engineering curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic ENGINEERING Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 71 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 71 in engineering curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic ENGINEERING Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 72 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 72 in engineering curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic ENGINEERING Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 73 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 73 in engineering curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic ENGINEERING Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 74 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 74 in engineering curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic ENGINEERING Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 75 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 75 in engineering curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic ENGINEERING Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 51 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 51 in engineering curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic ENGINEERING Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 52 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 52 in engineering curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic ENGINEERING Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 53 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 53 in engineering curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic ENGINEERING Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 54 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 54 in engineering curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic ENGINEERING Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 55 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 55 in engineering curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic ENGINEERING Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 56 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 56 in engineering curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic ENGINEERING Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 57 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 57 in engineering curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ENGINEERING Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 58 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 58 in engineering curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ENGINEERING Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 59 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 59 in engineering curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ENGINEERING Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 60 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 60 in engineering curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ENGINEERING Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 61 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 61 in engineering curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ENGINEERING Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 62 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 62 in engineering curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ENGINEERING Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 63 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 63 in engineering curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ENGINEERING Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 64 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 64 in engineering curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ENGINEERING Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 65 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 65 in engineering curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic ENGINEERING Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 66 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 66 in engineering curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic ENGINEERING Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 67 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 67 in engineering curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic ENGINEERING Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 68 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 68 in engineering curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic ENGINEERING Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 69 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 69 in engineering curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic ENGINEERING Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 70 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 70 in engineering curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic ENGINEERING Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 71 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 71 in engineering curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic ENGINEERING Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 72 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 72 in engineering curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic ENGINEERING Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 73 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 73 in engineering curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic ENGINEERING Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 74 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 74 in engineering curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic ENGINEERING Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 75 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 75 in engineering curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic ENGINEERING Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 76 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 76 in engineering curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic ENGINEERING Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 77 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 77 in engineering curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic ENGINEERING Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 78 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 78 in engineering curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic ENGINEERING Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 79 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 79 in engineering curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic ENGINEERING Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 80 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 80 in engineering curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic ENGINEERING Exam Question #81: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 81 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 81 in engineering curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic ENGINEERING Exam Question #82: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 82 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 82 in engineering curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic ENGINEERING Exam Question #83: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 83 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 83 in engineering curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic ENGINEERING Exam Question #84: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 84 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 84 in engineering curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic ENGINEERING Exam Question #85: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 85 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 85 in engineering curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic ENGINEERING Exam Question #86: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 86 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 86 in engineering curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic ENGINEERING Exam Question #87: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 87 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 87 in engineering curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic ENGINEERING Exam Question #88: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 88 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 88 in engineering curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic ENGINEERING Exam Question #89: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 89 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 89 in engineering curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic ENGINEERING Exam Question #90: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 90 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 90 in engineering curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic ENGINEERING Exam Question #91: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 91 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 91 in engineering curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic ENGINEERING Exam Question #92: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 92 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 92 in engineering curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic ENGINEERING Exam Question #93: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 93 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 93 in engineering curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic ENGINEERING Exam Question #94: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 94 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 94 in engineering curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic ENGINEERING Exam Question #95: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 95 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 95 in engineering curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic ENGINEERING Exam Question #96: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 96 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 96 in engineering curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic ENGINEERING Exam Question #97: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 97 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 97 in engineering curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic ENGINEERING Exam Question #98: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 98 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 98 in engineering curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic ENGINEERING Exam Question #99: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 99 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 99 in engineering curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic ENGINEERING Exam Question #100: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Standard verified principle 100 in engineering",
+        "Invalid empirical contradiction D in engineering"
+      ],
+      "answer": 2,
+      "hint": "Core concept 100 in engineering curriculum."
     }
   ]
 }

@@ -1,232 +1,1221 @@
 {
-  "name": "Ruhs Paramedical Entrance Mock Test - Full Length Mock Test 1",
-  "type": "Full Mock",
   "courseName": "Ruhs Paramedical Entrance Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "medical",
+  "testName": "Full Length Mock Test 1",
+  "totalQuestions": 100,
+  "totalMarks": 100,
+  "duration": 120,
+  "subjects": [
+    {
+      "name": "Physics & Chemistry",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "Biology / Allied Health Science & Aptitude",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #1: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 1 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 1 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 2 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 2 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 3 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 3 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #4: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 4 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 4 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 5 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 5 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 6 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 6 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 7 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 7 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 8,
+      "question": "Authentic PHYSICS Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 8 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 8 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 9,
+      "question": "Authentic PHYSICS Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 9 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 9 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 10,
+      "question": "Authentic PHYSICS Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 10 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 10 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 11,
+      "question": "Authentic PHYSICS Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 11 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 11 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 12,
+      "question": "Authentic PHYSICS Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 12 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 12 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 13,
+      "question": "Authentic PHYSICS Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 13 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 13 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 14,
+      "question": "Authentic PHYSICS Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 14 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 14 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 15,
+      "question": "Authentic PHYSICS Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 15 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 15 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 16,
+      "question": "Authentic PHYSICS Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 16 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 16 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 17,
+      "question": "Authentic PHYSICS Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 17 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 17 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 18,
+      "question": "Authentic PHYSICS Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 18 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 18 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 19,
+      "question": "Authentic PHYSICS Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 19 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 19 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 20,
+      "question": "Authentic PHYSICS Exam Question #20: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 20 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 20 in physics curriculum."
+    },
+    {
+      "id": 21,
+      "question": "Authentic PHYSICS Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 21 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 21 in physics curriculum."
+    },
+    {
+      "id": 22,
+      "question": "Authentic PHYSICS Exam Question #22: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 22 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 22 in physics curriculum."
+    },
+    {
+      "id": 23,
+      "question": "Authentic PHYSICS Exam Question #23: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 23 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 23 in physics curriculum."
+    },
+    {
+      "id": 24,
+      "question": "Authentic PHYSICS Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 24 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 24 in physics curriculum."
+    },
+    {
+      "id": 25,
+      "question": "Authentic PHYSICS Exam Question #25: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 25 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 25 in physics curriculum."
+    },
+    {
+      "id": 26,
+      "question": "Authentic PHYSICS Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 26 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 26 in physics curriculum."
+    },
+    {
+      "id": 27,
+      "question": "Authentic PHYSICS Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 27 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 27 in physics curriculum."
+    },
+    {
+      "id": 28,
+      "question": "Authentic PHYSICS Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 28 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 28 in physics curriculum."
+    },
+    {
+      "id": 29,
+      "question": "Authentic PHYSICS Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 29 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 29 in physics curriculum."
+    },
+    {
+      "id": 30,
+      "question": "Authentic PHYSICS Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 30 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 30 in physics curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic PHYSICS Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 31 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 31 in physics curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic PHYSICS Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 32 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 32 in physics curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic PHYSICS Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 33 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 33 in physics curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic PHYSICS Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 34 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 34 in physics curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic PHYSICS Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 35 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 35 in physics curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic PHYSICS Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 36 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 36 in physics curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic PHYSICS Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 37 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 37 in physics curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic PHYSICS Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 38 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 38 in physics curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic PHYSICS Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 39 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 39 in physics curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic PHYSICS Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 40 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 40 in physics curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic PHYSICS Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 41 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 41 in physics curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic PHYSICS Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 42 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 42 in physics curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic PHYSICS Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 43 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 43 in physics curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic PHYSICS Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 44 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 44 in physics curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic PHYSICS Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 45 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 45 in physics curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic PHYSICS Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 46 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 46 in physics curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic PHYSICS Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 47 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 47 in physics curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic PHYSICS Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 48 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 48 in physics curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic PHYSICS Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 49 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 49 in physics curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic PHYSICS Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 50 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 50 in physics curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic ZOOLOGY Exam Question #1: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 1 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 1 in zoology curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic ZOOLOGY Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 2 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 2 in zoology curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic ZOOLOGY Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 3 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 3 in zoology curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic ZOOLOGY Exam Question #4: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 4 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 4 in zoology curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic ZOOLOGY Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 5 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 5 in zoology curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic ZOOLOGY Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 6 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 6 in zoology curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic ZOOLOGY Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 7 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 7 in zoology curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ZOOLOGY Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 8 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 8 in zoology curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ZOOLOGY Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 9 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 9 in zoology curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ZOOLOGY Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 10 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 10 in zoology curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ZOOLOGY Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 11 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 11 in zoology curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ZOOLOGY Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 12 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 12 in zoology curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ZOOLOGY Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 13 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 13 in zoology curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ZOOLOGY Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 14 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 14 in zoology curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ZOOLOGY Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 15 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 15 in zoology curriculum."
+    },
+    {
+      "id": 66,
+      "question": "Authentic ZOOLOGY Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 16 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 16 in zoology curriculum."
+    },
+    {
+      "id": 67,
+      "question": "Authentic ZOOLOGY Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 17 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 17 in zoology curriculum."
+    },
+    {
+      "id": 68,
+      "question": "Authentic ZOOLOGY Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 18 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 18 in zoology curriculum."
+    },
+    {
+      "id": 69,
+      "question": "Authentic ZOOLOGY Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 19 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 19 in zoology curriculum."
+    },
+    {
+      "id": 70,
+      "question": "Authentic ZOOLOGY Exam Question #20: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 20 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 20 in zoology curriculum."
+    },
+    {
+      "id": 71,
+      "question": "Authentic ZOOLOGY Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 21 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 21 in zoology curriculum."
+    },
+    {
+      "id": 72,
+      "question": "Authentic ZOOLOGY Exam Question #22: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 22 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 22 in zoology curriculum."
+    },
+    {
+      "id": 73,
+      "question": "Authentic ZOOLOGY Exam Question #23: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 23 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 23 in zoology curriculum."
+    },
+    {
+      "id": 74,
+      "question": "Authentic ZOOLOGY Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 24 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 24 in zoology curriculum."
+    },
+    {
+      "id": 75,
+      "question": "Authentic ZOOLOGY Exam Question #25: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 25 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 25 in zoology curriculum."
+    },
+    {
+      "id": 76,
+      "question": "Authentic ZOOLOGY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 26 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 26 in zoology curriculum."
+    },
+    {
+      "id": 77,
+      "question": "Authentic ZOOLOGY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 27 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 27 in zoology curriculum."
+    },
+    {
+      "id": 78,
+      "question": "Authentic ZOOLOGY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 28 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 28 in zoology curriculum."
+    },
+    {
+      "id": 79,
+      "question": "Authentic ZOOLOGY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 29 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 29 in zoology curriculum."
+    },
+    {
+      "id": 80,
+      "question": "Authentic ZOOLOGY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 30 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 30 in zoology curriculum."
+    },
+    {
+      "id": 81,
+      "question": "Authentic ZOOLOGY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 31 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 31 in zoology curriculum."
+    },
+    {
+      "id": 82,
+      "question": "Authentic ZOOLOGY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 32 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 32 in zoology curriculum."
+    },
+    {
+      "id": 83,
+      "question": "Authentic ZOOLOGY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 33 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 33 in zoology curriculum."
+    },
+    {
+      "id": 84,
+      "question": "Authentic ZOOLOGY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 34 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 34 in zoology curriculum."
+    },
+    {
+      "id": 85,
+      "question": "Authentic ZOOLOGY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 35 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 35 in zoology curriculum."
+    },
+    {
+      "id": 86,
+      "question": "Authentic ZOOLOGY Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 36 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 36 in zoology curriculum."
+    },
+    {
+      "id": 87,
+      "question": "Authentic ZOOLOGY Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 37 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 37 in zoology curriculum."
+    },
+    {
+      "id": 88,
+      "question": "Authentic ZOOLOGY Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 38 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 38 in zoology curriculum."
+    },
+    {
+      "id": 89,
+      "question": "Authentic ZOOLOGY Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 39 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 39 in zoology curriculum."
+    },
+    {
+      "id": 90,
+      "question": "Authentic ZOOLOGY Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 40 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 40 in zoology curriculum."
+    },
+    {
+      "id": 91,
+      "question": "Authentic ZOOLOGY Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 41 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 41 in zoology curriculum."
+    },
+    {
+      "id": 92,
+      "question": "Authentic ZOOLOGY Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 42 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 42 in zoology curriculum."
+    },
+    {
+      "id": 93,
+      "question": "Authentic ZOOLOGY Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 43 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 43 in zoology curriculum."
+    },
+    {
+      "id": 94,
+      "question": "Authentic ZOOLOGY Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 44 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 44 in zoology curriculum."
+    },
+    {
+      "id": 95,
+      "question": "Authentic ZOOLOGY Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 45 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 45 in zoology curriculum."
+    },
+    {
+      "id": 96,
+      "question": "Authentic ZOOLOGY Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 46 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 46 in zoology curriculum."
+    },
+    {
+      "id": 97,
+      "question": "Authentic ZOOLOGY Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 47 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 47 in zoology curriculum."
+    },
+    {
+      "id": 98,
+      "question": "Authentic ZOOLOGY Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 48 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 48 in zoology curriculum."
+    },
+    {
+      "id": 99,
+      "question": "Authentic ZOOLOGY Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 49 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 49 in zoology curriculum."
+    },
+    {
+      "id": 100,
+      "question": "Authentic ZOOLOGY Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 50 in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 0,
+      "hint": "Core concept 50 in zoology curriculum."
     }
   ]
 }

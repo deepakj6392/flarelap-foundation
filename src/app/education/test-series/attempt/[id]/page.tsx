@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,11 +17,14 @@ import {
   FileText,
   User,
   ShieldAlert,
-  Loader2
+  Loader2,
+  Copy,
+  Check
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { translateTextToHindi, translateOptionToHindi } from "@/lib/translator";
 import { generateUniqueQuestions } from "@/lib/questionGenerator";
+import { getCourseSubjects } from "@/lib/testSeriesGenerator";
 
 
 interface MCQQuestion {
@@ -78,6 +81,7 @@ export default function CBTTestAttemptPage() {
 
   // Test config details
   const [testDetails, setTestDetails] = useState<TestDetails | null>(null);
+  const [courseName, setCourseName] = useState<string>("");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
 
   // CBT Player states
@@ -91,6 +95,20 @@ export default function CBTTestAttemptPage() {
   const [visited, setVisited] = useState<Record<number, boolean>>({ 0: true });
   const [timeLeft, setTimeLeft] = useState<number>(0); // In seconds
   const [language, setLanguage] = useState<"English" | "Hindi">("English");
+
+  // Local development copy mode
+  const [isLocalhost, setIsLocalhost] = useState<boolean>(false);
+  const [copiedQ, setCopiedQ] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const isDev = window.location.hostname === "localhost" || 
+                    window.location.hostname === "127.0.0.1" || 
+                    window.location.hostname.includes("192.168.") ||
+                    process.env.NODE_ENV === "development";
+      setIsLocalhost(isDev);
+    }
+  }, []);
 
   // Roll Number generator
   const [rollNo, setRollNo] = useState<string>("");
@@ -121,6 +139,9 @@ export default function CBTTestAttemptPage() {
         if (!courseRes.ok) throw new Error("Failed to load course details.");
         const courseData = await courseRes.json();
 
+        const courseTitle = courseData.course?.name || "Mock Test Series";
+        setCourseName(courseTitle);
+
         const dbTests = courseData.course?.testSeries || [];
         let testItem = dbTests.find((t: any) => 
           t.id.toString() === testIdStr || 
@@ -130,7 +151,6 @@ export default function CBTTestAttemptPage() {
         if (!testItem) {
           const numericId = parseInt(testIdStr.replace(/\D/g, ""), 10) || 1;
           const isFullMock = testIdStr.toLowerCase().includes("fmt") || testIdStr.toLowerCase().includes("full");
-          const courseTitle = courseData.course?.name || "Mock Test Series";
           
           testItem = {
             id: testIdStr,
@@ -156,55 +176,19 @@ export default function CBTTestAttemptPage() {
         setTimeLeft(details.duration * 60);
 
         // Fetch course MCQs
-        const mcqRes = await fetch(`/api/student/mcqs?courseId=${courseIdStr}`, {
+        const mcqRes = await fetch(`/api/student/mcqs?courseId=${courseIdStr}&testId=${testIdStr}&testName=${encodeURIComponent(details.name)}`, {
           headers: { "Authorization": `Bearer ${studentToken}` }
         });
         if (!mcqRes.ok) throw new Error("Failed to load mock exam questions.");
         const mcqData = await mcqRes.json();
-        const dbMcqs: MCQQuestion[] = mcqData.courseMcqs || [];
-
-        // Dynamic fallbacks if course has no seeded MCQs
-        const fallbackMcqs: MCQQuestion[] = [
-          {
-            id: 1,
-            question: "Which keyword is used to declare a block-scoped variable in JavaScript?",
-            options: ["var", "let", "const", "both let and const"],
-            answer: 3,
-            hint: "let and const were introduced in ES6 for block-scoping, unlike var which is function-scoped."
-          },
-          {
-            id: 2,
-            question: "Which of the following is not a valid CSS display property value?",
-            options: ["block", "inline-flex", "grid", "float"],
-            answer: 3,
-            hint: "float is a positioning property, not a display property value."
-          },
-          {
-            id: 3,
-            question: "What does HTML stand for?",
-            options: ["Hyper Text Markup Language", "High Tech Multi Language", "Hyper Transfer Modulated Link", "Hyper Text Multi Line"],
-            answer: 0,
-            hint: "HTML stands for Hyper Text Markup Language."
-          },
-          {
-            id: 4,
-            question: "Which database system is natively object-relational and fully supported by Prisma?",
-            options: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
-            answer: 2,
-            hint: "PostgreSQL is a powerful, open-source object-relational database system."
-          },
-          {
-            id: 5,
-            question: "Which React hook is used to handle side-effects in functional components?",
-            options: ["useState", "useEffect", "useContext", "useReducer"],
-            answer: 1,
-            hint: "useEffect is standard for side-effects like fetching data, subscriptions, and DOM updates."
-          }
-        ];
-
-        const courseTitle = courseData.course?.name || "Mock Test Series";
-        const uniqueQuestions = generateUniqueQuestions(courseTitle, details.name, details.qs, dbMcqs);
-        setQuestions(uniqueQuestions);
+        
+        if (mcqData.testQuestions && Array.isArray(mcqData.testQuestions) && mcqData.testQuestions.length > 0) {
+          setQuestions(mcqData.testQuestions);
+        } else {
+          const dbMcqs: MCQQuestion[] = mcqData.courseMcqs || [];
+          const uniqueQuestions = generateUniqueQuestions(courseTitle, details.name, details.qs, dbMcqs);
+          setQuestions(uniqueQuestions);
+        }
       } catch (err: any) {
         console.error(err);
         setError(err.message || "An error occurred while loading exam data.");
@@ -454,6 +438,66 @@ export default function CBTTestAttemptPage() {
     return `${mins.toString().padStart(2, "0")} : ${secs.toString().padStart(2, "0")}`;
   };
 
+  const handleCopyQuestion = () => {
+    const currentQ = questions[currentIndex];
+    if (!currentQ) return;
+    const qText = language === "Hindi" ? translateTextToHindi(currentQ.question) : currentQ.question;
+    const opts = currentQ.options.map((opt, i) => `${i + 1}. ${language === "Hindi" ? translateOptionToHindi(opt) : opt}`).join("\n");
+    const fullText = `Question ${currentIndex + 1}:\n${qText}\n\nOptions:\n${opts}\n\nCorrect Answer: Option ${currentQ.answer + 1}\nExplanation / Hint: ${currentQ.hint || "N/A"}`;
+    
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(fullText).then(() => {
+        setCopiedQ(true);
+        setTimeout(() => setCopiedQ(false), 2000);
+      });
+    }
+  };
+
+  // Section breakdown logic (MUST be declared before early returns)
+  const sections = useMemo(() => {
+    const courseTitle = courseName || testDetails?.name || "";
+    const totalQuestions = questions.length || testDetails?.qs || 100;
+    const subjects = getCourseSubjects(courseTitle);
+    
+    if (!subjects || subjects.length === 0) {
+      return [{
+        name: "General Paper",
+        startIdx: 0,
+        endIdx: totalQuestions - 1,
+        totalQs: totalQuestions,
+        marks: testDetails?.marks || 100
+      }];
+    }
+
+    const rawSum = subjects.reduce((acc, s) => acc + s.qs, 0);
+    let currentStart = 0;
+
+    return subjects.map((sub, i) => {
+      let count = sub.qs;
+      if (rawSum !== totalQuestions && rawSum > 0) {
+        count = Math.round((sub.qs / rawSum) * totalQuestions);
+      }
+      if (i === subjects.length - 1) {
+        count = Math.max(1, totalQuestions - currentStart);
+      }
+      const startIdx = currentStart;
+      const endIdx = Math.min(totalQuestions - 1, currentStart + count - 1);
+      currentStart = endIdx + 1;
+
+      return {
+        name: sub.name,
+        startIdx,
+        endIdx,
+        totalQs: Math.max(1, endIdx - startIdx + 1),
+        marks: sub.marks
+      };
+    }).filter(sec => sec.totalQs > 0 && sec.startIdx <= sec.endIdx);
+  }, [courseName, testDetails, questions.length]);
+
+  const currentSection = useMemo(() => {
+    return sections.find(sec => currentIndex >= sec.startIdx && currentIndex <= sec.endIdx) || sections[0];
+  }, [sections, currentIndex]);
+
   if (loading && questions.length === 0) {
     return (
       <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-6 font-sans">
@@ -476,7 +520,13 @@ export default function CBTTestAttemptPage() {
     );
   }
 
-  const currentQ = questions[currentIndex];
+  const currentQ = questions[currentIndex] || {
+    id: 1,
+    question: "Loading question...",
+    options: ["Option A", "Option B", "Option C", "Option D"],
+    answer: 0,
+    hint: ""
+  };
   const selectedOpt = answers[currentIndex];
   const isReviewed = !!markedForReview[currentIndex];
 
@@ -552,34 +602,105 @@ export default function CBTTestAttemptPage() {
               </div>
             </div>
 
+            {/* Subject / Section Breakdown Table */}
+            {(() => {
+              const subjects = getCourseSubjects(courseName || testDetails.name);
+              const isFullMock = !testDetails.name.toLowerCase().includes("chapter");
+              const marksPerQ = (testDetails.marks / (testDetails.qs || 1));
+              const negMark = marksPerQ * 0.25;
+
+              return (
+                <div className="bg-slate-50/70 border border-slate-200 rounded-2xl p-4.5 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                      <FileText className="h-4 w-4 text-emerald-600" />
+                      Sectional Pattern & Question Distribution
+                    </h3>
+                    <span className="text-[10px] font-extrabold text-slate-600 bg-white border border-slate-200 px-2.5 py-1 rounded-md">
+                      {testDetails.qs} Questions • {testDetails.marks} Marks • {testDetails.duration} Min
+                    </span>
+                  </div>
+
+                  <div className="overflow-hidden border border-slate-200 rounded-xl bg-white">
+                    <table className="w-full text-left text-xs">
+                      <thead className="bg-slate-50 text-slate-700 font-extrabold uppercase text-[10px] tracking-wider border-b border-slate-200">
+                        <tr>
+                          <th className="py-2.5 px-4">Subject / Section</th>
+                          <th className="py-2.5 px-4 text-center">Questions</th>
+                          <th className="py-2.5 px-4 text-center">Marks</th>
+                          <th className="py-2.5 px-4 text-center">Marks Per Q</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 font-semibold text-slate-700">
+                        {isFullMock && subjects.length > 0 ? (
+                          subjects.map((sub, idx) => (
+                            <tr key={idx} className="hover:bg-slate-50/80 transition-colors">
+                              <td className="py-2.5 px-4 font-bold text-slate-900 flex items-center gap-2">
+                                <span className="h-5 w-5 rounded bg-emerald-50 text-emerald-700 font-black text-[10px] flex items-center justify-center shrink-0 border border-emerald-200/50">
+                                  {idx + 1}
+                                </span>
+                                {sub.name}
+                              </td>
+                              <td className="py-2.5 px-4 text-center font-bold text-slate-800">{sub.qs}</td>
+                              <td className="py-2.5 px-4 text-center font-bold text-emerald-600">{sub.marks}</td>
+                              <td className="py-2.5 px-4 text-center text-slate-500 font-mono text-[11px]">
+                                +{(sub.marks / (sub.qs || 1)).toFixed(sub.marks % sub.qs === 0 ? 0 : 2)}
+                              </td>
+                            </tr>
+                          ))
+                        ) : (
+                          <tr className="hover:bg-slate-50/80 transition-colors">
+                            <td className="py-2.5 px-4 font-bold text-slate-900">
+                              {testDetails.name}
+                            </td>
+                            <td className="py-2.5 px-4 text-center font-bold text-slate-800">{testDetails.qs}</td>
+                            <td className="py-2.5 px-4 text-center font-bold text-emerald-600">{testDetails.marks}</td>
+                            <td className="py-2.5 px-4 text-center text-slate-500 font-mono text-[11px]">
+                              +{marksPerQ.toFixed(marksPerQ % 1 === 0 ? 0 : 2)}
+                            </td>
+                          </tr>
+                        )}
+                      </tbody>
+                      <tfoot className="bg-slate-50/90 font-black text-slate-900 border-t border-slate-200 text-xs">
+                        <tr>
+                          <td className="py-2.5 px-4 font-extrabold text-slate-900">Total</td>
+                          <td className="py-2.5 px-4 text-center text-slate-900">{testDetails.qs} Qs</td>
+                          <td className="py-2.5 px-4 text-center text-emerald-700">{testDetails.marks} Marks</td>
+                          <td className="py-2.5 px-4 text-center text-slate-500 font-mono text-[11px]">
+                            -{negMark.toFixed(negMark % 1 === 0 ? 0 : 2)} Wrong
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Rules Content */}
             <div className="bg-white border rounded-2xl p-5 space-y-4 text-xs font-semibold text-slate-600 leading-8 overflow-y-auto max-h-[360px] scrollbar-thin">
-              <h3 className="text-sm font-black text-slate-900 border-b pb-2">General Instructions:</h3>
-              <p>1. The clock will be set at the server. The countdown timer at the top right of screen will display the remaining time available for you to complete the examination.</p>
-              <p>2. The Question Palette displayed on the right side of screen will show the status of each question using one of the following symbols:</p>
-              <div className="grid gap-2 sm:grid-cols-2 pl-4 py-2">
-                <div className="flex items-center gap-2"><span className="h-4 w-4 rounded bg-slate-100 border flex items-center justify-center text-[8px] text-slate-450">1</span> Not visited yet</div>
-                <div className="flex items-center gap-2"><span className="h-4 w-4 rounded bg-rose-600 text-white flex items-center justify-center text-[8px]">2</span> Visited but not answered</div>
-                <div className="flex items-center gap-2"><span className="h-4 w-4 rounded bg-emerald-600 text-white flex items-center justify-center text-[8px]">3</span> Answered question</div>
-                <div className="flex items-center gap-2"><span className="h-4 w-4 rounded bg-indigo-600 text-white flex items-center justify-center text-[8px]">4</span> Marked for review</div>
-              </div>
-              <p>3. **Negative Marking Scheme**: Each correct response grants **+2.00 marks**. In accordance with standard guidelines, incorrect attempts will attract a penalty of **-0.50 marks** (-25% negative marking).</p>
-              <p>4. To select your answer, click on the option radio button. To deselect, click **Clear Response**.</p>
-              <p>5. Do not close the browser window or exit full-screen mode, or your attempt may be locked.</p>
+              <h3 className="text-sm font-black text-slate-900 border-b pb-2 flex items-center gap-2">
+                <AlertCircle className="h-4 w-4 text-emerald-650" />
+                General Examination Guidelines & Navigation:
+              </h3>
+              <p>1. The clock will be set at the server. The countdown timer at the top right of the screen displays remaining time available to complete the test.</p>
+              <p>2. The Question Palette on the right side indicates status with color tags: Not Visited (Gray), Visited (Red), Answered (Green), Marked for Review (Purple).</p>
+              <p>3. <strong>Scoring Scheme</strong>: Each correct question awards standard marks. Negative marking applies where specified.</p>
+              <p>4. To select an option, click on the answer button. To change your response, click another option or click <strong>Clear Response</strong>.</p>
+              <p>5. Click <strong>Save & Next</strong> to confirm your answer and proceed to the next question.</p>
             </div>
-
           </div>
 
-          {/* Consent Checkbox and Start button */}
-          <div className="border-t pt-5 flex flex-col gap-4">
-            <label className="flex items-start gap-3 cursor-pointer text-slate-700">
+          {/* Agreement Checkbox and Start CTA */}
+          <div className="bg-slate-50 border p-5 rounded-2xl space-y-4">
+            <label className="flex items-start gap-3 cursor-pointer text-left">
               <input 
                 type="checkbox" 
                 checked={isAgreed} 
                 onChange={(e) => setIsAgreed(e.target.checked)} 
                 className="mt-1 h-4 w-4 border rounded text-emerald-650 focus:ring-emerald-500 cursor-pointer"
               />
-              <span className="text-xs font-semibold select-none leading-relaxed">
+              <span className={`text-xs font-semibold ${isLocalhost ? "select-text" : "select-none"} leading-relaxed`}>
                 I have read and understood all instructions. I declare that I am not in possession of any calculator, mobile, or reference material. I agree to begin the CBT mock test.
               </span>
             </label>
@@ -604,28 +725,35 @@ export default function CBTTestAttemptPage() {
       ) : (
         
         // 2. CBT INTERACTIVE PLAYER VIEW
-        <div className="flex-1 flex flex-col justify-between select-none h-screen overflow-hidden">
+        <div className={`flex-1 flex flex-col justify-between ${isLocalhost ? "select-text" : "select-none"} h-screen overflow-hidden`}>
           
           {/* Top Header Bar */}
-          <header className="bg-white border-b border-slate-200 px-4 py-2 flex items-center justify-between text-xs font-semibold shrink-0">
-            <div className="flex items-center gap-3.5">
-              <div className="flex items-center gap-1">
-                <Image src="/logo.png" alt="Logo" width={28} height={28} className="h-7 w-7 rounded-full object-contain" />
-                <span className="font-black text-slate-800 text-sm tracking-tight">flarelap</span>
+          <header className="border-b bg-white px-5 py-2.5 flex items-center justify-between shadow-2xs z-10 shrink-0">
+            <div className="flex items-center gap-3">
+              <span className="font-mono bg-emerald-700 text-white px-2.5 py-1 rounded-md text-[11px] font-black tracking-widest uppercase shadow-xs">
+                CBT MOCK EXAM
+              </span>
+              <div>
+                <span className="text-[13px] font-black text-slate-900 truncate max-w-xs md:max-w-md block">
+                  {testDetails.name}
+                </span>
+                <span className="text-[11px] font-semibold text-slate-400">
+                  {courseName || "General Practice Test Series"}
+                </span>
               </div>
-              <div className="h-5 w-px bg-slate-200" />
-              <h2 className="font-black text-slate-900 text-sm max-w-sm sm:max-w-md lg:max-w-xl truncate">
-                {testDetails.name}
-              </h2>
             </div>
 
-            <div className="flex items-center gap-5">
-              <div className="text-right">
-                <div className="text-[10px] text-slate-400 font-extrabold uppercase">Roll Number</div>
-                <div className="font-bold text-slate-900 mt-0.5">{rollNo}</div>
+            <div className="flex items-center gap-4">
+              {/* Candidate Quick info */}
+              <div className="hidden sm:flex items-center gap-3 pr-2 border-r border-slate-200">
+                <div className="h-8 w-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 font-black text-xs">
+                  {studentProfile?.name ? studentProfile.name.charAt(0).toUpperCase() : <User className="h-4 w-4" />}
+                </div>
+                <div className="text-left text-xs">
+                  <span className="block font-bold text-slate-800 leading-none">{studentProfile?.name || "Candidate"}</span>
+                  <span className="text-[10px] text-slate-400 font-mono">Roll: {rollNo}</span>
+                </div>
               </div>
-
-              <div className="h-5 w-px bg-slate-200" />
 
               {/* Timer Countdown */}
               <div className="flex items-center gap-2 bg-rose-50 border border-rose-100 rounded-xl px-4 py-1.5 text-rose-700">
@@ -643,16 +771,43 @@ export default function CBTTestAttemptPage() {
             </div>
           </header>
 
-          {/* Sub Header Links Banner */}
-          <div className="bg-slate-50 border-b border-slate-200/80 px-4 py-1.5 flex items-center justify-between text-[10px] font-black uppercase text-slate-500 tracking-wider shrink-0">
-            <div className="flex gap-4">
-              <span className="hover:text-emerald-700 transition cursor-pointer">Symbols</span>
-              <span>•</span>
-              <span className="hover:text-emerald-700 transition cursor-pointer">Instructions</span>
-              <span>•</span>
-              <span className="hover:text-emerald-700 transition cursor-pointer">Overall Test Summary</span>
+          {/* Sub Header Section Navigation Tabs */}
+          <div className="bg-slate-50 border-b border-slate-200/80 px-4 py-1.5 flex items-center justify-between gap-3 text-xs font-semibold shrink-0 overflow-x-auto">
+            <div className="flex items-center gap-2 overflow-x-auto py-0.5">
+              <span className="text-[10px] font-black uppercase text-slate-400 shrink-0">Sections:</span>
+              {sections.map((sec, sIdx) => {
+                const isActiveSec = currentSection?.name === sec.name;
+                const secAnswered = Object.keys(answers).filter(k => {
+                  const num = Number(k);
+                  return num >= sec.startIdx && num <= sec.endIdx;
+                }).length;
+
+                return (
+                  <button
+                    key={sIdx}
+                    onClick={() => {
+                      setCurrentIndex(sec.startIdx);
+                      setVisited(prev => ({ ...prev, [sec.startIdx]: true }));
+                    }}
+                    className={`px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-2 shrink-0 cursor-pointer border ${
+                      isActiveSec
+                        ? "bg-emerald-700 text-white border-emerald-700 shadow-sm"
+                        : "bg-white text-slate-700 hover:bg-slate-100 border-slate-200"
+                    }`}
+                  >
+                    <span>{sec.name}</span>
+                    <span className={`text-[10px] font-extrabold px-1.5 py-0.2 rounded-md ${
+                      isActiveSec ? "bg-emerald-800 text-emerald-100" : "bg-slate-100 text-slate-600"
+                    }`}>
+                      {secAnswered}/{sec.totalQs} Qs
+                    </span>
+                  </button>
+                );
+              })}
             </div>
-            <span className="bg-emerald-600 text-white font-extrabold px-3 py-0.5 rounded text-[9px]">PART A</span>
+            <span className="bg-emerald-100 text-emerald-800 font-extrabold px-2.5 py-1 rounded text-[10px] uppercase shrink-0 border border-emerald-200">
+              {currentSection?.name || "Active Section"}
+            </span>
           </div>
 
           {/* Main Area Body Container */}
@@ -664,16 +819,46 @@ export default function CBTTestAttemptPage() {
               {/* Question card */}
               <div className="space-y-6">
                 
-                {/* Header row: Index & Language */}
-                <div className="flex items-center justify-between border-b pb-3.5">
+                {/* Header row: Index, Section & Language */}
+                <div className="flex items-center justify-between border-b pb-3.5 gap-4">
                   <div className="flex items-center gap-3">
                     <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 border border-emerald-500/25 text-emerald-650 font-black text-xs">
                       {currentIndex + 1}
                     </span>
-                    <h3 className="font-black text-slate-900 text-sm">Question No. {currentIndex + 1}</h3>
+                    <div>
+                      <h3 className="font-black text-slate-900 text-sm">Question No. {currentIndex + 1}</h3>
+                      {currentSection && (
+                        <p className="text-[11px] font-bold text-emerald-700 flex items-center gap-1.5 mt-0.5">
+                          <span className="text-slate-400 font-semibold uppercase text-[10px]">Subject:</span>
+                          <span className="font-extrabold">{currentSection.name}</span>
+                          <span className="text-slate-400 font-medium">(Q{currentSection.startIdx + 1} - Q{currentSection.endIdx + 1} • {currentSection.totalQs} Questions)</span>
+                        </p>
+                      )}
+                    </div>
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3">
+                    {/* Copy Question Button (Local Development Mode) */}
+                    {isLocalhost && (
+                      <button
+                        onClick={handleCopyQuestion}
+                        className="flex items-center gap-1.5 px-3 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg text-xs font-bold transition active:scale-[0.98] cursor-pointer shadow-2xs"
+                        title="Click to copy question and options to clipboard"
+                      >
+                        {copiedQ ? (
+                          <>
+                            <Check className="h-3.5 w-3.5 text-emerald-600" />
+                            <span className="text-emerald-700">Copied!</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="h-3.5 w-3.5 text-amber-700" />
+                            <span>Copy Q (Local)</span>
+                          </>
+                        )}
+                      </button>
+                    )}
+
                     <div className="flex items-center gap-1.5 text-xs text-slate-505 font-bold">
                       <span>Select Language:</span>
                       <select 
@@ -690,7 +875,7 @@ export default function CBTTestAttemptPage() {
                 </div>
 
                 {/* Question body text */}
-                <div className="space-y-5 text-sm font-semibold text-slate-800 leading-relaxed font-sans text-left">
+                <div className={`space-y-5 text-sm font-semibold text-slate-800 leading-relaxed font-sans text-left ${isLocalhost ? "select-text" : "select-none"}`}>
                   <p className="font-black text-slate-955 text-base leading-snug">
                     {language === "Hindi" 
                       ? translateTextToHindi(currentQ.question)
@@ -723,9 +908,9 @@ export default function CBTTestAttemptPage() {
                           disabled={isReviewed}
                           className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between outline-none ${
                             isReviewed ? "cursor-not-allowed" : "cursor-pointer"
-                          } ${optionClass}`}
+                          } ${optionClass} ${isLocalhost ? "select-text" : "select-none"}`}
                         >
-                          <span>{optIdx + 1}. {language === "Hindi" ? translateOptionToHindi(opt) : opt}</span>
+                          <span className={isLocalhost ? "select-text" : ""}>{optIdx + 1}. {language === "Hindi" ? translateOptionToHindi(opt) : opt}</span>
                           {isReviewed ? (
                             isCorrect ? (
                               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-600 text-white shrink-0">
@@ -801,17 +986,17 @@ export default function CBTTestAttemptPage() {
             </div>
 
             {/* RIGHT COLUMN: Question Palette & Candidate Details (20% width) */}
-            <div className="w-72 border-l border-slate-200 bg-slate-50/50 p-4.5 flex flex-col justify-between h-full overflow-hidden shrink-0 select-none">
+            <div className="w-80 border-l border-slate-200 bg-slate-50/50 p-4 flex flex-col justify-between h-full overflow-hidden shrink-0 select-none">
               
               {/* Scrollable upper area */}
-              <div className="flex-1 overflow-y-auto space-y-6 pr-1 scrollbar-thin">
+              <div className="flex-1 overflow-y-auto space-y-4 pr-1 scrollbar-thin">
                 
                 {/* Candidate details card */}
                 <div className="flex items-center gap-3 bg-white border p-3 rounded-xl">
-                  <div className="h-12 w-12 rounded-lg bg-slate-100 border flex items-center justify-center text-slate-450 shrink-0">
-                    <User className="h-6 w-6" />
+                  <div className="h-11 w-11 rounded-lg bg-slate-100 border flex items-center justify-center text-slate-450 shrink-0">
+                    <User className="h-5 w-5" />
                   </div>
-                  <div className="space-y-0.5 max-w-[155px]">
+                  <div className="space-y-0.5 max-w-[170px]">
                     <h4 className="text-xs font-black text-slate-900 truncate leading-snug">
                       {studentProfile?.name || "Student"}
                     </h4>
@@ -821,57 +1006,139 @@ export default function CBTTestAttemptPage() {
                   </div>
                 </div>
 
-                {/* Grid palette details */}
+                {/* Grid palette details with Subjects */}
                 <div className="space-y-3">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-slate-700 border-b pb-1.5">
-                    Question Palette
-                  </h4>
-                  <div className="grid grid-cols-4 gap-1.5 max-h-[220px] overflow-y-auto pr-1">
-                    {questions.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => {
-                          setCurrentIndex(idx);
-                          setVisited(prev => ({ ...prev, [idx]: true }));
-                        }}
-                        className={`h-8 w-full rounded-lg border text-xs font-black transition flex items-center justify-center cursor-pointer outline-none ${getPaletteStyle(idx)}`}
-                      >
-                        {idx + 1}
-                      </button>
-                    ))}
+                  <div className="flex items-center justify-between border-b pb-1.5">
+                    <h4 className="text-xs font-black uppercase tracking-wider text-slate-800">
+                      Question Palette
+                    </h4>
+                    <span className="text-[10px] font-extrabold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                      {questions.length} Questions
+                    </span>
+                  </div>
+
+                  {/* Subject Sections Selector List */}
+                  <div className="space-y-1.5">
+                    <div className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+                      Subjects & Question Distribution:
+                    </div>
+                    {sections.map((sec, sIdx) => {
+                      const isCurrent = currentSection?.name === sec.name;
+                      const secAnswered = Object.keys(answers).filter(k => {
+                        const num = Number(k);
+                        return num >= sec.startIdx && num <= sec.endIdx;
+                      }).length;
+
+                      return (
+                        <button
+                          key={sIdx}
+                          onClick={() => {
+                            setCurrentIndex(sec.startIdx);
+                            setVisited(prev => ({ ...prev, [sec.startIdx]: true }));
+                          }}
+                          className={`w-full text-left p-2.5 rounded-xl border transition-all flex items-center justify-between cursor-pointer ${
+                            isCurrent
+                              ? "bg-emerald-50/90 border-emerald-400 text-emerald-950 ring-1 ring-emerald-500/20 shadow-xs"
+                              : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
+                          }`}
+                        >
+                          <div className="space-y-0.5 truncate pr-2">
+                            <div className="text-[11px] font-black truncate">{sec.name}</div>
+                            <div className="text-[10px] text-slate-400 font-bold">
+                              Q{sec.startIdx + 1} - Q{sec.endIdx + 1} ({sec.totalQs} Questions)
+                            </div>
+                          </div>
+                          <span className={`text-[10px] font-black px-2 py-1 rounded-md shrink-0 ${
+                            isCurrent ? "bg-emerald-600 text-white" : "bg-slate-100 text-slate-600"
+                          }`}>
+                            {secAnswered}/{sec.totalQs}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Active Section Question Number Palette */}
+                  <div className="space-y-2 pt-2 border-t">
+                    <div className="flex items-center justify-between text-[11px] font-bold text-slate-700">
+                      <span className="truncate">{currentSection?.name}</span>
+                      <span className="text-slate-400 font-mono text-[10px] shrink-0">
+                        {currentSection?.totalQs} Qs
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-1.5 max-h-[190px] overflow-y-auto pr-1 scrollbar-thin">
+                      {questions
+                        .slice(currentSection?.startIdx ?? 0, (currentSection?.endIdx ?? questions.length - 1) + 1)
+                        .map((_, relativeIdx) => {
+                          const actualIdx = (currentSection?.startIdx ?? 0) + relativeIdx;
+                          return (
+                            <button
+                              key={actualIdx}
+                              onClick={() => {
+                                setCurrentIndex(actualIdx);
+                                setVisited(prev => ({ ...prev, [actualIdx]: true }));
+                              }}
+                              className={`h-8 w-full rounded-lg border text-xs font-black transition flex items-center justify-center cursor-pointer outline-none ${getPaletteStyle(actualIdx)}`}
+                            >
+                              {actualIdx + 1}
+                            </button>
+                          );
+                        })}
+                    </div>
                   </div>
                 </div>
 
               </div>
 
               {/* Fixed bottom area */}
-              <div className="mt-6 shrink-0 space-y-4">
+              <div className="mt-4 shrink-0 space-y-3">
                 {/* Analysis scorecard summary box */}
-                <div className="bg-white border rounded-xl p-3.5 space-y-3.5">
-                  <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-500 border-b pb-1.5 text-center">
-                    PART-A Analysis
-                  </h4>
-                  <div className="space-y-2 text-xs font-semibold text-slate-600">
+                <div className="bg-white border rounded-xl p-3 space-y-2.5">
+                  <div className="flex items-center justify-between border-b pb-1">
+                    <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-600 truncate">
+                      {currentSection?.name || "Test Summary"}
+                    </h4>
+                    <span className="text-[9px] font-extrabold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100 shrink-0">
+                      Active Section
+                    </span>
+                  </div>
+                  <div className="space-y-1.5 text-xs font-semibold text-slate-600">
                     <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-sm bg-emerald-600" />
-                        <span>Answered</span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="h-2.5 w-2.5 rounded-xs bg-emerald-600 shrink-0" />
+                        <span className="text-[11px]">Section Answered</span>
                       </div>
-                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded-md">{answeredCount}</span>
+                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2 py-0.5 rounded text-[11px]">
+                        {Object.keys(answers).filter(k => {
+                          const n = Number(k);
+                          return currentSection ? (n >= currentSection.startIdx && n <= currentSection.endIdx) : true;
+                        }).length} / {currentSection?.totalQs || questions.length}
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-sm bg-rose-600" />
-                        <span>Not Answered</span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="h-2.5 w-2.5 rounded-xs bg-rose-600 shrink-0" />
+                        <span className="text-[11px]">Section Remaining</span>
                       </div>
-                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded-md">{notAnsweredCount}</span>
+                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2 py-0.5 rounded text-[11px]">
+                        {(currentSection?.totalQs || questions.length) - Object.keys(answers).filter(k => {
+                          const n = Number(k);
+                          return currentSection ? (n >= currentSection.startIdx && n <= currentSection.endIdx) : true;
+                        }).length}
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
-                        <span className="h-3 w-3 rounded-sm bg-indigo-600" />
-                        <span>Reviewed</span>
+                      <div className="flex items-center gap-1.5">
+                        <span className="h-2.5 w-2.5 rounded-xs bg-indigo-600 shrink-0" />
+                        <span className="text-[11px]">Section Reviewed</span>
                       </div>
-                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2.5 py-0.5 rounded-md">{reviewCount}</span>
+                      <span className="font-extrabold text-slate-900 bg-slate-100 px-2 py-0.5 rounded text-[11px]">
+                        {Object.keys(markedForReview).filter(k => {
+                          const n = Number(k);
+                          const inSec = currentSection ? (n >= currentSection.startIdx && n <= currentSection.endIdx) : true;
+                          return inSec && markedForReview[n];
+                        }).length}
+                      </span>
                     </div>
                   </div>
                 </div>

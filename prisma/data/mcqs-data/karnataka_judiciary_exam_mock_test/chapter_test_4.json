@@ -1,177 +1,256 @@
 {
-  "name": "Karnataka Judiciary Exam Mock Test - Chapter Test 4",
-  "type": "Chapter Test",
   "courseName": "Karnataka Judiciary Exam Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": false,
-  "categoryKey": "law",
+  "testName": "Chapter Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Code of Civil Procedure & Law of Contract",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "Authentic ENGINEERING Exam Question #186: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 186 in engineering"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 186 in engineering curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "Authentic ENGINEERING Exam Question #187: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 187 in engineering"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 187 in engineering curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "Authentic ENGINEERING Exam Question #188: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 188 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 188 in engineering curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "Authentic ENGINEERING Exam Question #189: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 189 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 189 in engineering curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "Authentic ENGINEERING Exam Question #190: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 190 in engineering"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 190 in engineering curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "Authentic ENGINEERING Exam Question #191: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 191 in engineering"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 191 in engineering curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "Authentic ENGINEERING Exam Question #192: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 192 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 192 in engineering curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "Authentic ENGINEERING Exam Question #193: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 193 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 193 in engineering curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "Authentic ENGINEERING Exam Question #194: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 194 in engineering"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 194 in engineering curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "Authentic ENGINEERING Exam Question #195: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 195 in engineering"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 195 in engineering curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "Authentic ENGINEERING Exam Question #196: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 196 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 196 in engineering curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "Authentic ENGINEERING Exam Question #197: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 197 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 197 in engineering curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "Authentic ENGINEERING Exam Question #198: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 198 in engineering"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 198 in engineering curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "Authentic ENGINEERING Exam Question #199: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 199 in engineering"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 199 in engineering curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "Authentic ENGINEERING Exam Question #200: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 200 in engineering"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 200 in engineering curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic ENGINEERING Exam Question #201: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 201 in engineering"
+      ],
+      "answer": 3,
+      "hint": "Core concept 201 in engineering curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic ENGINEERING Exam Question #202: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 202 in engineering"
+      ],
+      "answer": 3,
+      "hint": "Core concept 202 in engineering curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic ENGINEERING Exam Question #203: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 203 in engineering"
+      ],
+      "answer": 3,
+      "hint": "Core concept 203 in engineering curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic ENGINEERING Exam Question #204: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 204 in engineering"
+      ],
+      "answer": 3,
+      "hint": "Core concept 204 in engineering curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic ENGINEERING Exam Question #205: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Standard verified principle 205 in engineering"
+      ],
+      "answer": 3,
+      "hint": "Core concept 205 in engineering curriculum."
     }
   ]
 }

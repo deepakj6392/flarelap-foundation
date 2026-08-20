@@ -1,232 +1,1226 @@
 {
-  "name": "Ccras Udc/ldc/steno/assistant Mock Test - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "Ccras Udc/ldc/steno/assistant Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "subjects": [
+    {
+      "name": "General Intelligence & Reasoning",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Awareness",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "English Language & Comprehension",
+      "questions": 100,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "Reasoning Puzzle #1: In a seating alignment of 26 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 5 km North, turns East 4 km, then South 5 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 20th, Displacement = 5 km West",
+        "Priya's Rank = 22th, Displacement = 9 km North",
+        "Priya's Rank = 21th, Displacement = 4 km East",
+        "Priya's Rank = 21th, Displacement = 10 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (26) - Left (6) + 1 = 21th. North/South movements cancel, leaving 4 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "Reasoning Puzzle #2: In a seating alignment of 27 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 7 km North, turns East 7 km, then South 7 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 20th, Displacement = 7 km West",
+        "Priya's Rank = 22th, Displacement = 14 km North",
+        "Priya's Rank = 21th, Displacement = 7 km East",
+        "Priya's Rank = 21th, Displacement = 14 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (27) - Left (7) + 1 = 21th. North/South movements cancel, leaving 7 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "Reasoning Puzzle #3: In a seating alignment of 28 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 9 km North, turns East 10 km, then South 9 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 20th, Displacement = 9 km West",
+        "Priya's Rank = 22th, Displacement = 19 km North",
+        "Priya's Rank = 21th, Displacement = 10 km East",
+        "Priya's Rank = 21th, Displacement = 18 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (28) - Left (8) + 1 = 21th. North/South movements cancel, leaving 10 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "Reasoning Puzzle #4: In a seating alignment of 29 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 11 km North, turns East 13 km, then South 11 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 20th, Displacement = 11 km West",
+        "Priya's Rank = 22th, Displacement = 24 km North",
+        "Priya's Rank = 21th, Displacement = 13 km East",
+        "Priya's Rank = 21th, Displacement = 22 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (29) - Left (9) + 1 = 21th. North/South movements cancel, leaving 13 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "Reasoning Puzzle #5: In a seating alignment of 30 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 13 km North, turns East 16 km, then South 13 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 20th, Displacement = 13 km West",
+        "Priya's Rank = 22th, Displacement = 29 km North",
+        "Priya's Rank = 21th, Displacement = 16 km East",
+        "Priya's Rank = 21th, Displacement = 26 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (30) - Left (10) + 1 = 21th. North/South movements cancel, leaving 16 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "Reasoning Puzzle #6: In a seating alignment of 31 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 15 km North, turns East 19 km, then South 15 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 20th, Displacement = 15 km West",
+        "Priya's Rank = 22th, Displacement = 34 km North",
+        "Priya's Rank = 21th, Displacement = 19 km East",
+        "Priya's Rank = 21th, Displacement = 30 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (31) - Left (11) + 1 = 21th. North/South movements cancel, leaving 19 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "Reasoning Puzzle #7: In a seating alignment of 32 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 17 km North, turns East 22 km, then South 17 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 20th, Displacement = 17 km West",
+        "Priya's Rank = 22th, Displacement = 39 km North",
+        "Priya's Rank = 21th, Displacement = 22 km East",
+        "Priya's Rank = 21th, Displacement = 34 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (32) - Left (12) + 1 = 21th. North/South movements cancel, leaving 22 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "Reasoning Puzzle #8: In a seating alignment of 33 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 19 km North, turns East 25 km, then South 19 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 20th, Displacement = 19 km West",
+        "Priya's Rank = 22th, Displacement = 44 km North",
+        "Priya's Rank = 21th, Displacement = 25 km East",
+        "Priya's Rank = 21th, Displacement = 38 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (33) - Left (13) + 1 = 21th. North/South movements cancel, leaving 25 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "Reasoning Puzzle #9: In a seating alignment of 34 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 21 km North, turns East 28 km, then South 21 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 20th, Displacement = 21 km West",
+        "Priya's Rank = 22th, Displacement = 49 km North",
+        "Priya's Rank = 21th, Displacement = 28 km East",
+        "Priya's Rank = 21th, Displacement = 42 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (34) - Left (14) + 1 = 21th. North/South movements cancel, leaving 28 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "Reasoning Puzzle #10: In a seating alignment of 35 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 23 km North, turns East 31 km, then South 23 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 20th, Displacement = 23 km West",
+        "Priya's Rank = 22th, Displacement = 54 km North",
+        "Priya's Rank = 21th, Displacement = 31 km East",
+        "Priya's Rank = 21th, Displacement = 46 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (35) - Left (15) + 1 = 21th. North/South movements cancel, leaving 31 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "Reasoning Puzzle #11: In a seating alignment of 36 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 25 km North, turns East 34 km, then South 25 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 20th, Displacement = 25 km West",
+        "Priya's Rank = 22th, Displacement = 59 km North",
+        "Priya's Rank = 21th, Displacement = 34 km East",
+        "Priya's Rank = 21th, Displacement = 50 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (36) - Left (16) + 1 = 21th. North/South movements cancel, leaving 34 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "Reasoning Puzzle #12: In a seating alignment of 37 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 27 km North, turns East 37 km, then South 27 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 20th, Displacement = 27 km West",
+        "Priya's Rank = 22th, Displacement = 64 km North",
+        "Priya's Rank = 21th, Displacement = 37 km East",
+        "Priya's Rank = 21th, Displacement = 54 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (37) - Left (17) + 1 = 21th. North/South movements cancel, leaving 37 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "Reasoning Puzzle #13: In a seating alignment of 38 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 29 km North, turns East 40 km, then South 29 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 20th, Displacement = 29 km West",
+        "Priya's Rank = 22th, Displacement = 69 km North",
+        "Priya's Rank = 21th, Displacement = 40 km East",
+        "Priya's Rank = 21th, Displacement = 58 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (38) - Left (18) + 1 = 21th. North/South movements cancel, leaving 40 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "Reasoning Puzzle #14: In a seating alignment of 39 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 31 km North, turns East 43 km, then South 31 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 20th, Displacement = 31 km West",
+        "Priya's Rank = 22th, Displacement = 74 km North",
+        "Priya's Rank = 21th, Displacement = 43 km East",
+        "Priya's Rank = 21th, Displacement = 62 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (39) - Left (19) + 1 = 21th. North/South movements cancel, leaving 43 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "Reasoning Puzzle #15: In a seating alignment of 40 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 33 km North, turns East 46 km, then South 33 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 35th, Displacement = 33 km West",
+        "Priya's Rank = 37th, Displacement = 79 km North",
+        "Priya's Rank = 36th, Displacement = 46 km East",
+        "Priya's Rank = 36th, Displacement = 66 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (40) - Left (5) + 1 = 36th. North/South movements cancel, leaving 46 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 16,
+      "question": "Reasoning Puzzle #16: In a seating alignment of 41 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 35 km North, turns East 49 km, then South 35 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 35th, Displacement = 35 km West",
+        "Priya's Rank = 37th, Displacement = 84 km North",
+        "Priya's Rank = 36th, Displacement = 49 km East",
+        "Priya's Rank = 36th, Displacement = 70 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (41) - Left (6) + 1 = 36th. North/South movements cancel, leaving 49 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "Reasoning Puzzle #17: In a seating alignment of 42 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 37 km North, turns East 52 km, then South 37 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 35th, Displacement = 37 km West",
+        "Priya's Rank = 37th, Displacement = 89 km North",
+        "Priya's Rank = 36th, Displacement = 52 km East",
+        "Priya's Rank = 36th, Displacement = 74 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Rank from right = Total (42) - Left (7) + 1 = 36th. North/South movements cancel, leaving 52 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "Reasoning Puzzle #18: In a seating alignment of 43 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 39 km North, turns East 55 km, then South 39 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 35th, Displacement = 39 km West",
+        "Priya's Rank = 37th, Displacement = 94 km North",
+        "Priya's Rank = 36th, Displacement = 55 km East",
+        "Priya's Rank = 36th, Displacement = 78 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Rank from right = Total (43) - Left (8) + 1 = 36th. North/South movements cancel, leaving 55 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "Reasoning Puzzle #19: In a seating alignment of 44 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 41 km North, turns East 58 km, then South 41 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 35th, Displacement = 41 km West",
+        "Priya's Rank = 37th, Displacement = 99 km North",
+        "Priya's Rank = 36th, Displacement = 58 km East",
+        "Priya's Rank = 36th, Displacement = 82 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Rank from right = Total (44) - Left (9) + 1 = 36th. North/South movements cancel, leaving 58 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "Reasoning Puzzle #20: In a seating alignment of 45 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 43 km North, turns East 61 km, then South 43 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 35th, Displacement = 43 km West",
+        "Priya's Rank = 37th, Displacement = 104 km North",
+        "Priya's Rank = 36th, Displacement = 61 km East",
+        "Priya's Rank = 36th, Displacement = 86 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Rank from right = Total (45) - Left (10) + 1 = 36th. North/South movements cancel, leaving 61 km East."
+    },
+    {
+      "id": 21,
+      "question": "Reasoning Puzzle #21: In a seating alignment of 46 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 45 km North, turns East 64 km, then South 45 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 35th, Displacement = 45 km West",
+        "Priya's Rank = 37th, Displacement = 109 km North",
+        "Priya's Rank = 36th, Displacement = 64 km East",
+        "Priya's Rank = 36th, Displacement = 90 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (46) - Left (11) + 1 = 36th. North/South movements cancel, leaving 64 km East."
+    },
+    {
+      "id": 22,
+      "question": "Reasoning Puzzle #22: In a seating alignment of 47 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 47 km North, turns East 67 km, then South 47 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 35th, Displacement = 47 km West",
+        "Priya's Rank = 37th, Displacement = 114 km North",
+        "Priya's Rank = 36th, Displacement = 67 km East",
+        "Priya's Rank = 36th, Displacement = 94 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (47) - Left (12) + 1 = 36th. North/South movements cancel, leaving 67 km East."
+    },
+    {
+      "id": 23,
+      "question": "Reasoning Puzzle #23: In a seating alignment of 48 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 49 km North, turns East 70 km, then South 49 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 35th, Displacement = 49 km West",
+        "Priya's Rank = 37th, Displacement = 119 km North",
+        "Priya's Rank = 36th, Displacement = 70 km East",
+        "Priya's Rank = 36th, Displacement = 98 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (48) - Left (13) + 1 = 36th. North/South movements cancel, leaving 70 km East."
+    },
+    {
+      "id": 24,
+      "question": "Reasoning Puzzle #24: In a seating alignment of 49 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 51 km North, turns East 73 km, then South 51 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 35th, Displacement = 51 km West",
+        "Priya's Rank = 37th, Displacement = 124 km North",
+        "Priya's Rank = 36th, Displacement = 73 km East",
+        "Priya's Rank = 36th, Displacement = 102 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (49) - Left (14) + 1 = 36th. North/South movements cancel, leaving 73 km East."
+    },
+    {
+      "id": 25,
+      "question": "Reasoning Puzzle #25: In a seating alignment of 50 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 53 km North, turns East 76 km, then South 53 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 35th, Displacement = 53 km West",
+        "Priya's Rank = 37th, Displacement = 129 km North",
+        "Priya's Rank = 36th, Displacement = 76 km East",
+        "Priya's Rank = 36th, Displacement = 106 km South"
+      ],
+      "answer": 2,
+      "hint": "Rank from right = Total (50) - Left (15) + 1 = 36th. North/South movements cancel, leaving 76 km East."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #80: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #81: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #82: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #83: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #84: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #85: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #86: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #87: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #88: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #89: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #90: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #91: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #92: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #93: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #94: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #95: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #96: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #97: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #98: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #99: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #100: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 51,
+      "question": "English Vocabulary #76: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Essential",
+        "Required"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 52,
+      "question": "English Vocabulary #77: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Different & Distinct",
+        "Uniform"
+      ],
+      "answer": 2,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 53,
+      "question": "English Vocabulary #78: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Agitation",
+        "Anxiety"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 54,
+      "question": "English Vocabulary #79: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Penetrable & Vulnerable",
+        "Resistant"
+      ],
+      "answer": 2,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 55,
+      "question": "English Vocabulary #80: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Common",
+        "Public"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 56,
+      "question": "English Vocabulary #81: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Scrupulous & Thorough",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 57,
+      "question": "English Vocabulary #82: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Transitory",
+        "Short-lived"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 58,
+      "question": "English Vocabulary #83: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Assertive & Domineering",
+        "Flattering"
+      ],
+      "answer": 2,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 59,
+      "question": "English Vocabulary #84: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Deceptive",
+        "Reserved"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 60,
+      "question": "English Vocabulary #85: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Malevolent & Malicious",
+        "Helpful"
+      ],
+      "answer": 2,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 61,
+      "question": "English Vocabulary #86: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Idealistic",
+        "Irrational"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 62,
+      "question": "English Vocabulary #87: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Passionate & Enthusiastic",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 63,
+      "question": "English Vocabulary #88: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Talkative",
+        "Outgoing"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 64,
+      "question": "English Vocabulary #89: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Omnipresent & Everywhere",
+        "Hidden"
+      ],
+      "answer": 2,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 65,
+      "question": "English Vocabulary #90: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Careless",
+        "Sloppy"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 66,
+      "question": "English Vocabulary #91: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Eagerness & Speed",
+        "Apathy"
+      ],
+      "answer": 2,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 67,
+      "question": "English Vocabulary #92: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Silent",
+        "Quiet"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 68,
+      "question": "English Vocabulary #93: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Sociable & Outgoing",
+        "Introverted"
+      ],
+      "answer": 2,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 69,
+      "question": "English Vocabulary #94: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Generous",
+        "Noble"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 70,
+      "question": "English Vocabulary #95: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Harmful & Destructive",
+        "Wholesome"
+      ],
+      "answer": 2,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 71,
+      "question": "English Vocabulary #96: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Essential",
+        "Required"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 72,
+      "question": "English Vocabulary #97: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Different & Distinct",
+        "Uniform"
+      ],
+      "answer": 2,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 73,
+      "question": "English Vocabulary #98: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Agitation",
+        "Anxiety"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 74,
+      "question": "English Vocabulary #99: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Penetrable & Vulnerable",
+        "Resistant"
+      ],
+      "answer": 2,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 75,
+      "question": "English Vocabulary #100: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Common",
+        "Public"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 76,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 77,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 78,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 79,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 80,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 81,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 82,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 83,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
+      ],
+      "answer": 2,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 84,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Very rarely or seldom",
+        "Frequently"
+      ],
+      "answer": 2,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 85,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
+      ],
+      "answer": 2,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 86,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 87,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 88,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 89,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 90,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 91,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 92,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 93,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
+      ],
+      "answer": 2,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 94,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Very rarely or seldom",
+        "Frequently"
+      ],
+      "answer": 2,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 95,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
+      ],
+      "answer": 2,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 96,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 97,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 98,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 99,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 100,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
     }
   ]
 }

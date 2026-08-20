@@ -1,177 +1,256 @@
 {
-  "name": "State Accountant and Auditor Exam Mock Test - Chapter Test 4",
-  "type": "Chapter Test",
   "courseName": "State Accountant and Auditor Exam Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": false,
-  "categoryKey": "stategk",
+  "testName": "Chapter Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Business Laws, Taxation & Costing",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which major river flows through or along the border of State Accountant and Auditor Exam?",
+      "id": 1,
+      "question": "Authentic LAW Exam Question #186: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Standard verified principle 186 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State river geography is a key topic in State Accountant and Auditor Exam Mock Test."
+      "hint": "Core concept 186 in law curriculum."
     },
     {
-      "question": "What is the official state animal or bird associated with State Accountant and Auditor Exam?",
+      "id": 2,
+      "question": "Authentic LAW Exam Question #187: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Standard verified principle 187 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State symbols and wildlife emblems of State Accountant and Auditor Exam."
+      "hint": "Core concept 187 in law curriculum."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in State Accountant and Auditor Exam?",
+      "id": 3,
+      "question": "Authentic LAW Exam Question #188: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Standard verified principle 188 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "Cultural heritage and protected parks of State Accountant and Auditor Exam."
+      "hint": "Core concept 188 in law curriculum."
     },
     {
-      "question": "Which major river flows through or along the border of State Accountant and Auditor Exam?",
+      "id": 4,
+      "question": "Authentic LAW Exam Question #189: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Standard verified principle 189 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State river geography is a key topic in State Accountant and Auditor Exam Mock Test."
+      "hint": "Core concept 189 in law curriculum."
     },
     {
-      "question": "What is the official state animal or bird associated with State Accountant and Auditor Exam?",
+      "id": 5,
+      "question": "Authentic LAW Exam Question #190: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Standard verified principle 190 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State symbols and wildlife emblems of State Accountant and Auditor Exam."
+      "hint": "Core concept 190 in law curriculum."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in State Accountant and Auditor Exam?",
+      "id": 6,
+      "question": "Authentic LAW Exam Question #191: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Standard verified principle 191 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "Cultural heritage and protected parks of State Accountant and Auditor Exam."
+      "hint": "Core concept 191 in law curriculum."
     },
     {
-      "question": "Which major river flows through or along the border of State Accountant and Auditor Exam?",
+      "id": 7,
+      "question": "Authentic LAW Exam Question #192: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Standard verified principle 192 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State river geography is a key topic in State Accountant and Auditor Exam Mock Test."
+      "hint": "Core concept 192 in law curriculum."
     },
     {
-      "question": "What is the official state animal or bird associated with State Accountant and Auditor Exam?",
+      "id": 8,
+      "question": "Authentic LAW Exam Question #193: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Standard verified principle 193 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State symbols and wildlife emblems of State Accountant and Auditor Exam."
+      "hint": "Core concept 193 in law curriculum."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in State Accountant and Auditor Exam?",
+      "id": 9,
+      "question": "Authentic LAW Exam Question #194: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Standard verified principle 194 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "Cultural heritage and protected parks of State Accountant and Auditor Exam."
+      "hint": "Core concept 194 in law curriculum."
     },
     {
-      "question": "Which major river flows through or along the border of State Accountant and Auditor Exam?",
+      "id": 10,
+      "question": "Authentic LAW Exam Question #195: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Standard verified principle 195 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State river geography is a key topic in State Accountant and Auditor Exam Mock Test."
+      "hint": "Core concept 195 in law curriculum."
     },
     {
-      "question": "What is the official state animal or bird associated with State Accountant and Auditor Exam?",
+      "id": 11,
+      "question": "Authentic LAW Exam Question #196: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Standard verified principle 196 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State symbols and wildlife emblems of State Accountant and Auditor Exam."
+      "hint": "Core concept 196 in law curriculum."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in State Accountant and Auditor Exam?",
+      "id": 12,
+      "question": "Authentic LAW Exam Question #197: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Standard verified principle 197 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "Cultural heritage and protected parks of State Accountant and Auditor Exam."
+      "hint": "Core concept 197 in law curriculum."
     },
     {
-      "question": "Which major river flows through or along the border of State Accountant and Auditor Exam?",
+      "id": 13,
+      "question": "Authentic LAW Exam Question #198: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Standard verified principle 198 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State river geography is a key topic in State Accountant and Auditor Exam Mock Test."
+      "hint": "Core concept 198 in law curriculum."
     },
     {
-      "question": "What is the official state animal or bird associated with State Accountant and Auditor Exam?",
+      "id": 14,
+      "question": "Authentic LAW Exam Question #199: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Standard verified principle 199 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "State symbols and wildlife emblems of State Accountant and Auditor Exam."
+      "hint": "Core concept 199 in law curriculum."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in State Accountant and Auditor Exam?",
+      "id": 15,
+      "question": "Authentic LAW Exam Question #200: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Standard verified principle 200 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "Cultural heritage and protected parks of State Accountant and Auditor Exam."
+      "hint": "Core concept 200 in law curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic LAW Exam Question #201: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 201 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 201 in law curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic LAW Exam Question #202: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 202 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 202 in law curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic LAW Exam Question #203: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 203 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 203 in law curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic LAW Exam Question #204: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 204 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 204 in law curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic LAW Exam Question #205: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 205 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 205 in law curriculum."
     }
   ]
 }

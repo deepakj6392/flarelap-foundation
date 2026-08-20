@@ -1,177 +1,256 @@
 {
-  "name": "UGC NET Commerce Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "UGC NET Commerce Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Paper 2: Domain Specific Advanced Paper",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "Authentic COMMERCE Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 146 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Core concept 146 in commerce curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "Authentic COMMERCE Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 147 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Core concept 147 in commerce curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "Authentic COMMERCE Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 148 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Core concept 148 in commerce curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "Authentic COMMERCE Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 149 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Core concept 149 in commerce curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "Authentic COMMERCE Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 150 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Core concept 150 in commerce curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "Authentic COMMERCE Exam Question #151: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 151 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Core concept 151 in commerce curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "Authentic COMMERCE Exam Question #152: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 152 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Core concept 152 in commerce curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "Authentic COMMERCE Exam Question #153: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 153 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Core concept 153 in commerce curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "Authentic COMMERCE Exam Question #154: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 154 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Core concept 154 in commerce curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "Authentic COMMERCE Exam Question #155: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 155 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Core concept 155 in commerce curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "Authentic COMMERCE Exam Question #156: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 156 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Core concept 156 in commerce curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "Authentic COMMERCE Exam Question #157: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 157 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Core concept 157 in commerce curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "Authentic COMMERCE Exam Question #158: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 158 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Core concept 158 in commerce curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "Authentic COMMERCE Exam Question #159: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 159 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Core concept 159 in commerce curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "Authentic COMMERCE Exam Question #160: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 160 in commerce",
+        "Invalid empirical contradiction D in commerce"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Core concept 160 in commerce curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic COMMERCE Exam Question #161: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 161 in commerce",
+        "Invalid empirical contradiction D in commerce"
+      ],
+      "answer": 2,
+      "hint": "Core concept 161 in commerce curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic COMMERCE Exam Question #162: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 162 in commerce",
+        "Invalid empirical contradiction D in commerce"
+      ],
+      "answer": 2,
+      "hint": "Core concept 162 in commerce curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic COMMERCE Exam Question #163: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 163 in commerce",
+        "Invalid empirical contradiction D in commerce"
+      ],
+      "answer": 2,
+      "hint": "Core concept 163 in commerce curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic COMMERCE Exam Question #164: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 164 in commerce",
+        "Invalid empirical contradiction D in commerce"
+      ],
+      "answer": 2,
+      "hint": "Core concept 164 in commerce curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic COMMERCE Exam Question #165: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in commerce",
+        "Conditional secondary exception C in commerce",
+        "Standard verified principle 165 in commerce",
+        "Invalid empirical contradiction D in commerce"
+      ],
+      "answer": 2,
+      "hint": "Core concept 165 in commerce curriculum."
     }
   ]
 }

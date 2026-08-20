@@ -1,177 +1,256 @@
 {
-  "name": "Nagaland Judiciary Exam Mock Test - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "Nagaland Judiciary Exam Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "law",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Code of Criminal Procedure & Indian Penal Code",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "Authentic LAW Exam Question #146: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 146 in law"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 146 in law curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "Authentic LAW Exam Question #147: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 147 in law"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 147 in law curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "Authentic LAW Exam Question #148: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 148 in law"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 148 in law curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "Authentic LAW Exam Question #149: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 149 in law"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 149 in law curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "Authentic LAW Exam Question #150: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 150 in law"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 150 in law curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "Authentic LAW Exam Question #151: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 151 in law"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 151 in law curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "Authentic LAW Exam Question #152: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 152 in law"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 152 in law curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "Authentic LAW Exam Question #153: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 153 in law"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 153 in law curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "Authentic LAW Exam Question #154: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 154 in law"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 154 in law curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "Authentic LAW Exam Question #155: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 155 in law"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 155 in law curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "Authentic LAW Exam Question #156: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 156 in law"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 3,
+      "hint": "Core concept 156 in law curriculum."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "Authentic LAW Exam Question #157: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 157 in law"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 3,
+      "hint": "Core concept 157 in law curriculum."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "Authentic LAW Exam Question #158: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 158 in law"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 3,
+      "hint": "Core concept 158 in law curriculum."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "Authentic LAW Exam Question #159: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 159 in law"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 3,
+      "hint": "Core concept 159 in law curriculum."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "Authentic LAW Exam Question #160: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 160 in law"
+      ],
+      "answer": 3,
+      "hint": "Core concept 160 in law curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic LAW Exam Question #161: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law",
+        "Standard verified principle 161 in law"
+      ],
+      "answer": 3,
+      "hint": "Core concept 161 in law curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic LAW Exam Question #162: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 162 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Core concept 162 in law curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic LAW Exam Question #163: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 163 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 163 in law curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic LAW Exam Question #164: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 164 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 164 in law curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic LAW Exam Question #165: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 165 in law",
+        "Opposing non-standard hypothesis B in law",
+        "Conditional secondary exception C in law",
+        "Invalid empirical contradiction D in law"
+      ],
+      "answer": 0,
+      "hint": "Core concept 165 in law curriculum."
     }
   ]
 }

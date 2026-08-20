@@ -1,232 +1,1226 @@
 {
-  "name": "IBPS Clerk Preliminary Mock Test - Full Length Mock Test 4",
-  "type": "Full Mock",
   "courseName": "IBPS Clerk Preliminary Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "banking",
+  "testName": "Full Length Mock Test 4",
+  "totalQuestions": 100,
+  "totalMarks": 100,
+  "duration": 60,
+  "subjects": [
+    {
+      "name": "English Language",
+      "questions": 30,
+      "marks": 30
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": 35,
+      "marks": 35
+    },
+    {
+      "name": "Reasoning Ability",
+      "questions": 35,
+      "marks": 35
+    }
+  ],
   "questions": [
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 1,
+      "question": "English Vocabulary #76: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Essential",
+        "Unnecessary & Extra",
+        "Vital",
+        "Required"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 2,
+      "question": "English Vocabulary #77: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Different & Distinct",
+        "Identical",
+        "Similar",
+        "Uniform"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Disparate means fundamentally different in kind."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 3,
+      "question": "English Vocabulary #78: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Agitation",
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 4,
+      "question": "English Vocabulary #79: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Penetrable & Vulnerable",
+        "Impenetrable",
+        "Proof",
+        "Resistant"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 5,
+      "question": "English Vocabulary #80: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Common",
+        "Obscure & Arcane",
+        "Familiar",
+        "Public"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 6,
+      "question": "English Vocabulary #81: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Scrupulous & Thorough",
+        "Careless",
+        "Hasty",
+        "Indifferent"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 7,
+      "question": "English Vocabulary #82: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Transitory",
+        "Permanent & Eternal",
+        "Fleeting",
+        "Short-lived"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 8,
+      "question": "English Vocabulary #83: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Assertive & Domineering",
+        "Servile",
+        "Fawning",
+        "Flattering"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 9,
+      "question": "English Vocabulary #84: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Deceptive",
+        "Frank & Outspoken",
+        "Shy",
+        "Reserved"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 10,
+      "question": "English Vocabulary #85: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Malevolent & Malicious",
+        "Kind",
+        "Generous",
+        "Helpful"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 11,
+      "question": "English Vocabulary #86: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Idealistic",
+        "Practical & Realistic",
+        "Theoretical",
+        "Irrational"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 12,
+      "question": "English Vocabulary #87: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Passionate & Enthusiastic",
+        "Apathetic",
+        "Lethargic",
+        "Indifferent"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 13,
+      "question": "English Vocabulary #88: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Talkative",
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Outgoing"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 14,
+      "question": "English Vocabulary #89: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Omnipresent & Everywhere",
+        "Rare",
+        "Scarce",
+        "Hidden"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 15,
+      "question": "English Vocabulary #90: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Careless",
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Sloppy"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 16,
+      "question": "English Vocabulary #91: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Eagerness & Speed",
+        "Sluggishness",
+        "Reluctance",
+        "Apathy"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 17,
+      "question": "English Vocabulary #92: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Silent",
+        "Garrulous & Talkative",
+        "Reticent",
+        "Quiet"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 18,
+      "question": "English Vocabulary #93: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Solitary",
+        "Introverted"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Gregarious means fond of company; sociable."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 19,
+      "question": "English Vocabulary #94: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Generous",
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Noble"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 20,
+      "question": "English Vocabulary #95: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Harmful & Destructive",
+        "Beneficial",
+        "Harmless",
+        "Wholesome"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 21,
+      "question": "English Vocabulary #96: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Essential",
+        "Unnecessary & Extra",
+        "Vital",
+        "Required"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 22,
+      "question": "English Vocabulary #97: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Different & Distinct",
+        "Identical",
+        "Similar",
+        "Uniform"
+      ],
+      "answer": 0,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 23,
+      "question": "English Vocabulary #98: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Agitation",
+        "Calmness & Composure",
+        "Panic",
+        "Anxiety"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 24,
+      "question": "English Vocabulary #99: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Penetrable & Vulnerable",
+        "Impenetrable",
+        "Proof",
+        "Resistant"
+      ],
+      "answer": 0,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 25,
+      "question": "English Vocabulary #100: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Common",
+        "Obscure & Arcane",
+        "Familiar",
+        "Public"
+      ],
+      "answer": 0,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 26,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 27,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 28,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 29,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 30,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 31,
+      "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 32,
+      "question": "Quantitative Problem #77: A shopkeeper buys an item at cost ₹7850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 33,
+      "question": "Quantitative Problem #78: A shopkeeper buys an item at cost ₹7950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 34,
+      "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
+    },
+    {
+      "id": 35,
+      "question": "Quantitative Problem #80: A shopkeeper buys an item at cost ₹8150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
+    },
+    {
+      "id": 36,
+      "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
+    },
+    {
+      "id": 37,
+      "question": "Quantitative Problem #82: A shopkeeper buys an item at cost ₹8350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((9769.5 - 8350) / 8350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
+    },
+    {
+      "id": 38,
+      "question": "Quantitative Problem #83: A shopkeeper buys an item at cost ₹8450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10055.5 - 8450) / 8450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
+    },
+    {
+      "id": 39,
+      "question": "Quantitative Problem #84: A shopkeeper buys an item at cost ₹8550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12183.75 - 8550) / 8550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
+    },
+    {
+      "id": 40,
+      "question": "Quantitative Problem #85: A shopkeeper buys an item at cost ₹8650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((8563.5 - 8650) / 8650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
+    },
+    {
+      "id": 41,
+      "question": "Quantitative Problem #86: A shopkeeper buys an item at cost ₹8750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 5%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((8925 - 8750) / 8750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
+    },
+    {
+      "id": 42,
+      "question": "Quantitative Problem #87: A shopkeeper buys an item at cost ₹8850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 25%, Joint Work = 40 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10929.75 - 8850) / 8850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
+    },
+    {
+      "id": 43,
+      "question": "Quantitative Problem #88: A shopkeeper buys an item at cost ₹8950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 30%, Joint Work = 42 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11277 - 8950) / 8950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
+    },
+    {
+      "id": 44,
+      "question": "Quantitative Problem #89: A shopkeeper buys an item at cost ₹9050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 35%, Joint Work = 44 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11538.75 - 9050) / 9050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
+    },
+    {
+      "id": 45,
+      "question": "Quantitative Problem #90: A shopkeeper buys an item at cost ₹9150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 5%, Joint Work = 31 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((9561.75 - 9150) / 9150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
+    },
+    {
+      "id": 46,
+      "question": "Quantitative Problem #91: A shopkeeper buys an item at cost ₹9250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 8.24 days",
+        "Profit = 10%, Joint Work = 9.24 days",
+        "Profit = 6.5%, Joint Work = 7.44 days",
+        "Profit = 10%, Joint Work = 33 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((9990 - 9250) / 9250) * 100 = 8%. Combined Work = (17*16)/(17+16) = 8.24 days."
+    },
+    {
+      "id": 47,
+      "question": "Quantitative Problem #92: A shopkeeper buys an item at cost ₹9350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 8.74 days",
+        "Profit = 12.5%, Joint Work = 9.74 days",
+        "Profit = 9%, Joint Work = 7.94 days",
+        "Profit = 15%, Joint Work = 35 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10331.75 - 9350) / 9350) * 100 = 10.5%. Combined Work = (18*17)/(18+17) = 8.74 days."
+    },
+    {
+      "id": 48,
+      "question": "Quantitative Problem #93: A shopkeeper buys an item at cost ₹9450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 9.24 days",
+        "Profit = 35%, Joint Work = 10.24 days",
+        "Profit = 31.5%, Joint Work = 8.44 days",
+        "Profit = 35%, Joint Work = 37 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12568.5 - 9450) / 9450) * 100 = 33%. Combined Work = (19*18)/(19+18) = 9.24 days."
+    },
+    {
+      "id": 49,
+      "question": "Quantitative Problem #94: A shopkeeper buys an item at cost ₹9550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 9.74 days",
+        "Profit = 37%, Joint Work = 10.74 days",
+        "Profit = 33.5%, Joint Work = 8.94 days",
+        "Profit = 40%, Joint Work = 39 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12892.5 - 9550) / 9550) * 100 = 35%. Combined Work = (20*19)/(20+19) = 9.74 days."
+    },
+    {
+      "id": 50,
+      "question": "Quantitative Problem #95: A shopkeeper buys an item at cost ₹9650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 10.24 days",
+        "Profit = -4.5%, Joint Work = 11.24 days",
+        "Profit = -8%, Joint Work = 9.44 days",
+        "Profit = -5%, Joint Work = 41 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((9022.75 - 9650) / 9650) * 100 = -6.5%. Combined Work = (21*20)/(21+20) = 10.24 days."
+    },
+    {
+      "id": 51,
+      "question": "Quantitative Problem #96: A shopkeeper buys an item at cost ₹9750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 14%, Joint Work = 6.77 days",
+        "Profit = 16%, Joint Work = 7.77 days",
+        "Profit = 12.5%, Joint Work = 5.97 days",
+        "Profit = 15%, Joint Work = 31 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11115 - 9750) / 9750) * 100 = 14%. Combined Work = (10*21)/(10+21) = 6.77 days."
+    },
+    {
+      "id": 52,
+      "question": "Quantitative Problem #97: A shopkeeper buys an item at cost ₹9850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 17%, Joint Work = 7.33 days",
+        "Profit = 19%, Joint Work = 8.33 days",
+        "Profit = 15.5%, Joint Work = 6.53 days",
+        "Profit = 20%, Joint Work = 33 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11524.5 - 9850) / 9850) * 100 = 17%. Combined Work = (11*22)/(11+22) = 7.33 days."
+    },
+    {
+      "id": 53,
+      "question": "Quantitative Problem #98: A shopkeeper buys an item at cost ₹9950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 7.89 days",
+        "Profit = 21%, Joint Work = 8.89 days",
+        "Profit = 17.5%, Joint Work = 7.09 days",
+        "Profit = 25%, Joint Work = 35 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11840.5 - 9950) / 9950) * 100 = 19%. Combined Work = (12*23)/(12+23) = 7.89 days."
+    },
+    {
+      "id": 54,
+      "question": "Quantitative Problem #99: A shopkeeper buys an item at cost ₹10050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 42.5%, Joint Work = 8.43 days",
+        "Profit = 44.5%, Joint Work = 9.43 days",
+        "Profit = 41%, Joint Work = 7.63 days",
+        "Profit = 45%, Joint Work = 37 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((14321.25 - 10050) / 10050) * 100 = 42.5%. Combined Work = (13*24)/(13+24) = 8.43 days."
+    },
+    {
+      "id": 55,
+      "question": "Quantitative Problem #100: A shopkeeper buys an item at cost ₹10150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -1%, Joint Work = 8.97 days",
+        "Profit = 1%, Joint Work = 9.97 days",
+        "Profit = -2.5%, Joint Work = 8.17 days",
+        "Profit = 0%, Joint Work = 39 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10048.5 - 10150) / 10150) * 100 = -1%. Combined Work = (14*25)/(14+25) = 8.97 days."
+    },
+    {
+      "id": 56,
+      "question": "Quantitative Problem #101: A shopkeeper buys an item at cost ₹10250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10455 - 10250) / 10250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 57,
+      "question": "Quantitative Problem #102: A shopkeeper buys an item at cost ₹10350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12782.25 - 10350) / 10350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 58,
+      "question": "Quantitative Problem #103: A shopkeeper buys an item at cost ₹10450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13166.999999999998 - 10450) / 10450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 59,
+      "question": "Quantitative Problem #104: A shopkeeper buys an item at cost ₹10550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13451.25 - 10550) / 10550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 60,
+      "question": "Quantitative Problem #105: A shopkeeper buys an item at cost ₹10650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11129.250000000002 - 10650) / 10650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 61,
+      "question": "Quantitative Problem #106: A shopkeeper buys an item at cost ₹10750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11610 - 10750) / 10750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 62,
+      "question": "Quantitative Problem #107: A shopkeeper buys an item at cost ₹10850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11989.25 - 10850) / 10850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 63,
+      "question": "Quantitative Problem #108: A shopkeeper buys an item at cost ₹10950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14563.499999999998 - 10950) / 10950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 64,
+      "question": "Quantitative Problem #109: A shopkeeper buys an item at cost ₹11050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14917.5 - 11050) / 11050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 65,
+      "question": "Quantitative Problem #110: A shopkeeper buys an item at cost ₹11150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((10425.250000000002 - 11150) / 11150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 66,
+      "question": "Reasoning Puzzle #1: In a seating alignment of 26 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 5 km North, turns East 4 km, then South 5 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 4 km East",
+        "Priya's Rank = 20th, Displacement = 5 km West",
+        "Priya's Rank = 22th, Displacement = 9 km North",
+        "Priya's Rank = 21th, Displacement = 10 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (26) - Left (6) + 1 = 21th. North/South movements cancel, leaving 4 km East."
+    },
+    {
+      "id": 67,
+      "question": "Reasoning Puzzle #2: In a seating alignment of 27 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 7 km North, turns East 7 km, then South 7 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 7 km East",
+        "Priya's Rank = 20th, Displacement = 7 km West",
+        "Priya's Rank = 22th, Displacement = 14 km North",
+        "Priya's Rank = 21th, Displacement = 14 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (27) - Left (7) + 1 = 21th. North/South movements cancel, leaving 7 km East."
+    },
+    {
+      "id": 68,
+      "question": "Reasoning Puzzle #3: In a seating alignment of 28 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 9 km North, turns East 10 km, then South 9 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 10 km East",
+        "Priya's Rank = 20th, Displacement = 9 km West",
+        "Priya's Rank = 22th, Displacement = 19 km North",
+        "Priya's Rank = 21th, Displacement = 18 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (28) - Left (8) + 1 = 21th. North/South movements cancel, leaving 10 km East."
+    },
+    {
+      "id": 69,
+      "question": "Reasoning Puzzle #4: In a seating alignment of 29 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 11 km North, turns East 13 km, then South 11 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 13 km East",
+        "Priya's Rank = 20th, Displacement = 11 km West",
+        "Priya's Rank = 22th, Displacement = 24 km North",
+        "Priya's Rank = 21th, Displacement = 22 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (29) - Left (9) + 1 = 21th. North/South movements cancel, leaving 13 km East."
+    },
+    {
+      "id": 70,
+      "question": "Reasoning Puzzle #5: In a seating alignment of 30 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 13 km North, turns East 16 km, then South 13 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 16 km East",
+        "Priya's Rank = 20th, Displacement = 13 km West",
+        "Priya's Rank = 22th, Displacement = 29 km North",
+        "Priya's Rank = 21th, Displacement = 26 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (30) - Left (10) + 1 = 21th. North/South movements cancel, leaving 16 km East."
+    },
+    {
+      "id": 71,
+      "question": "Reasoning Puzzle #6: In a seating alignment of 31 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 15 km North, turns East 19 km, then South 15 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 19 km East",
+        "Priya's Rank = 20th, Displacement = 15 km West",
+        "Priya's Rank = 22th, Displacement = 34 km North",
+        "Priya's Rank = 21th, Displacement = 30 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (31) - Left (11) + 1 = 21th. North/South movements cancel, leaving 19 km East."
+    },
+    {
+      "id": 72,
+      "question": "Reasoning Puzzle #7: In a seating alignment of 32 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 17 km North, turns East 22 km, then South 17 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 22 km East",
+        "Priya's Rank = 20th, Displacement = 17 km West",
+        "Priya's Rank = 22th, Displacement = 39 km North",
+        "Priya's Rank = 21th, Displacement = 34 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (32) - Left (12) + 1 = 21th. North/South movements cancel, leaving 22 km East."
+    },
+    {
+      "id": 73,
+      "question": "Reasoning Puzzle #8: In a seating alignment of 33 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 19 km North, turns East 25 km, then South 19 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 25 km East",
+        "Priya's Rank = 20th, Displacement = 19 km West",
+        "Priya's Rank = 22th, Displacement = 44 km North",
+        "Priya's Rank = 21th, Displacement = 38 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (33) - Left (13) + 1 = 21th. North/South movements cancel, leaving 25 km East."
+    },
+    {
+      "id": 74,
+      "question": "Reasoning Puzzle #9: In a seating alignment of 34 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 21 km North, turns East 28 km, then South 21 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 28 km East",
+        "Priya's Rank = 20th, Displacement = 21 km West",
+        "Priya's Rank = 22th, Displacement = 49 km North",
+        "Priya's Rank = 21th, Displacement = 42 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (34) - Left (14) + 1 = 21th. North/South movements cancel, leaving 28 km East."
+    },
+    {
+      "id": 75,
+      "question": "Reasoning Puzzle #10: In a seating alignment of 35 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 23 km North, turns East 31 km, then South 23 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 31 km East",
+        "Priya's Rank = 20th, Displacement = 23 km West",
+        "Priya's Rank = 22th, Displacement = 54 km North",
+        "Priya's Rank = 21th, Displacement = 46 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (35) - Left (15) + 1 = 21th. North/South movements cancel, leaving 31 km East."
+    },
+    {
+      "id": 76,
+      "question": "Reasoning Puzzle #11: In a seating alignment of 36 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 25 km North, turns East 34 km, then South 25 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 34 km East",
+        "Priya's Rank = 20th, Displacement = 25 km West",
+        "Priya's Rank = 22th, Displacement = 59 km North",
+        "Priya's Rank = 21th, Displacement = 50 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (36) - Left (16) + 1 = 21th. North/South movements cancel, leaving 34 km East."
+    },
+    {
+      "id": 77,
+      "question": "Reasoning Puzzle #12: In a seating alignment of 37 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 27 km North, turns East 37 km, then South 27 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 37 km East",
+        "Priya's Rank = 20th, Displacement = 27 km West",
+        "Priya's Rank = 22th, Displacement = 64 km North",
+        "Priya's Rank = 21th, Displacement = 54 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (37) - Left (17) + 1 = 21th. North/South movements cancel, leaving 37 km East."
+    },
+    {
+      "id": 78,
+      "question": "Reasoning Puzzle #13: In a seating alignment of 38 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 29 km North, turns East 40 km, then South 29 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 40 km East",
+        "Priya's Rank = 20th, Displacement = 29 km West",
+        "Priya's Rank = 22th, Displacement = 69 km North",
+        "Priya's Rank = 21th, Displacement = 58 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (38) - Left (18) + 1 = 21th. North/South movements cancel, leaving 40 km East."
+    },
+    {
+      "id": 79,
+      "question": "Reasoning Puzzle #14: In a seating alignment of 39 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 31 km North, turns East 43 km, then South 31 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 21th, Displacement = 43 km East",
+        "Priya's Rank = 20th, Displacement = 31 km West",
+        "Priya's Rank = 22th, Displacement = 74 km North",
+        "Priya's Rank = 21th, Displacement = 62 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (39) - Left (19) + 1 = 21th. North/South movements cancel, leaving 43 km East."
+    },
+    {
+      "id": 80,
+      "question": "Reasoning Puzzle #15: In a seating alignment of 40 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 33 km North, turns East 46 km, then South 33 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 46 km East",
+        "Priya's Rank = 35th, Displacement = 33 km West",
+        "Priya's Rank = 37th, Displacement = 79 km North",
+        "Priya's Rank = 36th, Displacement = 66 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (40) - Left (5) + 1 = 36th. North/South movements cancel, leaving 46 km East."
+    },
+    {
+      "id": 81,
+      "question": "Reasoning Puzzle #16: In a seating alignment of 41 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 35 km North, turns East 49 km, then South 35 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 49 km East",
+        "Priya's Rank = 35th, Displacement = 35 km West",
+        "Priya's Rank = 37th, Displacement = 84 km North",
+        "Priya's Rank = 36th, Displacement = 70 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (41) - Left (6) + 1 = 36th. North/South movements cancel, leaving 49 km East."
+    },
+    {
+      "id": 82,
+      "question": "Reasoning Puzzle #17: In a seating alignment of 42 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 37 km North, turns East 52 km, then South 37 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 52 km East",
+        "Priya's Rank = 35th, Displacement = 37 km West",
+        "Priya's Rank = 37th, Displacement = 89 km North",
+        "Priya's Rank = 36th, Displacement = 74 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (42) - Left (7) + 1 = 36th. North/South movements cancel, leaving 52 km East."
+    },
+    {
+      "id": 83,
+      "question": "Reasoning Puzzle #18: In a seating alignment of 43 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 39 km North, turns East 55 km, then South 39 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 55 km East",
+        "Priya's Rank = 35th, Displacement = 39 km West",
+        "Priya's Rank = 37th, Displacement = 94 km North",
+        "Priya's Rank = 36th, Displacement = 78 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (43) - Left (8) + 1 = 36th. North/South movements cancel, leaving 55 km East."
+    },
+    {
+      "id": 84,
+      "question": "Reasoning Puzzle #19: In a seating alignment of 44 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 41 km North, turns East 58 km, then South 41 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 58 km East",
+        "Priya's Rank = 35th, Displacement = 41 km West",
+        "Priya's Rank = 37th, Displacement = 99 km North",
+        "Priya's Rank = 36th, Displacement = 82 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (44) - Left (9) + 1 = 36th. North/South movements cancel, leaving 58 km East."
+    },
+    {
+      "id": 85,
+      "question": "Reasoning Puzzle #20: In a seating alignment of 45 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 43 km North, turns East 61 km, then South 43 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 61 km East",
+        "Priya's Rank = 35th, Displacement = 43 km West",
+        "Priya's Rank = 37th, Displacement = 104 km North",
+        "Priya's Rank = 36th, Displacement = 86 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (45) - Left (10) + 1 = 36th. North/South movements cancel, leaving 61 km East."
+    },
+    {
+      "id": 86,
+      "question": "Reasoning Puzzle #21: In a seating alignment of 46 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 45 km North, turns East 64 km, then South 45 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 64 km East",
+        "Priya's Rank = 35th, Displacement = 45 km West",
+        "Priya's Rank = 37th, Displacement = 109 km North",
+        "Priya's Rank = 36th, Displacement = 90 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (46) - Left (11) + 1 = 36th. North/South movements cancel, leaving 64 km East."
+    },
+    {
+      "id": 87,
+      "question": "Reasoning Puzzle #22: In a seating alignment of 47 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 47 km North, turns East 67 km, then South 47 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 67 km East",
+        "Priya's Rank = 35th, Displacement = 47 km West",
+        "Priya's Rank = 37th, Displacement = 114 km North",
+        "Priya's Rank = 36th, Displacement = 94 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (47) - Left (12) + 1 = 36th. North/South movements cancel, leaving 67 km East."
+    },
+    {
+      "id": 88,
+      "question": "Reasoning Puzzle #23: In a seating alignment of 48 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 49 km North, turns East 70 km, then South 49 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 70 km East",
+        "Priya's Rank = 35th, Displacement = 49 km West",
+        "Priya's Rank = 37th, Displacement = 119 km North",
+        "Priya's Rank = 36th, Displacement = 98 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (48) - Left (13) + 1 = 36th. North/South movements cancel, leaving 70 km East."
+    },
+    {
+      "id": 89,
+      "question": "Reasoning Puzzle #24: In a seating alignment of 49 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 51 km North, turns East 73 km, then South 51 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 73 km East",
+        "Priya's Rank = 35th, Displacement = 51 km West",
+        "Priya's Rank = 37th, Displacement = 124 km North",
+        "Priya's Rank = 36th, Displacement = 102 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (49) - Left (14) + 1 = 36th. North/South movements cancel, leaving 73 km East."
+    },
+    {
+      "id": 90,
+      "question": "Reasoning Puzzle #25: In a seating alignment of 50 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 53 km North, turns East 76 km, then South 53 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 76 km East",
+        "Priya's Rank = 35th, Displacement = 53 km West",
+        "Priya's Rank = 37th, Displacement = 129 km North",
+        "Priya's Rank = 36th, Displacement = 106 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (50) - Left (15) + 1 = 36th. North/South movements cancel, leaving 76 km East."
+    },
+    {
+      "id": 91,
+      "question": "Reasoning Puzzle #26: In a seating alignment of 51 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 55 km North, turns East 79 km, then South 55 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 79 km East",
+        "Priya's Rank = 35th, Displacement = 55 km West",
+        "Priya's Rank = 37th, Displacement = 134 km North",
+        "Priya's Rank = 36th, Displacement = 110 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (51) - Left (16) + 1 = 36th. North/South movements cancel, leaving 79 km East."
+    },
+    {
+      "id": 92,
+      "question": "Reasoning Puzzle #27: In a seating alignment of 52 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 57 km North, turns East 82 km, then South 57 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 82 km East",
+        "Priya's Rank = 35th, Displacement = 57 km West",
+        "Priya's Rank = 37th, Displacement = 139 km North",
+        "Priya's Rank = 36th, Displacement = 114 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (52) - Left (17) + 1 = 36th. North/South movements cancel, leaving 82 km East."
+    },
+    {
+      "id": 93,
+      "question": "Reasoning Puzzle #28: In a seating alignment of 53 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 59 km North, turns East 85 km, then South 59 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 85 km East",
+        "Priya's Rank = 35th, Displacement = 59 km West",
+        "Priya's Rank = 37th, Displacement = 144 km North",
+        "Priya's Rank = 36th, Displacement = 118 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (53) - Left (18) + 1 = 36th. North/South movements cancel, leaving 85 km East."
+    },
+    {
+      "id": 94,
+      "question": "Reasoning Puzzle #29: In a seating alignment of 54 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 61 km North, turns East 88 km, then South 61 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 36th, Displacement = 88 km East",
+        "Priya's Rank = 35th, Displacement = 61 km West",
+        "Priya's Rank = 37th, Displacement = 149 km North",
+        "Priya's Rank = 36th, Displacement = 122 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (54) - Left (19) + 1 = 36th. North/South movements cancel, leaving 88 km East."
+    },
+    {
+      "id": 95,
+      "question": "Reasoning Puzzle #30: In a seating alignment of 55 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 63 km North, turns East 91 km, then South 63 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 51th, Displacement = 91 km East",
+        "Priya's Rank = 52th, Displacement = 154 km North",
+        "Priya's Rank = 51th, Displacement = 126 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (55) - Left (5) + 1 = 51th. North/South movements cancel, leaving 91 km East."
+    },
+    {
+      "id": 96,
+      "question": "Reasoning Puzzle #31: In a seating alignment of 56 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 65 km North, turns East 94 km, then South 65 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 65 km West",
+        "Priya's Rank = 51th, Displacement = 94 km East",
+        "Priya's Rank = 52th, Displacement = 159 km North",
+        "Priya's Rank = 51th, Displacement = 130 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (56) - Left (6) + 1 = 51th. North/South movements cancel, leaving 94 km East."
+    },
+    {
+      "id": 97,
+      "question": "Reasoning Puzzle #32: In a seating alignment of 57 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 67 km North, turns East 97 km, then South 67 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 67 km West",
+        "Priya's Rank = 51th, Displacement = 97 km East",
+        "Priya's Rank = 52th, Displacement = 164 km North",
+        "Priya's Rank = 51th, Displacement = 134 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (57) - Left (7) + 1 = 51th. North/South movements cancel, leaving 97 km East."
+    },
+    {
+      "id": 98,
+      "question": "Reasoning Puzzle #33: In a seating alignment of 58 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 69 km North, turns East 100 km, then South 69 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 51th, Displacement = 100 km East",
+        "Priya's Rank = 52th, Displacement = 169 km North",
+        "Priya's Rank = 51th, Displacement = 138 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (58) - Left (8) + 1 = 51th. North/South movements cancel, leaving 100 km East."
+    },
+    {
+      "id": 99,
+      "question": "Reasoning Puzzle #34: In a seating alignment of 59 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 71 km North, turns East 103 km, then South 71 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 71 km West",
+        "Priya's Rank = 51th, Displacement = 103 km East",
+        "Priya's Rank = 52th, Displacement = 174 km North",
+        "Priya's Rank = 51th, Displacement = 142 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (59) - Left (9) + 1 = 51th. North/South movements cancel, leaving 103 km East."
+    },
+    {
+      "id": 100,
+      "question": "Reasoning Puzzle #35: In a seating alignment of 60 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 73 km North, turns East 106 km, then South 73 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 50th, Displacement = 73 km West",
+        "Priya's Rank = 51th, Displacement = 106 km East",
+        "Priya's Rank = 52th, Displacement = 179 km North",
+        "Priya's Rank = 51th, Displacement = 146 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (60) - Left (10) + 1 = 51th. North/South movements cancel, leaving 106 km East."
     }
   ]
 }

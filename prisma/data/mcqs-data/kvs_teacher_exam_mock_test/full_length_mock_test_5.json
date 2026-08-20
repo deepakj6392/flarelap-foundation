@@ -1,232 +1,2181 @@
 {
-  "name": "KVS Teacher Exam Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "KVS Teacher Exam Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 180,
+  "totalMarks": 180,
+  "duration": 180,
+  "subjects": [
+    {
+      "name": "General Knowledge, Reasoning & Language",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "Teaching Aptitude & Pedagogy / Subject Domain",
+      "questions": 50,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Reasoning Puzzle #26: In a seating alignment of 51 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 55 km North, turns East 79 km, then South 55 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 35th, Displacement = 55 km West",
+        "Priya's Rank = 36th, Displacement = 79 km East",
+        "Priya's Rank = 37th, Displacement = 134 km North",
+        "Priya's Rank = 36th, Displacement = 110 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rank from right = Total (51) - Left (16) + 1 = 36th. North/South movements cancel, leaving 79 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Reasoning Puzzle #27: In a seating alignment of 52 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 57 km North, turns East 82 km, then South 57 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 35th, Displacement = 57 km West",
+        "Priya's Rank = 36th, Displacement = 82 km East",
+        "Priya's Rank = 37th, Displacement = 139 km North",
+        "Priya's Rank = 36th, Displacement = 114 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rank from right = Total (52) - Left (17) + 1 = 36th. North/South movements cancel, leaving 82 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Reasoning Puzzle #28: In a seating alignment of 53 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 59 km North, turns East 85 km, then South 59 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 35th, Displacement = 59 km West",
+        "Priya's Rank = 36th, Displacement = 85 km East",
+        "Priya's Rank = 37th, Displacement = 144 km North",
+        "Priya's Rank = 36th, Displacement = 118 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rank from right = Total (53) - Left (18) + 1 = 36th. North/South movements cancel, leaving 85 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Reasoning Puzzle #29: In a seating alignment of 54 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 61 km North, turns East 88 km, then South 61 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 35th, Displacement = 61 km West",
+        "Priya's Rank = 36th, Displacement = 88 km East",
+        "Priya's Rank = 37th, Displacement = 149 km North",
+        "Priya's Rank = 36th, Displacement = 122 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rank from right = Total (54) - Left (19) + 1 = 36th. North/South movements cancel, leaving 88 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Reasoning Puzzle #30: In a seating alignment of 55 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 63 km North, turns East 91 km, then South 63 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 51th, Displacement = 91 km East",
+        "Priya's Rank = 52th, Displacement = 154 km North",
+        "Priya's Rank = 51th, Displacement = 126 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rank from right = Total (55) - Left (5) + 1 = 51th. North/South movements cancel, leaving 91 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Reasoning Puzzle #31: In a seating alignment of 56 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 65 km North, turns East 94 km, then South 65 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 65 km West",
+        "Priya's Rank = 51th, Displacement = 94 km East",
+        "Priya's Rank = 52th, Displacement = 159 km North",
+        "Priya's Rank = 51th, Displacement = 130 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rank from right = Total (56) - Left (6) + 1 = 51th. North/South movements cancel, leaving 94 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Reasoning Puzzle #32: In a seating alignment of 57 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 67 km North, turns East 97 km, then South 67 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 67 km West",
+        "Priya's Rank = 51th, Displacement = 97 km East",
+        "Priya's Rank = 52th, Displacement = 164 km North",
+        "Priya's Rank = 51th, Displacement = 134 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rank from right = Total (57) - Left (7) + 1 = 51th. North/South movements cancel, leaving 97 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Reasoning Puzzle #33: In a seating alignment of 58 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 69 km North, turns East 100 km, then South 69 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 51th, Displacement = 100 km East",
+        "Priya's Rank = 52th, Displacement = 169 km North",
+        "Priya's Rank = 51th, Displacement = 138 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rank from right = Total (58) - Left (8) + 1 = 51th. North/South movements cancel, leaving 100 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Reasoning Puzzle #34: In a seating alignment of 59 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 71 km North, turns East 103 km, then South 71 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 71 km West",
+        "Priya's Rank = 51th, Displacement = 103 km East",
+        "Priya's Rank = 52th, Displacement = 174 km North",
+        "Priya's Rank = 51th, Displacement = 142 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rank from right = Total (59) - Left (9) + 1 = 51th. North/South movements cancel, leaving 103 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Reasoning Puzzle #35: In a seating alignment of 60 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 73 km North, turns East 106 km, then South 73 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 73 km West",
+        "Priya's Rank = 51th, Displacement = 106 km East",
+        "Priya's Rank = 52th, Displacement = 179 km North",
+        "Priya's Rank = 51th, Displacement = 146 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rank from right = Total (60) - Left (10) + 1 = 51th. North/South movements cancel, leaving 106 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Reasoning Puzzle #36: In a seating alignment of 61 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 75 km North, turns East 109 km, then South 75 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 75 km West",
+        "Priya's Rank = 51th, Displacement = 109 km East",
+        "Priya's Rank = 52th, Displacement = 184 km North",
+        "Priya's Rank = 51th, Displacement = 150 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rank from right = Total (61) - Left (11) + 1 = 51th. North/South movements cancel, leaving 109 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Reasoning Puzzle #37: In a seating alignment of 62 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 77 km North, turns East 112 km, then South 77 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 77 km West",
+        "Priya's Rank = 51th, Displacement = 112 km East",
+        "Priya's Rank = 52th, Displacement = 189 km North",
+        "Priya's Rank = 51th, Displacement = 154 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rank from right = Total (62) - Left (12) + 1 = 51th. North/South movements cancel, leaving 112 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Reasoning Puzzle #38: In a seating alignment of 63 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 79 km North, turns East 115 km, then South 79 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 79 km West",
+        "Priya's Rank = 51th, Displacement = 115 km East",
+        "Priya's Rank = 52th, Displacement = 194 km North",
+        "Priya's Rank = 51th, Displacement = 158 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rank from right = Total (63) - Left (13) + 1 = 51th. North/South movements cancel, leaving 115 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Reasoning Puzzle #39: In a seating alignment of 64 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 81 km North, turns East 118 km, then South 81 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 81 km West",
+        "Priya's Rank = 51th, Displacement = 118 km East",
+        "Priya's Rank = 52th, Displacement = 199 km North",
+        "Priya's Rank = 51th, Displacement = 162 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rank from right = Total (64) - Left (14) + 1 = 51th. North/South movements cancel, leaving 118 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Reasoning Puzzle #40: In a seating alignment of 65 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 83 km North, turns East 121 km, then South 83 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 83 km West",
+        "Priya's Rank = 51th, Displacement = 121 km East",
+        "Priya's Rank = 52th, Displacement = 204 km North",
+        "Priya's Rank = 51th, Displacement = 166 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rank from right = Total (65) - Left (15) + 1 = 51th. North/South movements cancel, leaving 121 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "Reasoning Puzzle #41: In a seating alignment of 66 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 85 km North, turns East 124 km, then South 85 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 50th, Displacement = 85 km West",
+        "Priya's Rank = 51th, Displacement = 124 km East",
+        "Priya's Rank = 52th, Displacement = 209 km North",
+        "Priya's Rank = 51th, Displacement = 170 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rank from right = Total (66) - Left (16) + 1 = 51th. North/South movements cancel, leaving 124 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "Reasoning Puzzle #42: In a seating alignment of 67 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 87 km North, turns East 127 km, then South 87 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 50th, Displacement = 87 km West",
+        "Priya's Rank = 51th, Displacement = 127 km East",
+        "Priya's Rank = 52th, Displacement = 214 km North",
+        "Priya's Rank = 51th, Displacement = 174 km South"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "Rank from right = Total (67) - Left (17) + 1 = 51th. North/South movements cancel, leaving 127 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "Reasoning Puzzle #43: In a seating alignment of 68 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 89 km North, turns East 130 km, then South 89 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 50th, Displacement = 89 km West",
+        "Priya's Rank = 51th, Displacement = 130 km East",
+        "Priya's Rank = 52th, Displacement = 219 km North",
+        "Priya's Rank = 51th, Displacement = 178 km South"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Rank from right = Total (68) - Left (18) + 1 = 51th. North/South movements cancel, leaving 130 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "Reasoning Puzzle #44: In a seating alignment of 69 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 91 km North, turns East 133 km, then South 91 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 50th, Displacement = 91 km West",
+        "Priya's Rank = 51th, Displacement = 133 km East",
+        "Priya's Rank = 52th, Displacement = 224 km North",
+        "Priya's Rank = 51th, Displacement = 182 km South"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Rank from right = Total (69) - Left (19) + 1 = 51th. North/South movements cancel, leaving 133 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "Reasoning Puzzle #45: In a seating alignment of 70 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 93 km North, turns East 136 km, then South 93 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 65th, Displacement = 93 km West",
+        "Priya's Rank = 66th, Displacement = 136 km East",
+        "Priya's Rank = 67th, Displacement = 229 km North",
+        "Priya's Rank = 66th, Displacement = 186 km South"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Rank from right = Total (70) - Left (5) + 1 = 66th. North/South movements cancel, leaving 136 km East."
+    },
+    {
+      "id": 21,
+      "question": "Reasoning Puzzle #46: In a seating alignment of 71 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 95 km North, turns East 139 km, then South 95 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 95 km West",
+        "Priya's Rank = 66th, Displacement = 139 km East",
+        "Priya's Rank = 67th, Displacement = 234 km North",
+        "Priya's Rank = 66th, Displacement = 190 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (71) - Left (6) + 1 = 66th. North/South movements cancel, leaving 139 km East."
+    },
+    {
+      "id": 22,
+      "question": "Reasoning Puzzle #47: In a seating alignment of 72 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 97 km North, turns East 142 km, then South 97 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 97 km West",
+        "Priya's Rank = 66th, Displacement = 142 km East",
+        "Priya's Rank = 67th, Displacement = 239 km North",
+        "Priya's Rank = 66th, Displacement = 194 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (72) - Left (7) + 1 = 66th. North/South movements cancel, leaving 142 km East."
+    },
+    {
+      "id": 23,
+      "question": "Reasoning Puzzle #48: In a seating alignment of 73 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 99 km North, turns East 145 km, then South 99 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 99 km West",
+        "Priya's Rank = 66th, Displacement = 145 km East",
+        "Priya's Rank = 67th, Displacement = 244 km North",
+        "Priya's Rank = 66th, Displacement = 198 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (73) - Left (8) + 1 = 66th. North/South movements cancel, leaving 145 km East."
+    },
+    {
+      "id": 24,
+      "question": "Reasoning Puzzle #49: In a seating alignment of 74 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 101 km North, turns East 148 km, then South 101 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 101 km West",
+        "Priya's Rank = 66th, Displacement = 148 km East",
+        "Priya's Rank = 67th, Displacement = 249 km North",
+        "Priya's Rank = 66th, Displacement = 202 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (74) - Left (9) + 1 = 66th. North/South movements cancel, leaving 148 km East."
+    },
+    {
+      "id": 25,
+      "question": "Reasoning Puzzle #50: In a seating alignment of 75 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 103 km North, turns East 151 km, then South 103 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 103 km West",
+        "Priya's Rank = 66th, Displacement = 151 km East",
+        "Priya's Rank = 67th, Displacement = 254 km North",
+        "Priya's Rank = 66th, Displacement = 206 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (75) - Left (10) + 1 = 66th. North/South movements cancel, leaving 151 km East."
+    },
+    {
+      "id": 26,
+      "question": "Reasoning Puzzle #51: In a seating alignment of 76 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 105 km North, turns East 154 km, then South 105 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 105 km West",
+        "Priya's Rank = 66th, Displacement = 154 km East",
+        "Priya's Rank = 67th, Displacement = 259 km North",
+        "Priya's Rank = 66th, Displacement = 210 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (76) - Left (11) + 1 = 66th. North/South movements cancel, leaving 154 km East."
+    },
+    {
+      "id": 27,
+      "question": "Reasoning Puzzle #52: In a seating alignment of 77 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 107 km North, turns East 157 km, then South 107 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 107 km West",
+        "Priya's Rank = 66th, Displacement = 157 km East",
+        "Priya's Rank = 67th, Displacement = 264 km North",
+        "Priya's Rank = 66th, Displacement = 214 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (77) - Left (12) + 1 = 66th. North/South movements cancel, leaving 157 km East."
+    },
+    {
+      "id": 28,
+      "question": "Reasoning Puzzle #53: In a seating alignment of 78 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 109 km North, turns East 160 km, then South 109 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 109 km West",
+        "Priya's Rank = 66th, Displacement = 160 km East",
+        "Priya's Rank = 67th, Displacement = 269 km North",
+        "Priya's Rank = 66th, Displacement = 218 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (78) - Left (13) + 1 = 66th. North/South movements cancel, leaving 160 km East."
+    },
+    {
+      "id": 29,
+      "question": "Reasoning Puzzle #54: In a seating alignment of 79 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 111 km North, turns East 163 km, then South 111 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 111 km West",
+        "Priya's Rank = 66th, Displacement = 163 km East",
+        "Priya's Rank = 67th, Displacement = 274 km North",
+        "Priya's Rank = 66th, Displacement = 222 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (79) - Left (14) + 1 = 66th. North/South movements cancel, leaving 163 km East."
+    },
+    {
+      "id": 30,
+      "question": "Reasoning Puzzle #55: In a seating alignment of 80 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 113 km North, turns East 166 km, then South 113 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 113 km West",
+        "Priya's Rank = 66th, Displacement = 166 km East",
+        "Priya's Rank = 67th, Displacement = 279 km North",
+        "Priya's Rank = 66th, Displacement = 226 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (80) - Left (15) + 1 = 66th. North/South movements cancel, leaving 166 km East."
+    },
+    {
+      "id": 31,
+      "question": "Reasoning Puzzle #56: In a seating alignment of 81 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 115 km North, turns East 169 km, then South 115 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 115 km West",
+        "Priya's Rank = 66th, Displacement = 169 km East",
+        "Priya's Rank = 67th, Displacement = 284 km North",
+        "Priya's Rank = 66th, Displacement = 230 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (81) - Left (16) + 1 = 66th. North/South movements cancel, leaving 169 km East."
+    },
+    {
+      "id": 32,
+      "question": "Reasoning Puzzle #57: In a seating alignment of 82 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 117 km North, turns East 172 km, then South 117 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 117 km West",
+        "Priya's Rank = 66th, Displacement = 172 km East",
+        "Priya's Rank = 67th, Displacement = 289 km North",
+        "Priya's Rank = 66th, Displacement = 234 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (82) - Left (17) + 1 = 66th. North/South movements cancel, leaving 172 km East."
+    },
+    {
+      "id": 33,
+      "question": "Reasoning Puzzle #58: In a seating alignment of 83 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 119 km North, turns East 175 km, then South 119 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 119 km West",
+        "Priya's Rank = 66th, Displacement = 175 km East",
+        "Priya's Rank = 67th, Displacement = 294 km North",
+        "Priya's Rank = 66th, Displacement = 238 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (83) - Left (18) + 1 = 66th. North/South movements cancel, leaving 175 km East."
+    },
+    {
+      "id": 34,
+      "question": "Reasoning Puzzle #59: In a seating alignment of 84 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 121 km North, turns East 178 km, then South 121 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 65th, Displacement = 121 km West",
+        "Priya's Rank = 66th, Displacement = 178 km East",
+        "Priya's Rank = 67th, Displacement = 299 km North",
+        "Priya's Rank = 66th, Displacement = 242 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (84) - Left (19) + 1 = 66th. North/South movements cancel, leaving 178 km East."
+    },
+    {
+      "id": 35,
+      "question": "Reasoning Puzzle #60: In a seating alignment of 85 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 123 km North, turns East 181 km, then South 123 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 123 km West",
+        "Priya's Rank = 81th, Displacement = 181 km East",
+        "Priya's Rank = 82th, Displacement = 304 km North",
+        "Priya's Rank = 81th, Displacement = 246 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (85) - Left (5) + 1 = 81th. North/South movements cancel, leaving 181 km East."
+    },
+    {
+      "id": 36,
+      "question": "Reasoning Puzzle #61: In a seating alignment of 86 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 125 km North, turns East 184 km, then South 125 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 125 km West",
+        "Priya's Rank = 81th, Displacement = 184 km East",
+        "Priya's Rank = 82th, Displacement = 309 km North",
+        "Priya's Rank = 81th, Displacement = 250 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (86) - Left (6) + 1 = 81th. North/South movements cancel, leaving 184 km East."
+    },
+    {
+      "id": 37,
+      "question": "Reasoning Puzzle #62: In a seating alignment of 87 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 127 km North, turns East 187 km, then South 127 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 127 km West",
+        "Priya's Rank = 81th, Displacement = 187 km East",
+        "Priya's Rank = 82th, Displacement = 314 km North",
+        "Priya's Rank = 81th, Displacement = 254 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (87) - Left (7) + 1 = 81th. North/South movements cancel, leaving 187 km East."
+    },
+    {
+      "id": 38,
+      "question": "Reasoning Puzzle #63: In a seating alignment of 88 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 129 km North, turns East 190 km, then South 129 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 129 km West",
+        "Priya's Rank = 81th, Displacement = 190 km East",
+        "Priya's Rank = 82th, Displacement = 319 km North",
+        "Priya's Rank = 81th, Displacement = 258 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (88) - Left (8) + 1 = 81th. North/South movements cancel, leaving 190 km East."
+    },
+    {
+      "id": 39,
+      "question": "Reasoning Puzzle #64: In a seating alignment of 89 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 131 km North, turns East 193 km, then South 131 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 131 km West",
+        "Priya's Rank = 81th, Displacement = 193 km East",
+        "Priya's Rank = 82th, Displacement = 324 km North",
+        "Priya's Rank = 81th, Displacement = 262 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (89) - Left (9) + 1 = 81th. North/South movements cancel, leaving 193 km East."
+    },
+    {
+      "id": 40,
+      "question": "Reasoning Puzzle #65: In a seating alignment of 90 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 133 km North, turns East 196 km, then South 133 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 133 km West",
+        "Priya's Rank = 81th, Displacement = 196 km East",
+        "Priya's Rank = 82th, Displacement = 329 km North",
+        "Priya's Rank = 81th, Displacement = 266 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (90) - Left (10) + 1 = 81th. North/South movements cancel, leaving 196 km East."
+    },
+    {
+      "id": 41,
+      "question": "Reasoning Puzzle #66: In a seating alignment of 91 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 135 km North, turns East 199 km, then South 135 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 135 km West",
+        "Priya's Rank = 81th, Displacement = 199 km East",
+        "Priya's Rank = 82th, Displacement = 334 km North",
+        "Priya's Rank = 81th, Displacement = 270 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (91) - Left (11) + 1 = 81th. North/South movements cancel, leaving 199 km East."
+    },
+    {
+      "id": 42,
+      "question": "Reasoning Puzzle #67: In a seating alignment of 92 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 137 km North, turns East 202 km, then South 137 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 137 km West",
+        "Priya's Rank = 81th, Displacement = 202 km East",
+        "Priya's Rank = 82th, Displacement = 339 km North",
+        "Priya's Rank = 81th, Displacement = 274 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (92) - Left (12) + 1 = 81th. North/South movements cancel, leaving 202 km East."
+    },
+    {
+      "id": 43,
+      "question": "Reasoning Puzzle #68: In a seating alignment of 93 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 139 km North, turns East 205 km, then South 139 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 139 km West",
+        "Priya's Rank = 81th, Displacement = 205 km East",
+        "Priya's Rank = 82th, Displacement = 344 km North",
+        "Priya's Rank = 81th, Displacement = 278 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (93) - Left (13) + 1 = 81th. North/South movements cancel, leaving 205 km East."
+    },
+    {
+      "id": 44,
+      "question": "Reasoning Puzzle #69: In a seating alignment of 94 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 141 km North, turns East 208 km, then South 141 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 141 km West",
+        "Priya's Rank = 81th, Displacement = 208 km East",
+        "Priya's Rank = 82th, Displacement = 349 km North",
+        "Priya's Rank = 81th, Displacement = 282 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (94) - Left (14) + 1 = 81th. North/South movements cancel, leaving 208 km East."
+    },
+    {
+      "id": 45,
+      "question": "Reasoning Puzzle #70: In a seating alignment of 95 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 143 km North, turns East 211 km, then South 143 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 143 km West",
+        "Priya's Rank = 81th, Displacement = 211 km East",
+        "Priya's Rank = 82th, Displacement = 354 km North",
+        "Priya's Rank = 81th, Displacement = 286 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (95) - Left (15) + 1 = 81th. North/South movements cancel, leaving 211 km East."
+    },
+    {
+      "id": 46,
+      "question": "Reasoning Puzzle #71: In a seating alignment of 96 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 145 km North, turns East 214 km, then South 145 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 145 km West",
+        "Priya's Rank = 81th, Displacement = 214 km East",
+        "Priya's Rank = 82th, Displacement = 359 km North",
+        "Priya's Rank = 81th, Displacement = 290 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (96) - Left (16) + 1 = 81th. North/South movements cancel, leaving 214 km East."
+    },
+    {
+      "id": 47,
+      "question": "Reasoning Puzzle #72: In a seating alignment of 97 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 147 km North, turns East 217 km, then South 147 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 147 km West",
+        "Priya's Rank = 81th, Displacement = 217 km East",
+        "Priya's Rank = 82th, Displacement = 364 km North",
+        "Priya's Rank = 81th, Displacement = 294 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (97) - Left (17) + 1 = 81th. North/South movements cancel, leaving 217 km East."
+    },
+    {
+      "id": 48,
+      "question": "Reasoning Puzzle #73: In a seating alignment of 98 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 149 km North, turns East 220 km, then South 149 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 149 km West",
+        "Priya's Rank = 81th, Displacement = 220 km East",
+        "Priya's Rank = 82th, Displacement = 369 km North",
+        "Priya's Rank = 81th, Displacement = 298 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (98) - Left (18) + 1 = 81th. North/South movements cancel, leaving 220 km East."
+    },
+    {
+      "id": 49,
+      "question": "Reasoning Puzzle #74: In a seating alignment of 99 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 151 km North, turns East 223 km, then South 151 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 80th, Displacement = 151 km West",
+        "Priya's Rank = 81th, Displacement = 223 km East",
+        "Priya's Rank = 82th, Displacement = 374 km North",
+        "Priya's Rank = 81th, Displacement = 302 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (99) - Left (19) + 1 = 81th. North/South movements cancel, leaving 223 km East."
+    },
+    {
+      "id": 50,
+      "question": "Reasoning Puzzle #75: In a seating alignment of 100 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 153 km North, turns East 226 km, then South 153 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 153 km West",
+        "Priya's Rank = 96th, Displacement = 226 km East",
+        "Priya's Rank = 97th, Displacement = 379 km North",
+        "Priya's Rank = 96th, Displacement = 306 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (100) - Left (5) + 1 = 96th. North/South movements cancel, leaving 226 km East."
+    },
+    {
+      "id": 51,
+      "question": "Reasoning Puzzle #76: In a seating alignment of 101 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 155 km North, turns East 229 km, then South 155 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 155 km West",
+        "Priya's Rank = 96th, Displacement = 229 km East",
+        "Priya's Rank = 97th, Displacement = 384 km North",
+        "Priya's Rank = 96th, Displacement = 310 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (101) - Left (6) + 1 = 96th. North/South movements cancel, leaving 229 km East."
+    },
+    {
+      "id": 52,
+      "question": "Reasoning Puzzle #77: In a seating alignment of 102 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 157 km North, turns East 232 km, then South 157 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 157 km West",
+        "Priya's Rank = 96th, Displacement = 232 km East",
+        "Priya's Rank = 97th, Displacement = 389 km North",
+        "Priya's Rank = 96th, Displacement = 314 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (102) - Left (7) + 1 = 96th. North/South movements cancel, leaving 232 km East."
+    },
+    {
+      "id": 53,
+      "question": "Reasoning Puzzle #78: In a seating alignment of 103 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 159 km North, turns East 235 km, then South 159 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 159 km West",
+        "Priya's Rank = 96th, Displacement = 235 km East",
+        "Priya's Rank = 97th, Displacement = 394 km North",
+        "Priya's Rank = 96th, Displacement = 318 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (103) - Left (8) + 1 = 96th. North/South movements cancel, leaving 235 km East."
+    },
+    {
+      "id": 54,
+      "question": "Reasoning Puzzle #79: In a seating alignment of 104 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 161 km North, turns East 238 km, then South 161 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 161 km West",
+        "Priya's Rank = 96th, Displacement = 238 km East",
+        "Priya's Rank = 97th, Displacement = 399 km North",
+        "Priya's Rank = 96th, Displacement = 322 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (104) - Left (9) + 1 = 96th. North/South movements cancel, leaving 238 km East."
+    },
+    {
+      "id": 55,
+      "question": "Reasoning Puzzle #80: In a seating alignment of 105 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 163 km North, turns East 241 km, then South 163 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 163 km West",
+        "Priya's Rank = 96th, Displacement = 241 km East",
+        "Priya's Rank = 97th, Displacement = 404 km North",
+        "Priya's Rank = 96th, Displacement = 326 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (105) - Left (10) + 1 = 96th. North/South movements cancel, leaving 241 km East."
+    },
+    {
+      "id": 56,
+      "question": "Reasoning Puzzle #81: In a seating alignment of 106 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 165 km North, turns East 244 km, then South 165 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 165 km West",
+        "Priya's Rank = 96th, Displacement = 244 km East",
+        "Priya's Rank = 97th, Displacement = 409 km North",
+        "Priya's Rank = 96th, Displacement = 330 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (106) - Left (11) + 1 = 96th. North/South movements cancel, leaving 244 km East."
+    },
+    {
+      "id": 57,
+      "question": "Reasoning Puzzle #82: In a seating alignment of 107 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 167 km North, turns East 247 km, then South 167 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 167 km West",
+        "Priya's Rank = 96th, Displacement = 247 km East",
+        "Priya's Rank = 97th, Displacement = 414 km North",
+        "Priya's Rank = 96th, Displacement = 334 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (107) - Left (12) + 1 = 96th. North/South movements cancel, leaving 247 km East."
+    },
+    {
+      "id": 58,
+      "question": "Reasoning Puzzle #83: In a seating alignment of 108 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 169 km North, turns East 250 km, then South 169 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 169 km West",
+        "Priya's Rank = 96th, Displacement = 250 km East",
+        "Priya's Rank = 97th, Displacement = 419 km North",
+        "Priya's Rank = 96th, Displacement = 338 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (108) - Left (13) + 1 = 96th. North/South movements cancel, leaving 250 km East."
+    },
+    {
+      "id": 59,
+      "question": "Reasoning Puzzle #84: In a seating alignment of 109 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 171 km North, turns East 253 km, then South 171 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 171 km West",
+        "Priya's Rank = 96th, Displacement = 253 km East",
+        "Priya's Rank = 97th, Displacement = 424 km North",
+        "Priya's Rank = 96th, Displacement = 342 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (109) - Left (14) + 1 = 96th. North/South movements cancel, leaving 253 km East."
+    },
+    {
+      "id": 60,
+      "question": "Reasoning Puzzle #85: In a seating alignment of 110 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 173 km North, turns East 256 km, then South 173 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 173 km West",
+        "Priya's Rank = 96th, Displacement = 256 km East",
+        "Priya's Rank = 97th, Displacement = 429 km North",
+        "Priya's Rank = 96th, Displacement = 346 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (110) - Left (15) + 1 = 96th. North/South movements cancel, leaving 256 km East."
+    },
+    {
+      "id": 61,
+      "question": "Reasoning Puzzle #86: In a seating alignment of 111 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 175 km North, turns East 259 km, then South 175 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 175 km West",
+        "Priya's Rank = 96th, Displacement = 259 km East",
+        "Priya's Rank = 97th, Displacement = 434 km North",
+        "Priya's Rank = 96th, Displacement = 350 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (111) - Left (16) + 1 = 96th. North/South movements cancel, leaving 259 km East."
+    },
+    {
+      "id": 62,
+      "question": "Reasoning Puzzle #87: In a seating alignment of 112 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 177 km North, turns East 262 km, then South 177 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 177 km West",
+        "Priya's Rank = 96th, Displacement = 262 km East",
+        "Priya's Rank = 97th, Displacement = 439 km North",
+        "Priya's Rank = 96th, Displacement = 354 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (112) - Left (17) + 1 = 96th. North/South movements cancel, leaving 262 km East."
+    },
+    {
+      "id": 63,
+      "question": "Reasoning Puzzle #88: In a seating alignment of 113 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 179 km North, turns East 265 km, then South 179 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 179 km West",
+        "Priya's Rank = 96th, Displacement = 265 km East",
+        "Priya's Rank = 97th, Displacement = 444 km North",
+        "Priya's Rank = 96th, Displacement = 358 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (113) - Left (18) + 1 = 96th. North/South movements cancel, leaving 265 km East."
+    },
+    {
+      "id": 64,
+      "question": "Reasoning Puzzle #89: In a seating alignment of 114 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 181 km North, turns East 268 km, then South 181 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 95th, Displacement = 181 km West",
+        "Priya's Rank = 96th, Displacement = 268 km East",
+        "Priya's Rank = 97th, Displacement = 449 km North",
+        "Priya's Rank = 96th, Displacement = 362 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (114) - Left (19) + 1 = 96th. North/South movements cancel, leaving 268 km East."
+    },
+    {
+      "id": 65,
+      "question": "Reasoning Puzzle #90: In a seating alignment of 115 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 183 km North, turns East 271 km, then South 183 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 183 km West",
+        "Priya's Rank = 111th, Displacement = 271 km East",
+        "Priya's Rank = 112th, Displacement = 454 km North",
+        "Priya's Rank = 111th, Displacement = 366 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (115) - Left (5) + 1 = 111th. North/South movements cancel, leaving 271 km East."
+    },
+    {
+      "id": 66,
+      "question": "Reasoning Puzzle #91: In a seating alignment of 116 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 185 km North, turns East 274 km, then South 185 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 185 km West",
+        "Priya's Rank = 111th, Displacement = 274 km East",
+        "Priya's Rank = 112th, Displacement = 459 km North",
+        "Priya's Rank = 111th, Displacement = 370 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (116) - Left (6) + 1 = 111th. North/South movements cancel, leaving 274 km East."
+    },
+    {
+      "id": 67,
+      "question": "Reasoning Puzzle #92: In a seating alignment of 117 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 187 km North, turns East 277 km, then South 187 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 187 km West",
+        "Priya's Rank = 111th, Displacement = 277 km East",
+        "Priya's Rank = 112th, Displacement = 464 km North",
+        "Priya's Rank = 111th, Displacement = 374 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (117) - Left (7) + 1 = 111th. North/South movements cancel, leaving 277 km East."
+    },
+    {
+      "id": 68,
+      "question": "Reasoning Puzzle #93: In a seating alignment of 118 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 189 km North, turns East 280 km, then South 189 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 189 km West",
+        "Priya's Rank = 111th, Displacement = 280 km East",
+        "Priya's Rank = 112th, Displacement = 469 km North",
+        "Priya's Rank = 111th, Displacement = 378 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (118) - Left (8) + 1 = 111th. North/South movements cancel, leaving 280 km East."
+    },
+    {
+      "id": 69,
+      "question": "Reasoning Puzzle #94: In a seating alignment of 119 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 191 km North, turns East 283 km, then South 191 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 191 km West",
+        "Priya's Rank = 111th, Displacement = 283 km East",
+        "Priya's Rank = 112th, Displacement = 474 km North",
+        "Priya's Rank = 111th, Displacement = 382 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (119) - Left (9) + 1 = 111th. North/South movements cancel, leaving 283 km East."
+    },
+    {
+      "id": 70,
+      "question": "Reasoning Puzzle #95: In a seating alignment of 120 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 193 km North, turns East 286 km, then South 193 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 193 km West",
+        "Priya's Rank = 111th, Displacement = 286 km East",
+        "Priya's Rank = 112th, Displacement = 479 km North",
+        "Priya's Rank = 111th, Displacement = 386 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (120) - Left (10) + 1 = 111th. North/South movements cancel, leaving 286 km East."
+    },
+    {
+      "id": 71,
+      "question": "Reasoning Puzzle #96: In a seating alignment of 121 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 195 km North, turns East 289 km, then South 195 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 195 km West",
+        "Priya's Rank = 111th, Displacement = 289 km East",
+        "Priya's Rank = 112th, Displacement = 484 km North",
+        "Priya's Rank = 111th, Displacement = 390 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (121) - Left (11) + 1 = 111th. North/South movements cancel, leaving 289 km East."
+    },
+    {
+      "id": 72,
+      "question": "Reasoning Puzzle #97: In a seating alignment of 122 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 197 km North, turns East 292 km, then South 197 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 197 km West",
+        "Priya's Rank = 111th, Displacement = 292 km East",
+        "Priya's Rank = 112th, Displacement = 489 km North",
+        "Priya's Rank = 111th, Displacement = 394 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (122) - Left (12) + 1 = 111th. North/South movements cancel, leaving 292 km East."
+    },
+    {
+      "id": 73,
+      "question": "Reasoning Puzzle #98: In a seating alignment of 123 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 199 km North, turns East 295 km, then South 199 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 199 km West",
+        "Priya's Rank = 111th, Displacement = 295 km East",
+        "Priya's Rank = 112th, Displacement = 494 km North",
+        "Priya's Rank = 111th, Displacement = 398 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (123) - Left (13) + 1 = 111th. North/South movements cancel, leaving 295 km East."
+    },
+    {
+      "id": 74,
+      "question": "Reasoning Puzzle #99: In a seating alignment of 124 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 201 km North, turns East 298 km, then South 201 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 201 km West",
+        "Priya's Rank = 111th, Displacement = 298 km East",
+        "Priya's Rank = 112th, Displacement = 499 km North",
+        "Priya's Rank = 111th, Displacement = 402 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (124) - Left (14) + 1 = 111th. North/South movements cancel, leaving 298 km East."
+    },
+    {
+      "id": 75,
+      "question": "Reasoning Puzzle #100: In a seating alignment of 125 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 203 km North, turns East 301 km, then South 203 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 203 km West",
+        "Priya's Rank = 111th, Displacement = 301 km East",
+        "Priya's Rank = 112th, Displacement = 504 km North",
+        "Priya's Rank = 111th, Displacement = 406 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (125) - Left (15) + 1 = 111th. North/South movements cancel, leaving 301 km East."
+    },
+    {
+      "id": 76,
+      "question": "Reasoning Puzzle #101: In a seating alignment of 126 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 205 km North, turns East 304 km, then South 205 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 205 km West",
+        "Priya's Rank = 111th, Displacement = 304 km East",
+        "Priya's Rank = 112th, Displacement = 509 km North",
+        "Priya's Rank = 111th, Displacement = 410 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (126) - Left (16) + 1 = 111th. North/South movements cancel, leaving 304 km East."
+    },
+    {
+      "id": 77,
+      "question": "Reasoning Puzzle #102: In a seating alignment of 127 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 207 km North, turns East 307 km, then South 207 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 207 km West",
+        "Priya's Rank = 111th, Displacement = 307 km East",
+        "Priya's Rank = 112th, Displacement = 514 km North",
+        "Priya's Rank = 111th, Displacement = 414 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (127) - Left (17) + 1 = 111th. North/South movements cancel, leaving 307 km East."
+    },
+    {
+      "id": 78,
+      "question": "Reasoning Puzzle #103: In a seating alignment of 128 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 209 km North, turns East 310 km, then South 209 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 209 km West",
+        "Priya's Rank = 111th, Displacement = 310 km East",
+        "Priya's Rank = 112th, Displacement = 519 km North",
+        "Priya's Rank = 111th, Displacement = 418 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (128) - Left (18) + 1 = 111th. North/South movements cancel, leaving 310 km East."
+    },
+    {
+      "id": 79,
+      "question": "Reasoning Puzzle #104: In a seating alignment of 129 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 211 km North, turns East 313 km, then South 211 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 110th, Displacement = 211 km West",
+        "Priya's Rank = 111th, Displacement = 313 km East",
+        "Priya's Rank = 112th, Displacement = 524 km North",
+        "Priya's Rank = 111th, Displacement = 422 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (129) - Left (19) + 1 = 111th. North/South movements cancel, leaving 313 km East."
+    },
+    {
+      "id": 80,
+      "question": "Reasoning Puzzle #105: In a seating alignment of 130 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 213 km North, turns East 316 km, then South 213 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 213 km West",
+        "Priya's Rank = 126th, Displacement = 316 km East",
+        "Priya's Rank = 127th, Displacement = 529 km North",
+        "Priya's Rank = 126th, Displacement = 426 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (130) - Left (5) + 1 = 126th. North/South movements cancel, leaving 316 km East."
+    },
+    {
+      "id": 81,
+      "question": "Reasoning Puzzle #106: In a seating alignment of 131 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 215 km North, turns East 319 km, then South 215 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 215 km West",
+        "Priya's Rank = 126th, Displacement = 319 km East",
+        "Priya's Rank = 127th, Displacement = 534 km North",
+        "Priya's Rank = 126th, Displacement = 430 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (131) - Left (6) + 1 = 126th. North/South movements cancel, leaving 319 km East."
+    },
+    {
+      "id": 82,
+      "question": "Reasoning Puzzle #107: In a seating alignment of 132 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 217 km North, turns East 322 km, then South 217 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 217 km West",
+        "Priya's Rank = 126th, Displacement = 322 km East",
+        "Priya's Rank = 127th, Displacement = 539 km North",
+        "Priya's Rank = 126th, Displacement = 434 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (132) - Left (7) + 1 = 126th. North/South movements cancel, leaving 322 km East."
+    },
+    {
+      "id": 83,
+      "question": "Reasoning Puzzle #108: In a seating alignment of 133 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 219 km North, turns East 325 km, then South 219 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 219 km West",
+        "Priya's Rank = 126th, Displacement = 325 km East",
+        "Priya's Rank = 127th, Displacement = 544 km North",
+        "Priya's Rank = 126th, Displacement = 438 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (133) - Left (8) + 1 = 126th. North/South movements cancel, leaving 325 km East."
+    },
+    {
+      "id": 84,
+      "question": "Reasoning Puzzle #109: In a seating alignment of 134 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 221 km North, turns East 328 km, then South 221 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 221 km West",
+        "Priya's Rank = 126th, Displacement = 328 km East",
+        "Priya's Rank = 127th, Displacement = 549 km North",
+        "Priya's Rank = 126th, Displacement = 442 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (134) - Left (9) + 1 = 126th. North/South movements cancel, leaving 328 km East."
+    },
+    {
+      "id": 85,
+      "question": "Reasoning Puzzle #110: In a seating alignment of 135 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 223 km North, turns East 331 km, then South 223 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 223 km West",
+        "Priya's Rank = 126th, Displacement = 331 km East",
+        "Priya's Rank = 127th, Displacement = 554 km North",
+        "Priya's Rank = 126th, Displacement = 446 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (135) - Left (10) + 1 = 126th. North/South movements cancel, leaving 331 km East."
+    },
+    {
+      "id": 86,
+      "question": "Reasoning Puzzle #111: In a seating alignment of 136 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 225 km North, turns East 334 km, then South 225 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 225 km West",
+        "Priya's Rank = 126th, Displacement = 334 km East",
+        "Priya's Rank = 127th, Displacement = 559 km North",
+        "Priya's Rank = 126th, Displacement = 450 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (136) - Left (11) + 1 = 126th. North/South movements cancel, leaving 334 km East."
+    },
+    {
+      "id": 87,
+      "question": "Reasoning Puzzle #112: In a seating alignment of 137 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 227 km North, turns East 337 km, then South 227 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 227 km West",
+        "Priya's Rank = 126th, Displacement = 337 km East",
+        "Priya's Rank = 127th, Displacement = 564 km North",
+        "Priya's Rank = 126th, Displacement = 454 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (137) - Left (12) + 1 = 126th. North/South movements cancel, leaving 337 km East."
+    },
+    {
+      "id": 88,
+      "question": "Reasoning Puzzle #113: In a seating alignment of 138 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 229 km North, turns East 340 km, then South 229 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 229 km West",
+        "Priya's Rank = 126th, Displacement = 340 km East",
+        "Priya's Rank = 127th, Displacement = 569 km North",
+        "Priya's Rank = 126th, Displacement = 458 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (138) - Left (13) + 1 = 126th. North/South movements cancel, leaving 340 km East."
+    },
+    {
+      "id": 89,
+      "question": "Reasoning Puzzle #114: In a seating alignment of 139 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 231 km North, turns East 343 km, then South 231 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 231 km West",
+        "Priya's Rank = 126th, Displacement = 343 km East",
+        "Priya's Rank = 127th, Displacement = 574 km North",
+        "Priya's Rank = 126th, Displacement = 462 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (139) - Left (14) + 1 = 126th. North/South movements cancel, leaving 343 km East."
+    },
+    {
+      "id": 90,
+      "question": "Reasoning Puzzle #115: In a seating alignment of 140 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 233 km North, turns East 346 km, then South 233 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 125th, Displacement = 233 km West",
+        "Priya's Rank = 126th, Displacement = 346 km East",
+        "Priya's Rank = 127th, Displacement = 579 km North",
+        "Priya's Rank = 126th, Displacement = 466 km South"
+      ],
+      "answer": 1,
+      "hint": "Rank from right = Total (140) - Left (15) + 1 = 126th. North/South movements cancel, leaving 346 km East."
+    },
+    {
+      "id": 91,
+      "question": "Quantitative Problem #101: A shopkeeper buys an item at cost ₹10250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((10455 - 10250) / 10250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 92,
+      "question": "Quantitative Problem #102: A shopkeeper buys an item at cost ₹10350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((12782.25 - 10350) / 10350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 93,
+      "question": "Quantitative Problem #103: A shopkeeper buys an item at cost ₹10450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13166.999999999998 - 10450) / 10450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 94,
+      "question": "Quantitative Problem #104: A shopkeeper buys an item at cost ₹10550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13451.25 - 10550) / 10550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 95,
+      "question": "Quantitative Problem #105: A shopkeeper buys an item at cost ₹10650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11129.250000000002 - 10650) / 10650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 96,
+      "question": "Quantitative Problem #106: A shopkeeper buys an item at cost ₹10750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11610 - 10750) / 10750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 97,
+      "question": "Quantitative Problem #107: A shopkeeper buys an item at cost ₹10850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11989.25 - 10850) / 10850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 98,
+      "question": "Quantitative Problem #108: A shopkeeper buys an item at cost ₹10950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14563.499999999998 - 10950) / 10950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 99,
+      "question": "Quantitative Problem #109: A shopkeeper buys an item at cost ₹11050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14917.5 - 11050) / 11050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 100,
+      "question": "Quantitative Problem #110: A shopkeeper buys an item at cost ₹11150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((10425.250000000002 - 11150) / 11150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 101,
+      "question": "Quantitative Problem #111: A shopkeeper buys an item at cost ₹11250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((12825 - 11250) / 11250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 102,
+      "question": "Quantitative Problem #112: A shopkeeper buys an item at cost ₹11350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13279.5 - 11350) / 11350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 103,
+      "question": "Quantitative Problem #113: A shopkeeper buys an item at cost ₹11450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13625.499999999998 - 11450) / 11450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 104,
+      "question": "Quantitative Problem #114: A shopkeeper buys an item at cost ₹11550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16458.75 - 11550) / 11550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 105,
+      "question": "Quantitative Problem #115: A shopkeeper buys an item at cost ₹11650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11533.500000000002 - 11650) / 11650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 106,
+      "question": "Quantitative Problem #116: A shopkeeper buys an item at cost ₹11750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11985 - 11750) / 11750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 107,
+      "question": "Quantitative Problem #117: A shopkeeper buys an item at cost ₹11850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14634.75 - 11850) / 11850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 108,
+      "question": "Quantitative Problem #118: A shopkeeper buys an item at cost ₹11950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15057 - 11950) / 11950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 109,
+      "question": "Quantitative Problem #119: A shopkeeper buys an item at cost ₹12050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15363.75 - 12050) / 12050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 110,
+      "question": "Quantitative Problem #120: A shopkeeper buys an item at cost ₹12150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((12696.750000000002 - 12150) / 12150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 111,
+      "question": "Quantitative Problem #121: A shopkeeper buys an item at cost ₹12250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13230 - 12250) / 12250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 112,
+      "question": "Quantitative Problem #122: A shopkeeper buys an item at cost ₹12350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13646.75 - 12350) / 12350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 113,
+      "question": "Quantitative Problem #123: A shopkeeper buys an item at cost ₹12450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16558.5 - 12450) / 12450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 114,
+      "question": "Quantitative Problem #124: A shopkeeper buys an item at cost ₹12550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16942.5 - 12550) / 12550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 115,
+      "question": "Quantitative Problem #125: A shopkeeper buys an item at cost ₹12650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((11827.750000000002 - 12650) / 12650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 116,
+      "question": "Quantitative Problem #126: A shopkeeper buys an item at cost ₹12750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14535 - 12750) / 12750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 117,
+      "question": "Quantitative Problem #127: A shopkeeper buys an item at cost ₹12850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15034.5 - 12850) / 12850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 118,
+      "question": "Quantitative Problem #128: A shopkeeper buys an item at cost ₹12950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15410.5 - 12950) / 12950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 119,
+      "question": "Quantitative Problem #129: A shopkeeper buys an item at cost ₹13050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18596.25 - 13050) / 13050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 120,
+      "question": "Quantitative Problem #130: A shopkeeper buys an item at cost ₹13150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13018.500000000002 - 13150) / 13150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 121,
+      "question": "Quantitative Problem #131: A shopkeeper buys an item at cost ₹13250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13515 - 13250) / 13250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 122,
+      "question": "Quantitative Problem #132: A shopkeeper buys an item at cost ₹13350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16487.25 - 13350) / 13350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 123,
+      "question": "Quantitative Problem #133: A shopkeeper buys an item at cost ₹13450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16947 - 13450) / 13450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 124,
+      "question": "Quantitative Problem #134: A shopkeeper buys an item at cost ₹13550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17276.25 - 13550) / 13550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 125,
+      "question": "Quantitative Problem #135: A shopkeeper buys an item at cost ₹13650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14264.250000000002 - 13650) / 13650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 126,
+      "question": "Quantitative Problem #136: A shopkeeper buys an item at cost ₹13750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14850 - 13750) / 13750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 127,
+      "question": "Quantitative Problem #137: A shopkeeper buys an item at cost ₹13850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15304.25 - 13850) / 13850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 128,
+      "question": "Quantitative Problem #138: A shopkeeper buys an item at cost ₹13950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18553.5 - 13950) / 13950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 129,
+      "question": "Quantitative Problem #139: A shopkeeper buys an item at cost ₹14050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18967.5 - 14050) / 14050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
+    },
+    {
+      "id": 130,
+      "question": "Quantitative Problem #140: A shopkeeper buys an item at cost ₹14150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((13230.250000000002 - 14150) / 14150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
+    },
+    {
+      "id": 131,
+      "question": "Quantitative Problem #141: A shopkeeper buys an item at cost ₹14250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16245 - 14250) / 14250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
+    },
+    {
+      "id": 132,
+      "question": "Quantitative Problem #142: A shopkeeper buys an item at cost ₹14350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16789.5 - 14350) / 14350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
+    },
+    {
+      "id": 133,
+      "question": "Quantitative Problem #143: A shopkeeper buys an item at cost ₹14450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17195.5 - 14450) / 14450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
+    },
+    {
+      "id": 134,
+      "question": "Quantitative Problem #144: A shopkeeper buys an item at cost ₹14550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20733.75 - 14550) / 14550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
+    },
+    {
+      "id": 135,
+      "question": "Quantitative Problem #145: A shopkeeper buys an item at cost ₹14650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14503.500000000002 - 14650) / 14650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
+    },
+    {
+      "id": 136,
+      "question": "Quantitative Problem #146: A shopkeeper buys an item at cost ₹14750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 9.21 days",
+        "Profit = 2%, Joint Work = 8.21 days",
+        "Profit = 0.5%, Joint Work = 7.410000000000001 days",
+        "Profit = 5%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15045 - 14750) / 14750) * 100 = 2%. Combined Work = (12*26)/(12+26) = 8.21 days."
+    },
+    {
+      "id": 137,
+      "question": "Quantitative Problem #147: A shopkeeper buys an item at cost ₹14850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 9.78 days",
+        "Profit = 23.5%, Joint Work = 8.78 days",
+        "Profit = 22%, Joint Work = 7.9799999999999995 days",
+        "Profit = 25%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18339.75 - 14850) / 14850) * 100 = 23.5%. Combined Work = (13*27)/(13+27) = 8.78 days."
+    },
+    {
+      "id": 138,
+      "question": "Quantitative Problem #148: A shopkeeper buys an item at cost ₹14950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 10.33 days",
+        "Profit = 26%, Joint Work = 9.33 days",
+        "Profit = 24.5%, Joint Work = 8.53 days",
+        "Profit = 30%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18837 - 14950) / 14950) * 100 = 26%. Combined Work = (14*28)/(14+28) = 9.33 days."
+    },
+    {
+      "id": 139,
+      "question": "Quantitative Problem #149: A shopkeeper buys an item at cost ₹15050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 10.89 days",
+        "Profit = 27.5%, Joint Work = 9.89 days",
+        "Profit = 26%, Joint Work = 9.09 days",
+        "Profit = 35%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((19188.75 - 15050) / 15050) * 100 = 27.5%. Combined Work = (15*29)/(15+29) = 9.89 days."
+    },
+    {
+      "id": 140,
+      "question": "Quantitative Problem #150: A shopkeeper buys an item at cost ₹15150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 8.74 days",
+        "Profit = 4.5%, Joint Work = 7.74 days",
+        "Profit = 3%, Joint Work = 6.94 days",
+        "Profit = 5%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15831.75 - 15150) / 15150) * 100 = 4.5%. Combined Work = (16*15)/(16+15) = 7.74 days."
+    },
+    {
+      "id": 141,
+      "question": "Quantitative Problem #151: A shopkeeper buys an item at cost ₹15250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.24 days",
+        "Profit = 8%, Joint Work = 8.24 days",
+        "Profit = 6.5%, Joint Work = 7.44 days",
+        "Profit = 10%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16470 - 15250) / 15250) * 100 = 8%. Combined Work = (17*16)/(17+16) = 8.24 days."
+    },
+    {
+      "id": 142,
+      "question": "Quantitative Problem #152: A shopkeeper buys an item at cost ₹15350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 9.74 days",
+        "Profit = 10.5%, Joint Work = 8.74 days",
+        "Profit = 9%, Joint Work = 7.94 days",
+        "Profit = 15%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16961.75 - 15350) / 15350) * 100 = 10.5%. Combined Work = (18*17)/(18+17) = 8.74 days."
+    },
+    {
+      "id": 143,
+      "question": "Quantitative Problem #153: A shopkeeper buys an item at cost ₹15450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 10.24 days",
+        "Profit = 33%, Joint Work = 9.24 days",
+        "Profit = 31.5%, Joint Work = 8.44 days",
+        "Profit = 35%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20548.5 - 15450) / 15450) * 100 = 33%. Combined Work = (19*18)/(19+18) = 9.24 days."
+    },
+    {
+      "id": 144,
+      "question": "Quantitative Problem #154: A shopkeeper buys an item at cost ₹15550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 10.74 days",
+        "Profit = 35%, Joint Work = 9.74 days",
+        "Profit = 33.5%, Joint Work = 8.94 days",
+        "Profit = 40%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20992.5 - 15550) / 15550) * 100 = 35%. Combined Work = (20*19)/(20+19) = 9.74 days."
+    },
+    {
+      "id": 145,
+      "question": "Quantitative Problem #155: A shopkeeper buys an item at cost ₹15650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 11.24 days",
+        "Profit = -6.5%, Joint Work = 10.24 days",
+        "Profit = -8%, Joint Work = 9.44 days",
+        "Profit = -5%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14632.75 - 15650) / 15650) * 100 = -6.5%. Combined Work = (21*20)/(21+20) = 10.24 days."
+    },
+    {
+      "id": 146,
+      "question": "Quantitative Problem #156: A shopkeeper buys an item at cost ₹15750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 7.77 days",
+        "Profit = 14%, Joint Work = 6.77 days",
+        "Profit = 12.5%, Joint Work = 5.97 days",
+        "Profit = 15%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17955 - 15750) / 15750) * 100 = 14%. Combined Work = (10*21)/(10+21) = 6.77 days."
+    },
+    {
+      "id": 147,
+      "question": "Quantitative Problem #157: A shopkeeper buys an item at cost ₹15850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 8.33 days",
+        "Profit = 17%, Joint Work = 7.33 days",
+        "Profit = 15.5%, Joint Work = 6.53 days",
+        "Profit = 20%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18544.5 - 15850) / 15850) * 100 = 17%. Combined Work = (11*22)/(11+22) = 7.33 days."
+    },
+    {
+      "id": 148,
+      "question": "Quantitative Problem #158: A shopkeeper buys an item at cost ₹15950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 8.89 days",
+        "Profit = 19%, Joint Work = 7.89 days",
+        "Profit = 17.5%, Joint Work = 7.09 days",
+        "Profit = 25%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18980.5 - 15950) / 15950) * 100 = 19%. Combined Work = (12*23)/(12+23) = 7.89 days."
+    },
+    {
+      "id": 149,
+      "question": "Quantitative Problem #159: A shopkeeper buys an item at cost ₹16050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 9.43 days",
+        "Profit = 42.5%, Joint Work = 8.43 days",
+        "Profit = 41%, Joint Work = 7.63 days",
+        "Profit = 45%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22871.25 - 16050) / 16050) * 100 = 42.5%. Combined Work = (13*24)/(13+24) = 8.43 days."
+    },
+    {
+      "id": 150,
+      "question": "Quantitative Problem #160: A shopkeeper buys an item at cost ₹16150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 9.97 days",
+        "Profit = -1%, Joint Work = 8.97 days",
+        "Profit = -2.5%, Joint Work = 8.17 days",
+        "Profit = 0%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((15988.5 - 16150) / 16150) * 100 = -1%. Combined Work = (14*25)/(14+25) = 8.97 days."
+    },
+    {
+      "id": 151,
+      "question": "Quantitative Problem #161: A shopkeeper buys an item at cost ₹16250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16575 - 16250) / 16250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 152,
+      "question": "Quantitative Problem #162: A shopkeeper buys an item at cost ₹16350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20192.25 - 16350) / 16350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 153,
+      "question": "Quantitative Problem #163: A shopkeeper buys an item at cost ₹16450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20727 - 16450) / 16450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 154,
+      "question": "Quantitative Problem #164: A shopkeeper buys an item at cost ₹16550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((21101.25 - 16550) / 16550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 155,
+      "question": "Quantitative Problem #165: A shopkeeper buys an item at cost ₹16650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17399.25 - 16650) / 16650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 156,
+      "question": "Quantitative Problem #166: A shopkeeper buys an item at cost ₹16750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18090 - 16750) / 16750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 157,
+      "question": "Quantitative Problem #167: A shopkeeper buys an item at cost ₹16850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18619.25 - 16850) / 16850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 158,
+      "question": "Quantitative Problem #168: A shopkeeper buys an item at cost ₹16950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22543.5 - 16950) / 16950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 159,
+      "question": "Quantitative Problem #169: A shopkeeper buys an item at cost ₹17050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((23017.5 - 17050) / 17050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 160,
+      "question": "Quantitative Problem #170: A shopkeeper buys an item at cost ₹17150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16035.25 - 17150) / 17150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 161,
+      "question": "Quantitative Problem #171: A shopkeeper buys an item at cost ₹17250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((19665 - 17250) / 17250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 162,
+      "question": "Quantitative Problem #172: A shopkeeper buys an item at cost ₹17350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20299.5 - 17350) / 17350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 163,
+      "question": "Quantitative Problem #173: A shopkeeper buys an item at cost ₹17450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20765.5 - 17450) / 17450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 164,
+      "question": "Quantitative Problem #174: A shopkeeper buys an item at cost ₹17550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((25008.75 - 17550) / 17550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 165,
+      "question": "Quantitative Problem #175: A shopkeeper buys an item at cost ₹17650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17473.5 - 17650) / 17650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 166,
+      "question": "Quantitative Problem #176: A shopkeeper buys an item at cost ₹17750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18105 - 17750) / 17750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 167,
+      "question": "Quantitative Problem #177: A shopkeeper buys an item at cost ₹17850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22044.75 - 17850) / 17850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 168,
+      "question": "Quantitative Problem #178: A shopkeeper buys an item at cost ₹17950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22617 - 17950) / 17950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 169,
+      "question": "Quantitative Problem #179: A shopkeeper buys an item at cost ₹18050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((23013.75 - 18050) / 18050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 170,
+      "question": "Quantitative Problem #180: A shopkeeper buys an item at cost ₹18150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18966.75 - 18150) / 18150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 171,
+      "question": "Quantitative Problem #181: A shopkeeper buys an item at cost ₹18250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((19710 - 18250) / 18250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 172,
+      "question": "Quantitative Problem #182: A shopkeeper buys an item at cost ₹18350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20276.75 - 18350) / 18350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 173,
+      "question": "Quantitative Problem #183: A shopkeeper buys an item at cost ₹18450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((24538.5 - 18450) / 18450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 174,
+      "question": "Quantitative Problem #184: A shopkeeper buys an item at cost ₹18550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((25042.5 - 18550) / 18550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 175,
+      "question": "Quantitative Problem #185: A shopkeeper buys an item at cost ₹18650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17437.75 - 18650) / 18650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 176,
+      "question": "Quantitative Problem #186: A shopkeeper buys an item at cost ₹18750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((21375 - 18750) / 18750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 177,
+      "question": "Quantitative Problem #187: A shopkeeper buys an item at cost ₹18850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22054.5 - 18850) / 18850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 178,
+      "question": "Quantitative Problem #188: A shopkeeper buys an item at cost ₹18950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((22550.5 - 18950) / 18950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 179,
+      "question": "Quantitative Problem #189: A shopkeeper buys an item at cost ₹19050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((27146.25 - 19050) / 19050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 180,
+      "question": "Quantitative Problem #190: A shopkeeper buys an item at cost ₹19150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((18958.5 - 19150) / 19150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
     }
   ]
 }

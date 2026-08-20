@@ -1,177 +1,256 @@
 {
-  "name": "Gujarat GK Mock Test - Chapter Test 4",
-  "type": "Chapter Test",
   "courseName": "Gujarat GK Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": false,
-  "categoryKey": "stategk",
+  "testName": "Chapter Test 4",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "General Science & Environment",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which major river flows through or along the border of Gujarat?",
+      "id": 1,
+      "question": "General Knowledge #186: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in Gujarat GK Mock Test."
+      "answer": 1,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
-      "question": "What is the official state animal or bird associated with Gujarat?",
+      "id": 2,
+      "question": "General Knowledge #187: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of Gujarat."
+      "answer": 1,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in Gujarat?",
+      "id": 3,
+      "question": "General Knowledge #188: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of Gujarat."
+      "answer": 1,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
-      "question": "Which major river flows through or along the border of Gujarat?",
+      "id": 4,
+      "question": "General Knowledge #189: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in Gujarat GK Mock Test."
+      "answer": 1,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
-      "question": "What is the official state animal or bird associated with Gujarat?",
+      "id": 5,
+      "question": "General Knowledge #190: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of Gujarat."
+      "answer": 1,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in Gujarat?",
+      "id": 6,
+      "question": "General Knowledge #191: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of Gujarat."
+      "answer": 1,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
-      "question": "Which major river flows through or along the border of Gujarat?",
+      "id": 7,
+      "question": "General Knowledge #192: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in Gujarat GK Mock Test."
+      "answer": 1,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
-      "question": "What is the official state animal or bird associated with Gujarat?",
+      "id": 8,
+      "question": "General Knowledge #193: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of Gujarat."
+      "answer": 1,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in Gujarat?",
+      "id": 9,
+      "question": "General Knowledge #194: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of Gujarat."
+      "answer": 1,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
-      "question": "Which major river flows through or along the border of Gujarat?",
+      "id": 10,
+      "question": "General Knowledge #195: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in Gujarat GK Mock Test."
+      "answer": 1,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
-      "question": "What is the official state animal or bird associated with Gujarat?",
+      "id": 11,
+      "question": "General Knowledge #196: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of Gujarat."
+      "answer": 1,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in Gujarat?",
+      "id": 12,
+      "question": "General Knowledge #197: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of Gujarat."
+      "answer": 1,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
-      "question": "Which major river flows through or along the border of Gujarat?",
+      "id": 13,
+      "question": "General Knowledge #198: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in Gujarat GK Mock Test."
+      "answer": 1,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
-      "question": "What is the official state animal or bird associated with Gujarat?",
+      "id": 14,
+      "question": "General Knowledge #199: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of Gujarat."
+      "answer": 1,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in Gujarat?",
+      "id": 15,
+      "question": "General Knowledge #200: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of Gujarat."
+      "answer": 1,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 16,
+      "question": "General Knowledge #201: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 1,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 17,
+      "question": "General Knowledge #202: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 1,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 18,
+      "question": "General Knowledge #203: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 1,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 19,
+      "question": "General Knowledge #204: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 1,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 20,
+      "question": "General Knowledge #205: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 1,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     }
   ]
 }

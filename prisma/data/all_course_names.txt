@@ -1,0 +1,369 @@
+SSC CGL Mock Test
+SSC CHSL Mock Test
+SSC MTS Mock Test
+SSC GD Constable Mock Test
+SSC CPO Mock Test
+SSC JE Mock Test
+SSC Stenographer Mock Test
+SSC Jht (Junior Hindi Translator) Mock Test
+SSC Selection Post Mock Test
+SSC Departmental Exams Mock Test
+Cuet Pg Mock Test
+Iit Jam Mock Test
+GATE (Pg/m.tech) Mock Test
+NEET Pg (Medical) Mock Test
+GPAT (Pharmacy) Mock Test
+CLAT Pg (Law) Mock Test
+Tiss Cuet Pg Mock Test
+Nimcet (Mca) Mock Test
+Jnu Pg Entrance (Cuet Pg Route) Mock Test
+University Specific Pg Entrance Exams Mock Test
+RBI Grade B Mock Test
+RBI Assistant Mock Test
+SEBI Grade A Mock Test
+NABARD Grade A Mock Test
+IRDAI Grade A Mock Test
+PFRDA Grade A Mock Test
+SIDBI Grade A Mock Test
+IFSCA Grade A Mock Test
+IBBI Exam Mock Test
+CTET Mock Test
+State Tet (Htet, Uptet, Reet, Btet, Etc.) Mock Test
+UGC NET Mock Test
+CSIR NET Mock Test
+KVS Teacher Exam Mock Test
+NVS Teacher Exam Mock Test
+DSSSB Teacher Exam Mock Test
+TGT Exam Mock Test
+PGT Exam Mock Test
+PRT Exam Mock Test
+B.ed Entrance Exam Mock Test
+M.ed Entrance Exam Mock Test
+SET (State Eligibility Test) Mock Test
+Up TGT School Teacher Mock Test
+Up PGT School Teacher Mock Test
+DSSSB TGT Mock Test
+KVS PGT Mock Test
+Up B.ed Joint Entrance Exam Mock Test
+Bihar B.ed CET Mock Test
+Delhi University B.ed Entrance Mock Test
+CTET Paper 1 Child Pedagogy
+CTET Paper 2 Child Pedagogy
+UPTET Paper 1 Mock Test
+Super Tet Primary Teacher Mock Test
+ITI Fitter Semester 1 Mock Test
+ITI Fitter Semester 2 Mock Test
+ITI Fitter Yearly Theory Mock Test
+ITI Electrician Semester 1 Mock Test
+ITI Electrician Semester 2 Mock Test
+ITI Electrician Yearly Theory Mock Test
+ITI Electronic Mechanic Semester 1 Mock Test
+ITI Electronic Mechanic Semester 2 Mock Test
+ITI Electronic Mechanic Yearly Theory Mock Test
+ITI Fitter Trade Theory Mock Test
+ITI Electrician Trade Theory Mock Test
+ITI Electronic Mechanic Trade Theory Mock Test
+RRB JE Civil Engineering Mock Test
+RRB JE Electrical Engineering Mock Test
+RRB JE Mechanical Engineering Mock Test
+SSC JE Civil Technical Mock Test
+SSC JE Electrical Technical Mock Test
+SSC JE Mechanical Technical Mock Test
+State Psc Ae Civil Mock Test
+State Psc JE Electrical Mock Test
+GATE Mechanical Engineering Mock Test
+SSC JE Mechanical Mock Test
+RRB JE Mechanical Mock Test
+ISRO Mechanical Mock Test
+GATE Civil Engineering Mock Test
+SSC JE Civil Mock Test
+RRB JE Civil Mock Test
+ISRO Civil Mock Test
+GATE Electrical Engineering Mock Test
+SSC JE Electrical Mock Test
+RRB JE Electrical Mock Test
+ISRO Electrical Mock Test
+GATE Electronics & Comm Mock Test
+ISRO Electronics Mock Test
+BARC Electronics Mock Test
+GATE Computer Science & It Mock Test
+ISRO Computer Science Mock Test
+Nielit Scientist B Mock Test
+GATE Chemical Engineering Mock Test
+GATE Biotechnology Mock Test
+GATE Aerospace Engineering Mock Test
+GATE Instrumentation Engineering Mock Test
+ISRO Instrumentation Mock Test
+Delhi Judiciary Service Mock Test
+Up Civil Judge Junior Mock Test
+Bihar Judiciary Exam Mock Test
+Mp Judiciary Service Mock Test
+Rajasthan Judiciary Mock Test
+Haryana Judiciary Exam Mock Test
+Punjab Judiciary Exam Mock Test
+Gujarat Judiciary Exam Mock Test
+Maharashtra Judiciary Exam Mock Test
+West Bengal Judiciary Exam Mock Test
+Himachal Pradesh Judiciary Exam Mock Test
+Jharkhand Judiciary Exam Mock Test
+Chhattisgarh Judiciary Exam Mock Test
+Uttarakhand Judiciary Exam Mock Test
+Odisha Judiciary Exam Mock Test
+Karnataka Judiciary Exam Mock Test
+Tamil Nadu Judiciary Exam Mock Test
+Andhra Pradesh Judiciary Exam Mock Test
+Telangana Judiciary Exam Mock Test
+Kerala Judiciary Exam Mock Test
+Assam Judiciary Exam Mock Test
+Jammu & Kashmir Judiciary Exam Mock Test
+Goa Judiciary Exam Mock Test
+Tripura Judiciary Exam Mock Test
+Manipur Judiciary Exam Mock Test
+Meghalaya Judiciary Exam Mock Test
+Nagaland Judiciary Exam Mock Test
+Arunachal Pradesh Judiciary Exam Mock Test
+Sikkim Judiciary Exam Mock Test
+Aiims Paramedical Entrance Exam Mock Test
+Pgimer Paramedical Entrance Mock Test
+Jipmer Paramedical Entrance Mock Test
+Cuet Ug (Paramedical Courses) Mock Test
+NEET Ug (Some Allied Health Courses) Mock Test
+Up Cpet (Abvmu Paramedical) Mock Test
+Ruhs Paramedical Entrance Mock Test
+Jenpas Ug (West Bengal) Mock Test
+Smfwbee Mock Test
+Uttarakhand Paramedical Entrance Mock Test
+Bihar Dcece Paramedical Mock Test
+Ipu CET (Paramedical Courses) Mock Test
+RRB Ntpc Cbt 1 Mock Test
+RRB Ntpc Cbt 2 Mock Test
+RRB Alp Stage 1 Mock Test
+RRB Alp Stage 2 Mock Test
+RRB Group D Mock Test
+RRB JE Cbt 1 Mock Test
+SBI Po Mock Test
+SBI Clerk Mock Test
+IBPS Po Mock Test
+IBPS Clerk Mock Test
+IBPS RRB Po Mock Test
+Lic Aao Mock Test
+Lic Ado Mock Test
+Niacl Ao Mock Test
+SBI Po Preliminary Mock Test
+SBI Clerk Preliminary Mock Test
+IBPS Po Preliminary Mock Test
+IBPS Clerk Preliminary Mock Test
+Uppsc PCS Prelims Mock Test
+Bpsc PCS Prelims Mock Test
+Mppsc PCS Prelims Mock Test
+Ras Rajasthan PCS Mock Test
+Mpsc Maharashtra PCS Mock Test
+State Psc Gs Paper 1 Mock Test
+State Psc Gs Paper 2 Mock Test
+State PCS Gs Practice
+NDA General Ability Mock Test
+CDS Elementary Mathematics Mock Test
+CDS General Knowledge Mock Test
+AFCAT Entry Mock Test
+CAPF Assistant Commandant Mock Test
+Indian Airforce X/y Group Mock Test
+UPSC Civil Services Prelims Gs Mock Test
+UPSC Civil Services Csat Mock Test
+Uppsc Civil Services Prelims Mock Test
+Bpsc Civil Services Prelims Mock Test
+Mppsc Civil Services Prelims Mock Test
+Ras Rajasthan Civil Services Mock Test
+Mpsc Maharashtra Civil Services Mock Test
+Hppsc Civil Services Prelims Mock Test
+Ukpsc Civil Services Prelims Mock Test
+Gpsc Civil Services Prelims Mock Test
+Up Police Constable Mock Test
+Up Police Si Mock Test
+Delhi Police Constable Mock Test
+Delhi Police Si Mock Test
+Bihar Police Constable Mock Test
+Emrs Non-teaching Staff Mock Test
+DSSSB Non-teaching Assistant Mock Test
+KVS Non-teaching Clerk Mock Test
+UGC NET Paper 1 General Aptitude
+UGC NET Commerce Paper 2 Mock Test
+UGC NET Computer Science Mock Test
+CSIR NET Life Sciences Mock Test
+UGC NET Paper 1 Mock Test Series
+UGC NET Economics Mock Test
+UGC NET Political Science Mock Test
+UGC NET Philosophy Mock Test
+UGC NET Psychology Mock Test
+UGC NET Sociology Mock Test
+UGC NET History Mock Test
+UGC NET Anthropology Mock Test
+UGC NET Commerce Mock Test
+UGC NET Education Mock Test
+UGC NET Social Work Mock Test
+UGC NET Defence Studies Mock Test
+UGC NET Home Science Mock Test
+UGC NET Public Administration Mock Test
+UGC NET Population Studies Mock Test
+UGC NET Music Mock Test
+FSSAI Central Food Safety Officer Mock Test
+FSSAI Technical Officer Mock Test
+State Food Safety Officer Mock Test
+Aiims Norcet Nursing Officer Mock Test
+ESIC Staff Nurse Recruitment Mock Test
+DSSSB Nursing Officer Mock Test
+Cuet Ug General Test Mock Test
+Cuet Ug Section Iii General Test Mock Test
+Cuet Ia English Mock Test
+Cuet Physics & Chemistry Mock Test
+NEET Ug Complete Practice Mock Test
+NEET Ug Mock Test Series
+NEET Ug Full Syllabus Mock Test 1
+NEET Ug Full Syllabus Mock Test 2
+NEET Ug Full Syllabus Mock Test 3
+NEET Ug Full Syllabus Mock Test 4
+NEET Ug Full Syllabus Mock Test 5
+NEET Ug Physics Chapter-wise Mock Test
+NEET Ug Chemistry Chapter-wise Mock Test
+NEET Ug Biology Botany Mock Test
+NEET Ug Biology Zoology Mock Test
+NEET Ug Previous Year Paper 2025
+NEET Ug Previous Year Paper 2024
+NEET Ug Previous Year Paper 2023
+NEET Ug Section-a Physics Speed Test
+NEET Ug Section-b Chemistry Speed Test
+NEET Ug Organic Chemistry Target Mock Test
+NEET Ug Inorganic Chemistry Target Mock Test
+NEET Ug Mechanics Physics Target Mock Test
+NEET Ug Electrodynamics Physics Target Mock Test
+JEE Main Physics & Chemistry Mock Test
+JEE Main Mathematics Mock Test
+JEE Main Mock Test Series
+JEE Main Full Syllabus Mock Test 1
+JEE Main Full Syllabus Mock Test 2
+JEE Main Full Syllabus Mock Test 3
+JEE Main Full Syllabus Mock Test 4
+JEE Main Full Syllabus Mock Test 5
+JEE Main Physics Section-a Speed Test
+JEE Main Chemistry Section-a Speed Test
+JEE Main Mathematics Section-a Speed Test
+JEE Main Mathematics Algebra Mock Test
+JEE Main Mathematics Calculus Mock Test
+JEE Main Physics Mechanics Mock Test
+JEE Main Physics Electromagnetism Mock Test
+JEE Main Chemistry Organic Mock Test
+JEE Main Chemistry Inorganic Mock Test
+JEE Main Chemistry Physical Mock Test
+JEE Main Previous Year Paper 2025
+JEE Main Previous Year Paper 2024
+JEE Main Previous Year Paper 2023
+TCS NQT Cognitive Skills Mock Test
+Infosys Specialist Programmer Mock Test
+Wipro Elite Talent Hunt Mock Test
+Cognizant Genc Quantitative Mock Test
+Accenture Green Channel Mock Test
+Capgemini Excelerator Mock Test
+Hcl Tech Bee Mock Test
+Lti Mindtree Aptitude Mock Test
+Deloitte Nla Aptitude Mock Test
+Dxc Technology Placement Mock Test
+Tech Mahindra Technical & Aptitude Mock Test
+Campus Placement General Aptitude Mock Test
+Ca Foundation Principles of Accounting
+Cma Foundation Financial Accounting
+Ca Intermediate Group 1 Accounting Mock Test
+Ca Intermediate Group 2 Advanced Accounting Mock Test
+Cma Intermediate Financial Accounting Mock Test
+Cs Executive Corporate and Management Accounting Mock Test
+Uppcl Assistant Accountant Accounts Mock Test
+State Accountant and Auditor Exam Mock Test
+Tally Erp 9 & Gst Professional Practice Mock Test
+Ca Foundation Business Laws Mock Test
+CAT (Mba) Mock Test
+CMAT (Mba) Mock Test
+XAT (Mba) Mock Test
+MAT (Mba) Mock Test
+Snap (Mba) Mock Test
+Nmat (Mba) Mock Test
+Mah CET (Mba) Mock Test
+Ibsat (Mba) Mock Test
+Tancet (Mba) Mock Test
+General Mba Entrance Mock Test
+Rajasthan GK Mock Test
+Uttar Pradesh GK Mock Test
+Bihar GK Mock Test
+Madhya Pradesh GK Mock Test
+Maharashtra GK Mock Test
+Haryana GK Mock Test
+Punjab GK Mock Test
+Gujarat GK Mock Test
+West Bengal GK Mock Test
+Karnataka GK Mock Test
+Tamil Nadu GK Mock Test
+Andhra Pradesh GK Mock Test
+Kerala GK Mock Test
+Telangana GK Mock Test
+Odisha GK Mock Test
+Assam GK Mock Test
+Jharkhand GK Mock Test
+Chhattisgarh GK Mock Test
+Uttarakhand GK Mock Test
+Himachal Pradesh GK Mock Test
+Jammu & Kashmir GK Mock Test
+Goa GK Mock Test
+Tripura GK Mock Test
+Manipur GK Mock Test
+Meghalaya GK Mock Test
+Nagaland GK Mock Test
+Arunachal Pradesh GK Mock Test
+Mizoram GK Mock Test
+Sikkim GK Mock Test
+Delhi GK Mock Test
+Puducherry GK Mock Test
+Ladakh GK Mock Test
+Andaman & Nicobar GK Mock Test
+Chandigarh GK Mock Test
+Dadra & Nagar Haveli & Daman & Diu GK Mock Test
+Lakshadweep GK Mock Test
+Indian History Mock Test
+Indian Geography Mock Test
+Indian Polity & Constitution Mock Test
+Indian Economy Mock Test
+Indian Environment & Ecology Mock Test
+Indian Administration & Governance Mock Test
+Indian Sports & Culture Mock Test
+Indian Socialism & Social Welfare Mock Test
+Indian Freedom Movement Mock Test
+NRA CET 12th Level Mock Test
+NRA CET Graduates Mock Test
+NRA CET 10th Level Mock Test
+Aiims Cre Ldc/udc/steno/deo/jaa/sa Mock Test
+Nbe Junior Assistant 2024 Mock Tests Series
+ISRO Assistant Mock Test 2022
+ISRO Junior Personal Assistant Mock Test 2022
+Ccras Udc/ldc/steno/assistant Mock Test
+Nbe Junior Assistant Mock Test
+Cwc (Central Warehousing Corporation) Superintendent Mock Test
+FCI Manager Phase I & Ii Mock Test 2022
+FCI Stenographer Mock Test 2022
+CSIR Junior Secretariat Assistant (Jsa) 2025 Mock Test
+CSIR Aso/so Mock Test 2023
+UPSC EPFO Personal Assistant Mock Test
+CSIR Junior Stenographer 2025 Mock Test
+AAI Junior Executive (Common Cadre) Mock Test
+Supreme Court Junior Court Assistant Mock Test
+Ccras MTS 2025 Mock Test Series
+CBSE Junior Assistant Mock Test 2025 (Old)
+JCI Junior Assistant Mock Test Series
+CBSE Assistant/superintendent & All Other Post(tier I) Mock Test
+NPCIL Stipendiary Trainee (Category Ii) Prelims 2026 Mock Test
+India Post Postman & Mail Guard Mock Test
+EPFO Stenographer (Group C) Mock Test 2023
+SGPGI Stenographer Mock Test Series 2025
+NPCIL Scientific Assistant Physics Mock Test
+ISRO Scientist Recruitment Mock Test
+BARC Scientific Officer Mock Test
+DRDO Scientist B Mock Test
+Web Development Basics
+Computer Science
+English Grammar Mastery
+Math & Algebra Essentials

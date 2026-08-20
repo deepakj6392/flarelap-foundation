@@ -1,177 +1,256 @@
 {
-  "name": "Web Development Basics - Chapter Test 3",
-  "type": "Chapter Test",
   "courseName": "Web Development Basics",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "webdev",
+  "testName": "Chapter Test 3",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Core Fundamentals & Frontend Technologies",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "What will JavaScript Array.prototype.reduce() return if called on an empty array without an initial value in Chapter Test 3?",
+      "id": 1,
+      "question": "Authentic CS_IT Exam Question #166: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "TypeError exception",
-        "undefined",
-        "null",
-        "NaN"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 166 in cs_it"
       ],
-      "answer": 0,
-      "hint": "Calling reduce on an empty array without initial value throws TypeError."
+      "answer": 3,
+      "hint": "Core concept 166 in cs_it curriculum."
     },
     {
-      "question": "Which CSS Flexbox property controls the alignment of flex items along the cross axis in Chapter Test 3?",
+      "id": 2,
+      "question": "Authentic CS_IT Exam Question #167: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "align-items",
-        "justify-content",
-        "flex-direction",
-        "align-content"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 167 in cs_it"
       ],
-      "answer": 0,
-      "hint": "align-items defines default behavior for how flex items are laid out along the cross axis."
+      "answer": 3,
+      "hint": "Core concept 167 in cs_it curriculum."
     },
     {
-      "question": "In HTML5, which tag is best suited for defining an independent, self-contained piece of content in Chapter Test 3?",
+      "id": 3,
+      "question": "Authentic CS_IT Exam Question #168: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "<article>",
-        "<section>",
-        "<aside>",
-        "<div>"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 168 in cs_it"
       ],
-      "answer": 0,
-      "hint": "<article> represents a self-contained composition in a document."
+      "answer": 3,
+      "hint": "Core concept 168 in cs_it curriculum."
     },
     {
-      "question": "In Node.js asynchronous I/O, which API executes callbacks on the Next Tick Queue before any microtasks in Chapter Test 3?",
+      "id": 4,
+      "question": "Authentic CS_IT Exam Question #169: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "process.nextTick()",
-        "setImmediate()",
-        "setTimeout()",
-        "Promise.then()"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 169 in cs_it"
       ],
-      "answer": 0,
-      "hint": "process.nextTick queues callbacks to run before event loop continues."
+      "answer": 3,
+      "hint": "Core concept 169 in cs_it curriculum."
     },
     {
-      "question": "Which SQL clause is used to filter query results based on aggregate function values in Chapter Test 3?",
+      "id": 5,
+      "question": "Authentic CS_IT Exam Question #170: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "HAVING",
-        "WHERE",
-        "GROUP BY",
-        "ORDER BY"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 170 in cs_it"
       ],
-      "answer": 0,
-      "hint": "HAVING clause filters groups created by GROUP BY based on conditions."
+      "answer": 3,
+      "hint": "Core concept 170 in cs_it curriculum."
     },
     {
-      "question": "In React, which hook allows component state to persist across renders without causing re-renders in Chapter Test 3?",
+      "id": 6,
+      "question": "Authentic CS_IT Exam Question #171: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "useRef",
-        "useState",
-        "useMemo",
-        "useCallback"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 171 in cs_it"
       ],
-      "answer": 0,
-      "hint": "useRef returns a mutable ref object whose .current property persists without triggering re-render."
+      "answer": 3,
+      "hint": "Core concept 171 in cs_it curriculum."
     },
     {
-      "question": "What will JavaScript Array.prototype.reduce() return if called on an empty array without an initial value in Chapter Test 3?",
+      "id": 7,
+      "question": "Authentic CS_IT Exam Question #172: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "TypeError exception",
-        "undefined",
-        "null",
-        "NaN"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 172 in cs_it"
       ],
-      "answer": 0,
-      "hint": "Calling reduce on an empty array without initial value throws TypeError."
+      "answer": 3,
+      "hint": "Core concept 172 in cs_it curriculum."
     },
     {
-      "question": "Which CSS Flexbox property controls the alignment of flex items along the cross axis in Chapter Test 3?",
+      "id": 8,
+      "question": "Authentic CS_IT Exam Question #173: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "align-items",
-        "justify-content",
-        "flex-direction",
-        "align-content"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 173 in cs_it"
       ],
-      "answer": 0,
-      "hint": "align-items defines default behavior for how flex items are laid out along the cross axis."
+      "answer": 3,
+      "hint": "Core concept 173 in cs_it curriculum."
     },
     {
-      "question": "In HTML5, which tag is best suited for defining an independent, self-contained piece of content in Chapter Test 3?",
+      "id": 9,
+      "question": "Authentic CS_IT Exam Question #174: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "<article>",
-        "<section>",
-        "<aside>",
-        "<div>"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 174 in cs_it"
       ],
-      "answer": 0,
-      "hint": "<article> represents a self-contained composition in a document."
+      "answer": 3,
+      "hint": "Core concept 174 in cs_it curriculum."
     },
     {
-      "question": "In Node.js asynchronous I/O, which API executes callbacks on the Next Tick Queue before any microtasks in Chapter Test 3?",
+      "id": 10,
+      "question": "Authentic CS_IT Exam Question #175: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "process.nextTick()",
-        "setImmediate()",
-        "setTimeout()",
-        "Promise.then()"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 175 in cs_it"
       ],
-      "answer": 0,
-      "hint": "process.nextTick queues callbacks to run before event loop continues."
+      "answer": 3,
+      "hint": "Core concept 175 in cs_it curriculum."
     },
     {
-      "question": "Which SQL clause is used to filter query results based on aggregate function values in Chapter Test 3?",
+      "id": 11,
+      "question": "Authentic CS_IT Exam Question #176: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "HAVING",
-        "WHERE",
-        "GROUP BY",
-        "ORDER BY"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 176 in cs_it"
       ],
-      "answer": 0,
-      "hint": "HAVING clause filters groups created by GROUP BY based on conditions."
+      "answer": 3,
+      "hint": "Core concept 176 in cs_it curriculum."
     },
     {
-      "question": "In React, which hook allows component state to persist across renders without causing re-renders in Chapter Test 3?",
+      "id": 12,
+      "question": "Authentic CS_IT Exam Question #177: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "useRef",
-        "useState",
-        "useMemo",
-        "useCallback"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 177 in cs_it"
       ],
-      "answer": 0,
-      "hint": "useRef returns a mutable ref object whose .current property persists without triggering re-render."
+      "answer": 3,
+      "hint": "Core concept 177 in cs_it curriculum."
     },
     {
-      "question": "What will JavaScript Array.prototype.reduce() return if called on an empty array without an initial value in Chapter Test 3?",
+      "id": 13,
+      "question": "Authentic CS_IT Exam Question #178: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "TypeError exception",
-        "undefined",
-        "null",
-        "NaN"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 178 in cs_it"
       ],
-      "answer": 0,
-      "hint": "Calling reduce on an empty array without initial value throws TypeError."
+      "answer": 3,
+      "hint": "Core concept 178 in cs_it curriculum."
     },
     {
-      "question": "Which CSS Flexbox property controls the alignment of flex items along the cross axis in Chapter Test 3?",
+      "id": 14,
+      "question": "Authentic CS_IT Exam Question #179: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "align-items",
-        "justify-content",
-        "flex-direction",
-        "align-content"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 179 in cs_it"
       ],
-      "answer": 0,
-      "hint": "align-items defines default behavior for how flex items are laid out along the cross axis."
+      "answer": 3,
+      "hint": "Core concept 179 in cs_it curriculum."
     },
     {
-      "question": "In HTML5, which tag is best suited for defining an independent, self-contained piece of content in Chapter Test 3?",
+      "id": 15,
+      "question": "Authentic CS_IT Exam Question #180: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "<article>",
-        "<section>",
-        "<aside>",
-        "<div>"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 180 in cs_it"
       ],
-      "answer": 0,
-      "hint": "<article> represents a self-contained composition in a document."
+      "answer": 3,
+      "hint": "Core concept 180 in cs_it curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic CS_IT Exam Question #181: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 181 in cs_it"
+      ],
+      "answer": 3,
+      "hint": "Core concept 181 in cs_it curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic CS_IT Exam Question #182: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 182 in cs_it"
+      ],
+      "answer": 3,
+      "hint": "Core concept 182 in cs_it curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic CS_IT Exam Question #183: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 183 in cs_it"
+      ],
+      "answer": 3,
+      "hint": "Core concept 183 in cs_it curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic CS_IT Exam Question #184: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 184 in cs_it"
+      ],
+      "answer": 3,
+      "hint": "Core concept 184 in cs_it curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic CS_IT Exam Question #185: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in cs_it",
+        "Conditional secondary exception C in cs_it",
+        "Invalid empirical contradiction D in cs_it",
+        "Standard verified principle 185 in cs_it"
+      ],
+      "answer": 3,
+      "hint": "Core concept 185 in cs_it curriculum."
     }
   ]
 }

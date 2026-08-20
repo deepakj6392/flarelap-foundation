@@ -1,177 +1,256 @@
 {
-  "name": "CTET Paper 1 Child Pedagogy - Chapter Test 2",
-  "type": "Chapter Test",
   "courseName": "CTET Paper 1 Child Pedagogy",
-  "qs": 38,
-  "marks": 38,
-  "duration": 38,
-  "isFree": true,
-  "categoryKey": "teaching",
+  "testName": "Chapter Test 2",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Language I (Hindi / Regional)",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 1,
+      "question": "English Idioms & Phrases #46: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To injure one's finger",
+        "To state something with exact accuracy",
+        "To build a wooden structure",
+        "To make a mistake"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "To describe exactly what is causing a situation."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 2,
+      "question": "English Idioms & Phrases #47: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
+        "To hunt animals",
+        "To talk loudly"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "To speak evasively without coming to the point."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 3,
+      "question": "English Idioms & Phrases #48: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To name a date",
+        "To stop working on something for the rest of the day",
+        "To celebrate a birthday",
+        "To wake up early"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "To decide to stop working."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 4,
+      "question": "English Idioms & Phrases #49: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Every month",
+        "Very rarely or seldom",
+        "During full moon",
+        "Frequently"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "An event that happens very rarely."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 5,
+      "question": "English Idioms & Phrases #50: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "In heavy fog",
+        "Through dense forests"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "Supporting someone through all difficulties."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 6,
+      "question": "English Idioms & Phrases #51: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To waste precious food",
+        "To disclose a confidential secret",
+        "To make a big blunder",
+        "To start a brawl"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "'Spill the beans' means to reveal secret information."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 7,
+      "question": "English Idioms & Phrases #52: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To get injured in a fight",
+        "To face a difficult situation with courage",
+        "To eat voraciously",
+        "To surrender unconditionally"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 8,
+      "question": "English Idioms & Phrases #53: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A magical gift",
+        "A curse on enemies"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "Something that seems bad at first but turns out good."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 9,
+      "question": "English Idioms & Phrases #54: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To waste electricity",
+        "To work or study late into the night",
+        "To set fire to property",
+        "To celebrate lavishly"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "To study or work until late at night."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 10,
+      "question": "English Idioms & Phrases #55: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "To clean up a mess",
+        "To admit defeat and surrender",
+        "To start a swimming match",
+        "To ignore advice"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "To give up or accept defeat."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 11,
+      "question": "English Idioms & Phrases #56: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "To injure one's finger",
+        "To state something with exact accuracy",
+        "To build a wooden structure",
+        "To make a mistake"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "To describe exactly what is causing a situation."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 12,
+      "question": "English Idioms & Phrases #57: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
+        "To hunt animals",
+        "To talk loudly"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 1,
+      "hint": "To speak evasively without coming to the point."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 13,
+      "question": "English Idioms & Phrases #58: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "To name a date",
+        "To stop working on something for the rest of the day",
+        "To celebrate a birthday",
+        "To wake up early"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 1,
+      "hint": "To decide to stop working."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 14,
+      "question": "English Idioms & Phrases #59: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Every month",
+        "Very rarely or seldom",
+        "During full moon",
+        "Frequently"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 1,
+      "hint": "An event that happens very rarely."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 15,
+      "question": "English Idioms & Phrases #60: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "In heavy fog",
+        "Through dense forests"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 1,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 16,
+      "question": "English Idioms & Phrases #61: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To disclose a confidential secret",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 1,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 17,
+      "question": "English Idioms & Phrases #62: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To face a difficult situation with courage",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 1,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 18,
+      "question": "English Idioms & Phrases #63: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 1,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 19,
+      "question": "English Idioms & Phrases #64: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To work or study late into the night",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 1,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 20,
+      "question": "English Idioms & Phrases #65: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To admit defeat and surrender",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 1,
+      "hint": "To give up or accept defeat."
     }
   ]
 }

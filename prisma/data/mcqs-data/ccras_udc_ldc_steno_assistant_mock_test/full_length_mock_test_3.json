@@ -1,232 +1,1226 @@
 {
-  "name": "Ccras Udc/ldc/steno/assistant Mock Test - Full Length Mock Test 3",
-  "type": "Full Mock",
   "courseName": "Ccras Udc/ldc/steno/assistant Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 3",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "general",
+  "subjects": [
+    {
+      "name": "General Intelligence & Reasoning",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "General Awareness",
+      "questions": 50,
+      "marks": 50
+    },
+    {
+      "name": "English Language & Comprehension",
+      "questions": 100,
+      "marks": 100
+    }
+  ],
   "questions": [
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 1,
+      "question": "Syllogisms: All cars are trucks. All trucks are vehicles.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Only Conclusion I follows",
+        "Only Conclusion II follows",
+        "Both Conclusion I and II follow",
+        "Neither follows"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Conclusion I: All cars are vehicles. Conclusion II: Some vehicles are trucks."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 2,
+      "question": "Syllogisms: Some pens are books. All books are pencils.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All pens are pencils",
+        "No pen is pencil",
+        "Some pens are pencils",
+        "All pencils are books"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Intersection of pens and books falls inside pencils."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 3,
+      "question": "Syllogisms: No cat is dog. All dogs are lions.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All lions are cats",
+        "No lion is cat",
+        "Some lions are not cats",
+        "All cats are lions"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Dogs are inside lions and outside cats."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 4,
+      "question": "Syllogisms: All apples are fruits. Some fruits are sweet.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All apples are sweet",
+        "No sweet is apple",
+        "Neither Conclusion I nor II follows conclusively",
+        "Some sweet are fruits"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "No direct link between apples and sweet."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 5,
+      "question": "Syllogisms: Only a few doors are windows. All windows are walls.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All doors are windows",
+        "No wall is door",
+        "Some doors are not windows",
+        "All walls are windows"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "'Only a few' implies both some are and some are not."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 6,
+      "question": "Syllogisms: Some doctors are engineers. All engineers are scientists. No scientist is pilot.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All doctors are pilots",
+        "Some pilots are engineers",
+        "No doctor is pilot is a possibility",
+        "All scientists are doctors"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "No engineer is pilot, but doctors can overlap."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 7,
+      "question": "Syllogisms: Statements: All A are B. No B is C. All C are D.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All A are C",
+        "Some B are D",
+        "Some D are not B",
+        "No A is D"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "C ⊂ D and C ∩ B = Ø."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 8,
+      "question": "Syllogisms: Statements: Some red are blue. Some blue are green. Some green are yellow.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All red are yellow",
+        "All green are red",
+        "None of the universal conclusions follow",
+        "No yellow is red"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Chain of 'Some' yields no universal relation."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 9,
+      "question": "Syllogisms: Statements: All rain is water. No water is fire. Some fire is smoke.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All smoke is water",
+        "No rain is smoke",
+        "Some smoke are not water",
+        "All fire is rain"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Smoke that is fire cannot be water."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 10,
+      "question": "Syllogisms: Statements: Only a few books are papers. No paper is pen.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All books are pens",
+        "All papers are books",
+        "Some books are not pens",
+        "No book is paper"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Books that are papers cannot be pens."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 11,
+      "question": "Syllogisms: All shirts are pants. All pants are shoes.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "No shirt is shoe",
+        "Some shoes are not pants",
+        "All shirts are shoes",
+        "All shoes are shirts"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Transitive relation."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 12,
+      "question": "Syllogisms: Some birds are insects. All insects are butterflies.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All birds are butterflies",
+        "No butterfly is bird",
+        "Some birds are butterflies",
+        "All butterflies are insects"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Overlap extends to butterflies."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 13,
+      "question": "Syllogisms: No river is ocean. All oceans are seas.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "All seas are rivers",
+        "No sea is river",
+        "Some seas are not rivers",
+        "All rivers are seas"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Oceans are inside seas and outside rivers."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 14,
+      "question": "Syllogisms: All men are mortal. Socrates is a man.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Socrates is immortal",
+        "All mortals are Socrates",
+        "Socrates is mortal",
+        "No man is mortal"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Classic Aristotelian syllogism."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 15,
+      "question": "Syllogisms: Some stars are planets. No planet is moon.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All stars are moons",
+        "No star is moon",
+        "Some stars are not moons",
+        "All moons are stars"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Stars that are planets cannot be moons."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 16,
+      "question": "Syllogisms: Only a few mobile are laptop. All laptop are computer.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "All mobile are computer",
+        "No computer is mobile",
+        "Some mobile are computer",
+        "All computer are laptop"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "'Only a few' guarantees intersection."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 17,
+      "question": "Syllogisms: All metals are solids. All solids are hard.. Which conclusion logically follows?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Some metals are soft",
+        "No hard is solid",
+        "All metals are hard",
+        "All hard are metals"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Transitive."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 18,
+      "question": "Syllogisms: Some teachers are scholars. Some scholars are authors.. Which conclusion logically follows?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "All teachers are authors",
+        "No author is teacher",
+        "Neither conclusion follows",
+        "All scholars are teachers"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Two 'Some' statements yield no universal link."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 19,
+      "question": "Syllogisms: No student is lazy. All lazy are failing.. Which conclusion logically follows?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "All students are failing",
+        "No failing is student",
+        "Some failing are not students",
+        "All lazy are students"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Lazy individuals are outside students."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 20,
+      "question": "Syllogisms: All trees are plants. No plant is animal.. Which conclusion logically follows?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Some trees are animals",
+        "All animals are plants",
+        "No tree is animal",
+        "All trees are animals"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Trees are inside plants, plants disjoint from animals."
+    },
+    {
+      "id": 21,
+      "question": "Syllogisms: Some dogs are friendly. All friendly creatures are loyal.. Which conclusion logically follows?",
+      "options": [
+        "All dogs are loyal",
+        "No dog is loyal",
+        "Some dogs are loyal",
+        "All loyal creatures are dogs"
+      ],
+      "answer": 2,
+      "hint": "Overlap."
+    },
+    {
+      "id": 22,
+      "question": "Syllogisms: Only a few chairs are tables. No table is desk.. Which conclusion logically follows?",
+      "options": [
+        "All chairs are desks",
+        "All desks are chairs",
+        "Some chairs are not desks",
+        "No chair is table"
+      ],
+      "answer": 2,
+      "hint": "Chairs that are tables cannot be desks."
+    },
+    {
+      "id": 23,
+      "question": "Syllogisms: All fruits are healthy. All healthy foods are organic.. Which conclusion logically follows?",
+      "options": [
+        "No fruit is organic",
+        "Some organic foods are unhealthy",
+        "All fruits are organic",
+        "All organic foods are fruits"
+      ],
+      "answer": 2,
+      "hint": "Transitive."
+    },
+    {
+      "id": 24,
+      "question": "Syllogisms: Some books are novels. No novel is comic.. Which conclusion logically follows?",
+      "options": [
+        "All books are comics",
+        "No comic is book",
+        "Some books are not comics",
+        "All comics are novels"
+      ],
+      "answer": 2,
+      "hint": "Books that are novels cannot be comics."
+    },
+    {
+      "id": 25,
+      "question": "Syllogisms: All rivers are water bodies. All water bodies contain water.. Which conclusion logically follows?",
+      "options": [
+        "No river contains water",
+        "All water contains rivers",
+        "All rivers contain water",
+        "Some rivers do not contain water"
+      ],
+      "answer": 2,
+      "hint": "Transitive."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #51: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #52: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #53: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #54: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #55: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #56: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #57: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #58: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #59: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #60: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #61: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #62: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #63: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #64: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #65: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #66: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #67: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #68: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #69: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #70: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #71: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #72: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #73: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #74: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #75: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 2,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 51,
+      "question": "English Vocabulary #51: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Eagerness & Speed",
+        "Apathy"
+      ],
+      "answer": 2,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 52,
+      "question": "English Vocabulary #52: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Silent",
+        "Quiet"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 53,
+      "question": "English Vocabulary #53: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Sociable & Outgoing",
+        "Introverted"
+      ],
+      "answer": 2,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 54,
+      "question": "English Vocabulary #54: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Generous",
+        "Noble"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 55,
+      "question": "English Vocabulary #55: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Harmful & Destructive",
+        "Wholesome"
+      ],
+      "answer": 2,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 56,
+      "question": "English Vocabulary #56: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Essential",
+        "Required"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 57,
+      "question": "English Vocabulary #57: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Different & Distinct",
+        "Uniform"
+      ],
+      "answer": 2,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 58,
+      "question": "English Vocabulary #58: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Agitation",
+        "Anxiety"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 59,
+      "question": "English Vocabulary #59: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Penetrable & Vulnerable",
+        "Resistant"
+      ],
+      "answer": 2,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 60,
+      "question": "English Vocabulary #60: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Common",
+        "Public"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 61,
+      "question": "English Vocabulary #61: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Scrupulous & Thorough",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 62,
+      "question": "English Vocabulary #62: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Transitory",
+        "Short-lived"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 63,
+      "question": "English Vocabulary #63: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Assertive & Domineering",
+        "Flattering"
+      ],
+      "answer": 2,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 64,
+      "question": "English Vocabulary #64: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Deceptive",
+        "Reserved"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 65,
+      "question": "English Vocabulary #65: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Malevolent & Malicious",
+        "Helpful"
+      ],
+      "answer": 2,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 66,
+      "question": "English Vocabulary #66: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Idealistic",
+        "Irrational"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 67,
+      "question": "English Vocabulary #67: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Passionate & Enthusiastic",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 68,
+      "question": "English Vocabulary #68: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Talkative",
+        "Outgoing"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 69,
+      "question": "English Vocabulary #69: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Omnipresent & Everywhere",
+        "Hidden"
+      ],
+      "answer": 2,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 70,
+      "question": "English Vocabulary #70: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Careless",
+        "Sloppy"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 71,
+      "question": "English Vocabulary #71: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Eagerness & Speed",
+        "Apathy"
+      ],
+      "answer": 2,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 72,
+      "question": "English Vocabulary #72: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Silent",
+        "Quiet"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 73,
+      "question": "English Vocabulary #73: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Sociable & Outgoing",
+        "Introverted"
+      ],
+      "answer": 2,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 74,
+      "question": "English Vocabulary #74: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Generous",
+        "Noble"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 75,
+      "question": "English Vocabulary #75: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Harmful & Destructive",
+        "Wholesome"
+      ],
+      "answer": 2,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 76,
+      "question": "English Vocabulary #76: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Essential",
+        "Required"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 77,
+      "question": "English Vocabulary #77: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Different & Distinct",
+        "Uniform"
+      ],
+      "answer": 2,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 78,
+      "question": "English Vocabulary #78: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Agitation",
+        "Anxiety"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 79,
+      "question": "English Vocabulary #79: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Penetrable & Vulnerable",
+        "Resistant"
+      ],
+      "answer": 2,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 80,
+      "question": "English Vocabulary #80: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Common",
+        "Public"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
+    },
+    {
+      "id": 81,
+      "question": "English Vocabulary #81: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Scrupulous & Thorough",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Meticulous means paying extreme attention to detail; precise."
+    },
+    {
+      "id": 82,
+      "question": "English Vocabulary #82: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
+      "options": [
+        "Permanent & Eternal",
+        "Fleeting",
+        "Transitory",
+        "Short-lived"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
+    },
+    {
+      "id": 83,
+      "question": "English Vocabulary #83: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
+      "options": [
+        "Servile",
+        "Fawning",
+        "Assertive & Domineering",
+        "Flattering"
+      ],
+      "answer": 2,
+      "hint": "Antonym of obsequious (excessively submissive) is assertive."
+    },
+    {
+      "id": 84,
+      "question": "English Vocabulary #84: Select the direct ANTONYM of the given word: 'CANDID'",
+      "options": [
+        "Frank & Outspoken",
+        "Shy",
+        "Deceptive",
+        "Reserved"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Candid means honest, direct, and truthful."
+    },
+    {
+      "id": 85,
+      "question": "English Vocabulary #85: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
+      "options": [
+        "Kind",
+        "Generous",
+        "Malevolent & Malicious",
+        "Helpful"
+      ],
+      "answer": 2,
+      "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
+    },
+    {
+      "id": 86,
+      "question": "English Vocabulary #86: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
+      "options": [
+        "Practical & Realistic",
+        "Theoretical",
+        "Idealistic",
+        "Irrational"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
+    },
+    {
+      "id": 87,
+      "question": "English Vocabulary #87: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
+      "options": [
+        "Apathetic",
+        "Lethargic",
+        "Passionate & Enthusiastic",
+        "Indifferent"
+      ],
+      "answer": 2,
+      "hint": "Zealous means showing great energy and enthusiasm."
+    },
+    {
+      "id": 88,
+      "question": "English Vocabulary #88: Select the direct ANTONYM of the given word: 'RETICENT'",
+      "options": [
+        "Reserved & Taciturn",
+        "Garrulous",
+        "Talkative",
+        "Outgoing"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
+    },
+    {
+      "id": 89,
+      "question": "English Vocabulary #89: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
+      "options": [
+        "Rare",
+        "Scarce",
+        "Omnipresent & Everywhere",
+        "Hidden"
+      ],
+      "answer": 2,
+      "hint": "Ubiquitous means present, appearing, or found everywhere."
+    },
+    {
+      "id": 90,
+      "question": "English Vocabulary #90: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
+      "options": [
+        "Meticulous & Demanding",
+        "Easygoing",
+        "Careless",
+        "Sloppy"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
+    },
+    {
+      "id": 91,
+      "question": "English Vocabulary #91: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
+      "options": [
+        "Sluggishness",
+        "Reluctance",
+        "Eagerness & Speed",
+        "Apathy"
+      ],
+      "answer": 2,
+      "hint": "Alacrity means brisk and cheerful readiness."
+    },
+    {
+      "id": 92,
+      "question": "English Vocabulary #92: Select the direct ANTONYM of the given word: 'TACITURN'",
+      "options": [
+        "Garrulous & Talkative",
+        "Reticent",
+        "Silent",
+        "Quiet"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
+    },
+    {
+      "id": 93,
+      "question": "English Vocabulary #93: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
+      "options": [
+        "Reclusive",
+        "Solitary",
+        "Sociable & Outgoing",
+        "Introverted"
+      ],
+      "answer": 2,
+      "hint": "Gregarious means fond of company; sociable."
+    },
+    {
+      "id": 94,
+      "question": "English Vocabulary #94: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
+      "options": [
+        "Selfish & Spiteful",
+        "Forgiving",
+        "Generous",
+        "Noble"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
+    },
+    {
+      "id": 95,
+      "question": "English Vocabulary #95: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
+      "options": [
+        "Beneficial",
+        "Harmless",
+        "Harmful & Destructive",
+        "Wholesome"
+      ],
+      "answer": 2,
+      "hint": "Pernicious means having a harmful effect in a subtle way."
+    },
+    {
+      "id": 96,
+      "question": "English Vocabulary #96: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
+      "options": [
+        "Unnecessary & Extra",
+        "Vital",
+        "Essential",
+        "Required"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
+    },
+    {
+      "id": 97,
+      "question": "English Vocabulary #97: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
+      "options": [
+        "Identical",
+        "Similar",
+        "Different & Distinct",
+        "Uniform"
+      ],
+      "answer": 2,
+      "hint": "Disparate means fundamentally different in kind."
+    },
+    {
+      "id": 98,
+      "question": "English Vocabulary #98: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
+      "options": [
+        "Calmness & Composure",
+        "Panic",
+        "Agitation",
+        "Anxiety"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
+    },
+    {
+      "id": 99,
+      "question": "English Vocabulary #99: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
+      "options": [
+        "Impenetrable",
+        "Proof",
+        "Penetrable & Vulnerable",
+        "Resistant"
+      ],
+      "answer": 2,
+      "hint": "Antonym of impervious (unable to be affected) is penetrable."
+    },
+    {
+      "id": 100,
+      "question": "English Vocabulary #100: Select the direct ANTONYM of the given word: 'ESOTERIC'",
+      "options": [
+        "Obscure & Arcane",
+        "Familiar",
+        "Common",
+        "Public"
+      ],
+      "answer": 2,
+      "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     }
   ]
 }

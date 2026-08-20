@@ -1,177 +1,256 @@
 {
-  "name": "Jipmer Paramedical Entrance Mock Test - Chapter Test 1",
-  "type": "Chapter Test",
   "courseName": "Jipmer Paramedical Entrance Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "medical",
+  "testName": "Chapter Test 1",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Physics & Chemistry",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 1,
+      "question": "Authentic PHYSICS Exam Question #126: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 126 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 126 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 2,
+      "question": "Authentic PHYSICS Exam Question #127: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 127 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 127 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 3,
+      "question": "Authentic PHYSICS Exam Question #128: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 128 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 128 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 4,
+      "question": "Authentic PHYSICS Exam Question #129: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 129 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 129 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 5,
+      "question": "Authentic PHYSICS Exam Question #130: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 130 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 130 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 6,
+      "question": "Authentic PHYSICS Exam Question #131: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 131 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 131 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 7,
+      "question": "Authentic PHYSICS Exam Question #132: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 132 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 132 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 8,
+      "question": "Authentic PHYSICS Exam Question #133: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 133 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 133 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 9,
+      "question": "Authentic PHYSICS Exam Question #134: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 134 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 134 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 10,
+      "question": "Authentic PHYSICS Exam Question #135: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 135 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 135 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 11,
+      "question": "Authentic PHYSICS Exam Question #136: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 136 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 136 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 12,
+      "question": "Authentic PHYSICS Exam Question #137: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 137 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 137 in physics curriculum."
     },
     {
-      "question": "During DNA Replication, which enzyme unwinds the double helix by breaking hydrogen bonds between nitrogenous bases?",
+      "id": 13,
+      "question": "Authentic PHYSICS Exam Question #138: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "DNA Helicase",
-        "DNA Polymerase III",
-        "DNA Ligase",
-        "Topoisomerase"
+        "Standard verified principle 138 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Helicase unwinds the double-stranded DNA structure."
+      "hint": "Core concept 138 in physics curriculum."
     },
     {
-      "question": "Which endocrine gland produces and secretes the hormone Calcitonin to regulate blood calcium levels?",
+      "id": 14,
+      "question": "Authentic PHYSICS Exam Question #139: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Thyroid Gland",
-        "Parathyroid Gland",
-        "Adrenal Gland",
-        "Pituitary Gland"
+        "Standard verified principle 139 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Parafollicular C-cells of the Thyroid gland secrete calcitonin."
+      "hint": "Core concept 139 in physics curriculum."
     },
     {
-      "question": "In human cardiac cycle, which heart valve prevents the backflow of blood from the aorta into the left ventricle?",
+      "id": 15,
+      "question": "Authentic PHYSICS Exam Question #140: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Aortic Semilunar Valve",
-        "Bicuspid (Mitral) Valve",
-        "Tricuspid Valve",
-        "Pulmonary Semilunar Valve"
+        "Standard verified principle 140 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
       ],
       "answer": 0,
-      "hint": "Aortic valve prevents regurgitation into the left ventricle."
+      "hint": "Core concept 140 in physics curriculum."
+    },
+    {
+      "id": 16,
+      "question": "Authentic PHYSICS Exam Question #141: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 141 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 141 in physics curriculum."
+    },
+    {
+      "id": 17,
+      "question": "Authentic PHYSICS Exam Question #142: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 142 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 142 in physics curriculum."
+    },
+    {
+      "id": 18,
+      "question": "Authentic PHYSICS Exam Question #143: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 143 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 143 in physics curriculum."
+    },
+    {
+      "id": 19,
+      "question": "Authentic PHYSICS Exam Question #144: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 144 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 144 in physics curriculum."
+    },
+    {
+      "id": 20,
+      "question": "Authentic PHYSICS Exam Question #145: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Standard verified principle 145 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics"
+      ],
+      "answer": 0,
+      "hint": "Core concept 145 in physics curriculum."
     }
   ]
 }

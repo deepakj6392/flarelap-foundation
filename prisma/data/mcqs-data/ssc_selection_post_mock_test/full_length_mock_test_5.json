@@ -1,232 +1,1231 @@
 {
-  "name": "SSC Selection Post Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "SSC Selection Post Mock Test",
-  "qs": 100,
-  "marks": 100,
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 100,
+  "totalMarks": 100,
   "duration": 90,
-  "isFree": true,
-  "categoryKey": "ssc",
+  "subjects": [
+    {
+      "name": "General Intelligence & Reasoning",
+      "questions": 25,
+      "marks": 50
+    },
+    {
+      "name": "General Awareness",
+      "questions": 25,
+      "marks": 50
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "questions": 25,
+      "marks": 50
+    },
+    {
+      "name": "English Language",
+      "questions": 25,
+      "marks": 50
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Reasoning Puzzle #26: In a seating alignment of 51 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 55 km North, turns East 79 km, then South 55 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 36th, Displacement = 79 km East",
+        "Priya's Rank = 35th, Displacement = 55 km West",
+        "Priya's Rank = 37th, Displacement = 134 km North",
+        "Priya's Rank = 36th, Displacement = 110 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (51) - Left (16) + 1 = 36th. North/South movements cancel, leaving 79 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Reasoning Puzzle #27: In a seating alignment of 52 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 57 km North, turns East 82 km, then South 57 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 36th, Displacement = 82 km East",
+        "Priya's Rank = 35th, Displacement = 57 km West",
+        "Priya's Rank = 37th, Displacement = 139 km North",
+        "Priya's Rank = 36th, Displacement = 114 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (52) - Left (17) + 1 = 36th. North/South movements cancel, leaving 82 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Reasoning Puzzle #28: In a seating alignment of 53 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 59 km North, turns East 85 km, then South 59 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 36th, Displacement = 85 km East",
+        "Priya's Rank = 35th, Displacement = 59 km West",
+        "Priya's Rank = 37th, Displacement = 144 km North",
+        "Priya's Rank = 36th, Displacement = 118 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (53) - Left (18) + 1 = 36th. North/South movements cancel, leaving 85 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Reasoning Puzzle #29: In a seating alignment of 54 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 61 km North, turns East 88 km, then South 61 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 36th, Displacement = 88 km East",
+        "Priya's Rank = 35th, Displacement = 61 km West",
+        "Priya's Rank = 37th, Displacement = 149 km North",
+        "Priya's Rank = 36th, Displacement = 122 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (54) - Left (19) + 1 = 36th. North/South movements cancel, leaving 88 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Reasoning Puzzle #30: In a seating alignment of 55 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 63 km North, turns East 91 km, then South 63 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 51th, Displacement = 91 km East",
+        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 52th, Displacement = 154 km North",
+        "Priya's Rank = 51th, Displacement = 126 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (55) - Left (5) + 1 = 51th. North/South movements cancel, leaving 91 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Reasoning Puzzle #31: In a seating alignment of 56 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 65 km North, turns East 94 km, then South 65 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 51th, Displacement = 94 km East",
+        "Priya's Rank = 50th, Displacement = 65 km West",
+        "Priya's Rank = 52th, Displacement = 159 km North",
+        "Priya's Rank = 51th, Displacement = 130 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (56) - Left (6) + 1 = 51th. North/South movements cancel, leaving 94 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Reasoning Puzzle #32: In a seating alignment of 57 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 67 km North, turns East 97 km, then South 67 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 51th, Displacement = 97 km East",
+        "Priya's Rank = 50th, Displacement = 67 km West",
+        "Priya's Rank = 52th, Displacement = 164 km North",
+        "Priya's Rank = 51th, Displacement = 134 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (57) - Left (7) + 1 = 51th. North/South movements cancel, leaving 97 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Reasoning Puzzle #33: In a seating alignment of 58 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 69 km North, turns East 100 km, then South 69 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 51th, Displacement = 100 km East",
+        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 52th, Displacement = 169 km North",
+        "Priya's Rank = 51th, Displacement = 138 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (58) - Left (8) + 1 = 51th. North/South movements cancel, leaving 100 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Reasoning Puzzle #34: In a seating alignment of 59 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 71 km North, turns East 103 km, then South 71 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 51th, Displacement = 103 km East",
+        "Priya's Rank = 50th, Displacement = 71 km West",
+        "Priya's Rank = 52th, Displacement = 174 km North",
+        "Priya's Rank = 51th, Displacement = 142 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (59) - Left (9) + 1 = 51th. North/South movements cancel, leaving 103 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Reasoning Puzzle #35: In a seating alignment of 60 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 73 km North, turns East 106 km, then South 73 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 51th, Displacement = 106 km East",
+        "Priya's Rank = 50th, Displacement = 73 km West",
+        "Priya's Rank = 52th, Displacement = 179 km North",
+        "Priya's Rank = 51th, Displacement = 146 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (60) - Left (10) + 1 = 51th. North/South movements cancel, leaving 106 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Reasoning Puzzle #36: In a seating alignment of 61 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 75 km North, turns East 109 km, then South 75 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 51th, Displacement = 109 km East",
+        "Priya's Rank = 50th, Displacement = 75 km West",
+        "Priya's Rank = 52th, Displacement = 184 km North",
+        "Priya's Rank = 51th, Displacement = 150 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (61) - Left (11) + 1 = 51th. North/South movements cancel, leaving 109 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Reasoning Puzzle #37: In a seating alignment of 62 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 77 km North, turns East 112 km, then South 77 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 51th, Displacement = 112 km East",
+        "Priya's Rank = 50th, Displacement = 77 km West",
+        "Priya's Rank = 52th, Displacement = 189 km North",
+        "Priya's Rank = 51th, Displacement = 154 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (62) - Left (12) + 1 = 51th. North/South movements cancel, leaving 112 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Reasoning Puzzle #38: In a seating alignment of 63 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 79 km North, turns East 115 km, then South 79 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 51th, Displacement = 115 km East",
+        "Priya's Rank = 50th, Displacement = 79 km West",
+        "Priya's Rank = 52th, Displacement = 194 km North",
+        "Priya's Rank = 51th, Displacement = 158 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (63) - Left (13) + 1 = 51th. North/South movements cancel, leaving 115 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Reasoning Puzzle #39: In a seating alignment of 64 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 81 km North, turns East 118 km, then South 81 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 51th, Displacement = 118 km East",
+        "Priya's Rank = 50th, Displacement = 81 km West",
+        "Priya's Rank = 52th, Displacement = 199 km North",
+        "Priya's Rank = 51th, Displacement = 162 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (64) - Left (14) + 1 = 51th. North/South movements cancel, leaving 118 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Reasoning Puzzle #40: In a seating alignment of 65 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 83 km North, turns East 121 km, then South 83 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 51th, Displacement = 121 km East",
+        "Priya's Rank = 50th, Displacement = 83 km West",
+        "Priya's Rank = 52th, Displacement = 204 km North",
+        "Priya's Rank = 51th, Displacement = 166 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (65) - Left (15) + 1 = 51th. North/South movements cancel, leaving 121 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "Reasoning Puzzle #41: In a seating alignment of 66 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 85 km North, turns East 124 km, then South 85 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 51th, Displacement = 124 km East",
+        "Priya's Rank = 50th, Displacement = 85 km West",
+        "Priya's Rank = 52th, Displacement = 209 km North",
+        "Priya's Rank = 51th, Displacement = 170 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (66) - Left (16) + 1 = 51th. North/South movements cancel, leaving 124 km East."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "Reasoning Puzzle #42: In a seating alignment of 67 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 87 km North, turns East 127 km, then South 87 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Priya's Rank = 51th, Displacement = 127 km East",
+        "Priya's Rank = 50th, Displacement = 87 km West",
+        "Priya's Rank = 52th, Displacement = 214 km North",
+        "Priya's Rank = 51th, Displacement = 174 km South"
       ],
       "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "hint": "Rank from right = Total (67) - Left (17) + 1 = 51th. North/South movements cancel, leaving 127 km East."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "Reasoning Puzzle #43: In a seating alignment of 68 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 89 km North, turns East 130 km, then South 89 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Priya's Rank = 51th, Displacement = 130 km East",
+        "Priya's Rank = 50th, Displacement = 89 km West",
+        "Priya's Rank = 52th, Displacement = 219 km North",
+        "Priya's Rank = 51th, Displacement = 178 km South"
       ],
       "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "hint": "Rank from right = Total (68) - Left (18) + 1 = 51th. North/South movements cancel, leaving 130 km East."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "Reasoning Puzzle #44: In a seating alignment of 69 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 91 km North, turns East 133 km, then South 91 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Priya's Rank = 51th, Displacement = 133 km East",
+        "Priya's Rank = 50th, Displacement = 91 km West",
+        "Priya's Rank = 52th, Displacement = 224 km North",
+        "Priya's Rank = 51th, Displacement = 182 km South"
       ],
       "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "hint": "Rank from right = Total (69) - Left (19) + 1 = 51th. North/South movements cancel, leaving 133 km East."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "Reasoning Puzzle #45: In a seating alignment of 70 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 93 km North, turns East 136 km, then South 93 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Priya's Rank = 66th, Displacement = 136 km East",
+        "Priya's Rank = 65th, Displacement = 93 km West",
+        "Priya's Rank = 67th, Displacement = 229 km North",
+        "Priya's Rank = 66th, Displacement = 186 km South"
       ],
       "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "hint": "Rank from right = Total (70) - Left (5) + 1 = 66th. North/South movements cancel, leaving 136 km East."
+    },
+    {
+      "id": 21,
+      "question": "Reasoning Puzzle #46: In a seating alignment of 71 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 95 km North, turns East 139 km, then South 95 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 66th, Displacement = 139 km East",
+        "Priya's Rank = 65th, Displacement = 95 km West",
+        "Priya's Rank = 67th, Displacement = 234 km North",
+        "Priya's Rank = 66th, Displacement = 190 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (71) - Left (6) + 1 = 66th. North/South movements cancel, leaving 139 km East."
+    },
+    {
+      "id": 22,
+      "question": "Reasoning Puzzle #47: In a seating alignment of 72 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 97 km North, turns East 142 km, then South 97 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 66th, Displacement = 142 km East",
+        "Priya's Rank = 65th, Displacement = 97 km West",
+        "Priya's Rank = 67th, Displacement = 239 km North",
+        "Priya's Rank = 66th, Displacement = 194 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (72) - Left (7) + 1 = 66th. North/South movements cancel, leaving 142 km East."
+    },
+    {
+      "id": 23,
+      "question": "Reasoning Puzzle #48: In a seating alignment of 73 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 99 km North, turns East 145 km, then South 99 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 66th, Displacement = 145 km East",
+        "Priya's Rank = 65th, Displacement = 99 km West",
+        "Priya's Rank = 67th, Displacement = 244 km North",
+        "Priya's Rank = 66th, Displacement = 198 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (73) - Left (8) + 1 = 66th. North/South movements cancel, leaving 145 km East."
+    },
+    {
+      "id": 24,
+      "question": "Reasoning Puzzle #49: In a seating alignment of 74 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 101 km North, turns East 148 km, then South 101 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 66th, Displacement = 148 km East",
+        "Priya's Rank = 65th, Displacement = 101 km West",
+        "Priya's Rank = 67th, Displacement = 249 km North",
+        "Priya's Rank = 66th, Displacement = 202 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (74) - Left (9) + 1 = 66th. North/South movements cancel, leaving 148 km East."
+    },
+    {
+      "id": 25,
+      "question": "Reasoning Puzzle #50: In a seating alignment of 75 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 103 km North, turns East 151 km, then South 103 km. What is Priya's rank from right and runner's net displacement?",
+      "options": [
+        "Priya's Rank = 66th, Displacement = 151 km East",
+        "Priya's Rank = 65th, Displacement = 103 km West",
+        "Priya's Rank = 67th, Displacement = 254 km North",
+        "Priya's Rank = 66th, Displacement = 206 km South"
+      ],
+      "answer": 0,
+      "hint": "Rank from right = Total (75) - Left (10) + 1 = 66th. North/South movements cancel, leaving 151 km East."
+    },
+    {
+      "id": 26,
+      "question": "General Knowledge #101: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 27,
+      "question": "General Knowledge #102: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 28,
+      "question": "General Knowledge #103: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 29,
+      "question": "General Knowledge #104: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 30,
+      "question": "General Knowledge #105: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 31,
+      "question": "General Knowledge #106: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
+      "options": [
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+    },
+    {
+      "id": 32,
+      "question": "General Knowledge #107: Which constitutional or historical fact accurately describes Kaziranga National Park?",
+      "options": [
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+    },
+    {
+      "id": 33,
+      "question": "General Knowledge #108: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
+      "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
+    },
+    {
+      "id": 34,
+      "question": "General Knowledge #109: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
+      "options": [
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+    },
+    {
+      "id": 35,
+      "question": "General Knowledge #110: Which constitutional or historical fact accurately describes 35 Years?",
+      "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "35 Years: Minimum age requirement for election as President of India."
+    },
+    {
+      "id": 36,
+      "question": "General Knowledge #111: Which constitutional or historical fact accurately describes Eighth Schedule?",
+      "options": [
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
+    },
+    {
+      "id": 37,
+      "question": "General Knowledge #112: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
+      "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
+    },
+    {
+      "id": 38,
+      "question": "General Knowledge #113: Which constitutional or historical fact accurately describes Articles 20 and 21?",
+      "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
+    },
+    {
+      "id": 39,
+      "question": "General Knowledge #114: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
+      "options": [
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
+    },
+    {
+      "id": 40,
+      "question": "General Knowledge #115: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
+      "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+    },
+    {
+      "id": 41,
+      "question": "General Knowledge #116: Which constitutional or historical fact accurately describes 8 States?",
+      "options": [
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
+    },
+    {
+      "id": 42,
+      "question": "General Knowledge #117: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
+      "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+    },
+    {
+      "id": 43,
+      "question": "General Knowledge #118: Which constitutional or historical fact accurately describes Vice-President of India?",
+      "options": [
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
+    },
+    {
+      "id": 44,
+      "question": "General Knowledge #119: Which constitutional or historical fact accurately describes Black Regur Soil?",
+      "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
+    },
+    {
+      "id": 45,
+      "question": "General Knowledge #120: Which constitutional or historical fact accurately describes 550 Members?",
+      "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+    },
+    {
+      "id": 46,
+      "question": "General Knowledge #121: Which constitutional or historical fact accurately describes Article 32?",
+      "options": [
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+    },
+    {
+      "id": 47,
+      "question": "General Knowledge #122: Which constitutional or historical fact accurately describes Lord Curzon?",
+      "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+    },
+    {
+      "id": 48,
+      "question": "General Knowledge #123: Which constitutional or historical fact accurately describes Godavari River?",
+      "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
+    },
+    {
+      "id": 49,
+      "question": "General Knowledge #124: Which constitutional or historical fact accurately describes Governor of RBI?",
+      "options": [
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+    },
+    {
+      "id": 50,
+      "question": "General Knowledge #125: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
+      "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+      ],
+      "answer": 0,
+      "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
+    },
+    {
+      "id": 51,
+      "question": "Quantitative Problem #101: A shopkeeper buys an item at cost ₹10250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 5%, Joint Work = 41 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10455 - 10250) / 10250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
+    },
+    {
+      "id": 52,
+      "question": "Quantitative Problem #102: A shopkeeper buys an item at cost ₹10350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 25%, Joint Work = 43 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12782.25 - 10350) / 10350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
+    },
+    {
+      "id": 53,
+      "question": "Quantitative Problem #103: A shopkeeper buys an item at cost ₹10450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 30%, Joint Work = 45 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13166.999999999998 - 10450) / 10450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
+    },
+    {
+      "id": 54,
+      "question": "Quantitative Problem #104: A shopkeeper buys an item at cost ₹10550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 35%, Joint Work = 47 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13451.25 - 10550) / 10550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
+    },
+    {
+      "id": 55,
+      "question": "Quantitative Problem #105: A shopkeeper buys an item at cost ₹10650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 5%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11129.250000000002 - 10650) / 10650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
+    },
+    {
+      "id": 56,
+      "question": "Quantitative Problem #106: A shopkeeper buys an item at cost ₹10750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 10%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11610 - 10750) / 10750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
+    },
+    {
+      "id": 57,
+      "question": "Quantitative Problem #107: A shopkeeper buys an item at cost ₹10850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 15%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11989.25 - 10850) / 10850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
+    },
+    {
+      "id": 58,
+      "question": "Quantitative Problem #108: A shopkeeper buys an item at cost ₹10950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 35%, Joint Work = 28 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((14563.499999999998 - 10950) / 10950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
+    },
+    {
+      "id": 59,
+      "question": "Quantitative Problem #109: A shopkeeper buys an item at cost ₹11050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 40%, Joint Work = 30 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((14917.5 - 11050) / 11050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
+    },
+    {
+      "id": 60,
+      "question": "Quantitative Problem #110: A shopkeeper buys an item at cost ₹11150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -5%, Joint Work = 32 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((10425.250000000002 - 11150) / 11150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
+    },
+    {
+      "id": 61,
+      "question": "Quantitative Problem #111: A shopkeeper buys an item at cost ₹11250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 15%, Joint Work = 34 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12825 - 11250) / 11250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
+    },
+    {
+      "id": 62,
+      "question": "Quantitative Problem #112: A shopkeeper buys an item at cost ₹11350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 20%, Joint Work = 36 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13279.5 - 11350) / 11350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
+    },
+    {
+      "id": 63,
+      "question": "Quantitative Problem #113: A shopkeeper buys an item at cost ₹11450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 25%, Joint Work = 38 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13625.499999999998 - 11450) / 11450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
+    },
+    {
+      "id": 64,
+      "question": "Quantitative Problem #114: A shopkeeper buys an item at cost ₹11550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 45%, Joint Work = 40 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((16458.75 - 11550) / 11550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
+    },
+    {
+      "id": 65,
+      "question": "Quantitative Problem #115: A shopkeeper buys an item at cost ₹11650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = 0%, Joint Work = 42 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11533.500000000002 - 11650) / 11650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
+    },
+    {
+      "id": 66,
+      "question": "Quantitative Problem #116: A shopkeeper buys an item at cost ₹11750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 5%, Joint Work = 44 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11985 - 11750) / 11750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
+    },
+    {
+      "id": 67,
+      "question": "Quantitative Problem #117: A shopkeeper buys an item at cost ₹11850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 25%, Joint Work = 46 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((14634.75 - 11850) / 11850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
+    },
+    {
+      "id": 68,
+      "question": "Quantitative Problem #118: A shopkeeper buys an item at cost ₹11950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 30%, Joint Work = 48 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((15057 - 11950) / 11950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
+    },
+    {
+      "id": 69,
+      "question": "Quantitative Problem #119: A shopkeeper buys an item at cost ₹12050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 35%, Joint Work = 50 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((15363.75 - 12050) / 12050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
+    },
+    {
+      "id": 70,
+      "question": "Quantitative Problem #120: A shopkeeper buys an item at cost ₹12150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 5%, Joint Work = 25 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((12696.750000000002 - 12150) / 12150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 71,
+      "question": "Quantitative Problem #121: A shopkeeper buys an item at cost ₹12250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13230 - 12250) / 12250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 72,
+      "question": "Quantitative Problem #122: A shopkeeper buys an item at cost ₹12350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((13646.75 - 12350) / 12350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 73,
+      "question": "Quantitative Problem #123: A shopkeeper buys an item at cost ₹12450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((16558.5 - 12450) / 12450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 74,
+      "question": "Quantitative Problem #124: A shopkeeper buys an item at cost ₹12550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((16942.5 - 12550) / 12550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 75,
+      "question": "Quantitative Problem #125: A shopkeeper buys an item at cost ₹12650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 0,
+      "hint": "Profit % = ((11827.750000000002 - 12650) / 12650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 76,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 77,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 78,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 79,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 80,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 81,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To state something with exact accuracy",
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake"
+      ],
+      "answer": 0,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 82,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To avoid discussing the main topic directly",
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly"
+      ],
+      "answer": 0,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 83,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early"
+      ],
+      "answer": 0,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 84,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Very rarely or seldom",
+        "Every month",
+        "During full moon",
+        "Frequently"
+      ],
+      "answer": 0,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 85,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Under all circumstances, good and bad",
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests"
+      ],
+      "answer": 0,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 86,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 87,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 88,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 89,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 90,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 91,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To state something with exact accuracy",
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To make a mistake"
+      ],
+      "answer": 0,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 92,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To avoid discussing the main topic directly",
+        "To cut wild bushes",
+        "To hunt animals",
+        "To talk loudly"
+      ],
+      "answer": 0,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 93,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To celebrate a birthday",
+        "To wake up early"
+      ],
+      "answer": 0,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 94,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Very rarely or seldom",
+        "Every month",
+        "During full moon",
+        "Frequently"
+      ],
+      "answer": 0,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 95,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Under all circumstances, good and bad",
+        "Only during good times",
+        "In heavy fog",
+        "Through dense forests"
+      ],
+      "answer": 0,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 96,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To make a big blunder",
+        "To start a brawl"
+      ],
+      "answer": 0,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 97,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To surrender unconditionally"
+      ],
+      "answer": 0,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 98,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A magical gift",
+        "A curse on enemies"
+      ],
+      "answer": 0,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 99,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To work or study late into the night",
+        "To waste electricity",
+        "To set fire to property",
+        "To celebrate lavishly"
+      ],
+      "answer": 0,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 100,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To start a swimming match",
+        "To ignore advice"
+      ],
+      "answer": 0,
+      "hint": "To give up or accept defeat."
     }
   ]
 }

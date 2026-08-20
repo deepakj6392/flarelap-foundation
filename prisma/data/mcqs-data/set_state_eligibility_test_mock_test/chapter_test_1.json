@@ -1,177 +1,256 @@
 {
-  "name": "SET (State Eligibility Test) Mock Test - Chapter Test 1",
-  "type": "Chapter Test",
   "courseName": "SET (State Eligibility Test) Mock Test",
-  "qs": 25,
-  "marks": 25,
-  "duration": 23,
-  "isFree": true,
-  "categoryKey": "stategk",
+  "testName": "Chapter Test 1",
+  "totalQuestions": 20,
+  "totalMarks": 20,
+  "duration": 20,
+  "subjects": [
+    {
+      "name": "Paper I: General Teaching & Research Aptitude",
+      "questions": 20,
+      "marks": 20
+    }
+  ],
   "questions": [
     {
-      "question": "Which major river flows through or along the border of SET (State Eligibility )?",
+      "id": 1,
+      "question": "Quantitative Problem #126: A shopkeeper buys an item at cost ₹12750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 15%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in SET (State Eligibility Test) Mock Test."
+      "answer": 1,
+      "hint": "Profit % = ((14535 - 12750) / 12750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
     },
     {
-      "question": "What is the official state animal or bird associated with SET (State Eligibility )?",
+      "id": 2,
+      "question": "Quantitative Problem #127: A shopkeeper buys an item at cost ₹12850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 20%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((15034.5 - 12850) / 12850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in SET (State Eligibility )?",
+      "id": 3,
+      "question": "Quantitative Problem #128: A shopkeeper buys an item at cost ₹12950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 25%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((15410.5 - 12950) / 12950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
     },
     {
-      "question": "Which major river flows through or along the border of SET (State Eligibility )?",
+      "id": 4,
+      "question": "Quantitative Problem #129: A shopkeeper buys an item at cost ₹13050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 45%, Joint Work = 43 days"
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in SET (State Eligibility Test) Mock Test."
+      "answer": 1,
+      "hint": "Profit % = ((18596.25 - 13050) / 13050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
     },
     {
-      "question": "What is the official state animal or bird associated with SET (State Eligibility )?",
+      "id": 5,
+      "question": "Quantitative Problem #130: A shopkeeper buys an item at cost ₹13150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = 0%, Joint Work = 45 days"
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((13018.500000000002 - 13150) / 13150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in SET (State Eligibility )?",
+      "id": 6,
+      "question": "Quantitative Problem #131: A shopkeeper buys an item at cost ₹13250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 5%, Joint Work = 47 days"
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((13515 - 13250) / 13250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
     },
     {
-      "question": "Which major river flows through or along the border of SET (State Eligibility )?",
+      "id": 7,
+      "question": "Quantitative Problem #132: A shopkeeper buys an item at cost ₹13350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 25%, Joint Work = 37 days"
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in SET (State Eligibility Test) Mock Test."
+      "answer": 1,
+      "hint": "Profit % = ((16487.25 - 13350) / 13350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
     },
     {
-      "question": "What is the official state animal or bird associated with SET (State Eligibility )?",
+      "id": 8,
+      "question": "Quantitative Problem #133: A shopkeeper buys an item at cost ₹13450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 30%, Joint Work = 39 days"
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((16947 - 13450) / 13450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in SET (State Eligibility )?",
+      "id": 9,
+      "question": "Quantitative Problem #134: A shopkeeper buys an item at cost ₹13550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 35%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((17276.25 - 13550) / 13550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
     },
     {
-      "question": "Which major river flows through or along the border of SET (State Eligibility )?",
+      "id": 10,
+      "question": "Quantitative Problem #135: A shopkeeper buys an item at cost ₹13650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 5%, Joint Work = 28 days"
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in SET (State Eligibility Test) Mock Test."
+      "answer": 1,
+      "hint": "Profit % = ((14264.250000000002 - 13650) / 13650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
     },
     {
-      "question": "What is the official state animal or bird associated with SET (State Eligibility )?",
+      "id": 11,
+      "question": "Quantitative Problem #136: A shopkeeper buys an item at cost ₹13750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 10%, Joint Work = 30 days"
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((14850 - 13750) / 13750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in SET (State Eligibility )?",
+      "id": 12,
+      "question": "Quantitative Problem #137: A shopkeeper buys an item at cost ₹13850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 15%, Joint Work = 32 days"
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((15304.25 - 13850) / 13850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
-      "question": "Which major river flows through or along the border of SET (State Eligibility )?",
+      "id": 13,
+      "question": "Quantitative Problem #138: A shopkeeper buys an item at cost ₹13950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Prominent State River System",
-        "Ganges Main Channel",
-        "Indus Tributary",
-        "Godavari Estuary"
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 35%, Joint Work = 34 days"
       ],
-      "answer": 0,
-      "hint": "State river geography is a key topic in SET (State Eligibility Test) Mock Test."
+      "answer": 1,
+      "hint": "Profit % = ((18553.5 - 13950) / 13950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
-      "question": "What is the official state animal or bird associated with SET (State Eligibility )?",
+      "id": 14,
+      "question": "Quantitative Problem #139: A shopkeeper buys an item at cost ₹14050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Official State Symbol",
-        "Bengal Tiger",
-        "Indian Elephant",
-        "Snow Leopard"
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 35%, Joint Work = 8.97 days",
+        "Profit = 33.5%, Joint Work = 8.17 days",
+        "Profit = 40%, Joint Work = 36 days"
       ],
-      "answer": 0,
-      "hint": "State symbols and wildlife emblems of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((18967.5 - 14050) / 14050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
-      "question": "Which historical monument or national park is a famous landmark in SET (State Eligibility )?",
+      "id": 15,
+      "question": "Quantitative Problem #140: A shopkeeper buys an item at cost ₹14150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Renowned Cultural Landmark",
-        "Red Fort",
-        "Ajanta Caves",
-        "Kaziranga Park"
+        "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -8%, Joint Work = 8.67 days",
+        "Profit = -5%, Joint Work = 38 days"
       ],
-      "answer": 0,
-      "hint": "Cultural heritage and protected parks of SET (State Eligibility )."
+      "answer": 1,
+      "hint": "Profit % = ((13230.250000000002 - 14150) / 14150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
+    },
+    {
+      "id": 16,
+      "question": "Quantitative Problem #141: A shopkeeper buys an item at cost ₹14250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 14%, Joint Work = 9.98 days",
+        "Profit = 12.5%, Joint Work = 9.18 days",
+        "Profit = 15%, Joint Work = 40 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16245 - 14250) / 14250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
+    },
+    {
+      "id": 17,
+      "question": "Quantitative Problem #142: A shopkeeper buys an item at cost ₹14350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 15.5%, Joint Work = 9.68 days",
+        "Profit = 20%, Joint Work = 42 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((16789.5 - 14350) / 14350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
+    },
+    {
+      "id": 18,
+      "question": "Quantitative Problem #143: A shopkeeper buys an item at cost ₹14450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 17.5%, Joint Work = 10.18 days",
+        "Profit = 25%, Joint Work = 44 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((17195.5 - 14450) / 14450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
+    },
+    {
+      "id": 19,
+      "question": "Quantitative Problem #144: A shopkeeper buys an item at cost ₹14550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 41%, Joint Work = 6.26 days",
+        "Profit = 45%, Joint Work = 34 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((20733.75 - 14550) / 14550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
+    },
+    {
+      "id": 20,
+      "question": "Quantitative Problem #145: A shopkeeper buys an item at cost ₹14650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = -2.5%, Joint Work = 6.84 days",
+        "Profit = 0%, Joint Work = 36 days"
+      ],
+      "answer": 1,
+      "hint": "Profit % = ((14503.500000000002 - 14650) / 14650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
     }
   ]
 }

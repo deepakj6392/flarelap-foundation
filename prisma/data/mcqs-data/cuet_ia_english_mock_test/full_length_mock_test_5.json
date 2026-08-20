@@ -1,232 +1,921 @@
 {
-  "name": "Cuet Ia English Mock Test - Full Length Mock Test 5",
-  "type": "Full Mock",
   "courseName": "Cuet Ia English Mock Test",
-  "qs": 100,
-  "marks": 100,
-  "duration": 90,
-  "isFree": true,
-  "categoryKey": "english",
+  "testName": "Full Length Mock Test 5",
+  "totalQuestions": 75,
+  "totalMarks": 300,
+  "duration": 60,
+  "subjects": [
+    {
+      "name": "Section IA: Language Aptitude",
+      "questions": 25,
+      "marks": 125
+    },
+    {
+      "name": "Section II: Domain Specific Subject",
+      "questions": 25,
+      "marks": 125
+    }
+  ],
   "questions": [
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 1,
+      "question": "Quantitative Problem #101: A shopkeeper buys an item at cost ₹10250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 4%, Joint Work = 10.51 days",
+        "Profit = 0.5%, Joint Work = 8.709999999999999 days",
+        "Profit = 2%, Joint Work = 9.51 days",
+        "Profit = 5%, Joint Work = 41 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((10455 - 10250) / 10250) * 100 = 2%. Combined Work = (15*26)/(15+26) = 9.51 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 2,
+      "question": "Quantitative Problem #102: A shopkeeper buys an item at cost ₹10350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 25.5%, Joint Work = 11.05 days",
+        "Profit = 22%, Joint Work = 9.25 days",
+        "Profit = 23.5%, Joint Work = 10.05 days",
+        "Profit = 25%, Joint Work = 43 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((12782.25 - 10350) / 10350) * 100 = 23.5%. Combined Work = (16*27)/(16+27) = 10.05 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 3,
+      "question": "Quantitative Problem #103: A shopkeeper buys an item at cost ₹10450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 28%, Joint Work = 11.58 days",
+        "Profit = 24.5%, Joint Work = 9.78 days",
+        "Profit = 26%, Joint Work = 10.58 days",
+        "Profit = 30%, Joint Work = 45 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((13166.999999999998 - 10450) / 10450) * 100 = 26%. Combined Work = (17*28)/(17+28) = 10.58 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 4,
+      "question": "Quantitative Problem #104: A shopkeeper buys an item at cost ₹10550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 29.5%, Joint Work = 12.11 days",
+        "Profit = 26%, Joint Work = 10.309999999999999 days",
+        "Profit = 27.5%, Joint Work = 11.11 days",
+        "Profit = 35%, Joint Work = 47 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((13451.25 - 10550) / 10550) * 100 = 27.5%. Combined Work = (18*29)/(18+29) = 11.11 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 5,
+      "question": "Quantitative Problem #105: A shopkeeper buys an item at cost ₹10650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 6.5%, Joint Work = 9.38 days",
+        "Profit = 3%, Joint Work = 7.580000000000001 days",
+        "Profit = 4.5%, Joint Work = 8.38 days",
+        "Profit = 5%, Joint Work = 34 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((11129.250000000002 - 10650) / 10650) * 100 = 4.5%. Combined Work = (19*15)/(19+15) = 8.38 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 6,
+      "question": "Quantitative Problem #106: A shopkeeper buys an item at cost ₹10750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 10%, Joint Work = 9.89 days",
+        "Profit = 6.5%, Joint Work = 8.09 days",
+        "Profit = 8%, Joint Work = 8.89 days",
+        "Profit = 10%, Joint Work = 36 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((11610 - 10750) / 10750) * 100 = 8%. Combined Work = (20*16)/(20+16) = 8.89 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 7,
+      "question": "Quantitative Problem #107: A shopkeeper buys an item at cost ₹10850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 12.5%, Joint Work = 10.39 days",
+        "Profit = 9%, Joint Work = 8.59 days",
+        "Profit = 10.5%, Joint Work = 9.39 days",
+        "Profit = 15%, Joint Work = 38 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((11989.25 - 10850) / 10850) * 100 = 10.5%. Combined Work = (21*17)/(21+17) = 9.39 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 8,
+      "question": "Quantitative Problem #108: A shopkeeper buys an item at cost ₹10950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 35%, Joint Work = 7.43 days",
+        "Profit = 31.5%, Joint Work = 5.63 days",
+        "Profit = 33%, Joint Work = 6.43 days",
+        "Profit = 35%, Joint Work = 28 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((14563.499999999998 - 10950) / 10950) * 100 = 33%. Combined Work = (10*18)/(10+18) = 6.43 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 9,
+      "question": "Quantitative Problem #109: A shopkeeper buys an item at cost ₹11050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 37%, Joint Work = 7.97 days",
+        "Profit = 33.5%, Joint Work = 6.17 days",
+        "Profit = 35%, Joint Work = 6.97 days",
+        "Profit = 40%, Joint Work = 30 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((14917.5 - 11050) / 11050) * 100 = 35%. Combined Work = (11*19)/(11+19) = 6.97 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 10,
+      "question": "Quantitative Problem #110: A shopkeeper buys an item at cost ₹11150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = -4.5%, Joint Work = 8.5 days",
+        "Profit = -8%, Joint Work = 6.7 days",
+        "Profit = -6.5%, Joint Work = 7.5 days",
+        "Profit = -5%, Joint Work = 32 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((10425.250000000002 - 11150) / 11150) * 100 = -6.5%. Combined Work = (12*20)/(12+20) = 7.5 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 11,
+      "question": "Quantitative Problem #111: A shopkeeper buys an item at cost ₹11250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 15%, Joint Work = 34 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((12825 - 11250) / 11250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 12,
+      "question": "Quantitative Problem #112: A shopkeeper buys an item at cost ₹11350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 15.5%, Joint Work = 7.760000000000001 days",
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 20%, Joint Work = 36 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((13279.5 - 11350) / 11350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 13,
+      "question": "Quantitative Problem #113: A shopkeeper buys an item at cost ₹11450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 17.5%, Joint Work = 8.28 days",
+        "Profit = 19%, Joint Work = 9.08 days",
+        "Profit = 25%, Joint Work = 38 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((13625.499999999998 - 11450) / 11450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 14,
+      "question": "Quantitative Problem #114: A shopkeeper buys an item at cost ₹11550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 41%, Joint Work = 8.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 45%, Joint Work = 40 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((16458.75 - 11550) / 11550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 15,
+      "question": "Quantitative Problem #115: A shopkeeper buys an item at cost ₹11650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -2.5%, Joint Work = 9.319999999999999 days",
+        "Profit = -1%, Joint Work = 10.12 days",
+        "Profit = 0%, Joint Work = 42 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((11533.500000000002 - 11650) / 11650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 16,
+      "question": "Quantitative Problem #116: A shopkeeper buys an item at cost ₹11750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 0.5%, Joint Work = 9.84 days",
+        "Profit = 2%, Joint Work = 10.64 days",
+        "Profit = 5%, Joint Work = 44 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((11985 - 11750) / 11750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
     },
     {
-      "question": "Under the Constitution of India, which Article guarantees the Right to Equality before Law?",
+      "id": 17,
+      "question": "Quantitative Problem #117: A shopkeeper buys an item at cost ₹11850, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 27 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Article 14",
-        "Article 19",
-        "Article 21",
-        "Article 32"
+        "Profit = 25.5%, Joint Work = 12.15 days",
+        "Profit = 22%, Joint Work = 10.35 days",
+        "Profit = 23.5%, Joint Work = 11.15 days",
+        "Profit = 25%, Joint Work = 46 days"
       ],
-      "answer": 0,
-      "hint": "Article 14 ensures equality before law and equal protection of laws."
+      "answer": 2,
+      "hint": "Profit % = ((14634.75 - 11850) / 11850) * 100 = 23.5%. Combined Work = (19*27)/(19+27) = 11.15 days."
     },
     {
-      "question": "Which Indian National Highway connects Kashmir in the north to Kanyakumari in the south?",
+      "id": 18,
+      "question": "Quantitative Problem #118: A shopkeeper buys an item at cost ₹11950, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 28 days. Find the net profit percentage and joint work days:",
       "options": [
-        "NH 44",
-        "NH 27",
-        "NH 48",
-        "NH 52"
+        "Profit = 28%, Joint Work = 12.67 days",
+        "Profit = 24.5%, Joint Work = 10.87 days",
+        "Profit = 26%, Joint Work = 11.67 days",
+        "Profit = 30%, Joint Work = 48 days"
       ],
-      "answer": 0,
-      "hint": "NH 44 is the longest national highway in India."
+      "answer": 2,
+      "hint": "Profit % = ((15057 - 11950) / 11950) * 100 = 26%. Combined Work = (20*28)/(20+28) = 11.67 days."
     },
     {
-      "question": "In Economics, what term describes a simultaneous occurrence of stagnant economic growth and high inflation?",
+      "id": 19,
+      "question": "Quantitative Problem #119: A shopkeeper buys an item at cost ₹12050, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 29 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Stagflation",
-        "Hyperinflation",
-        "Deflation",
-        "Recession"
+        "Profit = 29.5%, Joint Work = 13.18 days",
+        "Profit = 26%, Joint Work = 11.379999999999999 days",
+        "Profit = 27.5%, Joint Work = 12.18 days",
+        "Profit = 35%, Joint Work = 50 days"
       ],
-      "answer": 0,
-      "hint": "Stagflation is economic stagnation combined with inflation."
+      "answer": 2,
+      "hint": "Profit % = ((15363.75 - 12050) / 12050) * 100 = 27.5%. Combined Work = (21*29)/(21+29) = 12.18 days."
     },
     {
-      "question": "Which organ of the Indian Union Judiciary is empowered to issue Writs under Article 32?",
+      "id": 20,
+      "question": "Quantitative Problem #120: A shopkeeper buys an item at cost ₹12150, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 15 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Supreme Court of India",
-        "High Courts",
-        "District Courts",
-        "Subordinate Courts"
+        "Profit = 6.5%, Joint Work = 7 days",
+        "Profit = 3%, Joint Work = 5.2 days",
+        "Profit = 4.5%, Joint Work = 6 days",
+        "Profit = 5%, Joint Work = 25 days"
       ],
-      "answer": 0,
-      "hint": "Article 32 gives Supreme Court constitutional remedies and writ powers."
+      "answer": 2,
+      "hint": "Profit % = ((12696.750000000002 - 12150) / 12150) * 100 = 4.5%. Combined Work = (10*15)/(10+15) = 6 days."
+    },
+    {
+      "id": 21,
+      "question": "Quantitative Problem #121: A shopkeeper buys an item at cost ₹12250, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 7.52 days",
+        "Profit = 6.5%, Joint Work = 5.72 days",
+        "Profit = 8%, Joint Work = 6.52 days",
+        "Profit = 10%, Joint Work = 27 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13230 - 12250) / 12250) * 100 = 8%. Combined Work = (11*16)/(11+16) = 6.52 days."
+    },
+    {
+      "id": 22,
+      "question": "Quantitative Problem #122: A shopkeeper buys an item at cost ₹12350, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.030000000000001 days",
+        "Profit = 9%, Joint Work = 6.23 days",
+        "Profit = 10.5%, Joint Work = 7.03 days",
+        "Profit = 15%, Joint Work = 29 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13646.75 - 12350) / 12350) * 100 = 10.5%. Combined Work = (12*17)/(12+17) = 7.03 days."
+    },
+    {
+      "id": 23,
+      "question": "Quantitative Problem #123: A shopkeeper buys an item at cost ₹12450, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 8.55 days",
+        "Profit = 31.5%, Joint Work = 6.75 days",
+        "Profit = 33%, Joint Work = 7.55 days",
+        "Profit = 35%, Joint Work = 31 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16558.5 - 12450) / 12450) * 100 = 33%. Combined Work = (13*18)/(13+18) = 7.55 days."
+    },
+    {
+      "id": 24,
+      "question": "Quantitative Problem #124: A shopkeeper buys an item at cost ₹12550, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 19 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 37%, Joint Work = 9.06 days",
+        "Profit = 33.5%, Joint Work = 7.260000000000001 days",
+        "Profit = 35%, Joint Work = 8.06 days",
+        "Profit = 40%, Joint Work = 33 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16942.5 - 12550) / 12550) * 100 = 35%. Combined Work = (14*19)/(14+19) = 8.06 days."
+    },
+    {
+      "id": 25,
+      "question": "Quantitative Problem #125: A shopkeeper buys an item at cost ₹12650, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 20 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = -4.5%, Joint Work = 9.57 days",
+        "Profit = -8%, Joint Work = 7.7700000000000005 days",
+        "Profit = -6.5%, Joint Work = 8.57 days",
+        "Profit = -5%, Joint Work = 35 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((11827.750000000002 - 12650) / 12650) * 100 = -6.5%. Combined Work = (15*20)/(15+20) = 8.57 days."
+    },
+    {
+      "id": 26,
+      "question": "Quantitative Problem #126: A shopkeeper buys an item at cost ₹12750, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 21 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 16%, Joint Work = 10.08 days",
+        "Profit = 12.5%, Joint Work = 8.28 days",
+        "Profit = 14%, Joint Work = 9.08 days",
+        "Profit = 15%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14535 - 12750) / 12750) * 100 = 14%. Combined Work = (16*21)/(16+21) = 9.08 days."
+    },
+    {
+      "id": 27,
+      "question": "Quantitative Problem #127: A shopkeeper buys an item at cost ₹12850, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 22 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 19%, Joint Work = 10.59 days",
+        "Profit = 15.5%, Joint Work = 8.79 days",
+        "Profit = 17%, Joint Work = 9.59 days",
+        "Profit = 20%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((15034.5 - 12850) / 12850) * 100 = 17%. Combined Work = (17*22)/(17+22) = 9.59 days."
+    },
+    {
+      "id": 28,
+      "question": "Quantitative Problem #128: A shopkeeper buys an item at cost ₹12950, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 23 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 21%, Joint Work = 11.1 days",
+        "Profit = 17.5%, Joint Work = 9.299999999999999 days",
+        "Profit = 19%, Joint Work = 10.1 days",
+        "Profit = 25%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((15410.5 - 12950) / 12950) * 100 = 19%. Combined Work = (18*23)/(18+23) = 10.1 days."
+    },
+    {
+      "id": 29,
+      "question": "Quantitative Problem #129: A shopkeeper buys an item at cost ₹13050, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 24 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 44.5%, Joint Work = 11.6 days",
+        "Profit = 41%, Joint Work = 9.799999999999999 days",
+        "Profit = 42.5%, Joint Work = 10.6 days",
+        "Profit = 45%, Joint Work = 43 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((18596.25 - 13050) / 13050) * 100 = 42.5%. Combined Work = (19*24)/(19+24) = 10.6 days."
+    },
+    {
+      "id": 30,
+      "question": "Quantitative Problem #130: A shopkeeper buys an item at cost ₹13150, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 25 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 1%, Joint Work = 12.11 days",
+        "Profit = -2.5%, Joint Work = 10.309999999999999 days",
+        "Profit = -1%, Joint Work = 11.11 days",
+        "Profit = 0%, Joint Work = 45 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13018.500000000002 - 13150) / 13150) * 100 = -1%. Combined Work = (20*25)/(20+25) = 11.11 days."
+    },
+    {
+      "id": 31,
+      "question": "Quantitative Problem #131: A shopkeeper buys an item at cost ₹13250, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 26 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 4%, Joint Work = 12.62 days",
+        "Profit = 0.5%, Joint Work = 10.819999999999999 days",
+        "Profit = 2%, Joint Work = 11.62 days",
+        "Profit = 5%, Joint Work = 47 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((13515 - 13250) / 13250) * 100 = 2%. Combined Work = (21*26)/(21+26) = 11.62 days."
+    },
+    {
+      "id": 32,
+      "question": "Quantitative Problem #132: A shopkeeper buys an item at cost ₹13350, marks it 30% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 27 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 25.5%, Joint Work = 8.3 days",
+        "Profit = 22%, Joint Work = 6.5 days",
+        "Profit = 23.5%, Joint Work = 7.3 days",
+        "Profit = 25%, Joint Work = 37 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16487.25 - 13350) / 13350) * 100 = 23.5%. Combined Work = (10*27)/(10+27) = 7.3 days."
+    },
+    {
+      "id": 33,
+      "question": "Quantitative Problem #133: A shopkeeper buys an item at cost ₹13450, marks it 40% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 28 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 28%, Joint Work = 8.9 days",
+        "Profit = 24.5%, Joint Work = 7.1000000000000005 days",
+        "Profit = 26%, Joint Work = 7.9 days",
+        "Profit = 30%, Joint Work = 39 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((16947 - 13450) / 13450) * 100 = 26%. Combined Work = (11*28)/(11+28) = 7.9 days."
+    },
+    {
+      "id": 34,
+      "question": "Quantitative Problem #134: A shopkeeper buys an item at cost ₹13550, marks it 50% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 12 days and B in 29 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 29.5%, Joint Work = 9.49 days",
+        "Profit = 26%, Joint Work = 7.69 days",
+        "Profit = 27.5%, Joint Work = 8.49 days",
+        "Profit = 35%, Joint Work = 41 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((17276.25 - 13550) / 13550) * 100 = 27.5%. Combined Work = (12*29)/(12+29) = 8.49 days."
+    },
+    {
+      "id": 35,
+      "question": "Quantitative Problem #135: A shopkeeper buys an item at cost ₹13650, marks it 10% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 15 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 6.5%, Joint Work = 7.96 days",
+        "Profit = 3%, Joint Work = 6.16 days",
+        "Profit = 4.5%, Joint Work = 6.96 days",
+        "Profit = 5%, Joint Work = 28 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14264.250000000002 - 13650) / 13650) * 100 = 4.5%. Combined Work = (13*15)/(13+15) = 6.96 days."
+    },
+    {
+      "id": 36,
+      "question": "Quantitative Problem #136: A shopkeeper buys an item at cost ₹13750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 6.5%, Joint Work = 6.67 days",
+        "Profit = 8%, Joint Work = 7.47 days",
+        "Profit = 10%, Joint Work = 30 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((14850 - 13750) / 13750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
+    },
+    {
+      "id": 37,
+      "question": "Quantitative Problem #137: A shopkeeper buys an item at cost ₹13850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 9%, Joint Work = 7.17 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 15%, Joint Work = 32 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((15304.25 - 13850) / 13850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
+    },
+    {
+      "id": 38,
+      "question": "Quantitative Problem #138: A shopkeeper buys an item at cost ₹13950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
+      "options": [
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 31.5%, Joint Work = 7.670000000000001 days",
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 34 days"
+      ],
+      "answer": 2,
+      "hint": "Profit % = ((18553.5 - 13950) / 13950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
+    },
+    {
+      "id": 39,
+      "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 40,
+      "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 41,
+      "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 42,
+      "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 43,
+      "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 44,
+      "question": "English Idioms & Phrases #6: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 45,
+      "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 46,
+      "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
+      ],
+      "answer": 2,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 47,
+      "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Very rarely or seldom",
+        "Frequently"
+      ],
+      "answer": 2,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 48,
+      "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
+      ],
+      "answer": 2,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 49,
+      "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 50,
+      "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 51,
+      "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 52,
+      "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 53,
+      "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 54,
+      "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 55,
+      "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 56,
+      "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
+      ],
+      "answer": 2,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 57,
+      "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Very rarely or seldom",
+        "Frequently"
+      ],
+      "answer": 2,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 58,
+      "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
+      ],
+      "answer": 2,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 59,
+      "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 60,
+      "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 61,
+      "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 62,
+      "question": "English Idioms & Phrases #24: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 63,
+      "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 64,
+      "question": "English Idioms & Phrases #26: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 65,
+      "question": "English Idioms & Phrases #27: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
+    },
+    {
+      "id": 66,
+      "question": "English Idioms & Phrases #28: Choose the correct meaning of the idiom: 'Call it a day'",
+      "options": [
+        "To name a date",
+        "To celebrate a birthday",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
+      ],
+      "answer": 2,
+      "hint": "To decide to stop working."
+    },
+    {
+      "id": 67,
+      "question": "English Idioms & Phrases #29: Choose the correct meaning of the idiom: 'Once in a blue moon'",
+      "options": [
+        "Every month",
+        "During full moon",
+        "Very rarely or seldom",
+        "Frequently"
+      ],
+      "answer": 2,
+      "hint": "An event that happens very rarely."
+    },
+    {
+      "id": 68,
+      "question": "English Idioms & Phrases #30: Choose the correct meaning of the idiom: 'Through thick and thin'",
+      "options": [
+        "Only during good times",
+        "In heavy fog",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
+      ],
+      "answer": 2,
+      "hint": "Supporting someone through all difficulties."
+    },
+    {
+      "id": 69,
+      "question": "English Idioms & Phrases #31: Choose the correct meaning of the idiom: 'To spill the beans'",
+      "options": [
+        "To waste precious food",
+        "To make a big blunder",
+        "To disclose a confidential secret",
+        "To start a brawl"
+      ],
+      "answer": 2,
+      "hint": "'Spill the beans' means to reveal secret information."
+    },
+    {
+      "id": 70,
+      "question": "English Idioms & Phrases #32: Choose the correct meaning of the idiom: 'Bite the bullet'",
+      "options": [
+        "To get injured in a fight",
+        "To eat voraciously",
+        "To face a difficult situation with courage",
+        "To surrender unconditionally"
+      ],
+      "answer": 2,
+      "hint": "'Bite the bullet' means to endure a painful situation bravely."
+    },
+    {
+      "id": 71,
+      "question": "English Idioms & Phrases #33: Choose the correct meaning of the idiom: 'A blessing in disguise'",
+      "options": [
+        "A holy benediction",
+        "A magical gift",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
+      ],
+      "answer": 2,
+      "hint": "Something that seems bad at first but turns out good."
+    },
+    {
+      "id": 72,
+      "question": "English Idioms & Phrases #34: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
+      "options": [
+        "To waste electricity",
+        "To set fire to property",
+        "To work or study late into the night",
+        "To celebrate lavishly"
+      ],
+      "answer": 2,
+      "hint": "To study or work until late at night."
+    },
+    {
+      "id": 73,
+      "question": "English Idioms & Phrases #35: Choose the correct meaning of the idiom: 'Throw in the towel'",
+      "options": [
+        "To clean up a mess",
+        "To start a swimming match",
+        "To admit defeat and surrender",
+        "To ignore advice"
+      ],
+      "answer": 2,
+      "hint": "To give up or accept defeat."
+    },
+    {
+      "id": 74,
+      "question": "English Idioms & Phrases #36: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
+      "options": [
+        "To injure one's finger",
+        "To build a wooden structure",
+        "To state something with exact accuracy",
+        "To make a mistake"
+      ],
+      "answer": 2,
+      "hint": "To describe exactly what is causing a situation."
+    },
+    {
+      "id": 75,
+      "question": "English Idioms & Phrases #37: Choose the correct meaning of the idiom: 'Beat around the bush'",
+      "options": [
+        "To cut wild bushes",
+        "To hunt animals",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
+      ],
+      "answer": 2,
+      "hint": "To speak evasively without coming to the point."
     }
   ]
 }

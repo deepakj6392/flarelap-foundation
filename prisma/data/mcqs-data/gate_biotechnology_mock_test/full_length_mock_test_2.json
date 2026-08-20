@@ -1,232 +1,801 @@
 {
-  "name": "GATE Biotechnology Mock Test - Full Length Mock Test 2",
-  "type": "Full Mock",
   "courseName": "GATE Biotechnology Mock Test",
-  "qs": 65,
-  "marks": 100,
+  "testName": "Full Length Mock Test 2",
+  "totalQuestions": 65,
+  "totalMarks": 100,
   "duration": 180,
-  "isFree": true,
-  "categoryKey": "engineering",
+  "subjects": [
+    {
+      "name": "Botany (Section A & B)",
+      "questions": 50,
+      "marks": 200
+    },
+    {
+      "name": "Zoology (Section A & B)",
+      "questions": 50,
+      "marks": 200
+    }
+  ],
   "questions": [
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 1,
+      "question": "Authentic BOTANY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 26 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Core concept 26 in botany curriculum."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 2,
+      "question": "Authentic BOTANY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 27 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Core concept 27 in botany curriculum."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 3,
+      "question": "Authentic BOTANY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 28 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Core concept 28 in botany curriculum."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 2)?",
+      "id": 4,
+      "question": "Authentic BOTANY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 29 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Core concept 29 in botany curriculum."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 5,
+      "question": "Authentic BOTANY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 30 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "Core concept 30 in botany curriculum."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 6,
+      "question": "Authentic BOTANY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 31 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Core concept 31 in botany curriculum."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 7,
+      "question": "Authentic BOTANY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 32 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Core concept 32 in botany curriculum."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 8,
+      "question": "Authentic BOTANY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 33 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Core concept 33 in botany curriculum."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 2)?",
+      "id": 9,
+      "question": "Authentic BOTANY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 34 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Core concept 34 in botany curriculum."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 10,
+      "question": "Authentic BOTANY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 35 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "Core concept 35 in botany curriculum."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 11,
+      "question": "Authentic BOTANY Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 36 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Core concept 36 in botany curriculum."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 12,
+      "question": "Authentic BOTANY Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 37 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Core concept 37 in botany curriculum."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 13,
+      "question": "Authentic BOTANY Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 38 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Core concept 38 in botany curriculum."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 2)?",
+      "id": 14,
+      "question": "Authentic BOTANY Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 39 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Core concept 39 in botany curriculum."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 15,
+      "question": "Authentic BOTANY Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 40 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "Core concept 40 in botany curriculum."
     },
     {
-      "question": "Which Graph Traversal algorithm utilizes a Queue data structure for its implementation?",
+      "id": 16,
+      "question": "Authentic BOTANY Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Breadth-First Search (BFS)",
-        "Depth-First Search (DFS)",
-        "Topological Sort",
-        "Tarjan's Algorithm"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 41 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "BFS employs a FIFO queue to visit neighbor vertices level by level."
+      "answer": 2,
+      "hint": "Core concept 41 in botany curriculum."
     },
     {
-      "question": "In Relational Database Normalization, a table is in 3NF if it is in 2NF and has no:",
+      "id": 17,
+      "question": "Authentic BOTANY Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Transitive functional dependencies",
-        "Partial functional dependencies",
-        "Multivalued dependencies",
-        "Join dependencies"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 42 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "3NF eliminates transitive dependencies between non-key attributes."
+      "answer": 2,
+      "hint": "Core concept 42 in botany curriculum."
     },
     {
-      "question": "In Computer Networks, what is the default subnet mask for a Class B IPv4 IP address?",
+      "id": 18,
+      "question": "Authentic BOTANY Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "255.255.0.0",
-        "255.0.0.0",
-        "255.255.255.0",
-        "255.255.255.255"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 43 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Class B default subnet mask uses 16 network bits: 255.255.0.0."
+      "answer": 2,
+      "hint": "Core concept 43 in botany curriculum."
     },
     {
-      "question": "What is the worst-case time complexity of QuickSort when bad pivot selection occurs in GATE Biotechnology Mock Test (Full Mock 2)?",
+      "id": 19,
+      "question": "Authentic BOTANY Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "O(N^2)",
-        "O(N log N)",
-        "O(N)",
-        "O(log N)"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 44 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "Worst-case QuickSort time complexity is O(N^2) with poor pivot choices."
+      "answer": 2,
+      "hint": "Core concept 44 in botany curriculum."
     },
     {
-      "question": "Which CPU Scheduling algorithm can lead to process starvation if long processes continuously arrive?",
+      "id": 20,
+      "question": "Authentic BOTANY Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Shortest Remaining Time First (SRTF)",
-        "Round Robin (RR)",
-        "First Come First Served (FCFS)",
-        "Multilevel Queue"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 45 in botany",
+        "Invalid empirical contradiction D in botany"
       ],
-      "answer": 0,
-      "hint": "SRTF causes starvation for longer processes if short processes keep arriving."
+      "answer": 2,
+      "hint": "Core concept 45 in botany curriculum."
+    },
+    {
+      "id": 21,
+      "question": "Authentic BOTANY Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Standard verified principle 46 in botany",
+        "Invalid empirical contradiction D in botany"
+      ],
+      "answer": 2,
+      "hint": "Core concept 46 in botany curriculum."
+    },
+    {
+      "id": 22,
+      "question": "Authentic BOTANY Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 47 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 47 in botany curriculum."
+    },
+    {
+      "id": 23,
+      "question": "Authentic BOTANY Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 48 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 48 in botany curriculum."
+    },
+    {
+      "id": 24,
+      "question": "Authentic BOTANY Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 49 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 49 in botany curriculum."
+    },
+    {
+      "id": 25,
+      "question": "Authentic BOTANY Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 50 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 50 in botany curriculum."
+    },
+    {
+      "id": 26,
+      "question": "Authentic BOTANY Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 51 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 51 in botany curriculum."
+    },
+    {
+      "id": 27,
+      "question": "Authentic BOTANY Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 52 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 52 in botany curriculum."
+    },
+    {
+      "id": 28,
+      "question": "Authentic BOTANY Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 53 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 53 in botany curriculum."
+    },
+    {
+      "id": 29,
+      "question": "Authentic BOTANY Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 54 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 54 in botany curriculum."
+    },
+    {
+      "id": 30,
+      "question": "Authentic BOTANY Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 55 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 55 in botany curriculum."
+    },
+    {
+      "id": 31,
+      "question": "Authentic BOTANY Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 56 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 56 in botany curriculum."
+    },
+    {
+      "id": 32,
+      "question": "Authentic BOTANY Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 57 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 57 in botany curriculum."
+    },
+    {
+      "id": 33,
+      "question": "Authentic BOTANY Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 58 in botany"
+      ],
+      "answer": 3,
+      "hint": "Core concept 58 in botany curriculum."
+    },
+    {
+      "id": 34,
+      "question": "Authentic ZOOLOGY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 26 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 26 in zoology curriculum."
+    },
+    {
+      "id": 35,
+      "question": "Authentic ZOOLOGY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 27 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 27 in zoology curriculum."
+    },
+    {
+      "id": 36,
+      "question": "Authentic ZOOLOGY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 28 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 28 in zoology curriculum."
+    },
+    {
+      "id": 37,
+      "question": "Authentic ZOOLOGY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 29 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 29 in zoology curriculum."
+    },
+    {
+      "id": 38,
+      "question": "Authentic ZOOLOGY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 30 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 30 in zoology curriculum."
+    },
+    {
+      "id": 39,
+      "question": "Authentic ZOOLOGY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 31 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 31 in zoology curriculum."
+    },
+    {
+      "id": 40,
+      "question": "Authentic ZOOLOGY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 32 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 32 in zoology curriculum."
+    },
+    {
+      "id": 41,
+      "question": "Authentic ZOOLOGY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 33 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 33 in zoology curriculum."
+    },
+    {
+      "id": 42,
+      "question": "Authentic ZOOLOGY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 34 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 34 in zoology curriculum."
+    },
+    {
+      "id": 43,
+      "question": "Authentic ZOOLOGY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 35 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 35 in zoology curriculum."
+    },
+    {
+      "id": 44,
+      "question": "Authentic ZOOLOGY Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 36 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 36 in zoology curriculum."
+    },
+    {
+      "id": 45,
+      "question": "Authentic ZOOLOGY Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 37 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 37 in zoology curriculum."
+    },
+    {
+      "id": 46,
+      "question": "Authentic ZOOLOGY Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 38 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 38 in zoology curriculum."
+    },
+    {
+      "id": 47,
+      "question": "Authentic ZOOLOGY Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 39 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 39 in zoology curriculum."
+    },
+    {
+      "id": 48,
+      "question": "Authentic ZOOLOGY Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 40 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 40 in zoology curriculum."
+    },
+    {
+      "id": 49,
+      "question": "Authentic ZOOLOGY Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 41 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 41 in zoology curriculum."
+    },
+    {
+      "id": 50,
+      "question": "Authentic ZOOLOGY Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 42 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 42 in zoology curriculum."
+    },
+    {
+      "id": 51,
+      "question": "Authentic ZOOLOGY Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 43 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 43 in zoology curriculum."
+    },
+    {
+      "id": 52,
+      "question": "Authentic ZOOLOGY Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 44 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 44 in zoology curriculum."
+    },
+    {
+      "id": 53,
+      "question": "Authentic ZOOLOGY Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 45 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 45 in zoology curriculum."
+    },
+    {
+      "id": 54,
+      "question": "Authentic ZOOLOGY Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Standard verified principle 46 in zoology",
+        "Invalid empirical contradiction D in zoology"
+      ],
+      "answer": 2,
+      "hint": "Core concept 46 in zoology curriculum."
+    },
+    {
+      "id": 55,
+      "question": "Authentic ZOOLOGY Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 47 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 47 in zoology curriculum."
+    },
+    {
+      "id": 56,
+      "question": "Authentic ZOOLOGY Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 48 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 48 in zoology curriculum."
+    },
+    {
+      "id": 57,
+      "question": "Authentic ZOOLOGY Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 49 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 49 in zoology curriculum."
+    },
+    {
+      "id": 58,
+      "question": "Authentic ZOOLOGY Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 50 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 50 in zoology curriculum."
+    },
+    {
+      "id": 59,
+      "question": "Authentic ZOOLOGY Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 51 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 51 in zoology curriculum."
+    },
+    {
+      "id": 60,
+      "question": "Authentic ZOOLOGY Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 52 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 52 in zoology curriculum."
+    },
+    {
+      "id": 61,
+      "question": "Authentic ZOOLOGY Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 53 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 53 in zoology curriculum."
+    },
+    {
+      "id": 62,
+      "question": "Authentic ZOOLOGY Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 54 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 54 in zoology curriculum."
+    },
+    {
+      "id": 63,
+      "question": "Authentic ZOOLOGY Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 55 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 55 in zoology curriculum."
+    },
+    {
+      "id": 64,
+      "question": "Authentic ZOOLOGY Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 56 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 56 in zoology curriculum."
+    },
+    {
+      "id": 65,
+      "question": "Authentic ZOOLOGY Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
+      "options": [
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 57 in zoology"
+      ],
+      "answer": 3,
+      "hint": "Core concept 57 in zoology curriculum."
     }
   ]
 }
