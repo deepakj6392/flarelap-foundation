@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Swal from "sweetalert2";
 import { 
   HelpCircle, 
@@ -482,13 +483,13 @@ export default function MCQsAdminPage() {
         </div>
         
         <div className="flex flex-wrap items-center gap-3">
-          <button
-            onClick={() => setIsUploadModalOpen(true)}
+          <Link
+            href="/admin/education/import-mcq"
             className="flex items-center justify-center gap-2 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-950 hover:bg-slate-50 dark:hover:bg-slate-900/60 active:scale-[0.98] transition-all px-4 py-2.5 text-xs font-bold text-slate-700 dark:text-slate-350 cursor-pointer shadow-xs"
           >
             <FileSpreadsheet className="h-4 w-4 text-emerald-600" />
-            Upload CSV Sheet
-          </button>
+            Import Excel / CSV Questions
+          </Link>
 
           <button
             onClick={openAddModal}

@@ -63,7 +63,8 @@ export async function POST(request: Request) {
 
     // Bulk insert using Prisma's createMany
     const createdCount = await prisma.mCQQuestion.createMany({
-      data: dataToInsert
+      data: dataToInsert,
+      skipDuplicates: true
     });
 
     return NextResponse.json({

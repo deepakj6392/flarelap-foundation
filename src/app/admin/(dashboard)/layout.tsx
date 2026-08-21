@@ -26,7 +26,8 @@ import {
   HeartHandshake,
   History,
   Briefcase,
-  CreditCard
+  CreditCard,
+  FileSpreadsheet
 } from "lucide-react";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -132,6 +133,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         return "Newsletter Subscribers";
       case "/admin/education/mcqs":
         return "MCQ Questions";
+      case "/admin/education/import-mcq":
+        return "Import MCQ Questions (Excel)";
       case "/admin/education/study-material":
         return "Study Materials";
       case "/admin/education/courses":
@@ -282,6 +285,17 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   >
                     <FileText className="h-3.5 w-3.5" />
                     MCQ Question
+                  </Link>
+                  <Link
+                    href="/admin/education/import-mcq"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
+                      pathname === "/admin/education/import-mcq"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                    }`}
+                  >
+                    <FileSpreadsheet className="h-3.5 w-3.5 text-emerald-500" />
+                    Import Question MCQ
                   </Link>
                   <Link
                     href="/admin/education/study-material"
