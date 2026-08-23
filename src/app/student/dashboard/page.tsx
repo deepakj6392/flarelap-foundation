@@ -107,16 +107,16 @@ export default function StudentDashboardPage() {
   };
 
   const mergedTimeline = [
-    ...dbLogs.map(log => ({
-      id: log.id,
+    ...dbLogs.map((log) => ({
+      id: `db-${log.id}`,
       type: log.action.toLowerCase() as "login" | "logout",
       title: log.action === "LOGIN" 
         ? "Successfully logged in to Scholar Console" 
         : "Logged out / ended active session",
       timestamp: log.timestamp
     })),
-    ...activities.map(act => ({
-      id: act.id,
+    ...activities.map((act) => ({
+      id: `act-${act.id}`,
       type: act.type,
       title: act.title,
       timestamp: act.timestamp
@@ -386,8 +386,8 @@ export default function StudentDashboardPage() {
               ) : mergedTimeline.length === 0 ? (
                 <p className="text-xs text-slate-550 font-semibold pl-2">No activity logs recorded yet.</p>
               ) : (
-                mergedTimeline.map((act) => (
-                  <div key={act.id} className="relative group">
+                mergedTimeline.map((act, idx) => (
+                  <div key={`timeline-${act.id}-${idx}`} className="relative group">
                     {/* Timeline dot */}
                     <div className={`absolute -left-[20.5px] top-1.5 h-3 w-3 rounded-full border-2 border-white dark:border-slate-950 group-hover:scale-110 transition-all ${
                       act.type === "login" 

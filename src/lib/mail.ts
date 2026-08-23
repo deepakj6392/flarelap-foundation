@@ -94,7 +94,7 @@ export async function sendOtpEmail(to: string, otp: string): Promise<boolean> {
             <h1>FLARELAP GLOBAL FOUNDATION</h1>
           </div>
           <div class="content">
-            <p>Hello Super Admin,</p>
+            <p>Hello Administrator,</p>
             <p>We received a request to reset your password for the Flarelap Foundation Admin Dashboard. Please use the verification code below to proceed with changing your password:</p>
             
             <div class="otp-container">
@@ -122,6 +122,134 @@ export async function sendOtpEmail(to: string, otp: string): Promise<boolean> {
     return true;
   } catch (error) {
     console.error("Failed to send verification email:", error);
+    return false;
+  }
+}
+
+export async function sendStudentOtpEmail(to: string, otp: string, studentName?: string | null): Promise<boolean> {
+  let displayName = "Student";
+  if (studentName && !studentName.startsWith("Student_")) {
+    displayName = studentName;
+  }
+
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flarelap Student Verification Code</title>
+        <style>
+          body {
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 0;
+            color: #334155;
+          }
+          .container {
+            max-width: 580px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03), 0 1px 2px rgba(15, 23, 42, 0.05);
+            border: 1px solid #e2e8f0;
+          }
+          .header {
+            background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+            padding: 32px 24px;
+            text-align: center;
+          }
+          .header h1 {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 0.5px;
+          }
+          .header p {
+            color: #a7f3d0;
+            font-size: 11px;
+            font-weight: 700;
+            margin: 6px 0 0 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+          }
+          .content {
+            padding: 40px 32px;
+          }
+          .content p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 0;
+            margin-bottom: 24px;
+          }
+          .otp-container {
+            background-color: #f0fdf4;
+            border: 1.5px dashed #a7f3d0;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 28px;
+          }
+          .otp-code {
+            font-size: 32px;
+            font-weight: 900;
+            color: #047857;
+            letter-spacing: 6px;
+            margin: 0;
+          }
+          .footer {
+            background-color: #f8fafc;
+            padding: 24px 32px;
+            border-top: 1px solid #f1f5f9;
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            line-height: 1.5;
+          }
+          .warning {
+            color: #e11d48;
+            font-weight: 600;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>FLARELAP GLOBAL FOUNDATION</h1>
+            <p>Student Learning Portal Verification</p>
+          </div>
+          <div class="content">
+            <p>Hello ${displayName},</p>
+            <p>We received a request to log in to your Flarelap Student Account. Please use the verification code (OTP) below to proceed:</p>
+            
+            <div class="otp-container">
+              <div class="otp-code">${otp}</div>
+            </div>
+            
+            <p>This verification code is valid for <strong>10 minutes</strong>. If you did not request this OTP code, please <span class="warning">ignore this email</span> and your account will remain secure.</p>
+          </div>
+          <div class="footer">
+            © ${new Date().getFullYear()} Flarelap Global Foundation. All rights reserved.<br>
+            This is an automated system email. Please do not reply directly to this message.
+          </div>
+        </div>
+      </body>
+    </html>
+  `;
+
+  try {
+    await transporter.sendMail({
+      from: '"Flarelap Global Foundation" <flarelap.org@gmail.com>',
+      to,
+      subject: `[OTP: ${otp}] Flarelap Student Verification Code`,
+      html: htmlContent,
+    });
+    return true;
+  } catch (error) {
+    console.error("Failed to send student verification email:", error);
     return false;
   }
 }

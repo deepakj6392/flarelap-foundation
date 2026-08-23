@@ -1076,6 +1076,13 @@ export default function AdminVolunteersPage() {
     const storedToken = localStorage.getItem("admin_token");
     if (!storedToken) return;
 
+    const formattedMessage = /<[a-z][\s\S]*>/i.test(mailBody)
+      ? mailBody
+      : mailBody
+          .split(/\n\n+/)
+          .map((para) => `<p style="font-size:14.5px; line-height:1.75; margin-bottom:16px;">${para.replace(/\n/g, "<br/>")}</p>`)
+          .join("\n");
+
     setSendingMail(true);
     try {
       const res = await fetch("/api/admin/volunteers/send-mail", {
@@ -1087,7 +1094,7 @@ export default function AdminVolunteersPage() {
         body: JSON.stringify({
           volunteerIds: selectedVolunteerIds,
           subject: mailSubject,
-          message: mailBody
+          message: formattedMessage
         })
       });
 
@@ -1327,7 +1334,7 @@ export default function AdminVolunteersPage() {
                 setMailSubject("Important Volunteer Notification - Flarelap Global Foundation");
               }
               if (!mailBody) {
-                setMailBody("<p>Dear Volunteer,</p>\n<p>Greetings from Flarelap Global Foundation!</p>\n<p>We are pleased to share an important update regarding our upcoming community initiatives and volunteer programs.</p>\n<br/>\n<p>Warm regards,<br/><b>Flarelap Global Foundation Team</b></p>");
+                setMailBody("Dear Volunteer,\n\nGreetings from Flarelap Global Foundation!\n\nWe are pleased to share an important update regarding our upcoming community initiatives and volunteer programs.\n\nWarm regards,\nFlarelap Global Foundation Team");
               }
               setIsMailModalOpen(true);
             }}
@@ -2963,7 +2970,7 @@ export default function AdminVolunteersPage() {
               <div>
                 <div className="flex items-center justify-between mb-1">
                   <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
-                    Message Content (Rich HTML Editor) *
+                    Message Content *
                   </label>
                   <span className="text-[10px] text-slate-400">Click buttons to format text</span>
                 </div>
@@ -3034,8 +3041,8 @@ export default function AdminVolunteersPage() {
                     rows={8}
                     value={mailBody}
                     onChange={(e) => setMailBody(e.target.value)}
-                    placeholder="Type email body message here... You can use HTML formatting tags."
-                    className="w-full p-3.5 text-xs font-mono text-slate-900 dark:text-white bg-transparent outline-none resize-y"
+                    placeholder="Type email body message here..."
+                    className="w-full p-3.5 text-xs font-sans text-slate-900 dark:text-white bg-transparent outline-none resize-y leading-relaxed"
                   />
                 </div>
               </div>

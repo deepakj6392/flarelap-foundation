@@ -27,6 +27,8 @@ interface StudentRecord {
   name: string;
   email: string;
   phone: string | null;
+  dob?: string | null;
+  address?: string | null;
   student_id: string | null;
   temp_password: string | null;
   created_at: string;
@@ -531,6 +533,14 @@ export default function StudentsAdminPage() {
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-455 dark:text-slate-500 font-bold">Phone Number:</span>
                 <span className="font-extrabold text-slate-900 dark:text-white select-all">{selectedStudent.phone || "-"}</span>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-455 dark:text-slate-500 font-bold">Date of Birth (DOB):</span>
+                <span className="font-extrabold text-slate-900 dark:text-white">{selectedStudent.dob || "-"}</span>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-455 dark:text-slate-500 font-bold">Address:</span>
+                <span className="font-extrabold text-slate-900 dark:text-white text-right max-w-[200px] truncate">{selectedStudent.address || "-"}</span>
               </div>
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-455 dark:text-slate-500 font-bold">Student ID / User ID:</span>

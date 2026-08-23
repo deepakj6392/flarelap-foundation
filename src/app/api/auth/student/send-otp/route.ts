@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { sendOtpEmail } from "@/lib/mail";
+import { sendStudentOtpEmail } from "@/lib/mail";
 import bcrypt from "bcryptjs";
 
 function getStudentIdPrefix(name: string): string {
@@ -38,20 +38,8 @@ export async function POST(request: Request) {
       }
     });
 
-    // If student doesn't exist, auto-create account (like testbook.com's frictionless flow)
+    // If student doesn't exist, auto-create account (frictionless flow)
     if (!user) {
-      const defaultCourse = await prisma.course.findFirst({
-        where: { active: true },
-        orderBy: { id: "asc" }
-      });
-
-      if (!defaultCourse) {
-        return NextResponse.json(
-          { success: false, message: "No active courses available to enroll." },
-          { status: 500 }
-        );
-      }
-
       const tempName = isEmail 
         ? `Student_${cleanLoginId.split("@")[0]}`
         : `Student_${cleanLoginId.slice(-4)}`;
@@ -82,7 +70,7 @@ export async function POST(request: Request) {
           password: placeholderPass,
           role: "student",
           studentId,
-          courseId: defaultCourse.id
+          courseId: null
         }
       });
     }
@@ -102,7 +90,7 @@ export async function POST(request: Request) {
 
     // Send email if it is an email login
     if (isEmail && user.email && !user.email.endsWith("@flarelap-student.org")) {
-      const emailSent = await sendOtpEmail(user.email, otpCode);
+      const emailSent = await sendStudentOtpEmail(user.email, otpCode, user.name);
       if (!emailSent) {
         console.warn(`Failed to dispatch OTP email to ${user.email}`);
       }

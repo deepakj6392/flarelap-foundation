@@ -20,6 +20,8 @@ model User {
   tfaExpiresAt DateTime?    @map("tfa_expires_at")
   studentId    String?      @unique @map("student_id")
   phone        String?
+  dob          String?
+  address      String?      @db.Text
   tempPassword String?      @map("temp_password")
   courseId     Int?         @map("course_id")
   course       Course?      @relation(fields: [courseId], references: [id])

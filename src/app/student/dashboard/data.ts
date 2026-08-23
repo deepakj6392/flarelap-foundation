@@ -2,6 +2,9 @@ export interface StudentProfile {
   id: number;
   name: string;
   email: string;
+  phone?: string | null;
+  dob?: string | null;
+  address?: string | null;
   student_id: string;
   created_at: string;
   course_name?: string;

@@ -65,6 +65,14 @@ export async function initDb() {
       ALTER TABLE users ADD COLUMN IF NOT EXISTS phone VARCHAR(50);
     `);
 
+    // Ensure dob and address columns exist for student profile details
+    await client.query(`
+      ALTER TABLE users ADD COLUMN IF NOT EXISTS dob VARCHAR(50);
+    `);
+    await client.query(`
+      ALTER TABLE users ADD COLUMN IF NOT EXISTS address TEXT;
+    `);
+
     // Ensure temp_password column exists for student administration
     await client.query(`
       ALTER TABLE users ADD COLUMN IF NOT EXISTS temp_password VARCHAR(255);
