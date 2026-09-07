@@ -9,6 +9,9 @@ export async function GET() {
       include: {
         testSeries: {
           select: { id: true, isFree: true }
+        },
+        category: {
+          select: { id: true, name: true }
         }
       }
     });
