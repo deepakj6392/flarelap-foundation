@@ -71,99 +71,6 @@ const initiatives = [
   },
 ];
 
-const examCategories: ExamCategory[] = [
-  {
-    id: "bank-insurance",
-    label: "Bank & Insurance",
-    exams: [
-      { name: "SBI PO Mock Test", tests: "15 Mock Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "SBI Clerk Mock Test", tests: "12 Mock Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "IBPS RRB Clerk Practice", tests: "20 Practice Tests", details: "80 Qs • 45 Mins", badge: "Premium" },
-      { name: "IBPS RRB PO Practice", tests: "18 Practice Tests", details: "80 Qs • 45 Mins", badge: "Premium" },
-      { name: "IBPS PO Full Mock", tests: "15 Full Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "IBPS Clerk Full Mock", tests: "12 Full Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "RBI Assistant Series", tests: "10 Practice Tests", details: "100 Qs • 60 Mins", badge: "Premium" },
-      { name: "LIC AAO Mock Exam", tests: "8 Full Length Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-    ]
-  },
-  {
-    id: "ssc-exams",
-    label: "SSC Exams",
-    exams: [
-      { name: "SSC CGL (Tier I) Mock", tests: "25 Full Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "SSC CGL (Tier II) Practice", tests: "12 Subject Tests", details: "150 Qs • 120 Mins", badge: "Premium" },
-      { name: "SSC CHSL Speed Series", tests: "20 Mock Tests", details: "100 Qs • 60 Mins", badge: "Free" },
-      { name: "SSC MTS Practice Mock", tests: "15 Practice Sets", details: "90 Qs • 90 Mins", badge: "Free" },
-      { name: "SSC GD Constable Exam", tests: "18 Full Tests", details: "80 Qs • 60 Mins", badge: "Premium" },
-      { name: "SSC CPO General Mock", tests: "10 Full Tests", details: "200 Qs • 120 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "railways-exams",
-    label: "Railways Exams",
-    exams: [
-      { name: "RRB NTPC CBT 1 Mock", tests: "20 Mock Tests", details: "100 Qs • 90 Mins", badge: "Free" },
-      { name: "RRB NTPC CBT 2 Test", tests: "15 Full Tests", details: "120 Qs • 90 Mins", badge: "Premium" },
-      { name: "RRB Group D Practice", tests: "25 Practice Sets", details: "100 Qs • 90 Mins", badge: "Free" },
-      { name: "RRB ALP & Tech Mock", tests: "12 Skill Tests", details: "75 Qs • 60 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "civil-services",
-    label: "Civil Services",
-    exams: [
-      { name: "UPSC Prelims CSAT Series", tests: "10 Mock Tests", details: "80 Qs • 120 Mins", badge: "Premium" },
-      { name: "UPSC Prelims GS 1 Mock", tests: "15 Mock Tests", details: "100 Qs • 120 Mins", badge: "Free" },
-      { name: "State PCS GS Practice", tests: "12 Full Tests", details: "150 Qs • 120 Mins", badge: "Free" },
-      { name: "NDA/CDS Entrance Mock", tests: "8 Practice Tests", details: "120 Qs • 150 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "teaching-exams",
-    label: "Teaching Exams",
-    exams: [
-      { name: "CTET Paper 1 Practice", tests: "12 Full Tests", details: "150 Qs • 150 Mins", badge: "Free" },
-      { name: "CTET Paper 2 Practice", tests: "12 Full Tests", details: "150 Qs • 150 Mins", badge: "Free" },
-      { name: "UPTET Complete Series", tests: "10 Mock Tests", details: "150 Qs • 150 Mins", badge: "Premium" },
-      { name: "KVS Teacher Speed Test", tests: "8 Practice Tests", details: "180 Qs • 180 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "engineering-exams",
-    label: "Engineering & IT",
-    exams: [
-      { name: "GATE CS & IT Full Mock", tests: "15 Full Length Tests", details: "65 Qs • 180 Mins", badge: "Premium" },
-      { name: "GATE Civil Subject Test", tests: "10 Subject Tests", details: "65 Qs • 180 Mins", badge: "Free" },
-      { name: "GATE Mechanical Mock", tests: "10 Full Tests", details: "65 Qs • 180 Mins", badge: "Free" },
-      { name: "RRB JE IT Technical CBT", tests: "12 Practice Sets", details: "150 Qs • 120 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "jee-exams",
-    label: "Engineering (JEE Main/Adv)",
-    exams: [
-      { name: "JEE Physics Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Free" },
-      { name: "JEE Chemistry Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Free" },
-      { name: "JEE Mathematics Practice Prep", tests: "25 Full Length Tests", details: "90 Qs • 180 Mins", badge: "Premium" },
-      { name: "JEE Main Integrated Mock", tests: "15 Integrated Tests", details: "90 Qs • 180 Mins", badge: "Premium" }
-    ]
-  },
-  {
-    id: "medical-exams",
-    label: "Medical (NEET)",
-    exams: [
-      { name: "NEET UG Full Mock Test", tests: "10 Full Mock Tests", details: "180 Qs • 200 Mins", badge: "Free" },
-      { name: "NEET Biology Advanced Prep", tests: "15 Full Tests", details: "90 Qs • 100 Mins", badge: "Free" },
-      { name: "NEET Physics Advanced Prep", tests: "15 Full Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
-      { name: "NEET Chemistry Advanced Prep", tests: "15 Full Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
-      { name: "NEET Biology Speed Mock", tests: "20 Practice Sets", details: "90 Qs • 95 Mins", badge: "Free" },
-      { name: "NEET Physics Chapter Test", tests: "15 Subject Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
-      { name: "NEET Chemistry Topic Test", tests: "15 Subject Tests", details: "45 Qs • 50 Mins", badge: "Premium" },
-      { name: "NEET Previous Year Papers", tests: "8 Full Length Papers", details: "180 Qs • 200 Mins", badge: "Premium" }
-    ]
-  }
-];
-
 const stats = [
   { value: "4,500+", label: "Students Empowered", desc: "Accessing quality learning support" },
   { value: "18", label: "Learning Hubs Active", desc: "Located directly within needy sectors" },
@@ -783,44 +690,7 @@ export default function EducationPage() {
           const data = await res.json();
           fetchedCourses = data.courses || [];
         }
-
-        const staticGovAndNraCourses = [
-          { id: 9001, name: "NRA CET 12th Level Mock Test", premium: true },
-          { id: 9002, name: "NRA CET Graduates Mock Test", premium: true },
-          { id: 9003, name: "AIIMS CRE LDC/UDC/Steno/DEO/JAA/SA Mock Test", premium: true },
-          { id: 9004, name: "NBE Junior Assistant 2024 Mock Tests Series", premium: true },
-          { id: 9005, name: "ISRO Assistant Mock Test 2022", premium: true },
-          { id: 9006, name: "ISRO Junior Personal Assistant Mock Test 2022", premium: true },
-          { id: 9007, name: "CCRAS UDC/LDC/Steno/Assistant Mock Test", premium: true },
-          { id: 9008, name: "NBE Junior Assistant Mock Test", premium: true },
-          { id: 9009, name: "CWC (Central Warehousing Corporation) Superintendent Mock Test", premium: true },
-          { id: 9010, name: "FCI Manager Phase I & II Mock Test 2022", premium: true },
-          { id: 9011, name: "FCI Stenographer Mock Test 2022", premium: true },
-          { id: 9012, name: "CSIR Junior Secretariat Assistant (JSA) 2025 Mock Test", premium: true },
-          { id: 9013, name: "CSIR ASO/SO Mock Test 2023", premium: true },
-          { id: 9014, name: "UPSC EPFO Personal Assistant Mock Test", premium: true },
-          { id: 9015, name: "CSIR Junior Stenographer 2025 Mock Test", premium: true },
-          { id: 9016, name: "AAI Junior Executive (Common Cadre) Mock Test", premium: true },
-          { id: 9017, name: "Supreme Court Junior Court Assistant Mock Test", premium: true },
-          { id: 9018, name: "CCRAS MTS 2025 Mock Test Series", premium: true },
-          { id: 9019, name: "CBSE Junior Assistant Mock Test 2025 (Old)", premium: true },
-          { id: 9020, name: "JCI Junior Assistant Mock Test Series", premium: true },
-          { id: 9021, name: "CBSE Assistant/Superintendent & All Other Post(Tier I) Mock Test", premium: true },
-          { id: 9022, name: "NPCIL Stipendiary Trainee (Category II) Prelims 2026 Mock Test", premium: true },
-          { id: 9023, name: "India Post Postman & Mail Guard Mock Test", premium: true },
-          { id: 9024, name: "EPFO Stenographer (Group C) Mock Test 2023", premium: true },
-          { id: 9025, name: "SGPGI Stenographer Mock Test Series 2025", premium: true },
-          { id: 9026, name: "NPCIL Scientific Assistant Physics Mock Test", premium: true }
-        ];
-
-        const cleanedFetched = fetchedCourses.filter((c: any) => 
-          !c.name.toLowerCase().includes("10th level")
-        );
-
-        const existingNames = new Set(cleanedFetched.map((c: any) => c.name.toLowerCase().trim()));
-        const missingStatic = staticGovAndNraCourses.filter(c => !existingNames.has(c.name.toLowerCase().trim()));
-
-        setCourses([...cleanedFetched, ...missingStatic]);
+        setCourses(fetchedCourses);
       } catch (err) {
         console.error("Failed to fetch courses:", err);
       } finally {
