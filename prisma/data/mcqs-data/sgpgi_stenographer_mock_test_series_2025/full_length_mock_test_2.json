@@ -26,12 +26,12 @@
       "id": 1,
       "question": "Blood Relations: His father is the only son of my father-in-law. How are they related?",
       "options": [
-        "Husband",
         "Nephew",
-        "Brother-in-law",
-        "Son"
+        "Son",
+        "Husband",
+        "Brother-in-law"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Only son of father-in-law is husband. Husband's son is her son."
     },
     {
@@ -39,35 +39,35 @@
       "question": "Blood Relations: She is the daughter of the only son of my grandfather. How are they related?",
       "options": [
         "Cousin",
+        "Sister",
         "Aunt",
-        "Mother",
-        "Sister"
+        "Mother"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Only son of grandfather is father. Father's daughter is sister."
     },
     {
       "id": 3,
       "question": "Blood Relations: A + B means A is father of B; A - B means A is sister of B; A * B means A is son of B. What does P + Q - R * S imply?. How are they related?",
       "options": [
-        "P is brother of S",
         "P is son of S",
-        "P is uncle of S",
-        "P is married to S"
+        "P is brother of S",
+        "P is married to S",
+        "P is uncle of S"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "P is father of Q & R, S is mother of R => P & S married."
     },
     {
       "id": 4,
       "question": "Blood Relations: Pointing to a man, a woman said: 'His mother is the only daughter of my mother.'. How are they related?",
       "options": [
-        "Brother",
         "Husband",
-        "Father",
-        "Son"
+        "Son",
+        "Brother",
+        "Father"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Only daughter of mother is self. She is his mother."
     },
     {
@@ -75,143 +75,143 @@
       "question": "Blood Relations: X is brother of Y. Y is wife of Z. Z is son of W. How is X related to Z?. How are they related?",
       "options": [
         "Brother",
+        "Brother-in-law",
         "Cousin",
-        "Uncle",
-        "Brother-in-law"
+        "Uncle"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "X is wife's brother => Brother-in-law."
     },
     {
       "id": 6,
       "question": "Blood Relations: If P is father of Q, R is son of S, T is brother of P, and Q is sister of R, how is S related to T?. How are they related?",
       "options": [
-        "Sister",
         "Mother",
-        "Daughter-in-law",
-        "Sister-in-law"
+        "Sister",
+        "Sister-in-law",
+        "Daughter-in-law"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "S is mother of Q & R (P's wife). T is P's brother => Sister-in-law."
     },
     {
       "id": 7,
       "question": "Blood Relations: Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.'. How are they related?",
       "options": [
-        "Brother",
+        "Cousin",
         "Nephew",
-        "Son",
-        "Cousin"
+        "Brother",
+        "Son"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Father of uncle is grandfather. Grandfather's daughter is aunt/mother. Her son is cousin."
     },
     {
       "id": 8,
       "question": "Blood Relations: A's mother is sister of B and daughter of C. D is daughter of B and sister of E. How is C related to E?. How are they related?",
       "options": [
-        "Mother",
         "Aunt",
-        "Daughter",
-        "Grandparent"
+        "Grandparent",
+        "Mother",
+        "Daughter"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "C is parent of B, B is parent of E => C is grandparent."
     },
     {
       "id": 9,
       "question": "Blood Relations: Showing a picture of an old man, Amit said, 'His son is my son's uncle.' How is the old man related to Amit?. How are they related?",
       "options": [
+        "Father",
         "Grandfather",
         "Brother",
-        "Uncle",
-        "Father"
+        "Uncle"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Amit's son's uncle is Amit's brother. Old man is his father."
     },
     {
       "id": 10,
       "question": "Blood Relations: M is sister of N. N is father of O. P is wife of M. How is O related to M?. How are they related?",
       "options": [
-        "Son",
         "Daughter",
-        "Brother",
-        "Niece or Nephew"
+        "Son",
+        "Niece or Nephew",
+        "Brother"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "M is aunt of O."
     },
     {
       "id": 11,
       "question": "Blood Relations: A is father of B, but B is not his son. How is B related to A?. How are they related?",
       "options": [
-        "Son",
         "Brother",
-        "Sister",
-        "Daughter"
+        "Daughter",
+        "Son",
+        "Sister"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "B is A's daughter."
     },
     {
       "id": 12,
       "question": "Blood Relations: Pointing to a photograph, Rakesh said, 'She is the mother of my son's wife.' How is Rakesh related to the woman?. How are they related?",
       "options": [
+        "In-law",
         "Husband",
         "Brother",
-        "Son",
-        "In-law"
+        "Son"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Son's wife is daughter-in-law. Her mother is co-in-law."
     },
     {
       "id": 13,
       "question": "Blood Relations: If A is B's sister, C is B's mother, D is C's father, E is D's mother, how is A related to D?. How are they related?",
       "options": [
-        "Daughter",
         "Sister",
-        "Mother",
-        "Granddaughter"
+        "Daughter",
+        "Granddaughter",
+        "Mother"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "D is C's father, C is A's mother => A is granddaughter."
     },
     {
       "id": 14,
       "question": "Blood Relations: B is the brother of A, whose mother is C. D is the father of C. How is B related to D?. How are they related?",
       "options": [
-        "Son",
         "Nephew",
-        "Grandfather",
-        "Grandson"
+        "Grandson",
+        "Son",
+        "Grandfather"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "C is mother of B, D is father of C => B is grandson."
     },
     {
       "id": 15,
       "question": "Blood Relations: E is brother of B, A is sister of B. How is A related to E?. How are they related?",
       "options": [
-        "Brother",
+        "Sister",
         "Mother",
-        "Aunt",
-        "Sister"
+        "Brother",
+        "Aunt"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "A and E are siblings."
     },
     {
       "id": 16,
       "question": "Blood Relations: K is brother of T. T is wife of M. M is son of R. How is K related to R?. How are they related?",
       "options": [
+        "Son-in-law's brother",
         "Son",
         "Brother",
-        "Nephew",
-        "Son-in-law's brother"
+        "Nephew"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "K is brother of R's daughter-in-law."
     },
     {
@@ -220,34 +220,34 @@
       "options": [
         "Son",
         "Great-grandson",
-        "Father",
-        "Grandson"
+        "Grandson",
+        "Father"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "R is mother of P, S is father of R => P is grandson."
     },
     {
       "id": 18,
       "question": "Blood Relations: A and B are married couple. X and Y are brothers. X is brother of A. How is Y related to B?. How are they related?",
       "options": [
-        "Brother",
         "Son",
-        "Cousin",
-        "Brother-in-law"
+        "Brother-in-law",
+        "Brother",
+        "Cousin"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Y is A's brother => B's brother-in-law."
     },
     {
       "id": 19,
       "question": "Blood Relations: Rahul told Anand, 'Yesterday I defeated the only brother of the daughter of my grandmother.' Who did Rahul defeat?. How are they related?",
       "options": [
+        "Father",
         "Uncle",
         "Brother",
-        "Son",
-        "Father"
+        "Son"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Daughter of grandmother is aunt. Her only brother is father."
     },
     {
@@ -256,34 +256,34 @@
       "options": [
         "Son",
         "Brother",
-        "Nephew",
-        "Grandson"
+        "Grandson",
+        "Nephew"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Prem is father of Anil, Vimal is father of Prem => Anil is grandson."
     },
     {
       "id": 21,
       "question": "Blood Relations: If 'A $ B' means A is father of B, 'A # B' means A is mother of B, what does P $ Q # R mean?. How are they related?",
       "options": [
-        "P is father of R",
         "P is uncle of R",
-        "P is brother of R",
-        "P is maternal grandfather of R"
+        "P is maternal grandfather of R",
+        "P is father of R",
+        "P is brother of R"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "P is father of Q, Q is mother of R => P is maternal grandfather."
     },
     {
       "id": 22,
       "question": "Blood Relations: Looking at a portrait, a man said, 'I have no brother or sister, but that man's father is my father's son.' Whose portrait is it?. How are they related?",
       "options": [
-        "His father's",
+        "His son's",
         "His nephew's",
-        "His own",
-        "His son's"
+        "His father's",
+        "His own"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Father's son is himself. 'That man's father is me' => His son."
     },
     {
@@ -291,11 +291,11 @@
       "question": "Blood Relations: A is B's brother. C is A's mother. D is C's father. F is A's son. How is F related to D?. How are they related?",
       "options": [
         "Grandson",
+        "Great-grandson",
         "Son",
-        "Nephew",
-        "Great-grandson"
+        "Nephew"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "D is grandfather of A. F is son of A => Great-grandson."
     },
     {
@@ -304,106 +304,106 @@
       "options": [
         "Son",
         "Daughter",
-        "Brother",
-        "Grandchild"
+        "Grandchild",
+        "Brother"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "P is mother of M, N is child of M => Grandchild."
     },
     {
       "id": 25,
       "question": "Blood Relations: Q is mother of P. P is wife of R. S is brother of R. How is S related to Q?. How are they related?",
       "options": [
-        "Son",
+        "Son-in-law's brother",
         "Nephew",
-        "Brother",
-        "Son-in-law's brother"
+        "Son",
+        "Brother"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "P is Q's daughter. R is P's husband. S is R's brother."
     },
     {
       "id": 26,
       "question": "General Knowledge #26: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
         "42nd Amendment Act, 1976 applies only during maritime emergencies.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
-        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
       "id": 27,
       "question": "General Knowledge #27: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
         "Kaziranga National Park applies only during maritime emergencies.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
-        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
       "id": 28,
       "question": "General Knowledge #28: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
         "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
         "Finance Commission (Article 280) applies only during maritime emergencies.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
-        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States."
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
       "id": 29,
       "question": "General Knowledge #29: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
         "Jawaharlal Nehru applies only during maritime emergencies.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
-        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
       "id": 30,
       "question": "General Knowledge #30: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "35 Years refers to an ancient taxation treaty repealed in 1950.",
         "35 Years applies only during maritime emergencies.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment.",
-        "35 Years is associated with: Minimum age requirement for election as President of India."
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
       "id": 31,
       "question": "General Knowledge #31: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
         "Eighth Schedule applies only during maritime emergencies.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
-        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India."
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
       "id": 32,
       "question": "General Knowledge #32: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
         "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
         "Lothal (Gujarat) applies only during maritime emergencies.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
-        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard."
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
@@ -412,34 +412,34 @@
       "options": [
         "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
         "Articles 20 and 21 applies only during maritime emergencies.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
-        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352."
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
       "id": 34,
       "question": "General Knowledge #34: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
         "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
-        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory."
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
       "id": 35,
       "question": "General Knowledge #35: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
         "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
         "Swami Dayanand Saraswati applies only during maritime emergencies.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
-        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
@@ -448,46 +448,46 @@
       "options": [
         "8 States refers to an ancient taxation treaty repealed in 1950.",
         "8 States applies only during maritime emergencies.",
-        "8 States was declared invalid by the 100th Constitutional Amendment.",
-        "8 States is associated with: Tropic of Cancer passes through 8 Indian States."
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 37,
       "question": "General Knowledge #37: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
         "Battle of Plassey (1757) applies only during maritime emergencies.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
-        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
       "id": 38,
       "question": "General Knowledge #38: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
         "Vice-President of India applies only during maritime emergencies.",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
-        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States)."
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
       "id": 39,
       "question": "General Knowledge #39: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
         "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
         "Black Regur Soil applies only during maritime emergencies.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
-        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops."
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
@@ -496,34 +496,34 @@
       "options": [
         "550 Members refers to an ancient taxation treaty repealed in 1950.",
         "550 Members applies only during maritime emergencies.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment.",
-        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
       "id": 41,
       "question": "General Knowledge #41: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
         "Article 32 applies only during maritime emergencies.",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
-        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 42,
       "question": "General Knowledge #42: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
         "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
         "Lord Curzon applies only during maritime emergencies.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
-        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
@@ -532,34 +532,34 @@
       "options": [
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
         "Godavari River applies only during maritime emergencies.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
-        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga."
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 44,
       "question": "General Knowledge #44: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
         "Governor of RBI applies only during maritime emergencies.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
-        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 45,
       "question": "General Knowledge #45: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
         "101st Amendment Act, 2016 applies only during maritime emergencies.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
-        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India."
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -567,35 +567,35 @@
       "question": "General Knowledge #46: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
         "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
         "42nd Amendment Act, 1976 applies only during maritime emergencies.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
-        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
       "id": 47,
       "question": "General Knowledge #47: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
         "Kaziranga National Park applies only during maritime emergencies.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
-        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
       "id": 48,
       "question": "General Knowledge #48: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
         "Finance Commission (Article 280) applies only during maritime emergencies.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
-        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States."
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
@@ -603,11 +603,11 @@
       "question": "General Knowledge #49: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
         "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
         "Jawaharlal Nehru applies only during maritime emergencies.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
-        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
@@ -616,70 +616,70 @@
       "options": [
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
         "35 Years applies only during maritime emergencies.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment.",
-        "35 Years is associated with: Minimum age requirement for election as President of India."
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
       "id": 51,
       "question": "English Vocabulary #26: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
+        "Idealistic",
         "Practical & Realistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
       "id": 52,
       "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Apathetic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Apathetic",
+        "Passionate & Enthusiastic",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 53,
       "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Talkative",
+        "Reserved & Taciturn",
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
       "id": 54,
       "question": "English Vocabulary #29: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Rare",
+        "Omnipresent & Everywhere",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Rare",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 55,
       "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
+        "Careless",
         "Meticulous & Demanding",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
@@ -688,34 +688,34 @@
       "options": [
         "Sluggishness",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Eagerness & Speed",
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
       "id": 57,
       "question": "English Vocabulary #32: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "Garrulous & Talkative",
+        "Silent",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Garrulous & Talkative",
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
       "id": 58,
       "question": "English Vocabulary #33: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
+        "Sociable & Outgoing",
         "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
@@ -724,34 +724,34 @@
       "options": [
         "Selfish & Spiteful",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Generous",
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
       "id": 60,
       "question": "English Vocabulary #35: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Beneficial",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Harmful & Destructive",
+        "Beneficial",
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
       "id": 61,
       "question": "English Vocabulary #36: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "Unnecessary & Extra",
+        "Essential",
         "Vital",
-        "Required",
-        "Essential"
+        "Unnecessary & Extra",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
@@ -759,11 +759,11 @@
       "question": "English Vocabulary #37: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
         "Identical",
+        "Different & Distinct",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
@@ -772,22 +772,22 @@
       "options": [
         "Calmness & Composure",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Agitation",
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
       "id": 64,
       "question": "English Vocabulary #39: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
       "options": [
-        "Impenetrable",
+        "Penetrable & Vulnerable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Impenetrable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
@@ -795,11 +795,11 @@
       "question": "English Vocabulary #40: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
         "Obscure & Arcane",
+        "Common",
         "Familiar",
-        "Public",
-        "Common"
+        "Public"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
@@ -808,34 +808,34 @@
       "options": [
         "Careless",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Scrupulous & Thorough",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
       "id": 67,
       "question": "English Vocabulary #42: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Permanent & Eternal",
+        "Transitory",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Permanent & Eternal",
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 68,
       "question": "English Vocabulary #43: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Assertive & Domineering",
+        "Servile",
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
@@ -843,35 +843,35 @@
       "question": "English Vocabulary #44: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
         "Frank & Outspoken",
+        "Deceptive",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
       "id": 70,
       "question": "English Vocabulary #45: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Kind",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Kind",
+        "Malevolent & Malicious",
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
       "id": 71,
       "question": "English Vocabulary #46: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Practical & Realistic",
+        "Idealistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Practical & Realistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
@@ -879,143 +879,143 @@
       "question": "English Vocabulary #47: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
         "Apathetic",
+        "Passionate & Enthusiastic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 73,
       "question": "English Vocabulary #48: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Reserved & Taciturn",
+        "Talkative",
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
       "id": 74,
       "question": "English Vocabulary #49: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Rare",
+        "Omnipresent & Everywhere",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Rare",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 75,
       "question": "English Vocabulary #50: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Meticulous & Demanding",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Careless",
+        "Meticulous & Demanding",
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
       "id": 76,
       "question": "English Vocabulary #51: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
+        "Eagerness & Speed",
         "Sluggishness",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
       "id": 77,
       "question": "English Vocabulary #52: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "Garrulous & Talkative",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Garrulous & Talkative",
+        "Silent",
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
       "id": 78,
       "question": "English Vocabulary #53: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
       "id": 79,
       "question": "English Vocabulary #54: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
+        "Generous",
         "Selfish & Spiteful",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
       "id": 80,
       "question": "English Vocabulary #55: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Beneficial",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Beneficial",
+        "Harmful & Destructive",
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
       "id": 81,
       "question": "English Vocabulary #56: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "Unnecessary & Extra",
         "Vital",
-        "Required",
-        "Essential"
+        "Essential",
+        "Unnecessary & Extra",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
       "id": 82,
       "question": "English Vocabulary #57: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Identical",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Different & Distinct",
+        "Identical",
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
       "id": 83,
       "question": "English Vocabulary #58: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
+        "Agitation",
         "Calmness & Composure",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
@@ -1024,34 +1024,34 @@
       "options": [
         "Impenetrable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Penetrable & Vulnerable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
       "id": 85,
       "question": "English Vocabulary #60: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "Obscure & Arcane",
         "Familiar",
-        "Public",
-        "Common"
+        "Common",
+        "Obscure & Arcane",
+        "Public"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
       "id": 86,
       "question": "English Vocabulary #61: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
+        "Scrupulous & Thorough",
         "Careless",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
@@ -1060,46 +1060,46 @@
       "options": [
         "Permanent & Eternal",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Transitory",
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 88,
       "question": "English Vocabulary #63: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Assertive & Domineering",
+        "Servile",
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
       "id": 89,
       "question": "English Vocabulary #64: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
-        "Frank & Outspoken",
+        "Deceptive",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Frank & Outspoken",
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
       "id": 90,
       "question": "English Vocabulary #65: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
+        "Malevolent & Malicious",
         "Kind",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
@@ -1108,34 +1108,34 @@
       "options": [
         "Practical & Realistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Idealistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
       "id": 92,
       "question": "English Vocabulary #67: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Apathetic",
+        "Passionate & Enthusiastic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Apathetic",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 93,
       "question": "English Vocabulary #68: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
+        "Talkative",
         "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
@@ -1144,34 +1144,34 @@
       "options": [
         "Rare",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Omnipresent & Everywhere",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 95,
       "question": "English Vocabulary #70: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Meticulous & Demanding",
+        "Careless",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Meticulous & Demanding",
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
       "id": 96,
       "question": "English Vocabulary #71: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
-        "Sluggishness",
+        "Eagerness & Speed",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Sluggishness",
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
@@ -1179,35 +1179,35 @@
       "question": "English Vocabulary #72: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
         "Garrulous & Talkative",
+        "Silent",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
       "id": 98,
       "question": "English Vocabulary #73: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Reclusive",
+        "Sociable & Outgoing",
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
       "id": 99,
       "question": "English Vocabulary #74: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "Selfish & Spiteful",
+        "Generous",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Selfish & Spiteful",
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
@@ -1215,11 +1215,11 @@
       "question": "English Vocabulary #75: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
         "Beneficial",
+        "Harmful & Destructive",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     }
   ]

@@ -23,34 +23,34 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 101 in physics"
+        "Standard verified principle 101 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 101 in physics curriculum."
     },
     {
       "id": 2,
       "question": "Authentic PHYSICS Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 102 in physics"
+        "Standard verified principle 102 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 102 in physics curriculum."
     },
     {
       "id": 3,
       "question": "Authentic PHYSICS Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 103 in physics",
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 103 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 103 in physics curriculum."
     },
     {
@@ -58,11 +58,11 @@
       "question": "Authentic PHYSICS Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 104 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 104 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 104 in physics curriculum."
     },
     {
@@ -71,22 +71,22 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 105 in physics"
+        "Standard verified principle 105 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 105 in physics curriculum."
     },
     {
       "id": 6,
       "question": "Authentic PHYSICS Exam Question #106: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 106 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 106 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 106 in physics curriculum."
     },
     {
@@ -94,11 +94,11 @@
       "question": "Authentic PHYSICS Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 107 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 107 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 107 in physics curriculum."
     },
     {
@@ -107,46 +107,46 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 108 in physics"
+        "Standard verified principle 108 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 108 in physics curriculum."
     },
     {
       "id": 9,
       "question": "Authentic PHYSICS Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 109 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 109 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 109 in physics curriculum."
     },
     {
       "id": 10,
       "question": "Authentic PHYSICS Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 110 in physics",
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 110 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 110 in physics curriculum."
     },
     {
       "id": 11,
       "question": "Authentic PHYSICS Exam Question #101: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 101 in physics",
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 101 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 101 in physics curriculum."
     },
     {
@@ -154,35 +154,35 @@
       "question": "Authentic PHYSICS Exam Question #102: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 102 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 102 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 102 in physics curriculum."
     },
     {
       "id": 13,
       "question": "Authentic PHYSICS Exam Question #103: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 103 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 103 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 103 in physics curriculum."
     },
     {
       "id": 14,
       "question": "Authentic PHYSICS Exam Question #104: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 104 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 104 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 104 in physics curriculum."
     },
     {
@@ -190,11 +190,11 @@
       "question": "Authentic PHYSICS Exam Question #105: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 105 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 105 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 105 in physics curriculum."
     },
     {
@@ -203,22 +203,22 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 106 in physics"
+        "Standard verified principle 106 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 106 in physics curriculum."
     },
     {
       "id": 17,
       "question": "Authentic PHYSICS Exam Question #107: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 107 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 107 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 107 in physics curriculum."
     },
     {
@@ -226,11 +226,11 @@
       "question": "Authentic PHYSICS Exam Question #108: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 108 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 108 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 108 in physics curriculum."
     },
     {
@@ -238,23 +238,23 @@
       "question": "Authentic PHYSICS Exam Question #109: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 109 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 109 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 109 in physics curriculum."
     },
     {
       "id": 20,
       "question": "Authentic PHYSICS Exam Question #110: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 110 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 110 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 110 in physics curriculum."
     }
   ]

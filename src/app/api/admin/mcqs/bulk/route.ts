@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { courseId, questions } = body;
+    const { courseId, questions, isPaid } = body;
 
     if (!courseId || !questions || !Array.isArray(questions) || questions.length === 0) {
       return NextResponse.json(
@@ -37,6 +37,20 @@ export async function POST(request: Request) {
         { message: "Selected course does not exist." },
         { status: 404 }
       );
+    }
+
+    // Update Course premium status and associated TestSeries isFree status if isPaid is specified
+    if (isPaid !== undefined) {
+      const boolPaid = Boolean(isPaid);
+      await prisma.course.update({
+        where: { id: cId },
+        data: { premium: boolPaid }
+      });
+
+      await prisma.testSeries.updateMany({
+        where: { courseId: cId },
+        data: { isFree: !boolPaid }
+      });
     }
 
     // Prepare data for batch insert

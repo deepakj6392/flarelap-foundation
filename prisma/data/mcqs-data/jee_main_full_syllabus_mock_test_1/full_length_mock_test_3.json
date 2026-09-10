@@ -28,34 +28,34 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 51 in physics"
+        "Standard verified principle 51 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 51 in physics curriculum."
     },
     {
       "id": 2,
       "question": "Authentic PHYSICS Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 52 in physics"
+        "Standard verified principle 52 in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 52 in physics curriculum."
     },
     {
       "id": 3,
       "question": "Authentic PHYSICS Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 53 in physics",
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 53 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 53 in physics curriculum."
     },
     {
@@ -64,10 +64,10 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 54 in physics"
+        "Standard verified principle 54 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 54 in physics curriculum."
     },
     {
@@ -76,22 +76,22 @@
       "options": [
         "Opposing non-standard hypothesis B in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 55 in physics"
+        "Standard verified principle 55 in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 55 in physics curriculum."
     },
     {
       "id": 6,
       "question": "Authentic PHYSICS Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 56 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 56 in physics"
+        "Opposing non-standard hypothesis B in physics",
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 56 in physics curriculum."
     },
     {
@@ -99,23 +99,23 @@
       "question": "Authentic PHYSICS Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
+        "Standard verified principle 57 in physics",
         "Conditional secondary exception C in physics",
-        "Invalid empirical contradiction D in physics",
-        "Standard verified principle 57 in physics"
+        "Invalid empirical contradiction D in physics"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 57 in physics curriculum."
     },
     {
       "id": 8,
       "question": "Authentic CHEMISTRY Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 51 in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 51 in chemistry"
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 51 in chemistry curriculum."
     },
     {
@@ -124,34 +124,34 @@
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 52 in chemistry"
+        "Standard verified principle 52 in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 52 in chemistry curriculum."
     },
     {
       "id": 10,
       "question": "Authentic CHEMISTRY Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 53 in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Standard verified principle 53 in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 53 in chemistry curriculum."
     },
     {
       "id": 11,
       "question": "Authentic CHEMISTRY Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
+        "Standard verified principle 54 in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 54 in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 54 in chemistry curriculum."
     },
     {
@@ -159,59 +159,59 @@
       "question": "Authentic CHEMISTRY Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
+        "Standard verified principle 55 in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 55 in chemistry"
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 55 in chemistry curriculum."
     },
     {
       "id": 13,
       "question": "Authentic CHEMISTRY Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 56 in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Standard verified principle 56 in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 56 in chemistry curriculum."
     },
     {
       "id": 14,
       "question": "Authentic CHEMISTRY Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
+        "Standard verified principle 57 in chemistry",
         "Conditional secondary exception C in chemistry",
-        "Invalid empirical contradiction D in chemistry",
-        "Standard verified principle 57 in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 57 in chemistry curriculum."
     },
     {
       "id": 15,
       "question": "Quantitative Problem #51: A shopkeeper buys an item at cost ₹5250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 13 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 16%, Joint Work = 9.03 days",
         "Profit = 12.5%, Joint Work = 7.2299999999999995 days",
-        "Profit = 15%, Joint Work = 34 days",
-        "Profit = 14%, Joint Work = 8.03 days"
+        "Profit = 16%, Joint Work = 9.03 days",
+        "Profit = 14%, Joint Work = 8.03 days",
+        "Profit = 15%, Joint Work = 34 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((5985 - 5250) / 5250) * 100 = 14%. Combined Work = (13*21)/(13+21) = 8.03 days."
     },
     {
       "id": 16,
       "question": "Quantitative Problem #52: A shopkeeper buys an item at cost ₹5350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 19%, Joint Work = 9.56 days",
         "Profit = 15.5%, Joint Work = 7.760000000000001 days",
-        "Profit = 20%, Joint Work = 36 days",
-        "Profit = 17%, Joint Work = 8.56 days"
+        "Profit = 17%, Joint Work = 8.56 days",
+        "Profit = 19%, Joint Work = 9.56 days",
+        "Profit = 20%, Joint Work = 36 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((6259.5 - 5350) / 5350) * 100 = 17%. Combined Work = (14*22)/(14+22) = 8.56 days."
     },
     {
@@ -219,35 +219,35 @@
       "question": "Quantitative Problem #53: A shopkeeper buys an item at cost ₹5450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 21%, Joint Work = 10.08 days",
+        "Profit = 19%, Joint Work = 9.08 days",
         "Profit = 17.5%, Joint Work = 8.28 days",
-        "Profit = 25%, Joint Work = 38 days",
-        "Profit = 19%, Joint Work = 9.08 days"
+        "Profit = 25%, Joint Work = 38 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((6485.499999999999 - 5450) / 5450) * 100 = 19%. Combined Work = (15*23)/(15+23) = 9.08 days."
     },
     {
       "id": 18,
       "question": "Quantitative Problem #54: A shopkeeper buys an item at cost ₹5550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 44.5%, Joint Work = 10.6 days",
         "Profit = 41%, Joint Work = 8.799999999999999 days",
-        "Profit = 45%, Joint Work = 40 days",
-        "Profit = 42.5%, Joint Work = 9.6 days"
+        "Profit = 44.5%, Joint Work = 10.6 days",
+        "Profit = 42.5%, Joint Work = 9.6 days",
+        "Profit = 45%, Joint Work = 40 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((7908.75 - 5550) / 5550) * 100 = 42.5%. Combined Work = (16*24)/(16+24) = 9.6 days."
     },
     {
       "id": 19,
       "question": "Quantitative Problem #55: A shopkeeper buys an item at cost ₹5650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = -1%, Joint Work = 10.12 days",
         "Profit = -2.5%, Joint Work = 9.319999999999999 days",
-        "Profit = 0%, Joint Work = 42 days",
-        "Profit = -1%, Joint Work = 10.12 days"
+        "Profit = 1%, Joint Work = 11.12 days",
+        "Profit = 0%, Joint Work = 42 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((5593.500000000001 - 5650) / 5650) * 100 = -1%. Combined Work = (17*25)/(17+25) = 10.12 days."
     },
     {
@@ -255,11 +255,11 @@
       "question": "Quantitative Problem #56: A shopkeeper buys an item at cost ₹5750, marks it 20% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 26 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 4%, Joint Work = 11.64 days",
+        "Profit = 2%, Joint Work = 10.64 days",
         "Profit = 0.5%, Joint Work = 9.84 days",
-        "Profit = 5%, Joint Work = 44 days",
-        "Profit = 2%, Joint Work = 10.64 days"
+        "Profit = 5%, Joint Work = 44 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((5865 - 5750) / 5750) * 100 = 2%. Combined Work = (18*26)/(18+26) = 10.64 days."
     }
   ]

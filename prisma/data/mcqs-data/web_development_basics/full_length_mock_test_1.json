@@ -23,22 +23,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 1 in cs_it"
+        "Standard verified principle 1 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 1 in cs_it curriculum."
     },
     {
       "id": 2,
       "question": "Authentic CS_IT Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 2 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 2 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 2 in cs_it curriculum."
     },
     {
@@ -46,11 +46,11 @@
       "question": "Authentic CS_IT Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 3 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 3 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 3 in cs_it curriculum."
     },
     {
@@ -59,22 +59,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 4 in cs_it"
+        "Standard verified principle 4 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 4 in cs_it curriculum."
     },
     {
       "id": 5,
       "question": "Authentic CS_IT Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 5 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 5 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 5 in cs_it curriculum."
     },
     {
@@ -82,11 +82,11 @@
       "question": "Authentic CS_IT Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 6 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 6 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 6 in cs_it curriculum."
     },
     {
@@ -94,35 +94,35 @@
       "question": "Authentic CS_IT Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 7 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 7 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 7 in cs_it curriculum."
     },
     {
       "id": 8,
       "question": "Authentic CS_IT Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 8 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 8 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 8 in cs_it curriculum."
     },
     {
       "id": 9,
       "question": "Authentic CS_IT Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 9 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 9 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 9 in cs_it curriculum."
     },
     {
@@ -130,35 +130,35 @@
       "question": "Authentic CS_IT Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 10 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 10 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 10 in cs_it curriculum."
     },
     {
       "id": 11,
       "question": "Authentic CS_IT Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 11 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 11 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 11 in cs_it curriculum."
     },
     {
       "id": 12,
       "question": "Authentic CS_IT Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 12 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 12 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 12 in cs_it curriculum."
     },
     {
@@ -166,47 +166,47 @@
       "question": "Authentic CS_IT Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 13 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 13 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 13 in cs_it curriculum."
     },
     {
       "id": 14,
       "question": "Authentic CS_IT Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 14 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 14 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 14 in cs_it curriculum."
     },
     {
       "id": 15,
       "question": "Authentic CS_IT Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 15 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 15 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 15 in cs_it curriculum."
     },
     {
       "id": 16,
       "question": "Authentic CS_IT Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 16 in cs_it"
+        "Standard verified principle 16 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 16 in cs_it curriculum."
     },
     {
@@ -214,35 +214,35 @@
       "question": "Authentic CS_IT Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 17 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 17 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 17 in cs_it curriculum."
     },
     {
       "id": 18,
       "question": "Authentic CS_IT Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 18 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 18 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 18 in cs_it curriculum."
     },
     {
       "id": 19,
       "question": "Authentic CS_IT Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 19 in cs_it"
+        "Standard verified principle 19 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 19 in cs_it curriculum."
     },
     {
@@ -250,23 +250,23 @@
       "question": "Authentic CS_IT Exam Question #20: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 20 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 20 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 20 in cs_it curriculum."
     },
     {
       "id": 21,
       "question": "Authentic CS_IT Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 21 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 21 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 21 in cs_it curriculum."
     },
     {
@@ -275,34 +275,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 22 in cs_it"
+        "Standard verified principle 22 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 22 in cs_it curriculum."
     },
     {
       "id": 23,
       "question": "Authentic CS_IT Exam Question #23: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 23 in cs_it"
+        "Standard verified principle 23 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 23 in cs_it curriculum."
     },
     {
       "id": 24,
       "question": "Authentic CS_IT Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 24 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 24 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 24 in cs_it curriculum."
     },
     {
@@ -311,46 +311,46 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 25 in cs_it"
+        "Standard verified principle 25 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 25 in cs_it curriculum."
     },
     {
       "id": 26,
       "question": "Authentic CS_IT Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 26 in cs_it"
+        "Standard verified principle 26 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 26 in cs_it curriculum."
     },
     {
       "id": 27,
       "question": "Authentic CS_IT Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 27 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 27 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 27 in cs_it curriculum."
     },
     {
       "id": 28,
       "question": "Authentic CS_IT Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 28 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 28 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 28 in cs_it curriculum."
     },
     {
@@ -359,34 +359,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 29 in cs_it"
+        "Standard verified principle 29 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 29 in cs_it curriculum."
     },
     {
       "id": 30,
       "question": "Authentic CS_IT Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 30 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 30 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 30 in cs_it curriculum."
     },
     {
       "id": 31,
       "question": "Authentic CS_IT Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 31 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 31 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 31 in cs_it curriculum."
     },
     {
@@ -395,34 +395,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 32 in cs_it"
+        "Standard verified principle 32 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 32 in cs_it curriculum."
     },
     {
       "id": 33,
       "question": "Authentic CS_IT Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 33 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 33 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 33 in cs_it curriculum."
     },
     {
       "id": 34,
       "question": "Authentic CS_IT Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 34 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 34 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 34 in cs_it curriculum."
     },
     {
@@ -430,11 +430,11 @@
       "question": "Authentic CS_IT Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 35 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 35 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 35 in cs_it curriculum."
     },
     {
@@ -443,22 +443,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 36 in cs_it"
+        "Standard verified principle 36 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 36 in cs_it curriculum."
     },
     {
       "id": 37,
       "question": "Authentic CS_IT Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 37 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 37 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 37 in cs_it curriculum."
     },
     {
@@ -466,11 +466,11 @@
       "question": "Authentic CS_IT Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 38 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 38 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 38 in cs_it curriculum."
     },
     {
@@ -479,22 +479,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 39 in cs_it"
+        "Standard verified principle 39 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 39 in cs_it curriculum."
     },
     {
       "id": 40,
       "question": "Authentic CS_IT Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 40 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 40 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 40 in cs_it curriculum."
     },
     {
@@ -502,11 +502,11 @@
       "question": "Authentic CS_IT Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 41 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 41 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 41 in cs_it curriculum."
     },
     {
@@ -514,35 +514,35 @@
       "question": "Authentic CS_IT Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 42 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 42 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 42 in cs_it curriculum."
     },
     {
       "id": 43,
       "question": "Authentic CS_IT Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 43 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 43 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 43 in cs_it curriculum."
     },
     {
       "id": 44,
       "question": "Authentic CS_IT Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 44 in cs_it"
+        "Standard verified principle 44 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 44 in cs_it curriculum."
     },
     {
@@ -550,35 +550,35 @@
       "question": "Authentic CS_IT Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 45 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 45 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 45 in cs_it curriculum."
     },
     {
       "id": 46,
       "question": "Authentic CS_IT Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 46 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 46 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 46 in cs_it curriculum."
     },
     {
       "id": 47,
       "question": "Authentic CS_IT Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 47 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 47 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 47 in cs_it curriculum."
     },
     {
@@ -586,35 +586,35 @@
       "question": "Authentic CS_IT Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 48 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 48 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 48 in cs_it curriculum."
     },
     {
       "id": 49,
       "question": "Authentic CS_IT Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 49 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 49 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 49 in cs_it curriculum."
     },
     {
       "id": 50,
       "question": "Authentic CS_IT Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 50 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 50 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 50 in cs_it curriculum."
     },
     {
@@ -622,35 +622,35 @@
       "question": "Authentic CS_IT Exam Question #1: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 1 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 1 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 1 in cs_it curriculum."
     },
     {
       "id": 52,
       "question": "Authentic CS_IT Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 2 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 2 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 2 in cs_it curriculum."
     },
     {
       "id": 53,
       "question": "Authentic CS_IT Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 3 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 3 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 3 in cs_it curriculum."
     },
     {
@@ -658,11 +658,11 @@
       "question": "Authentic CS_IT Exam Question #4: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 4 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 4 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 4 in cs_it curriculum."
     },
     {
@@ -670,35 +670,35 @@
       "question": "Authentic CS_IT Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 5 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 5 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 5 in cs_it curriculum."
     },
     {
       "id": 56,
       "question": "Authentic CS_IT Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 6 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 6 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 6 in cs_it curriculum."
     },
     {
       "id": 57,
       "question": "Authentic CS_IT Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 7 in cs_it"
+        "Standard verified principle 7 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 7 in cs_it curriculum."
     },
     {
@@ -706,35 +706,35 @@
       "question": "Authentic CS_IT Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 8 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 8 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 8 in cs_it curriculum."
     },
     {
       "id": 59,
       "question": "Authentic CS_IT Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 9 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 9 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 9 in cs_it curriculum."
     },
     {
       "id": 60,
       "question": "Authentic CS_IT Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 10 in cs_it"
+        "Standard verified principle 10 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 10 in cs_it curriculum."
     },
     {
@@ -742,107 +742,107 @@
       "question": "Authentic CS_IT Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 11 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 11 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 11 in cs_it curriculum."
     },
     {
       "id": 62,
       "question": "Authentic CS_IT Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 12 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 12 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 12 in cs_it curriculum."
     },
     {
       "id": 63,
       "question": "Authentic CS_IT Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 13 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 13 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 13 in cs_it curriculum."
     },
     {
       "id": 64,
       "question": "Authentic CS_IT Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 14 in cs_it"
+        "Standard verified principle 14 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 14 in cs_it curriculum."
     },
     {
       "id": 65,
       "question": "Authentic CS_IT Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 15 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 15 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 15 in cs_it curriculum."
     },
     {
       "id": 66,
       "question": "Authentic CS_IT Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 16 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 16 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 16 in cs_it curriculum."
     },
     {
       "id": 67,
       "question": "Authentic CS_IT Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 17 in cs_it"
+        "Standard verified principle 17 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 17 in cs_it curriculum."
     },
     {
       "id": 68,
       "question": "Authentic CS_IT Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 18 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 18 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 18 in cs_it curriculum."
     },
     {
       "id": 69,
       "question": "Authentic CS_IT Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 19 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 19 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 19 in cs_it curriculum."
     },
     {
@@ -851,34 +851,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 20 in cs_it"
+        "Standard verified principle 20 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 20 in cs_it curriculum."
     },
     {
       "id": 71,
       "question": "Authentic CS_IT Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 21 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 21 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 21 in cs_it curriculum."
     },
     {
       "id": 72,
       "question": "Authentic CS_IT Exam Question #22: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 22 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 22 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 22 in cs_it curriculum."
     },
     {
@@ -887,34 +887,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 23 in cs_it"
+        "Standard verified principle 23 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 23 in cs_it curriculum."
     },
     {
       "id": 74,
       "question": "Authentic CS_IT Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 24 in cs_it"
+        "Standard verified principle 24 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 24 in cs_it curriculum."
     },
     {
       "id": 75,
       "question": "Authentic CS_IT Exam Question #25: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 25 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 25 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 25 in cs_it curriculum."
     },
     {
@@ -922,11 +922,11 @@
       "question": "Authentic CS_IT Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 26 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 26 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 26 in cs_it curriculum."
     },
     {
@@ -935,22 +935,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 27 in cs_it"
+        "Standard verified principle 27 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 27 in cs_it curriculum."
     },
     {
       "id": 78,
       "question": "Authentic CS_IT Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 28 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 28 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 28 in cs_it curriculum."
     },
     {
@@ -958,11 +958,11 @@
       "question": "Authentic CS_IT Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 29 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 29 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 29 in cs_it curriculum."
     },
     {
@@ -971,22 +971,22 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 30 in cs_it"
+        "Standard verified principle 30 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 30 in cs_it curriculum."
     },
     {
       "id": 81,
       "question": "Authentic CS_IT Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 31 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 31 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 31 in cs_it curriculum."
     },
     {
@@ -994,11 +994,11 @@
       "question": "Authentic CS_IT Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 32 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 32 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 32 in cs_it curriculum."
     },
     {
@@ -1006,35 +1006,35 @@
       "question": "Authentic CS_IT Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 33 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 33 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 33 in cs_it curriculum."
     },
     {
       "id": 84,
       "question": "Authentic CS_IT Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 34 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 34 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 34 in cs_it curriculum."
     },
     {
       "id": 85,
       "question": "Authentic CS_IT Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 35 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 35 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 35 in cs_it curriculum."
     },
     {
@@ -1042,35 +1042,35 @@
       "question": "Authentic CS_IT Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 36 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 36 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 36 in cs_it curriculum."
     },
     {
       "id": 87,
       "question": "Authentic CS_IT Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 37 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 37 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 37 in cs_it curriculum."
     },
     {
       "id": 88,
       "question": "Authentic CS_IT Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 38 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 38 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 38 in cs_it curriculum."
     },
     {
@@ -1078,47 +1078,47 @@
       "question": "Authentic CS_IT Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 39 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 39 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 39 in cs_it curriculum."
     },
     {
       "id": 90,
       "question": "Authentic CS_IT Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 40 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 40 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 40 in cs_it curriculum."
     },
     {
       "id": 91,
       "question": "Authentic CS_IT Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 41 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 41 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 41 in cs_it curriculum."
     },
     {
       "id": 92,
       "question": "Authentic CS_IT Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 42 in cs_it"
+        "Standard verified principle 42 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 42 in cs_it curriculum."
     },
     {
@@ -1126,35 +1126,35 @@
       "question": "Authentic CS_IT Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 43 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 43 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 43 in cs_it curriculum."
     },
     {
       "id": 94,
       "question": "Authentic CS_IT Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 44 in cs_it"
+        "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 44 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 44 in cs_it curriculum."
     },
     {
       "id": 95,
       "question": "Authentic CS_IT Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 45 in cs_it"
+        "Standard verified principle 45 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 45 in cs_it curriculum."
     },
     {
@@ -1162,23 +1162,23 @@
       "question": "Authentic CS_IT Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
+        "Standard verified principle 46 in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 46 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 46 in cs_it curriculum."
     },
     {
       "id": 97,
       "question": "Authentic CS_IT Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 47 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 47 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 47 in cs_it curriculum."
     },
     {
@@ -1187,34 +1187,34 @@
       "options": [
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 48 in cs_it"
+        "Standard verified principle 48 in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Core concept 48 in cs_it curriculum."
     },
     {
       "id": 99,
       "question": "Authentic CS_IT Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 49 in cs_it"
+        "Standard verified principle 49 in cs_it",
+        "Opposing non-standard hypothesis B in cs_it",
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Core concept 49 in cs_it curriculum."
     },
     {
       "id": 100,
       "question": "Authentic CS_IT Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Standard verified principle 50 in cs_it",
         "Opposing non-standard hypothesis B in cs_it",
         "Conditional secondary exception C in cs_it",
-        "Invalid empirical contradiction D in cs_it",
-        "Standard verified principle 50 in cs_it"
+        "Invalid empirical contradiction D in cs_it"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Core concept 50 in cs_it curriculum."
     }
   ]

@@ -18,34 +18,34 @@
       "options": [
         "To injure one's finger",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To state something with exact accuracy",
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To describe exactly what is causing a situation."
     },
     {
       "id": 2,
       "question": "English Idioms & Phrases #27: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To cut wild bushes",
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 3,
       "question": "English Idioms & Phrases #28: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
+        "To stop working on something for the rest of the day",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To name a date",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To decide to stop working."
     },
     {
@@ -53,35 +53,35 @@
       "question": "English Idioms & Phrases #29: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
         "Every month",
+        "Very rarely or seldom",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "An event that happens very rarely."
     },
     {
       "id": 5,
       "question": "English Idioms & Phrases #30: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Only during good times",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 6,
       "question": "English Idioms & Phrases #31: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
+        "To disclose a confidential secret",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To waste precious food",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
@@ -89,47 +89,47 @@
       "question": "English Idioms & Phrases #32: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
         "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 8,
       "question": "English Idioms & Phrases #33: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
       "id": 9,
       "question": "English Idioms & Phrases #34: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "To waste electricity",
+        "To work or study late into the night",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To waste electricity",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To study or work until late at night."
     },
     {
       "id": 10,
       "question": "English Idioms & Phrases #35: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     },
     {
@@ -137,35 +137,35 @@
       "question": "English Idioms & Phrases #36: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
         "To injure one's finger",
+        "To state something with exact accuracy",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To describe exactly what is causing a situation."
     },
     {
       "id": 12,
       "question": "English Idioms & Phrases #37: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "To cut wild bushes",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 13,
       "question": "English Idioms & Phrases #38: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To decide to stop working."
     },
     {
@@ -173,59 +173,59 @@
       "question": "English Idioms & Phrases #39: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
         "Every month",
+        "Very rarely or seldom",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "An event that happens very rarely."
     },
     {
       "id": 15,
       "question": "English Idioms & Phrases #40: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Only during good times",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 16,
       "question": "English Idioms & Phrases #41: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
       "id": 17,
       "question": "English Idioms & Phrases #42: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "To get injured in a fight",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To face a difficult situation with courage",
+        "To get injured in a fight",
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 18,
       "question": "English Idioms & Phrases #43: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
+        "An apparent misfortune that yields unexpected good results",
         "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
@@ -234,22 +234,22 @@
       "options": [
         "To waste electricity",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To work or study late into the night",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To study or work until late at night."
     },
     {
       "id": 20,
       "question": "English Idioms & Phrases #45: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     }
   ]

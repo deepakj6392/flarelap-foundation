@@ -21,34 +21,34 @@
       "id": 1,
       "question": "Authentic BOTANY Exam Question #1: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Standard verified principle 1 in botany",
+        "Invalid empirical contradiction D in botany",
         "Conditional secondary exception C in botany",
-        "Invalid empirical contradiction D in botany"
+        "Standard verified principle 1 in botany",
+        "Opposing non-standard hypothesis B in botany"
       ],
-      "answer": 1,
+      "answer": 2,
       "hint": "Core concept 1 in botany curriculum."
     },
     {
       "id": 2,
       "question": "Authentic BOTANY Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
         "Standard verified principle 2 in botany",
         "Conditional secondary exception C in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany"
       ],
-      "answer": 1,
+      "answer": 0,
       "hint": "Core concept 2 in botany curriculum."
     },
     {
       "id": 3,
       "question": "Authentic BOTANY Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 3 in botany",
         "Conditional secondary exception C in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany"
       ],
       "answer": 1,
       "hint": "Core concept 3 in botany curriculum."
@@ -57,36 +57,36 @@
       "id": 4,
       "question": "Authentic BOTANY Exam Question #4: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Standard verified principle 4 in botany",
+        "Invalid empirical contradiction D in botany",
         "Conditional secondary exception C in botany",
-        "Invalid empirical contradiction D in botany"
+        "Standard verified principle 4 in botany",
+        "Opposing non-standard hypothesis B in botany"
       ],
-      "answer": 1,
+      "answer": 2,
       "hint": "Core concept 4 in botany curriculum."
     },
     {
       "id": 5,
       "question": "Authentic BOTANY Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Standard verified principle 5 in botany",
         "Conditional secondary exception C in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Standard verified principle 5 in botany",
+        "Opposing non-standard hypothesis B in botany"
       ],
-      "answer": 1,
+      "answer": 2,
       "hint": "Core concept 5 in botany curriculum."
     },
     {
       "id": 6,
       "question": "Authentic BOTANY Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 6 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 6 in botany curriculum."
     },
     {
@@ -94,21 +94,21 @@
       "question": "Authentic BOTANY Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 7 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 7 in botany curriculum."
     },
     {
       "id": 8,
       "question": "Authentic BOTANY Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 8 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 8 in botany curriculum."
@@ -117,12 +117,12 @@
       "id": 9,
       "question": "Authentic BOTANY Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 9 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 9 in botany curriculum."
     },
     {
@@ -130,21 +130,21 @@
       "question": "Authentic BOTANY Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 10 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 10 in botany curriculum."
     },
     {
       "id": 11,
       "question": "Authentic BOTANY Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 11 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 11 in botany curriculum."
@@ -153,10 +153,10 @@
       "id": 12,
       "question": "Authentic BOTANY Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 12 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 12 in botany curriculum."
@@ -165,34 +165,34 @@
       "id": 13,
       "question": "Authentic BOTANY Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 13 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 13 in botany curriculum."
     },
     {
       "id": 14,
       "question": "Authentic BOTANY Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 14 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 14 in botany curriculum."
     },
     {
       "id": 15,
       "question": "Authentic BOTANY Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 15 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 15 in botany curriculum."
@@ -201,34 +201,34 @@
       "id": 16,
       "question": "Authentic BOTANY Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 16 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 16 in botany curriculum."
     },
     {
       "id": 17,
       "question": "Authentic BOTANY Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 17 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 17 in botany curriculum."
     },
     {
       "id": 18,
       "question": "Authentic BOTANY Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 18 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 18 in botany curriculum."
@@ -238,9 +238,9 @@
       "question": "Authentic BOTANY Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 19 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 19 in botany curriculum."
@@ -249,24 +249,24 @@
       "id": 20,
       "question": "Authentic BOTANY Exam Question #20: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 20 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 20 in botany curriculum."
     },
     {
       "id": 21,
       "question": "Authentic BOTANY Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 21 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 21 in botany curriculum."
     },
     {
@@ -274,9 +274,9 @@
       "question": "Authentic BOTANY Exam Question #22: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 22 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 22 in botany curriculum."
@@ -285,24 +285,24 @@
       "id": 23,
       "question": "Authentic BOTANY Exam Question #23: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 23 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 23 in botany curriculum."
     },
     {
       "id": 24,
       "question": "Authentic BOTANY Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 24 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 24 in botany curriculum."
     },
     {
@@ -310,9 +310,9 @@
       "question": "Authentic BOTANY Exam Question #25: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 25 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 25 in botany curriculum."
@@ -322,9 +322,9 @@
       "question": "Authentic BOTANY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 26 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 26 in botany curriculum."
@@ -333,12 +333,12 @@
       "id": 27,
       "question": "Authentic BOTANY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 27 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 27 in botany curriculum."
     },
     {
@@ -346,11 +346,11 @@
       "question": "Authentic BOTANY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 28 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 28 in botany curriculum."
     },
     {
@@ -358,9 +358,9 @@
       "question": "Authentic BOTANY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 29 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 29 in botany curriculum."
@@ -369,24 +369,24 @@
       "id": 30,
       "question": "Authentic BOTANY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 30 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 30 in botany curriculum."
     },
     {
       "id": 31,
       "question": "Authentic BOTANY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 31 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 31 in botany curriculum."
     },
     {
@@ -394,9 +394,9 @@
       "question": "Authentic BOTANY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 32 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 32 in botany curriculum."
@@ -405,10 +405,10 @@
       "id": 33,
       "question": "Authentic BOTANY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 33 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 33 in botany curriculum."
@@ -417,12 +417,12 @@
       "id": 34,
       "question": "Authentic BOTANY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 34 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 34 in botany curriculum."
     },
     {
@@ -430,21 +430,21 @@
       "question": "Authentic BOTANY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 35 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 35 in botany curriculum."
     },
     {
       "id": 36,
       "question": "Authentic BOTANY Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 36 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 36 in botany curriculum."
@@ -453,12 +453,12 @@
       "id": 37,
       "question": "Authentic BOTANY Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 37 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 37 in botany curriculum."
     },
     {
@@ -466,33 +466,33 @@
       "question": "Authentic BOTANY Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 38 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 38 in botany curriculum."
     },
     {
       "id": 39,
       "question": "Authentic BOTANY Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 39 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 39 in botany curriculum."
     },
     {
       "id": 40,
       "question": "Authentic BOTANY Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 40 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 40 in botany curriculum."
@@ -501,12 +501,12 @@
       "id": 41,
       "question": "Authentic BOTANY Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 41 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 41 in botany curriculum."
     },
     {
@@ -514,21 +514,21 @@
       "question": "Authentic BOTANY Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 42 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 42 in botany curriculum."
     },
     {
       "id": 43,
       "question": "Authentic BOTANY Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 43 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 43 in botany curriculum."
@@ -537,12 +537,12 @@
       "id": 44,
       "question": "Authentic BOTANY Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 44 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 44 in botany curriculum."
     },
     {
@@ -550,23 +550,23 @@
       "question": "Authentic BOTANY Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 45 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 45 in botany curriculum."
     },
     {
       "id": 46,
       "question": "Authentic BOTANY Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 46 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 46 in botany curriculum."
     },
     {
@@ -574,9 +574,9 @@
       "question": "Authentic BOTANY Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 47 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 47 in botany curriculum."
@@ -585,34 +585,34 @@
       "id": 48,
       "question": "Authentic BOTANY Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 48 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 48 in botany curriculum."
     },
     {
       "id": 49,
       "question": "Authentic BOTANY Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 49 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 49 in botany curriculum."
     },
     {
       "id": 50,
       "question": "Authentic BOTANY Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 50 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 50 in botany curriculum."
@@ -621,36 +621,36 @@
       "id": 51,
       "question": "Authentic BOTANY Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 51 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 51 in botany curriculum."
     },
     {
       "id": 52,
       "question": "Authentic BOTANY Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 52 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 52 in botany curriculum."
     },
     {
       "id": 53,
       "question": "Authentic BOTANY Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 53 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 53 in botany curriculum."
     },
     {
@@ -658,9 +658,9 @@
       "question": "Authentic BOTANY Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 54 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 54 in botany curriculum."
@@ -669,24 +669,24 @@
       "id": 55,
       "question": "Authentic BOTANY Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 55 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 55 in botany curriculum."
     },
     {
       "id": 56,
       "question": "Authentic BOTANY Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 56 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 56 in botany curriculum."
     },
     {
@@ -694,9 +694,9 @@
       "question": "Authentic BOTANY Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 57 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 57 in botany curriculum."
@@ -705,24 +705,24 @@
       "id": 58,
       "question": "Authentic BOTANY Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 58 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 58 in botany curriculum."
     },
     {
       "id": 59,
       "question": "Authentic BOTANY Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 59 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 59 in botany curriculum."
     },
     {
@@ -730,11 +730,11 @@
       "question": "Authentic BOTANY Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 60 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 60 in botany curriculum."
     },
     {
@@ -742,9 +742,9 @@
       "question": "Authentic BOTANY Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 61 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 61 in botany curriculum."
@@ -753,12 +753,12 @@
       "id": 62,
       "question": "Authentic BOTANY Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 62 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 62 in botany curriculum."
     },
     {
@@ -766,11 +766,11 @@
       "question": "Authentic BOTANY Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 63 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 63 in botany curriculum."
     },
     {
@@ -778,9 +778,9 @@
       "question": "Authentic BOTANY Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 64 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 64 in botany curriculum."
@@ -789,12 +789,12 @@
       "id": 65,
       "question": "Authentic BOTANY Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 65 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 65 in botany curriculum."
     },
     {
@@ -802,11 +802,11 @@
       "question": "Authentic BOTANY Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 66 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 66 in botany curriculum."
     },
     {
@@ -814,21 +814,21 @@
       "question": "Authentic BOTANY Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 67 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 67 in botany curriculum."
     },
     {
       "id": 68,
       "question": "Authentic BOTANY Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 68 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 68 in botany curriculum."
@@ -837,12 +837,12 @@
       "id": 69,
       "question": "Authentic BOTANY Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 69 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 69 in botany curriculum."
     },
     {
@@ -850,21 +850,21 @@
       "question": "Authentic BOTANY Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 70 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 70 in botany curriculum."
     },
     {
       "id": 71,
       "question": "Authentic BOTANY Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 71 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 71 in botany curriculum."
@@ -873,12 +873,12 @@
       "id": 72,
       "question": "Authentic BOTANY Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 72 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 72 in botany curriculum."
     },
     {
@@ -886,33 +886,33 @@
       "question": "Authentic BOTANY Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 73 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 73 in botany curriculum."
     },
     {
       "id": 74,
       "question": "Authentic BOTANY Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 74 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 74 in botany curriculum."
     },
     {
       "id": 75,
       "question": "Authentic BOTANY Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 75 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 75 in botany curriculum."
@@ -921,10 +921,10 @@
       "id": 76,
       "question": "Authentic ZOOLOGY Exam Question #1: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 1 in zoology",
         "Conditional secondary exception C in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology"
       ],
       "answer": 1,
       "hint": "Core concept 1 in zoology curriculum."
@@ -933,34 +933,34 @@
       "id": 77,
       "question": "Authentic ZOOLOGY Exam Question #2: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Standard verified principle 2 in zoology",
         "Conditional secondary exception C in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 2 in zoology",
+        "Opposing non-standard hypothesis B in zoology"
       ],
-      "answer": 1,
+      "answer": 2,
       "hint": "Core concept 2 in zoology curriculum."
     },
     {
       "id": 78,
       "question": "Authentic ZOOLOGY Exam Question #3: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Standard verified principle 3 in zoology",
         "Conditional secondary exception C in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Standard verified principle 3 in zoology",
+        "Opposing non-standard hypothesis B in zoology"
       ],
-      "answer": 1,
+      "answer": 2,
       "hint": "Core concept 3 in zoology curriculum."
     },
     {
       "id": 79,
       "question": "Authentic ZOOLOGY Exam Question #4: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Standard verified principle 4 in zoology",
         "Conditional secondary exception C in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Standard verified principle 4 in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology"
       ],
       "answer": 1,
       "hint": "Core concept 4 in zoology curriculum."
@@ -969,22 +969,22 @@
       "id": 80,
       "question": "Authentic ZOOLOGY Exam Question #5: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
         "Standard verified principle 5 in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Conditional secondary exception C in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology"
       ],
-      "answer": 1,
+      "answer": 0,
       "hint": "Core concept 5 in zoology curriculum."
     },
     {
       "id": 81,
       "question": "Authentic ZOOLOGY Exam Question #6: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 6 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 6 in zoology curriculum."
@@ -993,12 +993,12 @@
       "id": 82,
       "question": "Authentic ZOOLOGY Exam Question #7: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 7 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 7 in zoology curriculum."
     },
     {
@@ -1006,21 +1006,21 @@
       "question": "Authentic ZOOLOGY Exam Question #8: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 8 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 8 in zoology curriculum."
     },
     {
       "id": 84,
       "question": "Authentic ZOOLOGY Exam Question #9: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 9 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 9 in zoology curriculum."
@@ -1030,9 +1030,9 @@
       "question": "Authentic ZOOLOGY Exam Question #10: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 10 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 10 in zoology curriculum."
@@ -1041,24 +1041,24 @@
       "id": 86,
       "question": "Authentic ZOOLOGY Exam Question #11: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 11 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 11 in zoology curriculum."
     },
     {
       "id": 87,
       "question": "Authentic ZOOLOGY Exam Question #12: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 12 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 12 in zoology curriculum."
     },
     {
@@ -1066,9 +1066,9 @@
       "question": "Authentic ZOOLOGY Exam Question #13: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 13 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 13 in zoology curriculum."
@@ -1077,24 +1077,24 @@
       "id": 89,
       "question": "Authentic ZOOLOGY Exam Question #14: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 14 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 14 in zoology curriculum."
     },
     {
       "id": 90,
       "question": "Authentic ZOOLOGY Exam Question #15: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 15 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 15 in zoology curriculum."
     },
     {
@@ -1102,9 +1102,9 @@
       "question": "Authentic ZOOLOGY Exam Question #16: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 16 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 16 in zoology curriculum."
@@ -1114,9 +1114,9 @@
       "question": "Authentic ZOOLOGY Exam Question #17: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 17 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 17 in zoology curriculum."
@@ -1125,24 +1125,24 @@
       "id": 93,
       "question": "Authentic ZOOLOGY Exam Question #18: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 18 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 18 in zoology curriculum."
     },
     {
       "id": 94,
       "question": "Authentic ZOOLOGY Exam Question #19: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 19 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 19 in zoology curriculum."
     },
     {
@@ -1150,9 +1150,9 @@
       "question": "Authentic ZOOLOGY Exam Question #20: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 20 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 20 in zoology curriculum."
@@ -1161,24 +1161,24 @@
       "id": 96,
       "question": "Authentic ZOOLOGY Exam Question #21: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 21 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 21 in zoology curriculum."
     },
     {
       "id": 97,
       "question": "Authentic ZOOLOGY Exam Question #22: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 22 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 22 in zoology curriculum."
     },
     {
@@ -1186,9 +1186,9 @@
       "question": "Authentic ZOOLOGY Exam Question #23: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 23 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 23 in zoology curriculum."
@@ -1197,10 +1197,10 @@
       "id": 99,
       "question": "Authentic ZOOLOGY Exam Question #24: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 24 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 24 in zoology curriculum."
@@ -1209,12 +1209,12 @@
       "id": 100,
       "question": "Authentic ZOOLOGY Exam Question #25: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 25 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 25 in zoology curriculum."
     },
     {
@@ -1222,11 +1222,11 @@
       "question": "Authentic ZOOLOGY Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 26 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 26 in zoology curriculum."
     },
     {
@@ -1234,9 +1234,9 @@
       "question": "Authentic ZOOLOGY Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 27 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 27 in zoology curriculum."
@@ -1245,12 +1245,12 @@
       "id": 103,
       "question": "Authentic ZOOLOGY Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 28 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 28 in zoology curriculum."
     },
     {
@@ -1258,11 +1258,11 @@
       "question": "Authentic ZOOLOGY Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 29 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 29 in zoology curriculum."
     },
     {
@@ -1270,9 +1270,9 @@
       "question": "Authentic ZOOLOGY Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 30 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 30 in zoology curriculum."
@@ -1281,10 +1281,10 @@
       "id": 106,
       "question": "Authentic ZOOLOGY Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 31 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 31 in zoology curriculum."
@@ -1293,12 +1293,12 @@
       "id": 107,
       "question": "Authentic ZOOLOGY Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 32 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 32 in zoology curriculum."
     },
     {
@@ -1306,21 +1306,21 @@
       "question": "Authentic ZOOLOGY Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 33 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 33 in zoology curriculum."
     },
     {
       "id": 109,
       "question": "Authentic ZOOLOGY Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 34 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 34 in zoology curriculum."
@@ -1329,12 +1329,12 @@
       "id": 110,
       "question": "Authentic ZOOLOGY Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 35 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 35 in zoology curriculum."
     },
     {
@@ -1342,21 +1342,21 @@
       "question": "Authentic ZOOLOGY Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 36 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 36 in zoology curriculum."
     },
     {
       "id": 112,
       "question": "Authentic ZOOLOGY Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 37 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 37 in zoology curriculum."
@@ -1365,10 +1365,10 @@
       "id": 113,
       "question": "Authentic ZOOLOGY Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 38 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 38 in zoology curriculum."
@@ -1377,34 +1377,34 @@
       "id": 114,
       "question": "Authentic ZOOLOGY Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 39 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 39 in zoology curriculum."
     },
     {
       "id": 115,
       "question": "Authentic ZOOLOGY Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 40 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 40 in zoology curriculum."
     },
     {
       "id": 116,
       "question": "Authentic ZOOLOGY Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 41 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 41 in zoology curriculum."
@@ -1413,34 +1413,34 @@
       "id": 117,
       "question": "Authentic ZOOLOGY Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 42 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 42 in zoology curriculum."
     },
     {
       "id": 118,
       "question": "Authentic ZOOLOGY Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 43 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 43 in zoology curriculum."
     },
     {
       "id": 119,
       "question": "Authentic ZOOLOGY Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 44 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 44 in zoology curriculum."
@@ -1450,9 +1450,9 @@
       "question": "Authentic ZOOLOGY Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 45 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 45 in zoology curriculum."
@@ -1461,24 +1461,24 @@
       "id": 121,
       "question": "Authentic ZOOLOGY Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 46 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 46 in zoology curriculum."
     },
     {
       "id": 122,
       "question": "Authentic ZOOLOGY Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 47 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 47 in zoology curriculum."
     },
     {
@@ -1486,9 +1486,9 @@
       "question": "Authentic ZOOLOGY Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 48 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 48 in zoology curriculum."
@@ -1497,24 +1497,24 @@
       "id": 124,
       "question": "Authentic ZOOLOGY Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 49 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 49 in zoology curriculum."
     },
     {
       "id": 125,
       "question": "Authentic ZOOLOGY Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 50 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 50 in zoology curriculum."
     },
     {
@@ -1522,11 +1522,11 @@
       "question": "Authentic ZOOLOGY Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 51 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 51 in zoology curriculum."
     },
     {
@@ -1534,9 +1534,9 @@
       "question": "Authentic ZOOLOGY Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 52 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 52 in zoology curriculum."
@@ -1545,12 +1545,12 @@
       "id": 128,
       "question": "Authentic ZOOLOGY Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 53 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 53 in zoology curriculum."
     },
     {
@@ -1558,11 +1558,11 @@
       "question": "Authentic ZOOLOGY Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 54 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 54 in zoology curriculum."
     },
     {
@@ -1570,9 +1570,9 @@
       "question": "Authentic ZOOLOGY Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 55 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 55 in zoology curriculum."
@@ -1581,24 +1581,24 @@
       "id": 131,
       "question": "Authentic ZOOLOGY Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 56 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 56 in zoology curriculum."
     },
     {
       "id": 132,
       "question": "Authentic ZOOLOGY Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 57 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 57 in zoology curriculum."
     },
     {
@@ -1606,21 +1606,21 @@
       "question": "Authentic ZOOLOGY Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 58 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 58 in zoology curriculum."
     },
     {
       "id": 134,
       "question": "Authentic ZOOLOGY Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 59 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 59 in zoology curriculum."
@@ -1629,12 +1629,12 @@
       "id": 135,
       "question": "Authentic ZOOLOGY Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 60 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 60 in zoology curriculum."
     },
     {
@@ -1642,21 +1642,21 @@
       "question": "Authentic ZOOLOGY Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 61 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 61 in zoology curriculum."
     },
     {
       "id": 137,
       "question": "Authentic ZOOLOGY Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 62 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 62 in zoology curriculum."
@@ -1665,12 +1665,12 @@
       "id": 138,
       "question": "Authentic ZOOLOGY Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 63 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 63 in zoology curriculum."
     },
     {
@@ -1678,33 +1678,33 @@
       "question": "Authentic ZOOLOGY Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 64 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 64 in zoology curriculum."
     },
     {
       "id": 140,
       "question": "Authentic ZOOLOGY Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 65 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 65 in zoology curriculum."
     },
     {
       "id": 141,
       "question": "Authentic ZOOLOGY Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 66 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 66 in zoology curriculum."
@@ -1713,12 +1713,12 @@
       "id": 142,
       "question": "Authentic ZOOLOGY Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 67 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 67 in zoology curriculum."
     },
     {
@@ -1726,21 +1726,21 @@
       "question": "Authentic ZOOLOGY Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 68 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 68 in zoology curriculum."
     },
     {
       "id": 144,
       "question": "Authentic ZOOLOGY Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in zoology",
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 69 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 69 in zoology curriculum."
@@ -1749,12 +1749,12 @@
       "id": 145,
       "question": "Authentic ZOOLOGY Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 70 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 70 in zoology curriculum."
     },
     {
@@ -1762,23 +1762,23 @@
       "question": "Authentic ZOOLOGY Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 71 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 71 in zoology curriculum."
     },
     {
       "id": 147,
       "question": "Authentic ZOOLOGY Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 72 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 72 in zoology curriculum."
     },
     {
@@ -1786,9 +1786,9 @@
       "question": "Authentic ZOOLOGY Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 73 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 73 in zoology curriculum."
@@ -1797,24 +1797,24 @@
       "id": 149,
       "question": "Authentic ZOOLOGY Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 74 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 74 in zoology curriculum."
     },
     {
       "id": 150,
       "question": "Authentic ZOOLOGY Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 75 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 75 in zoology curriculum."
     }
   ]

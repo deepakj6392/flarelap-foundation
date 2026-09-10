@@ -26,10 +26,10 @@
       "id": 1,
       "question": "Blood Relations: His father is the only son of my father-in-law. How are they related?",
       "options": [
+        "Brother-in-law",
         "Husband",
-        "Nephew",
         "Son",
-        "Brother-in-law"
+        "Nephew"
       ],
       "answer": 2,
       "hint": "Only son of father-in-law is husband. Husband's son is her son."
@@ -38,46 +38,46 @@
       "id": 2,
       "question": "Blood Relations: She is the daughter of the only son of my grandfather. How are they related?",
       "options": [
-        "Cousin",
-        "Aunt",
+        "Mother",
         "Sister",
-        "Mother"
+        "Cousin",
+        "Aunt"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Only son of grandfather is father. Father's daughter is sister."
     },
     {
       "id": 3,
       "question": "Blood Relations: A + B means A is father of B; A - B means A is sister of B; A * B means A is son of B. What does P + Q - R * S imply?. How are they related?",
       "options": [
-        "P is brother of S",
-        "P is son of S",
+        "P is uncle of S",
         "P is married to S",
-        "P is uncle of S"
+        "P is brother of S",
+        "P is son of S"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "P is father of Q & R, S is mother of R => P & S married."
     },
     {
       "id": 4,
       "question": "Blood Relations: Pointing to a man, a woman said: 'His mother is the only daughter of my mother.'. How are they related?",
       "options": [
-        "Brother",
-        "Husband",
         "Son",
-        "Father"
+        "Brother",
+        "Father",
+        "Husband"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Only daughter of mother is self. She is his mother."
     },
     {
       "id": 5,
       "question": "Blood Relations: X is brother of Y. Y is wife of Z. Z is son of W. How is X related to Z?. How are they related?",
       "options": [
+        "Uncle",
         "Brother",
-        "Cousin",
         "Brother-in-law",
-        "Uncle"
+        "Cousin"
       ],
       "answer": 2,
       "hint": "X is wife's brother => Brother-in-law."
@@ -86,34 +86,34 @@
       "id": 6,
       "question": "Blood Relations: If P is father of Q, R is son of S, T is brother of P, and Q is sister of R, how is S related to T?. How are they related?",
       "options": [
-        "Sister",
-        "Mother",
+        "Daughter-in-law",
         "Sister-in-law",
-        "Daughter-in-law"
+        "Sister",
+        "Mother"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "S is mother of Q & R (P's wife). T is P's brother => Sister-in-law."
     },
     {
       "id": 7,
       "question": "Blood Relations: Introducing a boy, a girl said, 'He is the son of the daughter of the father of my uncle.'. How are they related?",
       "options": [
-        "Brother",
-        "Nephew",
         "Cousin",
-        "Son"
+        "Brother",
+        "Son",
+        "Nephew"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Father of uncle is grandfather. Grandfather's daughter is aunt/mother. Her son is cousin."
     },
     {
       "id": 8,
       "question": "Blood Relations: A's mother is sister of B and daughter of C. D is daughter of B and sister of E. How is C related to E?. How are they related?",
       "options": [
+        "Daughter",
         "Mother",
-        "Aunt",
         "Grandparent",
-        "Daughter"
+        "Aunt"
       ],
       "answer": 2,
       "hint": "C is parent of B, B is parent of E => C is grandparent."
@@ -122,36 +122,36 @@
       "id": 9,
       "question": "Blood Relations: Showing a picture of an old man, Amit said, 'His son is my son's uncle.' How is the old man related to Amit?. How are they related?",
       "options": [
-        "Grandfather",
-        "Brother",
+        "Uncle",
         "Father",
-        "Uncle"
+        "Grandfather",
+        "Brother"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Amit's son's uncle is Amit's brother. Old man is his father."
     },
     {
       "id": 10,
       "question": "Blood Relations: M is sister of N. N is father of O. P is wife of M. How is O related to M?. How are they related?",
       "options": [
-        "Son",
-        "Daughter",
         "Niece or Nephew",
-        "Brother"
+        "Brother",
+        "Son",
+        "Daughter"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "M is aunt of O."
     },
     {
       "id": 11,
       "question": "Blood Relations: A is father of B, but B is not his son. How is B related to A?. How are they related?",
       "options": [
-        "Son",
-        "Brother",
         "Daughter",
-        "Sister"
+        "Son",
+        "Sister",
+        "Brother"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "B is A's daughter."
     },
     {
@@ -159,9 +159,9 @@
       "question": "Blood Relations: Pointing to a photograph, Rakesh said, 'She is the mother of my son's wife.' How is Rakesh related to the woman?. How are they related?",
       "options": [
         "Husband",
-        "Brother",
+        "Son",
         "In-law",
-        "Son"
+        "Brother"
       ],
       "answer": 2,
       "hint": "Son's wife is daughter-in-law. Her mother is co-in-law."
@@ -170,24 +170,24 @@
       "id": 13,
       "question": "Blood Relations: If A is B's sister, C is B's mother, D is C's father, E is D's mother, how is A related to D?. How are they related?",
       "options": [
-        "Daughter",
-        "Sister",
         "Granddaughter",
-        "Mother"
+        "Mother",
+        "Daughter",
+        "Sister"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "D is C's father, C is A's mother => A is granddaughter."
     },
     {
       "id": 14,
       "question": "Blood Relations: B is the brother of A, whose mother is C. D is the father of C. How is B related to D?. How are they related?",
       "options": [
-        "Son",
-        "Nephew",
         "Grandson",
-        "Grandfather"
+        "Son",
+        "Grandfather",
+        "Nephew"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "C is mother of B, D is father of C => B is grandson."
     },
     {
@@ -195,9 +195,9 @@
       "question": "Blood Relations: E is brother of B, A is sister of B. How is A related to E?. How are they related?",
       "options": [
         "Brother",
-        "Mother",
+        "Aunt",
         "Sister",
-        "Aunt"
+        "Mother"
       ],
       "answer": 2,
       "hint": "A and E are siblings."
@@ -206,24 +206,24 @@
       "id": 16,
       "question": "Blood Relations: K is brother of T. T is wife of M. M is son of R. How is K related to R?. How are they related?",
       "options": [
-        "Son",
-        "Brother",
+        "Nephew",
         "Son-in-law's brother",
-        "Nephew"
+        "Son",
+        "Brother"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "K is brother of R's daughter-in-law."
     },
     {
       "id": 17,
       "question": "Blood Relations: P is brother of Q. R is mother of Q. S is father of R. T is mother of S. How is P related to S?. How are they related?",
       "options": [
-        "Son",
-        "Great-grandson",
         "Grandson",
-        "Father"
+        "Father",
+        "Son",
+        "Great-grandson"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "R is mother of P, S is father of R => P is grandson."
     },
     {
@@ -231,11 +231,11 @@
       "question": "Blood Relations: A and B are married couple. X and Y are brothers. X is brother of A. How is Y related to B?. How are they related?",
       "options": [
         "Brother",
-        "Son",
         "Brother-in-law",
-        "Cousin"
+        "Cousin",
+        "Son"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Y is A's brother => B's brother-in-law."
     },
     {
@@ -243,9 +243,9 @@
       "question": "Blood Relations: Rahul told Anand, 'Yesterday I defeated the only brother of the daughter of my grandmother.' Who did Rahul defeat?. How are they related?",
       "options": [
         "Uncle",
-        "Brother",
+        "Son",
         "Father",
-        "Son"
+        "Brother"
       ],
       "answer": 2,
       "hint": "Daughter of grandmother is aunt. Her only brother is father."
@@ -254,12 +254,12 @@
       "id": 20,
       "question": "Blood Relations: Deepak has a brother Anil. Deepak is the son of Prem. Vimal is Prem's father. In terms of relationship, how is Anil related to Vimal?. How are they related?",
       "options": [
-        "Son",
-        "Brother",
         "Grandson",
-        "Nephew"
+        "Nephew",
+        "Son",
+        "Brother"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Prem is father of Anil, Vimal is father of Prem => Anil is grandson."
     },
     {
@@ -267,11 +267,11 @@
       "question": "Blood Relations: If 'A $ B' means A is father of B, 'A # B' means A is mother of B, what does P $ Q # R mean?. How are they related?",
       "options": [
         "P is father of R",
-        "P is uncle of R",
         "P is maternal grandfather of R",
-        "P is brother of R"
+        "P is brother of R",
+        "P is uncle of R"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "P is father of Q, Q is mother of R => P is maternal grandfather."
     },
     {
@@ -279,9 +279,9 @@
       "question": "Blood Relations: Looking at a portrait, a man said, 'I have no brother or sister, but that man's father is my father's son.' Whose portrait is it?. How are they related?",
       "options": [
         "His father's",
-        "His nephew's",
+        "His own",
         "His son's",
-        "His own"
+        "His nephew's"
       ],
       "answer": 2,
       "hint": "Father's son is himself. 'That man's father is me' => His son."
@@ -290,24 +290,24 @@
       "id": 23,
       "question": "Blood Relations: A is B's brother. C is A's mother. D is C's father. F is A's son. How is F related to D?. How are they related?",
       "options": [
-        "Grandson",
-        "Son",
         "Great-grandson",
-        "Nephew"
+        "Nephew",
+        "Grandson",
+        "Son"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "D is grandfather of A. F is son of A => Great-grandson."
     },
     {
       "id": 24,
       "question": "Blood Relations: M is father of N, L is brother of M, P is mother of L. How is N related to P?. How are they related?",
       "options": [
-        "Son",
-        "Daughter",
+        "Brother",
         "Grandchild",
-        "Brother"
+        "Son",
+        "Daughter"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "P is mother of M, N is child of M => Grandchild."
     },
     {
@@ -315,35 +315,35 @@
       "question": "Blood Relations: Q is mother of P. P is wife of R. S is brother of R. How is S related to Q?. How are they related?",
       "options": [
         "Son",
-        "Nephew",
         "Son-in-law's brother",
-        "Brother"
+        "Brother",
+        "Nephew"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "P is Q's daughter. R is P's husband. S is R's brother."
     },
     {
       "id": 26,
       "question": "Authentic ENGINEERING Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 26 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 26 in engineering curriculum."
     },
     {
       "id": 27,
       "question": "Authentic ENGINEERING Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 27 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 27 in engineering curriculum."
     },
     {
@@ -351,9 +351,9 @@
       "question": "Authentic ENGINEERING Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 28 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 28 in engineering curriculum."
@@ -362,24 +362,24 @@
       "id": 29,
       "question": "Authentic ENGINEERING Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 29 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 29 in engineering curriculum."
     },
     {
       "id": 30,
       "question": "Authentic ENGINEERING Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 30 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 30 in engineering curriculum."
     },
     {
@@ -387,9 +387,9 @@
       "question": "Authentic ENGINEERING Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 31 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 31 in engineering curriculum."
@@ -398,24 +398,24 @@
       "id": 32,
       "question": "Authentic ENGINEERING Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 32 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 32 in engineering curriculum."
     },
     {
       "id": 33,
       "question": "Authentic ENGINEERING Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 33 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 33 in engineering curriculum."
     },
     {
@@ -423,11 +423,11 @@
       "question": "Authentic ENGINEERING Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 34 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 34 in engineering curriculum."
     },
     {
@@ -435,9 +435,9 @@
       "question": "Authentic ENGINEERING Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 35 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 35 in engineering curriculum."
@@ -446,24 +446,24 @@
       "id": 36,
       "question": "Authentic ENGINEERING Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 36 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 36 in engineering curriculum."
     },
     {
       "id": 37,
       "question": "Authentic ENGINEERING Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 37 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 37 in engineering curriculum."
     },
     {
@@ -471,9 +471,9 @@
       "question": "Authentic ENGINEERING Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 38 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 38 in engineering curriculum."
@@ -482,24 +482,24 @@
       "id": 39,
       "question": "Authentic ENGINEERING Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 39 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 39 in engineering curriculum."
     },
     {
       "id": 40,
       "question": "Authentic ENGINEERING Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 40 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 40 in engineering curriculum."
     },
     {
@@ -507,21 +507,21 @@
       "question": "Authentic ENGINEERING Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 41 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 41 in engineering curriculum."
     },
     {
       "id": 42,
       "question": "Authentic ENGINEERING Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 42 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 42 in engineering curriculum."
@@ -530,12 +530,12 @@
       "id": 43,
       "question": "Authentic ENGINEERING Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 43 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 43 in engineering curriculum."
     },
     {
@@ -543,21 +543,21 @@
       "question": "Authentic ENGINEERING Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 44 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 44 in engineering curriculum."
     },
     {
       "id": 45,
       "question": "Authentic ENGINEERING Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 45 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 45 in engineering curriculum."
@@ -566,24 +566,24 @@
       "id": 46,
       "question": "Authentic ENGINEERING Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 46 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 46 in engineering curriculum."
     },
     {
       "id": 47,
       "question": "Authentic ENGINEERING Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 47 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 47 in engineering curriculum."
     },
     {
@@ -591,21 +591,21 @@
       "question": "Authentic ENGINEERING Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 48 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 48 in engineering curriculum."
     },
     {
       "id": 49,
       "question": "Authentic ENGINEERING Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 49 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 49 in engineering curriculum."
@@ -614,12 +614,12 @@
       "id": 50,
       "question": "Authentic ENGINEERING Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 50 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 50 in engineering curriculum."
     },
     {
@@ -627,9 +627,9 @@
       "question": "Authentic ENGINEERING Exam Question #26: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 26 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 26 in engineering curriculum."
@@ -638,24 +638,24 @@
       "id": 52,
       "question": "Authentic ENGINEERING Exam Question #27: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 27 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 27 in engineering curriculum."
     },
     {
       "id": 53,
       "question": "Authentic ENGINEERING Exam Question #28: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 28 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 28 in engineering curriculum."
     },
     {
@@ -663,9 +663,9 @@
       "question": "Authentic ENGINEERING Exam Question #29: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 29 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 29 in engineering curriculum."
@@ -674,24 +674,24 @@
       "id": 55,
       "question": "Authentic ENGINEERING Exam Question #30: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 30 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 30 in engineering curriculum."
     },
     {
       "id": 56,
       "question": "Authentic ENGINEERING Exam Question #31: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 31 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 31 in engineering curriculum."
     },
     {
@@ -699,21 +699,21 @@
       "question": "Authentic ENGINEERING Exam Question #32: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 32 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 32 in engineering curriculum."
     },
     {
       "id": 58,
       "question": "Authentic ENGINEERING Exam Question #33: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 33 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 33 in engineering curriculum."
@@ -722,12 +722,12 @@
       "id": 59,
       "question": "Authentic ENGINEERING Exam Question #34: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 34 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 34 in engineering curriculum."
     },
     {
@@ -735,11 +735,11 @@
       "question": "Authentic ENGINEERING Exam Question #35: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 35 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 35 in engineering curriculum."
     },
     {
@@ -747,9 +747,9 @@
       "question": "Authentic ENGINEERING Exam Question #36: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 36 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 36 in engineering curriculum."
@@ -758,24 +758,24 @@
       "id": 62,
       "question": "Authentic ENGINEERING Exam Question #37: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 37 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 37 in engineering curriculum."
     },
     {
       "id": 63,
       "question": "Authentic ENGINEERING Exam Question #38: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 38 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 38 in engineering curriculum."
     },
     {
@@ -783,21 +783,21 @@
       "question": "Authentic ENGINEERING Exam Question #39: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 39 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 39 in engineering curriculum."
     },
     {
       "id": 65,
       "question": "Authentic ENGINEERING Exam Question #40: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 40 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 40 in engineering curriculum."
@@ -806,12 +806,12 @@
       "id": 66,
       "question": "Authentic ENGINEERING Exam Question #41: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 41 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 41 in engineering curriculum."
     },
     {
@@ -819,21 +819,21 @@
       "question": "Authentic ENGINEERING Exam Question #42: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 42 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 42 in engineering curriculum."
     },
     {
       "id": 68,
       "question": "Authentic ENGINEERING Exam Question #43: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 43 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 43 in engineering curriculum."
@@ -842,46 +842,46 @@
       "id": 69,
       "question": "Authentic ENGINEERING Exam Question #44: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 44 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 44 in engineering curriculum."
     },
     {
       "id": 70,
       "question": "Authentic ENGINEERING Exam Question #45: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 45 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 45 in engineering curriculum."
     },
     {
       "id": 71,
       "question": "Authentic ENGINEERING Exam Question #46: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 46 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 46 in engineering curriculum."
     },
     {
       "id": 72,
       "question": "Authentic ENGINEERING Exam Question #47: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 47 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 47 in engineering curriculum."
@@ -890,34 +890,34 @@
       "id": 73,
       "question": "Authentic ENGINEERING Exam Question #48: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 48 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 48 in engineering curriculum."
     },
     {
       "id": 74,
       "question": "Authentic ENGINEERING Exam Question #49: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 49 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 49 in engineering curriculum."
     },
     {
       "id": 75,
       "question": "Authentic ENGINEERING Exam Question #50: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 50 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 50 in engineering curriculum."
@@ -926,36 +926,36 @@
       "id": 76,
       "question": "Authentic ENGINEERING Exam Question #51: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 51 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 51 in engineering curriculum."
     },
     {
       "id": 77,
       "question": "Authentic ENGINEERING Exam Question #52: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 52 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 52 in engineering curriculum."
     },
     {
       "id": 78,
       "question": "Authentic ENGINEERING Exam Question #53: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 53 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 53 in engineering curriculum."
     },
     {
@@ -963,9 +963,9 @@
       "question": "Authentic ENGINEERING Exam Question #54: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 54 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 54 in engineering curriculum."
@@ -974,24 +974,24 @@
       "id": 80,
       "question": "Authentic ENGINEERING Exam Question #55: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 55 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 55 in engineering curriculum."
     },
     {
       "id": 81,
       "question": "Authentic ENGINEERING Exam Question #56: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 56 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 56 in engineering curriculum."
     },
     {
@@ -999,9 +999,9 @@
       "question": "Authentic ENGINEERING Exam Question #57: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 57 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 57 in engineering curriculum."
@@ -1010,24 +1010,24 @@
       "id": 83,
       "question": "Authentic ENGINEERING Exam Question #58: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 58 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 58 in engineering curriculum."
     },
     {
       "id": 84,
       "question": "Authentic ENGINEERING Exam Question #59: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 59 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 59 in engineering curriculum."
     },
     {
@@ -1035,11 +1035,11 @@
       "question": "Authentic ENGINEERING Exam Question #60: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 60 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 60 in engineering curriculum."
     },
     {
@@ -1047,9 +1047,9 @@
       "question": "Authentic ENGINEERING Exam Question #61: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 61 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 61 in engineering curriculum."
@@ -1058,24 +1058,24 @@
       "id": 87,
       "question": "Authentic ENGINEERING Exam Question #62: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 62 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 62 in engineering curriculum."
     },
     {
       "id": 88,
       "question": "Authentic ENGINEERING Exam Question #63: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 63 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 63 in engineering curriculum."
     },
     {
@@ -1083,9 +1083,9 @@
       "question": "Authentic ENGINEERING Exam Question #64: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 64 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 64 in engineering curriculum."
@@ -1094,24 +1094,24 @@
       "id": 90,
       "question": "Authentic ENGINEERING Exam Question #65: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 65 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 65 in engineering curriculum."
     },
     {
       "id": 91,
       "question": "Authentic ENGINEERING Exam Question #66: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 66 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 66 in engineering curriculum."
     },
     {
@@ -1119,21 +1119,21 @@
       "question": "Authentic ENGINEERING Exam Question #67: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 67 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 67 in engineering curriculum."
     },
     {
       "id": 93,
       "question": "Authentic ENGINEERING Exam Question #68: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 68 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 68 in engineering curriculum."
@@ -1142,12 +1142,12 @@
       "id": 94,
       "question": "Authentic ENGINEERING Exam Question #69: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 69 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 69 in engineering curriculum."
     },
     {
@@ -1155,21 +1155,21 @@
       "question": "Authentic ENGINEERING Exam Question #70: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 70 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 70 in engineering curriculum."
     },
     {
       "id": 96,
       "question": "Authentic ENGINEERING Exam Question #71: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 71 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 71 in engineering curriculum."
@@ -1178,24 +1178,24 @@
       "id": 97,
       "question": "Authentic ENGINEERING Exam Question #72: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 72 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 72 in engineering curriculum."
     },
     {
       "id": 98,
       "question": "Authentic ENGINEERING Exam Question #73: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
+        "Invalid empirical contradiction D in engineering",
         "Standard verified principle 73 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Opposing non-standard hypothesis B in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 73 in engineering curriculum."
     },
     {
@@ -1203,21 +1203,21 @@
       "question": "Authentic ENGINEERING Exam Question #74: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 74 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Invalid empirical contradiction D in engineering",
+        "Conditional secondary exception C in engineering"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 74 in engineering curriculum."
     },
     {
       "id": 100,
       "question": "Authentic ENGINEERING Exam Question #75: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in engineering",
         "Opposing non-standard hypothesis B in engineering",
-        "Conditional secondary exception C in engineering",
         "Standard verified principle 75 in engineering",
-        "Invalid empirical contradiction D in engineering"
+        "Conditional secondary exception C in engineering"
       ],
       "answer": 2,
       "hint": "Core concept 75 in engineering curriculum."

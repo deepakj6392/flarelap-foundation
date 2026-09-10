@@ -18,13 +18,20 @@ import {
   Clock,
   Check,
   AlertTriangle,
-  FileCheck
+  FileCheck,
+  Lock,
+  Sparkles,
+  ChevronLeft,
+  ChevronRight,
+  Search
 } from "lucide-react";
 
 interface CourseRecord {
   id: number;
   name: string;
   active: boolean;
+  premium?: boolean;
+  price?: number;
   category?: {
     name: string;
   };
@@ -66,8 +73,16 @@ export default function ImportMCQPage() {
   // Data states
   const [courses, setCourses] = useState<CourseRecord[]>([]);
   const [testSeriesList, setTestSeriesList] = useState<TestSeriesRecord[]>([]);
-  const [allMcqs, setAllMcqs] = useState<MCQRecord[]>([]);
+  const [mcqCountMap, setMcqCountMap] = useState<Record<string, number>>({});
   const [selectedCourseId, setSelectedCourseId] = useState<string>("");
+
+  // Test Access Pricing state (Paid vs Free)
+  const [testAccessType, setTestAccessType] = useState<"paid" | "free">("paid");
+
+  // Associated Test Series Pagination & Search states
+  const [testSeriesPage, setTestSeriesPage] = useState<number>(1);
+  const [testSeriesRowsPerPage, setTestSeriesRowsPerPage] = useState<number>(5);
+  const [testSeriesSearch, setTestSeriesSearch] = useState<string>("");
 
   // UI / Loading states
   const [loadingInitial, setLoadingInitial] = useState(true);
@@ -92,14 +107,16 @@ export default function ImportMCQPage() {
       const [coursesRes, testSeriesRes, mcqsRes] = await Promise.all([
         fetch(`${apiUrl}/api/admin/courses`, { headers }),
         fetch(`${apiUrl}/api/admin/test-series`, { headers }),
-        fetch(`${apiUrl}/api/admin/mcqs`, { headers })
+        fetch(`${apiUrl}/api/admin/mcqs?countOnly=true`, { headers })
       ]);
 
       if (coursesRes.ok) {
         const data = await coursesRes.json();
         setCourses(data.courses || []);
         if (data.courses && data.courses.length > 0 && !selectedCourseId) {
-          setSelectedCourseId(data.courses[0].id.toString());
+          const firstCourse = data.courses[0];
+          setSelectedCourseId(firstCourse.id.toString());
+          setTestAccessType(firstCourse.premium ? "paid" : "free");
         }
       }
 
@@ -110,7 +127,7 @@ export default function ImportMCQPage() {
 
       if (mcqsRes.ok) {
         const data = await mcqsRes.json();
-        setAllMcqs(data.mcqs || []);
+        setMcqCountMap(data.countMap || {});
       }
     } catch (err) {
       console.error("Failed to load initial data:", err);
@@ -123,10 +140,157 @@ export default function ImportMCQPage() {
     fetchData();
   }, []);
 
+  // Update testAccessType & reset pagination when selectedCourseId changes
+  useEffect(() => {
+    if (selectedCourseId && courses.length > 0) {
+      const c = courses.find((course) => course.id.toString() === selectedCourseId);
+      if (c) {
+        setTestAccessType(c.premium ? "paid" : "free");
+      }
+    }
+    setTestSeriesPage(1);
+    setTestSeriesSearch("");
+  }, [selectedCourseId, courses]);
+
   // Filtered Test Series for Selected Course
   const selectedCourse = courses.find((c) => c.id.toString() === selectedCourseId);
   const courseTestSeries = testSeriesList.filter((t) => t.courseId.toString() === selectedCourseId);
-  const existingQuestionCount = allMcqs.filter((m) => m.courseId.toString() === selectedCourseId).length;
+  const existingQuestionCount = mcqCountMap[selectedCourseId] || 0;
+
+  // Filtered & Paginated Test Series for Associated Table
+  const filteredCourseTestSeries = courseTestSeries.filter((t) =>
+    t.name.toLowerCase().includes(testSeriesSearch.toLowerCase()) ||
+    t.type.toLowerCase().includes(testSeriesSearch.toLowerCase())
+  );
+
+  const totalTsPages = Math.ceil(filteredCourseTestSeries.length / testSeriesRowsPerPage) || 1;
+  const currentTsPage = Math.min(testSeriesPage, totalTsPages);
+
+  const paginatedCourseTestSeries = filteredCourseTestSeries.slice(
+    (currentTsPage - 1) * testSeriesRowsPerPage,
+    currentTsPage * testSeriesRowsPerPage
+  );
+
+  // Updating single test series access state (Paid vs Free)
+  const [updatingTestId, setUpdatingTestId] = useState<number | null>(null);
+
+  const handleToggleTestAccess = async (testId: number, isFree: boolean) => {
+    setUpdatingTestId(testId);
+
+    // Optimistic UI state update
+    setTestSeriesList((prev) =>
+      prev.map((t) => (t.id === testId ? { ...t, isFree } : t))
+    );
+
+    try {
+      const storedToken = localStorage.getItem("admin_token");
+      if (!storedToken) return;
+
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${apiUrl}/api/admin/test-series/${testId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}`
+        },
+        body: JSON.stringify({ isFree })
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to update test series access.");
+      }
+
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "success",
+        title: `Test set to ${isFree ? "Free Access" : "Paid (Premium)"}`,
+        showConfirmButton: false,
+        timer: 1800,
+        timerProgressBar: true
+      });
+    } catch (err: any) {
+      console.error("Single test access update error:", err);
+      // Revert state on error
+      setTestSeriesList((prev) =>
+        prev.map((t) => (t.id === testId ? { ...t, isFree: !isFree } : t))
+      );
+      Swal.fire({
+        icon: "error",
+        title: "Update Failed",
+        text: err.message || "Failed to update test access state.",
+        confirmButtonColor: "#10b981"
+      });
+    } finally {
+      setUpdatingTestId(null);
+    }
+  };
+
+  // Bulk update all test series access state for current course
+  const handleSetAllTestsAccess = async (isFree: boolean) => {
+    if (!selectedCourseId || courseTestSeries.length === 0) return;
+
+    const accessLabel = isFree ? "Free Access" : "Paid (Premium)";
+    const confirmRes = await Swal.fire({
+      title: `Set All ${courseTestSeries.length} Tests to ${accessLabel}?`,
+      html: `All associated mock tests for <b>${selectedCourse?.name}</b> will be updated to <b>${accessLabel}</b> in the database.`,
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonText: `Yes, Set All to ${accessLabel}`,
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "#10b981"
+    });
+
+    if (!confirmRes.isConfirmed) return;
+
+    // Optimistically update all test series in UI
+    setTestSeriesList((prev) =>
+      prev.map((t) => (t.courseId.toString() === selectedCourseId ? { ...t, isFree } : t))
+    );
+
+    try {
+      const storedToken = localStorage.getItem("admin_token");
+      if (!storedToken) return;
+
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
+
+      // Send PUT requests for all test series
+      const updates = courseTestSeries.map((t) =>
+        fetch(`${apiUrl}/api/admin/test-series/${t.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${storedToken}`
+          },
+          body: JSON.stringify({ isFree })
+        })
+      );
+
+      await Promise.all(updates);
+
+      // Also update Course premium status
+      await fetch(`${apiUrl}/api/admin/courses/${selectedCourseId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${storedToken}`
+        },
+        body: JSON.stringify({ premium: !isFree })
+      });
+
+      setTestAccessType(isFree ? "free" : "paid");
+
+      Swal.fire({
+        icon: "success",
+        title: "All Tests Updated!",
+        text: `Successfully updated all ${courseTestSeries.length} tests to ${accessLabel}.`,
+        confirmButtonColor: "#10b981"
+      });
+    } catch (err: any) {
+      console.error("Bulk access update error:", err);
+      fetchData(); // Reload data on error
+    }
+  };
 
   // Download Sample Excel Template
   const handleDownloadTemplate = () => {
@@ -373,7 +537,7 @@ export default function ImportMCQPage() {
 
     const confirmRes = await Swal.fire({
       title: `Insert ${validRows.length} Questions?`,
-      html: `You are about to insert <b>${validRows.length} MCQ Questions</b> into course <b>${selectedCourse?.name || "Selected Course"}</b>.<br/><span class="text-xs text-slate-500 font-normal">Questions with missing fields will be skipped automatically.</span>`,
+      html: `You are about to insert <b>${validRows.length} MCQ Questions</b> into course <b>${selectedCourse?.name || "Selected Course"}</b>.<br/><span class="text-xs text-slate-600 dark:text-slate-400 mt-2 block font-semibold">Test Access Pricing: <b class="${testAccessType === "paid" ? "text-amber-600 dark:text-amber-400" : "text-emerald-600 dark:text-emerald-400"}">${testAccessType === "paid" ? "💳 Paid (Premium Test)" : "🎁 Free Access"}</b></span>`,
       icon: "question",
       showCancelButton: true,
       confirmButtonText: "Yes, Insert Now",
@@ -413,7 +577,8 @@ export default function ImportMCQPage() {
         },
         body: JSON.stringify({
           courseId: selectedCourseId,
-          questions: questionsPayload
+          questions: questionsPayload,
+          isPaid: testAccessType === "paid"
         })
       });
 
@@ -526,6 +691,62 @@ export default function ImportMCQPage() {
                   </select>
                 </div>
 
+                {/* Paid vs Free Mock Test Option Selector */}
+                <div className="space-y-1.5 pt-1">
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
+                    Mock Test Pricing / Access Type <span className="text-red-500">*</span>
+                  </label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {/* Paid Option */}
+                    <button
+                      type="button"
+                      onClick={() => setTestAccessType("paid")}
+                      className={`flex flex-col p-3 rounded-xl border transition-all text-left cursor-pointer ${
+                        testAccessType === "paid"
+                          ? "border-amber-500/60 bg-amber-500/10 text-amber-900 dark:text-amber-200 ring-2 ring-amber-500/30 shadow-xs"
+                          : "border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
+                          <Lock className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                          Paid (Premium)
+                        </span>
+                        {testAccessType === "paid" && (
+                          <CheckCircle2 className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
+                        )}
+                      </div>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+                        Requires student purchase / premium subscription
+                      </p>
+                    </button>
+
+                    {/* Free Option */}
+                    <button
+                      type="button"
+                      onClick={() => setTestAccessType("free")}
+                      className={`flex flex-col p-3 rounded-xl border transition-all text-left cursor-pointer ${
+                        testAccessType === "free"
+                          ? "border-emerald-500/60 bg-emerald-500/10 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30 shadow-xs"
+                          : "border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center gap-1.5 text-xs font-black text-emerald-700 dark:text-emerald-300">
+                          <Sparkles className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                          Free Access
+                        </span>
+                        {testAccessType === "free" && (
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+                        )}
+                      </div>
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
+                        Free for all registered students without payment
+                      </p>
+                    </button>
+                  </div>
+                </div>
+
                 {/* Selected Course Summary Card */}
                 {selectedCourse && (
                   <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 space-y-3">
@@ -533,9 +754,19 @@ export default function ImportMCQPage() {
                       <span className="text-[10px] font-black uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
                         Course Summary
                       </span>
-                      <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
-                        <Check className="h-3 w-3" /> Active
-                      </span>
+                      <div className="flex items-center gap-1.5">
+                        <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                          testAccessType === "paid" 
+                            ? "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30" 
+                            : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30"
+                        }`}>
+                          {testAccessType === "paid" ? <Lock className="h-3 w-3" /> : <Sparkles className="h-3 w-3" />}
+                          {testAccessType === "paid" ? "Paid (Premium)" : "Free Access"}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+                          <Check className="h-3 w-3" /> Active
+                        </span>
+                      </div>
                     </div>
 
                     <h4 className="text-sm font-black text-slate-900 dark:text-white">
@@ -559,27 +790,7 @@ export default function ImportMCQPage() {
                   </div>
                 )}
 
-                {/* Test Series associated list */}
-                {courseTestSeries.length > 0 && (
-                  <div className="space-y-2 pt-1">
-                    <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                      <FileText className="h-3.5 w-3.5 text-emerald-600" />
-                      Associated Mock Tests:
-                    </p>
-                    <div className="space-y-1.5">
-                      {courseTestSeries.map((t) => (
-                        <div key={t.id} className="flex items-center justify-between text-xs p-2 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200/60 dark:border-slate-800/60">
-                          <span className="font-semibold text-slate-700 dark:text-slate-300 truncate max-w-[150px]">
-                            {t.name}
-                          </span>
-                          <span className="text-[10px] font-bold text-slate-500 flex items-center gap-1">
-                            <Clock className="h-3 w-3" /> {t.duration} min | {t.qs} Qs
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                {/* End Step 1 Course Controls */}
               </div>
             )}
           </div>
@@ -854,6 +1065,192 @@ export default function ImportMCQPage() {
         </div>
 
       </div>
+
+      {/* Full Width Associated Mock Tests Data Table */}
+      {courseTestSeries.length > 0 && (
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-4 animate-in fade-in duration-300">
+          
+          {/* Table Header with Search & Batch Actions */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+            <div>
+              <h3 className="text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                <FileText className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                Associated Mock Tests ({filteredCourseTestSeries.length})
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Full mock tests, subject drills, and practice series linked with <strong className="text-slate-800 dark:text-slate-200">{selectedCourse?.name}</strong>.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Batch Action Buttons */}
+              <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl">
+                <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 px-1.5 uppercase">Batch Access:</span>
+                <button
+                  type="button"
+                  onClick={() => handleSetAllTestsAccess(false)}
+                  className="px-2.5 py-1 text-[10px] font-black rounded-lg border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-300 hover:bg-amber-500/20 active:scale-95 transition cursor-pointer flex items-center gap-1"
+                >
+                  <Lock className="h-3 w-3" /> Make All Paid
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleSetAllTestsAccess(true)}
+                  className="px-2.5 py-1 text-[10px] font-black rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/20 active:scale-95 transition cursor-pointer flex items-center gap-1"
+                >
+                  <Sparkles className="h-3 w-3" /> Make All Free
+                </button>
+              </div>
+
+              {/* Search Input */}
+              <div className="relative">
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400" />
+                <input
+                  type="text"
+                  value={testSeriesSearch}
+                  onChange={(e) => {
+                    setTestSeriesSearch(e.target.value);
+                    setTestSeriesPage(1);
+                  }}
+                  placeholder="Filter tests..."
+                  className="w-full sm:w-56 pl-9 pr-3.5 py-1.5 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:border-emerald-500 focus:outline-none transition shadow-2xs"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Full Width Table */}
+          <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xs">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead className="bg-slate-100/90 dark:bg-slate-900/90 text-slate-700 dark:text-slate-300 font-extrabold uppercase text-[11px] tracking-wider border-b border-slate-200 dark:border-slate-800">
+                  <tr>
+                    <th className="py-3 px-4 w-12 text-center">#</th>
+                    <th className="py-3 px-4">Test Series Name</th>
+                    <th className="py-3 px-4">Type</th>
+                    <th className="py-3 px-4 text-center">Questions</th>
+                    <th className="py-3 px-4 text-center">Duration</th>
+                    <th className="py-3 px-4 text-center">Total Marks</th>
+                    <th className="py-3 px-4 text-right">Access State</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
+                  {paginatedCourseTestSeries.length === 0 ? (
+                    <tr>
+                      <td colSpan={7} className="py-10 text-center text-slate-400 font-semibold text-xs">
+                        No mock tests found matching search filter "{testSeriesSearch}".
+                      </td>
+                    </tr>
+                  ) : (
+                    paginatedCourseTestSeries.map((t, idx) => {
+                      const globalIndex = (currentTsPage - 1) * testSeriesRowsPerPage + idx + 1;
+                      const isFreeAccess = t.isFree;
+
+                      return (
+                        <tr key={t.id} className="hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
+                          <td className="py-3 px-4 text-center font-mono font-bold text-slate-400">
+                            #{globalIndex}
+                          </td>
+                          <td className="py-3 px-4 font-bold text-slate-900 dark:text-slate-100">
+                            {t.name}
+                          </td>
+                          <td className="py-3 px-4 whitespace-nowrap">
+                            <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
+                              t.type.toLowerCase().includes("full") 
+                                ? "bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20"
+                                : "bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20"
+                            }`}>
+                              {t.type}
+                            </span>
+                          </td>
+                          <td className="py-3 px-4 text-center font-black text-slate-700 dark:text-slate-300">
+                            {t.qs} Qs
+                          </td>
+                          <td className="py-3 px-4 text-center font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                            <span className="inline-flex items-center gap-1">
+                              <Clock className="h-3.5 w-3.5 text-emerald-600" /> {t.duration} min
+                            </span>
+                          </td>
+                          <td className="py-3 px-4 text-center font-bold text-slate-700 dark:text-slate-300">
+                            {t.marks} Marks
+                          </td>
+                          <td className="py-3 px-4 text-right whitespace-nowrap">
+                            <div className="inline-flex items-center justify-end">
+                              <select
+                                value={isFreeAccess ? "free" : "paid"}
+                                onChange={(e) => handleToggleTestAccess(t.id, e.target.value === "free")}
+                                disabled={updatingTestId === t.id}
+                                className={`px-3 py-1 text-[11px] font-extrabold rounded-full border outline-none transition cursor-pointer shadow-2xs ${
+                                  isFreeAccess
+                                    ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/25"
+                                    : "bg-amber-500/15 text-amber-800 dark:text-amber-300 border-amber-500/40 hover:bg-amber-500/25"
+                                } ${updatingTestId === t.id ? "opacity-50 cursor-not-allowed" : ""}`}
+                              >
+                                <option value="paid" className="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-bold">
+                                  🔒 Paid (Premium)
+                                </option>
+                                <option value="free" className="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-bold">
+                                  🎁 Free Access
+                                </option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-500">
+              <div>
+                Showing <span className="font-extrabold text-slate-900 dark:text-slate-100">{Math.min((currentTsPage - 1) * testSeriesRowsPerPage + 1, filteredCourseTestSeries.length)}</span> to <span className="font-extrabold text-slate-900 dark:text-slate-100">{Math.min(currentTsPage * testSeriesRowsPerPage, filteredCourseTestSeries.length)}</span> of <span className="font-extrabold text-slate-900 dark:text-slate-100">{filteredCourseTestSeries.length}</span> tests (Page {currentTsPage} of {totalTsPages})
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs">Show</span>
+                  <select
+                    value={testSeriesRowsPerPage}
+                    onChange={(e) => {
+                      setTestSeriesRowsPerPage(Number(e.target.value));
+                      setTestSeriesPage(1);
+                    }}
+                    className="px-2 py-1 text-xs font-bold rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:outline-none"
+                  >
+                    <option value={5}>5 tests</option>
+                    <option value={10}>10 tests</option>
+                    <option value={20}>20 tests</option>
+                    <option value={50}>50 tests</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setTestSeriesPage((p) => Math.max(1, p - 1))}
+                    disabled={currentTsPage === 1}
+                    className="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer flex items-center gap-1 font-bold text-xs"
+                  >
+                    <ChevronLeft className="h-4 w-4" /> Previous
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setTestSeriesPage((p) => Math.min(totalTsPages, p + 1))}
+                    disabled={currentTsPage >= totalTsPages}
+                    className="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer flex items-center gap-1 font-bold text-xs"
+                  >
+                    Next <ChevronRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

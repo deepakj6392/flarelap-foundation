@@ -31,12 +31,12 @@
       "id": 1,
       "question": "Authentic PHYSICS Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
-        "Conditional secondary exception C in physics",
         "Standard verified principle 76 in physics",
-        "Invalid empirical contradiction D in physics"
+        "Invalid empirical contradiction D in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 76 in physics curriculum."
     },
     {
@@ -44,11 +44,11 @@
       "question": "Authentic PHYSICS Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
-        "Conditional secondary exception C in physics",
         "Standard verified principle 77 in physics",
-        "Invalid empirical contradiction D in physics"
+        "Invalid empirical contradiction D in physics",
+        "Conditional secondary exception C in physics"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 77 in physics curriculum."
     },
     {
@@ -56,9 +56,9 @@
       "question": "Authentic PHYSICS Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in physics",
-        "Conditional secondary exception C in physics",
+        "Invalid empirical contradiction D in physics",
         "Standard verified principle 78 in physics",
-        "Invalid empirical contradiction D in physics"
+        "Conditional secondary exception C in physics"
       ],
       "answer": 2,
       "hint": "Core concept 78 in physics curriculum."
@@ -67,10 +67,10 @@
       "id": 4,
       "question": "Authentic PHYSICS Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in physics",
         "Opposing non-standard hypothesis B in physics",
-        "Conditional secondary exception C in physics",
         "Standard verified principle 79 in physics",
-        "Invalid empirical contradiction D in physics"
+        "Conditional secondary exception C in physics"
       ],
       "answer": 2,
       "hint": "Core concept 79 in physics curriculum."
@@ -79,22 +79,22 @@
       "id": 5,
       "question": "Authentic PHYSICS Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in physics",
-        "Conditional secondary exception C in physics",
         "Standard verified principle 80 in physics",
-        "Invalid empirical contradiction D in physics"
+        "Invalid empirical contradiction D in physics",
+        "Opposing non-standard hypothesis B in physics",
+        "Conditional secondary exception C in physics"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 80 in physics curriculum."
     },
     {
       "id": 6,
       "question": "Authentic CHEMISTRY Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 76 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 76 in chemistry curriculum."
@@ -103,10 +103,10 @@
       "id": 7,
       "question": "Authentic CHEMISTRY Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 77 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 77 in chemistry curriculum."
@@ -115,12 +115,12 @@
       "id": 8,
       "question": "Authentic CHEMISTRY Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 78 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 78 in chemistry curriculum."
     },
     {
@@ -128,21 +128,21 @@
       "question": "Authentic CHEMISTRY Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 79 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 79 in chemistry curriculum."
     },
     {
       "id": 10,
       "question": "Authentic CHEMISTRY Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 80 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 80 in chemistry curriculum."
@@ -151,34 +151,34 @@
       "id": 11,
       "question": "Authentic BOTANY Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 76 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 76 in botany curriculum."
     },
     {
       "id": 12,
       "question": "Authentic BOTANY Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 77 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 77 in botany curriculum."
     },
     {
       "id": 13,
       "question": "Authentic BOTANY Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in botany",
         "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 78 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Conditional secondary exception C in botany"
       ],
       "answer": 2,
       "hint": "Core concept 78 in botany curriculum."
@@ -187,24 +187,24 @@
       "id": 14,
       "question": "Authentic BOTANY Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
+        "Invalid empirical contradiction D in botany",
         "Standard verified principle 79 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 79 in botany curriculum."
     },
     {
       "id": 15,
       "question": "Authentic BOTANY Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in botany",
-        "Conditional secondary exception C in botany",
         "Standard verified principle 80 in botany",
-        "Invalid empirical contradiction D in botany"
+        "Opposing non-standard hypothesis B in botany",
+        "Invalid empirical contradiction D in botany",
+        "Conditional secondary exception C in botany"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 80 in botany curriculum."
     },
     {
@@ -212,9 +212,9 @@
       "question": "Authentic ZOOLOGY Exam Question #76: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 76 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 76 in zoology curriculum."
@@ -223,24 +223,24 @@
       "id": 17,
       "question": "Authentic ZOOLOGY Exam Question #77: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 77 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 77 in zoology curriculum."
     },
     {
       "id": 18,
       "question": "Authentic ZOOLOGY Exam Question #78: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
         "Standard verified principle 78 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Invalid empirical contradiction D in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 78 in zoology curriculum."
     },
     {
@@ -248,9 +248,9 @@
       "question": "Authentic ZOOLOGY Exam Question #79: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 79 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Conditional secondary exception C in zoology"
       ],
       "answer": 2,
       "hint": "Core concept 79 in zoology curriculum."
@@ -259,12 +259,12 @@
       "id": 20,
       "question": "Authentic ZOOLOGY Exam Question #80: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in zoology",
-        "Conditional secondary exception C in zoology",
+        "Invalid empirical contradiction D in zoology",
         "Standard verified principle 80 in zoology",
-        "Invalid empirical contradiction D in zoology"
+        "Opposing non-standard hypothesis B in zoology",
+        "Conditional secondary exception C in zoology"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 80 in zoology curriculum."
     }
   ]

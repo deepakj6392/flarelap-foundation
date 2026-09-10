@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
-// GET: Fetch all MCQ questions with course details
 export async function GET(request: Request) {
   const admin = verifyAdmin(request);
   if (!admin) {
@@ -10,13 +9,50 @@ export async function GET(request: Request) {
   }
 
   try {
+    const { searchParams } = new URL(request.url);
+    const courseId = searchParams.get("courseId");
+    const countOnly = searchParams.get("countOnly");
+
+    // Return count per course if countOnly=true
+    if (countOnly === "true") {
+      const counts = await prisma.mCQQuestion.groupBy({
+        by: ["courseId"],
+        _count: { id: true }
+      });
+      const countMap: Record<string, number> = {};
+      counts.forEach((c) => {
+        countMap[c.courseId.toString()] = c._count.id;
+      });
+      return NextResponse.json({ success: true, countMap });
+    }
+
+    const where: any = {};
+    if (courseId) {
+      const cId = parseInt(courseId, 10);
+      if (!isNaN(cId)) {
+        where.courseId = cId;
+      }
+    }
+
+    const limitParam = searchParams.get("limit");
+    const take = limitParam ? parseInt(limitParam, 10) : (courseId ? undefined : 1000);
+
     const mcqs = await prisma.mCQQuestion.findMany({
-      include: {
+      where,
+      take,
+      select: {
+        id: true,
+        courseId: true,
+        question: true,
+        options: true,
+        answer: true,
+        hint: true,
+        createdAt: true,
         course: {
           select: { name: true }
         }
       },
-      orderBy: { createdAt: "desc" }
+      orderBy: { id: "desc" }
     });
     return NextResponse.json({ success: true, mcqs });
   } catch (error: any) {

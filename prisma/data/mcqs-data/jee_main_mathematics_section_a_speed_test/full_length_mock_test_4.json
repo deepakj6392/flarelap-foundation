@@ -22,11 +22,11 @@
       "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 8%, Joint Work = 7.47 days",
         "Profit = 6.5%, Joint Work = 6.67 days",
-        "Profit = 10%, Joint Work = 30 days",
-        "Profit = 8%, Joint Work = 7.47 days"
+        "Profit = 10%, Joint Work = 30 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
@@ -35,22 +35,22 @@
       "options": [
         "Profit = 12.5%, Joint Work = 8.969999999999999 days",
         "Profit = 9%, Joint Work = 7.17 days",
-        "Profit = 15%, Joint Work = 32 days",
-        "Profit = 10.5%, Joint Work = 7.97 days"
+        "Profit = 10.5%, Joint Work = 7.97 days",
+        "Profit = 15%, Joint Work = 32 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
       "id": 3,
       "question": "Quantitative Problem #78: A shopkeeper buys an item at cost ₹7950, marks it 40% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 16 days and B in 18 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 33%, Joint Work = 8.47 days",
         "Profit = 31.5%, Joint Work = 7.670000000000001 days",
-        "Profit = 35%, Joint Work = 34 days",
-        "Profit = 33%, Joint Work = 8.47 days"
+        "Profit = 35%, Joint Work = 9.47 days",
+        "Profit = 35%, Joint Work = 34 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
@@ -58,11 +58,11 @@
       "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 35%, Joint Work = 8.97 days",
         "Profit = 33.5%, Joint Work = 8.17 days",
-        "Profit = 40%, Joint Work = 36 days",
-        "Profit = 35%, Joint Work = 8.97 days"
+        "Profit = 40%, Joint Work = 36 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
@@ -71,34 +71,34 @@
       "options": [
         "Profit = -4.5%, Joint Work = 10.47 days",
         "Profit = -8%, Joint Work = 8.67 days",
-        "Profit = -5%, Joint Work = 38 days",
-        "Profit = -6.5%, Joint Work = 9.47 days"
+        "Profit = -6.5%, Joint Work = 9.47 days",
+        "Profit = -5%, Joint Work = 38 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     },
     {
       "id": 6,
       "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 14%, Joint Work = 9.98 days",
         "Profit = 12.5%, Joint Work = 9.18 days",
-        "Profit = 15%, Joint Work = 40 days",
-        "Profit = 14%, Joint Work = 9.98 days"
+        "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 15%, Joint Work = 40 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
     },
     {
       "id": 7,
       "question": "Quantitative Problem #82: A shopkeeper buys an item at cost ₹8350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
+        "Profit = 17%, Joint Work = 10.48 days",
         "Profit = 19%, Joint Work = 11.48 days",
         "Profit = 15.5%, Joint Work = 9.68 days",
-        "Profit = 20%, Joint Work = 42 days",
-        "Profit = 17%, Joint Work = 10.48 days"
+        "Profit = 20%, Joint Work = 42 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((9769.5 - 8350) / 8350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
     },
     {
@@ -106,47 +106,47 @@
       "question": "Quantitative Problem #83: A shopkeeper buys an item at cost ₹8450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 19%, Joint Work = 10.98 days",
         "Profit = 17.5%, Joint Work = 10.18 days",
-        "Profit = 25%, Joint Work = 44 days",
-        "Profit = 19%, Joint Work = 10.98 days"
+        "Profit = 25%, Joint Work = 44 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((10055.5 - 8450) / 8450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
     },
     {
       "id": 9,
       "question": "Quantitative Problem #84: A shopkeeper buys an item at cost ₹8550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
         "Profit = 41%, Joint Work = 6.26 days",
-        "Profit = 45%, Joint Work = 34 days",
-        "Profit = 42.5%, Joint Work = 7.06 days"
+        "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 42.5%, Joint Work = 7.06 days",
+        "Profit = 45%, Joint Work = 34 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((12183.75 - 8550) / 8550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
     },
     {
       "id": 10,
       "question": "Quantitative Problem #85: A shopkeeper buys an item at cost ₹8650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -1%, Joint Work = 7.64 days",
         "Profit = -2.5%, Joint Work = 6.84 days",
-        "Profit = 0%, Joint Work = 36 days",
-        "Profit = -1%, Joint Work = 7.64 days"
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = 0%, Joint Work = 36 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((8563.5 - 8650) / 8650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
     },
     {
       "id": 11,
       "question": "Quantitative Problem #76: A shopkeeper buys an item at cost ₹7750, marks it 20% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 14 days and B in 16 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 8%, Joint Work = 7.47 days",
         "Profit = 6.5%, Joint Work = 6.67 days",
-        "Profit = 10%, Joint Work = 30 days",
-        "Profit = 8%, Joint Work = 7.47 days"
+        "Profit = 10%, Joint Work = 8.469999999999999 days",
+        "Profit = 10%, Joint Work = 30 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((8370 - 7750) / 7750) * 100 = 8%. Combined Work = (14*16)/(14+16) = 7.47 days."
     },
     {
@@ -154,11 +154,11 @@
       "question": "Quantitative Problem #77: A shopkeeper buys an item at cost ₹7850, marks it 30% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 15 days and B in 17 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 12.5%, Joint Work = 8.969999999999999 days",
+        "Profit = 10.5%, Joint Work = 7.97 days",
         "Profit = 9%, Joint Work = 7.17 days",
-        "Profit = 15%, Joint Work = 32 days",
-        "Profit = 10.5%, Joint Work = 7.97 days"
+        "Profit = 15%, Joint Work = 32 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((8674.25 - 7850) / 7850) * 100 = 10.5%. Combined Work = (15*17)/(15+17) = 7.97 days."
     },
     {
@@ -167,22 +167,22 @@
       "options": [
         "Profit = 35%, Joint Work = 9.47 days",
         "Profit = 31.5%, Joint Work = 7.670000000000001 days",
-        "Profit = 35%, Joint Work = 34 days",
-        "Profit = 33%, Joint Work = 8.47 days"
+        "Profit = 33%, Joint Work = 8.47 days",
+        "Profit = 35%, Joint Work = 34 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((10573.5 - 7950) / 7950) * 100 = 33%. Combined Work = (16*18)/(16+18) = 8.47 days."
     },
     {
       "id": 14,
       "question": "Quantitative Problem #79: A shopkeeper buys an item at cost ₹8050, marks it 50% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 17 days and B in 19 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 35%, Joint Work = 8.97 days",
         "Profit = 33.5%, Joint Work = 8.17 days",
-        "Profit = 40%, Joint Work = 36 days",
-        "Profit = 35%, Joint Work = 8.97 days"
+        "Profit = 37%, Joint Work = 9.97 days",
+        "Profit = 40%, Joint Work = 36 days"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Profit % = ((10867.5 - 8050) / 8050) * 100 = 35%. Combined Work = (17*19)/(17+19) = 8.97 days."
     },
     {
@@ -190,11 +190,11 @@
       "question": "Quantitative Problem #80: A shopkeeper buys an item at cost ₹8150, marks it 10% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 18 days and B in 20 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = -4.5%, Joint Work = 10.47 days",
+        "Profit = -6.5%, Joint Work = 9.47 days",
         "Profit = -8%, Joint Work = 8.67 days",
-        "Profit = -5%, Joint Work = 38 days",
-        "Profit = -6.5%, Joint Work = 9.47 days"
+        "Profit = -5%, Joint Work = 38 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((7620.25 - 8150) / 8150) * 100 = -6.5%. Combined Work = (18*20)/(18+20) = 9.47 days."
     },
     {
@@ -202,35 +202,35 @@
       "question": "Quantitative Problem #81: A shopkeeper buys an item at cost ₹8250, marks it 20% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 19 days and B in 21 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 16%, Joint Work = 10.98 days",
+        "Profit = 14%, Joint Work = 9.98 days",
         "Profit = 12.5%, Joint Work = 9.18 days",
-        "Profit = 15%, Joint Work = 40 days",
-        "Profit = 14%, Joint Work = 9.98 days"
+        "Profit = 15%, Joint Work = 40 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((9405 - 8250) / 8250) * 100 = 14%. Combined Work = (19*21)/(19+21) = 9.98 days."
     },
     {
       "id": 17,
       "question": "Quantitative Problem #82: A shopkeeper buys an item at cost ₹8350, marks it 30% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 20 days and B in 22 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 19%, Joint Work = 11.48 days",
         "Profit = 15.5%, Joint Work = 9.68 days",
-        "Profit = 20%, Joint Work = 42 days",
-        "Profit = 17%, Joint Work = 10.48 days"
+        "Profit = 19%, Joint Work = 11.48 days",
+        "Profit = 17%, Joint Work = 10.48 days",
+        "Profit = 20%, Joint Work = 42 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((9769.5 - 8350) / 8350) * 100 = 17%. Combined Work = (20*22)/(20+22) = 10.48 days."
     },
     {
       "id": 18,
       "question": "Quantitative Problem #83: A shopkeeper buys an item at cost ₹8450, marks it 40% above cost and gives 15% discount. Simultaneously, Worker A completes a job in 21 days and B in 23 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 21%, Joint Work = 11.98 days",
         "Profit = 17.5%, Joint Work = 10.18 days",
-        "Profit = 25%, Joint Work = 44 days",
-        "Profit = 19%, Joint Work = 10.98 days"
+        "Profit = 19%, Joint Work = 10.98 days",
+        "Profit = 21%, Joint Work = 11.98 days",
+        "Profit = 25%, Joint Work = 44 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((10055.5 - 8450) / 8450) * 100 = 19%. Combined Work = (21*23)/(21+23) = 10.98 days."
     },
     {
@@ -238,23 +238,23 @@
       "question": "Quantitative Problem #84: A shopkeeper buys an item at cost ₹8550, marks it 50% above cost and gives 5% discount. Simultaneously, Worker A completes a job in 10 days and B in 24 days. Find the net profit percentage and joint work days:",
       "options": [
         "Profit = 44.5%, Joint Work = 8.059999999999999 days",
+        "Profit = 42.5%, Joint Work = 7.06 days",
         "Profit = 41%, Joint Work = 6.26 days",
-        "Profit = 45%, Joint Work = 34 days",
-        "Profit = 42.5%, Joint Work = 7.06 days"
+        "Profit = 45%, Joint Work = 34 days"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Profit % = ((12183.75 - 8550) / 8550) * 100 = 42.5%. Combined Work = (10*24)/(10+24) = 7.06 days."
     },
     {
       "id": 20,
       "question": "Quantitative Problem #85: A shopkeeper buys an item at cost ₹8650, marks it 10% above cost and gives 10% discount. Simultaneously, Worker A completes a job in 11 days and B in 25 days. Find the net profit percentage and joint work days:",
       "options": [
-        "Profit = 1%, Joint Work = 8.64 days",
         "Profit = -2.5%, Joint Work = 6.84 days",
-        "Profit = 0%, Joint Work = 36 days",
-        "Profit = -1%, Joint Work = 7.64 days"
+        "Profit = 1%, Joint Work = 8.64 days",
+        "Profit = -1%, Joint Work = 7.64 days",
+        "Profit = 0%, Joint Work = 36 days"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Profit % = ((8563.5 - 8650) / 8650) * 100 = -1%. Combined Work = (11*25)/(11+25) = 7.64 days."
     }
   ]

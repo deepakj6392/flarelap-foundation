@@ -17,9 +17,9 @@
       "question": "Authentic TEACHING Exam Question #186: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
+        "Invalid empirical contradiction D in teaching",
         "Standard verified principle 186 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 186 in teaching curriculum."
@@ -28,24 +28,24 @@
       "id": 2,
       "question": "Authentic TEACHING Exam Question #187: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 187 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 187 in teaching curriculum."
     },
     {
       "id": 3,
       "question": "Authentic TEACHING Exam Question #188: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 188 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Opposing non-standard hypothesis B in teaching",
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 188 in teaching curriculum."
     },
     {
@@ -53,21 +53,21 @@
       "question": "Authentic TEACHING Exam Question #189: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 189 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 189 in teaching curriculum."
     },
     {
       "id": 5,
       "question": "Authentic TEACHING Exam Question #190: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in teaching",
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 190 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 190 in teaching curriculum."
@@ -76,12 +76,12 @@
       "id": 6,
       "question": "Authentic TEACHING Exam Question #191: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 191 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 191 in teaching curriculum."
     },
     {
@@ -89,21 +89,21 @@
       "question": "Authentic TEACHING Exam Question #192: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 192 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 192 in teaching curriculum."
     },
     {
       "id": 8,
       "question": "Authentic TEACHING Exam Question #193: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in teaching",
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 193 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 193 in teaching curriculum."
@@ -112,12 +112,12 @@
       "id": 9,
       "question": "Authentic TEACHING Exam Question #194: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 194 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 194 in teaching curriculum."
     },
     {
@@ -125,11 +125,11 @@
       "question": "Authentic TEACHING Exam Question #195: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 195 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 195 in teaching curriculum."
     },
     {
@@ -137,21 +137,21 @@
       "question": "Authentic TEACHING Exam Question #196: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 196 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 196 in teaching curriculum."
     },
     {
       "id": 12,
       "question": "Authentic TEACHING Exam Question #197: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in teaching",
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 197 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 197 in teaching curriculum."
@@ -160,12 +160,12 @@
       "id": 13,
       "question": "Authentic TEACHING Exam Question #198: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
+        "Invalid empirical contradiction D in teaching",
         "Standard verified principle 198 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 198 in teaching curriculum."
     },
     {
@@ -173,21 +173,21 @@
       "question": "Authentic TEACHING Exam Question #199: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 199 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 199 in teaching curriculum."
     },
     {
       "id": 15,
       "question": "Authentic TEACHING Exam Question #200: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in teaching",
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 200 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 200 in teaching curriculum."
@@ -196,12 +196,12 @@
       "id": 16,
       "question": "Authentic TEACHING Exam Question #201: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
+        "Invalid empirical contradiction D in teaching",
         "Standard verified principle 201 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 201 in teaching curriculum."
     },
     {
@@ -209,33 +209,33 @@
       "question": "Authentic TEACHING Exam Question #202: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 202 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 202 in teaching curriculum."
     },
     {
       "id": 18,
       "question": "Authentic TEACHING Exam Question #203: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 203 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Opposing non-standard hypothesis B in teaching",
+        "Invalid empirical contradiction D in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 203 in teaching curriculum."
     },
     {
       "id": 19,
       "question": "Authentic TEACHING Exam Question #204: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in teaching",
         "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
         "Standard verified principle 204 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Conditional secondary exception C in teaching"
       ],
       "answer": 2,
       "hint": "Core concept 204 in teaching curriculum."
@@ -244,12 +244,12 @@
       "id": 20,
       "question": "Authentic TEACHING Exam Question #205: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in teaching",
-        "Conditional secondary exception C in teaching",
+        "Invalid empirical contradiction D in teaching",
         "Standard verified principle 205 in teaching",
-        "Invalid empirical contradiction D in teaching"
+        "Opposing non-standard hypothesis B in teaching",
+        "Conditional secondary exception C in teaching"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 205 in teaching curriculum."
     }
   ]

@@ -72,25 +72,24 @@ function generateSubjectQuestion(courseName, subjectName, qNumber, testSeed, tes
   let answerIndex = baseTemplate.a;
   let hint = baseTemplate.h;
 
-  const correctText = options[answerIndex];
-  const otherTexts = options.filter((_, idx) => idx !== answerIndex);
+  const indexedOptions = options.map((opt, idx) => ({
+    text: opt,
+    isCorrect: idx === answerIndex
+  }));
   
-  const shuffledOptions = new Array(4);
-  const newAnsIndex = Math.floor(prng() * 4);
-  
-  shuffledOptions[newAnsIndex] = correctText;
-  let oIdx = 0;
-  for (let i = 0; i < 4; i++) {
-    if (i !== newAnsIndex) {
-      shuffledOptions[i] = otherTexts[oIdx++];
-    }
+  for (let i = indexedOptions.length - 1; i > 0; i--) {
+    const j = Math.floor(prng() * (i + 1));
+    [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
   }
+  
+  const shuffledOptions = indexedOptions.map(item => item.text);
+  const newAnsIndex = indexedOptions.findIndex(item => item.isCorrect);
 
   return {
     id: qNumber,
     question: finalQText,
     options: shuffledOptions,
-    answer: newAnsIndex,
+    answer: newAnsIndex >= 0 ? newAnsIndex : 0,
     hint: hint
   };
 }

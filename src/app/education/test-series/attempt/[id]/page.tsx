@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { translateTextToHindi, translateOptionToHindi } from "@/lib/translator";
-import { generateUniqueQuestions } from "@/lib/questionGenerator";
+import { generateUniqueQuestions, shuffleQuestionOptions } from "@/lib/questionGenerator";
 import { getCourseSubjects } from "@/lib/testSeriesGenerator";
 
 
@@ -183,11 +183,11 @@ export default function CBTTestAttemptPage() {
         const mcqData = await mcqRes.json();
         
         if (mcqData.testQuestions && Array.isArray(mcqData.testQuestions) && mcqData.testQuestions.length > 0) {
-          setQuestions(mcqData.testQuestions);
+          setQuestions(mcqData.testQuestions.map((q: any) => shuffleQuestionOptions(q)));
         } else {
           const dbMcqs: MCQQuestion[] = mcqData.courseMcqs || [];
           const uniqueQuestions = generateUniqueQuestions(courseTitle, details.name, details.qs, dbMcqs);
-          setQuestions(uniqueQuestions);
+          setQuestions(uniqueQuestions.map((q: any) => shuffleQuestionOptions(q)));
         }
       } catch (err: any) {
         console.error(err);

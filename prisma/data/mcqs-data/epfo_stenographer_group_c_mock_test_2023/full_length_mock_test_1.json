@@ -26,12 +26,12 @@
       "id": 1,
       "question": "Coding-Decoding: In a specific coding system, 'TEACHER' is written as 'VGCEJGT'. Following the logic (Each letter shifted +2), how is 'STUDENT' written?",
       "options": [
-        "VWFGPVU",
         "UWWFGPW",
-        "VPGFWVU",
-        "UVWFGPV"
+        "VWFGPVU",
+        "UVWFGPV",
+        "VPGFWVU"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Each letter shifted +2. 'STUDENT' becomes 'UVWFGPV'."
     },
     {
@@ -40,34 +40,34 @@
       "options": [
         "OJDJEFME",
         "FOJDJFFM",
-        "MFEJDJOE",
-        "EOJDJEFM"
+        "EOJDJEFM",
+        "MFEJDJOE"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Reverse order with +1 shift. 'MEDICINE' becomes 'EOJDJEFM'."
     },
     {
       "id": 3,
       "question": "Coding-Decoding: In a specific coding system, 'TRIANGLE' is written as 'SUJBMHKF'. Following the logic (Alternate +1 and -1 shift), how is 'POLYGON' written?",
       "options": [
-        "PMZHPOQ",
         "QPMZHPO",
-        "OPHZMPQ",
-        "QPMZHPO"
+        "QPMZHPO",
+        "PMZHPOQ",
+        "OPHZMPQ"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Alternate +1 and -1 shift. 'POLYGON' becomes 'QPMZHPO'."
     },
     {
       "id": 4,
       "question": "Coding-Decoding: In a specific coding system, 'MONKEY' is written as 'XDJMNL'. Following the logic (Reverse position minus 1), how is 'TIGER' written?",
       "options": [
+        "QDFHS",
         "DFHSQ",
         "QDFHS",
-        "SHFDQ",
-        "QDFHS"
+        "SHFDQ"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: Reverse position minus 1. 'TIGER' becomes 'QDFHS'."
     },
     {
@@ -76,34 +76,34 @@
       "options": [
         "BUJFOUQ",
         "QBUJFOU",
-        "UOFJUBQ",
-        "QBUJFOU"
+        "QBUJFOU",
+        "UOFJUBQ"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Vowels +1, Consonants +1. 'PATIENT' becomes 'QBUJFOU'."
     },
     {
       "id": 6,
       "question": "Coding-Decoding: In a specific coding system, 'ALPHABET' is written as 'ZKOYZYSG'. Following the logic (Opposite letter alphabet pair (A-Z, B-Y)), how is 'SENTENCE' written?",
       "options": [
-        "VMGVMXVH",
         "HWMGWMXW",
-        "VXMVGMVH",
-        "HVMGVMXV"
+        "HVMGVMXV",
+        "VMGVMXVH",
+        "VXMVGMVH"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Opposite letter alphabet pair (A-Z, B-Y). 'SENTENCE' becomes 'HVMGVMXV'."
     },
     {
       "id": 7,
       "question": "Coding-Decoding: In a specific coding system, 'FRACTION' is written as 'MNAETCIO'. Following the logic (First and second half split and reversed), how is 'NUMERATOR' written?",
       "options": [
+        "RTOANERUM",
         "TOANERUMR",
         "RTOANFRUM",
-        "MURENAOTR",
-        "RTOANERUM"
+        "MURENAOTR"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: First and second half split and reversed. 'NUMERATOR' becomes 'RTOANERUM'."
     },
     {
@@ -112,10 +112,10 @@
       "options": [
         "VOCFSO",
         "OWOCFS",
-        "SFCOVO",
-        "OVOCFS"
+        "OVOCFS",
+        "SFCOVO"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Shift +1 on consonants and +2 on vowels. 'NUMBER' becomes 'OVOCFS'."
     },
     {
@@ -124,34 +124,34 @@
       "options": [
         "BOBOBC",
         "CBOBOB",
-        "BOBOBC",
-        "CBOBOB"
+        "CBOBOB",
+        "BOBOBC"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: First letter +1, vowels shifted to next vowel. 'BANANA' becomes 'CBOBOB'."
     },
     {
       "id": 10,
       "question": "Coding-Decoding: In a specific coding system, 'KNOWLEDGE' is written as 'LOMXMFDHF'. Following the logic (Alternating +1 and -1 on positions), how is 'WISDOM' written?",
       "options": [
-        "JTETNX",
+        "XJTETN",
         "XJTFTN",
-        "NTETJX",
-        "XJTETN"
+        "JTETNX",
+        "NTETJX"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: Alternating +1 and -1 on positions. 'WISDOM' becomes 'XJTETN'."
     },
     {
       "id": 11,
       "question": "Coding-Decoding: In a specific coding system, 'SYSTEM' is written as 'SYSMET'. Following the logic (First 3 letters reversed, last 3 reversed), how is 'FRACTION' written?",
       "options": [
+        "CARFTNOI",
         "ARFTNOIC",
         "CARFTNOI",
-        "IONTFRAC",
-        "CARFTNOI"
+        "IONTFRAC"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: First 3 letters reversed, last 3 reversed. 'FRACTION' becomes 'CARFTNOI'."
     },
     {
@@ -160,34 +160,34 @@
       "options": [
         "RIUCLRAC",
         "CRIUCLRA",
-        "ARLCUIRC",
-        "CRIUCLRA"
+        "CRIUCLRA",
+        "ARLCUIRC"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Vowels swapped with adjacent consonants. 'CIRCULAR' becomes 'CRIUCLRA'."
     },
     {
       "id": 13,
       "question": "Coding-Decoding: In a specific coding system, 'BOMBAIL' is written as 'BOMBMLI'. Following the logic (Vowels replaced by next alphabetical vowel), how is 'HARBOUR' written?",
       "options": [
-        "ARBROUH",
         "HARBROU",
-        "UORBRAH",
-        "HARBROU"
+        "HARBROU",
+        "ARBROUH",
+        "UORBRAH"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: Vowels replaced by next alphabetical vowel. 'HARBOUR' becomes 'HARBROU'."
     },
     {
       "id": 14,
       "question": "Coding-Decoding: In a specific coding system, 'DISTANT' is written as 'TNASITD'. Following the logic (Reverse entire word), how is 'DISPLAY' written?",
       "options": [
+        "YALPSID",
         "ALPSIDY",
         "YALPSID",
-        "DISPLAY",
-        "YALPSID"
+        "DISPLAY"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: Reverse entire word. 'DISPLAY' becomes 'YALPSID'."
     },
     {
@@ -196,34 +196,34 @@
       "options": [
         "FTUU",
         "UFTU",
-        "UTFU",
-        "UFTU"
+        "UFTU",
+        "UTFU"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Each letter +1. 'TEST' becomes 'UFTU'."
     },
     {
       "id": 16,
       "question": "Coding-Decoding: In a specific coding system, 'LOGIC' is written as 'JMEGE'. Following the logic (Shift +1 on each letter), how is 'BRAIN' written?",
       "options": [
+        "CSBJO",
         "SBJOC",
         "CSBJO",
-        "OJBSC",
-        "CSBJO"
+        "OJBSC"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Shift +1 on each letter. 'BRAIN' becomes 'CSBJO'."
     },
     {
       "id": 17,
       "question": "Coding-Decoding: In a specific coding system, 'MATRIX' is written as 'NZGIRC'. Following the logic (First two swap, last two swap), how is 'VECTOR' written?",
       "options": [
-        "VCTROE",
+        "EVCTRO",
         "FWCTRO",
-        "ORTCVE",
-        "EVCTRO"
+        "VCTROE",
+        "ORTCVE"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: First two swap, last two swap. 'VECTOR' becomes 'EVCTRO'."
     },
     {
@@ -231,11 +231,11 @@
       "question": "Coding-Decoding: In a specific coding system, 'NETWORK' is written as 'OEUXPSL'. Following the logic (Each letter +1 and reversed), how is 'ROUTER' written?",
       "options": [
         "PVGFSS",
+        "SPVGFS",
         "SPWGFS",
-        "SFGVPS",
-        "SPVGFS"
+        "SFGVPS"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Each letter +1 and reversed. 'ROUTER' becomes 'SPVGFS'."
     },
     {
@@ -244,22 +244,22 @@
       "options": [
         "LFUDIT",
         "TLFUDI",
-        "IDUFLT",
-        "TLFUDI"
+        "TLFUDI",
+        "IDUFLT"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Each letter +1. 'SKETCH' becomes 'TLFUDI'."
     },
     {
       "id": 20,
       "question": "Coding-Decoding: In a specific coding system, 'BINARY' is written as 'CJOBSZ'. Following the logic (Each letter +1), how is 'CODING' written?",
       "options": [
-        "PEJOHD",
+        "DPEJOH",
         "DPFJOH",
-        "HOJEPD",
-        "DPEJOH"
+        "PEJOHD",
+        "HOJEPD"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rule: Each letter +1. 'CODING' becomes 'DPEJOH'."
     },
     {
@@ -268,10 +268,10 @@
       "options": [
         "OHJOFF",
         "FOHJOF",
-        "FOJHOF",
-        "FOHJOF"
+        "FOHJOF",
+        "FOJHOF"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Each letter +1. 'ENGINE' becomes 'FOHJOF'."
     },
     {
@@ -280,34 +280,34 @@
       "options": [
         "BQM",
         "MBQ",
-        "QBM",
-        "MBQ"
+        "MBQ",
+        "QBM"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Each letter +1. 'LAP' becomes 'MBQ'."
     },
     {
       "id": 23,
       "question": "Coding-Decoding: In a specific coding system, 'FOUND' is written as 'GPEOE'. Following the logic (Each letter +1), how is 'NATION' written?",
       "options": [
+        "OBUJPO",
         "BUJPOO",
         "OBUJPO",
-        "OPJUBO",
-        "OBUJPO"
+        "OPJUBO"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rule: Each letter +1. 'NATION' becomes 'OBUJPO'."
     },
     {
       "id": 24,
       "question": "Coding-Decoding: In a specific coding system, 'POWER' is written as 'QPXFS'. Following the logic (Each letter +1), how is 'ENERGY' written?",
       "options": [
-        "OFSHZF",
         "FOFSHZ",
-        "ZHSFOF",
-        "FOFSHZ"
+        "FOFSHZ",
+        "OFSHZF",
+        "ZHSFOF"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Each letter +1. 'ENERGY' becomes 'FOFSHZ'."
     },
     {
@@ -316,34 +316,34 @@
       "options": [
         "MFWFSD",
         "DMFWFS",
-        "SFWFMD",
-        "DMFWFS"
+        "DMFWFS",
+        "SFWFMD"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rule: Each letter +1. 'CLEVER' becomes 'DMFWFS'."
     },
     {
       "id": 26,
       "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
         "Article 32 applies only during maritime emergencies.",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
-        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 27,
       "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
         "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
         "Lord Curzon applies only during maritime emergencies.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
-        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
@@ -352,34 +352,34 @@
       "options": [
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
         "Godavari River applies only during maritime emergencies.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
-        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga."
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 29,
       "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
         "Governor of RBI applies only during maritime emergencies.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
-        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 30,
       "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
         "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
         "101st Amendment Act, 2016 applies only during maritime emergencies.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
-        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India."
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -388,10 +388,10 @@
       "options": [
         "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
         "42nd Amendment Act, 1976 applies only during maritime emergencies.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
-        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
@@ -400,22 +400,22 @@
       "options": [
         "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
         "Kaziranga National Park applies only during maritime emergencies.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
-        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
       "id": 33,
       "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
         "Finance Commission (Article 280) applies only during maritime emergencies.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
-        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States."
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
@@ -423,11 +423,11 @@
       "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
         "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
         "Jawaharlal Nehru applies only during maritime emergencies.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
-        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
@@ -436,22 +436,22 @@
       "options": [
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
         "35 Years applies only during maritime emergencies.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment.",
-        "35 Years is associated with: Minimum age requirement for election as President of India."
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
       "id": 36,
       "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
         "Eighth Schedule applies only during maritime emergencies.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
-        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India."
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
@@ -459,11 +459,11 @@
       "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
         "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
         "Lothal (Gujarat) applies only during maritime emergencies.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
-        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard."
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
@@ -472,34 +472,34 @@
       "options": [
         "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
         "Articles 20 and 21 applies only during maritime emergencies.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
-        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352."
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
       "id": 39,
       "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
         "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
-        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory."
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
       "id": 40,
       "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
         "Swami Dayanand Saraswati applies only during maritime emergencies.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
-        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
@@ -507,35 +507,35 @@
       "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
         "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
         "8 States applies only during maritime emergencies.",
-        "8 States was declared invalid by the 100th Constitutional Amendment.",
-        "8 States is associated with: Tropic of Cancer passes through 8 Indian States."
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 42,
       "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
         "Battle of Plassey (1757) applies only during maritime emergencies.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
-        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
       "id": 43,
       "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
         "Vice-President of India applies only during maritime emergencies.",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
-        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States)."
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
@@ -543,83 +543,83 @@
       "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
         "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
         "Black Regur Soil applies only during maritime emergencies.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
-        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops."
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
       "id": 45,
       "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "550 Members refers to an ancient taxation treaty repealed in 1950.",
         "550 Members applies only during maritime emergencies.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment.",
-        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
       "id": 46,
       "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
         "Article 32 applies only during maritime emergencies.",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
-        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 47,
       "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
         "Lord Curzon applies only during maritime emergencies.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
-        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 48,
       "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
         "Godavari River applies only during maritime emergencies.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
-        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga."
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 49,
       "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
         "Governor of RBI applies only during maritime emergencies.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
-        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 50,
       "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
         "101st Amendment Act, 2016 applies only during maritime emergencies.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
-        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India."
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -628,34 +628,34 @@
       "options": [
         "Careless",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Scrupulous & Thorough",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
       "id": 52,
       "question": "English Vocabulary #2: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Permanent & Eternal",
+        "Transitory",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Permanent & Eternal",
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 53,
       "question": "English Vocabulary #3: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
+        "Assertive & Domineering",
         "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
@@ -664,34 +664,34 @@
       "options": [
         "Frank & Outspoken",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Deceptive",
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
       "id": 55,
       "question": "English Vocabulary #5: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Kind",
+        "Malevolent & Malicious",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Kind",
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
       "id": 56,
       "question": "English Vocabulary #6: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Practical & Realistic",
+        "Idealistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Practical & Realistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
@@ -699,35 +699,35 @@
       "question": "English Vocabulary #7: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
         "Apathetic",
+        "Passionate & Enthusiastic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 58,
       "question": "English Vocabulary #8: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Reserved & Taciturn",
+        "Talkative",
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
       "id": 59,
       "question": "English Vocabulary #9: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
-        "Rare",
+        "Omnipresent & Everywhere",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Rare",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
@@ -735,47 +735,47 @@
       "question": "English Vocabulary #10: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
         "Meticulous & Demanding",
+        "Careless",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
       "id": 61,
       "question": "English Vocabulary #11: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
-        "Sluggishness",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Sluggishness",
+        "Eagerness & Speed",
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
       "id": 62,
       "question": "English Vocabulary #12: Select the direct ANTONYM of the given word: 'TACITURN'",
       "options": [
-        "Garrulous & Talkative",
+        "Silent",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Garrulous & Talkative",
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
       "id": 63,
       "question": "English Vocabulary #13: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
@@ -783,35 +783,35 @@
       "question": "English Vocabulary #14: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
         "Selfish & Spiteful",
+        "Generous",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
       "id": 65,
       "question": "English Vocabulary #15: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
-        "Beneficial",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Beneficial",
+        "Harmful & Destructive",
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
       "id": 66,
       "question": "English Vocabulary #16: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "Unnecessary & Extra",
         "Vital",
-        "Required",
-        "Essential"
+        "Essential",
+        "Unnecessary & Extra",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
@@ -819,23 +819,23 @@
       "question": "English Vocabulary #17: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
         "Identical",
+        "Different & Distinct",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
       "id": 68,
       "question": "English Vocabulary #18: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
-        "Calmness & Composure",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Calmness & Composure",
+        "Agitation",
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
@@ -844,82 +844,82 @@
       "options": [
         "Impenetrable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Penetrable & Vulnerable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
       "id": 70,
       "question": "English Vocabulary #20: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "Obscure & Arcane",
         "Familiar",
-        "Public",
-        "Common"
+        "Common",
+        "Obscure & Arcane",
+        "Public"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
       "id": 71,
       "question": "English Vocabulary #21: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
+        "Scrupulous & Thorough",
         "Careless",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
       "id": 72,
       "question": "English Vocabulary #22: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Permanent & Eternal",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Permanent & Eternal",
+        "Transitory",
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 73,
       "question": "English Vocabulary #23: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Assertive & Domineering",
+        "Servile",
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
       "id": 74,
       "question": "English Vocabulary #24: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
+        "Deceptive",
         "Frank & Outspoken",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
       "id": 75,
       "question": "English Vocabulary #25: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Kind",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Kind",
+        "Malevolent & Malicious",
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
@@ -928,34 +928,34 @@
       "options": [
         "Practical & Realistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Idealistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
       "id": 77,
       "question": "English Vocabulary #27: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Apathetic",
+        "Passionate & Enthusiastic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Apathetic",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 78,
       "question": "English Vocabulary #28: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
+        "Talkative",
         "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
@@ -964,34 +964,34 @@
       "options": [
         "Rare",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Omnipresent & Everywhere",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 80,
       "question": "English Vocabulary #30: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Meticulous & Demanding",
+        "Careless",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Meticulous & Demanding",
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
       "id": 81,
       "question": "English Vocabulary #31: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
+        "Eagerness & Speed",
         "Sluggishness",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
@@ -1000,10 +1000,10 @@
       "options": [
         "Garrulous & Talkative",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Silent",
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
@@ -1012,22 +1012,22 @@
       "options": [
         "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Sociable & Outgoing",
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
       "id": 84,
       "question": "English Vocabulary #34: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "Selfish & Spiteful",
+        "Generous",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Selfish & Spiteful",
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
@@ -1035,11 +1035,11 @@
       "question": "English Vocabulary #35: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
         "Beneficial",
+        "Harmful & Destructive",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
@@ -1048,22 +1048,22 @@
       "options": [
         "Unnecessary & Extra",
         "Vital",
-        "Required",
-        "Essential"
+        "Essential",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
       "id": 87,
       "question": "English Vocabulary #37: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Identical",
+        "Different & Distinct",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Identical",
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
@@ -1071,11 +1071,11 @@
       "question": "English Vocabulary #38: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
         "Calmness & Composure",
+        "Agitation",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
@@ -1084,34 +1084,34 @@
       "options": [
         "Impenetrable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Penetrable & Vulnerable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
       "id": 90,
       "question": "English Vocabulary #40: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "Obscure & Arcane",
         "Familiar",
-        "Public",
-        "Common"
+        "Obscure & Arcane",
+        "Common",
+        "Public"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
       "id": 91,
       "question": "English Vocabulary #41: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
-        "Careless",
+        "Scrupulous & Thorough",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Careless",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
@@ -1119,35 +1119,35 @@
       "question": "English Vocabulary #42: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
         "Permanent & Eternal",
+        "Transitory",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 93,
       "question": "English Vocabulary #43: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Servile",
+        "Assertive & Domineering",
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
       "id": 94,
       "question": "English Vocabulary #44: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
-        "Frank & Outspoken",
+        "Deceptive",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Frank & Outspoken",
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
@@ -1155,71 +1155,71 @@
       "question": "English Vocabulary #45: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
         "Kind",
+        "Malevolent & Malicious",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
       "id": 96,
       "question": "English Vocabulary #46: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Practical & Realistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Practical & Realistic",
+        "Idealistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
       "id": 97,
       "question": "English Vocabulary #47: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
-        "Apathetic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Apathetic",
+        "Passionate & Enthusiastic",
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 98,
       "question": "English Vocabulary #48: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
-        "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Talkative",
+        "Reserved & Taciturn",
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
       "id": 99,
       "question": "English Vocabulary #49: Select the most appropriate SYNONYM of the word: 'UBIQUITOUS'",
       "options": [
+        "Omnipresent & Everywhere",
         "Rare",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 100,
       "question": "English Vocabulary #50: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Meticulous & Demanding",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Meticulous & Demanding",
+        "Careless",
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     }
   ]

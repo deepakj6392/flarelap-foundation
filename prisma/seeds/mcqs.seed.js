@@ -115,26 +115,53 @@ async function main() {
       continue;
     }
 
+function shuffleQuestionOptions(question) {
+  if (!question || !Array.isArray(question.options) || question.options.length < 2) {
+    return question;
+  }
+  const originalAnswerIndex = typeof question.answer === "number" ? question.answer : parseInt(String(question.answer), 10) || 0;
+  const indexedOptions = question.options.map((opt, idx) => ({
+    text: opt,
+    isCorrect: idx === originalAnswerIndex
+  }));
+  for (let i = indexedOptions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
+  }
+  const newOptions = indexedOptions.map(item => item.text);
+  const newAnswerIndex = indexedOptions.findIndex(item => item.isCorrect);
+  return {
+    ...question,
+    options: newOptions,
+    answer: newAnswerIndex >= 0 ? newAnswerIndex : 0
+  };
+}
+
     // Deduplicate questions by question text within the same course
     const uniqueQuestionsMap = new Map();
     for (const q of questions) {
       if (q && q.question) {
         const qStr = String(q.question).trim();
         if (!uniqueQuestionsMap.has(qStr)) {
-          const options = Array.isArray(q.options)
+          const rawOptions = Array.isArray(q.options)
             ? q.options.map((opt) => String(opt))
             : [];
-          const answer =
+          const rawAnswer =
             typeof q.answer === "number"
               ? q.answer
               : parseInt(String(q.answer), 10) || 0;
           const hint = q.hint ? String(q.hint) : "";
 
+          const shuffled = shuffleQuestionOptions({
+            options: rawOptions,
+            answer: rawAnswer
+          });
+
           uniqueQuestionsMap.set(qStr, {
             courseId: course.id,
             question: qStr,
-            options,
-            answer,
+            options: shuffled.options,
+            answer: shuffled.answer,
             hint,
           });
         }

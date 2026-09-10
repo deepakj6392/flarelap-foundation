@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { 
   Clock, 
   ChevronRight, 
@@ -19,12 +20,25 @@ import {
 import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
 import { MCQ_BANKS, MCQQuestion } from "../data";
-import { generateUniqueQuestions } from "@/lib/questionGenerator";
+import { generateUniqueQuestions, shuffleQuestionOptions } from "@/lib/questionGenerator";
+import { useRouter } from "next/navigation";
 
 export default function MockExamsPage() {
-  const { student, isDark, saveActivity } = useDashboard();
+  const router = useRouter();
 
-  // Active exam states
+  useEffect(() => {
+    router.replace("/student/dashboard/test-series");
+  }, [router]);
+
+  return (
+    <div className="flex flex-col items-center justify-center py-24 text-slate-400">
+      <p className="text-xs font-bold">Redirecting to Full Mock Test Passes Hub...</p>
+    </div>
+  );
+}
+
+function LegacyMockExamsPage() {
+  const { student, isDark, saveActivity } = useDashboard();
   const [activeBundleSize, setActiveBundleSize] = useState<number | null>(null);
   const [activeExamType, setActiveExamType] = useState<"course" | "reasoning">("course");
   const [bundleQuestions, setBundleQuestions] = useState<MCQQuestion[]>([]);
@@ -100,7 +114,7 @@ export default function MockExamsPage() {
     
     setActiveExamType(examType);
     setActiveBundleSize(size);
-    setBundleQuestions(list);
+    setBundleQuestions(list.map((q: any) => shuffleQuestionOptions(q)));
     setCurrentQuestionIndex(0);
     setBundleAnswers({});
     setReviewedQuestions({});
@@ -211,11 +225,19 @@ export default function MockExamsPage() {
       {activeBundleSize === null ? (
         // 1. Bundle Selection Screen
         <div className="space-y-6">
-          <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
-            <h2 className={`text-lg font-black ${textHeading}`}>Practice Mock Exams</h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
-              Select a practice bundle size below to test your knowledge. Questions are dynamically generated to support peak rank preparation.
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+            <div>
+              <h2 className={`text-lg font-black ${textHeading}`}>Practice Mock Exams</h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
+                Select a practice bundle size below to test your knowledge. Questions are dynamically generated to support peak rank preparation.
+              </p>
+            </div>
+            <Link
+              href="/student/dashboard/test-series"
+              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-black rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer shrink-0"
+            >
+              <Trophy className="h-4 w-4" /> Full Mock Test Passes Hub →
+            </Link>
           </div>
 
           {/* Premium Tab Bar */}

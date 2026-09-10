@@ -16,10 +16,10 @@
       "id": 1,
       "question": "English Idioms & Phrases #66: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
+        "To make a mistake",
         "To injure one's finger",
-        "To build a wooden structure",
         "To state something with exact accuracy",
-        "To make a mistake"
+        "To build a wooden structure"
       ],
       "answer": 2,
       "hint": "To describe exactly what is causing a situation."
@@ -28,12 +28,12 @@
       "id": 2,
       "question": "English Idioms & Phrases #67: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "To cut wild bushes",
-        "To hunt animals",
         "To avoid discussing the main topic directly",
-        "To talk loudly"
+        "To talk loudly",
+        "To cut wild bushes",
+        "To hunt animals"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "To speak evasively without coming to the point."
     },
     {
@@ -41,21 +41,21 @@
       "question": "English Idioms & Phrases #68: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
         "To name a date",
-        "To celebrate a birthday",
         "To stop working on something for the rest of the day",
-        "To wake up early"
+        "To wake up early",
+        "To celebrate a birthday"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "To decide to stop working."
     },
     {
       "id": 4,
       "question": "English Idioms & Phrases #69: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
+        "Frequently",
         "Every month",
-        "During full moon",
         "Very rarely or seldom",
-        "Frequently"
+        "During full moon"
       ],
       "answer": 2,
       "hint": "An event that happens very rarely."
@@ -64,24 +64,24 @@
       "id": 5,
       "question": "English Idioms & Phrases #70: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Only during good times",
-        "In heavy fog",
         "Under all circumstances, good and bad",
-        "Through dense forests"
+        "Through dense forests",
+        "Only during good times",
+        "In heavy fog"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 6,
       "question": "English Idioms & Phrases #71: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
-        "To make a big blunder",
+        "To start a brawl",
         "To disclose a confidential secret",
-        "To start a brawl"
+        "To waste precious food",
+        "To make a big blunder"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
@@ -89,21 +89,21 @@
       "question": "English Idioms & Phrases #72: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
         "To get injured in a fight",
-        "To eat voraciously",
         "To face a difficult situation with courage",
-        "To surrender unconditionally"
+        "To surrender unconditionally",
+        "To eat voraciously"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 8,
       "question": "English Idioms & Phrases #73: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
+        "A curse on enemies",
         "A holy benediction",
-        "A magical gift",
         "An apparent misfortune that yields unexpected good results",
-        "A curse on enemies"
+        "A magical gift"
       ],
       "answer": 2,
       "hint": "Something that seems bad at first but turns out good."
@@ -112,12 +112,12 @@
       "id": 9,
       "question": "English Idioms & Phrases #74: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "To waste electricity",
-        "To set fire to property",
+        "To celebrate lavishly",
         "To work or study late into the night",
-        "To celebrate lavishly"
+        "To waste electricity",
+        "To set fire to property"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "To study or work until late at night."
     },
     {
@@ -125,21 +125,21 @@
       "question": "English Idioms & Phrases #75: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
         "To clean up a mess",
-        "To start a swimming match",
         "To admit defeat and surrender",
-        "To ignore advice"
+        "To ignore advice",
+        "To start a swimming match"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     },
     {
       "id": 11,
       "question": "English Grammar & Usage #1: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
+        "on time (D)",
         "Neither of the two candidates (A)",
-        "their original documents (C)",
         "have submitted (B) -> has submitted",
-        "on time (D)"
+        "their original documents (C)"
       ],
       "answer": 2,
       "hint": "'Neither of' takes a singular verb."
@@ -148,46 +148,46 @@
       "id": 12,
       "question": "English Grammar & Usage #2: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
-        "The scenery of Kashmir (A)",
-        "charming and (C)",
+        "picturesque (D)",
         "are very (B) -> is very",
-        "picturesque (D)"
+        "The scenery of Kashmir (A)",
+        "charming and (C)"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Scenery' is an uncountable singular noun."
     },
     {
       "id": 13,
       "question": "English Grammar & Usage #3: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "when",
-        "then",
+        "that",
         "than",
-        "that"
+        "when",
+        "then"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
       "id": 14,
       "question": "English Grammar & Usage #4: The candidate was accused ______ tampering with evidence.",
       "options": [
-        "for",
-        "with",
         "of",
-        "about"
+        "for",
+        "about",
+        "with"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "'Accused' takes the preposition 'of'."
     },
     {
       "id": 15,
       "question": "English Grammar & Usage #5: He has been living in Delhi ______ 2015.",
       "options": [
+        "in",
         "for",
-        "from",
         "since",
-        "in"
+        "from"
       ],
       "answer": 2,
       "hint": "'Since' specifies a starting point in time."
@@ -196,34 +196,34 @@
       "id": 16,
       "question": "English Grammar & Usage #6: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
       "options": [
-        "The engine has been repaired by mechanic.",
-        "The mechanic was repairing the engine.",
+        "The engine is repaired by mechanic.",
         "The damaged engine was repaired by the mechanic.",
-        "The engine is repaired by mechanic."
+        "The engine has been repaired by mechanic.",
+        "The mechanic was repairing the engine."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Past simple 'repaired' converts to 'was repaired'."
     },
     {
       "id": 17,
       "question": "English Grammar & Usage #7: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
       "options": [
-        "He said that I was learning English.",
-        "He told he is learning English.",
         "He said that he was learning English.",
-        "He said that he had learned English."
+        "He said that I was learning English.",
+        "He said that he had learned English.",
+        "He told he is learning English."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
     },
     {
       "id": 18,
       "question": "English Grammar & Usage #8: Convert to Active Voice: 'A song was being sung by Lata.'",
       "options": [
+        "Lata is singing a song.",
         "Lata sang a song.",
-        "Lata has sung a song.",
         "Lata was singing a song.",
-        "Lata is singing a song."
+        "Lata has sung a song."
       ],
       "answer": 2,
       "hint": "'was being sung' converts to active 'was singing'."
@@ -232,24 +232,24 @@
       "id": 19,
       "question": "English Grammar & Usage #9: Select the correctly spelt word:",
       "options": [
-        "Beurocracy",
-        "Bureaucrasy",
+        "Burocracy",
         "Bureaucracy",
-        "Burocracy"
+        "Beurocracy",
+        "Bureaucrasy"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
     },
     {
       "id": 20,
       "question": "English Grammar & Usage #10: Select the correctly spelt word:",
       "options": [
-        "Acommodate",
-        "Accomodate",
         "Accommodate",
-        "Acomodate"
+        "Acomodate",
+        "Acommodate",
+        "Accomodate"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     }
   ]

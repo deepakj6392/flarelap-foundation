@@ -38,7 +38,6 @@ export default function StudentProfilePage() {
   // Personal Profile state
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [dob, setDob] = useState("");
   const [address, setAddress] = useState("");
   const [fetchingProfile, setFetchingProfile] = useState(false);
   const [savingProfile, setSavingProfile] = useState(false);
@@ -71,7 +70,6 @@ export default function StudentProfilePage() {
         if (res.ok && data.user) {
           setName(data.user.name || "");
           setPhone(data.user.phone || "");
-          setDob(data.user.dob || "");
           setAddress(data.user.address || "");
           
           // Update local storage copy
@@ -79,7 +77,6 @@ export default function StudentProfilePage() {
         } else if (student) {
           setName(student.name || "");
           setPhone(student.phone || "");
-          setDob(student.dob || "");
           setAddress(student.address || "");
         }
       } catch (err) {
@@ -87,7 +84,6 @@ export default function StudentProfilePage() {
         if (student) {
           setName(student.name || "");
           setPhone(student.phone || "");
-          setDob(student.dob || "");
           setAddress(student.address || "");
         }
       } finally {
@@ -124,7 +120,6 @@ export default function StudentProfilePage() {
         body: JSON.stringify({
           name: name.trim(),
           phone: phone.trim(),
-          dob,
           address: address.trim()
         })
       });
@@ -340,7 +335,7 @@ export default function StudentProfilePage() {
                     </div>
 
                     {/* Mobile Number */}
-                    <div>
+                    <div className="sm:col-span-2">
                       <label className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">
                         Mobile Number
                       </label>
@@ -353,25 +348,6 @@ export default function StudentProfilePage() {
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="e.g. +91 9876543210"
-                          className={inputStyle}
-                          disabled={savingProfile}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Date of Birth */}
-                    <div>
-                      <label className="block text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">
-                        Date of Birth (DOB)
-                      </label>
-                      <div className="relative">
-                        <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-                          <Calendar className="h-4 w-4" />
-                        </span>
-                        <input
-                          type="date"
-                          value={dob}
-                          onChange={(e) => setDob(e.target.value)}
                           className={inputStyle}
                           disabled={savingProfile}
                         />

@@ -26,24 +26,24 @@
       "id": 1,
       "question": "Reasoning Puzzle #1: In a seating alignment of 26 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 5 km North, turns East 4 km, then South 5 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 5 km West",
         "Priya's Rank = 22th, Displacement = 9 km North",
-        "Priya's Rank = 21th, Displacement = 10 km South",
-        "Priya's Rank = 21th, Displacement = 4 km East"
+        "Priya's Rank = 21th, Displacement = 4 km East",
+        "Priya's Rank = 20th, Displacement = 5 km West",
+        "Priya's Rank = 21th, Displacement = 10 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (26) - Left (6) + 1 = 21th. North/South movements cancel, leaving 4 km East."
     },
     {
       "id": 2,
       "question": "Reasoning Puzzle #2: In a seating alignment of 27 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 7 km North, turns East 7 km, then South 7 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 7 km West",
+        "Priya's Rank = 21th, Displacement = 7 km East",
         "Priya's Rank = 22th, Displacement = 14 km North",
-        "Priya's Rank = 21th, Displacement = 14 km South",
-        "Priya's Rank = 21th, Displacement = 7 km East"
+        "Priya's Rank = 20th, Displacement = 7 km West",
+        "Priya's Rank = 21th, Displacement = 14 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (27) - Left (7) + 1 = 21th. North/South movements cancel, leaving 7 km East."
     },
     {
@@ -51,11 +51,11 @@
       "question": "Reasoning Puzzle #3: In a seating alignment of 28 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 9 km North, turns East 10 km, then South 9 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 20th, Displacement = 9 km West",
+        "Priya's Rank = 21th, Displacement = 10 km East",
         "Priya's Rank = 22th, Displacement = 19 km North",
-        "Priya's Rank = 21th, Displacement = 18 km South",
-        "Priya's Rank = 21th, Displacement = 10 km East"
+        "Priya's Rank = 21th, Displacement = 18 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (28) - Left (8) + 1 = 21th. North/South movements cancel, leaving 10 km East."
     },
     {
@@ -64,22 +64,22 @@
       "options": [
         "Priya's Rank = 20th, Displacement = 11 km West",
         "Priya's Rank = 22th, Displacement = 24 km North",
-        "Priya's Rank = 21th, Displacement = 22 km South",
-        "Priya's Rank = 21th, Displacement = 13 km East"
+        "Priya's Rank = 21th, Displacement = 13 km East",
+        "Priya's Rank = 21th, Displacement = 22 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (29) - Left (9) + 1 = 21th. North/South movements cancel, leaving 13 km East."
     },
     {
       "id": 5,
       "question": "Reasoning Puzzle #5: In a seating alignment of 30 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 13 km North, turns East 16 km, then South 13 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 13 km West",
+        "Priya's Rank = 21th, Displacement = 16 km East",
         "Priya's Rank = 22th, Displacement = 29 km North",
-        "Priya's Rank = 21th, Displacement = 26 km South",
-        "Priya's Rank = 21th, Displacement = 16 km East"
+        "Priya's Rank = 20th, Displacement = 13 km West",
+        "Priya's Rank = 21th, Displacement = 26 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (30) - Left (10) + 1 = 21th. North/South movements cancel, leaving 16 km East."
     },
     {
@@ -87,11 +87,11 @@
       "question": "Reasoning Puzzle #6: In a seating alignment of 31 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 15 km North, turns East 19 km, then South 15 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 20th, Displacement = 15 km West",
+        "Priya's Rank = 21th, Displacement = 19 km East",
         "Priya's Rank = 22th, Displacement = 34 km North",
-        "Priya's Rank = 21th, Displacement = 30 km South",
-        "Priya's Rank = 21th, Displacement = 19 km East"
+        "Priya's Rank = 21th, Displacement = 30 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (31) - Left (11) + 1 = 21th. North/South movements cancel, leaving 19 km East."
     },
     {
@@ -100,34 +100,34 @@
       "options": [
         "Priya's Rank = 20th, Displacement = 17 km West",
         "Priya's Rank = 22th, Displacement = 39 km North",
-        "Priya's Rank = 21th, Displacement = 34 km South",
-        "Priya's Rank = 21th, Displacement = 22 km East"
+        "Priya's Rank = 21th, Displacement = 22 km East",
+        "Priya's Rank = 21th, Displacement = 34 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (32) - Left (12) + 1 = 21th. North/South movements cancel, leaving 22 km East."
     },
     {
       "id": 8,
       "question": "Reasoning Puzzle #8: In a seating alignment of 33 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 19 km North, turns East 25 km, then South 19 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 19 km West",
+        "Priya's Rank = 21th, Displacement = 25 km East",
         "Priya's Rank = 22th, Displacement = 44 km North",
-        "Priya's Rank = 21th, Displacement = 38 km South",
-        "Priya's Rank = 21th, Displacement = 25 km East"
+        "Priya's Rank = 20th, Displacement = 19 km West",
+        "Priya's Rank = 21th, Displacement = 38 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (33) - Left (13) + 1 = 21th. North/South movements cancel, leaving 25 km East."
     },
     {
       "id": 9,
       "question": "Reasoning Puzzle #9: In a seating alignment of 34 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 21 km North, turns East 28 km, then South 21 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 21 km West",
+        "Priya's Rank = 21th, Displacement = 28 km East",
         "Priya's Rank = 22th, Displacement = 49 km North",
-        "Priya's Rank = 21th, Displacement = 42 km South",
-        "Priya's Rank = 21th, Displacement = 28 km East"
+        "Priya's Rank = 20th, Displacement = 21 km West",
+        "Priya's Rank = 21th, Displacement = 42 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (34) - Left (14) + 1 = 21th. North/South movements cancel, leaving 28 km East."
     },
     {
@@ -135,35 +135,35 @@
       "question": "Reasoning Puzzle #10: In a seating alignment of 35 candidates facing North, Priya is ranked 15th from left. Simultaneously, a runner travels 23 km North, turns East 31 km, then South 23 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 20th, Displacement = 23 km West",
+        "Priya's Rank = 21th, Displacement = 31 km East",
         "Priya's Rank = 22th, Displacement = 54 km North",
-        "Priya's Rank = 21th, Displacement = 46 km South",
-        "Priya's Rank = 21th, Displacement = 31 km East"
+        "Priya's Rank = 21th, Displacement = 46 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (35) - Left (15) + 1 = 21th. North/South movements cancel, leaving 31 km East."
     },
     {
       "id": 11,
       "question": "Reasoning Puzzle #11: In a seating alignment of 36 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 25 km North, turns East 34 km, then South 25 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 25 km West",
         "Priya's Rank = 22th, Displacement = 59 km North",
-        "Priya's Rank = 21th, Displacement = 50 km South",
-        "Priya's Rank = 21th, Displacement = 34 km East"
+        "Priya's Rank = 20th, Displacement = 25 km West",
+        "Priya's Rank = 21th, Displacement = 34 km East",
+        "Priya's Rank = 21th, Displacement = 50 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (36) - Left (16) + 1 = 21th. North/South movements cancel, leaving 34 km East."
     },
     {
       "id": 12,
       "question": "Reasoning Puzzle #12: In a seating alignment of 37 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 27 km North, turns East 37 km, then South 27 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 27 km West",
+        "Priya's Rank = 21th, Displacement = 37 km East",
         "Priya's Rank = 22th, Displacement = 64 km North",
-        "Priya's Rank = 21th, Displacement = 54 km South",
-        "Priya's Rank = 21th, Displacement = 37 km East"
+        "Priya's Rank = 20th, Displacement = 27 km West",
+        "Priya's Rank = 21th, Displacement = 54 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (37) - Left (17) + 1 = 21th. North/South movements cancel, leaving 37 km East."
     },
     {
@@ -171,47 +171,47 @@
       "question": "Reasoning Puzzle #13: In a seating alignment of 38 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 29 km North, turns East 40 km, then South 29 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 20th, Displacement = 29 km West",
+        "Priya's Rank = 21th, Displacement = 40 km East",
         "Priya's Rank = 22th, Displacement = 69 km North",
-        "Priya's Rank = 21th, Displacement = 58 km South",
-        "Priya's Rank = 21th, Displacement = 40 km East"
+        "Priya's Rank = 21th, Displacement = 58 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (38) - Left (18) + 1 = 21th. North/South movements cancel, leaving 40 km East."
     },
     {
       "id": 14,
       "question": "Reasoning Puzzle #14: In a seating alignment of 39 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 31 km North, turns East 43 km, then South 31 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 20th, Displacement = 31 km West",
         "Priya's Rank = 22th, Displacement = 74 km North",
-        "Priya's Rank = 21th, Displacement = 62 km South",
-        "Priya's Rank = 21th, Displacement = 43 km East"
+        "Priya's Rank = 20th, Displacement = 31 km West",
+        "Priya's Rank = 21th, Displacement = 43 km East",
+        "Priya's Rank = 21th, Displacement = 62 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (39) - Left (19) + 1 = 21th. North/South movements cancel, leaving 43 km East."
     },
     {
       "id": 15,
       "question": "Reasoning Puzzle #15: In a seating alignment of 40 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 33 km North, turns East 46 km, then South 33 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 33 km West",
+        "Priya's Rank = 36th, Displacement = 46 km East",
         "Priya's Rank = 37th, Displacement = 79 km North",
-        "Priya's Rank = 36th, Displacement = 66 km South",
-        "Priya's Rank = 36th, Displacement = 46 km East"
+        "Priya's Rank = 35th, Displacement = 33 km West",
+        "Priya's Rank = 36th, Displacement = 66 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (40) - Left (5) + 1 = 36th. North/South movements cancel, leaving 46 km East."
     },
     {
       "id": 16,
       "question": "Reasoning Puzzle #16: In a seating alignment of 41 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 35 km North, turns East 49 km, then South 35 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 35 km West",
         "Priya's Rank = 37th, Displacement = 84 km North",
-        "Priya's Rank = 36th, Displacement = 70 km South",
-        "Priya's Rank = 36th, Displacement = 49 km East"
+        "Priya's Rank = 36th, Displacement = 49 km East",
+        "Priya's Rank = 35th, Displacement = 35 km West",
+        "Priya's Rank = 36th, Displacement = 70 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (41) - Left (6) + 1 = 36th. North/South movements cancel, leaving 49 km East."
     },
     {
@@ -219,35 +219,35 @@
       "question": "Reasoning Puzzle #17: In a seating alignment of 42 candidates facing North, Priya is ranked 7th from left. Simultaneously, a runner travels 37 km North, turns East 52 km, then South 37 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 35th, Displacement = 37 km West",
+        "Priya's Rank = 36th, Displacement = 52 km East",
         "Priya's Rank = 37th, Displacement = 89 km North",
-        "Priya's Rank = 36th, Displacement = 74 km South",
-        "Priya's Rank = 36th, Displacement = 52 km East"
+        "Priya's Rank = 36th, Displacement = 74 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (42) - Left (7) + 1 = 36th. North/South movements cancel, leaving 52 km East."
     },
     {
       "id": 18,
       "question": "Reasoning Puzzle #18: In a seating alignment of 43 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 39 km North, turns East 55 km, then South 39 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 39 km West",
         "Priya's Rank = 37th, Displacement = 94 km North",
-        "Priya's Rank = 36th, Displacement = 78 km South",
-        "Priya's Rank = 36th, Displacement = 55 km East"
+        "Priya's Rank = 35th, Displacement = 39 km West",
+        "Priya's Rank = 36th, Displacement = 55 km East",
+        "Priya's Rank = 36th, Displacement = 78 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (43) - Left (8) + 1 = 36th. North/South movements cancel, leaving 55 km East."
     },
     {
       "id": 19,
       "question": "Reasoning Puzzle #19: In a seating alignment of 44 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 41 km North, turns East 58 km, then South 41 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 41 km West",
         "Priya's Rank = 37th, Displacement = 99 km North",
-        "Priya's Rank = 36th, Displacement = 82 km South",
-        "Priya's Rank = 36th, Displacement = 58 km East"
+        "Priya's Rank = 36th, Displacement = 58 km East",
+        "Priya's Rank = 35th, Displacement = 41 km West",
+        "Priya's Rank = 36th, Displacement = 82 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (44) - Left (9) + 1 = 36th. North/South movements cancel, leaving 58 km East."
     },
     {
@@ -255,59 +255,59 @@
       "question": "Reasoning Puzzle #20: In a seating alignment of 45 candidates facing North, Priya is ranked 10th from left. Simultaneously, a runner travels 43 km North, turns East 61 km, then South 43 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 35th, Displacement = 43 km West",
+        "Priya's Rank = 36th, Displacement = 61 km East",
         "Priya's Rank = 37th, Displacement = 104 km North",
-        "Priya's Rank = 36th, Displacement = 86 km South",
-        "Priya's Rank = 36th, Displacement = 61 km East"
+        "Priya's Rank = 36th, Displacement = 86 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (45) - Left (10) + 1 = 36th. North/South movements cancel, leaving 61 km East."
     },
     {
       "id": 21,
       "question": "Reasoning Puzzle #21: In a seating alignment of 46 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 45 km North, turns East 64 km, then South 45 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 45 km West",
         "Priya's Rank = 37th, Displacement = 109 km North",
-        "Priya's Rank = 36th, Displacement = 90 km South",
-        "Priya's Rank = 36th, Displacement = 64 km East"
+        "Priya's Rank = 35th, Displacement = 45 km West",
+        "Priya's Rank = 36th, Displacement = 64 km East",
+        "Priya's Rank = 36th, Displacement = 90 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (46) - Left (11) + 1 = 36th. North/South movements cancel, leaving 64 km East."
     },
     {
       "id": 22,
       "question": "Reasoning Puzzle #22: In a seating alignment of 47 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 47 km North, turns East 67 km, then South 47 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 47 km West",
         "Priya's Rank = 37th, Displacement = 114 km North",
-        "Priya's Rank = 36th, Displacement = 94 km South",
-        "Priya's Rank = 36th, Displacement = 67 km East"
+        "Priya's Rank = 36th, Displacement = 67 km East",
+        "Priya's Rank = 35th, Displacement = 47 km West",
+        "Priya's Rank = 36th, Displacement = 94 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (47) - Left (12) + 1 = 36th. North/South movements cancel, leaving 67 km East."
     },
     {
       "id": 23,
       "question": "Reasoning Puzzle #23: In a seating alignment of 48 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 49 km North, turns East 70 km, then South 49 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 49 km West",
         "Priya's Rank = 37th, Displacement = 119 km North",
-        "Priya's Rank = 36th, Displacement = 98 km South",
-        "Priya's Rank = 36th, Displacement = 70 km East"
+        "Priya's Rank = 36th, Displacement = 70 km East",
+        "Priya's Rank = 35th, Displacement = 49 km West",
+        "Priya's Rank = 36th, Displacement = 98 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (48) - Left (13) + 1 = 36th. North/South movements cancel, leaving 70 km East."
     },
     {
       "id": 24,
       "question": "Reasoning Puzzle #24: In a seating alignment of 49 candidates facing North, Priya is ranked 14th from left. Simultaneously, a runner travels 51 km North, turns East 73 km, then South 51 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
+        "Priya's Rank = 36th, Displacement = 73 km East",
         "Priya's Rank = 35th, Displacement = 51 km West",
         "Priya's Rank = 37th, Displacement = 124 km North",
-        "Priya's Rank = 36th, Displacement = 102 km South",
-        "Priya's Rank = 36th, Displacement = 73 km East"
+        "Priya's Rank = 36th, Displacement = 102 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (49) - Left (14) + 1 = 36th. North/South movements cancel, leaving 73 km East."
     },
     {
@@ -316,82 +316,82 @@
       "options": [
         "Priya's Rank = 35th, Displacement = 53 km West",
         "Priya's Rank = 37th, Displacement = 129 km North",
-        "Priya's Rank = 36th, Displacement = 106 km South",
-        "Priya's Rank = 36th, Displacement = 76 km East"
+        "Priya's Rank = 36th, Displacement = 76 km East",
+        "Priya's Rank = 36th, Displacement = 106 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (50) - Left (15) + 1 = 36th. North/South movements cancel, leaving 76 km East."
     },
     {
       "id": 26,
       "question": "Reasoning Puzzle #26: In a seating alignment of 51 candidates facing North, Priya is ranked 16th from left. Simultaneously, a runner travels 55 km North, turns East 79 km, then South 55 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 55 km West",
         "Priya's Rank = 37th, Displacement = 134 km North",
-        "Priya's Rank = 36th, Displacement = 110 km South",
-        "Priya's Rank = 36th, Displacement = 79 km East"
+        "Priya's Rank = 36th, Displacement = 79 km East",
+        "Priya's Rank = 35th, Displacement = 55 km West",
+        "Priya's Rank = 36th, Displacement = 110 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (51) - Left (16) + 1 = 36th. North/South movements cancel, leaving 79 km East."
     },
     {
       "id": 27,
       "question": "Reasoning Puzzle #27: In a seating alignment of 52 candidates facing North, Priya is ranked 17th from left. Simultaneously, a runner travels 57 km North, turns East 82 km, then South 57 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
+        "Priya's Rank = 36th, Displacement = 82 km East",
         "Priya's Rank = 35th, Displacement = 57 km West",
         "Priya's Rank = 37th, Displacement = 139 km North",
-        "Priya's Rank = 36th, Displacement = 114 km South",
-        "Priya's Rank = 36th, Displacement = 82 km East"
+        "Priya's Rank = 36th, Displacement = 114 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (52) - Left (17) + 1 = 36th. North/South movements cancel, leaving 82 km East."
     },
     {
       "id": 28,
       "question": "Reasoning Puzzle #28: In a seating alignment of 53 candidates facing North, Priya is ranked 18th from left. Simultaneously, a runner travels 59 km North, turns East 85 km, then South 59 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 59 km West",
         "Priya's Rank = 37th, Displacement = 144 km North",
-        "Priya's Rank = 36th, Displacement = 118 km South",
-        "Priya's Rank = 36th, Displacement = 85 km East"
+        "Priya's Rank = 35th, Displacement = 59 km West",
+        "Priya's Rank = 36th, Displacement = 85 km East",
+        "Priya's Rank = 36th, Displacement = 118 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (53) - Left (18) + 1 = 36th. North/South movements cancel, leaving 85 km East."
     },
     {
       "id": 29,
       "question": "Reasoning Puzzle #29: In a seating alignment of 54 candidates facing North, Priya is ranked 19th from left. Simultaneously, a runner travels 61 km North, turns East 88 km, then South 61 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 35th, Displacement = 61 km West",
         "Priya's Rank = 37th, Displacement = 149 km North",
-        "Priya's Rank = 36th, Displacement = 122 km South",
-        "Priya's Rank = 36th, Displacement = 88 km East"
+        "Priya's Rank = 36th, Displacement = 88 km East",
+        "Priya's Rank = 35th, Displacement = 61 km West",
+        "Priya's Rank = 36th, Displacement = 122 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (54) - Left (19) + 1 = 36th. North/South movements cancel, leaving 88 km East."
     },
     {
       "id": 30,
       "question": "Reasoning Puzzle #30: In a seating alignment of 55 candidates facing North, Priya is ranked 5th from left. Simultaneously, a runner travels 63 km North, turns East 91 km, then South 63 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 51th, Displacement = 91 km East",
         "Priya's Rank = 52th, Displacement = 154 km North",
-        "Priya's Rank = 51th, Displacement = 126 km South",
-        "Priya's Rank = 51th, Displacement = 91 km East"
+        "Priya's Rank = 50th, Displacement = 63 km West",
+        "Priya's Rank = 51th, Displacement = 126 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (55) - Left (5) + 1 = 51th. North/South movements cancel, leaving 91 km East."
     },
     {
       "id": 31,
       "question": "Reasoning Puzzle #31: In a seating alignment of 56 candidates facing North, Priya is ranked 6th from left. Simultaneously, a runner travels 65 km North, turns East 94 km, then South 65 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
+        "Priya's Rank = 51th, Displacement = 94 km East",
         "Priya's Rank = 50th, Displacement = 65 km West",
         "Priya's Rank = 52th, Displacement = 159 km North",
-        "Priya's Rank = 51th, Displacement = 130 km South",
-        "Priya's Rank = 51th, Displacement = 94 km East"
+        "Priya's Rank = 51th, Displacement = 130 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (56) - Left (6) + 1 = 51th. North/South movements cancel, leaving 94 km East."
     },
     {
@@ -400,34 +400,34 @@
       "options": [
         "Priya's Rank = 50th, Displacement = 67 km West",
         "Priya's Rank = 52th, Displacement = 164 km North",
-        "Priya's Rank = 51th, Displacement = 134 km South",
-        "Priya's Rank = 51th, Displacement = 97 km East"
+        "Priya's Rank = 51th, Displacement = 97 km East",
+        "Priya's Rank = 51th, Displacement = 134 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (57) - Left (7) + 1 = 51th. North/South movements cancel, leaving 97 km East."
     },
     {
       "id": 33,
       "question": "Reasoning Puzzle #33: In a seating alignment of 58 candidates facing North, Priya is ranked 8th from left. Simultaneously, a runner travels 69 km North, turns East 100 km, then South 69 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 51th, Displacement = 100 km East",
         "Priya's Rank = 52th, Displacement = 169 km North",
-        "Priya's Rank = 51th, Displacement = 138 km South",
-        "Priya's Rank = 51th, Displacement = 100 km East"
+        "Priya's Rank = 50th, Displacement = 69 km West",
+        "Priya's Rank = 51th, Displacement = 138 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (58) - Left (8) + 1 = 51th. North/South movements cancel, leaving 100 km East."
     },
     {
       "id": 34,
       "question": "Reasoning Puzzle #34: In a seating alignment of 59 candidates facing North, Priya is ranked 9th from left. Simultaneously, a runner travels 71 km North, turns East 103 km, then South 71 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
+        "Priya's Rank = 51th, Displacement = 103 km East",
         "Priya's Rank = 50th, Displacement = 71 km West",
         "Priya's Rank = 52th, Displacement = 174 km North",
-        "Priya's Rank = 51th, Displacement = 142 km South",
-        "Priya's Rank = 51th, Displacement = 103 km East"
+        "Priya's Rank = 51th, Displacement = 142 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (59) - Left (9) + 1 = 51th. North/South movements cancel, leaving 103 km East."
     },
     {
@@ -436,34 +436,34 @@
       "options": [
         "Priya's Rank = 50th, Displacement = 73 km West",
         "Priya's Rank = 52th, Displacement = 179 km North",
-        "Priya's Rank = 51th, Displacement = 146 km South",
-        "Priya's Rank = 51th, Displacement = 106 km East"
+        "Priya's Rank = 51th, Displacement = 106 km East",
+        "Priya's Rank = 51th, Displacement = 146 km South"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Rank from right = Total (60) - Left (10) + 1 = 51th. North/South movements cancel, leaving 106 km East."
     },
     {
       "id": 36,
       "question": "Reasoning Puzzle #36: In a seating alignment of 61 candidates facing North, Priya is ranked 11th from left. Simultaneously, a runner travels 75 km North, turns East 109 km, then South 75 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 50th, Displacement = 75 km West",
         "Priya's Rank = 52th, Displacement = 184 km North",
-        "Priya's Rank = 51th, Displacement = 150 km South",
-        "Priya's Rank = 51th, Displacement = 109 km East"
+        "Priya's Rank = 51th, Displacement = 109 km East",
+        "Priya's Rank = 50th, Displacement = 75 km West",
+        "Priya's Rank = 51th, Displacement = 150 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (61) - Left (11) + 1 = 51th. North/South movements cancel, leaving 109 km East."
     },
     {
       "id": 37,
       "question": "Reasoning Puzzle #37: In a seating alignment of 62 candidates facing North, Priya is ranked 12th from left. Simultaneously, a runner travels 77 km North, turns East 112 km, then South 77 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
-        "Priya's Rank = 50th, Displacement = 77 km West",
+        "Priya's Rank = 51th, Displacement = 112 km East",
         "Priya's Rank = 52th, Displacement = 189 km North",
-        "Priya's Rank = 51th, Displacement = 154 km South",
-        "Priya's Rank = 51th, Displacement = 112 km East"
+        "Priya's Rank = 50th, Displacement = 77 km West",
+        "Priya's Rank = 51th, Displacement = 154 km South"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Rank from right = Total (62) - Left (12) + 1 = 51th. North/South movements cancel, leaving 112 km East."
     },
     {
@@ -471,11 +471,11 @@
       "question": "Reasoning Puzzle #38: In a seating alignment of 63 candidates facing North, Priya is ranked 13th from left. Simultaneously, a runner travels 79 km North, turns East 115 km, then South 79 km. What is Priya's rank from right and runner's net displacement?",
       "options": [
         "Priya's Rank = 50th, Displacement = 79 km West",
+        "Priya's Rank = 51th, Displacement = 115 km East",
         "Priya's Rank = 52th, Displacement = 194 km North",
-        "Priya's Rank = 51th, Displacement = 158 km South",
-        "Priya's Rank = 51th, Displacement = 115 km East"
+        "Priya's Rank = 51th, Displacement = 158 km South"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Rank from right = Total (63) - Left (13) + 1 = 51th. North/South movements cancel, leaving 115 km East."
     },
     {
@@ -483,35 +483,35 @@
       "question": "General Knowledge #76: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
         "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
         "8 States applies only during maritime emergencies.",
-        "8 States was declared invalid by the 100th Constitutional Amendment.",
-        "8 States is associated with: Tropic of Cancer passes through 8 Indian States."
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 40,
       "question": "General Knowledge #77: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
         "Battle of Plassey (1757) applies only during maritime emergencies.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
-        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
       "id": 41,
       "question": "General Knowledge #78: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
         "Vice-President of India applies only during maritime emergencies.",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
-        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States)."
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
@@ -519,11 +519,11 @@
       "question": "General Knowledge #79: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
         "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
         "Black Regur Soil applies only during maritime emergencies.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
-        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops."
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
@@ -532,34 +532,34 @@
       "options": [
         "550 Members refers to an ancient taxation treaty repealed in 1950.",
         "550 Members applies only during maritime emergencies.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment.",
-        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
       "id": 44,
       "question": "General Knowledge #81: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
         "Article 32 applies only during maritime emergencies.",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
-        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 45,
       "question": "General Knowledge #82: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
         "Lord Curzon applies only during maritime emergencies.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
-        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
@@ -567,35 +567,35 @@
       "question": "General Knowledge #83: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
         "Godavari River applies only during maritime emergencies.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
-        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga."
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 47,
       "question": "General Knowledge #84: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
         "Governor of RBI applies only during maritime emergencies.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
-        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 48,
       "question": "General Knowledge #85: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
         "101st Amendment Act, 2016 applies only during maritime emergencies.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
-        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India."
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -603,143 +603,143 @@
       "question": "General Knowledge #86: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
         "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
         "42nd Amendment Act, 1976 applies only during maritime emergencies.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
-        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
       "id": 50,
       "question": "General Knowledge #87: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
         "Kaziranga National Park applies only during maritime emergencies.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
-        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
       "id": 51,
       "question": "General Knowledge #88: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
         "Finance Commission (Article 280) applies only during maritime emergencies.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
-        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States."
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
       "id": 52,
       "question": "General Knowledge #89: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
         "Jawaharlal Nehru applies only during maritime emergencies.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
-        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
       "id": 53,
       "question": "General Knowledge #90: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
         "35 Years applies only during maritime emergencies.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment.",
-        "35 Years is associated with: Minimum age requirement for election as President of India."
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
       "id": 54,
       "question": "General Knowledge #91: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
         "Eighth Schedule applies only during maritime emergencies.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
-        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India."
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
       "id": 55,
       "question": "General Knowledge #92: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
         "Lothal (Gujarat) applies only during maritime emergencies.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
-        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard."
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
       "id": 56,
       "question": "General Knowledge #93: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
         "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
         "Articles 20 and 21 applies only during maritime emergencies.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
-        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352."
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
       "id": 57,
       "question": "General Knowledge #94: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
         "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
-        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory."
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
       "id": 58,
       "question": "General Knowledge #95: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
         "Swami Dayanand Saraswati applies only during maritime emergencies.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
-        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
+        "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
       "id": 59,
       "question": "General Knowledge #96: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
         "8 States applies only during maritime emergencies.",
-        "8 States was declared invalid by the 100th Constitutional Amendment.",
-        "8 States is associated with: Tropic of Cancer passes through 8 Indian States."
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 60,
       "question": "General Knowledge #97: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
+        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
         "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
         "Battle of Plassey (1757) applies only during maritime emergencies.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
-        "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
@@ -748,34 +748,34 @@
       "options": [
         "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
         "Vice-President of India applies only during maritime emergencies.",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
-        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States)."
+        "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
       "id": 62,
       "question": "General Knowledge #99: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
         "Black Regur Soil applies only during maritime emergencies.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
-        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops."
+        "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
       "id": 63,
       "question": "General Knowledge #100: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
+        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
         "550 Members refers to an ancient taxation treaty repealed in 1950.",
         "550 Members applies only during maritime emergencies.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment.",
-        "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
+        "550 Members was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
@@ -784,34 +784,34 @@
       "options": [
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
         "Article 32 applies only during maritime emergencies.",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
-        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
+        "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 65,
       "question": "General Knowledge #102: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
         "Lord Curzon applies only during maritime emergencies.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
-        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
+        "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 66,
       "question": "General Knowledge #103: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
         "Godavari River applies only during maritime emergencies.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
-        "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga."
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
@@ -819,11 +819,11 @@
       "question": "General Knowledge #104: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
         "Governor of RBI applies only during maritime emergencies.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
-        "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee."
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
@@ -832,22 +832,22 @@
       "options": [
         "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
         "101st Amendment Act, 2016 applies only during maritime emergencies.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
-        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India."
+        "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
       "id": 69,
       "question": "General Knowledge #106: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
         "42nd Amendment Act, 1976 applies only during maritime emergencies.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
-        "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
@@ -855,11 +855,11 @@
       "question": "General Knowledge #107: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
         "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
         "Kaziranga National Park applies only during maritime emergencies.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
-        "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
@@ -868,34 +868,34 @@
       "options": [
         "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
         "Finance Commission (Article 280) applies only during maritime emergencies.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
-        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States."
+        "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
       "id": 72,
       "question": "General Knowledge #109: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
         "Jawaharlal Nehru applies only during maritime emergencies.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
-        "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj."
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
       "id": 73,
       "question": "General Knowledge #110: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years is associated with: Minimum age requirement for election as President of India.",
         "35 Years applies only during maritime emergencies.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment.",
-        "35 Years is associated with: Minimum age requirement for election as President of India."
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
@@ -903,47 +903,47 @@
       "question": "General Knowledge #111: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
         "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
         "Eighth Schedule applies only during maritime emergencies.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
-        "Eighth Schedule is associated with: Contains 22 officially recognized languages of India."
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
       "id": 75,
       "question": "General Knowledge #112: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
         "Lothal (Gujarat) applies only during maritime emergencies.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
-        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard."
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
       "id": 76,
       "question": "General Knowledge #113: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
         "Articles 20 and 21 applies only during maritime emergencies.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
-        "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352."
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
       "id": 77,
       "question": "English Vocabulary #76: Select the direct ANTONYM of the given word: 'SUPERFLUOUS'",
       "options": [
-        "Unnecessary & Extra",
+        "Essential",
         "Vital",
-        "Required",
-        "Essential"
+        "Unnecessary & Extra",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
@@ -951,35 +951,35 @@
       "question": "English Vocabulary #77: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
         "Identical",
+        "Different & Distinct",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
       "id": 79,
       "question": "English Vocabulary #78: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
-        "Calmness & Composure",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Calmness & Composure",
+        "Agitation",
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
       "id": 80,
       "question": "English Vocabulary #79: Select the most appropriate SYNONYM of the word: 'IMPERVIOUS'",
       "options": [
-        "Impenetrable",
+        "Penetrable & Vulnerable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Impenetrable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
@@ -987,83 +987,83 @@
       "question": "English Vocabulary #80: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
         "Obscure & Arcane",
+        "Common",
         "Familiar",
-        "Public",
-        "Common"
+        "Public"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
       "id": 82,
       "question": "English Vocabulary #81: Select the most appropriate SYNONYM of the word: 'METICULOUS'",
       "options": [
+        "Scrupulous & Thorough",
         "Careless",
         "Hasty",
-        "Indifferent",
-        "Scrupulous & Thorough"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Meticulous means paying extreme attention to detail; precise."
     },
     {
       "id": 83,
       "question": "English Vocabulary #82: Select the direct ANTONYM of the given word: 'EPHEMERAL'",
       "options": [
-        "Permanent & Eternal",
         "Fleeting",
-        "Short-lived",
-        "Transitory"
+        "Permanent & Eternal",
+        "Transitory",
+        "Short-lived"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of ephemeral (short-lived) is permanent/eternal."
     },
     {
       "id": 84,
       "question": "English Vocabulary #83: Select the most appropriate SYNONYM of the word: 'OBSEQUIOUS'",
       "options": [
-        "Servile",
         "Fawning",
-        "Flattering",
-        "Assertive & Domineering"
+        "Assertive & Domineering",
+        "Servile",
+        "Flattering"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Antonym of obsequious (excessively submissive) is assertive."
     },
     {
       "id": 85,
       "question": "English Vocabulary #84: Select the direct ANTONYM of the given word: 'CANDID'",
       "options": [
+        "Deceptive",
         "Frank & Outspoken",
         "Shy",
-        "Reserved",
-        "Deceptive"
+        "Reserved"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Candid means honest, direct, and truthful."
     },
     {
       "id": 86,
       "question": "English Vocabulary #85: Select the most appropriate SYNONYM of the word: 'BENEVOLENT'",
       "options": [
-        "Kind",
         "Generous",
-        "Helpful",
-        "Malevolent & Malicious"
+        "Kind",
+        "Malevolent & Malicious",
+        "Helpful"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of benevolent (kind) is malevolent (spiteful)."
     },
     {
       "id": 87,
       "question": "English Vocabulary #86: Select the direct ANTONYM of the given word: 'PRAGMATIC'",
       "options": [
-        "Practical & Realistic",
         "Theoretical",
-        "Irrational",
-        "Idealistic"
+        "Idealistic",
+        "Practical & Realistic",
+        "Irrational"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Pragmatic means solving problems in a sensible, practical way."
     },
     {
@@ -1071,23 +1071,23 @@
       "question": "English Vocabulary #87: Select the most appropriate SYNONYM of the word: 'ZEALOUS'",
       "options": [
         "Apathetic",
+        "Passionate & Enthusiastic",
         "Lethargic",
-        "Indifferent",
-        "Passionate & Enthusiastic"
+        "Indifferent"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Zealous means showing great energy and enthusiasm."
     },
     {
       "id": 89,
       "question": "English Vocabulary #88: Select the direct ANTONYM of the given word: 'RETICENT'",
       "options": [
+        "Talkative",
         "Reserved & Taciturn",
         "Garrulous",
-        "Outgoing",
-        "Talkative"
+        "Outgoing"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Reticent means not revealing one's thoughts or feelings readily."
     },
     {
@@ -1096,34 +1096,34 @@
       "options": [
         "Rare",
         "Scarce",
-        "Hidden",
-        "Omnipresent & Everywhere"
+        "Omnipresent & Everywhere",
+        "Hidden"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Ubiquitous means present, appearing, or found everywhere."
     },
     {
       "id": 91,
       "question": "English Vocabulary #90: Select the direct ANTONYM of the given word: 'FASTIDIOUS'",
       "options": [
-        "Meticulous & Demanding",
         "Easygoing",
-        "Sloppy",
-        "Careless"
+        "Careless",
+        "Meticulous & Demanding",
+        "Sloppy"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Opposite meaning: Fastidious means very attentive to and concerned about accuracy and detail."
     },
     {
       "id": 92,
       "question": "English Vocabulary #91: Select the most appropriate SYNONYM of the word: 'ALACRITY'",
       "options": [
+        "Eagerness & Speed",
         "Sluggishness",
         "Reluctance",
-        "Apathy",
-        "Eagerness & Speed"
+        "Apathy"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Alacrity means brisk and cheerful readiness."
     },
     {
@@ -1132,46 +1132,46 @@
       "options": [
         "Garrulous & Talkative",
         "Reticent",
-        "Quiet",
-        "Silent"
+        "Silent",
+        "Quiet"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Antonym of taciturn (reserved/untalkative) is garrulous."
     },
     {
       "id": 94,
       "question": "English Vocabulary #93: Select the most appropriate SYNONYM of the word: 'GREGARIOUS'",
       "options": [
-        "Reclusive",
         "Solitary",
-        "Introverted",
-        "Sociable & Outgoing"
+        "Sociable & Outgoing",
+        "Reclusive",
+        "Introverted"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Gregarious means fond of company; sociable."
     },
     {
       "id": 95,
       "question": "English Vocabulary #94: Select the direct ANTONYM of the given word: 'MAGNANIMOUS'",
       "options": [
-        "Selfish & Spiteful",
+        "Generous",
         "Forgiving",
-        "Noble",
-        "Generous"
+        "Selfish & Spiteful",
+        "Noble"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Antonym of magnanimous (generous) is spiteful/selfish."
     },
     {
       "id": 96,
       "question": "English Vocabulary #95: Select the most appropriate SYNONYM of the word: 'PERNICIOUS'",
       "options": [
+        "Harmful & Destructive",
         "Beneficial",
         "Harmless",
-        "Wholesome",
-        "Harmful & Destructive"
+        "Wholesome"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Pernicious means having a harmful effect in a subtle way."
     },
     {
@@ -1180,34 +1180,34 @@
       "options": [
         "Unnecessary & Extra",
         "Vital",
-        "Required",
-        "Essential"
+        "Essential",
+        "Required"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Opposite meaning: Superfluous means more than is needed; redundant."
     },
     {
       "id": 98,
       "question": "English Vocabulary #97: Select the most appropriate SYNONYM of the word: 'DISPARATE'",
       "options": [
-        "Identical",
+        "Different & Distinct",
         "Similar",
-        "Uniform",
-        "Different & Distinct"
+        "Identical",
+        "Uniform"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Disparate means fundamentally different in kind."
     },
     {
       "id": 99,
       "question": "English Vocabulary #98: Select the direct ANTONYM of the given word: 'EQUANIMITY'",
       "options": [
+        "Agitation",
         "Calmness & Composure",
         "Panic",
-        "Anxiety",
-        "Agitation"
+        "Anxiety"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Equanimity means mental calmness and composure in difficult situations."
     },
     {
@@ -1216,34 +1216,34 @@
       "options": [
         "Impenetrable",
         "Proof",
-        "Resistant",
-        "Penetrable & Vulnerable"
+        "Penetrable & Vulnerable",
+        "Resistant"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Antonym of impervious (unable to be affected) is penetrable."
     },
     {
       "id": 101,
       "question": "English Vocabulary #100: Select the direct ANTONYM of the given word: 'ESOTERIC'",
       "options": [
-        "Obscure & Arcane",
+        "Common",
         "Familiar",
-        "Public",
-        "Common"
+        "Obscure & Arcane",
+        "Public"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Opposite meaning: Esoteric means intended for or understood by only a small group."
     },
     {
       "id": 102,
       "question": "English Idioms & Phrases #1: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
+        "To disclose a confidential secret",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To waste precious food",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
@@ -1251,35 +1251,35 @@
       "question": "English Idioms & Phrases #2: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
         "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 104,
       "question": "English Idioms & Phrases #3: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
       "id": 105,
       "question": "English Idioms & Phrases #4: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "To waste electricity",
+        "To work or study late into the night",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To waste electricity",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To study or work until late at night."
     },
     {
@@ -1287,11 +1287,11 @@
       "question": "English Idioms & Phrases #5: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
         "To clean up a mess",
+        "To admit defeat and surrender",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     },
     {
@@ -1300,34 +1300,34 @@
       "options": [
         "To injure one's finger",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To state something with exact accuracy",
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To describe exactly what is causing a situation."
     },
     {
       "id": 108,
       "question": "English Idioms & Phrases #7: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To cut wild bushes",
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 109,
       "question": "English Idioms & Phrases #8: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To decide to stop working."
     },
     {
@@ -1335,35 +1335,35 @@
       "question": "English Idioms & Phrases #9: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
         "Every month",
+        "Very rarely or seldom",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "An event that happens very rarely."
     },
     {
       "id": 111,
       "question": "English Idioms & Phrases #10: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Only during good times",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 112,
       "question": "English Idioms & Phrases #11: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
@@ -1371,143 +1371,143 @@
       "question": "English Idioms & Phrases #12: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
         "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 114,
       "question": "English Idioms & Phrases #13: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
       "id": 115,
       "question": "English Idioms & Phrases #14: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
-        "To waste electricity",
+        "To work or study late into the night",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To waste electricity",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To study or work until late at night."
     },
     {
       "id": 116,
       "question": "English Idioms & Phrases #15: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     },
     {
       "id": 117,
       "question": "English Idioms & Phrases #16: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
+        "To state something with exact accuracy",
         "To injure one's finger",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To describe exactly what is causing a situation."
     },
     {
       "id": 118,
       "question": "English Idioms & Phrases #17: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
-        "To cut wild bushes",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To cut wild bushes",
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 119,
       "question": "English Idioms & Phrases #18: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To decide to stop working."
     },
     {
       "id": 120,
       "question": "English Idioms & Phrases #19: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
+        "Very rarely or seldom",
         "Every month",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "An event that happens very rarely."
     },
     {
       "id": 121,
       "question": "English Idioms & Phrases #20: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
-        "Only during good times",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Only during good times",
+        "Under all circumstances, good and bad",
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 122,
       "question": "English Idioms & Phrases #21: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To disclose a confidential secret",
+        "To waste precious food",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
       "id": 123,
       "question": "English Idioms & Phrases #22: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To get injured in a fight",
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 124,
       "question": "English Idioms & Phrases #23: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
+        "An apparent misfortune that yields unexpected good results",
         "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
@@ -1516,34 +1516,34 @@
       "options": [
         "To waste electricity",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To work or study late into the night",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To study or work until late at night."
     },
     {
       "id": 126,
       "question": "English Idioms & Phrases #25: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To admit defeat and surrender",
+        "To clean up a mess",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To give up or accept defeat."
     },
     {
       "id": 127,
       "question": "English Idioms & Phrases #26: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
+        "To state something with exact accuracy",
         "To injure one's finger",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To describe exactly what is causing a situation."
     },
     {
@@ -1552,34 +1552,34 @@
       "options": [
         "To cut wild bushes",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To avoid discussing the main topic directly",
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 129,
       "question": "English Idioms & Phrases #28: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To stop working on something for the rest of the day",
+        "To name a date",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To decide to stop working."
     },
     {
       "id": 130,
       "question": "English Idioms & Phrases #29: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Every month",
+        "Very rarely or seldom",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Every month",
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "An event that happens very rarely."
     },
     {
@@ -1587,11 +1587,11 @@
       "question": "English Idioms & Phrases #30: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
         "Only during good times",
+        "Under all circumstances, good and bad",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Supporting someone through all difficulties."
     },
     {
@@ -1600,22 +1600,22 @@
       "options": [
         "To waste precious food",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To disclose a confidential secret",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
       "id": 133,
       "question": "English Idioms & Phrases #32: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To get injured in a fight",
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
@@ -1623,11 +1623,11 @@
       "question": "English Idioms & Phrases #33: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
         "A holy benediction",
+        "An apparent misfortune that yields unexpected good results",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
@@ -1636,34 +1636,34 @@
       "options": [
         "To waste electricity",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To work or study late into the night",
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To study or work until late at night."
     },
     {
       "id": 136,
       "question": "English Idioms & Phrases #35: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
+        "To admit defeat and surrender",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To clean up a mess",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To give up or accept defeat."
     },
     {
       "id": 137,
       "question": "English Idioms & Phrases #36: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "To injure one's finger",
+        "To state something with exact accuracy",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To injure one's finger",
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "To describe exactly what is causing a situation."
     },
     {
@@ -1671,35 +1671,35 @@
       "question": "English Idioms & Phrases #37: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
         "To cut wild bushes",
+        "To avoid discussing the main topic directly",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 139,
       "question": "English Idioms & Phrases #38: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To name a date",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To decide to stop working."
     },
     {
       "id": 140,
       "question": "English Idioms & Phrases #39: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Every month",
+        "Very rarely or seldom",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Every month",
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "An event that happens very rarely."
     },
     {
@@ -1707,47 +1707,47 @@
       "question": "English Idioms & Phrases #40: Choose the correct meaning of the idiom: 'Through thick and thin'",
       "options": [
         "Only during good times",
+        "Under all circumstances, good and bad",
         "In heavy fog",
-        "Through dense forests",
-        "Under all circumstances, good and bad"
+        "Through dense forests"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Supporting someone through all difficulties."
     },
     {
       "id": 142,
       "question": "English Idioms & Phrases #41: Choose the correct meaning of the idiom: 'To spill the beans'",
       "options": [
-        "To waste precious food",
         "To make a big blunder",
-        "To start a brawl",
-        "To disclose a confidential secret"
+        "To waste precious food",
+        "To disclose a confidential secret",
+        "To start a brawl"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "'Spill the beans' means to reveal secret information."
     },
     {
       "id": 143,
       "question": "English Idioms & Phrases #42: Choose the correct meaning of the idiom: 'Bite the bullet'",
       "options": [
-        "To get injured in a fight",
+        "To face a difficult situation with courage",
         "To eat voraciously",
-        "To surrender unconditionally",
-        "To face a difficult situation with courage"
+        "To get injured in a fight",
+        "To surrender unconditionally"
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "'Bite the bullet' means to endure a painful situation bravely."
     },
     {
       "id": 144,
       "question": "English Idioms & Phrases #43: Choose the correct meaning of the idiom: 'A blessing in disguise'",
       "options": [
-        "A holy benediction",
         "A magical gift",
-        "A curse on enemies",
-        "An apparent misfortune that yields unexpected good results"
+        "An apparent misfortune that yields unexpected good results",
+        "A holy benediction",
+        "A curse on enemies"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Something that seems bad at first but turns out good."
     },
     {
@@ -1755,35 +1755,35 @@
       "question": "English Idioms & Phrases #44: Choose the correct meaning of the idiom: 'Burn the midnight oil'",
       "options": [
         "To waste electricity",
+        "To work or study late into the night",
         "To set fire to property",
-        "To celebrate lavishly",
-        "To work or study late into the night"
+        "To celebrate lavishly"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To study or work until late at night."
     },
     {
       "id": 146,
       "question": "English Idioms & Phrases #45: Choose the correct meaning of the idiom: 'Throw in the towel'",
       "options": [
-        "To clean up a mess",
         "To start a swimming match",
-        "To ignore advice",
-        "To admit defeat and surrender"
+        "To clean up a mess",
+        "To admit defeat and surrender",
+        "To ignore advice"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To give up or accept defeat."
     },
     {
       "id": 147,
       "question": "English Idioms & Phrases #46: Choose the correct meaning of the idiom: 'Hit the nail on the head'",
       "options": [
-        "To injure one's finger",
         "To build a wooden structure",
-        "To make a mistake",
-        "To state something with exact accuracy"
+        "To state something with exact accuracy",
+        "To injure one's finger",
+        "To make a mistake"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To describe exactly what is causing a situation."
     },
     {
@@ -1791,35 +1791,35 @@
       "question": "English Idioms & Phrases #47: Choose the correct meaning of the idiom: 'Beat around the bush'",
       "options": [
         "To cut wild bushes",
+        "To avoid discussing the main topic directly",
         "To hunt animals",
-        "To talk loudly",
-        "To avoid discussing the main topic directly"
+        "To talk loudly"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "To speak evasively without coming to the point."
     },
     {
       "id": 149,
       "question": "English Idioms & Phrases #48: Choose the correct meaning of the idiom: 'Call it a day'",
       "options": [
-        "To name a date",
         "To celebrate a birthday",
-        "To wake up early",
-        "To stop working on something for the rest of the day"
+        "To name a date",
+        "To stop working on something for the rest of the day",
+        "To wake up early"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "To decide to stop working."
     },
     {
       "id": 150,
       "question": "English Idioms & Phrases #49: Choose the correct meaning of the idiom: 'Once in a blue moon'",
       "options": [
-        "Every month",
         "During full moon",
-        "Frequently",
-        "Very rarely or seldom"
+        "Very rarely or seldom",
+        "Every month",
+        "Frequently"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "An event that happens very rarely."
     }
   ]

@@ -38568,8 +38568,35 @@ const SUBJECT_BANKS: Record<string, { q: string; o: string[]; a: number; h: stri
 ]
 };
 
+export function shuffleQuestionOptions<T extends { options: string[]; answer: number }>(question: T): T {
+  if (!question || !Array.isArray(question.options) || question.options.length < 2) {
+    return question;
+  }
+  
+  const originalAnswerIndex = typeof question.answer === "number" ? question.answer : parseInt(String(question.answer), 10) || 0;
+  
+  const indexedOptions = question.options.map((opt, idx) => ({
+    text: opt,
+    isCorrect: idx === originalAnswerIndex
+  }));
+  
+  for (let i = indexedOptions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indexedOptions[i], indexedOptions[j]] = [indexedOptions[j], indexedOptions[i]];
+  }
+  
+  const newOptions = indexedOptions.map(item => item.text);
+  const newAnswerIndex = indexedOptions.findIndex(item => item.isCorrect);
+  
+  return {
+    ...question,
+    options: newOptions,
+    answer: newAnswerIndex >= 0 ? newAnswerIndex : 0
+  };
+}
+
 function generateSubjectQuestion(courseName: string, subjectName: string, qNumber: number, testSeed: number, testOffset: number = 0): QuestionItem {
-  const prng = seededRandom(testSeed + qNumber * 101 + testOffset * 19);
+  const prng = seededRandom(testSeed + qNumber * 101 + testOffset * 17);
   const subLower = (subjectName + " " + courseName).toLowerCase();
 
   let poolKey = 'gk';
@@ -38596,27 +38623,13 @@ function generateSubjectQuestion(courseName: string, subjectName: string, qNumbe
   let answerIndex = baseTemplate.a;
   let hint = baseTemplate.h;
 
-  const correctText = options[answerIndex];
-  const otherTexts = options.filter((_, idx) => idx !== answerIndex);
-  
-  const shuffledOptions = new Array(4);
-  const newAnsIndex = Math.floor(prng() * 4);
-  
-  shuffledOptions[newAnsIndex] = correctText;
-  let oIdx = 0;
-  for (let i = 0; i < 4; i++) {
-    if (i !== newAnsIndex) {
-      shuffledOptions[i] = otherTexts[oIdx++];
-    }
-  }
-
-  return {
+  return shuffleQuestionOptions({
     id: qNumber,
     question: finalQText,
-    options: shuffledOptions,
-    answer: newAnsIndex,
+    options: options,
+    answer: answerIndex,
     hint: hint
-  };
+  });
 }
 
 export function generateUniqueQuestions(
@@ -38631,19 +38644,24 @@ export function generateUniqueQuestions(
   const { testNum, isChapter } = extractTestNumber(testName);
   const testOffset = isChapter ? (125 + (testNum - 1) * 20) : ((testNum - 1) * 25);
 
-  // If database MCQs are available for this course, partition them by testOffset!
-  if (dbQuestions && dbQuestions.length >= requiredCount) {
-    const startIndex = (testOffset * 2) % Math.max(1, dbQuestions.length - requiredCount);
-    const sliced = dbQuestions.slice(startIndex, startIndex + requiredCount);
-    if (sliced.length === requiredCount) {
-      return sliced.map((q, idx) => ({
-        id: idx + 1,
-        question: q.question,
-        options: q.options,
-        answer: q.answer,
-        hint: q.hint
-      }));
+  // Strictly use Database MCQs whenever available for the course
+  if (dbQuestions && dbQuestions.length > 0) {
+    const startIndex = (testOffset * 17) % dbQuestions.length;
+    const selected: QuestionItem[] = [];
+
+    for (let i = 0; i < requiredCount; i++) {
+      const q = dbQuestions[(startIndex + i) % dbQuestions.length];
+      selected.push(
+        shuffleQuestionOptions({
+          id: i + 1,
+          question: q.question,
+          options: q.options,
+          answer: q.answer,
+          hint: q.hint || ""
+        })
+      );
     }
+    return selected;
   }
 
   const rawSum = totalSections.reduce((sum, s) => sum + s.qs, 0);
@@ -38670,13 +38688,13 @@ export function generateUniqueQuestions(
       const clean = generated.question.trim().toLowerCase();
       if (!seenTexts.has(clean)) {
         seenTexts.add(clean);
-        result.push({
+        result.push(shuffleQuestionOptions({
           id: globalQIndex,
           question: generated.question,
           options: generated.options,
           answer: generated.answer,
           hint: generated.hint
-        });
+        }));
         globalQIndex++;
         subCounter++;
       } else {

@@ -31,24 +31,24 @@
       "id": 1,
       "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 2,
       "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
@@ -56,9 +56,9 @@
       "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
@@ -67,24 +67,24 @@
       "id": 4,
       "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 5,
       "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -92,11 +92,11 @@
       "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
         "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
-        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
         "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
@@ -104,9 +104,9 @@
       "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
         "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
-        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
         "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+        "Kaziranga National Park applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
@@ -115,12 +115,12 @@
       "id": 8,
       "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
-        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
-        "Finance Commission (Article 280) applies only during maritime emergencies.",
         "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
+        "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
+        "Finance Commission (Article 280) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
@@ -128,11 +128,11 @@
       "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
         "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
-        "Jawaharlal Nehru applies only during maritime emergencies.",
         "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
+        "Jawaharlal Nehru applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
@@ -140,9 +140,9 @@
       "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
-        "35 Years applies only during maritime emergencies.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment.",
         "35 Years is associated with: Minimum age requirement for election as President of India.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment."
+        "35 Years applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "35 Years: Minimum age requirement for election as President of India."
@@ -151,12 +151,12 @@
       "id": 11,
       "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
-        "Eighth Schedule applies only during maritime emergencies.",
         "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
@@ -164,11 +164,11 @@
       "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
         "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
-        "Lothal (Gujarat) applies only during maritime emergencies.",
         "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
+        "Lothal (Gujarat) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
@@ -176,21 +176,21 @@
       "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
         "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
-        "Articles 20 and 21 applies only during maritime emergencies.",
         "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
+        "Articles 20 and 21 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
       "id": 14,
       "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
         "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
-        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
         "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
@@ -199,12 +199,12 @@
       "id": 15,
       "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
-        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
         "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
@@ -212,21 +212,21 @@
       "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
         "8 States refers to an ancient taxation treaty repealed in 1950.",
-        "8 States applies only during maritime emergencies.",
         "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
-        "8 States was declared invalid by the 100th Constitutional Amendment."
+        "8 States was declared invalid by the 100th Constitutional Amendment.",
+        "8 States applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 17,
       "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
         "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
-        "Battle of Plassey (1757) applies only during maritime emergencies.",
         "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+        "Battle of Plassey (1757) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
@@ -235,12 +235,12 @@
       "id": 18,
       "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
-        "Vice-President of India applies only during maritime emergencies.",
         "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
@@ -248,33 +248,33 @@
       "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
         "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
-        "Black Regur Soil applies only during maritime emergencies.",
         "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
+        "Black Regur Soil applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
       "id": 20,
       "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "550 Members refers to an ancient taxation treaty repealed in 1950.",
-        "550 Members applies only during maritime emergencies.",
         "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment."
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment.",
+        "550 Members applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
       "id": 21,
       "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
@@ -283,34 +283,34 @@
       "id": 22,
       "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 23,
       "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 24,
       "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
@@ -319,12 +319,12 @@
       "id": 25,
       "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -332,9 +332,9 @@
       "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
@@ -343,24 +343,24 @@
       "id": 27,
       "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 28,
       "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
@@ -368,21 +368,21 @@
       "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
+        "Governor of RBI applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 30,
       "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
         "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
@@ -391,12 +391,12 @@
       "id": 31,
       "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
-        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
         "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
@@ -404,21 +404,21 @@
       "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
         "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
-        "Kaziranga National Park applies only during maritime emergencies.",
         "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
+        "Kaziranga National Park applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
       "id": 33,
       "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
         "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
-        "Finance Commission (Article 280) applies only during maritime emergencies.",
         "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+        "Finance Commission (Article 280) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
@@ -427,12 +427,12 @@
       "id": 34,
       "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
-        "Jawaharlal Nehru applies only during maritime emergencies.",
         "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
@@ -440,33 +440,33 @@
       "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
-        "35 Years applies only during maritime emergencies.",
         "35 Years is associated with: Minimum age requirement for election as President of India.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment."
+        "35 Years was declared invalid by the 100th Constitutional Amendment.",
+        "35 Years applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
       "id": 36,
       "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
-        "Eighth Schedule applies only during maritime emergencies.",
         "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
+        "Eighth Schedule applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
       "id": 37,
       "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
         "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
-        "Lothal (Gujarat) applies only during maritime emergencies.",
         "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+        "Lothal (Gujarat) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
@@ -475,12 +475,12 @@
       "id": 38,
       "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
-        "Articles 20 and 21 applies only during maritime emergencies.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
         "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
@@ -488,21 +488,21 @@
       "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
         "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
-        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
         "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
       "id": 40,
       "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
         "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
-        "Swami Dayanand Saraswati applies only during maritime emergencies.",
         "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+        "Swami Dayanand Saraswati applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
@@ -511,12 +511,12 @@
       "id": 41,
       "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "8 States refers to an ancient taxation treaty repealed in 1950.",
-        "8 States applies only during maritime emergencies.",
+        "8 States was declared invalid by the 100th Constitutional Amendment.",
         "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
-        "8 States was declared invalid by the 100th Constitutional Amendment."
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
@@ -524,23 +524,23 @@
       "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
         "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
-        "Battle of Plassey (1757) applies only during maritime emergencies.",
         "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
+        "Battle of Plassey (1757) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
       "id": 43,
       "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
-        "Vice-President of India applies only during maritime emergencies.",
         "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
+        "Vice-President of India applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
@@ -548,9 +548,9 @@
       "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
         "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
-        "Black Regur Soil applies only during maritime emergencies.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
         "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+        "Black Regur Soil applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
@@ -559,34 +559,34 @@
       "id": 45,
       "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "550 Members refers to an ancient taxation treaty repealed in 1950.",
-        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment.",
         "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment."
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
       "id": 46,
       "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
+        "Article 32 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 47,
       "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
         "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
@@ -595,36 +595,36 @@
       "id": 48,
       "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 49,
       "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
+        "Governor of RBI applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 50,
       "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
@@ -632,11 +632,11 @@
       "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
+        "Article 32 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
@@ -644,21 +644,21 @@
       "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
         "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 53,
       "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
@@ -667,12 +667,12 @@
       "id": 54,
       "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
-        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
+        "Governor of RBI applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
@@ -680,21 +680,21 @@
       "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
         "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
       "id": 56,
       "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
         "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
-        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
         "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+        "42nd Amendment Act, 1976 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
@@ -703,12 +703,12 @@
       "id": 57,
       "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
-        "Kaziranga National Park applies only during maritime emergencies.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
         "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
@@ -716,33 +716,33 @@
       "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
         "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
-        "Finance Commission (Article 280) applies only during maritime emergencies.",
         "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
+        "Finance Commission (Article 280) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
     },
     {
       "id": 59,
       "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
-        "Jawaharlal Nehru applies only during maritime emergencies.",
         "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
+        "Jawaharlal Nehru applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
       "id": 60,
       "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
+        "35 Years was declared invalid by the 100th Constitutional Amendment.",
         "35 Years refers to an ancient taxation treaty repealed in 1950.",
-        "35 Years applies only during maritime emergencies.",
         "35 Years is associated with: Minimum age requirement for election as President of India.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment."
+        "35 Years applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "35 Years: Minimum age requirement for election as President of India."
@@ -751,34 +751,34 @@
       "id": 61,
       "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
-        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
-        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
         "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+        "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
+        "Eighth Schedule applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
     },
     {
       "id": 62,
       "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
-        "Lothal (Gujarat) applies only during maritime emergencies.",
         "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
+        "Lothal (Gujarat) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
       "id": 63,
       "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
         "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
-        "Articles 20 and 21 applies only during maritime emergencies.",
         "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+        "Articles 20 and 21 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
@@ -787,36 +787,36 @@
       "id": 64,
       "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
-        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
-        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
         "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+        "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
       "id": 65,
       "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
-        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
-        "Swami Dayanand Saraswati applies only during maritime emergencies.",
         "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+        "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
+        "Swami Dayanand Saraswati applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
     },
     {
       "id": 66,
       "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "8 States refers to an ancient taxation treaty repealed in 1950.",
-        "8 States applies only during maritime emergencies.",
         "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
-        "8 States was declared invalid by the 100th Constitutional Amendment."
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States was declared invalid by the 100th Constitutional Amendment.",
+        "8 States applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
@@ -824,9 +824,9 @@
       "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
         "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
-        "Battle of Plassey (1757) applies only during maritime emergencies.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
         "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+        "Battle of Plassey (1757) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
@@ -835,24 +835,24 @@
       "id": 68,
       "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
-        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
-        "Vice-President of India applies only during maritime emergencies.",
         "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
+        "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
+        "Vice-President of India applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
     },
     {
       "id": 69,
       "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
-        "Black Regur Soil applies only during maritime emergencies.",
         "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
+        "Black Regur Soil applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
@@ -860,9 +860,9 @@
       "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
         "550 Members refers to an ancient taxation treaty repealed in 1950.",
-        "550 Members applies only during maritime emergencies.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment.",
         "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment."
+        "550 Members applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
@@ -871,24 +871,24 @@
       "id": 71,
       "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
-        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 refers to an ancient taxation treaty repealed in 1950.",
+        "Article 32 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 72,
       "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
@@ -896,11 +896,11 @@
       "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
         "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
@@ -908,9 +908,9 @@
       "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
@@ -919,22 +919,22 @@
       "id": 75,
       "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
       "id": 76,
       "question": "General Knowledge #1: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
@@ -943,34 +943,34 @@
       "id": 77,
       "question": "General Knowledge #2: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
-        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
+        "Lord Curzon applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
     },
     {
       "id": 78,
       "question": "General Knowledge #3: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
       "id": 79,
       "question": "General Knowledge #4: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
@@ -979,36 +979,36 @@
       "id": 80,
       "question": "General Knowledge #5: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
-        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."
     },
     {
       "id": 81,
       "question": "General Knowledge #6: Which constitutional or historical fact accurately describes 42nd Amendment Act, 1976?",
       "options": [
-        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
-        "42nd Amendment Act, 1976 applies only during maritime emergencies.",
         "42nd Amendment Act, 1976 is associated with: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble.",
-        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment."
+        "42nd Amendment Act, 1976 refers to an ancient taxation treaty repealed in 1950.",
+        "42nd Amendment Act, 1976 was declared invalid by the 100th Constitutional Amendment.",
+        "42nd Amendment Act, 1976 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "42nd Amendment Act, 1976: Added 'Socialist', 'Secular', and 'Integrity' to the Preamble."
     },
     {
       "id": 82,
       "question": "General Knowledge #7: Which constitutional or historical fact accurately describes Kaziranga National Park?",
       "options": [
-        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
-        "Kaziranga National Park applies only during maritime emergencies.",
         "Kaziranga National Park is associated with: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos.",
-        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment."
+        "Kaziranga National Park refers to an ancient taxation treaty repealed in 1950.",
+        "Kaziranga National Park was declared invalid by the 100th Constitutional Amendment.",
+        "Kaziranga National Park applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Kaziranga National Park: UNESCO site in Assam preserving 2/3rd of world's one-horned rhinos."
     },
     {
@@ -1016,9 +1016,9 @@
       "question": "General Knowledge #8: Which constitutional or historical fact accurately describes Finance Commission (Article 280)?",
       "options": [
         "Finance Commission (Article 280) refers to an ancient taxation treaty repealed in 1950.",
-        "Finance Commission (Article 280) applies only during maritime emergencies.",
+        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment.",
         "Finance Commission (Article 280) is associated with: Constituted every 5 years to allocate tax revenues between Union and States.",
-        "Finance Commission (Article 280) was declared invalid by the 100th Constitutional Amendment."
+        "Finance Commission (Article 280) applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Finance Commission (Article 280): Constituted every 5 years to allocate tax revenues between Union and States."
@@ -1027,24 +1027,24 @@
       "id": 84,
       "question": "General Knowledge #9: Which constitutional or historical fact accurately describes Jawaharlal Nehru?",
       "options": [
-        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
-        "Jawaharlal Nehru applies only during maritime emergencies.",
+        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment.",
         "Jawaharlal Nehru is associated with: Presided over 1929 Lahore INC session declaring Purna Swaraj.",
-        "Jawaharlal Nehru was declared invalid by the 100th Constitutional Amendment."
+        "Jawaharlal Nehru refers to an ancient taxation treaty repealed in 1950.",
+        "Jawaharlal Nehru applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Jawaharlal Nehru: Presided over 1929 Lahore INC session declaring Purna Swaraj."
     },
     {
       "id": 85,
       "question": "General Knowledge #10: Which constitutional or historical fact accurately describes 35 Years?",
       "options": [
-        "35 Years refers to an ancient taxation treaty repealed in 1950.",
-        "35 Years applies only during maritime emergencies.",
         "35 Years is associated with: Minimum age requirement for election as President of India.",
-        "35 Years was declared invalid by the 100th Constitutional Amendment."
+        "35 Years refers to an ancient taxation treaty repealed in 1950.",
+        "35 Years was declared invalid by the 100th Constitutional Amendment.",
+        "35 Years applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "35 Years: Minimum age requirement for election as President of India."
     },
     {
@@ -1052,9 +1052,9 @@
       "question": "General Knowledge #11: Which constitutional or historical fact accurately describes Eighth Schedule?",
       "options": [
         "Eighth Schedule refers to an ancient taxation treaty repealed in 1950.",
-        "Eighth Schedule applies only during maritime emergencies.",
+        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment.",
         "Eighth Schedule is associated with: Contains 22 officially recognized languages of India.",
-        "Eighth Schedule was declared invalid by the 100th Constitutional Amendment."
+        "Eighth Schedule applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Eighth Schedule: Contains 22 officially recognized languages of India."
@@ -1063,24 +1063,24 @@
       "id": 87,
       "question": "General Knowledge #12: Which constitutional or historical fact accurately describes Lothal (Gujarat)?",
       "options": [
-        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
-        "Lothal (Gujarat) applies only during maritime emergencies.",
+        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment.",
         "Lothal (Gujarat) is associated with: Indus Valley port town featuring a tidal brick dockyard.",
-        "Lothal (Gujarat) was declared invalid by the 100th Constitutional Amendment."
+        "Lothal (Gujarat) refers to an ancient taxation treaty repealed in 1950.",
+        "Lothal (Gujarat) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Lothal (Gujarat): Indus Valley port town featuring a tidal brick dockyard."
     },
     {
       "id": 88,
       "question": "General Knowledge #13: Which constitutional or historical fact accurately describes Articles 20 and 21?",
       "options": [
-        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
-        "Articles 20 and 21 applies only during maritime emergencies.",
         "Articles 20 and 21 is associated with: Cannot be suspended even during a National Emergency under Article 352.",
-        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment."
+        "Articles 20 and 21 refers to an ancient taxation treaty repealed in 1950.",
+        "Articles 20 and 21 was declared invalid by the 100th Constitutional Amendment.",
+        "Articles 20 and 21 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Articles 20 and 21: Cannot be suspended even during a National Emergency under Article 352."
     },
     {
@@ -1088,11 +1088,11 @@
       "question": "General Knowledge #14: Which constitutional or historical fact accurately describes Kangchenjunga (8,586 m)?",
       "options": [
         "Kangchenjunga (8,586 m) refers to an ancient taxation treaty repealed in 1950.",
-        "Kangchenjunga (8,586 m) applies only during maritime emergencies.",
         "Kangchenjunga (8,586 m) is associated with: Highest mountain peak situated entirely in Indian territory.",
-        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment."
+        "Kangchenjunga (8,586 m) was declared invalid by the 100th Constitutional Amendment.",
+        "Kangchenjunga (8,586 m) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Kangchenjunga (8,586 m): Highest mountain peak situated entirely in Indian territory."
     },
     {
@@ -1100,9 +1100,9 @@
       "question": "General Knowledge #15: Which constitutional or historical fact accurately describes Swami Dayanand Saraswati?",
       "options": [
         "Swami Dayanand Saraswati refers to an ancient taxation treaty repealed in 1950.",
-        "Swami Dayanand Saraswati applies only during maritime emergencies.",
+        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment.",
         "Swami Dayanand Saraswati is associated with: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan.",
-        "Swami Dayanand Saraswati was declared invalid by the 100th Constitutional Amendment."
+        "Swami Dayanand Saraswati applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Swami Dayanand Saraswati: Founded Arya Samaj in 1875 with 'Back to the Vedas' slogan."
@@ -1111,24 +1111,24 @@
       "id": 91,
       "question": "General Knowledge #16: Which constitutional or historical fact accurately describes 8 States?",
       "options": [
-        "8 States refers to an ancient taxation treaty repealed in 1950.",
-        "8 States applies only during maritime emergencies.",
         "8 States is associated with: Tropic of Cancer passes through 8 Indian States.",
-        "8 States was declared invalid by the 100th Constitutional Amendment."
+        "8 States was declared invalid by the 100th Constitutional Amendment.",
+        "8 States refers to an ancient taxation treaty repealed in 1950.",
+        "8 States applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "8 States: Tropic of Cancer passes through 8 Indian States."
     },
     {
       "id": 92,
       "question": "General Knowledge #17: Which constitutional or historical fact accurately describes Battle of Plassey (1757)?",
       "options": [
-        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
-        "Battle of Plassey (1757) applies only during maritime emergencies.",
         "Battle of Plassey (1757) is associated with: Robert Clive defeated Siraj-ud-Daulah, establishing British rule.",
-        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment."
+        "Battle of Plassey (1757) refers to an ancient taxation treaty repealed in 1950.",
+        "Battle of Plassey (1757) was declared invalid by the 100th Constitutional Amendment.",
+        "Battle of Plassey (1757) applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Battle of Plassey (1757): Robert Clive defeated Siraj-ud-Daulah, establishing British rule."
     },
     {
@@ -1136,9 +1136,9 @@
       "question": "General Knowledge #18: Which constitutional or historical fact accurately describes Vice-President of India?",
       "options": [
         "Vice-President of India refers to an ancient taxation treaty repealed in 1950.",
-        "Vice-President of India applies only during maritime emergencies.",
+        "Vice-President of India was declared invalid by the 100th Constitutional Amendment.",
         "Vice-President of India is associated with: Ex-officio Chairman of Rajya Sabha (Council of States).",
-        "Vice-President of India was declared invalid by the 100th Constitutional Amendment."
+        "Vice-President of India applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Vice-President of India: Ex-officio Chairman of Rajya Sabha (Council of States)."
@@ -1147,24 +1147,24 @@
       "id": 94,
       "question": "General Knowledge #19: Which constitutional or historical fact accurately describes Black Regur Soil?",
       "options": [
-        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
-        "Black Regur Soil applies only during maritime emergencies.",
         "Black Regur Soil is associated with: Basalt lava soil ideal for moisture retention and cotton crops.",
-        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment."
+        "Black Regur Soil was declared invalid by the 100th Constitutional Amendment.",
+        "Black Regur Soil refers to an ancient taxation treaty repealed in 1950.",
+        "Black Regur Soil applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Black Regur Soil: Basalt lava soil ideal for moisture retention and cotton crops."
     },
     {
       "id": 95,
       "question": "General Knowledge #20: Which constitutional or historical fact accurately describes 550 Members?",
       "options": [
-        "550 Members refers to an ancient taxation treaty repealed in 1950.",
-        "550 Members applies only during maritime emergencies.",
         "550 Members is associated with: Maximum sanctioned strength of Lok Sabha after 104th Amendment.",
-        "550 Members was declared invalid by the 100th Constitutional Amendment."
+        "550 Members refers to an ancient taxation treaty repealed in 1950.",
+        "550 Members was declared invalid by the 100th Constitutional Amendment.",
+        "550 Members applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "550 Members: Maximum sanctioned strength of Lok Sabha after 104th Amendment."
     },
     {
@@ -1172,21 +1172,21 @@
       "question": "General Knowledge #21: Which constitutional or historical fact accurately describes Article 32?",
       "options": [
         "Article 32 refers to an ancient taxation treaty repealed in 1950.",
-        "Article 32 applies only during maritime emergencies.",
         "Article 32 is associated with: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution).",
-        "Article 32 was declared invalid by the 100th Constitutional Amendment."
+        "Article 32 was declared invalid by the 100th Constitutional Amendment.",
+        "Article 32 applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Article 32: Right to Constitutional Remedies (Dr. Ambedkar called it Heart & Soul of Constitution)."
     },
     {
       "id": 97,
       "question": "General Knowledge #22: Which constitutional or historical fact accurately describes Lord Curzon?",
       "options": [
+        "Lord Curzon was declared invalid by the 100th Constitutional Amendment.",
         "Lord Curzon refers to an ancient taxation treaty repealed in 1950.",
-        "Lord Curzon applies only during maritime emergencies.",
         "Lord Curzon is associated with: Partitioned Bengal in 1905, igniting the Swadeshi Movement.",
-        "Lord Curzon was declared invalid by the 100th Constitutional Amendment."
+        "Lord Curzon applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "Lord Curzon: Partitioned Bengal in 1905, igniting the Swadeshi Movement."
@@ -1195,12 +1195,12 @@
       "id": 98,
       "question": "General Knowledge #23: Which constitutional or historical fact accurately describes Godavari River?",
       "options": [
-        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
-        "Godavari River applies only during maritime emergencies.",
         "Godavari River is associated with: Longest peninsular river in India, known as Dakshin Ganga.",
-        "Godavari River was declared invalid by the 100th Constitutional Amendment."
+        "Godavari River was declared invalid by the 100th Constitutional Amendment.",
+        "Godavari River refers to an ancient taxation treaty repealed in 1950.",
+        "Godavari River applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Godavari River: Longest peninsular river in India, known as Dakshin Ganga."
     },
     {
@@ -1208,21 +1208,21 @@
       "question": "General Knowledge #24: Which constitutional or historical fact accurately describes Governor of RBI?",
       "options": [
         "Governor of RBI refers to an ancient taxation treaty repealed in 1950.",
-        "Governor of RBI applies only during maritime emergencies.",
         "Governor of RBI is associated with: Ex-officio Chairman of the 6-member Monetary Policy Committee.",
-        "Governor of RBI was declared invalid by the 100th Constitutional Amendment."
+        "Governor of RBI was declared invalid by the 100th Constitutional Amendment.",
+        "Governor of RBI applies only during maritime emergencies."
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Governor of RBI: Ex-officio Chairman of the 6-member Monetary Policy Committee."
     },
     {
       "id": 100,
       "question": "General Knowledge #25: Which constitutional or historical fact accurately describes 101st Amendment Act, 2016?",
       "options": [
+        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment.",
         "101st Amendment Act, 2016 refers to an ancient taxation treaty repealed in 1950.",
-        "101st Amendment Act, 2016 applies only during maritime emergencies.",
         "101st Amendment Act, 2016 is associated with: Introduced Goods and Services Tax (GST) across India.",
-        "101st Amendment Act, 2016 was declared invalid by the 100th Constitutional Amendment."
+        "101st Amendment Act, 2016 applies only during maritime emergencies."
       ],
       "answer": 2,
       "hint": "101st Amendment Act, 2016: Introduced Goods and Services Tax (GST) across India."

@@ -17,9 +17,9 @@
       "question": "English Grammar & Usage #11: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
         "Neither of the two candidates (A)",
-        "their original documents (C)",
+        "on time (D)",
         "have submitted (B) -> has submitted",
-        "on time (D)"
+        "their original documents (C)"
       ],
       "answer": 2,
       "hint": "'Neither of' takes a singular verb."
@@ -28,24 +28,24 @@
       "id": 2,
       "question": "English Grammar & Usage #12: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
-        "The scenery of Kashmir (A)",
-        "charming and (C)",
+        "picturesque (D)",
         "are very (B) -> is very",
-        "picturesque (D)"
+        "The scenery of Kashmir (A)",
+        "charming and (C)"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Scenery' is an uncountable singular noun."
     },
     {
       "id": 3,
       "question": "English Grammar & Usage #13: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "when",
-        "then",
         "than",
-        "that"
+        "when",
+        "that",
+        "then"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
@@ -53,11 +53,11 @@
       "question": "English Grammar & Usage #14: The candidate was accused ______ tampering with evidence.",
       "options": [
         "for",
-        "with",
         "of",
-        "about"
+        "about",
+        "with"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Accused' takes the preposition 'of'."
     },
     {
@@ -65,9 +65,9 @@
       "question": "English Grammar & Usage #15: He has been living in Delhi ______ 2015.",
       "options": [
         "for",
-        "from",
+        "in",
         "since",
-        "in"
+        "from"
       ],
       "answer": 2,
       "hint": "'Since' specifies a starting point in time."
@@ -76,24 +76,24 @@
       "id": 6,
       "question": "English Grammar & Usage #16: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
       "options": [
-        "The engine has been repaired by mechanic.",
-        "The mechanic was repairing the engine.",
         "The damaged engine was repaired by the mechanic.",
-        "The engine is repaired by mechanic."
+        "The engine is repaired by mechanic.",
+        "The engine has been repaired by mechanic.",
+        "The mechanic was repairing the engine."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Past simple 'repaired' converts to 'was repaired'."
     },
     {
       "id": 7,
       "question": "English Grammar & Usage #17: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
       "options": [
-        "He said that I was learning English.",
-        "He told he is learning English.",
         "He said that he was learning English.",
-        "He said that he had learned English."
+        "He said that I was learning English.",
+        "He said that he had learned English.",
+        "He told he is learning English."
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
     },
     {
@@ -101,9 +101,9 @@
       "question": "English Grammar & Usage #18: Convert to Active Voice: 'A song was being sung by Lata.'",
       "options": [
         "Lata sang a song.",
-        "Lata has sung a song.",
+        "Lata is singing a song.",
         "Lata was singing a song.",
-        "Lata is singing a song."
+        "Lata has sung a song."
       ],
       "answer": 2,
       "hint": "'was being sung' converts to active 'was singing'."
@@ -112,24 +112,24 @@
       "id": 9,
       "question": "English Grammar & Usage #19: Select the correctly spelt word:",
       "options": [
-        "Beurocracy",
-        "Bureaucrasy",
         "Bureaucracy",
-        "Burocracy"
+        "Burocracy",
+        "Beurocracy",
+        "Bureaucrasy"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
     },
     {
       "id": 10,
       "question": "English Grammar & Usage #20: Select the correctly spelt word:",
       "options": [
-        "Acommodate",
-        "Accomodate",
         "Accommodate",
-        "Acomodate"
+        "Acommodate",
+        "Acomodate",
+        "Accomodate"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     },
     {
@@ -137,21 +137,21 @@
       "question": "English Grammar & Usage #21: Neither of the two candidates (A) / have submitted (B) / their original documents (C) / on time (D).",
       "options": [
         "Neither of the two candidates (A)",
-        "their original documents (C)",
         "have submitted (B) -> has submitted",
-        "on time (D)"
+        "on time (D)",
+        "their original documents (C)"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Neither of' takes a singular verb."
     },
     {
       "id": 12,
       "question": "English Grammar & Usage #22: The scenery of Kashmir (A) / are very (B) / charming and (C) / picturesque (D).",
       "options": [
+        "picturesque (D)",
         "The scenery of Kashmir (A)",
-        "charming and (C)",
         "are very (B) -> is very",
-        "picturesque (D)"
+        "charming and (C)"
       ],
       "answer": 2,
       "hint": "'Scenery' is an uncountable singular noun."
@@ -160,12 +160,12 @@
       "id": 13,
       "question": "English Grammar & Usage #23: No sooner did he arrive ______ the meeting started.",
       "options": [
-        "when",
-        "then",
         "than",
-        "that"
+        "that",
+        "when",
+        "then"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "'No sooner did...' is followed correlatively by 'than'."
     },
     {
@@ -173,11 +173,11 @@
       "question": "English Grammar & Usage #24: The candidate was accused ______ tampering with evidence.",
       "options": [
         "for",
-        "with",
         "of",
-        "about"
+        "about",
+        "with"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "'Accused' takes the preposition 'of'."
     },
     {
@@ -185,9 +185,9 @@
       "question": "English Grammar & Usage #25: He has been living in Delhi ______ 2015.",
       "options": [
         "for",
-        "from",
+        "in",
         "since",
-        "in"
+        "from"
       ],
       "answer": 2,
       "hint": "'Since' specifies a starting point in time."
@@ -196,12 +196,12 @@
       "id": 16,
       "question": "English Grammar & Usage #26: Convert to Passive Voice: 'The mechanic repaired the damaged engine.'",
       "options": [
-        "The engine has been repaired by mechanic.",
+        "The damaged engine was repaired by the mechanic.",
         "The mechanic was repairing the engine.",
-        "The engine is repaired by mechanic.",
-        "The damaged engine was repaired by the mechanic."
+        "The engine has been repaired by mechanic.",
+        "The engine is repaired by mechanic."
       ],
-      "answer": 3,
+      "answer": 0,
       "hint": "Past simple 'repaired' converts to 'was repaired'."
     },
     {
@@ -209,11 +209,11 @@
       "question": "English Grammar & Usage #27: Choose the correct indirect speech: 'He said, \"I am learning English.\"'",
       "options": [
         "He said that I was learning English.",
+        "He said that he was learning English.",
         "He told he is learning English.",
-        "He said that he had learned English.",
-        "He said that he was learning English."
+        "He said that he had learned English."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Present continuous 'am learning' shifts to past continuous 'was learning'."
     },
     {
@@ -221,35 +221,35 @@
       "question": "English Grammar & Usage #28: Convert to Active Voice: 'A song was being sung by Lata.'",
       "options": [
         "Lata sang a song.",
+        "Lata was singing a song.",
         "Lata has sung a song.",
-        "Lata is singing a song.",
-        "Lata was singing a song."
+        "Lata is singing a song."
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "'was being sung' converts to active 'was singing'."
     },
     {
       "id": 19,
       "question": "English Grammar & Usage #29: Select the correctly spelt word:",
       "options": [
-        "Beurocracy",
         "Bureaucrasy",
-        "Burocracy",
-        "Bureaucracy"
+        "Beurocracy",
+        "Bureaucracy",
+        "Burocracy"
       ],
-      "answer": 3,
+      "answer": 2,
       "hint": "Spelled B-U-R-E-A-U-C-R-A-C-Y."
     },
     {
       "id": 20,
       "question": "English Grammar & Usage #30: Select the correctly spelt word:",
       "options": [
-        "Acommodate",
         "Accomodate",
-        "Acomodate",
-        "Accommodate"
+        "Accommodate",
+        "Acommodate",
+        "Acomodate"
       ],
-      "answer": 3,
+      "answer": 1,
       "hint": "Spelled A-C-C-O-M-M-O-D-A-T-E."
     }
   ]

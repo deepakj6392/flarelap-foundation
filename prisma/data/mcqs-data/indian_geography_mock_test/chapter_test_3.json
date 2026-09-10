@@ -17,9 +17,9 @@
       "question": "Authentic CHEMISTRY Exam Question #166: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 166 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 166 in chemistry curriculum."
@@ -28,12 +28,12 @@
       "id": 2,
       "question": "Authentic CHEMISTRY Exam Question #167: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 167 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 167 in chemistry curriculum."
     },
     {
@@ -41,11 +41,11 @@
       "question": "Authentic CHEMISTRY Exam Question #168: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 168 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 168 in chemistry curriculum."
     },
     {
@@ -53,21 +53,21 @@
       "question": "Authentic CHEMISTRY Exam Question #169: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 169 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 169 in chemistry curriculum."
     },
     {
       "id": 5,
       "question": "Authentic CHEMISTRY Exam Question #170: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 170 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 170 in chemistry curriculum."
@@ -76,12 +76,12 @@
       "id": 6,
       "question": "Authentic CHEMISTRY Exam Question #171: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 171 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 171 in chemistry curriculum."
     },
     {
@@ -89,21 +89,21 @@
       "question": "Authentic CHEMISTRY Exam Question #172: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 172 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 172 in chemistry curriculum."
     },
     {
       "id": 8,
       "question": "Authentic CHEMISTRY Exam Question #173: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 173 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 173 in chemistry curriculum."
@@ -112,12 +112,12 @@
       "id": 9,
       "question": "Authentic CHEMISTRY Exam Question #174: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 174 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 174 in chemistry curriculum."
     },
     {
@@ -125,33 +125,33 @@
       "question": "Authentic CHEMISTRY Exam Question #175: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 175 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 175 in chemistry curriculum."
     },
     {
       "id": 11,
       "question": "Authentic CHEMISTRY Exam Question #176: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 176 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 176 in chemistry curriculum."
     },
     {
       "id": 12,
       "question": "Authentic CHEMISTRY Exam Question #177: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 177 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 177 in chemistry curriculum."
@@ -160,34 +160,34 @@
       "id": 13,
       "question": "Authentic CHEMISTRY Exam Question #178: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 178 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 178 in chemistry curriculum."
     },
     {
       "id": 14,
       "question": "Authentic CHEMISTRY Exam Question #179: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 179 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 179 in chemistry curriculum."
     },
     {
       "id": 15,
       "question": "Authentic CHEMISTRY Exam Question #180: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
+        "Invalid empirical contradiction D in chemistry",
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 180 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 180 in chemistry curriculum."
@@ -196,36 +196,36 @@
       "id": 16,
       "question": "Authentic CHEMISTRY Exam Question #181: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 181 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 181 in chemistry curriculum."
     },
     {
       "id": 17,
       "question": "Authentic CHEMISTRY Exam Question #182: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 182 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 182 in chemistry curriculum."
     },
     {
       "id": 18,
       "question": "Authentic CHEMISTRY Exam Question #183: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
         "Standard verified principle 183 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Invalid empirical contradiction D in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 0,
       "hint": "Core concept 183 in chemistry curriculum."
     },
     {
@@ -233,9 +233,9 @@
       "question": "Authentic CHEMISTRY Exam Question #184: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
         "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 184 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Conditional secondary exception C in chemistry"
       ],
       "answer": 2,
       "hint": "Core concept 184 in chemistry curriculum."
@@ -244,12 +244,12 @@
       "id": 20,
       "question": "Authentic CHEMISTRY Exam Question #185: Which verified law or theoretical principle governs this domain scenario?",
       "options": [
-        "Opposing non-standard hypothesis B in chemistry",
-        "Conditional secondary exception C in chemistry",
+        "Invalid empirical contradiction D in chemistry",
         "Standard verified principle 185 in chemistry",
-        "Invalid empirical contradiction D in chemistry"
+        "Opposing non-standard hypothesis B in chemistry",
+        "Conditional secondary exception C in chemistry"
       ],
-      "answer": 2,
+      "answer": 1,
       "hint": "Core concept 185 in chemistry curriculum."
     }
   ]

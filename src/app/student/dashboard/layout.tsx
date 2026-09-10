@@ -251,8 +251,8 @@ export default function StudentDashboardLayout({
   const getPageTitle = () => {
     if (pathname === "/student/dashboard") return "Scholar Console Overview";
     if (pathname === "/student/dashboard/materials") return "Study Course Materials";
-    if (pathname === "/student/dashboard/quiz") return "Interactive Mock Exam";
-    if (pathname === "/student/dashboard/test-series") return "My Test Series & Passes";
+    if (pathname === "/student/dashboard/quiz") return "Full Mock Test Passes Hub";
+    if (pathname === "/student/dashboard/test-series") return "Full Mock Test Passes Hub";
     if (pathname === "/student/dashboard/history") return "Mock Test History & Question Review";
     if (pathname === "/student/dashboard/profile") return "Student Security Settings";
     return "Student Dashboard";
@@ -339,27 +339,13 @@ export default function StudentDashboardLayout({
 
                 {studyPortalOpen && (
                   <div className="mt-1.5 ml-8 space-y-1.5 border-l border-slate-200 dark:border-slate-800 pl-3">
-                    {/* <Link
-                      href="/student/dashboard/materials"
-                      onClick={() => setSidebarOpen(false)}
-                      className={getSubMenuBtnClass("/student/dashboard/materials")}
-                    >
-                      Study Materials
-                    </Link> */}
                     <Link
-                      href="/student/dashboard/quiz"
-                      onClick={() => setSidebarOpen(false)}
-                      className={getSubMenuBtnClass("/student/dashboard/quiz")}
-                    >
-                      Practice Mock Exams
-                    </Link>
-                    {/* <Link
                       href="/student/dashboard/test-series"
                       onClick={() => setSidebarOpen(false)}
                       className={getSubMenuBtnClass("/student/dashboard/test-series")}
                     >
-                      Test Series
-                    </Link> */}
+                      Full Mock Test Passes Hub
+                    </Link>
                     <Link
                       href="/student/dashboard/history"
                       onClick={() => setSidebarOpen(false)}
