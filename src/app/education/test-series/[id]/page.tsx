@@ -9,7 +9,6 @@ import Herader from "@/components/common/Herader";
 import Footer from "@/components/common/Footer";
 import { 
   getRealExamStats, 
-  generateSubTestsList, 
   getCourseMetadata, 
   SubTest 
 } from "@/lib/testSeriesGenerator";
@@ -403,7 +402,7 @@ export default function TestSeriesDetailsPage() {
         duration: t.duration,
         isFree: t.isFree
       }))
-    : generateSubTestsList(course.name, course.premium);
+    : [];
 
   const subTestsList = rawSubTestsList.map(test => {
     let isFree = test.isFree;
