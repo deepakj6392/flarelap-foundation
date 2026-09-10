@@ -22,14 +22,9 @@ import {
   ArrowLeft, 
   CheckCircle2, 
   Clock, 
-  ShieldCheck, 
-  HelpCircle,
   Play,
   Lock,
   X,
-  CreditCard,
-  QrCode,
-  Smartphone,
   Loader2,
   ChevronLeft,
   ChevronRight
@@ -54,707 +49,6 @@ interface Course {
   testSeries?: DBTestSeries[];
   categoryId?: number | null;
 }
-
-const getCourseSubjects = (courseName: string) => {
-  const name = courseName.toLowerCase();
-  
-  if (name.includes("aiims paramedical")) {
-    return [
-      { name: "Physics", qs: 30, marks: 30, duration: 30 },
-      { name: "Chemistry", qs: 30, marks: 30, duration: 30 },
-      { name: "Biology/Mathematics", qs: 30, marks: 30, duration: 30 }
-    ];
-  }
-  if (name.includes("pgimer paramedical")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
-      { name: "Biology/Maths & General English", qs: 50, marks: 50, duration: 45 }
-    ];
-  }
-  if (name.includes("jipmer paramedical")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
-      { name: "Biology/English/Aptitude", qs: 50, marks: 50, duration: 45 }
-    ];
-  }
-  if (name.includes("cuet ug (paramedical")) {
-    return [
-      { name: "Section I: English Language", qs: 40, marks: 200, duration: 45 },
-      { name: "Section II: Physics & Chemistry", qs: 80, marks: 400, duration: 90 }
-    ];
-  }
-  if (name.includes("neet ug (some allied")) {
-    return [
-      { name: "Physics", qs: 45, marks: 180, duration: 50 },
-      { name: "Chemistry", qs: 45, marks: 180, duration: 50 },
-      { name: "Biology (Botany & Zoology)", qs: 90, marks: 360, duration: 100 }
-    ];
-  }
-  if (name.includes("up cpet")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
-      { name: "Biology/English/General Knowledge", qs: 50, marks: 50, duration: 45 }
-    ];
-  }
-  if (name.includes("ruhs paramedical")) {
-    return [
-      { name: "Physics", qs: 50, marks: 50, duration: 60 },
-      { name: "Chemistry", qs: 50, marks: 50, duration: 60 }
-    ];
-  }
-  if (name.includes("jenpas ug")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 45 },
-      { name: "Biology, English & Logical Reasoning", qs: 50, marks: 65, duration: 45 }
-    ];
-  }
-  if (name.includes("smfwbee")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 60 },
-      { name: "Biology / Allied Sciences", qs: 50, marks: 50, duration: 60 }
-    ];
-  }
-  if (name.includes("uttarakhand paramedical")) {
-    return [
-      { name: "Physics & Chemistry", qs: 50, marks: 50, duration: 60 },
-      { name: "Biology / General Science", qs: 50, marks: 50, duration: 60 }
-    ];
-  }
-  if (name.includes("bihar dcece")) {
-    return [
-      { name: "General Science (Physics, Chemistry, Biology)", qs: 25, marks: 125, duration: 40 },
-      { name: "Mathematics & Hindi", qs: 30, marks: 150, duration: 45 },
-      { name: "English & General Knowledge", qs: 35, marks: 175, duration: 50 }
-    ];
-  }
-  if (name.includes("gk mock test") || name.includes("state gk")) {
-    return [
-      { name: "State History & Geography", qs: 40, marks: 40, duration: 35 },
-      { name: "State Polity & Economy", qs: 30, marks: 30, duration: 25 },
-      { name: "State Current Affairs & Culture", qs: 30, marks: 30, duration: 30 }
-    ];
-  }
-  if (name.includes("ipu cet (paramedical")) {
-    return [
-      { name: "Physics", qs: 50, marks: 200, duration: 50 },
-      { name: "Chemistry", qs: 50, marks: 200, duration: 50 },
-      { name: "Biology", qs: 50, marks: 200, duration: 50 }
-    ];
-  }
-  if (name.includes("ctet mock test")) {
-    return [
-      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
-      { name: "Language I & II", qs: 60, marks: 60, duration: 60 },
-      { name: "Mathematics & Environmental Studies", qs: 60, marks: 60, duration: 60 }
-    ];
-  }
-  if (name.includes("state tet (htet, uptet, reet, btet, etc.)")) {
-    return [
-      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
-      { name: "Language I & II", qs: 60, marks: 60, duration: 60 },
-      { name: "Subject Competency (Math/Science/Social)", qs: 60, marks: 60, duration: 60 }
-    ];
-  }
-  if (name.includes("kvs teacher exam")) {
-    return [
-      { name: "Proficiency in Languages (English & Hindi)", qs: 20, marks: 20, duration: 20 },
-      { name: "GA, Reasoning & Computer Literacy", qs: 20, marks: 20, duration: 20 },
-      { name: "Perspectives on Education and Leadership", qs: 40, marks: 40, duration: 40 },
-      { name: "Subject Specific Syllabus", qs: 100, marks: 100, duration: 100 }
-    ];
-  }
-  if (name.includes("nvs teacher exam")) {
-    return [
-      { name: "General English & Hindi", qs: 30, marks: 30, duration: 30 },
-      { name: "General Awareness & Reasoning", qs: 30, marks: 30, duration: 35 },
-      { name: "ICT Literacy & Teaching Aptitude", qs: 20, marks: 20, duration: 25 },
-      { name: "Subject Knowledge", qs: 70, marks: 70, duration: 90 }
-    ];
-  }
-  if (name.includes("dsssb teacher exam")) {
-    return [
-      { name: "Section A: General Awareness, Quant, Reasoning, Lang", qs: 100, marks: 100, duration: 60 },
-      { name: "Section B: Teaching Methodology / Subject Specific", qs: 100, marks: 100, duration: 60 }
-    ];
-  }
-  if (name.includes("tgt exam mock test")) {
-    return [
-      { name: "General Paper (English, Hindi, GK, Aptitude)", qs: 50, marks: 50, duration: 40 },
-      { name: "Subject Specialization", qs: 100, marks: 100, duration: 80 }
-    ];
-  }
-  if (name.includes("pgt exam mock test")) {
-    return [
-      { name: "General Paper (English, Hindi, GK, Aptitude)", qs: 50, marks: 50, duration: 40 },
-      { name: "Post Graduate Subject Specialization", qs: 100, marks: 100, duration: 80 }
-    ];
-  }
-  if (name.includes("prt exam mock test")) {
-    return [
-      { name: "General English & Hindi", qs: 30, marks: 30, duration: 25 },
-      { name: "GK, Reasoning & Computer Literacy", qs: 40, marks: 40, duration: 35 },
-      { name: "Pedagogy & Child Development", qs: 80, marks: 80, duration: 60 }
-    ];
-  }
-  if (name.includes("b.ed entrance exam mock test")) {
-    return [
-      { name: "General Knowledge & Language", qs: 50, marks: 100, duration: 90 },
-      { name: "General Aptitude & Subject Test", qs: 50, marks: 100, duration: 90 }
-    ];
-  }
-  if (name.includes("m.ed entrance exam mock test")) {
-    return [
-      { name: "Education & Psychology Foundation", qs: 50, marks: 50, duration: 60 },
-      { name: "Teaching Aptitude & Methodology", qs: 50, marks: 50, duration: 60 }
-    ];
-  }
-  if (name.includes("set (state eligibility test) mock test")) {
-    return [
-      { name: "Paper 1: General Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
-      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
-    ];
-  }
-  if (name.includes("rbi grade b")) {
-    return [
-      { name: "General Awareness", qs: 80, marks: 80, duration: 25 },
-      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 25 },
-      { name: "English Language", qs: 30, marks: 30, duration: 25 },
-      { name: "Reasoning", qs: 60, marks: 60, duration: 45 }
-    ];
-  }
-  if (name.includes("rbi assistant")) {
-    return [
-      { name: "English Language", qs: 30, marks: 30, duration: 20 },
-      { name: "Numerical Ability", qs: 35, marks: 35, duration: 20 },
-      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
-    ];
-  }
-  if (name.includes("sebi grade a")) {
-    return [
-      { name: "Paper 1: General Stream (GA, English, Quant, Reasoning)", qs: 50, marks: 50, duration: 40 },
-      { name: "Paper 2: Commerce, Finance, Management", qs: 50, marks: 50, duration: 40 }
-    ];
-  }
-  if (name.includes("nabard grade a")) {
-    return [
-      { name: "Reasoning & Decision Making", qs: 30, marks: 30, duration: 20 },
-      { name: "English Language & Computer", qs: 50, marks: 50, duration: 30 },
-      { name: "General Awareness & Quantitative Aptitude", qs: 40, marks: 40, duration: 25 },
-      { name: "Economic & Social Issues (with focus on Rural India)", qs: 40, marks: 40, duration: 25 },
-      { name: "Agriculture & Rural Development", qs: 40, marks: 40, duration: 20 }
-    ];
-  }
-  if (name.includes("irdai grade a")) {
-    return [
-      { name: "English Language", qs: 40, marks: 40, duration: 20 },
-      { name: "Reasoning", qs: 40, marks: 40, duration: 25 },
-      { name: "Quantitative Aptitude", qs: 40, marks: 40, duration: 25 },
-      { name: "General Awareness", qs: 40, marks: 40, duration: 20 }
-    ];
-  }
-  if (name.includes("pfrda grade a")) {
-    return [
-      { name: "Paper 1: General English, Quant, Reasoning, GA", qs: 50, marks: 50, duration: 40 },
-      { name: "Paper 2: Commerce, Finance, Management, Pension Sector", qs: 50, marks: 50, duration: 40 }
-    ];
-  }
-  if (name.includes("sidbi grade a")) {
-    return [
-      { name: "English Language", qs: 30, marks: 30, duration: 20 },
-      { name: "Quantitative Aptitude", qs: 40, marks: 40, duration: 30 },
-      { name: "Reasoning Aptitude", qs: 40, marks: 60, duration: 40 },
-      { name: "General Awareness (focus on Banking & Financial Sector)", qs: 50, marks: 70, duration: 30 }
-    ];
-  }
-  if (name.includes("ifsca grade a")) {
-    return [
-      { name: "Paper 1: General English, Quant, Reasoning, GA", qs: 50, marks: 50, duration: 40 },
-      { name: "Paper 2: Financial Sector & Capital Markets", qs: 50, marks: 50, duration: 40 }
-    ];
-  }
-  if (name.includes("ibbi exam")) {
-    return [
-      { name: "Insolvency and Bankruptcy Code, 2016", qs: 50, marks: 50, duration: 60 },
-      { name: "General Laws, Finance, and Corporate Laws", qs: 50, marks: 50, duration: 60 }
-    ];
-  }
-  if (name.includes("cuet pg")) {
-    return [
-      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
-      { name: "Part B: Domain Knowledge", qs: 50, marks: 200, duration: 70 }
-    ];
-  }
-  if (name.includes("iit jam")) {
-    return [
-      { name: "Section A: Multiple Choice (MCQ)", qs: 30, marks: 50, duration: 90 },
-      { name: "Section B: Multiple Select (MSQ)", qs: 10, marks: 20, duration: 30 },
-      { name: "Section C: Numerical Answer Type (NAT)", qs: 20, marks: 30, duration: 60 }
-    ];
-  }
-  if (name.includes("gate (pg/m.tech)")) {
-    return [
-      { name: "General Aptitude", qs: 10, marks: 15, duration: 30 },
-      { name: "Core Engineering Subjects", qs: 55, marks: 85, duration: 150 }
-    ];
-  }
-  if (name.includes("cat (mba)")) {
-    return [
-      { name: "Verbal Ability & Reading Comprehension (VARC)", qs: 24, marks: 72, duration: 40 },
-      { name: "Data Interpretation & Logical Reasoning (DILR)", qs: 20, marks: 60, duration: 40 },
-      { name: "Quantitative Ability (QA)", qs: 22, marks: 66, duration: 40 }
-    ];
-  }
-  if (name.includes("cmat (mba)")) {
-    return [
-      { name: "Quantitative Techniques & Data Interpretation", qs: 20, marks: 80, duration: 36 },
-      { name: "Logical Reasoning", qs: 20, marks: 80, duration: 36 },
-      { name: "Language Comprehension", qs: 20, marks: 80, duration: 36 },
-      { name: "General Awareness", qs: 20, marks: 80, duration: 36 },
-      { name: "Innovation & Entrepreneurship", qs: 20, marks: 80, duration: 36 }
-    ];
-  }
-  if (name.includes("xat (mba)")) {
-    return [
-      { name: "Verbal and Logical Ability", qs: 26, marks: 26, duration: 55 },
-      { name: "Decision Making", qs: 21, marks: 21, duration: 45 },
-      { name: "Quantitative Ability & Data Interpretation", qs: 28, marks: 28, duration: 60 },
-      { name: "General Knowledge & Essay", qs: 25, marks: 25, duration: 50 }
-    ];
-  }
-  if (name.includes("mat (mba)")) {
-    return [
-      { name: "Language Comprehension", qs: 30, marks: 30, duration: 24 },
-      { name: "Intelligence & Critical Reasoning", qs: 30, marks: 30, duration: 24 },
-      { name: "Mathematical Skills", qs: 30, marks: 30, duration: 24 },
-      { name: "Data Analysis & Sufficiency", qs: 30, marks: 30, duration: 24 },
-      { name: "Indian & Global Environment", qs: 30, marks: 30, duration: 24 }
-    ];
-  }
-  if (name.includes("neet pg")) {
-    return [
-      { name: "Part A: Pre-Clinical Subjects", qs: 50, marks: 200, duration: 50 },
-      { name: "Part B: Para-Clinical Subjects", qs: 50, marks: 200, duration: 50 },
-      { name: "Part C: Clinical Subjects", qs: 100, marks: 400, duration: 110 }
-    ];
-  }
-  if (name.includes("gpat")) {
-    return [
-      { name: "Pharmaceutics & Allied Subjects", qs: 38, marks: 152, duration: 55 },
-      { name: "Pharmaceutical Chemistry", qs: 38, marks: 152, duration: 55 },
-      { name: "Pharmacology", qs: 28, marks: 112, duration: 40 },
-      { name: "Pharmacognosy", qs: 11, marks: 44, duration: 15 },
-      { name: "Other Pharmacy Subjects", qs: 10, marks: 40, duration: 15 }
-    ];
-  }
-  if (name.includes("clat pg")) {
-    return [
-      { name: "Constitutional Law", qs: 40, marks: 40, duration: 40 },
-      { name: "Jurisprudence & Other Law Subjects", qs: 80, marks: 80, duration: 80 }
-    ];
-  }
-  if (name.includes("tiss cuet pg")) {
-    return [
-      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
-      { name: "Part B: Domain Knowledge (HRM/ODCL)", qs: 50, marks: 200, duration: 70 }
-    ];
-  }
-  if (name.includes("nimcet")) {
-    return [
-      { name: "Mathematics", qs: 50, marks: 600, duration: 50 },
-      { name: "Analytical Ability & Logical Reasoning", qs: 40, marks: 240, duration: 40 },
-      { name: "Computer Awareness", qs: 20, marks: 120, duration: 20 },
-      { name: "General English", qs: 10, marks: 40, duration: 10 }
-    ];
-  }
-  if (name.includes("jnu pg")) {
-    return [
-      { name: "Part A: General Aptitude", qs: 25, marks: 100, duration: 35 },
-      { name: "Part B: Domain Knowledge (JNU Subjects)", qs: 50, marks: 200, duration: 70 }
-    ];
-  }
-  if (name.includes("university specific pg")) {
-    return [
-      { name: "General English & Aptitude", qs: 25, marks: 25, duration: 20 },
-      { name: "Domain/Subject Specific Knowledge", qs: 75, marks: 75, duration: 70 }
-    ];
-  }
-  if (name.includes("net") || name.includes("ugc") || name.includes("csir")) {
-    return [
-      { name: "Paper 1: Teaching & Research Aptitude", qs: 50, marks: 100, duration: 60 },
-      { name: "Paper 2: Subject Specialization", qs: 100, marks: 200, duration: 120 }
-    ];
-  }
-  if (name.includes("cds") || name.includes("afcat") || name.includes("capf")) {
-    return [
-      { name: "English Language", qs: 40, marks: 100, duration: 40 },
-      { name: "General Knowledge", qs: 40, marks: 100, duration: 40 },
-      { name: "Elementary Mathematics", qs: 40, marks: 100, duration: 40 }
-    ];
-  }
-  if (name.includes("pcs") || name.includes("civil services")) {
-    return [
-      { name: "General Studies Paper I", qs: 50, marks: 100, duration: 60 },
-      { name: "General Studies Paper II (CSAT)", qs: 50, marks: 100, duration: 60 }
-    ];
-  }
-  if (name.includes("tcs") || name.includes("infosys") || name.includes("wipro") || name.includes("cognizant")) {
-    return [
-      { name: "Numerical Ability", qs: 20, marks: 20, duration: 20 },
-      { name: "Verbal Ability", qs: 20, marks: 20, duration: 20 },
-      { name: "Reasoning Ability", qs: 20, marks: 20, duration: 20 }
-    ];
-  }
-  if (name.includes("rrb alp") || name.includes("rrb group d") || name.includes("rrb ntpc") || name.includes("ntpc")) {
-    return [
-      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
-      { name: "General Intelligence & Reasoning", qs: 35, marks: 35, duration: 30 },
-      { name: "General Awareness & Science", qs: 35, marks: 35, duration: 30 }
-    ];
-  }
-  if (name.includes("sbi po") || name.includes("ibps po") || name.includes("sbi clerk") || name.includes("ibps clerk") || name.includes("banking") || name.includes("rbi assistant")) {
-    return [
-      { name: "English Language", qs: 30, marks: 30, duration: 20 },
-      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
-      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
-    ];
-  }
-  if (name.includes("lic") || name.includes("insurance")) {
-    return [
-      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 20 },
-      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 20 },
-      { name: "General Awareness & Current Affairs", qs: 20, marks: 20, duration: 10 },
-      { name: "Insurance & Financial Market Awareness", qs: 20, marks: 20, duration: 10 }
-    ];
-  }
-  if (name.includes("non-teaching") || name.includes("non teaching")) {
-    return [
-      { name: "General Awareness", qs: 30, marks: 30, duration: 30 },
-      { name: "Reasoning Ability", qs: 30, marks: 30, duration: 30 },
-      { name: "Quantitative Aptitude", qs: 30, marks: 30, duration: 30 },
-      { name: "Language Competency (Hindi & English)", qs: 30, marks: 30, duration: 30 }
-    ];
-  }
-  if (name.includes("tgt") || name.includes("pgt")) {
-    return [
-      { name: "Educational Psychology & Pedagogy", qs: 40, marks: 40, duration: 40 },
-      { name: "General Studies & General Awareness", qs: 35, marks: 35, duration: 30 },
-      { name: "Subject Specialization", qs: 50, marks: 50, duration: 50 }
-    ];
-  }
-  if (name.includes("tet") || name.includes("prt")) {
-    return [
-      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
-      { name: "Language I & II", qs: 40, marks: 40, duration: 40 },
-      { name: "Mathematics & Science", qs: 40, marks: 40, duration: 40 },
-      { name: "Environmental Studies", qs: 40, marks: 40, duration: 40 }
-    ];
-  }
-  if (name.includes("food technology") || name.includes("food tech")) {
-    return [
-      { name: "Food Chemistry & Nutrition", qs: 25, marks: 25, duration: 30 },
-      { name: "Food Microbiology & Safety", qs: 25, marks: 25, duration: 30 },
-      { name: "Food Processing & Engineering", qs: 25, marks: 25, duration: 30 },
-      { name: "Food Laws & Standards", qs: 25, marks: 25, duration: 30 }
-    ];
-  }
-  if (name.includes("nursing")) {
-    return [
-      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 30 },
-      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 30 },
-      { name: "Medical-Surgical Nursing", qs: 25, marks: 25, duration: 30 },
-      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 30 }
-    ];
-  }
-  if (name.includes("civil engineering")) {
-    return [
-      { name: "Structural Engineering & Concrete Technology", qs: 30, marks: 30, duration: 50 },
-      { name: "Geotechnical & Transportation Engineering", qs: 30, marks: 30, duration: 50 },
-      { name: "Environmental & Water Resources Engineering", qs: 40, marks: 40, duration: 80 }
-    ];
-  }
-  if (name.includes("electrical engineering")) {
-    return [
-      { name: "Electric Circuits & Fields", qs: 30, marks: 30, duration: 50 },
-      { name: "Electrical Machines & Power Systems", qs: 40, marks: 40, duration: 70 },
-      { name: "Control Systems & Power Electronics", qs: 30, marks: 30, duration: 60 }
-    ];
-  }
-  if (name.includes("electronics & communication")) {
-    return [
-      { name: "Electronic Devices & Analog Circuits", qs: 30, marks: 30, duration: 55 },
-      { name: "Digital Circuits & Microprocessors", qs: 30, marks: 30, duration: 55 },
-      { name: "Signals & Communication Systems", qs: 40, marks: 40, duration: 70 }
-    ];
-  }
-  if (name.includes("computer science") || name.includes("cse")) {
-    return [
-      { name: "Programming, Data Structures & Algorithms", qs: 35, marks: 35, duration: 60 },
-      { name: "Computer Organization & Operating Systems", qs: 35, marks: 35, duration: 60 },
-      { name: "Databases & Computer Networks", qs: 30, marks: 30, duration: 60 }
-    ];
-  }
-  if (name.includes("instrumentation")) {
-    return [
-      { name: "Sensors & Industrial Instrumentation", qs: 30, marks: 30, duration: 50 },
-      { name: "Control Systems & Process Control", qs: 30, marks: 30, duration: 50 },
-      { name: "Measurements & Signal Conditioning", qs: 40, marks: 40, duration: 80 }
-    ];
-  }
-  if (name.includes("other engineering")) {
-    return [
-      { name: "Engineering Mathematics", qs: 30, marks: 30, duration: 50 },
-      { name: "Basic Science & Engineering Mechanics", qs: 45, marks: 45, duration: 80 },
-      { name: "General Aptitude & Professional Ethics", qs: 25, marks: 25, duration: 50 }
-    ];
-  }
-  if (name.includes("iti exam") || name.includes("iti")) {
-    return [
-      { name: "Trade Theory", qs: 20, marks: 40, duration: 50 },
-      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
-      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 35 }
-    ];
-  }
-  if (name.includes("accounting") || name.includes("commerce")) {
-    return [
-      { name: "Financial Accounting & Auditing", qs: 35, marks: 35, duration: 40 },
-      { name: "Business Economics & Finance", qs: 35, marks: 35, duration: 40 },
-      { name: "Corporate Laws & Taxation", qs: 30, marks: 30, duration: 40 }
-    ];
-  }
-  if (name.includes("placement")) {
-    return [
-      { name: "Quantitative Aptitude", qs: 20, marks: 20, duration: 20 },
-      { name: "Logical Reasoning", qs: 20, marks: 20, duration: 20 },
-      { name: "Verbal Ability & Technical", qs: 20, marks: 20, duration: 20 }
-    ];
-  }
-  if (name.includes("nra cet") || name.includes("nra")) {
-    return [
-      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
-      { name: "Reasoning Ability", qs: 25, marks: 25, duration: 15 },
-      { name: "English Language", qs: 25, marks: 25, duration: 15 },
-      { name: "General Awareness", qs: 25, marks: 25, duration: 15 }
-    ];
-  }
-  if (name.includes("government org") || name.includes("gov org") || name.includes("isro") || name.includes("barc") || name.includes("drdo")) {
-    return [
-      { name: "General Aptitude & Reasoning", qs: 30, marks: 30, duration: 35 },
-      { name: "General Studies & English", qs: 30, marks: 30, duration: 35 },
-      { name: "Technical Awareness & Post Specific", qs: 40, marks: 40, duration: 50 }
-    ];
-  }
-  if (name.includes("ug entrance")) {
-    return [
-      { name: "General Aptitude", qs: 30, marks: 45, duration: 35 },
-      { name: "Logical Reasoning & English", qs: 40, marks: 60, duration: 50 },
-      { name: "Elementary Mathematics", qs: 30, marks: 45, duration: 35 }
-    ];
-  }
-  if (name.includes("cuet")) {
-    return [
-      { name: "Section IA: Languages", qs: 20, marks: 80, duration: 15 },
-      { name: "Section II: Domain Specific", qs: 25, marks: 100, duration: 25 },
-      { name: "Section III: General Test", qs: 30, marks: 120, duration: 20 }
-    ];
-  }
-  if (name.includes("mba")) {
-    return [
-      { name: "Quantitative Ability", qs: 22, marks: 66, duration: 40 },
-      { name: "Data Interpretation & Logical Reasoning", qs: 20, marks: 60, duration: 40 },
-      { name: "Verbal Ability & Reading Comprehension", qs: 24, marks: 72, duration: 40 }
-    ];
-  }
-  if (name.includes("ssc cgl") || name.includes("cgl") || name.includes("ssc chsl") || name.includes("chsl") || name.includes("selection post")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 25, marks: 50, duration: 15 },
-      { name: "General Awareness", qs: 25, marks: 50, duration: 10 },
-      { name: "Quantitative Aptitude", qs: 25, marks: 50, duration: 20 },
-      { name: "English Comprehension", qs: 25, marks: 50, duration: 15 }
-    ];
-  }
-  if (name.includes("ssc mts") || name.includes("mts")) {
-    return [
-      { name: "Numerical & Mathematical Ability", qs: 20, marks: 60, duration: 25 },
-      { name: "Reasoning Ability & Problem Solving", qs: 20, marks: 60, duration: 25 },
-      { name: "General Awareness", qs: 25, marks: 75, duration: 20 },
-      { name: "English Language & Comprehension", qs: 25, marks: 75, duration: 20 }
-    ];
-  }
-  if (name.includes("ssc gd") || name.includes("gd constable")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 20, marks: 40, duration: 15 },
-      { name: "General Knowledge & General Awareness", qs: 20, marks: 40, duration: 15 },
-      { name: "Elementary Mathematics", qs: 20, marks: 40, duration: 15 },
-      { name: "English or Hindi Language", qs: 20, marks: 40, duration: 15 }
-    ];
-  }
-  if (name.includes("ssc cpo") || name.includes("cpo")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
-      { name: "General Knowledge & General Awareness", qs: 50, marks: 50, duration: 20 },
-      { name: "Quantitative Aptitude", qs: 50, marks: 50, duration: 40 },
-      { name: "English Comprehension", qs: 50, marks: 50, duration: 30 }
-    ];
-  }
-  if (name.includes("ssc je") || name.includes("je ")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 30 },
-      { name: "General Awareness", qs: 50, marks: 50, duration: 30 },
-      { name: "General Engineering (Civil/Electrical/Mechanical)", qs: 100, marks: 100, duration: 60 }
-    ];
-  }
-  if (name.includes("ssc stenographer") || name.includes("stenographer")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 50, marks: 50, duration: 35 },
-      { name: "General Awareness", qs: 50, marks: 50, duration: 35 },
-      { name: "English Language & Comprehension", qs: 100, marks: 100, duration: 50 }
-    ];
-  }
-  if (name.includes("ssc jht") || name.includes("jht")) {
-    return [
-      { name: "General Hindi", qs: 100, marks: 100, duration: 60 },
-      { name: "General English", qs: 100, marks: 100, duration: 60 }
-    ];
-  }
-  if (name.includes("ssc departmental") || name.includes("departmental")) {
-    return [
-      { name: "General Awareness", qs: 30, marks: 30, duration: 40 },
-      { name: "Office Procedure & Rules", qs: 40, marks: 40, duration: 40 },
-      { name: "English Language & Writing", qs: 30, marks: 30, duration: 40 }
-    ];
-  }
-  if (name.includes("gate")) {
-    return [
-      { name: "General Aptitude", qs: 10, marks: 15, duration: 30 },
-      { name: "Engineering Mathematics", qs: 10, marks: 15, duration: 30 },
-      { name: "Discrete Mathematics & Databases", qs: 15, marks: 20, duration: 40 },
-      { name: "Computer Architecture & OS", qs: 15, marks: 25, duration: 40 },
-      { name: "Algorithms & Data Structures", qs: 15, marks: 25, duration: 40 }
-    ];
-  }
-  if (name.includes("sebi")) {
-    return [
-      { name: "General Awareness & Financial Sector", qs: 25, marks: 25, duration: 15 },
-      { name: "English Language", qs: 25, marks: 25, duration: 15 },
-      { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 15 },
-      { name: "Test of Reasoning", qs: 25, marks: 25, duration: 15 }
-    ];
-  }
-  if (name.includes("ctet")) {
-    return [
-      { name: "Child Development and Pedagogy", qs: 30, marks: 30, duration: 30 },
-      { name: "Language I (English/Hindi)", qs: 30, marks: 30, duration: 30 },
-      { name: "Language II (English/Hindi/Sanskrit)", qs: 30, marks: 30, duration: 30 },
-      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
-      { name: "Environmental Studies", qs: 30, marks: 30, duration: 30 }
-    ];
-  }
-  if (name.includes("fitter")) {
-    return [
-      { name: "Trade Theory (Fitter Shop & Safety)", qs: 20, marks: 40, duration: 45 },
-      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
-      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
-    ];
-  }
-  if (name.includes("electrician")) {
-    return [
-      { name: "Trade Theory (Electrical Circuits & Machines)", qs: 20, marks: 40, duration: 45 },
-      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
-      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
-    ];
-  }
-  if (name.includes("rrb je") || name.includes("je ")) {
-    return [
-      { name: "General Intelligence & Reasoning", qs: 15, marks: 15, duration: 15 },
-      { name: "General Awareness", qs: 15, marks: 15, duration: 10 },
-      { name: "General Science", qs: 15, marks: 15, duration: 15 },
-      { name: "Civil & Allied Engineering", qs: 55, marks: 55, duration: 50 }
-    ];
-  }
-  if (name.includes("judiciary")) {
-    return [
-      { name: "Constitutional Law", qs: 25, marks: 25, duration: 45 },
-      { name: "Civil Procedure Code & Law of Evidence", qs: 25, marks: 25, duration: 45 },
-      { name: "Indian Penal Code & Criminal Procedure", qs: 25, marks: 25, duration: 45 },
-      { name: "Contract & Property Law", qs: 25, marks: 25, duration: 45 }
-    ];
-  }
-  if (name.includes("paramedical")) {
-    return [
-      { name: "Anatomy & Physiology", qs: 25, marks: 25, duration: 20 },
-      { name: "Fundamentals of Nursing", qs: 25, marks: 25, duration: 20 },
-      { name: "Community Health Nursing", qs: 25, marks: 25, duration: 25 },
-      { name: "Medical Surgical Nursing", qs: 25, marks: 25, duration: 25 }
-    ];
-  }
-  if (name.includes("electronic mechanic")) {
-    return [
-      { name: "Electronic Theory & Components", qs: 20, marks: 40, duration: 45 },
-      { name: "Workshop Calculation & Science", qs: 15, marks: 30, duration: 35 },
-      { name: "Engineering Drawing", qs: 15, marks: 30, duration: 40 }
-    ];
-  }
-  if (name.includes("rrb ntpc") || name.includes("ntpc")) {
-    return [
-      { name: "General Awareness", qs: 40, marks: 40, duration: 35 },
-      { name: "Mathematics", qs: 30, marks: 30, duration: 30 },
-      { name: "General Intelligence & Reasoning", qs: 30, marks: 30, duration: 25 }
-    ];
-  }
-  if (name.includes("sbi po")) {
-    return [
-      { name: "English Language", qs: 30, marks: 30, duration: 20 },
-      { name: "Quantitative Aptitude", qs: 35, marks: 35, duration: 20 },
-      { name: "Reasoning Ability", qs: 35, marks: 35, duration: 20 }
-    ];
-  }
-  if (name.includes("neet")) {
-    return [
-      { name: "Mechanics & General Physics", qs: 15, marks: 60, duration: 15 },
-      { name: "Electrodynamics & Magnetism", qs: 15, marks: 60, duration: 15 },
-      { name: "Optics & Modern Physics", qs: 15, marks: 60, duration: 20 }
-    ];
-  }
-  if (name.includes("nda")) {
-    return [
-      { name: "English Vocabulary & Grammar", qs: 50, marks: 200, duration: 50 },
-      { name: "Physics & Chemistry", qs: 40, marks: 160, duration: 40 },
-      { name: "General Science & History", qs: 30, marks: 120, duration: 30 },
-      { name: "Geography & Current Affairs", qs: 30, marks: 120, duration: 30 }
-    ];
-  }
-  if (name.includes("upsc")) {
-    return [
-      { name: "History of India & Indian National Movement", qs: 20, marks: 40, duration: 25 },
-      { name: "Indian and World Geography", qs: 20, marks: 40, duration: 25 },
-      { name: "Indian Polity and Governance", qs: 20, marks: 40, duration: 25 },
-      { name: "Economic and Social Development", qs: 20, marks: 40, duration: 25 },
-      { name: "General Science & Ecology", qs: 20, marks: 40, duration: 20 }
-    ];
-  }
-  if (name.includes("police") || name.includes("constable")) {
-    return [
-      { name: "General Knowledge", qs: 38, marks: 76, duration: 30 },
-      { name: "General Hindi", qs: 37, marks: 74, duration: 30 },
-      { name: "Numerical & Mental Ability", qs: 38, marks: 76, duration: 30 },
-      { name: "Mental Aptitude & Reasoning", qs: 37, marks: 74, duration: 30 }
-    ];
-  }
-  if (name.includes("b.ed")) {
-    return [
-      { name: "General Knowledge", qs: 25, marks: 50, duration: 45 },
-      { name: "Language (Hindi or English)", qs: 25, marks: 50, duration: 45 },
-      { name: "General Mental Ability", qs: 25, marks: 50, duration: 45 },
-      { name: "Subject Specialisation (Arts/Science/Commerce)", qs: 25, marks: 50, duration: 45 }
-    ];
-  }
-  return [
-    { name: "General Awareness", qs: 25, marks: 25, duration: 20 },
-    { name: "Quantitative Aptitude", qs: 25, marks: 25, duration: 25 },
-    { name: "Reasoning Ability", qs: 25, marks: 25, duration: 25 },
-    { name: "Language & Comprehension", qs: 25, marks: 25, duration: 20 }
-  ];
-};
 
 const TabHeader = ({
   tabs,
@@ -857,14 +151,8 @@ export default function TestSeriesDetailsPage() {
 
   // Tabs & Lock modal state
   const [activeSubTab, setActiveSubTab] = useState<string>("All");
-  const [activeSubject, setActiveSubject] = useState<string>("All");
   const [isLockModalOpen, setIsLockModalOpen] = useState<boolean>(false);
   const [selectedTestName, setSelectedTestName] = useState<string>("");
-
-  const handleSubTabChange = (tabId: string) => {
-    setActiveSubTab(tabId);
-    setActiveSubject("All");
-  };
 
   // Student purchases and auth states
   const [purchasedCourseIds, setPurchasedCourseIds] = useState<number[]>([]);
@@ -874,11 +162,6 @@ export default function TestSeriesDetailsPage() {
 
   // Checkout modal state
   const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState<boolean>(false);
-  const [paymentTab, setPaymentTab] = useState<"card" | "upi">("card");
-  const [cardName, setCardName] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [cardExpiry, setCardExpiry] = useState("");
-  const [cardCvv, setCardCvv] = useState("");
   const [paymentLoading, setPaymentLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -1135,50 +418,11 @@ export default function TestSeriesDetailsPage() {
     };
   });
 
-  const subjects = getCourseSubjects(course.name);
+  // Derive available test types dynamically from the actual test list
+  const availableTypes = Array.from(new Set(subTestsList.map(t => t.type).filter(Boolean)));
 
-  // Helper to determine subject of a test
-  const getTestSubject = (testItem: typeof subTestsList[0], index: number): string | null => {
-    const nameLower = testItem.name.toLowerCase();
-    const subjectNames = subjects.map(s => s.name);
-    for (const sub of subjectNames) {
-      const subLower = sub.toLowerCase();
-      if (nameLower.includes(subLower)) {
-        return sub;
-      }
-      const subNorm = subLower.replace(/\s*&\s*/g, " and ");
-      if (nameLower.includes(subNorm)) {
-        return sub;
-      }
-      const nameNorm = nameLower.replace(/\s*&\s*/g, " and ");
-      if (nameNorm.includes(subNorm)) {
-        return sub;
-      }
-    }
-    // Fallback partitioning
-    if (testItem.type === "Subject Test" || testItem.type === "Chapter Test") {
-      return subjectNames[index % subjectNames.length] || null;
-    }
-    return null;
-  };
-
-  const filteredSubTests = subTestsList.filter((test, index) => {
-    // 1. Filter by primary category tab
-    if (activeSubTab !== "All") {
-      if (activeSubTab === "Full Mock" && test.type !== "Full Mock") return false;
-      if (activeSubTab === "Subject Test" && test.type !== "Subject Test") return false;
-      if (activeSubTab === "Chapter Test" && test.type !== "Chapter Test") return false;
-      if (activeSubTab === "PYP" && test.type !== "PYP") return false;
-    }
-
-    // 2. Filter by subject sub-tab
-    if (activeSubject !== "All" && ["All", "Subject Test", "Chapter Test"].includes(activeSubTab)) {
-      const testSubject = getTestSubject(test, index);
-      if (testSubject !== activeSubject) {
-        return false;
-      }
-    }
-
+  const filteredSubTests = subTestsList.filter((test) => {
+    if (activeSubTab !== "All" && test.type !== activeSubTab) return false;
     return true;
   });
 
@@ -1261,18 +505,6 @@ export default function TestSeriesDetailsPage() {
             
             {/* Left 2 Cols: Details & Description */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Card 1: Description */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4 shadow-sm">
-                <h2 className="text-lg font-black text-slate-900 border-b border-slate-100 pb-3">
-                  Test Series Description
-                </h2>
-                <p className="text-sm leading-8 text-slate-600 font-medium">
-                  This master mock test series package is professionally curated to help students build absolute exam readiness. The program features structured questions designed by top academic educators and experienced rank-holders. With precise real-time performance scorecards, dynamic negative-marking models, and descriptive answer keys, candidates can diagnose conceptual bottlenecks and accelerate accuracy rates.
-                </p>
-                <p className="text-sm leading-8 text-slate-600 font-medium">
-                  Attempt the free tests to benchmark your preparation speed and compare rankings with hundreds of thousands of aspirants nationwide.
-                </p>
-              </div>
 
               {/* Dynamic Mock Tests Listing */}
               <div id="practice-tests" className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
@@ -1285,35 +517,19 @@ export default function TestSeriesDetailsPage() {
                   </div>
                 </div>
 
-                {/* Sub-tabs filter */}
-                <div className="flex flex-col gap-4 border-b border-slate-105 pb-5">
-                  <TabHeader
-                    tabs={[
-                      { id: "All", label: "All Tests" },
-                      { id: "Full Mock", label: "Full Length Mocks" },
-                      { id: "Subject Test", label: "Subject Tests" },
-                      { id: "Chapter Test", label: "Chapter Tests" },
-                      { id: "PYP", label: "Previous Papers" }
-                    ]}
-                    activeId={activeSubTab}
-                    onChange={handleSubTabChange}
-                  />
-
-                  {/* Subject Filter Sub-tabs */}
-                  {["All", "Subject Test", "Chapter Test"].includes(activeSubTab) && subjects.length > 0 && (
-                    <div className="flex flex-col gap-2 bg-slate-50 p-3.5 rounded-2xl border border-slate-150">
-                      <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 select-none">Select Subject:</span>
-                      <TabHeader
-                        tabs={[
-                          { id: "All", label: "All Subjects" },
-                          ...subjects.map((sub) => ({ id: sub.name, label: sub.name }))
-                        ]}
-                        activeId={activeSubject}
-                        onChange={setActiveSubject}
-                      />
-                    </div>
-                  )}
-                </div>
+                {/* Sub-tabs filter — driven by actual test types in this series */}
+                {availableTypes.length > 0 && (
+                  <div className="border-b border-slate-105 pb-5">
+                    <TabHeader
+                      tabs={[
+                        { id: "All", label: "All Tests" },
+                        ...availableTypes.map(type => ({ id: type, label: type === "Full Mock" ? "Full Length Mocks" : type === "PYP" ? "Previous Papers" : `${type}s` }))
+                      ]}
+                      activeId={activeSubTab}
+                      onChange={setActiveSubTab}
+                    />
+                  </div>
+                )}
 
                 {/* List of subtests */}
                 <div className="space-y-3.5">
@@ -1388,31 +604,7 @@ export default function TestSeriesDetailsPage() {
                 </div>
               </div>
 
-              {/* Card 2: Features Included */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
-                <h2 className="text-lg font-black text-slate-900 border-b border-slate-100 pb-3">
-                  Key Features of this Test Series
-                </h2>
-                
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {[
-                    { title: "Real Exam Simulation", desc: "Simulate authentic computer-based test (CBT) environments under actual time limits." },
-                    { title: "Performance Analysis", desc: "Gain actionable accuracy ratings, sectional analysis, and comparative percentile ranks." },
-                    { title: "Detailed Solutions", desc: "Access comprehensive explanations and alternative shortcut methods for all questions." },
-                    { title: "Multi-Language Support", desc: "Attempt exams in English, Hindi, and regional languages as per the latest guidelines." }
-                  ].map((feature, idx) => (
-                    <div key={idx} className="flex gap-3 items-start">
-                      <div className="h-8 w-8 bg-emerald-50 rounded-lg flex items-center justify-center shrink-0 border border-emerald-100 text-emerald-600">
-                        <ShieldCheck className="h-4.5 w-4.5" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-bold text-slate-800">{feature.title}</h4>
-                        <p className="text-xs text-slate-500 font-medium mt-1 leading-relaxed">{feature.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+
             </div>
 
             {/* Right Col: Sticky Action Box */}
@@ -1438,12 +630,12 @@ export default function TestSeriesDetailsPage() {
                     <span className="text-slate-800 font-bold">{course.premium ? "1 Month" : "Lifetime"}</span>
                   </div>
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
-                    <span>Format</span>
-                    <span className="text-slate-800 font-bold">Online CBT</span>
+                    <span>Total Tests</span>
+                    <span className="text-slate-800 font-bold">{meta.totalTests}</span>
                   </div>
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
-                    <span>Accuracy Analytics</span>
-                    <span className="text-emerald-650 font-bold">Included</span>
+                    <span>Free Tests</span>
+                    <span className="text-emerald-650 font-bold">{meta.freeTests}</span>
                   </div>
                 </div>
 
