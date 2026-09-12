@@ -4,16 +4,16 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Swal from "sweetalert2";
 import * as XLSX from "xlsx";
-import { 
-  FileSpreadsheet, 
-  UploadCloud, 
-  Download, 
-  CheckCircle2, 
-  AlertCircle, 
-  ArrowLeft, 
-  Trash2, 
-  Loader2, 
-  HelpCircle, 
+import {
+  FileSpreadsheet,
+  UploadCloud,
+  Download,
+  CheckCircle2,
+  AlertCircle,
+  ArrowLeft,
+  Trash2,
+  Loader2,
+  HelpCircle,
   FileText,
   Clock,
   Check,
@@ -26,15 +26,22 @@ import {
   Search
 } from "lucide-react";
 
+interface CategoryRecord {
+  id: number;
+  name: string;
+}
+
 interface CourseRecord {
   id: number;
   name: string;
   active: boolean;
   premium?: boolean;
   price?: number;
+  categoryId?: number | null;
   category?: {
+    id?: number;
     name: string;
-  };
+  } | null;
 }
 
 interface TestSeriesRecord {
@@ -71,10 +78,14 @@ export default function ImportMCQPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Data states
+  const [categories, setCategories] = useState<CategoryRecord[]>([]);
   const [courses, setCourses] = useState<CourseRecord[]>([]);
   const [testSeriesList, setTestSeriesList] = useState<TestSeriesRecord[]>([]);
   const [mcqCountMap, setMcqCountMap] = useState<Record<string, number>>({});
+
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>("");
   const [selectedCourseId, setSelectedCourseId] = useState<string>("");
+  const [testSeriesName, setTestSeriesName] = useState<string>("");
 
   // Test Access Pricing state (Paid vs Free)
   const [testAccessType, setTestAccessType] = useState<"paid" | "free">("paid");
@@ -94,7 +105,7 @@ export default function ImportMCQPage() {
   const [parsedRows, setParsedRows] = useState<ParsedQuestionRow[]>([]);
   const [previewFilter, setPreviewFilter] = useState<"all" | "valid" | "invalid">("all");
 
-  // Fetch courses, test series, and existing MCQs
+  // Fetch categories, courses, test series, and existing MCQs
   const fetchData = async () => {
     setLoadingInitial(true);
     try {
@@ -104,20 +115,22 @@ export default function ImportMCQPage() {
       const headers = { Authorization: `Bearer ${storedToken}` };
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
 
-      const [coursesRes, testSeriesRes, mcqsRes] = await Promise.all([
+      const [categoriesRes, coursesRes, testSeriesRes, mcqsRes] = await Promise.all([
+        fetch(`${apiUrl}/api/admin/categories`, { headers }),
         fetch(`${apiUrl}/api/admin/courses`, { headers }),
         fetch(`${apiUrl}/api/admin/test-series`, { headers }),
         fetch(`${apiUrl}/api/admin/mcqs?countOnly=true`, { headers })
       ]);
 
+      if (categoriesRes.ok) {
+        const data = await categoriesRes.json();
+        setCategories(data.categories || []);
+      }
+
       if (coursesRes.ok) {
         const data = await coursesRes.json();
-        setCourses(data.courses || []);
-        if (data.courses && data.courses.length > 0 && !selectedCourseId) {
-          const firstCourse = data.courses[0];
-          setSelectedCourseId(firstCourse.id.toString());
-          setTestAccessType(firstCourse.premium ? "paid" : "free");
-        }
+        const loadedCourses: CourseRecord[] = data.courses || [];
+        setCourses(loadedCourses);
       }
 
       if (testSeriesRes.ok) {
@@ -151,6 +164,14 @@ export default function ImportMCQPage() {
     setTestSeriesPage(1);
     setTestSeriesSearch("");
   }, [selectedCourseId, courses]);
+
+  // Filtered Sub Courses based on Selected Main Course (Category)
+  const filteredSubCourses = selectedCategoryId
+    ? courses.filter((c) => {
+      const catId = c.categoryId?.toString() || c.category?.id?.toString();
+      return catId === selectedCategoryId;
+    })
+    : courses;
 
   // Filtered Test Series for Selected Course
   const selectedCourse = courses.find((c) => c.id.toString() === selectedCourseId);
@@ -293,88 +314,97 @@ export default function ImportMCQPage() {
   };
 
   // Download Sample Excel Template
+  // Download Sample Excel Template
   const handleDownloadTemplate = () => {
     const sampleData = [
       {
-        "Question": "What does HTML stand for?",
-        "Option A": "Hyper Text Markup Language",
-        "Option B": "High Tech Modern Language",
-        "Option C": "Hyper Transfer Method Language",
-        "Option D": "Home Tool Markup Language",
-        "Correct Answer": "1",
-        "Hint": "It is the standard markup language for documents designed to be displayed in a web browser."
+        "Question Number": 1,
+        "Question": "Who served as the Chief Guest at India's 77th Republic Day parade on January 26, 2026?",
+        "Option A": "Olaf Scholz",
+        "Option B": "Ursula von der Leyen",
+        "Option C": "Giorgia Meloni",
+        "Option D": "Emmanuel Macron",
+        "Correct Answer": "B",
+        "Hint": "French President Emmanuel Macron was the Chief Guest."
       },
       {
-        "Question": "Which SQL command is used to retrieve data from a database table?",
-        "Option A": "UPDATE",
-        "Option B": "INSERT",
-        "Option C": "SELECT",
-        "Option D": "DELETE",
+        "Question Number": 2,
+        "Question": "Which state government launched the 'Mukhya Mantri Mahila Samriddhi Yojana' in January 2026?",
+        "Option A": "Rajasthan",
+        "Option B": "Uttar Pradesh",
+        "Option C": "Maharashtra",
+        "Option D": "Madhya Pradesh",
         "Correct Answer": "C",
-        "Hint": "It forms the core of database queries."
+        "Hint": "Launched to provide financial assistance to women entrepreneurs."
       },
       {
-        "Question": "What is the capital of France?",
-        "Option A": "Berlin",
-        "Option B": "Madrid",
-        "Option C": "Paris",
-        "Option D": "Rome",
-        "Correct Answer": "Paris",
-        "Hint": "Known as the City of Light."
+        "Question Number": 3,
+        "Question": "What is the total financial outlay approved by Union Cabinet for Semicon India 2.0?",
+        "Option A": "₹1,27,500 crore",
+        "Option B": "₹1,50,000 crore",
+        "Option C": "₹1,00,000 crore",
+        "Option D": "₹76,000 crore",
+        "Correct Answer": "A",
+        "Hint": "Semicon India 2.0 program outlay."
       }
     ];
 
     const worksheet = XLSX.utils.json_to_sheet(sampleData);
-    
+
     // Set column widths for nice viewing
     worksheet["!cols"] = [
+      { wch: 16 }, // Question Number
       { wch: 45 }, // Question
-      { wch: 30 }, // Option A
-      { wch: 30 }, // Option B
-      { wch: 30 }, // Option C
-      { wch: 30 }, // Option D
+      { wch: 25 }, // Option A
+      { wch: 25 }, // Option B
+      { wch: 25 }, // Option C
+      { wch: 25 }, // Option D
       { wch: 18 }, // Correct Answer
-      { wch: 50 }  // Hint
+      { wch: 45 }  // Hint
     ];
 
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "MCQ_Full_Mock_Test");
-    
+    XLSX.utils.book_append_sheet(workbook, worksheet, "MCQ_Questions_Template");
+
     const courseName = selectedCourse ? selectedCourse.name.replace(/[^a-zA-Z0-9]/g, "_") : "Course";
     XLSX.writeFile(workbook, `MCQ_Import_Template_${courseName}.xlsx`);
   };
 
   // Helper to parse Correct Answer from row
   const parseCorrectAnswerIndex = (
-    rawAns: any, 
-    opt1: string, 
-    opt2: string, 
-    opt3: string, 
+    rawAns: any,
+    opt1: string,
+    opt2: string,
+    opt3: string,
     opt4: string
   ): number => {
     if (rawAns === undefined || rawAns === null) return -1;
-    const strAns = String(rawAns).trim();
-    if (!strAns) return -1;
+    const origStr = String(rawAns).trim();
+    if (!origStr) return -1;
 
-    // Check numbers: "1", "2", "3", "4" -> 0, 1, 2, 3
-    if (/^[1-4]$/.test(strAns)) {
-      return parseInt(strAns, 10) - 1;
+    // Clean symbols like "(C)", "C.", "3.", "(3)", "C)", "3)", "Option C"
+    const cleaned = origStr.replace(/^[\s\(\[\{]+|[\s\)\.\}\]]+$/g, "").trim().toUpperCase();
+
+    // Direct Letter Matching
+    if (["A", "OPTION A", "OPT A", "CHOICE A", "OPTION 1", "OPT 1", "CHOICE 1"].includes(cleaned)) return 0;
+    if (["B", "OPTION B", "OPT B", "CHOICE B", "OPTION 2", "OPT 2", "CHOICE 2"].includes(cleaned)) return 1;
+    if (["C", "OPTION C", "OPT C", "CHOICE C", "OPTION 3", "OPT 3", "CHOICE 3"].includes(cleaned)) return 2;
+    if (["D", "OPTION D", "OPT D", "CHOICE D", "OPTION 4", "OPT 4", "CHOICE 4"].includes(cleaned)) return 3;
+
+    // Direct Numeric Matching (handles "1", "2", "3", "4" and floats like "1.0", "2.0", "3.0", "4.0")
+    const numVal = parseFloat(cleaned);
+    if (!isNaN(numVal)) {
+      if (numVal >= 1 && numVal <= 4) {
+        return Math.round(numVal) - 1;
+      }
+      if (numVal >= 0 && numVal <= 3 && Number.isInteger(numVal)) {
+        return Math.round(numVal);
+      }
     }
-    // Check 0-indexed numbers: "0", "1", "2", "3" if specified directly
-    if (/^[0-3]$/.test(strAns) && !/^[1-4]$/.test(strAns)) {
-      return parseInt(strAns, 10);
-    }
 
-    // Check Letters: "A", "B", "C", "D" or "a", "b", "c", "d"
-    const upper = strAns.toUpperCase();
-    if (upper === "A" || upper === "OPTION A" || upper === "OPTION 1") return 0;
-    if (upper === "B" || upper === "OPTION B" || upper === "OPTION 2") return 1;
-    if (upper === "C" || upper === "OPTION C" || upper === "OPTION 3") return 2;
-    if (upper === "D" || upper === "OPTION D" || upper === "OPTION 4") return 3;
-
-    // Check exact text match with options
+    // Fallback: Check exact match with option values (case-insensitive)
     const options = [opt1, opt2, opt3, opt4];
-    const matchIdx = options.findIndex((opt) => opt.toLowerCase() === strAns.toLowerCase());
+    const matchIdx = options.findIndex((opt) => opt && opt.trim().toLowerCase() === origStr.toLowerCase());
     if (matchIdx !== -1) return matchIdx;
 
     return -1;
@@ -404,9 +434,25 @@ export default function ImportMCQPage() {
         const workbook = XLSX.read(data, { type: "array" });
         const firstSheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[firstSheetName];
-        const rawJson: any[] = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
 
-        if (rawJson.length === 0) {
+        // 1. Force recalculate sheet range !ref so SheetJS never truncates rows early
+        const keys = Object.keys(worksheet).filter((k) => !k.startsWith("!"));
+        let maxRow = 0;
+        for (const key of keys) {
+          const match = key.match(/\d+/);
+          if (match) {
+            const rNum = parseInt(match[0], 10);
+            if (rNum > maxRow) maxRow = rNum;
+          }
+        }
+        if (maxRow > 0) {
+          worksheet["!ref"] = `A1:Z${maxRow}`;
+        }
+
+        // 2. Parse 2D matrix (array of arrays) for 100% row capture
+        const matrix: any[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: "" });
+
+        if (!matrix || matrix.length === 0) {
           Swal.fire({
             icon: "warning",
             title: "Empty Spreadsheet",
@@ -417,25 +463,91 @@ export default function ImportMCQPage() {
           return;
         }
 
-        // Map and validate each row
-        const rows: ParsedQuestionRow[] = rawJson.map((row, idx) => {
-          // Normalize header key search
-          const getKey = (possibleKeys: string[]): string => {
-            const keys = Object.keys(row);
-            for (const pk of possibleKeys) {
-              const foundKey = keys.find(k => k.trim().toLowerCase() === pk.toLowerCase());
-              if (foundKey) return String(row[foundKey] || "").trim();
-            }
-            return "";
-          };
+        // 3. Dynamically find header row index (scanning first 10 rows)
+        let headerRowIdx = 0;
+        const qKeywords = ["question", "question text", "questions", "qs", "q", "item", "description", "title", "prompt"];
+        const optAKeywords = ["option a", "optiona", "option 1", "option1", "opt a", "opta", "opt 1", "choice a", "choice 1"];
 
-          const questionText = getKey(["question", "question text", "qs", "q"]);
-          const option1 = getKey(["option a", "option1", "option 1", "a", "opt1"]);
-          const option2 = getKey(["option b", "option2", "option 2", "b", "opt2"]);
-          const option3 = getKey(["option c", "option3", "option 3", "c", "opt3"]);
-          const option4 = getKey(["option d", "option4", "option 4", "d", "opt4"]);
-          const rawAnswer = getKey(["correct answer", "answer", "correct_option", "correct", "ans"]);
-          const hint = getKey(["hint", "explanation", "solution"]);
+        for (let r = 0; r < Math.min(10, matrix.length); r++) {
+          const rowStr = (matrix[r] || []).map((c) => String(c).toLowerCase().trim()).join(" ");
+          const hasQ = qKeywords.some((kw) => rowStr.includes(kw));
+          const hasOpt = optAKeywords.some((kw) => rowStr.includes(kw));
+          if (hasQ || hasOpt) {
+            headerRowIdx = r;
+            break;
+          }
+        }
+
+        const headerRow = matrix[headerRowIdx] || [];
+
+        // Helper to find column index by header names
+        const findColIndex = (keywords: string[], fallbackIdx: number, isQuestionCol: boolean = false): number => {
+          for (const kw of keywords) {
+            const idx = headerRow.findIndex((h) => String(h).trim().toLowerCase() === kw.toLowerCase());
+            if (idx !== -1) return idx;
+          }
+          for (const kw of keywords) {
+            const idx = headerRow.findIndex((h) => {
+              const hStr = String(h).trim().toLowerCase();
+              if (isQuestionCol && (hStr.includes("number") || hStr.includes("no") || hStr.includes("sr") || hStr.includes("s.no"))) {
+                return false;
+              }
+              return hStr.includes(kw.toLowerCase());
+            });
+            if (idx !== -1) return idx;
+          }
+          return fallbackIdx;
+        };
+
+        const questionColIdx = findColIndex(["question text", "question", "questions", "qs", "description", "details"], 1, true);
+        const optAColIdx = findColIndex(["option a", "optiona", "option 1", "option1", "opt a", "opta", "opt 1", "choice a", "choice 1"], 2);
+        const optBColIdx = findColIndex(["option b", "optionb", "option 2", "option2", "opt b", "optb", "opt 2", "choice b", "choice 2"], 3);
+        const optCColIdx = findColIndex(["option c", "optionc", "option 3", "option3", "opt c", "optc", "opt 3", "choice c", "choice 3"], 4);
+        const optDColIdx = findColIndex(["option d", "optiond", "option 4", "option4", "opt d", "optd", "opt 4", "choice d", "choice 4"], 5);
+        const ansColIdx = findColIndex(["correct answer", "correct_answer", "correctoption", "correct option", "correct_option", "answer", "ans", "right answer", "correct", "ans.", "correct ans", "key"], 6);
+        const hintColIdx = findColIndex(["hint", "explanation", "solution", "notes"], 7);
+
+        // 4. Process all data rows from headerRowIdx + 1 onwards
+        const rows: ParsedQuestionRow[] = [];
+
+        for (let r = headerRowIdx + 1; r < matrix.length; r++) {
+          const rowData = matrix[r];
+          if (!rowData || rowData.length === 0) continue;
+
+          let questionText = String(rowData[questionColIdx] || "").trim();
+          let option1 = String(rowData[optAColIdx] || "").trim();
+          let option2 = String(rowData[optBColIdx] || "").trim();
+          let option3 = String(rowData[optCColIdx] || "").trim();
+          let option4 = String(rowData[optDColIdx] || "").trim();
+          let rawAnswer = String(rowData[ansColIdx] || "").trim();
+          let hint = String(rowData[hintColIdx] || "").trim();
+
+          // Positional fallback if questionText or options are empty
+          if (!questionText && rowData.length >= 6) {
+            const col0Str = String(rowData[0] || "").trim();
+            const col1Str = String(rowData[1] || "").trim();
+
+            if (col0Str.length > 5 && isNaN(Number(col0Str))) {
+              questionText = col0Str;
+              option1 = String(rowData[1] || "").trim();
+              option2 = String(rowData[2] || "").trim();
+              option3 = String(rowData[3] || "").trim();
+              option4 = String(rowData[4] || "").trim();
+              rawAnswer = String(rowData[5] || "").trim();
+              if (rowData[6]) hint = String(rowData[6] || "").trim();
+            } else if (col1Str.length > 5) {
+              questionText = col1Str;
+              option1 = String(rowData[2] || "").trim();
+              option2 = String(rowData[3] || "").trim();
+              option3 = String(rowData[4] || "").trim();
+              option4 = String(rowData[5] || "").trim();
+              rawAnswer = String(rowData[6] || "").trim();
+              if (rowData[7]) hint = String(rowData[7] || "").trim();
+            }
+          }
+
+          // Skip completely empty rows
+          if (!questionText && !option1 && !option2 && !rawAnswer) continue;
 
           const answerIndex = parseCorrectAnswerIndex(rawAnswer, option1, option2, option3, option4);
 
@@ -448,8 +560,8 @@ export default function ImportMCQPage() {
             errorMsg = `Invalid Correct Answer "${rawAnswer}". Must be 1-4, A-D, or match option text.`;
           }
 
-          return {
-            rowIndex: idx + 2, // 1-indexed plus header row
+          rows.push({
+            rowIndex: r + 1,
             question: questionText,
             option1,
             option2,
@@ -460,8 +572,8 @@ export default function ImportMCQPage() {
             hint,
             isValid: !errorMsg,
             errorMsg
-          };
-        });
+          });
+        }
 
         setParsedRows(rows);
       } catch (err: any) {
@@ -578,7 +690,8 @@ export default function ImportMCQPage() {
         body: JSON.stringify({
           courseId: selectedCourseId,
           questions: questionsPayload,
-          isPaid: testAccessType === "paid"
+          isPaid: testAccessType === "paid",
+          testSeriesName: testSeriesName.trim()
         })
       });
 
@@ -623,7 +736,7 @@ export default function ImportMCQPage() {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-500 font-sans pb-12">
-      
+
       {/* Top Breadcrumb & Action Bar */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 dark:border-slate-800 pb-5">
         <div>
@@ -652,209 +765,142 @@ export default function ImportMCQPage() {
         </button>
       </div>
 
-      {/* Grid Layout: Left Controls, Right File Dropzone */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-        {/* Step 1: Course & Mock Test Selection */}
-        <div className="lg:col-span-1 space-y-6">
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-4">
-            <div className="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-black text-xs">
-                1
-              </div>
-              <h3 className="text-sm font-black text-slate-900 dark:text-white">
-                Select Course & Mock Test
-              </h3>
-            </div>
+      {/* Single Combined Full-Width Card: Course Selection & File Upload */}
+      <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-6">
 
+        {/* Card Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 dark:border-slate-800 pb-4 gap-3">
+          <div className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-black text-sm">
+              <FileSpreadsheet className="h-5 w-5" />
+            </div>
+            <div>
+              <h3 className="text-base font-black text-slate-900 dark:text-white">
+                Select Course & Upload Excel Spreadsheet
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Choose target main course & sub-course, then drop your MCQ Excel/CSV file below
+              </p>
+            </div>
+          </div>
+
+          {fileName && (
+            <button
+              onClick={handleClearFile}
+              className="flex items-center gap-1.5 text-xs font-bold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 px-3 py-1.5 rounded-lg transition cursor-pointer border border-red-200 dark:border-red-900/30"
+            >
+              <Trash2 className="h-3.5 w-3.5" /> Clear Selected File
+            </button>
+          )}
+        </div>
+
+        {/* 2-Column Interior Grid inside Full-Width Card */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+          {/* Left Column (5 Cols): Course Selection Form */}
+          <div className="lg:col-span-5 space-y-4">
             {loadingInitial ? (
-              <div className="flex items-center justify-center py-6 gap-2 text-xs text-slate-500">
+              <div className="flex items-center justify-center py-10 gap-2 text-xs text-slate-500">
                 <Loader2 className="h-4 w-4 animate-spin text-emerald-600" />
                 Loading courses...
               </div>
             ) : (
-              <div className="space-y-4">
+              <>
+                {/* Main Course / Category Selection */}
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
-                    Target Course <span className="text-red-500">*</span>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 flex items-center justify-between">
+                    <span>Main Course (Category)</span>
+                    <span className="text-[10px] text-slate-400 font-normal">Filters Sub Courses</span>
                   </label>
                   <select
-                    value={selectedCourseId}
-                    onChange={(e) => setSelectedCourseId(e.target.value)}
-                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3.5 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-100 focus:border-emerald-500 focus:outline-none transition"
+                    value={selectedCategoryId}
+                    onChange={(e) => {
+                      const catId = e.target.value;
+                      setSelectedCategoryId(catId);
+                      setSelectedCourseId(""); // Reset sub-course selection
+                    }}
+                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3.5 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-100 focus:border-emerald-500 focus:outline-none transition cursor-pointer"
                   >
-                    {courses.map((c) => (
-                      <option key={c.id} value={c.id.toString()}>
-                        {c.name} {c.category ? `(${c.category.name})` : ""}
+                    <option value="">-- Select Main Course --</option>
+                    {categories.map((cat) => (
+                      <option key={cat.id} value={cat.id.toString()}>
+                        {cat.name}
                       </option>
                     ))}
                   </select>
                 </div>
 
-                {/* Paid vs Free Mock Test Option Selector */}
-                <div className="space-y-1.5 pt-1">
-                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300">
-                    Mock Test Pricing / Access Type <span className="text-red-500">*</span>
+                {/* Target Sub Course Selection */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+                    Target Sub Course <span className="text-red-500">*</span>
                   </label>
-                  <div className="grid grid-cols-2 gap-2">
-                    {/* Paid Option */}
-                    <button
-                      type="button"
-                      onClick={() => setTestAccessType("paid")}
-                      className={`flex flex-col p-3 rounded-xl border transition-all text-left cursor-pointer ${
-                        testAccessType === "paid"
-                          ? "border-amber-500/60 bg-amber-500/10 text-amber-900 dark:text-amber-200 ring-2 ring-amber-500/30 shadow-xs"
-                          : "border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
-                          <Lock className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
-                          Paid (Premium)
-                        </span>
-                        {testAccessType === "paid" && (
-                          <CheckCircle2 className="h-3.5 w-3.5 text-amber-600 dark:text-amber-400" />
-                        )}
-                      </div>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
-                        Requires student purchase / premium subscription
-                      </p>
-                    </button>
-
-                    {/* Free Option */}
-                    <button
-                      type="button"
-                      onClick={() => setTestAccessType("free")}
-                      className={`flex flex-col p-3 rounded-xl border transition-all text-left cursor-pointer ${
-                        testAccessType === "free"
-                          ? "border-emerald-500/60 bg-emerald-500/10 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30 shadow-xs"
-                          : "border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/60 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="flex items-center gap-1.5 text-xs font-black text-emerald-700 dark:text-emerald-300">
-                          <Sparkles className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-                          Free Access
-                        </span>
-                        {testAccessType === "free" && (
-                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-                        )}
-                      </div>
-                      <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-1 leading-tight">
-                        Free for all registered students without payment
-                      </p>
-                    </button>
-                  </div>
+                  <select
+                    value={selectedCourseId}
+                    onChange={(e) => setSelectedCourseId(e.target.value)}
+                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3.5 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-100 focus:border-emerald-500 focus:outline-none transition cursor-pointer"
+                  >
+                    <option value="">-- Select Sub Course --</option>
+                    {filteredSubCourses.length === 0 ? (
+                      <option value="" disabled>No sub-courses available</option>
+                    ) : (
+                      filteredSubCourses.map((c) => (
+                        <option key={c.id} value={c.id.toString()}>
+                          {c.name} {c.category?.name ? `(${c.category.name})` : ""}
+                        </option>
+                      ))
+                    )}
+                  </select>
                 </div>
 
-                {/* Selected Course Summary Card */}
-                {selectedCourse && (
-                  <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
-                        Course Summary
-                      </span>
-                      <div className="flex items-center gap-1.5">
-                        <span className={`inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                          testAccessType === "paid" 
-                            ? "bg-amber-500/10 text-amber-700 dark:text-amber-300 border-amber-500/30" 
-                            : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30"
-                        }`}>
-                          {testAccessType === "paid" ? <Lock className="h-3 w-3" /> : <Sparkles className="h-3 w-3" />}
-                          {testAccessType === "paid" ? "Paid (Premium)" : "Free Access"}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
-                          <Check className="h-3 w-3" /> Active
-                        </span>
-                      </div>
-                    </div>
+                {/* Test Series Name Field */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 flex items-center justify-between">
+                    <span>Test Series Name <span className="text-red-500">*</span></span>
+                    <span className="text-[10px] text-slate-400 font-normal">e.g. Mock Test - 1</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Mock Test - 1 or Full Length Mock Test 1"
+                    value={testSeriesName}
+                    onChange={(e) => setTestSeriesName(e.target.value)}
+                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3.5 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-100 focus:border-emerald-500 focus:outline-none transition"
+                  />
+                </div>
 
-                    <h4 className="text-sm font-black text-slate-900 dark:text-white">
-                      {selectedCourse.name}
-                    </h4>
-
-                    <div className="grid grid-cols-2 gap-2 text-xs">
-                      <div className="rounded-lg bg-white dark:bg-slate-950 p-2.5 border border-slate-100 dark:border-slate-800">
-                        <p className="text-[10px] text-slate-400 font-bold">Existing MCQs</p>
-                        <p className="text-xs font-black text-slate-800 dark:text-slate-200 mt-0.5">
-                          {existingQuestionCount} Questions
-                        </p>
-                      </div>
-                      <div className="rounded-lg bg-white dark:bg-slate-950 p-2.5 border border-slate-100 dark:border-slate-800">
-                        <p className="text-[10px] text-slate-400 font-bold">Test Series</p>
-                        <p className="text-xs font-black text-slate-800 dark:text-slate-200 mt-0.5">
-                          {courseTestSeries.length} Full Mock Test(s)
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* End Step 1 Course Controls */}
-              </div>
+                {/* Paid vs Free Mock Test Option Selector */}
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+                    Mock Test Pricing / Access Type <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    value={testAccessType}
+                    onChange={(e) => setTestAccessType(e.target.value as "paid" | "free")}
+                    className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3.5 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-100 focus:border-emerald-500 focus:outline-none transition cursor-pointer"
+                  >
+                    <option value="free">Free Access </option>
+                    <option value="paid">Paid Access </option>
+                  </select>
+                </div>
+              </>
             )}
           </div>
 
-          {/* Quick Guide Card */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-3">
-            <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-1.5">
-              <HelpCircle className="h-4 w-4 text-emerald-600" /> Excel Format Instructions
-            </h4>
-            <ul className="text-xs space-y-2 text-slate-600 dark:text-slate-400 pl-4 list-disc">
-              <li>
-                <strong className="text-slate-800 dark:text-slate-200">Question:</strong> Full text of the MCQ question.
-              </li>
-              <li>
-                <strong className="text-slate-800 dark:text-slate-200">Option A to Option D:</strong> Options 1, 2, 3, 4. (Options A & B required).
-              </li>
-              <li>
-                <strong className="text-slate-800 dark:text-slate-200">Correct Answer:</strong> Enter <span className="px-1 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 font-mono text-[10px]">1, 2, 3, 4</span> or <span className="px-1 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-600 font-mono text-[10px]">A, B, C, D</span>.
-              </li>
-              <li>
-                <strong className="text-slate-800 dark:text-slate-200">Hint:</strong> Optional explanation or reference for students.
-              </li>
-            </ul>
-          </div>
-        </div>
+          {/* Right Column (7 Cols): File Upload Dropzone & Instructions */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
 
-        {/* Step 2 & 3: File Upload & Live Preview Table */}
-        <div className="lg:col-span-2 space-y-6">
-          
-          {/* File Upload Box */}
-          <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
-              <div className="flex items-center gap-2">
-                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-black text-xs">
-                  2
-                </div>
-                <h3 className="text-sm font-black text-slate-900 dark:text-white">
-                  Upload Excel (.xlsx / .csv) File
-                </h3>
-              </div>
-
-              {fileName && (
-                <button
-                  onClick={handleClearFile}
-                  className="flex items-center gap-1.5 text-xs font-bold text-red-600 dark:text-red-400 hover:underline cursor-pointer"
-                >
-                  <Trash2 className="h-3.5 w-3.5" /> Clear File
-                </button>
-              )}
-            </div>
-
-            {/* Dropzone Area */}
+            {/* File Dropzone */}
             <div
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
               onClick={() => fileInputRef.current?.click()}
-              className={`relative flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-8 text-center transition cursor-pointer ${
-                dragActive
+              className={`relative flex-1 flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-6 text-center transition cursor-pointer min-h-[220px] ${dragActive
                   ? "border-emerald-500 bg-emerald-500/10"
                   : fileName
-                  ? "border-emerald-500/40 bg-emerald-50/20 dark:bg-emerald-950/10"
-                  : "border-slate-300 dark:border-slate-800 hover:border-emerald-500/50 hover:bg-slate-50 dark:hover:bg-slate-950/40"
-              }`}
+                    ? "border-emerald-500/40 bg-emerald-50/20 dark:bg-emerald-950/10"
+                    : "border-slate-300 dark:border-slate-800 hover:border-emerald-500/50 hover:bg-slate-50 dark:hover:bg-slate-950/40"
+                }`}
             >
               <input
                 ref={fileInputRef}
@@ -870,11 +916,21 @@ export default function ImportMCQPage() {
 
               {fileName ? (
                 <div>
-                  <p className="text-xs font-extrabold text-slate-400 uppercase tracking-wider">Selected File</p>
+                  <p className="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Selected File</p>
                   <h4 className="text-sm font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
                     {fileName}
                   </h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                      {parsedRows.length} rows parsed
+                    </span>
+                    {invalidCount > 0 && (
+                      <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">
+                        {invalidCount} invalid
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-[11px] text-slate-400 mt-2">
                     Click or drag another file to replace
                   </p>
                 </div>
@@ -890,186 +946,180 @@ export default function ImportMCQPage() {
               )}
             </div>
           </div>
-
-          {/* Parsed Preview Section */}
-          {parsedRows.length > 0 && (
-            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-4 animate-in fade-in duration-300">
-              
-              {/* Header and Summary Counters */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-black text-xs">
-                      3
-                    </div>
-                    <h3 className="text-sm font-black text-slate-900 dark:text-white">
-                      Live Parsed Questions Preview ({parsedRows.length})
-                    </h3>
-                  </div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    Review and verify questions before finalizing upload into database.
-                  </p>
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  onClick={handleBulkInsert}
-                  disabled={isUploading || validCount === 0}
-                  className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs font-black text-white shadow-lg transition-all active:scale-[0.98] cursor-pointer ${
-                    isUploading || validCount === 0
-                      ? "bg-slate-400 dark:bg-slate-800 cursor-not-allowed"
-                      : "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-600/20"
-                  }`}
-                >
-                  {isUploading ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      Uploading Questions...
-                    </>
-                  ) : (
-                    <>
-                      <CheckCircle2 className="h-4 w-4" />
-                      Upload {validCount} Question(s) to DB
-                    </>
-                  )}
-                </button>
-              </div>
-
-              {/* Status Filter Tabs */}
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl">
-                  <button
-                    onClick={() => setPreviewFilter("all")}
-                    className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer ${
-                      previewFilter === "all"
-                        ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs"
-                        : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
-                    }`}
-                  >
-                    All ({parsedRows.length})
-                  </button>
-                  <button
-                    onClick={() => setPreviewFilter("valid")}
-                    className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer flex items-center gap-1.5 ${
-                      previewFilter === "valid"
-                        ? "bg-emerald-500 text-white shadow-xs"
-                        : "text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10"
-                    }`}
-                  >
-                    <CheckCircle2 className="h-3.5 w-3.5" /> Valid ({validCount})
-                  </button>
-                  <button
-                    onClick={() => setPreviewFilter("invalid")}
-                    className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer flex items-center gap-1.5 ${
-                      previewFilter === "invalid"
-                        ? "bg-red-500 text-white shadow-xs"
-                        : "text-red-600 dark:text-red-400 hover:bg-red-500/10"
-                    }`}
-                  >
-                    <AlertTriangle className="h-3.5 w-3.5" /> Invalid ({invalidCount})
-                  </button>
-                </div>
-
-                {invalidCount > 0 && (
-                  <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold flex items-center gap-1">
-                    <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
-                    {invalidCount} row(s) contain validation errors and will be skipped during insert.
-                  </p>
-                )}
-              </div>
-
-              {/* Table List */}
-              <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 max-h-[500px]">
-                <table className="w-full text-left text-xs border-collapse">
-                  <thead className="sticky top-0 bg-slate-100 dark:bg-slate-950 text-slate-700 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-slate-800 z-10">
-                    <tr>
-                      <th className="p-3 w-12 text-center">Row</th>
-                      <th className="p-3 w-20">Status</th>
-                      <th className="p-3 min-w-[220px]">Question</th>
-                      <th className="p-3 min-w-[200px]">Options (A - D)</th>
-                      <th className="p-3 w-32">Correct Answer</th>
-                      <th className="p-3 min-w-[150px]">Hint / Notes</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900">
-                    {filteredPreviewRows.length === 0 ? (
-                      <tr>
-                        <td colSpan={6} className="p-8 text-center text-slate-500 dark:text-slate-400 font-medium">
-                          No matching questions found for current filter.
-                        </td>
-                      </tr>
-                    ) : (
-                      filteredPreviewRows.map((row) => (
-                        <tr key={row.rowIndex} className={`hover:bg-slate-50/60 dark:hover:bg-slate-800/40 transition ${!row.isValid ? "bg-red-500/5" : ""}`}>
-                          <td className="p-3 text-center font-mono font-bold text-slate-400">
-                            #{row.rowIndex}
-                          </td>
-                          <td className="p-3">
-                            {row.isValid ? (
-                              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                                <CheckCircle2 className="h-3 w-3" /> Valid
-                              </span>
-                            ) : (
-                              <span className="inline-flex items-center gap-1 rounded-full bg-red-500/10 px-2 py-0.5 text-[10px] font-bold text-red-600 dark:text-red-400 border border-red-500/20" title={row.errorMsg}>
-                                <AlertCircle className="h-3 w-3" /> Invalid
-                              </span>
-                            )}
-                          </td>
-                          <td className="p-3 font-semibold text-slate-900 dark:text-slate-100">
-                            <p className="line-clamp-2">{row.question || <span className="italic text-red-400">(Empty Question)</span>}</p>
-                            {!row.isValid && row.errorMsg && (
-                              <p className="text-[10px] text-red-500 font-bold mt-1">
-                                ⚠️ {row.errorMsg}
-                              </p>
-                            )}
-                          </td>
-                          <td className="p-3 space-y-1">
-                            <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 0 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
-                              A: {row.option1 || "-"}
-                            </div>
-                            <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 1 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
-                              B: {row.option2 || "-"}
-                            </div>
-                            {row.option3 && (
-                              <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 2 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
-                                C: {row.option3}
-                              </div>
-                            )}
-                            {row.option4 && (
-                              <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 3 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
-                                D: {row.option4}
-                              </div>
-                            )}
-                          </td>
-                          <td className="p-3">
-                            {row.answerIndex >= 0 ? (
-                              <span className="font-bold text-emerald-600 dark:text-emerald-400">
-                                Option {String.fromCharCode(65 + row.answerIndex)} ({row.answerIndex + 1})
-                              </span>
-                            ) : (
-                              <span className="text-red-500 font-bold">{row.answerRaw || "Missing"}</span>
-                            )}
-                          </td>
-                          <td className="p-3 text-slate-500 dark:text-slate-400 text-[11px]">
-                            {row.hint ? <span className="line-clamp-2">{row.hint}</span> : <span className="text-slate-400 italic">None</span>}
-                          </td>
-                        </tr>
-                      ))
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
         </div>
-
       </div>
+
+      {/* Parsed Preview Section */}
+      {parsedRows.length > 0 && (
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-4 animate-in fade-in duration-300">
+
+          {/* Header and Summary Counters */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-black text-xs">
+                  3
+                </div>
+                <h3 className="text-sm font-black text-slate-900 dark:text-white">
+                  Live Parsed Questions Preview ({parsedRows.length})
+                </h3>
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Review and verify questions before finalizing upload into database.
+              </p>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              onClick={handleBulkInsert}
+              disabled={isUploading || validCount === 0}
+              className={`flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs font-black text-white shadow-lg transition-all active:scale-[0.98] cursor-pointer ${isUploading || validCount === 0
+                  ? "bg-slate-400 dark:bg-slate-800 cursor-not-allowed"
+                  : "bg-emerald-600 hover:bg-emerald-500 shadow-emerald-600/20"
+                }`}
+            >
+              {isUploading ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Uploading Questions...
+                </>
+              ) : (
+                <>
+                  <CheckCircle2 className="h-4 w-4" />
+                  Upload {validCount} Question(s) to DB
+                </>
+              )}
+            </button>
+          </div>
+
+          {/* Status Filter Tabs */}
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl">
+              <button
+                onClick={() => setPreviewFilter("all")}
+                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer ${previewFilter === "all"
+                    ? "bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs"
+                    : "text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+                  }`}
+              >
+                All ({parsedRows.length})
+              </button>
+              <button
+                onClick={() => setPreviewFilter("valid")}
+                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer flex items-center gap-1.5 ${previewFilter === "valid"
+                    ? "bg-emerald-500 text-white shadow-xs"
+                    : "text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10"
+                  }`}
+              >
+                <CheckCircle2 className="h-3.5 w-3.5" /> Valid ({validCount})
+              </button>
+              <button
+                onClick={() => setPreviewFilter("invalid")}
+                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition cursor-pointer flex items-center gap-1.5 ${previewFilter === "invalid"
+                    ? "bg-red-500 text-white shadow-xs"
+                    : "text-red-600 dark:text-red-400 hover:bg-red-500/10"
+                  }`}
+              >
+                <AlertTriangle className="h-3.5 w-3.5" /> Invalid ({invalidCount})
+              </button>
+            </div>
+
+            {invalidCount > 0 && (
+              <p className="text-xs text-amber-600 dark:text-amber-400 font-semibold flex items-center gap-1">
+                <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+                {invalidCount} row(s) contain validation errors and will be skipped during insert.
+              </p>
+            )}
+          </div>
+
+          {/* Table List */}
+          <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 max-h-[500px]">
+            <table className="w-full text-left text-xs border-collapse">
+              <thead className="sticky top-0 bg-slate-100 dark:bg-slate-950 text-slate-700 dark:text-slate-300 font-bold border-b border-slate-200 dark:border-slate-800 z-10">
+                <tr>
+                  <th className="p-3 w-12 text-center">Row</th>
+                  <th className="p-3 w-20">Status</th>
+                  <th className="p-3 min-w-[220px]">Question</th>
+                  <th className="p-3 min-w-[200px]">Options (A - D)</th>
+                  <th className="p-3 w-32">Correct Answer</th>
+                  <th className="p-3 min-w-[150px]">Hint / Notes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900">
+                {filteredPreviewRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={6} className="p-8 text-center text-slate-500 dark:text-slate-400 font-medium">
+                      No matching questions found for current filter.
+                    </td>
+                  </tr>
+                ) : (
+                  filteredPreviewRows.map((row) => (
+                    <tr key={row.rowIndex} className={`hover:bg-slate-50/60 dark:hover:bg-slate-800/40 transition ${!row.isValid ? "bg-red-500/5" : ""}`}>
+                      <td className="p-3 text-center font-mono font-bold text-slate-400">
+                        #{row.rowIndex}
+                      </td>
+                      <td className="p-3">
+                        {row.isValid ? (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                            <CheckCircle2 className="h-3 w-3" /> Valid
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 rounded-full bg-red-500/10 px-2 py-0.5 text-[10px] font-bold text-red-600 dark:text-red-400 border border-red-500/20" title={row.errorMsg}>
+                            <AlertCircle className="h-3 w-3" /> Invalid
+                          </span>
+                        )}
+                      </td>
+                      <td className="p-3 font-semibold text-slate-900 dark:text-slate-100">
+                        <p className="line-clamp-2">{row.question || <span className="italic text-red-400">(Empty Question)</span>}</p>
+                        {!row.isValid && row.errorMsg && (
+                          <p className="text-[10px] text-red-500 font-bold mt-1">
+                            ⚠️ {row.errorMsg}
+                          </p>
+                        )}
+                      </td>
+                      <td className="p-3 space-y-1">
+                        <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 0 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
+                          A: {row.option1 || "-"}
+                        </div>
+                        <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 1 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
+                          B: {row.option2 || "-"}
+                        </div>
+                        {row.option3 && (
+                          <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 2 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
+                            C: {row.option3}
+                          </div>
+                        )}
+                        {row.option4 && (
+                          <div className={`text-[11px] px-2 py-0.5 rounded ${row.answerIndex === 3 ? "bg-emerald-500/15 font-bold text-emerald-700 dark:text-emerald-300 border border-emerald-500/30" : "text-slate-600 dark:text-slate-400"}`}>
+                            D: {row.option4}
+                          </div>
+                        )}
+                      </td>
+                      <td className="p-3">
+                        {row.answerIndex >= 0 ? (
+                          <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                            Option {String.fromCharCode(65 + row.answerIndex)} ({row.answerIndex + 1})
+                          </span>
+                        ) : (
+                          <span className="text-red-500 font-bold">{row.answerRaw || "Missing"}</span>
+                        )}
+                      </td>
+                      <td className="p-3 text-slate-500 dark:text-slate-400 text-[11px]">
+                        {row.hint ? <span className="line-clamp-2">{row.hint}</span> : <span className="text-slate-400 italic">None</span>}
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Full Width Associated Mock Tests Data Table */}
       {courseTestSeries.length > 0 && (
         <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs space-y-4 animate-in fade-in duration-300">
-          
+
           {/* Table Header with Search & Batch Actions */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800 pb-4">
             <div>
@@ -1155,11 +1205,10 @@ export default function ImportMCQPage() {
                             {t.name}
                           </td>
                           <td className="py-3 px-4 whitespace-nowrap">
-                            <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
-                              t.type.toLowerCase().includes("full") 
+                            <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${t.type.toLowerCase().includes("full")
                                 ? "bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20"
                                 : "bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20"
-                            }`}>
+                              }`}>
                               {t.type}
                             </span>
                           </td>
@@ -1180,11 +1229,10 @@ export default function ImportMCQPage() {
                                 value={isFreeAccess ? "free" : "paid"}
                                 onChange={(e) => handleToggleTestAccess(t.id, e.target.value === "free")}
                                 disabled={updatingTestId === t.id}
-                                className={`px-3 py-1 text-[11px] font-extrabold rounded-full border outline-none transition cursor-pointer shadow-2xs ${
-                                  isFreeAccess
+                                className={`px-3 py-1 text-[11px] font-extrabold rounded-full border outline-none transition cursor-pointer shadow-2xs ${isFreeAccess
                                     ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/25"
                                     : "bg-amber-500/15 text-amber-800 dark:text-amber-300 border-amber-500/40 hover:bg-amber-500/25"
-                                } ${updatingTestId === t.id ? "opacity-50 cursor-not-allowed" : ""}`}
+                                  } ${updatingTestId === t.id ? "opacity-50 cursor-not-allowed" : ""}`}
                               >
                                 <option value="paid" className="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-bold">
                                   🔒 Paid (Premium)

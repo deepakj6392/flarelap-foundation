@@ -107,30 +107,33 @@ model GalleryImage {
 }
 
 model MCQQuestion {
-  id        Int      @id @default(autoincrement())
-  courseId  Int      @map("course_id")
-  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  question  String
-  options   String[]
-  answer    Int      // 0-indexed correct option index
-  hint      String?  @default("")
-  createdAt DateTime @default(now()) @map("created_at")
+  id           Int         @id @default(autoincrement())
+  courseId     Int         @map("course_id")
+  course       Course      @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  testSeriesId Int?        @map("test_series_id")
+  testSeries   TestSeries? @relation(fields: [testSeriesId], references: [id], onDelete: SetNull)
+  question     String
+  options      String[]
+  answer       Int         // 0-indexed correct option index
+  hint         String?     @default("")
+  createdAt    DateTime    @default(now()) @map("created_at")
 
-  @@unique([courseId, question])
   @@map("mcq_questions")
 }
 
 model TestSeries {
-  id        Int      @id @default(autoincrement())
-  name      String
-  type      String   // Full Mock, Subject Test, Chapter Test, PYP
-  qs        Int
-  marks     Int
-  duration  Int
-  isFree    Boolean  @default(false) @map("is_free")
-  courseId  Int      @map("course_id")
-  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now()) @map("created_at")
+  id           Int           @id @default(autoincrement())
+  name         String
+  type         String        // Full Mock, Subject Test, Chapter Test, PYP
+  qs           Int
+  marks        Int
+  duration     Int
+  isFree       Boolean       @default(false) @map("is_free")
+  active       Boolean       @default(true)
+  courseId     Int           @map("course_id")
+  course       Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  mcqs         MCQQuestion[]
+  createdAt    DateTime      @default(now()) @map("created_at")
   testAttempts TestAttempt[]
 
   @@map("test_series")

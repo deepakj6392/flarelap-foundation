@@ -12,8 +12,18 @@ export async function GET(request: Request) {
     const testSeries = await prisma.testSeries.findMany({
       include: {
         course: {
-          select: { name: true }
-        }
+          select: {
+            id: true,
+            name: true,
+            categoryId: true,
+            category: {
+              select: {
+                id: true,
+                name: true,
+              },
+            },
+          },
+        },
       },
       orderBy: { id: "desc" },
     });
@@ -35,7 +45,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { name, type, qs, marks, duration, isFree, courseId } = body;
+    const { name, type, qs, marks, duration, isFree, active, courseId } = body;
 
     if (!name || !type || qs === undefined || marks === undefined || duration === undefined || !courseId) {
       return NextResponse.json(
@@ -65,12 +75,23 @@ export async function POST(request: Request) {
         marks: parseInt(marks, 10),
         duration: parseInt(duration, 10),
         isFree: !!isFree,
+        active: active !== undefined ? !!active : true,
         courseId: numericCourseId
       },
       include: {
         course: {
-          select: { name: true }
-        }
+          select: {
+            id: true,
+            name: true,
+            categoryId: true,
+            category: {
+              select: {
+                id: true,
+                name: true,
+              },
+            },
+          },
+        },
       }
     });
 

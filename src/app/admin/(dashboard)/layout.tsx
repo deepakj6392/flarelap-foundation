@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  LayoutDashboard, 
-  MessageSquare, 
-  Mail, 
-  LogOut, 
+import {
+  LayoutDashboard,
+  MessageSquare,
+  Mail,
+  LogOut,
   Menu,
   X,
   Sun,
@@ -35,7 +35,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const pathname = usePathname();
   const [authorized, setAuthorized] = useState(false);
   const [user, setUser] = useState<any>(null);
-  
+
   // UI states
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -116,7 +116,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const getMenuBtnClass = (route: string) => {
     const base = "flex w-full items-center gap-3.5 rounded-xl px-4 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 outline-none";
     if (pathname === route) {
-      return isDark 
+      return isDark
         ? `${base} bg-gradient-to-r from-emerald-950/40 to-emerald-900/20 text-emerald-400 border border-emerald-800/40 shadow-sm shadow-emerald-950/20`
         : `${base} bg-emerald-50 text-emerald-700 border border-emerald-100/70 shadow-sm shadow-emerald-100/20`;
     }
@@ -138,11 +138,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       case "/admin/education/study-material":
         return "Study Materials";
       case "/admin/education/courses":
-        return "Manage Courses";
+        return "Manage Sub Courses";
       case "/admin/education/test-series":
         return "Manage Test Series";
       case "/admin/education/categories":
-        return "Manage Categories";
+        return "Manage Course (Categories)";
       case "/admin/donations":
         return "Donation Records";
       case "/admin/student-payments":
@@ -170,14 +170,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <div className={`flex min-h-screen font-sans transition-colors duration-300 ${isDark ? "dark" : ""} ${bgMain}`}>
-      
+
       {/* 1. LEFT COLLAPSIBLE SIDEBAR */}
-      <aside 
-        className={`fixed inset-y-0 left-0 z-50 flex shrink-0 flex-col justify-between border-r p-6 transition-all duration-300 ${bgSidebar} ${
-          sidebarOpen ? "translate-x-0 w-72" : "-translate-x-full w-72"
-        } lg:static lg:translate-x-0 ${
-          sidebarCollapsed ? "lg:w-0 lg:p-0 lg:border-r-0 lg:overflow-hidden" : "lg:w-72"
-        }`}
+      <aside
+        className={`fixed inset-y-0 left-0 z-50 flex shrink-0 flex-col justify-between border-r p-6 transition-all duration-300 ${bgSidebar} ${sidebarOpen ? "translate-x-0 w-72" : "-translate-x-full w-72"
+          } lg:static lg:translate-x-0 ${sidebarCollapsed ? "lg:w-0 lg:p-0 lg:border-r-0 lg:overflow-hidden" : "lg:w-72"
+          }`}
       >
         <div className="space-y-10">
           {/* Logo Section */}
@@ -201,7 +199,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 </p>
               </div>
             </div>
-            <button 
+            <button
               onClick={() => setSidebarOpen(false)}
               className={`rounded-lg p-1.5 border border-transparent transition lg:hidden ${isDark ? 'hover:bg-slate-800 text-slate-400' : 'hover:bg-slate-100 text-slate-500'}`}
             >
@@ -272,71 +270,55 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   <ChevronDown className="h-4 w-4 text-slate-500 dark:text-slate-400" />
                 )}
               </button>
-              
+
               {educationOpen && (
                 <div className="mt-1.5 ml-9 space-y-1 border-l border-slate-200 dark:border-slate-800 pl-3">
                   <Link
-                    href="/admin/education/mcqs"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/mcqs"
+                    href="/admin/education/categories"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/education/categories"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                      }`}
+                  >
+                    <BookOpen className="h-3.5 w-3.5 text-emerald-500" />
+                    Course
+                  </Link>
+                  <Link
+                    href="/admin/education/courses"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/education/courses"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                      }`}
+                  >
+                    <GraduationCap className="h-3.5 w-3.5" />
+                    Sub Courses
+                  </Link>
+                  <Link
+                    href="/admin/education/import-mcq"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/education/import-mcq"
                         ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
                         : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
+                      }`}
+                  >
+                    <FileSpreadsheet className="h-3.5 w-3.5 text-emerald-500" />
+                    Import Questions
+                  </Link>
+                  <Link
+                    href="/admin/education/mcqs"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/education/mcqs"
+                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
+                      }`}
                   >
                     <FileText className="h-3.5 w-3.5" />
                     MCQ Question
                   </Link>
                   <Link
-                    href="/admin/education/import-mcq"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/import-mcq"
-                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
-                        : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
-                  >
-                    <FileSpreadsheet className="h-3.5 w-3.5 text-emerald-500" />
-                    Import Question MCQ
-                  </Link>
-                  <Link
-                    href="/admin/education/study-material"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/study-material"
-                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
-                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
-                  >
-                    <BookOpen className="h-3.5 w-3.5" />
-                    Study Material
-                  </Link>
-                  <Link
-                    href="/admin/education/courses"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/courses"
-                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
-                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
-                  >
-                    <GraduationCap className="h-3.5 w-3.5" />
-                    Manage Courses
-                  </Link>
-                  <Link
-                    href="/admin/education/categories"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/categories"
-                        ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
-                        : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
-                  >
-                    <BookOpen className="h-3.5 w-3.5" />
-                    Manage Categories
-                  </Link>
-                  <Link
                     href="/admin/education/test-series"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/education/test-series"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/education/test-series"
                         ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
                         : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
+                      }`}
                   >
                     <FileText className="h-3.5 w-3.5" />
                     Test Series
@@ -361,27 +343,25 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                   <ChevronDown className="h-4 w-4 text-slate-500 dark:text-slate-400" />
                 )}
               </button>
-              
+
               {moreOpen && (
                 <div className="mt-1.5 ml-9 space-y-1 border-l border-slate-200 dark:border-slate-800 pl-3">
                   <Link
                     href="/admin/team"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/team"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/team"
                         ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
                         : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
+                      }`}
                   >
                     <User className="h-3.5 w-3.5" />
                     Team Members
                   </Link>
                   <Link
                     href="/admin/profile"
-                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${
-                      pathname === "/admin/profile"
+                    className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-xs font-bold transition-all duration-200 ${pathname === "/admin/profile"
                         ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-950/20"
                         : "text-slate-650 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:translate-x-0.5"
-                    }`}
+                      }`}
                   >
                     <User className="h-3.5 w-3.5" />
                     Update Profile
@@ -396,11 +376,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="pt-6">
           <button
             onClick={handleLogout}
-            className={`flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-xs font-bold transition duration-200 ${
-              isDark 
+            className={`flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-3.5 text-xs font-bold transition duration-200 ${isDark
                 ? "border-red-500/20 bg-red-500/5 text-red-400 hover:bg-red-500/10"
                 : "border-red-200 bg-red-50/55 text-red-600 hover:bg-red-100/80"
-            }`}
+              }`}
           >
             <LogOut className="h-4.5 w-4.5" />
             Sign Out
@@ -410,7 +389,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       {/* Backdrop overlay for mobile sidebar */}
       {sidebarOpen && (
-        <div 
+        <div
           onClick={() => setSidebarOpen(false)}
           className="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-xs lg:hidden"
         />
@@ -418,11 +397,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       {/* 2. MAIN CORE CONTENT WRAPPER */}
       <div className="flex flex-1 flex-col min-w-0">
-        
+
         {/* Top Header Bar */}
         <header className={`sticky top-0 z-30 flex h-14 items-center justify-between px-6 py-2 backdrop-blur-md ${bgHeader}`}>
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => {
                 if (window.innerWidth < 1024) {
                   setSidebarOpen(true);
@@ -453,9 +432,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <span className={`h-6 w-px ${isDark ? 'bg-slate-800' : 'bg-slate-200'}`} />
 
             {/* User Profile Badge */}
-            <div className={`flex items-center gap-3 border rounded-xl pl-3 pr-4 py-1.5 shadow-sm max-w-[200px] sm:max-w-xs transition ${
-              isDark ? 'bg-slate-900 border-slate-800/80' : 'bg-white border-slate-200'
-            }`}>
+            <div className={`flex items-center gap-3 border rounded-xl pl-3 pr-4 py-1.5 shadow-sm max-w-[200px] sm:max-w-xs transition ${isDark ? 'bg-slate-900 border-slate-800/80' : 'bg-white border-slate-200'
+              }`}>
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-emerald-500/10 to-teal-400/5 border border-emerald-500/25 text-emerald-500 shadow-xs">
                 <User className="h-5 w-5" />
               </div>

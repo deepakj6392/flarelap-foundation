@@ -194,9 +194,9 @@ export default function CategoriesAdminPage() {
       <div className="rounded-3xl border border-slate-100 dark:border-slate-800/80 bg-white dark:bg-slate-950 p-6 shadow-sm">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-2xl font-black text-slate-900 dark:text-white">Mock Test Categories</h1>
+            <h1 className="text-2xl font-black text-slate-900 dark:text-white">Manage Course</h1>
             <p className="text-xs text-slate-500 font-semibold mt-1">
-              Configure exam categories to show up in the Student Registration portal.
+              Configure main course categories to group sub-courses in the portal.
             </p>
           </div>
           <button
@@ -204,7 +204,7 @@ export default function CategoriesAdminPage() {
             className="inline-flex items-center gap-2 self-start rounded-xl bg-emerald-600 px-4 py-2.5 text-xs font-black text-white hover:bg-emerald-700 shadow-lg shadow-emerald-600/15 hover:shadow-emerald-700/25 transition duration-200"
           >
             <Plus className="h-4 w-4" />
-            Add Category
+            Add Course
           </button>
         </div>
       </div>

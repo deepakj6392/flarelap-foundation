@@ -19,7 +19,7 @@ export async function PUT(
     }
 
     const body = await request.json();
-    const { name, type, qs, marks, duration, isFree, courseId } = body;
+    const { name, type, qs, marks, duration, isFree, active, courseId } = body;
 
     // Check if test exists
     const existingTest = await prisma.testSeries.findUnique({
@@ -36,6 +36,7 @@ export async function PUT(
     if (marks !== undefined) updateData.marks = parseInt(marks, 10);
     if (duration !== undefined) updateData.duration = parseInt(duration, 10);
     if (isFree !== undefined) updateData.isFree = !!isFree;
+    if (active !== undefined) updateData.active = !!active;
     if (courseId !== undefined) {
       const numericCourseId = parseInt(courseId, 10);
       if (!isNaN(numericCourseId)) {
@@ -48,8 +49,18 @@ export async function PUT(
       data: updateData,
       include: {
         course: {
-          select: { name: true }
-        }
+          select: {
+            id: true,
+            name: true,
+            categoryId: true,
+            category: {
+              select: {
+                id: true,
+                name: true,
+              },
+            },
+          },
+        },
       }
     });
 
@@ -88,6 +99,11 @@ export async function DELETE(
     if (!existingTest) {
       return NextResponse.json({ message: "Test series not found" }, { status: 404 });
     }
+
+    // Delete associated MCQ questions for this test series
+    await prisma.mCQQuestion.deleteMany({
+      where: { testSeriesId: testId }
+    });
 
     await prisma.testSeries.delete({
       where: { id: testId }

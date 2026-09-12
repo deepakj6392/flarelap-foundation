@@ -895,10 +895,10 @@ export const getCourseTestCount = (
   if (SPECIAL_COURSE_SPECS[normName]) {
     return SPECIAL_COURSE_SPECS[normName].totalTests;
   }
-  if (dbTestSeries && Array.isArray(dbTestSeries) && dbTestSeries.length > 0) {
+  if (dbTestSeries && Array.isArray(dbTestSeries)) {
     return dbTestSeries.length;
   }
-  return generateSubTestsList(courseName, isPremium).length;
+  return 0;
 };
 
 export const getCourseMetadata = (
@@ -914,18 +914,17 @@ export const getCourseMetadata = (
   const userCount = spec ? spec.users : ((hash % 400) + 400).toFixed(1) + "k";
 
   let totalTests = 0;
-  let freeTests = 4;
+  let freeTests = 0;
 
   if (spec) {
     totalTests = spec.totalTests;
     freeTests = spec.freeTests;
-  } else if (dbTestSeries && Array.isArray(dbTestSeries) && dbTestSeries.length > 0) {
+  } else if (dbTestSeries && Array.isArray(dbTestSeries)) {
     totalTests = dbTestSeries.length;
-    freeTests = Math.min(totalTests, dbTestSeries.filter((t: any) => t.isFree).length || 4);
+    freeTests = dbTestSeries.filter((t: any) => t.isFree).length;
   } else {
-    const subTests = generateSubTestsList(courseName, isPremium);
-    totalTests = subTests.length;
-    freeTests = Math.min(totalTests, subTests.filter((t) => t.isFree).length || 4);
+    totalTests = 0;
+    freeTests = 0;
   }
 
   if (!isPremium) {
