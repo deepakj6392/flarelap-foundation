@@ -31,21 +31,36 @@ export async function GET(request: Request) {
       orderBy: { createdAt: "desc" }
     });
 
-    const mappedPurchases = purchases.map((p: any) => ({
-      id: p.id,
-      user_id: p.userId,
-      user_name: p.user?.name || "Student User",
-      user_email: p.user?.email || "",
-      user_phone: p.user?.phone || "",
-      student_id: p.user?.studentId || "",
-      course_id: p.courseId,
-      course_name: p.course?.name || "Test Series Plan",
-      amount: p.amount,
-      status: p.status,
-      payment_method: p.paymentMethod || "Online Payment",
-      transaction_id: p.transactionId,
-      created_at: p.createdAt
-    }));
+    const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+    const now = Date.now();
+
+    const mappedPurchases = purchases.map((p: any) => {
+      const createdTime = new Date(p.createdAt).getTime();
+      const expiresAt = new Date(createdTime + thirtyDaysMs);
+      const msRemaining = expiresAt.getTime() - now;
+      const daysLeft = Math.max(0, Math.ceil(msRemaining / (1000 * 60 * 60 * 24)));
+      const isExpired = msRemaining <= 0;
+
+      return {
+        id: p.id,
+        user_id: p.userId,
+        user_name: p.user?.name || "Student User",
+        user_email: p.user?.email || "",
+        user_phone: p.user?.phone || "",
+        student_id: p.user?.studentId || "",
+        course_id: p.courseId,
+        course_name: p.course?.name || "Test Series Plan",
+        amount: p.amount,
+        status: p.status,
+        payment_method: p.paymentMethod || "Online Payment",
+        transaction_id: p.transactionId,
+        created_at: p.createdAt,
+        expires_at: expiresAt.toISOString(),
+        days_left: daysLeft,
+        is_expired: isExpired,
+        is_active: p.status === "COMPLETED" && !isExpired
+      };
+    });
 
     return NextResponse.json({ purchases: mappedPurchases });
   } catch (error: any) {

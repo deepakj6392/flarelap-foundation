@@ -402,6 +402,7 @@ export default function CoursesAdminPage() {
                 <tr className="bg-slate-50/70 dark:bg-slate-955/40 border-b border-slate-100 dark:border-slate-850 text-slate-400 uppercase tracking-wider font-bold">
                   <th className="py-4 px-6 w-24">ID</th>
                   <th className="py-4 px-5">Sub Course Details</th>
+                  <th className="py-4 px-5 font-bold">Pass Price (₹)</th>
                   <th className="py-4 px-5 font-bold">Date Created</th>
                   <th className="py-4 px-5 text-center font-bold">Status & Visibility</th>
                   <th className="py-4 px-6 text-right">Actions</th>
@@ -421,7 +422,7 @@ export default function CoursesAdminPage() {
 
                     {/* Sub Course Name & Category */}
                     <td className="py-4 px-5">
-                      <div className="font-extrabold text-slate-950 dark:text-white text-xs">
+                      <div className="font-extrabold text-slate-955 dark:text-white text-xs">
                         {c.name}
                       </div>
                       <div className="mt-1 inline-flex items-center gap-1">
@@ -430,6 +431,11 @@ export default function CoursesAdminPage() {
                           {c.category?.name || "Uncategorized"}
                         </span>
                       </div>
+                    </td>
+
+                    {/* Pass Price (₹) */}
+                    <td className="py-4 px-5 font-mono font-bold text-emerald-700 dark:text-emerald-400 text-xs">
+                      ₹{c.price ? parseFloat(c.price.toString()).toFixed(2) : "59.00"}
                     </td>
 
                     {/* Created At */}
@@ -565,6 +571,38 @@ export default function CoursesAdminPage() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              {/* Pass Price (₹) */}
+              <div>
+                <label className="block text-xs font-bold text-slate-550 dark:text-slate-400 uppercase tracking-wider mb-2">
+                  Pass Price (₹)
+                </label>
+                <input
+                  type="number"
+                  step="1"
+                  min="0"
+                  required
+                  value={newCoursePrice}
+                  onChange={(e) => setNewCoursePrice(e.target.value)}
+                  placeholder="e.g. 59"
+                  className="block w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-955 px-4 py-2.5 text-xs outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-900 dark:text-white font-semibold font-mono"
+                  disabled={actionLoading === "create" || actionLoading === "edit"}
+                />
+              </div>
+
+              {/* Premium Tier Checkbox */}
+              <div className="flex items-center gap-2 pt-1">
+                <input
+                  type="checkbox"
+                  id="premiumCheck"
+                  checked={newCoursePremium}
+                  onChange={(e) => setNewCoursePremium(e.target.checked)}
+                  className="h-4 w-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 cursor-pointer"
+                />
+                <label htmlFor="premiumCheck" className="text-xs font-bold text-slate-700 dark:text-slate-300 cursor-pointer">
+                  Require Paid Pass for Full Test Series (Premium Course)
+                </label>
               </div>
 
 

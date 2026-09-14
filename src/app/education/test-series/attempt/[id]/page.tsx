@@ -113,28 +113,37 @@ export default function CBTTestAttemptPage() {
   const [rollNo, setRollNo] = useState<string>("");
 
   useEffect(() => {
-    // Read student auth session
-    const token = localStorage.getItem("student_token");
-    const userJson = localStorage.getItem("student_user");
-    if (!token || !userJson) {
+    // Read student auth session or admin fallback session
+    const token = localStorage.getItem("student_token") || localStorage.getItem("admin_token") || localStorage.getItem("token");
+    const userJson = localStorage.getItem("student_user") || localStorage.getItem("admin_user") || localStorage.getItem("user");
+    if (!token) {
       router.push(`/student/login?redirect=${encodeURIComponent(window.location.pathname + window.location.search)}`);
       return;
     }
     setStudentToken(token);
-    const parsedUser = JSON.parse(userJson);
-    setStudentProfile(parsedUser);
-    setRollNo(parsedUser.student_id || `919${Math.floor(10000000 + Math.random() * 90000000)}`);
+    if (userJson) {
+      try {
+        const parsedUser = JSON.parse(userJson);
+        setStudentProfile(parsedUser);
+        setRollNo(parsedUser.student_id || `919${Math.floor(10000000 + Math.random() * 90000000)}`);
+      } catch (e) {
+        setRollNo(`919${Math.floor(10000000 + Math.random() * 90000000)}`);
+      }
+    } else {
+      setRollNo(`919${Math.floor(10000000 + Math.random() * 90000000)}`);
+    }
   }, [router]);
 
   useEffect(() => {
-    if (!studentToken || !testIdStr || !courseIdStr) return;
+    if (!studentToken || !testIdStr) return;
+    const targetCourseIdStr = courseIdStr || studentProfile?.course_id || studentProfile?.courseId || "1";
 
     const fetchTestData = async () => {
       setLoading(true);
       setError(null);
       try {
         // Fetch course details to retrieve the test series record
-        const courseRes = await fetch(`/api/courses/${courseIdStr}`);
+        const courseRes = await fetch(`/api/courses/${targetCourseIdStr}`);
         if (!courseRes.ok) throw new Error("Failed to load course details.");
         const courseData = await courseRes.json();
 
@@ -178,8 +187,10 @@ export default function CBTTestAttemptPage() {
         const mcqRes = await fetch(`/api/student/mcqs?courseId=${courseIdStr}&testId=${testIdStr}&testName=${encodeURIComponent(details.name)}`, {
           headers: { "Authorization": `Bearer ${studentToken}` }
         });
-        if (!mcqRes.ok) throw new Error("Failed to load mock exam questions.");
         const mcqData = await mcqRes.json();
+        if (!mcqRes.ok || !mcqData.success) {
+          throw new Error(mcqData.message || "Failed to load mock exam questions. Access denied.");
+        }
         
         if (mcqData.testQuestions && Array.isArray(mcqData.testQuestions) && mcqData.testQuestions.length > 0) {
           setQuestions(mcqData.testQuestions.map((q: any) => shuffleQuestionOptions(q)));
@@ -322,8 +333,8 @@ export default function CBTTestAttemptPage() {
   };
 
   const submitTestResults = async () => {
-    const finalCourseId = parseInt(courseIdStr || "", 10) || studentProfile?.course_id || studentProfile?.courseId;
-    const finalTestId = testDetails?.id || parseInt(testIdStr || "", 10);
+    const finalCourseId = parseInt(courseIdStr || "", 10) || studentProfile?.course_id || studentProfile?.courseId || 1;
+    const finalTestId = testDetails?.id || testIdStr || "1";
 
     if (!studentToken || !finalTestId || !finalCourseId) {
       Swal.fire({
@@ -358,7 +369,9 @@ export default function CBTTestAttemptPage() {
         })
       });
 
-      if (res.ok) {
+      const resData = await res.json().catch(() => ({}));
+
+      if (res.ok && resData.success !== false) {
         // Exit fullscreen if active
         if (document.fullscreenElement) {
           document.exitFullscreen().catch(() => {});
@@ -385,7 +398,7 @@ export default function CBTTestAttemptPage() {
           router.push("/student/dashboard");
         });
       } else {
-        throw new Error("Failed to save attempt in database.");
+        throw new Error(resData.message || "Failed to save attempt in database.");
       }
     } catch (err: any) {
       Swal.fire({

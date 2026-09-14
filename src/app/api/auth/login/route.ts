@@ -109,7 +109,7 @@ export async function POST(request: Request) {
     const token = jwt.sign(
       { id: user.id, email: user.email, role: user.role },
       jwtSecret,
-      { expiresIn: "1d" }
+      { expiresIn: "7d" }
     );
 
     // Record login event in UserLog table

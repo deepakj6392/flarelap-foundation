@@ -380,18 +380,18 @@ export default function TestSeriesDetailsPage() {
     );
   }
 
-  const meta = getCourseMetadata(course.name, course.id, course.premium, course.testSeries);
+  const dbTests = course.testSeries || [];
+  const hasPaidDbTest = dbTests.some((t: any) => !t.isFree);
+  const isCoursePremium = course.premium || hasPaidDbTest;
+
+  const meta = getCourseMetadata(course.name, course.id, isCoursePremium, course.testSeries);
   const stats = getRealExamStats(course.name);
 
   // Determine if student has premium access
   const isCoursePassActive = 
-    !course.premium || 
-    (studentProfile && Number(studentProfile.course_id) === course.id) || 
-    purchasedCourseIds.includes(course.id) ||
-    (course.categoryId && purchasedCategoryIds.includes(course.categoryId));
+    !isCoursePremium || 
+    purchasedCourseIds.includes(course.id);
 
-  // Load from database if available, else fallback to generator
-  const dbTests = course.testSeries || [];
   const rawSubTestsList = dbTests.length > 0 
     ? dbTests.map((t: any) => ({
         id: t.id.toString(),
@@ -407,7 +407,7 @@ export default function TestSeriesDetailsPage() {
   const subTestsList = rawSubTestsList.map(test => {
     let isFree = test.isFree;
 
-    if (!course.premium || isCoursePassActive) {
+    if (isCoursePassActive) {
       isFree = true;
     }
 
@@ -611,14 +611,14 @@ export default function TestSeriesDetailsPage() {
               <div className="sticky top-6 bg-white rounded-2xl border border-slate-200 p-6 shadow-md space-y-6">
                 <div>
                   <span className="inline-block bg-emerald-50 border border-emerald-200/50 text-[10px] font-black uppercase text-emerald-800 px-3 py-1 rounded-full">
-                    {course.premium ? "Premium Pass" : "Free Access"}
+                    {isCoursePremium ? "Premium Pass" : "Free Access"}
                   </span>
                   <div className="mt-4 flex items-baseline gap-2">
                     <span className="text-3xl font-black text-slate-900">
-                      {course.premium ? `₹${parseFloat(course.price?.toString() || "59")}` : "FREE"}
+                      {isCoursePremium ? `₹${parseFloat(course.price?.toString() || "59")}` : "FREE"}
                     </span>
                     <span className="text-xs font-semibold text-slate-500">
-                      {course.premium ? "/ Month" : "Mock Tests Included"}
+                      {isCoursePremium ? "/ Month" : "Mock Tests Included"}
                     </span>
                   </div>
                 </div>
@@ -626,7 +626,7 @@ export default function TestSeriesDetailsPage() {
                 <div className="space-y-3 pt-2 border-t border-slate-100">
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
                     <span>Active Period</span>
-                    <span className="text-slate-800 font-bold">{course.premium ? "1 Month" : "Lifetime"}</span>
+                    <span className="text-slate-800 font-bold">{isCoursePremium ? "1 Month" : "Lifetime"}</span>
                   </div>
                   <div className="flex justify-between text-xs font-semibold text-slate-600">
                     <span>Total Tests</span>
@@ -642,7 +642,7 @@ export default function TestSeriesDetailsPage() {
                   onClick={() => {
                     if (!studentToken) {
                       router.push(`/student/register?course=${course.id}`);
-                    } else if (course.premium && !purchasedCourseIds.includes(course.id) && Number(studentProfile?.course_id) !== course.id) {
+                    } else if (isCoursePremium && !purchasedCourseIds.includes(course.id)) {
                       setIsCheckoutModalOpen(true);
                     } else {
                       document.getElementById("practice-tests")?.scrollIntoView({ behavior: "smooth" });
@@ -652,8 +652,8 @@ export default function TestSeriesDetailsPage() {
                 >
                   {!studentToken 
                     ? "Continue to Register" 
-                    : (course.premium && !purchasedCourseIds.includes(course.id) && Number(studentProfile?.course_id) !== course.id) 
-                      ? `Pay for Next Month - ₹${parseFloat(course.price?.toString() || "59")}` 
+                    : (isCoursePremium && !purchasedCourseIds.includes(course.id)) 
+                      ? `Get Premium Pass - ₹${parseFloat(course.price?.toString() || "59")}` 
                       : "Start Mock Test"}
                 </button>
 

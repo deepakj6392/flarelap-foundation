@@ -98,13 +98,29 @@ export default function StudentDashboardLayout({
     }
   }, []);
 
-  // Auth Guard
+  // Auth Guard & Automatic Expiration Check
   useEffect(() => {
     if (mounted) {
-      const token = localStorage.getItem("student_token");
+      const token = localStorage.getItem("student_token") || localStorage.getItem("admin_token") || localStorage.getItem("token");
       if (!token || !student) {
         localStorage.clear();
         router.push("/student/login");
+        return;
+      }
+
+      // Verify JWT payload expiration timestamp
+      try {
+        const parts = token.split(".");
+        if (parts.length === 3) {
+          const payloadBase64 = parts[1].replace(/-/g, "+").replace(/_/g, "/");
+          const decodedJson = JSON.parse(atob(payloadBase64));
+          if (decodedJson.exp && decodedJson.exp * 1000 < Date.now()) {
+            localStorage.clear();
+            router.push("/student/login?expired=true");
+          }
+        }
+      } catch (e) {
+        // Fallback for non-jwt string tokens
       }
     }
   }, [router, student, mounted]);
@@ -145,6 +161,11 @@ export default function StudentDashboardLayout({
           "Authorization": `Bearer ${token}`
         }
       });
+      if (res.status === 401) {
+        localStorage.clear();
+        router.push("/student/login?expired=true");
+        return;
+      }
       if (res.ok) {
         const data = await res.json();
         setDbLogs(data.logs || []);
@@ -254,6 +275,7 @@ export default function StudentDashboardLayout({
     if (pathname === "/student/dashboard/quiz") return "Full Mock Test Passes Hub";
     if (pathname === "/student/dashboard/test-series") return "Full Mock Test Passes Hub";
     if (pathname === "/student/dashboard/history") return "Mock Test History & Question Review";
+    if (pathname === "/student/dashboard/orders") return "My Orders & Purchased Passes";
     if (pathname === "/student/dashboard/profile") return "Student Security Settings";
     return "Student Dashboard";
   };
@@ -382,6 +404,13 @@ export default function StudentDashboardLayout({
                       className={getSubMenuBtnClass("/student/dashboard/profile")}
                     >
                       My Profile
+                    </Link>
+                    <Link
+                      href="/student/dashboard/orders"
+                      onClick={() => setSidebarOpen(false)}
+                      className={getSubMenuBtnClass("/student/dashboard/orders")}
+                    >
+                      My Orders & Passes
                     </Link>
                     <Link
                       href="/student/dashboard/profile?tab=security"

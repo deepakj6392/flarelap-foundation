@@ -193,8 +193,8 @@ model TestAttempt {
   user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
   courseId    Int        @map("course_id")
   course      Course     @relation(fields: [courseId], references: [id], onDelete: Cascade)
-  testId      Int        @map("test_id")
-  test        TestSeries @relation(fields: [testId], references: [id], onDelete: Cascade)
+  testId      Int?       @map("test_id")
+  test        TestSeries? @relation(fields: [testId], references: [id], onDelete: SetNull)
   score       Decimal    @db.Decimal(6, 2)
   totalQs     Int        @map("total_qs")
   answered    Int

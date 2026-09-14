@@ -64,6 +64,13 @@ export async function PUT(
       }
     });
 
+    if (updatedTest.isFree === false) {
+      await prisma.course.update({
+        where: { id: updatedTest.courseId },
+        data: { premium: true }
+      });
+    }
+
     return NextResponse.json({
       testSeries: updatedTest,
       message: "Test series updated successfully!"

@@ -37,6 +37,10 @@ interface PurchaseRecord {
   payment_method: string;
   transaction_id: string | null;
   created_at: string;
+  expires_at?: string;
+  days_left?: number;
+  is_expired?: boolean;
+  is_active?: boolean;
 }
 
 export default function StudentPaymentsAdminPage() {
@@ -357,10 +361,12 @@ export default function StudentPaymentsAdminPage() {
                   <th className="py-4 px-5">Transaction ID</th>
                   <th className="py-4 px-5 select-none cursor-pointer hover:text-slate-600 dark:hover:text-white" onClick={() => handleSort("created_at")}>
                     <div className="flex items-center gap-1">
-                      Date & Time
+                      Purchase Date
                       <ArrowUpDown className="h-3 w-3" />
                     </div>
                   </th>
+                  <th className="py-4 px-5 font-bold">Valid Until (30d)</th>
+                  <th className="py-4 px-5 text-center font-bold">Plan Status</th>
                   <th className="py-4 px-6 text-right">Action</th>
                 </tr>
               </thead>
@@ -413,12 +419,30 @@ export default function StudentPaymentsAdminPage() {
                       )}
                     </td>
 
-                    {/* Date Time */}
-                    <td className="py-3.5 px-5 text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+                    {/* Purchase Date */}
+                    <td className="py-3.5 px-5 text-[11px] font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">
                       <div className="flex items-center gap-1.5">
                         <Calendar className="h-3.5 w-3.5 text-slate-400 shrink-0" />
                         {formatDate(p.created_at)}
                       </div>
+                    </td>
+
+                    {/* Valid Until */}
+                    <td className="py-3.5 px-5 text-[11px] font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">
+                      {formatDate(p.expires_at || new Date(new Date(p.created_at).getTime() + 30*24*60*60*1000).toISOString())}
+                    </td>
+
+                    {/* Plan Status */}
+                    <td className="py-3.5 px-5 text-center whitespace-nowrap">
+                      {p.is_expired ? (
+                        <span className="inline-flex items-center text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 dark:bg-rose-950/40 dark:text-rose-400 border border-rose-200/50">
+                          Expired
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200/50">
+                          Active ({p.days_left ?? 30}d left)
+                        </span>
+                      )}
                     </td>
 
                     {/* Action */}

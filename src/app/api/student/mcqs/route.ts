@@ -43,8 +43,52 @@ export async function GET(request: Request) {
     if (targetCourseId) {
       courseRecord = await prisma.course.findUnique({
         where: { id: targetCourseId },
-        select: { id: true, name: true }
+        select: { id: true, name: true, premium: true, categoryId: true, testSeries: true }
       });
+    }
+
+    if (courseRecord && courseRecord.premium) {
+      // Determine if requested test is free
+      let isTestFree = false;
+      if (testId) {
+        const dbTest = courseRecord.testSeries?.find((t: any) => 
+          t.id.toString() === testId || t.id.toString() === testId.replace(/^fmt-/, "").replace(/^ch-/, "")
+        );
+        if (dbTest) {
+          isTestFree = dbTest.isFree;
+        } else {
+          // Fallback for default generated test IDs
+          const numericId = parseInt(testId.replace(/\D/g, ""), 10);
+          if (testId.toLowerCase().includes("fmt") || testId.toLowerCase().includes("full")) {
+            isTestFree = numericId >= 1 && numericId <= 3;
+          } else if (!isNaN(numericId)) {
+            isTestFree = numericId >= 1 && numericId <= 3;
+          }
+        }
+      }
+
+      // If test is paid, verify active purchase
+      if (!isTestFree) {
+        const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+        const activePurchase = targetCourseId ? await prisma.purchase.findFirst({
+          where: {
+            userId: decoded.id,
+            status: "COMPLETED",
+            courseId: targetCourseId,
+            createdAt: { gte: thirtyDaysAgo }
+          }
+        }) : null;
+
+        if (!activePurchase) {
+          return NextResponse.json(
+            { 
+              success: false, 
+              message: "This is a paid mock test. Please purchase the course pass from your student dashboard to unlock access." 
+            }, 
+            { status: 403 }
+          );
+        }
+      }
     }
 
     // Lookup course database MCQs directly

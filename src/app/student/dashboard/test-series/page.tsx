@@ -42,6 +42,7 @@ interface CourseRecord {
   name: string;
   premium: boolean;
   active: boolean;
+  price?: string | number | null;
   categoryId?: number | null;
   category?: { id: number; name: string } | null;
   testSeries?: DBTestSeries[];
@@ -123,19 +124,10 @@ export default function StudentTestSeriesPage() {
         setCourses(allCourses);
         setPurchases(purchasesList);
 
-        if (student) {
-          const enrolledId = Number(student.course_id);
-          const unlockedCourses = allCourses.filter((c) => {
-            if (!c.premium) return true;
-            if (c.id === enrolledId) return true;
-            return purchasesList.some((p) => p.status === "COMPLETED" && p.courseId === c.id && p.isActive);
-          });
-
-          if (unlockedCourses.length > 0) {
-            setSelectedCourseId((prev) => prev || unlockedCourses[0].id.toString());
-          } else if (allCourses.length > 0) {
-            setSelectedCourseId((prev) => prev || allCourses[0].id.toString());
-          }
+        if (allCourses.length > 0) {
+          const enrolledId = student ? Number(student.course_id || (student as any).courseId) : 0;
+          const initialCourse = allCourses.find(c => c.id === enrolledId) || allCourses[0];
+          setSelectedCourseId((prev) => prev || initialCourse.id.toString());
         }
       }
     } catch (err) {
@@ -191,13 +183,13 @@ export default function StudentTestSeriesPage() {
 
   if (!student) return null;
 
-  const enrolledCourseId = Number(student.course_id);
+  const enrolledCourseId = Number(student.course_id || (student as any).courseId);
   const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
 
   const getActivePurchase = (course: CourseRecord) => {
     return purchases.find(p => {
       if (p.status !== "COMPLETED") return false;
-      const isMatch = p.courseId === course.id || (course.categoryId && p.course?.categoryId === course.categoryId);
+      const isMatch = p.courseId === course.id;
       const createdTime = p.createdAt ? new Date(p.createdAt).getTime() : 0;
       const isActive = (Date.now() - createdTime) <= thirtyDaysMs;
       return isMatch && isActive;
@@ -205,16 +197,14 @@ export default function StudentTestSeriesPage() {
   };
 
   const isCourseUnlocked = (course: CourseRecord) => {
-    if (!course.premium) return true;
-    if (course.id === enrolledCourseId) return true;
+    const hasPaidTests = course.testSeries ? course.testSeries.some((t: any) => t.isFree === false) : false;
+    const isPremiumCourse = course.premium || hasPaidTests;
+    if (!isPremiumCourse) return true;
     return Boolean(getActivePurchase(course));
   };
 
-  const activeUnlockedCourses = courses.filter(c => isCourseUnlocked(c));
-  const lockedStoreCourses = courses.filter(c => !isCourseUnlocked(c));
-
-  // Current selected course details
-  const currentSelectedCourse = courses.find((c) => c.id.toString() === selectedCourseId) || activeUnlockedCourses[0];
+  const activeUnlockedCourses = courses;
+  const currentSelectedCourse = courses.find((c) => c.id.toString() === selectedCourseId) || courses[0];
 
   // Filtered tests for Tab 1
   const filteredCourseTests = courseTestSeries.filter((test) => {
@@ -389,8 +379,8 @@ export default function StudentTestSeriesPage() {
           >
             <ShoppingBag className="h-4 w-4" />
             <span>Buy / Unlock New Courses</span>
-            <span className="px-2 py-0.5 rounded-full text-[10px] bg-white/20 text-white font-mono">
-              ₹59/mo
+            <span className="px-2 py-0.5 rounded-full text-[10px] bg-white/20 text-white font-mono uppercase">
+              Passes Store
             </span>
           </button>
         </div>
@@ -437,7 +427,7 @@ export default function StudentTestSeriesPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {activeUnlockedCourses.map((c) => {
                   const isSelected = c.id.toString() === selectedCourseId;
-                  const isPrimary = c.id === enrolledCourseId;
+                  const isUnlocked = isCourseUnlocked(c);
                   const activeP = getActivePurchase(c);
                   let daysRemaining = 30;
                   if (activeP) {
@@ -462,11 +452,11 @@ export default function StudentTestSeriesPage() {
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
                           <span className={`px-2 py-0.5 text-[9px] font-black rounded-full uppercase tracking-wider ${
-                            isPrimary
+                            isUnlocked
                               ? "bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200/50"
-                              : "bg-blue-100 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border border-blue-200/50"
+                              : "bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200/50"
                           }`}>
-                            {isPrimary ? "Primary Course" : `Unlocked (${daysRemaining}d left)`}
+                            {isUnlocked ? `Unlocked Pass (${daysRemaining}d left)` : "Free Mocks Available"}
                           </span>
                           {isSelected && <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />}
                         </div>
@@ -561,49 +551,78 @@ export default function StudentTestSeriesPage() {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
-                        {filteredCourseTests.map((t, idx) => (
-                          <tr key={t.id || idx} className="hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
-                            <td className="py-3.5 px-4 text-center font-mono font-bold text-slate-400">
-                              #{idx + 1}
-                            </td>
-                            <td className="py-3.5 px-4">
-                              <div className="font-bold text-slate-900 dark:text-slate-100">
-                                {t.name}
-                              </div>
-                              <div className="text-[10px] text-slate-400 font-semibold mt-0.5">
-                                CBT Exam Mode • Dynamic Questions
-                              </div>
-                            </td>
-                            <td className="py-3.5 px-4 whitespace-nowrap">
-                              <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
-                                t.type.toLowerCase().includes("full")
-                                  ? "bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20"
-                                  : "bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20"
-                              }`}>
-                                {t.type}
-                              </span>
-                            </td>
-                            <td className="py-3.5 px-4 text-center font-black text-slate-800 dark:text-slate-200">
-                              {t.qs} Qs
-                            </td>
-                            <td className="py-3.5 px-4 text-center font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
-                              <span className="inline-flex items-center gap-1">
-                                <Clock className="h-3.5 w-3.5 text-emerald-600" /> {t.duration} min
-                              </span>
-                            </td>
-                            <td className="py-3.5 px-4 text-center font-bold text-slate-800 dark:text-slate-200">
-                              {t.marks} Marks
-                            </td>
-                            <td className="py-3.5 px-4 text-right whitespace-nowrap">
-                              <Link
-                                href={`/education/test-series/attempt/${t.id}?course=${currentSelectedCourse.id}`}
-                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer"
-                              >
-                                <Play className="h-3.5 w-3.5 fill-white" /> Attempt Test
-                              </Link>
-                            </td>
-                          </tr>
-                        ))}
+                        {filteredCourseTests.map((t, idx) => {
+                          const isPassActive = currentSelectedCourse ? isCourseUnlocked(currentSelectedCourse) : false;
+                          const isAccessible = t.isFree || isPassActive;
+
+                          return (
+                            <tr key={t.id || idx} className="hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
+                              <td className="py-3.5 px-4 text-center font-mono font-bold text-slate-400">
+                                #{idx + 1}
+                              </td>
+                              <td className="py-3.5 px-4">
+                                <div className="flex items-center gap-2">
+                                  <div className="font-bold text-slate-900 dark:text-slate-100">
+                                    {t.name}
+                                  </div>
+                                  {t.isFree ? (
+                                    <span className="inline-flex items-center text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300 border border-emerald-200/50">
+                                      Free Test
+                                    </span>
+                                  ) : isPassActive ? (
+                                    <span className="inline-flex items-center text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950/40 dark:text-blue-300 border border-blue-200/50">
+                                      Unlocked Pass
+                                    </span>
+                                  ) : (
+                                    <span className="inline-flex items-center gap-1 text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-200/50">
+                                      <Lock className="h-2.5 w-2.5 text-amber-600" /> Premium Locked
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="text-[10px] text-slate-400 font-semibold mt-0.5">
+                                  CBT Exam Mode • Dynamic Questions
+                                </div>
+                              </td>
+                              <td className="py-3.5 px-4 whitespace-nowrap">
+                                <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
+                                  t.type.toLowerCase().includes("full")
+                                    ? "bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20"
+                                    : "bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20"
+                                }`}>
+                                  {t.type}
+                                </span>
+                              </td>
+                              <td className="py-3.5 px-4 text-center font-black text-slate-800 dark:text-slate-200">
+                                {t.qs} Qs
+                              </td>
+                              <td className="py-3.5 px-4 text-center font-semibold text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                                <span className="inline-flex items-center gap-1">
+                                  <Clock className="h-3.5 w-3.5 text-emerald-600" /> {t.duration} min
+                                </span>
+                              </td>
+                              <td className="py-3.5 px-4 text-center font-bold text-slate-800 dark:text-slate-200">
+                                {t.marks} Marks
+                              </td>
+                              <td className="py-3.5 px-4 text-right whitespace-nowrap">
+                                {isAccessible ? (
+                                  <Link
+                                    href={`/education/test-series/attempt/${t.id}?course=${currentSelectedCourse.id}`}
+                                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer"
+                                  >
+                                    <Play className="h-3.5 w-3.5 fill-white" /> Attempt Test
+                                  </Link>
+                                ) : (
+                                  <button
+                                    onClick={() => handleUnlockCoursePass(currentSelectedCourse)}
+                                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-white text-xs font-black shadow-md shadow-amber-500/20 transition active:scale-95 cursor-pointer border-none"
+                                  >
+                                    <Lock className="h-3.5 w-3.5" /> Unlock Pass (₹{currentSelectedCourse?.price ? Math.round(parseFloat(currentSelectedCourse.price.toString())) : 59})
+                                  </button>
+                                )}
+                              </td>
+                            </tr>
+                          );
+                        })}
                       </tbody>
                     </table>
                   </div>
@@ -625,7 +644,7 @@ export default function StudentTestSeriesPage() {
             <div>
               <h3 className="text-sm font-black text-slate-900 dark:text-white flex items-center gap-2">
                 <ShoppingBag className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                Unlock Unlimited Exam Passes (₹59 / 30 Days)
+                Unlock Unlimited Exam Passes (30-Day Pass)
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                 Select any exam course to purchase a 30-day monthly pass and gain instant access to all full-length mock tests.
@@ -730,7 +749,7 @@ export default function StudentTestSeriesPage() {
                       <div className="flex items-baseline justify-between">
                         <div>
                           <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400">
-                            ₹59.00
+                            ₹{c.price ? parseFloat(c.price.toString()).toFixed(2) : "59.00"}
                           </span>
                           <span className="text-xs text-slate-400 font-bold ml-1">/ 30 Days</span>
                         </div>
@@ -763,7 +782,7 @@ export default function StudentTestSeriesPage() {
                           ) : (
                             <>
                               <ShoppingBag className="h-4 w-4" />
-                              Buy & Unlock Pass (₹59)
+                              Buy & Unlock Pass (₹{c.price ? Math.round(parseFloat(c.price.toString())) : 59})
                             </>
                           )}
                         </button>

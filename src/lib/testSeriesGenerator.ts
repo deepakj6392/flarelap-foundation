@@ -927,7 +927,7 @@ export const getCourseMetadata = (
     freeTests = 0;
   }
 
-  if (!isPremium) {
+  if (!isPremium && (!dbTestSeries || dbTestSeries.length === 0)) {
     freeTests = totalTests;
   }
 

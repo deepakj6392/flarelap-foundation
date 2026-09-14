@@ -67,6 +67,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Selected course does not exist" }, { status: 404 });
     }
 
+    if (!isFree) {
+      await prisma.course.update({
+        where: { id: numericCourseId },
+        data: { premium: true }
+      });
+    }
+
     const newTest = await prisma.testSeries.create({
       data: {
         name: name.trim(),
