@@ -1855,7 +1855,7 @@ export default function MCQsAdminPage() {
                 <div className="space-y-1.5">
                   <label className="block text-emerald-700 dark:text-emerald-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
                     <span>Correct Answer Marks (+)</span>
-                    <span className="text-[9px] font-semibold text-emerald-600/80">(NEET: 4)</span>
+                    <span className="text-[9px] font-semibold text-emerald-600/80">(Per Correct Q)</span>
                   </label>
                   <input
                     required
@@ -1868,7 +1868,7 @@ export default function MCQsAdminPage() {
                       setTestCorrectMarks(val);
                       setTestMarks(testQs * val);
                     }}
-                    placeholder="e.g. 4 for NEET"
+                    placeholder="e.g. 4 or 1"
                     className="block w-full px-3.5 py-2.5 border border-emerald-500/40 dark:border-emerald-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition text-slate-900 dark:text-white font-bold"
                   />
                 </div>
@@ -1876,7 +1876,7 @@ export default function MCQsAdminPage() {
                 <div className="space-y-1.5">
                   <label className="block text-rose-700 dark:text-rose-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
                     <span>Wrong Answer Penalty (-)</span>
-                    <span className="text-[9px] font-semibold text-rose-600/80">(NEET: 1)</span>
+                    <span className="text-[9px] font-semibold text-rose-600/80">(Penalty per Wrong Q)</span>
                   </label>
                   <input
                     required
@@ -1885,7 +1885,7 @@ export default function MCQsAdminPage() {
                     min={0}
                     value={testNegativeMarks}
                     onChange={(e) => setTestNegativeMarks(parseFloat(e.target.value) || 0)}
-                    placeholder="e.g. 1 for NEET"
+                    placeholder="e.g. 1 or 0.25"
                     className="block w-full px-3.5 py-2.5 border border-rose-500/40 dark:border-rose-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-rose-500 transition text-slate-900 dark:text-white font-bold"
                   />
                 </div>

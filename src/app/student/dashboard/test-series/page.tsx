@@ -179,10 +179,10 @@ export default function StudentTestSeriesPage() {
                 name: t.name,
                 type: t.type || "Full Mock",
                 qs: t.qs || 100,
-                marks: t.marks || (t.qs || 100) * (t.correctMarks ?? 4),
+                marks: t.marks || (t.qs || 100) * (t.correctMarks ?? ((t.marks && t.qs) ? t.marks / t.qs : 4)),
                 duration: t.duration || 60,
-                correctMarks: t.correctMarks ?? 4,
-                negativeMarks: t.negativeMarks ?? 1,
+                correctMarks: t.correctMarks ?? ((t.marks && t.qs) ? t.marks / t.qs : 4),
+                negativeMarks: t.negativeMarks ?? ((t.correctMarks ?? 4) === 4 ? 1 : 0.25),
                 isFree: t.isFree ?? !targetCourse.premium
               }));
             } else {

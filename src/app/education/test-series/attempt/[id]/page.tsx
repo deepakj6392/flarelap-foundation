@@ -174,8 +174,20 @@ export default function CBTTestAttemptPage() {
           };
         }
 
-        const posMarks = testItem.correctMarks !== undefined ? Number(testItem.correctMarks) : 4;
-        const negMarks = testItem.negativeMarks !== undefined ? Number(testItem.negativeMarks) : 1;
+        let defaultPos = 1;
+        if (testItem.marks && testItem.qs && testItem.qs > 0) {
+          defaultPos = testItem.marks / testItem.qs;
+        } else if (courseTitle.toLowerCase().includes("neet") || courseTitle.toLowerCase().includes("jee")) {
+          defaultPos = 4;
+        }
+
+        const posMarks = (testItem.correctMarks !== undefined && testItem.correctMarks !== null)
+          ? Number(testItem.correctMarks) 
+          : defaultPos;
+
+        const negMarks = (testItem.negativeMarks !== undefined && testItem.negativeMarks !== null)
+          ? Number(testItem.negativeMarks)
+          : (posMarks === 4 ? 1 : Math.round(posMarks * 0.25 * 100) / 100);
 
         const details: TestDetails = {
           id: testItem.id,
