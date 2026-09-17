@@ -205,7 +205,7 @@ export default function StudentDashboardLayout({
       console.error("Logout API failed:", err);
     } finally {
       localStorage.clear();
-      router.push("/student/login");
+      router.push("/");
     }
   };
 
@@ -476,11 +476,10 @@ export default function StudentDashboardLayout({
               {/* Go to Home Button */}
               <Link
                 href="/"
-                className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-bold transition duration-200 ${
-                  isDark
-                    ? 'border-slate-800 bg-slate-900 text-slate-300 hover:bg-slate-800 hover:text-white'
-                    : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-emerald-700 shadow-xs'
-                }`}
+                className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-bold transition duration-200 ${isDark
+                  ? 'border-slate-800 bg-slate-900 text-slate-300 hover:bg-slate-800 hover:text-white'
+                  : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50 hover:text-emerald-700 shadow-xs'
+                  }`}
                 title="Go to Home"
               >
                 <Home className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />

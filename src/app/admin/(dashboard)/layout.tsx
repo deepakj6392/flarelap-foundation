@@ -91,7 +91,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   const handleLogout = () => {
     localStorage.clear();
-    router.push("/admin/login");
+    router.push("/");
   };
 
   if (!authorized) {

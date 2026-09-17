@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { 
-  BookOpen, 
-  HelpCircle, 
-  Clock, 
-  ChevronRight, 
+import {
+  BookOpen,
+  HelpCircle,
+  Clock,
+  ChevronRight,
+  ChevronDown,
   ShieldCheck,
   History,
   Sparkles,
@@ -15,19 +16,20 @@ import {
   CheckCircle2,
   XCircle,
   X,
-  Lightbulb
+  Lightbulb,
+  RotateCcw
 } from "lucide-react";
 import { useDashboard } from "./layout";
 import { STUDY_MATERIALS } from "./data";
 
 export default function StudentDashboardPage() {
-  const { 
-    student, 
-    isDark, 
-    dbLogs, 
-    dbLogsLoading, 
-    activities, 
-    formatTimelineDate 
+  const {
+    student,
+    isDark,
+    dbLogs,
+    dbLogsLoading,
+    activities,
+    formatTimelineDate
   } = useDashboard();
 
   // Local storage states for completed lessons and last exam
@@ -40,6 +42,9 @@ export default function StudentDashboardPage() {
   // Solution Review Modal states
   const [reviewAttempt, setReviewAttempt] = useState<any | null>(null);
   const [reviewFilter, setReviewFilter] = useState<"ALL" | "CORRECT" | "INCORRECT" | "UNANSWERED">("ALL");
+
+  // Accordion state for Recent Console Activity
+  const [isActivityOpen, setIsActivityOpen] = useState<boolean>(false);
 
   useEffect(() => {
     if (student) {
@@ -87,14 +92,48 @@ export default function StudentDashboardPage() {
 
   if (!student) return null;
 
-  const enrolledCourseId = Number(student.course_id);
-  const filteredMaterials = STUDY_MATERIALS.filter(
-    (material) => material.courseId === enrolledCourseId
-  );
-  
-  const courseCompletedCount = readLessons.filter(lessonId => 
-    filteredMaterials.some(m => m.id === lessonId)
+  const enrolledCourseId = Number(student.course_id || (student as any).courseId || 1);
+
+  const filteredMaterials = STUDY_MATERIALS.filter((material) => {
+    const studentCourseId = student.course_id || (student as any).courseId;
+    const studentCategoryId = student.category_id || (student as any).categoryId;
+    const studentCourseName = student.course_name || "";
+    const studentCategoryName = student.category_name || "";
+
+    if (studentCourseId && (material.courseId === Number(studentCourseId) || material.courseId === studentCourseId)) {
+      return true;
+    }
+    if (studentCategoryId && (material.categoryId === Number(studentCategoryId) || material.categoryId === studentCategoryId)) {
+      return true;
+    }
+    const matCat = (material.categoryName || "").toLowerCase();
+    const matCourse = (material.courseName || "").toLowerCase();
+    const matSubj = (material.subject || "").toLowerCase();
+    const stuCat = studentCategoryName.toLowerCase();
+    const stuCourse = studentCourseName.toLowerCase();
+
+    if (stuCat && stuCat !== "none" && (matCat.includes(stuCat) || stuCat.includes(matCat))) return true;
+    if (stuCourse && stuCourse !== "none" && (matCourse.includes(stuCourse) || stuCourse.includes(matCourse) || matSubj.includes(stuCourse))) return true;
+
+    if ((stuCourse.includes("ssc") || stuCat.includes("ssc")) && matCat.includes("ssc")) return true;
+    if ((stuCourse.includes("cet") || stuCourse.includes("nra") || stuCourse.includes("railway")) && (matCat.includes("cet") || matCat.includes("railway"))) return true;
+    if ((stuCourse.includes("bank") || stuCourse.includes("fci")) && matCat.includes("banking")) return true;
+    if ((stuCourse.includes("paramedical") || stuCourse.includes("nursing")) && matCat.includes("paramedical")) return true;
+
+    return false;
+  });
+
+  const displayMaterials = filteredMaterials.length > 0
+    ? filteredMaterials
+    : STUDY_MATERIALS.filter(m => m.categoryName === "SSC & Government Exams" || !m.categoryName);
+
+  const courseCompletedCount = readLessons.filter(lessonId =>
+    displayMaterials.some(m => m.id === lessonId)
   ).length;
+
+  const latestAttempt = attempts.length > 0 ? attempts[0] : null;
+  const latestScore = latestAttempt ? Number(latestAttempt.score) : lastBundleScore;
+  const latestTotal = latestAttempt ? latestAttempt.totalQs * 2 : lastBundleSize;
 
   const getLastLoginTime = () => {
     if (dbLogs.length === 0) return "N/A";
@@ -110,8 +149,8 @@ export default function StudentDashboardPage() {
     ...dbLogs.map((log) => ({
       id: `db-${log.id}`,
       type: log.action.toLowerCase() as "login" | "logout",
-      title: log.action === "LOGIN" 
-        ? "Successfully logged in to Scholar Console" 
+      title: log.action === "LOGIN"
+        ? "Successfully logged in to Scholar Console"
         : "Logged out / ended active session",
       timestamp: log.timestamp
     })),
@@ -127,13 +166,13 @@ export default function StudentDashboardPage() {
 
   return (
     <div className="space-y-6 animate-in fade-in duration-300 font-sans">
-      
+
       {/* Welcome Banner */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 to-teal-600 p-6 sm:p-8 text-white shadow-xl">
         {/* Decorative background blobs */}
         <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
         <div className="absolute -left-10 -bottom-10 h-32 w-32 rounded-full bg-teal-500/20 blur-2xl" />
-        
+
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[10px] font-bold tracking-wider uppercase backdrop-blur-md">
@@ -159,9 +198,8 @@ export default function StudentDashboardPage() {
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {/* Metric 1: Study Progress */}
-        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${
-          isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
-        }`}>
+        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
+          }`}>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-550">
               Course Materials
@@ -172,23 +210,22 @@ export default function StudentDashboardPage() {
           </div>
           <div className="mt-4 space-y-2">
             <h3 className={`text-xl font-black ${textHeading}`}>
-              {courseCompletedCount} / {filteredMaterials.length}
+              {courseCompletedCount} / {displayMaterials.length}
             </h3>
             <p className="text-[10px] text-slate-400 dark:text-slate-550 font-semibold">Lessons completed</p>
             {/* Progress Bar */}
             <div className="h-1.5 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-              <div 
-                className="h-full bg-emerald-500 rounded-full transition-all duration-500" 
-                style={{ width: `${filteredMaterials.length > 0 ? (courseCompletedCount / filteredMaterials.length) * 100 : 0}%` }}
+              <div
+                className="h-full bg-emerald-500 rounded-full transition-all duration-500"
+                style={{ width: `${displayMaterials.length > 0 ? (courseCompletedCount / displayMaterials.length) * 100 : 0}%` }}
               />
             </div>
           </div>
         </div>
 
         {/* Metric 2: Exam Score */}
-        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${
-          isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
-        }`}>
+        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
+          }`}>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-550">
               Mock Performance
@@ -199,25 +236,26 @@ export default function StudentDashboardPage() {
           </div>
           <div className="mt-4 space-y-2">
             <h3 className={`text-xl font-black ${textHeading}`}>
-              {lastBundleScore !== null ? `${lastBundleScore} / ${lastBundleSize}` : "No attempts"}
+              {latestScore !== null && latestTotal ? `${latestScore.toFixed(1)} / ${latestTotal}` : "No attempts"}
             </h3>
             <p className="text-[10px] text-slate-400 dark:text-slate-550 font-semibold">
-              {lastBundleScore !== null ? `${Math.round((lastBundleScore / lastBundleSize!) * 100)}% Last Score` : "Test your skills now"}
+              {attempts.length > 0
+                ? `${attempts.length} Attempt${attempts.length > 1 ? "s" : ""} Recorded`
+                : (lastBundleScore !== null ? `${Math.round((lastBundleScore / (lastBundleSize || 1)) * 100)}% Last Score` : "Test your skills now")}
             </p>
             {/* Progress Bar */}
             <div className="h-1.5 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-              <div 
-                className="h-full bg-blue-500 rounded-full transition-all duration-500" 
-                style={{ width: lastBundleScore !== null ? `${(lastBundleScore / lastBundleSize!) * 100}%` : "0%" }}
+              <div
+                className="h-full bg-blue-500 rounded-full transition-all duration-500"
+                style={{ width: latestScore !== null && latestTotal ? `${Math.min(100, Math.max(0, (latestScore / latestTotal) * 100))}%` : "0%" }}
               />
             </div>
           </div>
         </div>
 
         {/* Metric 3: Verified Scholar Status */}
-        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${
-          isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
-        }`}>
+        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
+          }`}>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-550">
               Scholarship Status
@@ -244,9 +282,8 @@ export default function StudentDashboardPage() {
         </div>
 
         {/* Metric 4: Next Milestone */}
-        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${
-          isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
-        }`}>
+        <div className={`rounded-2xl border p-5 transition-all duration-300 hover:shadow-md ${isDark ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white shadow-xs"
+          }`}>
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-505">
               Suggested Action
@@ -257,13 +294,13 @@ export default function StudentDashboardPage() {
           </div>
           <div className="mt-4 space-y-2">
             <h3 className={`text-xs font-black ${textHeading} truncate`}>
-              {courseCompletedCount < filteredMaterials.length ? "Read Next Lesson" : (lastBundleScore !== null ? "Update Credentials" : "Take Practice Exam")}
+              {courseCompletedCount < displayMaterials.length ? "Read Next Lesson" : (attempts.length > 0 ? "Review History" : "Take Practice Exam")}
             </h3>
             <p className="text-[10px] text-slate-400 dark:text-slate-550 font-semibold">
-              {courseCompletedCount < filteredMaterials.length ? "Complete study guide" : (lastBundleScore !== null ? "Manage account credentials" : "Attempt aptitudes exam")}
+              {courseCompletedCount < displayMaterials.length ? "Complete study guide" : (attempts.length > 0 ? "Inspect wrong answers" : "Attempt aptitudes exam")}
             </p>
             <Link
-              href={courseCompletedCount < filteredMaterials.length ? "/student/dashboard/materials" : (lastBundleScore === null ? "/student/dashboard/quiz" : "/student/dashboard/profile")}
+              href={courseCompletedCount < displayMaterials.length ? "/student/dashboard/materials" : (attempts.length > 0 ? "/student/dashboard/history" : "/student/dashboard/test-series")}
               className="text-[10.5px] font-black text-emerald-700 dark:text-emerald-450 hover:underline flex items-center gap-0.5"
             >
               Go to Portal <ChevronRight className="h-3 w-3" />
@@ -272,187 +309,161 @@ export default function StudentDashboardPage() {
         </div>
       </div>
 
-      {/* Bottom Panels Split */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
-        {/* Left Column: CBT attempts scorecard + Activity logs */}
-        <div className="lg:col-span-2 space-y-6">
-          
-          {/* Recent CBT Mock Test Attempts Panel */}
-          <div className={`rounded-2xl border p-6 ${
-            isDark ? "border-slate-800 bg-slate-900/30" : "border-slate-200 bg-white shadow-xs"
+      {/* Bottom Panels Full Width */}
+      <div className="space-y-6">
+
+        {/* Recent CBT Mock Test Attempts Panel */}
+        <div className={`rounded-2xl border p-6 ${isDark ? "border-slate-800 bg-slate-900/30" : "border-slate-200 bg-white shadow-xs"
           }`}>
-            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 mb-4">
-              <div className="flex items-center gap-2">
-                <History className="h-4.5 w-4.5 text-slate-400 animate-pulse" />
-                <h3 className={`text-sm font-black ${textHeading}`}>Recent CBT Mock Test Attempts</h3>
-              </div>
-              <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase">CBT Scorecards</span>
+          <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 mb-4">
+            <div className="flex items-center gap-2">
+              <History className="h-4.5 w-4.5 text-slate-400 animate-pulse" />
+              <h3 className={`text-sm font-black ${textHeading}`}>Recent CBT Mock Test Attempts</h3>
             </div>
+            <span className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase">CBT Scorecards</span>
+          </div>
 
-            {attemptsLoading ? (
-              <div className="flex items-center justify-center py-8">
-                <Loader2 className="h-5 w-5 animate-spin text-emerald-650" />
-              </div>
-            ) : attempts.length === 0 ? (
-              <p className="text-xs text-slate-500 font-semibold py-6 text-center">No mock test attempts recorded yet. Attempt a test to see your scorecard history!</p>
-            ) : (
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
-                  <thead>
-                    <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 font-bold uppercase tracking-wider text-[10px]">
-                      <th className="py-2.5 px-3">Test Series</th>
-                      <th className="py-2.5 px-3">Course</th>
-                      <th className="py-2.5 px-3">Date Taken</th>
-                      <th className="py-2.5 px-3">Pattern</th>
-                      <th className="py-2.5 px-3">Score (Marks)</th>
-                      <th className="py-2.5 px-3">Result</th>
-                      <th className="py-2.5 px-3 text-right">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-50 dark:divide-slate-850 font-semibold text-slate-650 dark:text-slate-350">
-                    {attempts.map((attempt: any) => {
-                      const percent = Math.round((Number(attempt.score) / (attempt.totalQs * 2)) * 100);
-                      const isPass = percent >= 40;
+          {attemptsLoading ? (
+            <div className="flex items-center justify-center py-8">
+              <Loader2 className="h-5 w-5 animate-spin text-emerald-650" />
+            </div>
+          ) : attempts.length === 0 ? (
+            <p className="text-xs text-slate-500 font-semibold py-6 text-center">No mock test attempts recorded yet. Attempt a test to see your scorecard history!</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 font-bold uppercase tracking-wider text-[10px]">
+                    <th className="py-2.5 px-3">Test Series</th>
+                    <th className="py-2.5 px-3">Course</th>
+                    <th className="py-2.5 px-3">Date Taken</th>
+                    <th className="py-2.5 px-3">Pattern</th>
+                    <th className="py-2.5 px-3">Score (Marks)</th>
+                    <th className="py-2.5 px-3">Result</th>
+                    <th className="py-2.5 px-3 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-50 dark:divide-slate-850 font-semibold text-slate-650 dark:text-slate-350">
+                  {attempts.map((attempt: any) => {
+                    const percent = Math.round((Number(attempt.score) / (attempt.totalQs * 2)) * 100);
+                    const isPass = percent >= 40;
+                    const testIdToAttempt = attempt.testId || attempt.test?.id || 1;
+                    const courseIdToAttempt = attempt.courseId || attempt.course?.id || enrolledCourseId || 1;
 
-                      return (
-                        <tr key={attempt.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/10 transition-colors">
-                          <td className="py-3 px-3 font-extrabold text-slate-950 dark:text-white">
-                            {attempt.test?.name || "Mock Test"}
-                          </td>
-                          <td className="py-3 px-3 text-slate-500 dark:text-slate-400">
-                            {attempt.course?.name}
-                          </td>
-                          <td className="py-3 px-3 text-slate-400 dark:text-slate-500">
-                            {new Date(attempt.createdAt).toLocaleDateString()}
-                          </td>
-                          <td className="py-3 px-3">
-                            <div className="text-[10px]">{attempt.correct} Correct • {attempt.wrong} Wrong</div>
-                            <div className="text-[9px] text-slate-400 dark:text-slate-500 mt-0.5">{Math.floor(attempt.duration / 60)} Mins Taken</div>
-                          </td>
-                          <td className="py-3 px-3">
-                            <span className="font-bold text-slate-800 dark:text-slate-200">
-                              {Number(attempt.score).toFixed(1)}
-                            </span>
-                            <span className="text-slate-400 dark:text-slate-500"> / {attempt.totalQs * 2}</span>
-                          </td>
-                          <td className="py-3 px-3">
-                            <span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider ${
-                              isPass 
-                                ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-900/30" 
-                                : "bg-rose-50 text-rose-800 dark:bg-rose-950/20 dark:text-rose-450 border border-rose-200/50 dark:border-rose-900/30"
+                    return (
+                      <tr key={attempt.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/10 transition-colors">
+                        <td className="py-3 px-3 font-extrabold text-slate-950 dark:text-white">
+                          {attempt.test?.name || "Mock Test"}
+                        </td>
+                        <td className="py-3 px-3 text-slate-500 dark:text-slate-400">
+                          {attempt.course?.name}
+                        </td>
+                        <td className="py-3 px-3 text-slate-400 dark:text-slate-500">
+                          {new Date(attempt.createdAt).toLocaleDateString()}
+                        </td>
+                        <td className="py-3 px-3">
+                          <div className="text-[10px]">{attempt.correct} Correct • {attempt.wrong} Wrong</div>
+                          <div className="text-[9px] text-slate-400 dark:text-slate-500 mt-0.5">{Math.floor(attempt.duration / 60)} Mins Taken</div>
+                        </td>
+                        <td className="py-3 px-3">
+                          <span className="font-bold text-slate-800 dark:text-slate-200">
+                            {Number(attempt.score).toFixed(1)}
+                          </span>
+                          <span className="text-slate-400 dark:text-slate-500"> / {attempt.totalQs * 2}</span>
+                        </td>
+                        <td className="py-3 px-3">
+                          <span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9px] font-black uppercase tracking-wider ${isPass
+                            ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-900/30"
+                            : "bg-rose-50 text-rose-800 dark:bg-rose-950/20 dark:text-rose-450 border border-rose-200/50 dark:border-rose-900/30"
                             }`}>
-                              {isPass ? "PASS" : "FAIL"}
-                            </span>
-                          </td>
-                          <td className="py-3 px-3 text-right">
+                            {isPass ? "PASS" : "FAIL"}
+                          </span>
+                        </td>
+                        <td className="py-3 px-3 text-right">
+                          <div className="flex items-center justify-end gap-2">
+                            <Link
+                              href={`/education/test-series/attempt/${testIdToAttempt}?course=${courseIdToAttempt}`}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-colors shadow-2xs cursor-pointer"
+                            >
+                              <RotateCcw className="h-3.5 w-3.5" />
+                              <span>Re-Attempt</span>
+                            </Link>
                             <button
                               onClick={() => {
                                 setReviewAttempt(attempt);
                                 setReviewFilter("ALL");
                               }}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/60 dark:text-indigo-300 font-bold text-xs transition-colors border border-indigo-200/60 dark:border-indigo-800/40 shadow-2xs"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/60 dark:text-indigo-300 font-bold text-xs transition-colors border border-indigo-200/60 dark:border-indigo-800/40 shadow-2xs cursor-pointer"
                             >
                               <Eye className="h-3.5 w-3.5" />
                               <span>Review Answers</span>
                             </button>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            )}
-          </div>
-
-          {/* Recent activity timeline logs */}
-          <div className={`rounded-2xl border p-6 ${
-            isDark ? "border-slate-800 bg-slate-900/30" : "border-slate-200 bg-white shadow-xs"
-          }`}>
-            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 mb-4">
-              <div className="flex items-center gap-2">
-                <History className="h-4.5 w-4.5 text-slate-400" />
-                <h3 className={`text-sm font-black ${textHeading}`}>Recent Console Activity</h3>
-              </div>
-              <span className="text-[9px] font-bold text-slate-400 dark:text-slate-550 uppercase">Last 10 events</span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
-
-            <div className="relative pl-4 border-l border-slate-200 dark:border-slate-800 space-y-6">
-              {dbLogsLoading ? (
-                <div className="flex items-center justify-center py-6">
-                  <Loader2 className="h-5 w-5 animate-spin text-emerald-600" />
-                </div>
-              ) : mergedTimeline.length === 0 ? (
-                <p className="text-xs text-slate-550 font-semibold pl-2">No activity logs recorded yet.</p>
-              ) : (
-                mergedTimeline.map((act, idx) => (
-                  <div key={`timeline-${act.id}-${idx}`} className="relative group">
-                    {/* Timeline dot */}
-                    <div className={`absolute -left-[20.5px] top-1.5 h-3 w-3 rounded-full border-2 border-white dark:border-slate-950 group-hover:scale-110 transition-all ${
-                      act.type === "login" 
-                        ? "bg-emerald-500" 
-                        : act.type === "logout" 
-                          ? "bg-red-500" 
-                          : act.type === "lesson" 
-                            ? "bg-blue-500" 
-                            : "bg-purple-500"
-                    }`} />
-                    <div className="space-y-1">
-                      <p className={`text-xs font-semibold ${textHeading}`}>{act.title}</p>
-                      <p className="text-[10px] text-slate-400 dark:text-slate-550 font-bold">
-                        {formatTimelineDate(act.timestamp)}
-                      </p>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-
+          )}
         </div>
 
-        {/* Right Panel: Digital Student ID Card */}
-        <div className={`rounded-2xl border p-6 flex flex-col justify-between text-center relative overflow-hidden ${
-          isDark ? "border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950/40" : "border-slate-200 bg-gradient-to-b from-slate-50/80 to-white shadow-xs"
-        }`}>
-          <div className="space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3 mb-2">
-              <span className="text-[9px] font-bold text-emerald-600 dark:text-emerald-450 uppercase tracking-widest">Scholar Digital Pass</span>
-              <span className="text-[9px] text-slate-450 dark:text-slate-500 font-bold">ACTIVE</span>
-            </div>
-            
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-500 font-black text-xl shadow-md">
-              {student.name.substring(0, 2).toUpperCase()}
-            </div>
-
-            <div className="space-y-1">
-              <h3 className={`text-sm font-black ${textHeading}`}>{student.name}</h3>
-              <p className="text-xs text-slate-550 dark:text-slate-400 font-semibold">{student.email}</p>
-              <span className="inline-flex items-center gap-1 mt-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[9px] font-extrabold text-emerald-600 uppercase border border-emerald-500/20">
-                Verified Student
+        {/* Recent activity timeline logs Accordion */}
+        <div className={`rounded-2xl border transition-all duration-300 ${isDark ? "border-slate-800 bg-slate-900/30" : "border-slate-200 bg-white shadow-xs"
+          }`}>
+          <button
+            type="button"
+            onClick={() => setIsActivityOpen(!isActivityOpen)}
+            className={`w-full flex items-center justify-between p-6 text-left cursor-pointer transition-colors ${isActivityOpen ? "border-b border-slate-100 dark:border-slate-800" : ""
+              }`}
+          >
+            <div className="flex items-center gap-2">
+              <History className="h-4.5 w-4.5 text-slate-400" />
+              <h3 className={`text-sm font-black ${textHeading}`}>Recent Console Activity</h3>
+              <span className="ml-2 text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">
+                Last 10 events
               </span>
             </div>
-          </div>
+            <div className="flex items-center gap-1.5 text-slate-400 font-bold text-xs">
+              <span>{isActivityOpen ? "Hide" : "Expand"}</span>
+              <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isActivityOpen ? "rotate-180" : "rotate-0"}`} />
+            </div>
+          </button>
 
-          <div className="mt-8 pt-4 border-t border-slate-150 dark:border-slate-850 space-y-2 text-left text-[10px] text-slate-400 dark:text-slate-500 font-semibold">
-            <div className="flex justify-between">
-              <span>Card Holder ID:</span>
-              <span className="font-bold text-slate-600 dark:text-slate-305 select-all">{student.student_id}</span>
+          {isActivityOpen && (
+            <div className="p-6 pt-4 animate-in fade-in slide-in-from-top-2 duration-200">
+              <div className="relative pl-4 border-l border-slate-200 dark:border-slate-800 space-y-6">
+                {dbLogsLoading ? (
+                  <div className="flex items-center justify-center py-6">
+                    <Loader2 className="h-5 w-5 animate-spin text-emerald-600" />
+                  </div>
+                ) : mergedTimeline.length === 0 ? (
+                  <p className="text-xs text-slate-550 font-semibold pl-2">No activity logs recorded yet.</p>
+                ) : (
+                  mergedTimeline.map((act, idx) => (
+                    <div key={`timeline-${act.id}-${idx}`} className="relative group">
+                      {/* Timeline dot */}
+                      <div className={`absolute -left-[20.5px] top-1.5 h-3 w-3 rounded-full border-2 border-white dark:border-slate-950 group-hover:scale-110 transition-all ${act.type === "login"
+                        ? "bg-emerald-500"
+                        : act.type === "logout"
+                          ? "bg-red-500"
+                          : act.type === "lesson"
+                            ? "bg-blue-500"
+                            : "bg-purple-500"
+                        }`} />
+                      <div className="space-y-1">
+                        <p className={`text-xs font-semibold ${textHeading}`}>{act.title}</p>
+                        <p className="text-[10px] text-slate-400 dark:text-slate-550 font-bold">
+                          {formatTimelineDate(act.timestamp)}
+                        </p>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
             </div>
-            <div className="flex justify-between">
-              <span>Enrolled Course:</span>
-              <span className="font-bold text-slate-600 dark:text-slate-305 select-all">{student.course_name || "None"}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Portal Security:</span>
-              <span className="font-bold text-slate-600 dark:text-slate-305">Verified</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Enrollment Date:</span>
-              <span className="font-bold text-slate-600 dark:text-slate-305">{new Date(student.created_at).toLocaleDateString()}</span>
-            </div>
-          </div>
+          )}
         </div>
 
       </div>
@@ -460,9 +471,8 @@ export default function StudentDashboardPage() {
       {/* SOLUTION REVIEW MODAL */}
       {reviewAttempt && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs overflow-y-auto">
-          <div className={`relative w-full max-w-4xl max-h-[90vh] rounded-2xl border flex flex-col overflow-hidden shadow-2xl ${
-            isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white border-slate-200 text-slate-900"
-          }`}>
+          <div className={`relative w-full max-w-4xl max-h-[90vh] rounded-2xl border flex flex-col overflow-hidden shadow-2xl ${isDark ? "bg-slate-900 border-slate-800 text-white" : "bg-white border-slate-200 text-slate-900"
+            }`}>
             {/* Modal Header */}
             <div className="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-950/30">
               <div className="flex items-center gap-3">
@@ -510,41 +520,37 @@ export default function StudentDashboardPage() {
             <div className="flex items-center gap-2 p-4 border-b border-slate-100 dark:border-slate-800 overflow-x-auto text-xs font-bold">
               <button
                 onClick={() => setReviewFilter("ALL")}
-                className={`px-3 py-1.5 rounded-lg border transition-colors ${
-                  reviewFilter === "ALL"
-                    ? "bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white"
-                    : "bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700"
-                }`}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${reviewFilter === "ALL"
+                  ? "bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white"
+                  : "bg-slate-50 text-slate-600 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700"
+                  }`}
               >
                 All Questions ({reviewAttempt.totalQs})
               </button>
               <button
                 onClick={() => setReviewFilter("CORRECT")}
-                className={`px-3 py-1.5 rounded-lg border transition-colors ${
-                  reviewFilter === "CORRECT"
-                    ? "bg-emerald-600 text-white border-emerald-600"
-                    : "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/40"
-                }`}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${reviewFilter === "CORRECT"
+                  ? "bg-emerald-600 text-white border-emerald-600"
+                  : "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-900/40"
+                  }`}
               >
                 Correct ({reviewAttempt.correct})
               </button>
               <button
                 onClick={() => setReviewFilter("INCORRECT")}
-                className={`px-3 py-1.5 rounded-lg border transition-colors ${
-                  reviewFilter === "INCORRECT"
-                    ? "bg-rose-600 text-white border-rose-600"
-                    : "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-400 dark:border-rose-900/40"
-                }`}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${reviewFilter === "INCORRECT"
+                  ? "bg-rose-600 text-white border-rose-600"
+                  : "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/40 dark:text-rose-400 dark:border-rose-900/40"
+                  }`}
               >
                 Incorrect ({reviewAttempt.wrong})
               </button>
               <button
                 onClick={() => setReviewFilter("UNANSWERED")}
-                className={`px-3 py-1.5 rounded-lg border transition-colors ${
-                  reviewFilter === "UNANSWERED"
-                    ? "bg-amber-600 text-white border-amber-600"
-                    : "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-900/40"
-                }`}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${reviewFilter === "UNANSWERED"
+                  ? "bg-amber-600 text-white border-amber-600"
+                  : "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-900/40"
+                  }`}
               >
                 Unanswered ({reviewAttempt.totalQs - reviewAttempt.answered})
               </button>
@@ -592,36 +598,33 @@ export default function StudentDashboardPage() {
                   return (
                     <div
                       key={q.id || idx}
-                      className={`p-4 rounded-xl border space-y-3 ${
-                        isCorrectChoice
-                          ? "bg-emerald-50/20 border-emerald-200 dark:border-emerald-900/40"
-                          : isUnanswered
+                      className={`p-4 rounded-xl border space-y-3 ${isCorrectChoice
+                        ? "bg-emerald-50/20 border-emerald-200 dark:border-emerald-900/40"
+                        : isUnanswered
                           ? "bg-slate-50/50 border-slate-200 dark:border-slate-800"
                           : "bg-rose-50/20 border-rose-200 dark:border-rose-900/40"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex items-start gap-2.5">
-                          <span className={`px-2.5 py-1 rounded-lg text-xs font-black shrink-0 ${
-                            isCorrectChoice
-                              ? "bg-emerald-500 text-white"
-                              : isUnanswered
+                          <span className={`px-2.5 py-1 rounded-lg text-xs font-black shrink-0 ${isCorrectChoice
+                            ? "bg-emerald-500 text-white"
+                            : isUnanswered
                               ? "bg-slate-400 text-white"
                               : "bg-rose-500 text-white"
-                          }`}>
+                            }`}>
                             Q{qNum}
                           </span>
                           <h4 className="text-xs sm:text-sm font-black leading-snug text-slate-900 dark:text-white mt-0.5">
                             {q.question}
                           </h4>
                         </div>
-                        <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full shrink-0 ${
-                          isCorrectChoice
-                            ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
-                            : isUnanswered
+                        <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full shrink-0 ${isCorrectChoice
+                          ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"
+                          : isUnanswered
                             ? "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-400"
                             : "bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300"
-                        }`}>
+                          }`}>
                           {isCorrectChoice ? "Correct" : isUnanswered ? "Not Attempted" : "Incorrect"}
                         </span>
                       </div>

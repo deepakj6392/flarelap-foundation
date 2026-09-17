@@ -46,11 +46,11 @@ export default function StudentLoginPage() {
         throw new Error(data.message || "Failed to send OTP.");
       }
       setOtpSent(true);
-      setSuccess(`OTP sent successfully! For local testing, code is ${data.otp}`);
+      setSuccess("OTP sent successfully! Please check your email inbox.");
       
       Swal.fire({
         title: "OTP Dispatched!",
-        text: `We have sent a verification code to your email. (Use test code: ${data.otp})`,
+        text: "We have sent a verification code to your email. Please check your inbox and enter the OTP.",
         icon: "success",
         confirmButtonColor: "#047857"
       });

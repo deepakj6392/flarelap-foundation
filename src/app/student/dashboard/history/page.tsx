@@ -62,6 +62,12 @@ export default function StudentTestHistoryPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const ITEMS_PER_PAGE = 9;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
 
   // Review Modal / Stepper state
   const [activeAttempt, setActiveAttempt] = useState<TestAttemptRecord | null>(null);
@@ -168,6 +174,12 @@ export default function StudentTestHistoryPage() {
     return testName.toLowerCase().includes(searchQuery.toLowerCase()) || 
            courseName.toLowerCase().includes(searchQuery.toLowerCase());
   });
+
+  const totalPages = Math.ceil(filteredAttempts.length / ITEMS_PER_PAGE) || 1;
+  const paginatedAttempts = filteredAttempts.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   const formatDuration = (seconds: number) => {
     if (!seconds || seconds <= 0) return "N/A";
@@ -328,74 +340,121 @@ export default function StudentTestHistoryPage() {
             </Link>
           </div>
         ) : (
-          <div className="grid gap-5 md:grid-cols-2">
-            {filteredAttempts.map((attempt) => {
-              const testTitle = attempt.test?.name || `Mock Test Series #${attempt.testId}`;
-              const courseTitle = attempt.course?.name || "General Course";
-              const scoreNum = parseFloat(String(attempt.score || 0));
-              const maxMarks = attempt.totalQs * 2;
-              const accuracyPct = attempt.answered > 0 ? Math.round((attempt.correct / attempt.answered) * 100) : 0;
+          <div className="space-y-6">
+            <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {paginatedAttempts.map((attempt) => {
+                const testTitle = attempt.test?.name || `Mock Test Series #${attempt.testId}`;
+                const courseTitle = attempt.course?.name || "General Course";
+                const scoreNum = parseFloat(String(attempt.score || 0));
+                const maxMarks = attempt.totalQs * 2;
+                const accuracyPct = attempt.answered > 0 ? Math.round((attempt.correct / attempt.answered) * 100) : 0;
 
-              return (
-                <div 
-                  key={attempt.id}
-                  className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs hover:border-emerald-500/40 transition duration-200 flex flex-col justify-between space-y-5"
-                >
-                  <div className="space-y-3">
-                    {/* Header line with date */}
-                    <div className="flex items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-[10px] font-black text-slate-600 dark:text-slate-300">
-                        <Clock className="h-3 w-3 text-emerald-500" />
-                        {formatDate(attempt.createdAt)}
-                      </span>
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-md border border-emerald-500/20">
-                        {attempt.test?.type || "Full Length Mock"}
-                      </span>
-                    </div>
+                return (
+                  <div 
+                    key={attempt.id}
+                    className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs hover:border-emerald-500/40 transition duration-200 flex flex-col justify-between space-y-5"
+                  >
+                    <div className="space-y-3">
+                      {/* Header line with date */}
+                      <div className="flex items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1 text-[10px] font-black text-slate-600 dark:text-slate-300">
+                          <Clock className="h-3 w-3 text-emerald-500" />
+                          {formatDate(attempt.createdAt)}
+                        </span>
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-md border border-emerald-500/20">
+                          {attempt.test?.type || "Full Length Mock"}
+                        </span>
+                      </div>
 
-                    {/* Test Title & Course */}
-                    <div>
-                      <h3 className="text-sm font-black text-slate-900 dark:text-white line-clamp-2">{testTitle}</h3>
-                      <p className="text-[11px] font-bold text-slate-400 mt-1 flex items-center gap-1">
-                        <BookOpen className="h-3.5 w-3.5 text-slate-400 shrink-0" />
-                        {courseTitle}
-                      </p>
-                    </div>
-
-                    {/* Score & Metrics Box */}
-                    <div className="grid grid-cols-3 gap-2 bg-slate-50/80 dark:bg-slate-950/40 p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 text-center">
+                      {/* Test Title & Course */}
                       <div>
-                        <p className="text-[9.5px] font-bold uppercase text-slate-400">Score</p>
-                        <p className="text-xs sm:text-sm font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
-                          {scoreNum} <span className="text-[9.5px] font-normal text-slate-400">/ {maxMarks}</span>
+                        <h3 className="text-sm font-black text-slate-900 dark:text-white line-clamp-2">{testTitle}</h3>
+                        <p className="text-[11px] font-bold text-slate-400 mt-1 flex items-center gap-1">
+                          <BookOpen className="h-3.5 w-3.5 text-slate-400 shrink-0" />
+                          {courseTitle}
                         </p>
                       </div>
-                      <div>
-                        <p className="text-[9.5px] font-bold uppercase text-slate-400">Correct / Wrong</p>
-                        <p className="text-xs sm:text-sm font-black text-slate-900 dark:text-white mt-0.5">
-                          <span className="text-emerald-600 font-bold">{attempt.correct}</span> / <span className="text-rose-500 font-bold">{attempt.wrong}</span>
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-[9.5px] font-bold uppercase text-slate-400">Accuracy</p>
-                        <p className="text-xs sm:text-sm font-black text-blue-600 dark:text-blue-400 mt-0.5">
-                          {accuracyPct}%
-                        </p>
+
+                      {/* Score & Metrics Box */}
+                      <div className="grid grid-cols-3 gap-2 bg-slate-50/80 dark:bg-slate-950/40 p-3.5 rounded-xl border border-slate-100 dark:border-slate-800/80 text-center">
+                        <div>
+                          <p className="text-[9.5px] font-bold uppercase text-slate-400">Score</p>
+                          <p className="text-xs sm:text-sm font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
+                            {scoreNum} <span className="text-[9.5px] font-normal text-slate-400">/ {maxMarks}</span>
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-[9.5px] font-bold uppercase text-slate-400">Correct / Wrong</p>
+                          <p className="text-xs sm:text-sm font-black text-slate-900 dark:text-white mt-0.5">
+                            <span className="text-emerald-600 font-bold">{attempt.correct}</span> / <span className="text-rose-500 font-bold">{attempt.wrong}</span>
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-[9.5px] font-bold uppercase text-slate-400">Accuracy</p>
+                          <p className="text-xs sm:text-sm font-black text-blue-600 dark:text-blue-400 mt-0.5">
+                            {accuracyPct}%
+                          </p>
+                        </div>
                       </div>
                     </div>
+
+                    {/* Action Button */}
+                    <button
+                      onClick={() => openReviewModal(attempt)}
+                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-850 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white py-3 text-xs font-bold shadow-xs active:scale-[0.98] transition cursor-pointer"
+                    >
+                      <Eye className="h-4 w-4 text-emerald-400 dark:text-white" />
+                      Review Complete Mock Test & Solutions
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                  Showing <span className="font-bold text-slate-800 dark:text-slate-200">{((currentPage - 1) * ITEMS_PER_PAGE) + 1}</span> to <span className="font-bold text-slate-800 dark:text-slate-200">{Math.min(currentPage * ITEMS_PER_PAGE, filteredAttempts.length)}</span> of <span className="font-bold text-slate-800 dark:text-slate-200">{filteredAttempts.length}</span> attempts
+                </p>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                    <span>Previous</span>
+                  </button>
+
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                      <button
+                        key={pageNum}
+                        onClick={() => setCurrentPage(pageNum)}
+                        className={`h-8 w-8 rounded-xl text-xs font-black transition cursor-pointer ${
+                          currentPage === pageNum
+                            ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20"
+                            : "bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    ))}
                   </div>
 
-                  {/* Action Button */}
                   <button
-                    onClick={() => openReviewModal(attempt)}
-                    className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-850 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white py-3 text-xs font-bold shadow-xs active:scale-[0.98] transition cursor-pointer"
+                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition cursor-pointer"
                   >
-                    <Eye className="h-4 w-4 text-emerald-400 dark:text-white" />
-                    Review Complete Mock Test & Solutions
+                    <span>Next</span>
+                    <ChevronRight className="h-4 w-4" />
                   </button>
                 </div>
-              );
-            })}
+              </div>
+            )}
           </div>
         )}
       </div>

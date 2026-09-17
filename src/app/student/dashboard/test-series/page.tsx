@@ -4,13 +4,9 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { 
-  BookOpen, 
   HelpCircle, 
-  Zap, 
-  Award, 
   CheckCircle2, 
   Lock, 
-  ArrowRight, 
   Loader2, 
   Clock,
   Search,
@@ -18,10 +14,9 @@ import {
   Play,
   Check,
   ShoppingBag,
-  ChevronRight,
-  FileText,
   Trophy,
-  Filter
+  RotateCcw,
+  ChevronDown
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
@@ -86,6 +81,29 @@ export default function StudentTestSeriesPage() {
 
   const [purchasingCourseId, setPurchasingCourseId] = useState<number | null>(null);
 
+  const [attempts, setAttempts] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function fetchAttempts() {
+      const token = localStorage.getItem("student_token");
+      if (!token) return;
+      try {
+        const res = await fetch("/api/student/attempts", {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          setAttempts(data.attempts || []);
+        }
+      } catch (err) {
+        console.error("Failed to load attempts history:", err);
+      }
+    }
+    if (student) {
+      fetchAttempts();
+    }
+  }, [student]);
+
   const loadRazorpayScript = () => {
     return new Promise((resolve) => {
       if (typeof window === "undefined") return resolve(false);
@@ -125,8 +143,8 @@ export default function StudentTestSeriesPage() {
         setPurchases(purchasesList);
 
         if (allCourses.length > 0) {
-          const enrolledId = student ? Number(student.course_id || (student as any).courseId) : 0;
-          const initialCourse = allCourses.find(c => c.id === enrolledId) || allCourses[0];
+          const unlockedList = allCourses.filter(c => purchasesList.some(p => p.status === "COMPLETED" && p.courseId === c.id));
+          const initialCourse = unlockedList.length > 0 ? unlockedList[0] : allCourses[0];
           setSelectedCourseId((prev) => prev || initialCourse.id.toString());
         }
       }
@@ -197,19 +215,27 @@ export default function StudentTestSeriesPage() {
   };
 
   const isCourseUnlocked = (course: CourseRecord) => {
-    const hasPaidTests = course.testSeries ? course.testSeries.some((t: any) => t.isFree === false) : false;
-    const isPremiumCourse = course.premium || hasPaidTests;
-    if (!isPremiumCourse) return true;
     return Boolean(getActivePurchase(course));
   };
 
-  const activeUnlockedCourses = courses;
-  const currentSelectedCourse = courses.find((c) => c.id.toString() === selectedCourseId) || courses[0];
+  const activeUnlockedCourses = useMemo(() => {
+    return courses.filter((c) => isCourseUnlocked(c));
+  }, [courses, purchases]);
+
+  const currentSelectedCourse = useMemo(() => {
+    if (activeUnlockedCourses.length > 0) {
+      return activeUnlockedCourses.find((c) => c.id.toString() === selectedCourseId) || activeUnlockedCourses[0];
+    }
+    return courses.find((c) => c.id.toString() === selectedCourseId) || courses[0];
+  }, [activeUnlockedCourses, courses, selectedCourseId]);
 
   // Filtered tests for Tab 1
   const filteredCourseTests = courseTestSeries.filter((test) => {
-    const matchesSearch = test.name.toLowerCase().includes(testSearchQuery.toLowerCase()) ||
-                          test.type.toLowerCase().includes(testSearchQuery.toLowerCase());
+    const query = testSearchQuery.toLowerCase().trim();
+    const matchesSearch = !query || 
+                          test.name.toLowerCase().includes(query) ||
+                          test.type.toLowerCase().includes(query) ||
+                          (currentSelectedCourse?.name || "").toLowerCase().includes(query);
     const matchesType = selectedTypeFilter === "All" || 
                         test.type.toLowerCase().includes(selectedTypeFilter.toLowerCase());
     return matchesSearch && matchesType;
@@ -404,10 +430,7 @@ export default function StudentTestSeriesPage() {
         <div className="space-y-6">
           
           {/* Unlocked Courses Selector Bar */}
-          <div className="space-y-3">
-            <h3 className={`text-xs font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center gap-1.5`}>
-              <BookOpen className="h-4 w-4 text-emerald-600" /> Select Unlocked Course Category
-            </h3>
+          <div>
 
             {activeUnlockedCourses.length === 0 ? (
               <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-6 text-center space-y-3">
@@ -492,8 +515,29 @@ export default function StudentTestSeriesPage() {
                   </h3>
                 </div>
 
-                {/* Sub-type Filters & Search */}
+                {/* Sub-type Filters, Subcourse Selector & Search */}
                 <div className="flex flex-wrap items-center gap-3">
+                  {/* Purchased Subcourse Dropdown Selector */}
+                  {activeUnlockedCourses.length > 1 && (
+                    <div className="relative">
+                      <select
+                        value={selectedCourseId}
+                        onChange={(e) => {
+                          setSelectedCourseId(e.target.value);
+                          setTestSearchQuery("");
+                        }}
+                        className="pl-3 pr-8 py-2 text-xs font-bold rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:border-emerald-500 focus:outline-none transition cursor-pointer appearance-none max-w-[200px] truncate"
+                      >
+                        {activeUnlockedCourses.map((c) => (
+                          <option key={c.id} value={c.id.toString()}>
+                            {c.name}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400 pointer-events-none" />
+                    </div>
+                  )}
+
                   {/* Search Input */}
                   <div className="relative">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400" />
@@ -501,14 +545,14 @@ export default function StudentTestSeriesPage() {
                       type="text"
                       value={testSearchQuery}
                       onChange={(e) => setTestSearchQuery(e.target.value)}
-                      placeholder="Filter test by name..."
-                      className="w-full sm:w-56 pl-9 pr-3.5 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:border-emerald-500 focus:outline-none transition"
+                      placeholder="Search by test name or course..."
+                      className="w-full sm:w-64 pl-9 pr-3.5 py-2 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 focus:border-emerald-500 focus:outline-none transition"
                     />
                   </div>
 
                   {/* Filter Pills */}
                   <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl">
-                    {["All", "Full Mock", "Prelims", "Mains"].map((type) => (
+                    {["All", "Full Mock"].map((type) => (
                       <button
                         key={type}
                         onClick={() => setSelectedTypeFilter(type)}
@@ -555,6 +599,17 @@ export default function StudentTestSeriesPage() {
                           const isPassActive = currentSelectedCourse ? isCourseUnlocked(currentSelectedCourse) : false;
                           const isAccessible = t.isFree || isPassActive;
 
+                          const existingAttempt = attempts.find((att: any) => {
+                            if (att.testId && att.testId.toString() === t.id.toString()) return true;
+                            if (att.test?.id && att.test.id.toString() === t.id.toString()) return true;
+                            if (att.test?.name && t.name && att.test.name.trim().toLowerCase() === t.name.trim().toLowerCase()) {
+                              if (!att.courseId || (currentSelectedCourse && att.courseId === currentSelectedCourse.id)) {
+                                return true;
+                              }
+                            }
+                            return false;
+                          });
+
                           return (
                             <tr key={t.id || idx} className="hover:bg-slate-50/80 dark:hover:bg-slate-900/60 transition">
                               <td className="py-3.5 px-4 text-center font-mono font-bold text-slate-400">
@@ -582,6 +637,15 @@ export default function StudentTestSeriesPage() {
                                 <div className="text-[10px] text-slate-400 font-semibold mt-0.5">
                                   CBT Exam Mode • Dynamic Questions
                                 </div>
+                                {existingAttempt && (
+                                  <div className="flex items-center gap-1.5 text-[10px] text-emerald-600 dark:text-emerald-400 font-bold mt-1">
+                                    <CheckCircle2 className="h-3 w-3 text-emerald-500 shrink-0" />
+                                    <span>
+                                      Attempted: {new Date(existingAttempt.createdAt).toLocaleDateString()} at {new Date(existingAttempt.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                    </span>
+                                    <span className="text-slate-400">• Score: {Number(existingAttempt.score).toFixed(1)} Marks</span>
+                                  </div>
+                                )}
                               </td>
                               <td className="py-3.5 px-4 whitespace-nowrap">
                                 <span className={`inline-flex items-center gap-1 text-[10px] font-black px-2.5 py-1 rounded-lg uppercase tracking-wider ${
@@ -605,12 +669,29 @@ export default function StudentTestSeriesPage() {
                               </td>
                               <td className="py-3.5 px-4 text-right whitespace-nowrap">
                                 {isAccessible ? (
-                                  <Link
-                                    href={`/education/test-series/attempt/${t.id}?course=${currentSelectedCourse.id}`}
-                                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer"
-                                  >
-                                    <Play className="h-3.5 w-3.5 fill-white" /> Attempt Test
-                                  </Link>
+                                  existingAttempt ? (
+                                    <div className="flex items-center justify-end gap-2">
+                                      <Link
+                                        href={`/education/test-series/attempt/${t.id}?course=${currentSelectedCourse.id}`}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer"
+                                      >
+                                        <RotateCcw className="h-3.5 w-3.5" /> Re-Attempt
+                                      </Link>
+                                      <button
+                                        disabled
+                                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 text-xs font-black border border-slate-200 dark:border-slate-700/80 cursor-not-allowed opacity-85"
+                                      >
+                                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" /> Attempted
+                                      </button>
+                                    </div>
+                                  ) : (
+                                    <Link
+                                      href={`/education/test-series/attempt/${t.id}?course=${currentSelectedCourse.id}`}
+                                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md shadow-emerald-600/20 transition active:scale-95 cursor-pointer"
+                                    >
+                                      <Play className="h-3.5 w-3.5 fill-white" /> Attempt Test
+                                    </Link>
+                                  )
                                 ) : (
                                   <button
                                     onClick={() => handleUnlockCoursePass(currentSelectedCourse)}

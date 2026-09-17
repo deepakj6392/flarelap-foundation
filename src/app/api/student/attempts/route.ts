@@ -55,10 +55,10 @@ export async function GET(request: Request) {
       where: { userId: targetUserId },
       include: {
         test: {
-          select: { name: true, type: true }
+          select: { id: true, name: true, type: true }
         },
         course: {
-          select: { name: true }
+          select: { id: true, name: true }
         }
       },
       orderBy: { createdAt: "desc" }
