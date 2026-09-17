@@ -30,6 +30,8 @@ interface TestSeriesRecord {
   qs: number;
   marks: number;
   duration: number;
+  correctMarks?: number;
+  negativeMarks?: number;
   isFree: boolean;
   courseId: number;
   course: {
@@ -57,8 +59,10 @@ export default function TestSeriesAdminPage() {
   const [name, setName] = useState("");
   const [type, setType] = useState("Full Mock");
   const [qs, setQs] = useState<number>(100);
-  const [marks, setMarks] = useState<number>(100);
+  const [marks, setMarks] = useState<number>(400);
   const [duration, setDuration] = useState<number>(90);
+  const [correctMarks, setCorrectMarks] = useState<number>(4);
+  const [negativeMarks, setNegativeMarks] = useState<number>(1);
   const [isFree, setIsFree] = useState(false);
   const [courseId, setCourseId] = useState<string>("");
 
@@ -121,6 +125,8 @@ export default function TestSeriesAdminPage() {
         qs,
         marks,
         duration,
+        correctMarks,
+        negativeMarks,
         isFree,
         courseId
       };
@@ -151,17 +157,38 @@ export default function TestSeriesAdminPage() {
         throw new Error(data.message || "Failed to save test series.");
       }
 
+      const msg = isEditMode ? "Test series updated successfully!" : "Test series created successfully!";
       if (isEditMode) {
         setTestSeries(prev => prev.map(t => t.id === editTestId ? data.testSeries : t));
-        showTemporarySuccess("Test series updated successfully!");
+        showTemporarySuccess(msg);
       } else {
         setTestSeries(prev => [data.testSeries, ...prev]);
-        showTemporarySuccess("Test series created successfully!");
+        showTemporarySuccess(msg);
       }
+
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "success",
+        title: msg,
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+      });
       
       closeAndResetModal();
     } catch (err: any) {
-      setError(err.message || "Failed to save test series.");
+      const errMsg = err.message || "Failed to save test series.";
+      setError(errMsg);
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "error",
+        title: errMsg,
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true,
+      });
     } finally {
       setActionLoading(null);
     }
@@ -253,7 +280,9 @@ export default function TestSeriesAdminPage() {
     setName("");
     setType("Full Mock");
     setQs(100);
-    setMarks(100);
+    setCorrectMarks(4);
+    setNegativeMarks(1);
+    setMarks(400);
     setDuration(90);
     setIsFree(false);
     setCourseId(courses[0]?.id?.toString() || "");
@@ -266,7 +295,11 @@ export default function TestSeriesAdminPage() {
     setName(test.name);
     setType(test.type);
     setQs(test.qs);
-    setMarks(test.marks);
+    const corr = test.correctMarks ?? 4;
+    const neg = test.negativeMarks ?? 1;
+    setCorrectMarks(corr);
+    setNegativeMarks(neg);
+    setMarks(test.marks || test.qs * corr);
     setDuration(test.duration);
     setIsFree(test.isFree);
     setCourseId(test.courseId.toString());
@@ -280,7 +313,9 @@ export default function TestSeriesAdminPage() {
     setName("");
     setType("Full Mock");
     setQs(100);
-    setMarks(100);
+    setCorrectMarks(4);
+    setNegativeMarks(1);
+    setMarks(400);
     setDuration(90);
     setIsFree(false);
     setCourseId("");
@@ -542,7 +577,11 @@ export default function TestSeriesAdminPage() {
                     type="number"
                     min={1}
                     value={qs}
-                    onChange={(e) => setQs(parseInt(e.target.value, 10) || 0)}
+                    onChange={(e) => {
+                      const count = parseInt(e.target.value, 10) || 0;
+                      setQs(count);
+                      setMarks(count * correctMarks);
+                    }}
                     className="block w-full px-3.5 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-905 dark:text-white"
                   />
                 </div>
@@ -568,6 +607,47 @@ export default function TestSeriesAdminPage() {
                     value={duration}
                     onChange={(e) => setDuration(parseInt(e.target.value, 10) || 0)}
                     className="block w-full px-3.5 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition text-slate-905 dark:text-white"
+                  />
+                </div>
+              </div>
+
+              {/* Dynamic Marking Scheme */}
+              <div className="grid grid-cols-2 gap-4 bg-emerald-500/5 dark:bg-emerald-950/20 p-3.5 rounded-xl border border-emerald-500/20">
+                <div className="space-y-1.5">
+                  <label className="block text-emerald-700 dark:text-emerald-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
+                    <span>Correct Answer Marks (+)</span>
+                    <span className="text-[9px] font-semibold text-emerald-600/80">(NEET: 4)</span>
+                  </label>
+                  <input
+                    required
+                    type="number"
+                    step="0.25"
+                    min={0}
+                    value={correctMarks}
+                    onChange={(e) => {
+                      const val = parseFloat(e.target.value) || 0;
+                      setCorrectMarks(val);
+                      setMarks(qs * val);
+                    }}
+                    placeholder="e.g. 4 for NEET"
+                    className="block w-full px-3.5 py-2.5 border border-emerald-500/40 dark:border-emerald-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition text-slate-900 dark:text-white font-bold"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-rose-700 dark:text-rose-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
+                    <span>Wrong Answer Penalty (-)</span>
+                    <span className="text-[9px] font-semibold text-rose-600/80">(NEET: 1)</span>
+                  </label>
+                  <input
+                    required
+                    type="number"
+                    step="0.25"
+                    min={0}
+                    value={negativeMarks}
+                    onChange={(e) => setNegativeMarks(parseFloat(e.target.value) || 0)}
+                    placeholder="e.g. 1 for NEET"
+                    className="block w-full px-3.5 py-2.5 border border-rose-500/40 dark:border-rose-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-rose-500 transition text-slate-900 dark:text-white font-bold"
                   />
                 </div>
               </div>

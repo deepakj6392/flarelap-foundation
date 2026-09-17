@@ -179,8 +179,10 @@ export default function StudentTestSeriesPage() {
                 name: t.name,
                 type: t.type || "Full Mock",
                 qs: t.qs || 100,
-                marks: t.marks || 200,
+                marks: t.marks || (t.qs || 100) * (t.correctMarks ?? 4),
                 duration: t.duration || 60,
+                correctMarks: t.correctMarks ?? 4,
+                negativeMarks: t.negativeMarks ?? 1,
                 isFree: t.isFree ?? !targetCourse.premium
               }));
             } else {

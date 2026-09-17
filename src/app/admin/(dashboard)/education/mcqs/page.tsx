@@ -77,6 +77,8 @@ interface TestSeriesRecord {
   qs: number;
   marks: number;
   duration: number;
+  correctMarks?: number;
+  negativeMarks?: number;
   isFree: boolean;
   active: boolean;
   courseId: number;
@@ -182,8 +184,10 @@ export default function MCQsAdminPage() {
   const [testName, setTestName] = useState("");
   const [testType, setTestType] = useState("Full Mock");
   const [testQs, setTestQs] = useState<number>(50);
-  const [testMarks, setTestMarks] = useState<number>(50);
+  const [testMarks, setTestMarks] = useState<number>(200);
   const [testDuration, setTestDuration] = useState<number>(60);
+  const [testCorrectMarks, setTestCorrectMarks] = useState<number>(4);
+  const [testNegativeMarks, setTestNegativeMarks] = useState<number>(1);
   const [testIsFree, setTestIsFree] = useState(true);
   const [testActive, setTestActive] = useState(true);
   const [testCourseId, setTestCourseId] = useState("");
@@ -562,7 +566,9 @@ export default function MCQsAdminPage() {
     setTestName("");
     setTestType("Full Mock");
     setTestQs(50);
-    setTestMarks(50);
+    setTestCorrectMarks(4);
+    setTestNegativeMarks(1);
+    setTestMarks(200);
     setTestDuration(60);
     setTestIsFree(true);
     setTestActive(true);
@@ -576,7 +582,11 @@ export default function MCQsAdminPage() {
     setTestName(test.name);
     setTestType(test.type || "Full Mock");
     setTestQs(test.qs || 50);
-    setTestMarks(test.marks || 50);
+    const corr = test.correctMarks ?? 4;
+    const neg = test.negativeMarks ?? 1;
+    setTestCorrectMarks(corr);
+    setTestNegativeMarks(neg);
+    setTestMarks(test.marks || (test.qs || 50) * corr);
     setTestDuration(test.duration || 60);
     setTestIsFree(test.isFree !== false);
     setTestActive(test.active !== false);
@@ -604,6 +614,8 @@ export default function MCQsAdminPage() {
       qs: testQs,
       marks: testMarks,
       duration: testDuration,
+      correctMarks: testCorrectMarks,
+      negativeMarks: testNegativeMarks,
       isFree: testIsFree,
       active: testActive,
       courseId: testCourseId,
@@ -634,14 +646,34 @@ export default function MCQsAdminPage() {
 
       const data = await res.json();
       if (res.ok) {
-        setSuccessMsg(isTestEditMode ? "Mock Test updated successfully!" : "Mock Test created successfully!");
+        const msg = isTestEditMode ? "Mock Test updated successfully!" : "Mock Test created successfully!";
+        setSuccessMsg(msg);
         setIsTestModalOpen(false);
         fetchTestSeries();
+        Swal.fire({
+          toast: true,
+          position: "top-end",
+          icon: "success",
+          title: msg,
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+        });
       } else {
         throw new Error(data.message || "Failed to save test series.");
       }
     } catch (err: any) {
-      setError(err.message || "Failed to save test series.");
+      const errMsg = err.message || "Failed to save test series.";
+      setError(errMsg);
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "error",
+        title: errMsg,
+        showConfirmButton: false,
+        timer: 4000,
+        timerProgressBar: true,
+      });
     } finally {
       setActionLoading(null);
     }
@@ -1784,7 +1816,11 @@ export default function MCQsAdminPage() {
                     type="number"
                     min={1}
                     value={testQs}
-                    onChange={(e) => setTestQs(parseInt(e.target.value, 10) || 0)}
+                    onChange={(e) => {
+                      const count = parseInt(e.target.value, 10) || 0;
+                      setTestQs(count);
+                      setTestMarks(count * testCorrectMarks);
+                    }}
                     className="block w-full px-3.5 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 focus:outline-none focus:border-emerald-500 transition text-slate-900 dark:text-white font-bold"
                   />
                 </div>
@@ -1810,6 +1846,47 @@ export default function MCQsAdminPage() {
                     value={testDuration}
                     onChange={(e) => setTestDuration(parseInt(e.target.value, 10) || 0)}
                     className="block w-full px-3.5 py-2.5 border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-slate-950 focus:outline-none focus:border-emerald-500 transition text-slate-900 dark:text-white font-bold"
+                  />
+                </div>
+              </div>
+
+              {/* Dynamic Marking Scheme (Correct Answer & Wrong Answer Penalty) */}
+              <div className="grid grid-cols-2 gap-4 bg-emerald-500/5 dark:bg-emerald-950/20 p-3.5 rounded-xl border border-emerald-500/20">
+                <div className="space-y-1.5">
+                  <label className="block text-emerald-700 dark:text-emerald-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
+                    <span>Correct Answer Marks (+)</span>
+                    <span className="text-[9px] font-semibold text-emerald-600/80">(NEET: 4)</span>
+                  </label>
+                  <input
+                    required
+                    type="number"
+                    step="0.25"
+                    min={0}
+                    value={testCorrectMarks}
+                    onChange={(e) => {
+                      const val = parseFloat(e.target.value) || 0;
+                      setTestCorrectMarks(val);
+                      setTestMarks(testQs * val);
+                    }}
+                    placeholder="e.g. 4 for NEET"
+                    className="block w-full px-3.5 py-2.5 border border-emerald-500/40 dark:border-emerald-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-emerald-500 transition text-slate-900 dark:text-white font-bold"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="block text-rose-700 dark:text-rose-400 uppercase tracking-wider text-[10px] font-black flex items-center justify-between">
+                    <span>Wrong Answer Penalty (-)</span>
+                    <span className="text-[9px] font-semibold text-rose-600/80">(NEET: 1)</span>
+                  </label>
+                  <input
+                    required
+                    type="number"
+                    step="0.25"
+                    min={0}
+                    value={testNegativeMarks}
+                    onChange={(e) => setTestNegativeMarks(parseFloat(e.target.value) || 0)}
+                    placeholder="e.g. 1 for NEET"
+                    className="block w-full px-3.5 py-2.5 border border-rose-500/40 dark:border-rose-500/30 rounded-xl bg-white dark:bg-slate-950 focus:outline-none focus:ring-1 focus:ring-rose-500 transition text-slate-900 dark:text-white font-bold"
                   />
                 </div>
               </div>

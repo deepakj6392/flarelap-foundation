@@ -41,6 +41,8 @@ interface TestDetails {
   qs: number;
   marks: number;
   duration: number;
+  correctMarks?: number;
+  negativeMarks?: number;
 }
 
 function createPRNG(seed: number) {
@@ -172,13 +174,18 @@ export default function CBTTestAttemptPage() {
           };
         }
 
+        const posMarks = testItem.correctMarks !== undefined ? Number(testItem.correctMarks) : 4;
+        const negMarks = testItem.negativeMarks !== undefined ? Number(testItem.negativeMarks) : 1;
+
         const details: TestDetails = {
           id: testItem.id,
           name: testItem.name,
           type: testItem.type || "FULL_LENGTH",
           qs: testItem.qs || 100,
-          marks: testItem.marks || 100,
-          duration: testItem.duration || 60
+          marks: testItem.marks || (testItem.qs || 100) * posMarks,
+          duration: testItem.duration || 60,
+          correctMarks: posMarks,
+          negativeMarks: negMarks
         };
         setTestDetails(details);
         setTimeLeft(details.duration * 60);
@@ -260,7 +267,7 @@ export default function CBTTestAttemptPage() {
     document.documentElement.requestFullscreen().catch(() => {});
   };
 
-  // CBT scoring logic (+2 for correct, -0.5 for incorrect)
+  // Dynamic scoring logic based on test marking scheme (e.g. +4 for correct, -1 for wrong)
   const calculateResult = () => {
     let correct = 0;
     let wrong = 0;
@@ -278,7 +285,11 @@ export default function CBTTestAttemptPage() {
       }
     });
 
-    const score = (correct * 2) - (wrong * 0.5);
+    const posMarks = testDetails?.correctMarks ?? 4;
+    const negMarks = testDetails?.negativeMarks ?? 1;
+
+    const score = (correct * posMarks) - (wrong * negMarks);
+    const maxMarks = testDetails?.marks || (questions.length * posMarks);
 
     return {
       score: Math.max(0, score), // Floor score at 0
@@ -286,6 +297,9 @@ export default function CBTTestAttemptPage() {
       answered,
       correct,
       wrong,
+      posMarks,
+      negMarks,
+      maxMarks,
       duration: (testDetails?.duration || 0) * 60 - timeLeft
     };
   };
@@ -384,10 +398,10 @@ export default function CBTTestAttemptPage() {
               <p class="text-slate-600">Congratulations! You successfully submitted the test series.</p>
               <div class="bg-slate-50 p-4 rounded-xl border space-y-1.5 font-bold">
                 <div class="flex justify-between"><span>Total Questions:</span> <span>${stats.totalQs}</span></div>
-                <div class="flex justify-between text-emerald-700"><span>Correct Answers:</span> <span>${stats.correct} (+${stats.correct * 2} Marks)</span></div>
-                <div class="flex justify-between text-rose-600"><span>Wrong Answers:</span> <span>${stats.wrong} (-${stats.wrong * 0.5} Marks)</span></div>
+                <div class="flex justify-between text-emerald-700"><span>Correct Answers:</span> <span>${stats.correct} (+${stats.correct * stats.posMarks} Marks)</span></div>
+                <div class="flex justify-between text-rose-600"><span>Wrong Answers:</span> <span>${stats.wrong} (-${stats.wrong * stats.negMarks} Marks)</span></div>
                 <hr class="my-1.5"/>
-                <div class="flex justify-between text-emerald-805 text-sm font-black"><span>Final Score:</span> <span>${stats.score} / ${stats.totalQs * 2}</span></div>
+                <div class="flex justify-between text-emerald-805 text-sm font-black"><span>Final Score:</span> <span>${stats.score} / ${stats.maxMarks}</span></div>
               </div>
             </div>
           `,
@@ -623,7 +637,7 @@ export default function CBTTestAttemptPage() {
               </h3>
               <p>1. The clock will be set at the server. The countdown timer at the top right of the screen displays remaining time available to complete the test.</p>
               <p>2. The Question Palette on the right side indicates status with color tags: Not Visited (Gray), Visited (Red), Answered (Green), Marked for Review (Purple).</p>
-              <p>3. <strong>Scoring Scheme</strong>: Each correct question awards standard marks. Negative marking applies where specified.</p>
+              <p>3. <strong>Scoring Scheme</strong>: Each correct question awards +{testDetails.correctMarks ?? 4} marks. Negative marking of {testDetails.negativeMarks ?? 1} mark per wrong answer applies.</p>
               <p>4. To select an option, click on the answer button. To change your response, click another option or click <strong>Clear Response</strong>.</p>
               <p>5. Click <strong>Save & Next</strong> to confirm your answer and proceed to the next question.</p>
             </div>

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma, resetPrismaClient } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
 export async function GET(request: Request) {
@@ -9,24 +9,52 @@ export async function GET(request: Request) {
   }
 
   try {
-    const testSeries = await prisma.testSeries.findMany({
-      include: {
-        course: {
-          select: {
-            id: true,
-            name: true,
-            categoryId: true,
-            category: {
-              select: {
-                id: true,
-                name: true,
+    let client = prisma;
+    let testSeries;
+    try {
+      testSeries = await client.testSeries.findMany({
+        include: {
+          course: {
+            select: {
+              id: true,
+              name: true,
+              categoryId: true,
+              category: {
+                select: {
+                  id: true,
+                  name: true,
+                },
               },
             },
           },
         },
-      },
-      orderBy: { id: "desc" },
-    });
+        orderBy: { id: "desc" },
+      });
+    } catch (err: any) {
+      if (err?.message?.includes("correctMarks") || err?.message?.includes("Unknown argument")) {
+        client = resetPrismaClient();
+        testSeries = await client.testSeries.findMany({
+          include: {
+            course: {
+              select: {
+                id: true,
+                name: true,
+                categoryId: true,
+                category: {
+                  select: {
+                    id: true,
+                    name: true,
+                  },
+                },
+              },
+            },
+          },
+          orderBy: { id: "desc" },
+        });
+      } else {
+        throw err;
+      }
+    }
     return NextResponse.json({ testSeries });
   } catch (error: any) {
     console.error("Admin test series fetching error:", error);
@@ -45,7 +73,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { name, type, qs, marks, duration, isFree, active, courseId } = body;
+    const { name, type, qs, marks, duration, correctMarks, negativeMarks, isFree, active, courseId } = body;
 
     if (!name || !type || qs === undefined || marks === undefined || duration === undefined || !courseId) {
       return NextResponse.json(
@@ -59,48 +87,92 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Invalid course selection" }, { status: 400 });
     }
 
-    // Verify course exists
-    const courseExists = await prisma.course.findUnique({
-      where: { id: numericCourseId }
-    });
+    let client = prisma;
+    let courseExists;
+    try {
+      courseExists = await client.course.findUnique({
+        where: { id: numericCourseId }
+      });
+    } catch (err: any) {
+      if (err?.message?.includes("correctMarks") || err?.message?.includes("Unknown argument")) {
+        client = resetPrismaClient();
+        courseExists = await client.course.findUnique({
+          where: { id: numericCourseId }
+        });
+      } else {
+        throw err;
+      }
+    }
+
     if (!courseExists) {
       return NextResponse.json({ message: "Selected course does not exist" }, { status: 404 });
     }
 
     if (!isFree) {
-      await prisma.course.update({
+      await client.course.update({
         where: { id: numericCourseId },
         data: { premium: true }
       });
     }
 
-    const newTest = await prisma.testSeries.create({
-      data: {
-        name: name.trim(),
-        type: type.trim(),
-        qs: parseInt(qs, 10),
-        marks: parseInt(marks, 10),
-        duration: parseInt(duration, 10),
-        isFree: !!isFree,
-        active: active !== undefined ? !!active : true,
-        courseId: numericCourseId
-      },
-      include: {
-        course: {
-          select: {
-            id: true,
-            name: true,
-            categoryId: true,
-            category: {
-              select: {
-                id: true,
-                name: true,
+    const createPayload = {
+      name: name.trim(),
+      type: type.trim(),
+      qs: parseInt(qs, 10),
+      marks: parseInt(marks, 10),
+      duration: parseInt(duration, 10),
+      correctMarks: correctMarks !== undefined ? parseFloat(String(correctMarks)) : 4,
+      negativeMarks: negativeMarks !== undefined ? parseFloat(String(negativeMarks)) : 1,
+      isFree: !!isFree,
+      active: active !== undefined ? !!active : true,
+      courseId: numericCourseId
+    };
+
+    let newTest;
+    try {
+      newTest = await client.testSeries.create({
+        data: createPayload,
+        include: {
+          course: {
+            select: {
+              id: true,
+              name: true,
+              categoryId: true,
+              category: {
+                select: {
+                  id: true,
+                  name: true,
+                },
               },
             },
           },
-        },
+        }
+      });
+    } catch (err: any) {
+      if (err?.message?.includes("correctMarks") || err?.message?.includes("Unknown argument")) {
+        client = resetPrismaClient();
+        newTest = await client.testSeries.create({
+          data: createPayload,
+          include: {
+            course: {
+              select: {
+                id: true,
+                name: true,
+                categoryId: true,
+                category: {
+                  select: {
+                    id: true,
+                    name: true,
+                  },
+                },
+              },
+            },
+          }
+        });
+      } else {
+        throw err;
       }
-    });
+    }
 
     return NextResponse.json({
       testSeries: newTest,
@@ -109,7 +181,7 @@ export async function POST(request: Request) {
   } catch (error: any) {
     console.error("Admin test series creation error:", error);
     return NextResponse.json(
-      { message: "An error occurred while creating the test series." },
+      { message: error?.message || "An error occurred while creating the test series." },
       { status: 500 }
     );
   }

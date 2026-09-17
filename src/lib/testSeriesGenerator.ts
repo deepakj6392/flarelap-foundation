@@ -5,6 +5,8 @@ export interface SubTest {
   qs: number;
   marks: number;
   duration: number;
+  correctMarks?: number;
+  negativeMarks?: number;
   isFree: boolean;
 }
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma, resetPrismaClient } from "@/lib/prisma";
 import { verifyAdmin } from "@/lib/auth";
 
 export async function PUT(
@@ -19,12 +19,25 @@ export async function PUT(
     }
 
     const body = await request.json();
-    const { name, type, qs, marks, duration, isFree, active, courseId } = body;
+    const { name, type, qs, marks, duration, correctMarks, negativeMarks, isFree, active, courseId } = body;
 
-    // Check if test exists
-    const existingTest = await prisma.testSeries.findUnique({
-      where: { id: testId }
-    });
+    let client = prisma;
+    let existingTest;
+    try {
+      existingTest = await client.testSeries.findUnique({
+        where: { id: testId }
+      });
+    } catch (err: any) {
+      if (err?.message?.includes("correctMarks") || err?.message?.includes("Unknown argument")) {
+        client = resetPrismaClient();
+        existingTest = await client.testSeries.findUnique({
+          where: { id: testId }
+        });
+      } else {
+        throw err;
+      }
+    }
+
     if (!existingTest) {
       return NextResponse.json({ message: "Test series not found" }, { status: 404 });
     }
@@ -35,6 +48,8 @@ export async function PUT(
     if (qs !== undefined) updateData.qs = parseInt(qs, 10);
     if (marks !== undefined) updateData.marks = parseInt(marks, 10);
     if (duration !== undefined) updateData.duration = parseInt(duration, 10);
+    if (correctMarks !== undefined) updateData.correctMarks = parseFloat(String(correctMarks));
+    if (negativeMarks !== undefined) updateData.negativeMarks = parseFloat(String(negativeMarks));
     if (isFree !== undefined) updateData.isFree = !!isFree;
     if (active !== undefined) updateData.active = !!active;
     if (courseId !== undefined) {
@@ -44,28 +59,56 @@ export async function PUT(
       }
     }
 
-    const updatedTest = await prisma.testSeries.update({
-      where: { id: testId },
-      data: updateData,
-      include: {
-        course: {
-          select: {
-            id: true,
-            name: true,
-            categoryId: true,
-            category: {
-              select: {
-                id: true,
-                name: true,
+    let updatedTest;
+    try {
+      updatedTest = await client.testSeries.update({
+        where: { id: testId },
+        data: updateData,
+        include: {
+          course: {
+            select: {
+              id: true,
+              name: true,
+              categoryId: true,
+              category: {
+                select: {
+                  id: true,
+                  name: true,
+                },
               },
             },
           },
-        },
+        }
+      });
+    } catch (err: any) {
+      if (err?.message?.includes("correctMarks") || err?.message?.includes("Unknown argument")) {
+        client = resetPrismaClient();
+        updatedTest = await client.testSeries.update({
+          where: { id: testId },
+          data: updateData,
+          include: {
+            course: {
+              select: {
+                id: true,
+                name: true,
+                categoryId: true,
+                category: {
+                  select: {
+                    id: true,
+                    name: true,
+                  },
+                },
+              },
+            },
+          }
+        });
+      } else {
+        throw err;
       }
-    });
+    }
 
     if (updatedTest.isFree === false) {
-      await prisma.course.update({
+      await client.course.update({
         where: { id: updatedTest.courseId },
         data: { premium: true }
       });
@@ -78,7 +121,7 @@ export async function PUT(
   } catch (error: any) {
     console.error("Admin test series update error:", error);
     return NextResponse.json(
-      { message: "An error occurred while updating the test series." },
+      { message: error?.message || "An error occurred while updating the test series." },
       { status: 500 }
     );
   }
