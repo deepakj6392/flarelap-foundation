@@ -216,7 +216,11 @@ export default function CBTTestAttemptPage() {
         } else {
           const dbMcqs: MCQQuestion[] = mcqData.courseMcqs || [];
           const uniqueQuestions = generateUniqueQuestions(courseTitle, details.name, details.qs, dbMcqs);
-          setQuestions(uniqueQuestions.map((q: any) => shuffleQuestionOptions(q)));
+          if (uniqueQuestions.length === 0) {
+            setError("No MCQ questions available in the database for this course test. Please check back later or contact your administrator.");
+          } else {
+            setQuestions(uniqueQuestions.map((q: any) => shuffleQuestionOptions(q)));
+          }
         }
       } catch (err: any) {
         console.error(err);

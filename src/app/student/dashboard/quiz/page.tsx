@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
-import { MCQ_BANKS, MCQQuestion } from "../data";
+import { MCQQuestion } from "../data";
 import { generateUniqueQuestions, shuffleQuestionOptions } from "@/lib/questionGenerator";
 import { useRouter } from "next/navigation";
 
@@ -101,13 +101,10 @@ function LegacyMockExamsPage() {
   if (!student) return null;
 
   const startExam = (size: number, examType: "course" | "reasoning" = "course", startIndex: number = 0) => {
-    const courseId = student ? Number(student.course_id) : 1;
-    // Use dynamic database questions if available, otherwise fall back to static bank
+    // Use dynamic database questions fetched from database
     const baseQuestions = examType === "reasoning"
       ? reasoningQuestions
-      : (courseQuestions.length > 0 
-          ? courseQuestions 
-          : (MCQ_BANKS[courseId] || MCQ_BANKS[1] || []));
+      : courseQuestions;
     
     const courseNameStr = student?.course_name || (examType === "reasoning" ? "Reasoning & Aptitude" : "Mock Exam");
     const list = generateUniqueQuestions(courseNameStr, `${examType} Practice Quiz`, size, baseQuestions);
