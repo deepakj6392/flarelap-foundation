@@ -21,23 +21,8 @@ import Swal from "sweetalert2";
 import { useDashboard } from "../layout";
 import { MCQQuestion } from "../data";
 import { generateUniqueQuestions, shuffleQuestionOptions } from "@/lib/questionGenerator";
-import { useRouter } from "next/navigation";
 
 export default function MockExamsPage() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace("/student/dashboard/test-series");
-  }, [router]);
-
-  return (
-    <div className="flex flex-col items-center justify-center py-24 text-slate-400">
-      <p className="text-xs font-bold">Redirecting to Full Mock Test Passes Hub...</p>
-    </div>
-  );
-}
-
-function LegacyMockExamsPage() {
   const { student, isDark, saveActivity } = useDashboard();
   const [activeBundleSize, setActiveBundleSize] = useState<number | null>(null);
   const [activeExamType, setActiveExamType] = useState<"course" | "reasoning">("course");
@@ -98,7 +83,14 @@ function LegacyMockExamsPage() {
     fetchStudentMcqs();
   }, []);
 
-  if (!student) return null;
+  if (!student) {
+    return (
+      <div className="flex flex-col items-center justify-center py-24 text-slate-400 dark:text-slate-500">
+        <Loader2 className="h-8 w-8 animate-spin text-emerald-600 mb-3" />
+        <p className="text-xs font-bold">Loading student workspace...</p>
+      </div>
+    );
+  }
 
   const startExam = (size: number, examType: "course" | "reasoning" = "course", startIndex: number = 0) => {
     // Use dynamic database questions fetched from database
@@ -106,9 +98,20 @@ function LegacyMockExamsPage() {
       ? reasoningQuestions
       : courseQuestions;
     
+    const slicedQuestions = startIndex > 0 ? baseQuestions.slice(startIndex) : baseQuestions;
     const courseNameStr = student?.course_name || (examType === "reasoning" ? "Reasoning & Aptitude" : "Mock Exam");
-    const list = generateUniqueQuestions(courseNameStr, `${examType} Practice Quiz`, size, baseQuestions);
+    const list = generateUniqueQuestions(courseNameStr, `${examType} Practice Quiz`, size, slicedQuestions);
     
+    if (!list || list.length === 0) {
+      Swal.fire({
+        title: "No Questions Available",
+        text: "No MCQ questions are currently uploaded in the database for this course. The administrator will upload questions soon.",
+        icon: "info",
+        confirmButtonColor: "#3b82f6"
+      });
+      return;
+    }
+
     setActiveExamType(examType);
     setActiveBundleSize(size);
     setBundleQuestions(list.map((q: any) => shuffleQuestionOptions(q)));
@@ -119,7 +122,6 @@ function LegacyMockExamsPage() {
     setBundleScore(0);
 
     saveActivity({
-      // eslint-disable-next-line react-hooks/purity
       id: Date.now(),
       type: "quiz",
       title: `Started ${size} MCQ ${examType === "reasoning" ? "Reasoning" : "Practice Exam"} Bundle`
@@ -164,8 +166,10 @@ function LegacyMockExamsPage() {
     setBundleScore(score);
     setBundleSubmitted(true);
 
-    localStorage.setItem(`student_last_bundle_score_${student.student_id}`, score.toString());
-    localStorage.setItem(`student_last_bundle_size_${student.student_id}`, bundleQuestions.length.toString());
+    if (student?.student_id) {
+      localStorage.setItem(`student_last_bundle_score_${student.student_id}`, score.toString());
+      localStorage.setItem(`student_last_bundle_size_${student.student_id}`, bundleQuestions.length.toString());
+    }
 
     saveActivity({
       id: Date.now(),
@@ -226,7 +230,7 @@ function LegacyMockExamsPage() {
             <div>
               <h2 className={`text-lg font-black ${textHeading}`}>Practice Mock Exams</h2>
               <p className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-1">
-                Select a practice bundle size below to test your knowledge. Questions are dynamically generated to support peak rank preparation.
+                Select a practice bundle size below to test your knowledge. All questions are dynamically fetched from your enrolled course database.
               </p>
             </div>
             <Link
@@ -769,7 +773,7 @@ function LegacyMockExamsPage() {
 
                 return (
                   <div 
-                    key={q.id} 
+                    key={q.id || qIndex} 
                     className={`rounded-2xl border p-5.5 space-y-4 shadow-xs transition ${
                       isDark 
                         ? "border-slate-800 bg-slate-900/30" 
@@ -840,7 +844,7 @@ function LegacyMockExamsPage() {
                       }`}>
                         <AlertCircle className="h-4.5 w-4.5 text-emerald-600 shrink-0 mt-0.5" />
                         <div>
-                          <p><strong>Explanation:</strong> {q.hint}</p>
+                          <p><strong>Explanation:</strong> {q.hint || "No explanation provided for this question."}</p>
                         </div>
                       </div>
 

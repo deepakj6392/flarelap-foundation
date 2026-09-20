@@ -90,12 +90,7 @@ export default function StudyMaterialsPage() {
 
     // 2. Category Tab Filter
     if (selectedCategoryTab === "MY_CATEGORY") {
-      const isMyMatch = matchesStudentCategory(material);
-      // Default fallback if student has general course or no specific match: show SSC & Government Exams notes
-      if (!isMyMatch && (!studentCourseId || Number(studentCourseId) === 1 || !studentCategoryName || studentCategoryName === "None")) {
-        return material.categoryName === "SSC & Government Exams";
-      }
-      return isMyMatch;
+      return matchesStudentCategory(material);
     }
     if (selectedCategoryTab === "ALL") return true;
     

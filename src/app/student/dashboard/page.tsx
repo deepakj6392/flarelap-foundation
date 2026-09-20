@@ -92,7 +92,7 @@ export default function StudentDashboardPage() {
 
   if (!student) return null;
 
-  const enrolledCourseId = Number(student.course_id || (student as any).courseId || 1);
+  const enrolledCourseId = Number(student.course_id || (student as any).courseId || 0);
 
   const filteredMaterials = STUDY_MATERIALS.filter((material) => {
     const studentCourseId = student.course_id || (student as any).courseId;
@@ -115,17 +115,10 @@ export default function StudentDashboardPage() {
     if (stuCat && stuCat !== "none" && (matCat.includes(stuCat) || stuCat.includes(matCat))) return true;
     if (stuCourse && stuCourse !== "none" && (matCourse.includes(stuCourse) || stuCourse.includes(matCourse) || matSubj.includes(stuCourse))) return true;
 
-    if ((stuCourse.includes("ssc") || stuCat.includes("ssc")) && matCat.includes("ssc")) return true;
-    if ((stuCourse.includes("cet") || stuCourse.includes("nra") || stuCourse.includes("railway")) && (matCat.includes("cet") || matCat.includes("railway"))) return true;
-    if ((stuCourse.includes("bank") || stuCourse.includes("fci")) && matCat.includes("banking")) return true;
-    if ((stuCourse.includes("paramedical") || stuCourse.includes("nursing")) && matCat.includes("paramedical")) return true;
-
     return false;
   });
 
-  const displayMaterials = filteredMaterials.length > 0
-    ? filteredMaterials
-    : STUDY_MATERIALS.filter(m => m.categoryName === "SSC & Government Exams" || !m.categoryName);
+  const displayMaterials = filteredMaterials;
 
   const courseCompletedCount = readLessons.filter(lessonId =>
     displayMaterials.some(m => m.id === lessonId)
