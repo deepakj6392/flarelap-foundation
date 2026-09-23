@@ -797,8 +797,8 @@ export default function ImportMCQPage() {
         {/* 2-Column Interior Grid inside Full-Width Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-          {/* Left Column (5 Cols): Course Selection Form */}
-          <div className="lg:col-span-5 space-y-4">
+          {/* Left Column (7 Cols): Course Selection Form */}
+          <div className="lg:col-span-7 space-y-4">
             {loadingInitial ? (
               <div className="flex items-center justify-center py-10 gap-2 text-xs text-slate-500">
                 <Loader2 className="h-4 w-4 animate-spin text-emerald-600" />
@@ -846,7 +846,7 @@ export default function ImportMCQPage() {
                     ) : (
                       filteredSubCourses.map((c) => (
                         <option key={c.id} value={c.id.toString()}>
-                          {c.name} {c.category?.name ? `(${c.category.name})` : ""}
+                          {c.name}
                         </option>
                       ))
                     )}
@@ -886,8 +886,8 @@ export default function ImportMCQPage() {
             )}
           </div>
 
-          {/* Right Column (7 Cols): File Upload Dropzone & Instructions */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
+          {/* Right Column (5 Cols): File Upload Dropzone & Instructions */}
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
 
             {/* File Dropzone */}
             <div
