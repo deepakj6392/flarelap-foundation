@@ -15,6 +15,7 @@ export const siteConfig = {
     { label: "Impact", href: "/impact" },
     { label: "Blog", href: "/blogs" },
     { label: "Donate", href: "/donate" },
+    { label: "Download App", href: "/download" },
     { label: "Contact", href: "/contact" },
   ],
   links: {

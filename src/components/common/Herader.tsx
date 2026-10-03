@@ -41,7 +41,7 @@ export default function Herader() {
   );
 
   const moreNavItems = siteConfig.navItems.filter((item) =>
-    ["Impact", "Blog", "Contact"].includes(item.label)
+    ["Impact", "Blog", "Contact", "Download App"].includes(item.label)
   );
 
   return (
